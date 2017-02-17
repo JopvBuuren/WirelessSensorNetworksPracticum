@@ -78,8 +78,10 @@ static uint8 appState =           APP_INIT;
 static uint8 reportState =        FALSE;
 
 static uint8 reportFailureNr =    0;
+static uint8 reportSkip =         0;
 static uint8 bindRetries =        0;
 
+static unit8 oldValues[SENSOR_REPORT_LENGTH] = [0, 0, 0, 0];
 static uint16 myReportPeriod =    5000;        // milliseconds
 static uint16 myBindRetryDelay =  2000;        // milliseconds
 static uint8 myStartRetryDelay =    10;        // milliseconds
@@ -435,31 +437,46 @@ static void sendReport(void)
 {
   uint8 pData[SENSOR_REPORT_LENGTH];
   static uint8 reportNr = 0;
+  bool changed = false;
   uint8 txOptions;
 
   // Read and report temperature value
   pData[SENSOR_TEMP_OFFSET] = readTemp();
-
+  if(pData[SENSOR_TEMP_OFFSET] != oldValues[SENSOR_TEMP_OFFSET]){
+    changed = true;
+  }
   // Read and report voltage value
   pData[SENSOR_VOLTAGE_OFFSET] = readVoltage();
-
+  if(pData[SENSOR_VOLTAGE_OFFSET] != oldValues[SENSOR_VOLTAGE_OFFSET]){
+    changed = true;
+  }
   pData[SENSOR_PARENT_OFFSET] =  HI_UINT16(parentShortAddr);
   pData[SENSOR_PARENT_OFFSET + 1] =  LO_UINT16(parentShortAddr);
 
-  // Set ACK request on each ACK_INTERVAL report
-  // If a report failed, set ACK request on next report
-  if ( ++reportNr<ACK_REQ_INTERVAL && reportFailureNr == 0 )
-  {
-    txOptions = AF_TX_OPTIONS_NONE;
+  if(reportSkip > 60 ){
+    reportSkip = 0;
+    changed = true;
+  else{
+    reportSkip+=1;
   }
-  else
-  {
-    txOptions = AF_MSG_ACK_REQUEST;
-    reportNr = 0;
+  
+  if(changed){
+    // Set ACK request on each ACK_INTERVAL report
+    // If a report failed, set ACK request on next report
+    if ( ++reportNr<ACK_REQ_INTERVAL && reportFailureNr == 0 )
+    {
+      txOptions = AF_TX_OPTIONS_NONE;
+    }
+    else
+    {
+      txOptions = AF_MSG_ACK_REQUEST;
+      reportNr = 0;
+    }
+    // Destination address is set to previously established binding
+    // for the commandId.
+    zb_SendDataRequest( ZB_BINDING_ADDR, SENSOR_REPORT_CMD_ID, SENSOR_REPORT_LENGTH, pData, 0, txOptions, 0 );
+    reportSkip = 0;
   }
-  // Destination address is set to previously established binding
-  // for the commandId.
-  zb_SendDataRequest( ZB_BINDING_ADDR, SENSOR_REPORT_CMD_ID, SENSOR_REPORT_LENGTH, pData, 0, txOptions, 0 );
 }
 
 /******************************************************************************
