@@ -12,7 +12,7 @@ TriggerName=main
 LimitSize=0
 ByteLimit=50
 [DebugChecksum]
-Checksum=1144552153
+Checksum=-1944146833
 [CallStack]
 ShowArgs=0
 [Disassembly]
@@ -49,15 +49,15 @@ Enabled=0
 ShowSource=1
 [Simulator]
 Freq=50000000
-[Log file]
-LoggingEnabled=_ 0
-LogFile=_ ""
-Category=_ 0
 [Breakpoints]
 Count=0
 [ChipconEmu]
 Stop timers on halt=0
 Leave target running=1
+[Log file]
+LoggingEnabled=_ 0
+LogFile=_ ""
+Category=_ 0
 [Aliases]
 Count=0
 SuppressDialog=0

@@ -81,7 +81,7 @@ static uint8 reportFailureNr =    0;
 static uint8 reportSkip =         0;
 static uint8 bindRetries =        0;
 
-static unit8 oldValues[SENSOR_REPORT_LENGTH] = [0, 0, 0, 0];
+static uint8 oldValues[SENSOR_REPORT_LENGTH];
 static uint16 myReportPeriod =    5000;        // milliseconds
 static uint16 myBindRetryDelay =  2000;        // milliseconds
 static uint8 myStartRetryDelay =    10;        // milliseconds
@@ -456,7 +456,7 @@ static void sendReport(void)
   if(reportSkip > 60 ){
     reportSkip = 0;
     changed = true;
-  else{
+  }else{
     reportSkip+=1;
   }
   
