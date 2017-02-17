@@ -1,0 +1,119 @@
+Texas Instruments, Inc.
+
+Z-Stack Mesh Release Notes
+
+-------------------------------------------------------------------------------
+-------------------------------------------------------------------------------
+
+Version 1.0.0
+September 22, 2014
+
+
+Notices:
+ - The Z-Stack Mesh 1.0.0 release is based on the certified Z-Stack Core 2.6.2
+   See the "Z-Stack Core Release Notes" for details. 
+
+ - Z-Stack Mesh provides over 20 documents that cover various aspects of this
+   generic wireless Mesh development package. Included is API documentation for
+   each layer of the Z-Stack system, a selection of Developer's Guides, User's
+   Guides, and Application Notes to accelerate your product development. These
+   documents can be found at: <InstallPath>\Documents with the default set to:
+   "C:\Texas Instruments\Z-Stack Mesh 1.0.0\Documents" which can be accessed
+   from the Windows Start Menu.
+
+ - Z-Stack for the CC2530 and CC2520 devices has been built and tested with
+   IAR's CLIB library, which provides a light-weight C library which does not
+   support Embedded C++. Use of DLIB is not recommended for those platforms.
+   Z-Stack for the CC2538 platform has been tested with the DLIB library.
+
+ - Z-Stack projects specify compile options in two ways: (1) "-D" statements
+   in f8wConfig.cfg and other *.cfg files, (2) entries in the IDE Compiler
+   Preprocessor Defined Symbols. When using the EW8051 or EW430 compilers,
+   settings made in the IDE will override settings in the *.cfg files. When
+   using the EWARM compiler, settings in the *.cfg files will override any
+   made in the IDE.
+
+ - When programming devices for the first time with this release, the entire
+   Flash memory should be erased. For the CC2530 and CC2520 devices, select
+   "Erase Flash" in the "Debugger->Texas Instruments->Download" tab of the
+   project options. For the CC2538, select "Project->Download->Erase Memory".
+
+ - The library files have been built and tested with the following versions
+   of IAR tools and may not work with different versions of the IAR tools:
+     - CC2538 + SRF06EB:  EWARM 7.20.1  (7.20.1.7307)
+     - CC2530 + SRF05EB:  EW8051 8.30.3 (8.30.3.41795)
+     - CC2530 + EXP5438:  EW430 6.10.2  (6.10.2.50871)
+
+ - Foundation software library files for the CC2538 include the following:
+     - bsp.lib, version 1.3.1
+     - driverlib.lib, version 1.3.1
+     - usblib.lib, version 1.0.1
+
+
+Changes:
+ - [5806] The GenericApp sample application has been upgraded provide better
+   user feedback. The LCD display now shows the number of messages received,
+   an LED flashes each time a message is received, and the user can easily
+   change the interval between message transmissions.
+
+ - [5804] The "Z-Stack Generic Application User's Guide" has been created to
+   provide a step-by-step tutorial on building the application, loading it on
+   a Texas Instruments development board, and running it to demonstrate basic
+   features of a Z-Stack wireless mesh network application.
+
+ - [5666] Changed compiler optimization settings for CC2538-based IAR projects
+   from "None" to "High, Balanced". This affects GenericApp and ZNP projects.
+
+
+Memory Sizes:
+ - Actual usage of Flash and RAM memory is variable, of course, and dependent
+   on the specific application. Developers should adjust various parameters,
+   such as, program stack size and dynamic memory heap size to meet their
+   specific needs.
+
+ - The following tables provide comparison of Flash and RAM sizes for certain
+   device configurations for the GenericApp applications that are provided with
+   this release. GenericApp projects for various platforms can be found in the
+   installed <InstallPath>\Projects\zstack\Samples\GenericApp folder. In most
+   Z-Stack sample applications, generic heap and stack settings are used which
+   have been selected to accomodate a wide range of applications. GenericApp
+   heap settings were: Coordinator/Router = 3Kb, EndDevice = 2Kb. Refer to the
+   "Z-Stack Developer's Guide" for details on profiling heap memory usage.
+
+ - Memory sizes (Flash/RAM) are shown below for the 3 ZigBee device types on
+   various MCU and RF platforms with ZigBee-PRO enabled and Security enabled.
+   See the "Z-Stack User's Guide" for more details on the platform of interest.
+
+   CC2538EM on SmarfRF06EB
+   ===========================
+   Coordinator   98.3K / 13.2K
+   Router        99.0K / 13.2K
+   End-Device    75.6K / 12.4K
+
+   CC2530EM on SmarfRF05EB
+   ===========================
+   Coordinator  168.7K / 7.0K
+   Router       169.4K / 7.0K
+   End-Device   135.1K / 5.5K
+
+   CC2520EM on EXP5438
+   ===========================
+   Coordinator  102.3K / 10.6K
+   Router       103.2K / 10.6K
+   End-Device    82.4K /  9.0K
+
+   CC2531DK USB Dongle
+   ===========================
+   Coordinator  168.7K / 7.1K
+   Router       169.3K / 7.1K
+   End-Device   135.4K / 5.6K
+
+
+Known Issues:
+ - To disable security at build time, use the "SECURE=0" compile option. Do
+   not attempt to disable security by setting the SECURITY_LEVEL to zero.
+
+ - The ZDO Complex Descriptor is not supported.
+
+-------------------------------------------------------------------------------
+-------------------------------------------------------------------------------

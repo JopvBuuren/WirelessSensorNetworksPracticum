@@ -1,0 +1,187 @@
+Texas Instruments, Inc.
+
+Z-Stack Core Release Notes
+
+--------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+
+Version 2.6.2
+July 02, 2014
+
+
+Notices:
+ - Z-Stack 2.6.2 has been certified for ZigBee-PRO compliance and supports
+   the ZigBee 2012 specification.
+
+ - Z-Stack for the CC2520 and CC2530 platforms has been built and tested with
+   IAR's CLIB library, which provides a light-weight C library which does not
+   support Embedded C++. Use of DLIB is not recommended for those platforms.
+   Z-Stack for the CC2538 platform has been tested with the DLIB library.
+
+ - Z-Stack projects specify compile options in two ways: (1) "-D" statements
+   in f8wConfig.cfg and other *.cfg files, (2) entries in the IDE Compiler
+   Preprocessor Defined Symbols. When using the EW8051 or EW430 compilers,
+   settings made in the IDE will override settings in the *.cfg files. When
+   using the EWARM compiler, settings in the *.cfg files will override any
+   made in the IDE.
+
+ - When programming devices for the first time with this release, the entire
+   Flash memory should be erased. For the CC2530 and EXP5438 platforms, select
+   "Erase Flash" in the "Debugger->Texas Instruments->Download" tab of the
+   project options. For the CC2538, select "Project->Download->Erase Memory".
+
+ - Library and hex files were built and tested with the following versions of
+   IAR tools and may not work with different versions of the IAR tools:
+     - CC2538 + SRF06EB:  EWARM 7.20.1  (7.20.1.7307)
+     - CC2530 + SRF05EB:  EW8051 8.30.3 (8.30.3.41795)
+     - CC2530 + EXP5438:  EW430 6.10.2  (6.10.2.50871)
+     - CC2520 + EXP5438:  EW430 6.10.2  (6.10.2.50871)
+
+ - Foundation software library files for the CC2538 include the following:
+     - bsp.lib, version 1.3.1
+     - driverlib.lib, version 1.3.1
+     - usblib.lib, version 1.0.1
+
+
+Changes:
+ - [5676] Added support for the Texas Instruments CC2592 PA/LNA for the CC2530
+   and CC2538. The feature is enabled by the "HAL_PA_LNA_CC2592" compile flag.
+
+ - [5640] Added support for the Skyworks SE2431L PA/LNA for the CC2530. The
+   feature is enabled by the "HAL_PA_LNA_SE2431L" compile flag.
+
+ - [5610] Updated all Z-Stack sample application projects to include new files
+   for HA Diagnostics support - required for use with Z-Stack libraries. Refer
+   to item [5556] below for changes relating to the HA Diagnostics feature.
+
+ - [5556] Added support for implementing a Home Automation Diagnostics server
+   (Section 9.2 of "ZigBee Home Automation Public Application Profile" (see
+   ZigBee Document 05-3520-29). Three new files have been added to Z-Stack -
+   ZDiags.c, ZDiags.h, and zcl_diagnostic.c to provide infrastructure for the
+   entire HA Diagnostics Cluster. New MT_SYS commands have been developed to
+   support serial access/control of the diagnostic features - see SYS_ZDIAGS
+   commands in the "Z-Stack Monitor and Test API" document. This Z-Stack Home
+   release provides implementations for the following diagnostic statistics:
+       - MAC_TX_UCAST_RETRY
+       - MAC_TX_UCAST_FAIL
+       - NWK_DECRYPT_FAILURES
+       - PACKET_VALIDATE_DROP_COUNT
+       - APS_TX_BCAST
+       - APS_TX_UCAST_SUCCESS
+       - APS_TX_UCAST_RETRY
+       - APS_TX_UCAST_FAIL
+       - APS_DECRYPT_FAILURES
+       - APS_INVALID_PACKETS
+       - MAC_RETRIES_PER_APS_TX_SUCCESS
+       > SYSTEM_CLOCK  (TI proprietary)
+       > MAC_RX_CRC_PASS (TI proprietary)
+       > MAC_RX_CRC_FAIL (TI proprietary)
+   Support for other diagnostic statistics may be provided in later releases.
+
+ - [5546] Removed the "FEATURE_GREEN_POWER" compile flag from all standard
+   Z-Stack sample application projects since that MAC feature isn't required
+   for non-GreenPower applications. This update is necessary because Z-Stack
+   libraries in this release are built without "FEATURE_GREEN_POWER".
+
+ - [5509] Improved Monitor/Test (MT) support for reading and writing larger
+   non-volatile (NV) memory items. Two new commands, MT_SYS_OSAL_NV_READ_EXT
+   and MT_SYS_OSAL_NV_WRITE_EXT, have been added to MT_SYS.c (and Z-Tool), to
+   provide 16-bit NV data offsets. Refer to the "Z-Stack Monitor and Test API"
+   document for details on these commands and their parameters.
+
+ - [5246] Added capability to limit the number of pending MAC Data Indications
+   queued in the NWK RX message buffer. This feature could help in a scenario
+   where a device in a busy network gets saturated with incoming MAC frames.
+   Disabled by default, it can be used by compiling with "ZMAC_MAX_DATA_IND"
+   set to a value of 1 or more. A new function, osal_msg_count(), was added
+   to OSAL.c to support this feature.
+
+ - [5245] Provided for Application handling of AF transaction IDs via optional
+   callback from AF_DataRequest(). Added a new function, afSetApplCB(), that
+   allows an application to set the callback pointer.
+   NOTE: this upgrade makes two API changes to previous Z-Stack releases-
+    (1) a callback pointer is added to the EndPoint list structure "epList_t"
+    (2) a 3rd parameter (callback ptr) is added to the EndPoint registration
+    function afRegisterExtended().
+
+ - [4161] Improved 'out-of-the-box' power consumption on the CC2538 by turning
+   off unused peripherals in the SysCtrlRunSetting() function. Users may need
+   to alter these settings according to requirements of their product.
+
+
+Bug Fixes:
+ - [5703] Fixed a problem when an orphaned device, attempting a secure rejoin,
+   was required to pass Trust Center authentication. ZDSecMgrDeviceJoin() has
+   been modified to skip authentication if the device joined in Secure mode.
+
+ - [5688] Fixed a problem where the BindingTable NV item was created with an
+   incorrect size (too large). This did not result in operational problems but
+   wasted a small amount of NV memory.
+
+ - [5656] Corrected CRC_SHDW declarations for CC2530 ZNP. Incorrect placement
+   of an "#endif" statement (see OnBoard.c for the TI2530ZNP target) resulted
+   in missing declarations for LOCK_BITS_ADDRESS_SPACE, IEEE_ADDRESS_SPACE,
+   and RESERVED_ADDRESS_SPACE.
+
+ - [5647] Modified the MT_ZdoMgmtPermitJoinRequest() function to provide for
+   backward compatibility with pre-ZStack-2.6.0 versions. The previous API had
+   3 parameters, compared to 4 in the current version (DstAdr was added). See
+   the "Z-Stack Monitor and Test API" document for details on this MT command.
+
+ - [5580] Fixed a problem where an End-Device received many beacons when joining
+   a network and later sent a NetworkStatus packet with "No Route Available" in
+   response to a forwarded message. In ZDO_JoinConfirmCB(), the neighbor table
+   is now cleared for non-FFD devices.
+
+ - [5576] Added a new check for circular route where a Router's next hop is
+   the same as the source of a message being forwared. When detected, the
+   message is dropped and a Network Status (non-tree failure) is sent to the
+   source address of the data message.
+
+ - [5539] Fixed a problem where sleepy End-Devices would wake up unnecessarily
+   to maintain the APS duplicate table. Instead of using a timer, the MAC Poll
+   Confirm now triggers the maintenance event which calculates the elapsed
+   time since the previous maintenance. Also, the APS Duplicate Rejection
+   values in ZGlobals.h were changed to allow override via compile flags.
+
+ - [5503] Fixed a problem where a device association would fail if the device
+   was already in the Address Manager table with an existing routing entry to
+   the device's previous parent.
+
+ - [5416] Fixed a problem, for CC2530 and CC2538, where a MAC Ack frame might
+   incorrectly have the pending bit set to "1". The IEEE 802.15.4-2006 spec
+   only allows the pending bit in response to a DataReq.
+
+ - [5244] Changed the APS and NWK layer TX retry logic so that 'ZNwkNoRoute'
+   and 'ZMacTransactionExpired' errors are handled the same as 'ZMacNoAck':
+   pending retries for the message are cancelled. In a busy network, this may
+   reduce the number of un-successful APS/NWK retries, giving the application
+   more control over retry scheduling.
+
+ - [5173] Fixed potential problems the in non-volatile (NV) save and restore
+   functions for the AssociatedDevList and BindingTable where NV items saved
+   in a ZStack-2.4.0 system could be corrupted with a later Z-Stack version.
+   Implemented an upgrade process for AssociatedDevList and BindingTable that
+   can recover NV data for these tables when the length of the table changes
+   from one device build to another. For example, upgrading the BindingTable
+   only works for changes to NWK_MAX_BINDING_ENTRIES. If a change is made to
+   MAX_BINDING_CLUSTER_IDS, the application needs to take care of the upgrade
+   process. See the new BindCopyBackupToNewNV() and BindUpgradeTableInNV()
+   functions for details.
+
+ - [4819] Added a work-around, for CC2520 and CC2530, for a scenario where a
+   lost MAC Ack Done interrupt could delay MAC TX activity until another MAC
+   RX event occurred. This feature is enabled by the "ACK_DONE_ISR_WORKAROUND"
+   compile flag - not recommended for most users.
+
+
+Known Issues:
+ - Processing of Manufacturer Specific foundation commands is not supported.
+
+ - To disable security at build time, use the "SECURE=0" compile option. Do
+   not attempt to disable security by setting the SECURITY_LEVEL to zero.
+
+ - The ZDO Complex Descriptor is not supported.
+
+--------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
