@@ -1,0 +1,2 @@
+# WirelessSensorNetworksPracticum
+Wirless technology practicum
