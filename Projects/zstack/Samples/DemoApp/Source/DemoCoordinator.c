@@ -92,13 +92,13 @@
 
 // Port and pin for door limit switch
 #define PORT_DOOR_LIMIT_SWITCH              0
-#define PIN_DOOR_LIMIT_SWITCH               2
+#define PIN_DOOR_LIMIT_SWITCH               5
 // Port and pin for green LED
 #define PORT_GREEN_LED                      1
 #define PIN_GREEN_LED                       2
 // Port and pin for door control
 #define PORT_DOOR_CONTROL                   0
-#define PIN_DOOR_CONTROL                    6
+#define PIN_DOOR_CONTROL                    7
 
 /******************************************************************************
  * TYPEDEFS
@@ -117,6 +117,7 @@ typedef struct
 static uint8 appState =             APP_INIT;
 static uint8 myStartRetryDelay =    10;          // milliseconds
 static gtwData_t gtwData;
+static uint8 open =                 0;
 
 /******************************************************************************
  * LOCAL FUNCTIONS
@@ -181,7 +182,8 @@ void zb_HandleOsalEvent( uint16 event )
     initUart(uartRxCB);
     
     // Initialise the door limit switch as input and internal pull-up activated
-    MCU_IO_INPUT( PORT_DOOR_LIMIT_SWITCH, PIN_DOOR_LIMIT_SWITCH, MCU_IO_PULLUP );
+    //MCU_IO_INPUT( PORT_DOOR_LIMIT_SWITCH, PIN_DOOR_LIMIT_SWITCH, MCU_IO_PULLUP );
+    MCU_IO_DIR_INPUT( PORT_DOOR_LIMIT_SWITCH, PIN_DOOR_LIMIT_SWITCH );
     // Initialise the green LED as output
     MCU_IO_DIR_OUTPUT( PORT_GREEN_LED, PIN_GREEN_LED );
     // Initialise the door control as output
@@ -224,6 +226,10 @@ void zb_HandleKeys( uint8 shift, uint8 keys )
   // removed code
   if ( keys & HAL_KEY_SW_1 )
   {
+    
+    MCU_IO_SET( PORT_DOOR_CONTROL, PIN_DOOR_CONTROL, open );
+    open = !open;
+    
     if ( appState == APP_RUN )
     {
       allowBind ^= 1;
@@ -243,14 +249,14 @@ void zb_HandleKeys( uint8 shift, uint8 keys )
   }
   if ( keys & HAL_KEY_SW_2 )
   {
-    MCU_IO_GET( PORT_DOOR_LIMIT_SWITCH, PIN_DOOR_LIMIT_SWITCH );
-    MCU_IO_SET( PORT_GREEN_LED, PIN_GREEN_LED, MCU_IO_GET( PORT_DOOR_LIMIT_SWITCH, PIN_DOOR_LIMIT_SWITCH ) );
+    // MCU_IO_GET returns 0x20 when pressed, need to turn it into 0x01 or 0x00
+    uint8 result = !!MCU_IO_GET( PORT_DOOR_LIMIT_SWITCH, PIN_DOOR_LIMIT_SWITCH );
+    
+    MCU_IO_SET( PORT_GREEN_LED, PIN_GREEN_LED, result );
+   
     /*if ( appState == APP_RUN ) 
     {
-      MCU_IO_SET_HIGH( 0, 5 );
-      
-      
-      HalLedSet( HAL_LED_1, HAL_LED_MODE_OFF );
+
     }*/
   }
 }
