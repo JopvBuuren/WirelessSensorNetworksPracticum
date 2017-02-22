@@ -1,6 +1,6 @@
 ###############################################################################
 #
-# IAR C/C++ Compiler V9.20.1.2476 for 8051                17/Feb/2017  12:45:10
+# IAR C/C++ Compiler V9.20.1.2476 for 8051                22/Feb/2017  13:47:07
 # Copyright 2004-2015 IAR Systems AB.
 # Standalone license - IAR Embedded Workbench for 8051
 #
@@ -12,14 +12,14 @@
 #    Dptr setup         =  1,16
 #                          
 #    Source file        =  
-#        D:\Jop van
-#        Buuren\Documents\Hogeschool\Vakken\wt\WirelessSensorNetworksPracticum\Components\hal\common\hal_drivers.c
+#        D:\School\Jaar_3\WTWS\Projects\WirelessSensorNetworksPracticum\Components\hal\common\hal_drivers.c
 #    Command line       =  
-#        -f "D:\Jop van
-#        Buuren\Documents\Hogeschool\Vakken\wt\WirelessSensorNetworksPracticum\Projects\zstack\Samples\DemoApp\CC2530DB\..\..\..\Tools\CC2530DB\f8wEndev.cfg"
-#        (-DCPU32MHZ -DROOT=__near_func -DMAC_CFG_TX_DATA_MAX=3
-#        -DMAC_CFG_TX_MAX=6 -DMAC_CFG_RX_MAX=3) -f "D:\Jop van
-#        Buuren\Documents\Hogeschool\Vakken\wt\WirelessSensorNetworksPracticum\Projects\zstack\Samples\DemoApp\CC2530DB\..\..\..\Tools\CC2530DB\f8wConfig.cfg"
+#        -f
+#        D:\School\Jaar_3\WTWS\Projects\WirelessSensorNetworksPracticum\Projects\zstack\Samples\DemoApp\CC2530DB\..\..\..\Tools\CC2530DB\f8wCoord.cfg
+#        (-DCPU32MHZ -DROOT=__near_func -DMAC_CFG_APP_PENDING_QUEUE=TRUE
+#        -DMAC_CFG_TX_DATA_MAX=5 -DMAC_CFG_TX_MAX=8 -DMAC_CFG_RX_MAX=5
+#        -DZDO_COORDINATOR -DRTR_NWK) -f
+#        D:\School\Jaar_3\WTWS\Projects\WirelessSensorNetworksPracticum\Projects\zstack\Samples\DemoApp\CC2530DB\..\..\..\Tools\CC2530DB\f8wConfig.cfg
 #        (-DZIGBEEPRO -DSECURE=0 -DZG_SECURE_DYNAMIC=0 -DREFLECTOR
 #        -DDEFAULT_CHANLIST=0x00100000 -DZDAPP_CONFIG_PAN_ID=0x0DAD
 #        -DNWK_START_DELAY=100 -DEXTENDED_JOINING_RANDOM_MASK=0x007F
@@ -34,75 +34,70 @@
 #        -DMAC_MAX_FRAME_SIZE=116 -DZDNWKMGR_MIN_TRANSMISSIONS=20
 #        "-DCONST=const __code" -DGENERIC=__generic -DRFD_RCVC_ALWAYS_ON=FALSE
 #        -DPOLL_RATE=1000 -DQUEUED_POLL_RATE=100 -DRESPONSE_POLL_RATE=100)
-#        -DREJOIN_POLL_RATE=440 "D:\Jop van
-#        Buuren\Documents\Hogeschool\Vakken\wt\WirelessSensorNetworksPracticum\Components\hal\common\hal_drivers.c"
-#        -D NWK_AUTO_POLL -D HOLD_AUTO_START -D POWER_SAVING -D NV_INIT -D
-#        DEVICE_LOGICAL_TYPE=ZG_DEVICETYPE_ENDDEVICE -lC "D:\Jop van
-#        Buuren\Documents\Hogeschool\Vakken\wt\WirelessSensorNetworksPracticum\Projects\zstack\Samples\DemoApp\CC2530DB\SensorEB\List\"
-#        -lA "D:\Jop van
-#        Buuren\Documents\Hogeschool\Vakken\wt\WirelessSensorNetworksPracticum\Projects\zstack\Samples\DemoApp\CC2530DB\SensorEB\List\"
-#        --diag_suppress Pe001,Pa010,Pe1665 -o "D:\Jop van
-#        Buuren\Documents\Hogeschool\Vakken\wt\WirelessSensorNetworksPracticum\Projects\zstack\Samples\DemoApp\CC2530DB\SensorEB\Obj\"
+#        -DREJOIN_POLL_RATE=440
+#        D:\School\Jaar_3\WTWS\Projects\WirelessSensorNetworksPracticum\Components\hal\common\hal_drivers.c
+#        -D HOLD_AUTO_START -D BUILD_ALL_DEVICES -D REFLECTOR -D NV_INIT -D
+#        NV_RESTORE -D HAL_UART=TRUE -lC
+#        D:\School\Jaar_3\WTWS\Projects\WirelessSensorNetworksPracticum\Projects\zstack\Samples\DemoApp\CC2530DB\CoordinatorEB\List\
+#        -lA
+#        D:\School\Jaar_3\WTWS\Projects\WirelessSensorNetworksPracticum\Projects\zstack\Samples\DemoApp\CC2530DB\CoordinatorEB\List\
+#        --diag_suppress Pe001,Pa010,Pe1665 -o
+#        D:\School\Jaar_3\WTWS\Projects\WirelessSensorNetworksPracticum\Projects\zstack\Samples\DemoApp\CC2530DB\CoordinatorEB\Obj\
 #        -e --no_cse --no_unroll --no_inline --no_code_motion --no_tbaa --debug
 #        --core=plain --dptr=16,1 --data_model=large --code_model=banked
 #        --calling_convention=xdata_reentrant --place_constants=data_rom
-#        --nr_virtual_regs 16 -I "D:\Jop van
-#        Buuren\Documents\Hogeschool\Vakken\wt\WirelessSensorNetworksPracticum\Projects\zstack\Samples\DemoApp\CC2530DB\"
-#        -I "D:\Jop van
-#        Buuren\Documents\Hogeschool\Vakken\wt\WirelessSensorNetworksPracticum\Projects\zstack\Samples\DemoApp\CC2530DB\..\Source\"
-#        -I "D:\Jop van
-#        Buuren\Documents\Hogeschool\Vakken\wt\WirelessSensorNetworksPracticum\Projects\zstack\Samples\DemoApp\CC2530DB\..\..\..\ZMain\TI2530DB\"
-#        -I "D:\Jop van
-#        Buuren\Documents\Hogeschool\Vakken\wt\WirelessSensorNetworksPracticum\Projects\zstack\Samples\DemoApp\CC2530DB\..\..\..\..\..\Components\hal\include\"
-#        -I "D:\Jop van
-#        Buuren\Documents\Hogeschool\Vakken\wt\WirelessSensorNetworksPracticum\Projects\zstack\Samples\DemoApp\CC2530DB\..\..\..\..\..\Components\hal\target\CC2530EB\"
-#        -I "D:\Jop van
-#        Buuren\Documents\Hogeschool\Vakken\wt\WirelessSensorNetworksPracticum\Projects\zstack\Samples\DemoApp\CC2530DB\..\..\..\..\..\Components\mac\include\"
-#        -I "D:\Jop van
-#        Buuren\Documents\Hogeschool\Vakken\wt\WirelessSensorNetworksPracticum\Projects\zstack\Samples\DemoApp\CC2530DB\..\..\..\..\..\Components\mac\high_level\"
-#        -I "D:\Jop van
-#        Buuren\Documents\Hogeschool\Vakken\wt\WirelessSensorNetworksPracticum\Projects\zstack\Samples\DemoApp\CC2530DB\..\..\..\..\..\Components\mac\low_level\srf04\"
-#        -I "D:\Jop van
-#        Buuren\Documents\Hogeschool\Vakken\wt\WirelessSensorNetworksPracticum\Projects\zstack\Samples\DemoApp\CC2530DB\..\..\..\..\..\Components\mac\low_level\srf04\single_chip\"
-#        -I "D:\Jop van
-#        Buuren\Documents\Hogeschool\Vakken\wt\WirelessSensorNetworksPracticum\Projects\zstack\Samples\DemoApp\CC2530DB\..\..\..\..\..\Components\mt\"
-#        -I "D:\Jop van
-#        Buuren\Documents\Hogeschool\Vakken\wt\WirelessSensorNetworksPracticum\Projects\zstack\Samples\DemoApp\CC2530DB\..\..\..\..\..\Components\osal\include\"
-#        -I "D:\Jop van
-#        Buuren\Documents\Hogeschool\Vakken\wt\WirelessSensorNetworksPracticum\Projects\zstack\Samples\DemoApp\CC2530DB\..\..\..\..\..\Components\services\saddr\"
-#        -I "D:\Jop van
-#        Buuren\Documents\Hogeschool\Vakken\wt\WirelessSensorNetworksPracticum\Projects\zstack\Samples\DemoApp\CC2530DB\..\..\..\..\..\Components\services\sdata\"
-#        -I "D:\Jop van
-#        Buuren\Documents\Hogeschool\Vakken\wt\WirelessSensorNetworksPracticum\Projects\zstack\Samples\DemoApp\CC2530DB\..\..\..\..\..\Components\stack\af\"
-#        -I "D:\Jop van
-#        Buuren\Documents\Hogeschool\Vakken\wt\WirelessSensorNetworksPracticum\Projects\zstack\Samples\DemoApp\CC2530DB\..\..\..\..\..\Components\stack\nwk\"
-#        -I "D:\Jop van
-#        Buuren\Documents\Hogeschool\Vakken\wt\WirelessSensorNetworksPracticum\Projects\zstack\Samples\DemoApp\CC2530DB\..\..\..\..\..\Components\stack\sapi\"
-#        -I "D:\Jop van
-#        Buuren\Documents\Hogeschool\Vakken\wt\WirelessSensorNetworksPracticum\Projects\zstack\Samples\DemoApp\CC2530DB\..\..\..\..\..\Components\stack\sec\"
-#        -I "D:\Jop van
-#        Buuren\Documents\Hogeschool\Vakken\wt\WirelessSensorNetworksPracticum\Projects\zstack\Samples\DemoApp\CC2530DB\..\..\..\..\..\Components\stack\sys\"
-#        -I "D:\Jop van
-#        Buuren\Documents\Hogeschool\Vakken\wt\WirelessSensorNetworksPracticum\Projects\zstack\Samples\DemoApp\CC2530DB\..\..\..\..\..\Components\stack\zdo\"
-#        -I "D:\Jop van
-#        Buuren\Documents\Hogeschool\Vakken\wt\WirelessSensorNetworksPracticum\Projects\zstack\Samples\DemoApp\CC2530DB\..\..\..\..\..\Components\zmac\"
-#        -I "D:\Jop van
-#        Buuren\Documents\Hogeschool\Vakken\wt\WirelessSensorNetworksPracticum\Projects\zstack\Samples\DemoApp\CC2530DB\..\..\..\..\..\Components\zmac\f8w\"
+#        --nr_virtual_regs 16 -I
+#        D:\School\Jaar_3\WTWS\Projects\WirelessSensorNetworksPracticum\Projects\zstack\Samples\DemoApp\CC2530DB\
+#        -I
+#        D:\School\Jaar_3\WTWS\Projects\WirelessSensorNetworksPracticum\Projects\zstack\Samples\DemoApp\CC2530DB\..\Source\
+#        -I
+#        D:\School\Jaar_3\WTWS\Projects\WirelessSensorNetworksPracticum\Projects\zstack\Samples\DemoApp\CC2530DB\..\..\..\ZMain\TI2530DB\
+#        -I
+#        D:\School\Jaar_3\WTWS\Projects\WirelessSensorNetworksPracticum\Projects\zstack\Samples\DemoApp\CC2530DB\..\..\..\..\..\Components\hal\include\
+#        -I
+#        D:\School\Jaar_3\WTWS\Projects\WirelessSensorNetworksPracticum\Projects\zstack\Samples\DemoApp\CC2530DB\..\..\..\..\..\Components\hal\target\CC2530EB\
+#        -I
+#        D:\School\Jaar_3\WTWS\Projects\WirelessSensorNetworksPracticum\Projects\zstack\Samples\DemoApp\CC2530DB\..\..\..\..\..\Components\mac\include\
+#        -I
+#        D:\School\Jaar_3\WTWS\Projects\WirelessSensorNetworksPracticum\Projects\zstack\Samples\DemoApp\CC2530DB\..\..\..\..\..\Components\mac\high_level\
+#        -I
+#        D:\School\Jaar_3\WTWS\Projects\WirelessSensorNetworksPracticum\Projects\zstack\Samples\DemoApp\CC2530DB\..\..\..\..\..\Components\mac\low_level\srf04\
+#        -I
+#        D:\School\Jaar_3\WTWS\Projects\WirelessSensorNetworksPracticum\Projects\zstack\Samples\DemoApp\CC2530DB\..\..\..\..\..\Components\mac\low_level\srf04\single_chip\
+#        -I
+#        D:\School\Jaar_3\WTWS\Projects\WirelessSensorNetworksPracticum\Projects\zstack\Samples\DemoApp\CC2530DB\..\..\..\..\..\Components\mt\
+#        -I
+#        D:\School\Jaar_3\WTWS\Projects\WirelessSensorNetworksPracticum\Projects\zstack\Samples\DemoApp\CC2530DB\..\..\..\..\..\Components\osal\include\
+#        -I
+#        D:\School\Jaar_3\WTWS\Projects\WirelessSensorNetworksPracticum\Projects\zstack\Samples\DemoApp\CC2530DB\..\..\..\..\..\Components\services\saddr\
+#        -I
+#        D:\School\Jaar_3\WTWS\Projects\WirelessSensorNetworksPracticum\Projects\zstack\Samples\DemoApp\CC2530DB\..\..\..\..\..\Components\services\sdata\
+#        -I
+#        D:\School\Jaar_3\WTWS\Projects\WirelessSensorNetworksPracticum\Projects\zstack\Samples\DemoApp\CC2530DB\..\..\..\..\..\Components\stack\af\
+#        -I
+#        D:\School\Jaar_3\WTWS\Projects\WirelessSensorNetworksPracticum\Projects\zstack\Samples\DemoApp\CC2530DB\..\..\..\..\..\Components\stack\nwk\
+#        -I
+#        D:\School\Jaar_3\WTWS\Projects\WirelessSensorNetworksPracticum\Projects\zstack\Samples\DemoApp\CC2530DB\..\..\..\..\..\Components\stack\sapi\
+#        -I
+#        D:\School\Jaar_3\WTWS\Projects\WirelessSensorNetworksPracticum\Projects\zstack\Samples\DemoApp\CC2530DB\..\..\..\..\..\Components\stack\sec\
+#        -I
+#        D:\School\Jaar_3\WTWS\Projects\WirelessSensorNetworksPracticum\Projects\zstack\Samples\DemoApp\CC2530DB\..\..\..\..\..\Components\stack\sys\
+#        -I
+#        D:\School\Jaar_3\WTWS\Projects\WirelessSensorNetworksPracticum\Projects\zstack\Samples\DemoApp\CC2530DB\..\..\..\..\..\Components\stack\zdo\
+#        -I
+#        D:\School\Jaar_3\WTWS\Projects\WirelessSensorNetworksPracticum\Projects\zstack\Samples\DemoApp\CC2530DB\..\..\..\..\..\Components\zmac\
+#        -I
+#        D:\School\Jaar_3\WTWS\Projects\WirelessSensorNetworksPracticum\Projects\zstack\Samples\DemoApp\CC2530DB\..\..\..\..\..\Components\zmac\f8w\
 #        -Ol --require_prototypes
 #    List file          =  
-#        D:\Jop van
-#        Buuren\Documents\Hogeschool\Vakken\wt\WirelessSensorNetworksPracticum\Projects\zstack\Samples\DemoApp\CC2530DB\SensorEB\List\hal_drivers.lst
+#        D:\School\Jaar_3\WTWS\Projects\WirelessSensorNetworksPracticum\Projects\zstack\Samples\DemoApp\CC2530DB\CoordinatorEB\List\hal_drivers.lst
 #    Object file        =  
-#        D:\Jop van
-#        Buuren\Documents\Hogeschool\Vakken\wt\WirelessSensorNetworksPracticum\Projects\zstack\Samples\DemoApp\CC2530DB\SensorEB\Obj\hal_drivers.r51
+#        D:\School\Jaar_3\WTWS\Projects\WirelessSensorNetworksPracticum\Projects\zstack\Samples\DemoApp\CC2530DB\CoordinatorEB\Obj\hal_drivers.r51
 #
 ###############################################################################
 
-D:\Jop van Buuren\Documents\Hogeschool\Vakken\wt\WirelessSensorNetworksPracticum\Components\hal\common\hal_drivers.c
+D:\School\Jaar_3\WTWS\Projects\WirelessSensorNetworksPracticum\Components\hal\common\hal_drivers.c
       1          /**************************************************************************************************
-                                                                                                                   ^
-Warning[Pa050]: non-native end of line sequence detected (this diagnostic is
-          only issued once)
       2            Filename:       hal_drivers.c
       3            Revised:        $Date: 2007-07-06 10:42:24 -0700 (Fri, 06 Jul 2007) $
       4            Revision:       $Revision: 13579 $
@@ -280,13 +275,15 @@ Warning[Pa050]: non-native end of line sequence detected (this diagnostic is
     143            /* UART */
     144          #if (defined HAL_UART) && (HAL_UART == TRUE)
     145            HalUARTInit();
+   \   000010                ; Setup parameters for call to function HalUARTInit
+   \   000010   12....       LCALL   `??HalUARTInit::?relay`; Banked call to: HalUARTInit
     146          #endif
     147          
     148            /* KEY */
     149          #if (defined HAL_KEY) && (HAL_KEY == TRUE)
     150            HalKeyInit();
-   \   000010                ; Setup parameters for call to function HalKeyInit
-   \   000010   12....       LCALL   `??HalKeyInit::?relay`; Banked call to: HalKeyInit
+   \   000013                ; Setup parameters for call to function HalKeyInit
+   \   000013   12....       LCALL   `??HalKeyInit::?relay`; Banked call to: HalKeyInit
     151          #endif
     152            
     153            /* SPI */
@@ -299,9 +296,9 @@ Warning[Pa050]: non-native end of line sequence detected (this diagnostic is
     160            usbHidInit();
     161          #endif
     162          }
-   \   000013   D083         POP     DPH
-   \   000015   D082         POP     DPL
-   \   000017   02....       LJMP    ?BRET
+   \   000016   D083         POP     DPH
+   \   000018   D082         POP     DPL
+   \   00001A   02....       LJMP    ?BRET
     163          
     164          /**************************************************************************************************
     165           * @fn      Hal_ProcessEvent
@@ -341,7 +338,7 @@ Warning[Pa050]: non-native end of line sequence detected (this diagnostic is
    \   000010   F9           MOV     R1,A
    \   000011   E8           MOV     A,R0
    \   000012   49           ORL     A,R1
-   \   000013   6035         JZ      ??Hal_ProcessEvent_0
+   \   000013   6034         JZ      ??Hal_ProcessEvent_0
     181            {
     182              msgPtr = osal_msg_receive(Hal_TaskID);
    \   000015                ; Setup parameters for call to function osal_msg_receive
@@ -388,7 +385,7 @@ Warning[Pa050]: non-native end of line sequence detected (this diagnostic is
    \   000043   EF           MOV     A,R7
    \   000044   6480         XRL     A,#0x80
    \   000046   FB           MOV     R3,A
-   \   000047   02....       LJMP    ??Hal_ProcessEvent_3 & 0xFFFF
+   \   000047   8046         SJMP    ??Hal_ProcessEvent_3
     194            }
     195          
     196          #if (defined HAL_BUZZER) && (HAL_BUZZER == TRUE)
@@ -409,169 +406,100 @@ Warning[Pa050]: non-native end of line sequence detected (this diagnostic is
     211          
     212            if ( events & HAL_LED_BLINK_EVENT )
    \                     ??Hal_ProcessEvent_0:
-   \   00004A   EE           MOV     A,R6
-   \   00004B   5420         ANL     A,#0x20
-   \   00004D   600E         JZ      ??Hal_ProcessEvent_4
+   \   000049   EE           MOV     A,R6
+   \   00004A   5420         ANL     A,#0x20
+   \   00004C   600D         JZ      ??Hal_ProcessEvent_4
     213            {
     214          #if (defined (BLINK_LEDS)) && (HAL_LED == TRUE)
     215              HalLedUpdate();
-   \   00004F                ; Setup parameters for call to function HalLedUpdate
-   \   00004F   12....       LCALL   `??HalLedUpdate::?relay`; Banked call to: HalLedUpdate
+   \   00004E                ; Setup parameters for call to function HalLedUpdate
+   \   00004E   12....       LCALL   `??HalLedUpdate::?relay`; Banked call to: HalLedUpdate
     216          #endif /* BLINK_LEDS && HAL_LED */
     217              return events ^ HAL_LED_BLINK_EVENT;
-   \   000052   EE           MOV     A,R6
-   \   000053   6420         XRL     A,#0x20
-   \   000055   FA           MOV     R2,A
-   \   000056   EF           MOV     A,R7
-   \   000057   6400         XRL     A,#0x0
-   \   000059   FB           MOV     R3,A
-   \   00005A   02....       LJMP    ??Hal_ProcessEvent_3 & 0xFFFF
+   \   000051   EE           MOV     A,R6
+   \   000052   6420         XRL     A,#0x20
+   \   000054   FA           MOV     R2,A
+   \   000055   EF           MOV     A,R7
+   \   000056   6400         XRL     A,#0x0
+   \   000058   FB           MOV     R3,A
+   \   000059   8034         SJMP    ??Hal_ProcessEvent_3
     218            }
     219          
     220            if (events & HAL_KEY_EVENT)
    \                     ??Hal_ProcessEvent_4:
-   \   00005D   EE           MOV     A,R6
-   \   00005E   5410         ANL     A,#0x10
-   \   000060   602B         JZ      ??Hal_ProcessEvent_5
+   \   00005B   EE           MOV     A,R6
+   \   00005C   5410         ANL     A,#0x10
+   \   00005E   602B         JZ      ??Hal_ProcessEvent_5
     221            {
     222          #if (defined HAL_KEY) && (HAL_KEY == TRUE)
     223              /* Check for keys */
     224              HalKeyPoll();
-   \   000062                ; Setup parameters for call to function HalKeyPoll
-   \   000062   12....       LCALL   `??HalKeyPoll::?relay`; Banked call to: HalKeyPoll
+   \   000060                ; Setup parameters for call to function HalKeyPoll
+   \   000060   12....       LCALL   `??HalKeyPoll::?relay`; Banked call to: HalKeyPoll
     225          
     226              /* if interrupt disabled, do next polling */
     227              if (!Hal_KeyIntEnable)
-   \   000065   90....       MOV     DPTR,#Hal_KeyIntEnable
-   \   000068   E0           MOVX    A,@DPTR
-   \   000069   7018         JNZ     ??Hal_ProcessEvent_6
+   \   000063   90....       MOV     DPTR,#Hal_KeyIntEnable
+   \   000066   E0           MOVX    A,@DPTR
+   \   000067   7018         JNZ     ??Hal_ProcessEvent_6
     228              {
     229                osal_start_timerEx( Hal_TaskID, HAL_KEY_EVENT, 100);
-   \   00006B                ; Setup parameters for call to function osal_start_timerEx
-   \   00006B   90....       MOV     DPTR,#__Constant_64
-   \   00006E   12....       LCALL   ?PUSH_XSTACK8_X_FOUR
-   \   000071   7A10         MOV     R2,#0x10
-   \   000073   7B00         MOV     R3,#0x0
-   \   000075   90....       MOV     DPTR,#Hal_TaskID
-   \   000078   E0           MOVX    A,@DPTR
-   \   000079   F9           MOV     R1,A
-   \   00007A   12....       LCALL   `??osal_start_timerEx::?relay`; Banked call to: osal_start_timerEx
-   \   00007D   7404         MOV     A,#0x4
-   \   00007F   12....       LCALL   ?DEALLOC_XSTACK8
-   \   000082   E9           MOV     A,R1
+   \   000069                ; Setup parameters for call to function osal_start_timerEx
+   \   000069   90....       MOV     DPTR,#__Constant_64
+   \   00006C   12....       LCALL   ?PUSH_XSTACK8_X_FOUR
+   \   00006F   7A10         MOV     R2,#0x10
+   \   000071   7B00         MOV     R3,#0x0
+   \   000073   90....       MOV     DPTR,#Hal_TaskID
+   \   000076   E0           MOVX    A,@DPTR
+   \   000077   F9           MOV     R1,A
+   \   000078   12....       LCALL   `??osal_start_timerEx::?relay`; Banked call to: osal_start_timerEx
+   \   00007B   7404         MOV     A,#0x4
+   \   00007D   12....       LCALL   ?DEALLOC_XSTACK8
+   \   000080   E9           MOV     A,R1
     230              }
     231          #endif
     232              return events ^ HAL_KEY_EVENT;
    \                     ??Hal_ProcessEvent_6:
-   \   000083   EE           MOV     A,R6
-   \   000084   6410         XRL     A,#0x10
-   \   000086   FA           MOV     R2,A
-   \   000087   EF           MOV     A,R7
-   \   000088   6400         XRL     A,#0x0
-   \   00008A   FB           MOV     R3,A
-   \   00008B   806A         SJMP    ??Hal_ProcessEvent_3
+   \   000081   EE           MOV     A,R6
+   \   000082   6410         XRL     A,#0x10
+   \   000084   FA           MOV     R2,A
+   \   000085   EF           MOV     A,R7
+   \   000086   6400         XRL     A,#0x0
+   \   000088   FB           MOV     R3,A
+   \   000089   8004         SJMP    ??Hal_ProcessEvent_3
     233            }
     234          
     235          #if defined POWER_SAVING
     236            if ( events & HAL_SLEEP_TIMER_EVENT )
-   \                     ??Hal_ProcessEvent_5:
-   \   00008D   EE           MOV     A,R6
-   \   00008E   5404         ANL     A,#0x4
-   \   000090   600D         JZ      ??Hal_ProcessEvent_7
     237            {
     238              halRestoreSleepLevel();
-   \   000092                ; Setup parameters for call to function halRestoreSleepLevel
-   \   000092   12....       LCALL   `??halRestoreSleepLevel::?relay`; Banked call to: halRestoreSleepLevel
     239              return events ^ HAL_SLEEP_TIMER_EVENT;
-   \   000095   EE           MOV     A,R6
-   \   000096   6404         XRL     A,#0x4
-   \   000098   FA           MOV     R2,A
-   \   000099   EF           MOV     A,R7
-   \   00009A   6400         XRL     A,#0x0
-   \   00009C   FB           MOV     R3,A
-   \   00009D   8058         SJMP    ??Hal_ProcessEvent_3
     240            }
     241          
     242            if ( events & HAL_PWRMGR_HOLD_EVENT )
-   \                     ??Hal_ProcessEvent_7:
-   \   00009F   EE           MOV     A,R6
-   \   0000A0   5402         ANL     A,#0x2
-   \   0000A2   6034         JZ      ??Hal_ProcessEvent_8
     243            {
     244              (void)osal_pwrmgr_task_state(Hal_TaskID, PWRMGR_HOLD);
-   \   0000A4                ; Setup parameters for call to function osal_pwrmgr_task_state
-   \   0000A4   7A01         MOV     R2,#0x1
-   \   0000A6   90....       MOV     DPTR,#Hal_TaskID
-   \   0000A9   E0           MOVX    A,@DPTR
-   \   0000AA   F9           MOV     R1,A
-   \   0000AB   12....       LCALL   `??osal_pwrmgr_task_state::?relay`; Banked call to: osal_pwrmgr_task_state
-   \   0000AE   E9           MOV     A,R1
-   \   0000AF   F5..         MOV     ?V1,A
     245          
     246              (void)osal_stop_timerEx(Hal_TaskID, HAL_PWRMGR_CONSERVE_EVENT);
-   \   0000B1                ; Setup parameters for call to function osal_stop_timerEx
-   \   0000B1   7A01         MOV     R2,#0x1
-   \   0000B3   7B00         MOV     R3,#0x0
-   \   0000B5   90....       MOV     DPTR,#Hal_TaskID
-   \   0000B8   E0           MOVX    A,@DPTR
-   \   0000B9   F9           MOV     R1,A
-   \   0000BA   12....       LCALL   `??osal_stop_timerEx::?relay`; Banked call to: osal_stop_timerEx
-   \   0000BD   E9           MOV     A,R1
-   \   0000BE   F5..         MOV     ?V0,A
     247              (void)osal_clear_event(Hal_TaskID, HAL_PWRMGR_CONSERVE_EVENT);
-   \   0000C0                ; Setup parameters for call to function osal_clear_event
-   \   0000C0   7A01         MOV     R2,#0x1
-   \   0000C2   7B00         MOV     R3,#0x0
-   \   0000C4   90....       MOV     DPTR,#Hal_TaskID
-   \   0000C7   E0           MOVX    A,@DPTR
-   \   0000C8   F9           MOV     R1,A
-   \   0000C9   12....       LCALL   `??osal_clear_event::?relay`; Banked call to: osal_clear_event
-   \   0000CC   E9           MOV     A,R1
-   \   0000CD   F8           MOV     R0,A
     248          
     249              return (events & ~(HAL_PWRMGR_HOLD_EVENT | HAL_PWRMGR_CONSERVE_EVENT));
-   \   0000CE   EE           MOV     A,R6
-   \   0000CF   54FC         ANL     A,#0xfc
-   \   0000D1   FA           MOV     R2,A
-   \   0000D2   EF           MOV     A,R7
-   \   0000D3   54FF         ANL     A,#0xff
-   \   0000D5   FB           MOV     R3,A
-   \   0000D6   801F         SJMP    ??Hal_ProcessEvent_3
     250            }
     251          
     252            if ( events & HAL_PWRMGR_CONSERVE_EVENT )
-   \                     ??Hal_ProcessEvent_8:
-   \   0000D8   EE           MOV     A,R6
-   \   0000D9   A2E0         MOV     C,0xE0 /* A   */.0
-   \   0000DB   5016         JNC     ??Hal_ProcessEvent_9
     253            {
     254              (void)osal_pwrmgr_task_state(Hal_TaskID, PWRMGR_CONSERVE);
-   \   0000DD                ; Setup parameters for call to function osal_pwrmgr_task_state
-   \   0000DD   7A00         MOV     R2,#0x0
-   \   0000DF   90....       MOV     DPTR,#Hal_TaskID
-   \   0000E2   E0           MOVX    A,@DPTR
-   \   0000E3   F9           MOV     R1,A
-   \   0000E4   12....       LCALL   `??osal_pwrmgr_task_state::?relay`; Banked call to: osal_pwrmgr_task_state
-   \   0000E7   E9           MOV     A,R1
-   \   0000E8   F8           MOV     R0,A
     255              return events ^ HAL_PWRMGR_CONSERVE_EVENT;
-   \   0000E9   EE           MOV     A,R6
-   \   0000EA   6401         XRL     A,#0x1
-   \   0000EC   FA           MOV     R2,A
-   \   0000ED   EF           MOV     A,R7
-   \   0000EE   6400         XRL     A,#0x0
-   \   0000F0   FB           MOV     R3,A
-   \   0000F1   8004         SJMP    ??Hal_ProcessEvent_3
     256            }
     257          #endif
     258          
     259            return 0;
-   \                     ??Hal_ProcessEvent_9:
-   \   0000F3   7A00         MOV     R2,#0x0
-   \   0000F5   7B00         MOV     R3,#0x0
+   \                     ??Hal_ProcessEvent_5:
+   \   00008B   7A00         MOV     R2,#0x0
+   \   00008D   7B00         MOV     R3,#0x0
    \                     ??Hal_ProcessEvent_3:
-   \   0000F7   7F02         MOV     R7,#0x2
-   \   0000F9   02....       LJMP    ?BANKED_LEAVE_XDATA
+   \   00008F   7F02         MOV     R7,#0x2
+   \   000091   02....       LJMP    ?BANKED_LEAVE_XDATA
     260          }
     261          
     262          /**************************************************************************************************
@@ -588,17 +516,20 @@ Warning[Pa050]: non-native end of line sequence detected (this diagnostic is
     271          void Hal_ProcessPoll ()
    \                     Hal_ProcessPoll:
     272          {
-   \   000000                ; Saved register size: 0
-   \   000000                ; Auto size: 0
+   \   000000   C082         PUSH    DPL
+   \   000002   C083         PUSH    DPH
+   \   000004                ; Saved register size: 2
+   \   000004                ; Auto size: 0
     273          #if defined( POWER_SAVING )
     274            /* Allow sleep before the next OSAL event loop */
     275            ALLOW_SLEEP_MODE();
-   \   000000   75..01       MOV     halSleepPconValue,#0x1
     276          #endif
     277            
     278            /* UART Poll */
     279          #if (defined HAL_UART) && (HAL_UART == TRUE)
     280            HalUARTPoll();
+   \   000004                ; Setup parameters for call to function HalUARTPoll
+   \   000004   12....       LCALL   `??HalUARTPoll::?relay`; Banked call to: HalUARTPoll
     281          #endif
     282            
     283            /* SPI Poll */
@@ -612,7 +543,9 @@ Warning[Pa050]: non-native end of line sequence detected (this diagnostic is
     291          #endif
     292           
     293          }
-   \   000003   02....       LJMP    ?BRET
+   \   000007   D083         POP     DPH
+   \   000009   D082         POP     DPL
+   \   00000B   02....       LJMP    ?BRET
 
    \                                 In  segment XDATA_ROM_C, align 1
    \                     __Constant_64:
@@ -652,44 +585,42 @@ Warning[Pa050]: non-native end of line sequence detected (this diagnostic is
         2      0   -> HalDmaInit
         2      0   -> HalKeyInit
         2      0   -> HalLedInit
+        2      0   -> HalUARTInit
       2      0   Hal_Init
       0     14   Hal_ProcessEvent
         0     10   -> HalKeyPoll
         0     10   -> HalLedUpdate
-        0     10   -> halRestoreSleepLevel
-        0     10   -> osal_clear_event
         0     10   -> osal_msg_deallocate
         0     10   -> osal_msg_receive
-        0     10   -> osal_pwrmgr_task_state
         0     14   -> osal_start_timerEx
-        0     10   -> osal_stop_timerEx
-      0      0   Hal_ProcessPoll
+      2      0   Hal_ProcessPoll
+        2      0   -> HalUARTPoll
 
 
    Segment part sizes:
 
    Bytes  Function/Label
    -----  --------------
-      26  HalDriverInit
+      29  HalDriverInit
        6  HalDriverInit::?relay
       16  Hal_Init
        6  Hal_Init::?relay
-     252  Hal_ProcessEvent
+     148  Hal_ProcessEvent
        6  Hal_ProcessEvent::?relay
-       6  Hal_ProcessPoll
+      14  Hal_ProcessPoll
        6  Hal_ProcessPoll::?relay
        1  Hal_TaskID
        4  __Constant_64
 
  
- 300 bytes in segment BANKED_CODE
+ 207 bytes in segment BANKED_CODE
   24 bytes in segment BANK_RELAYS
    4 bytes in segment XDATA_ROM_C
    1 byte  in segment XDATA_Z
  
- 324 bytes of CODE  memory
+ 231 bytes of CODE  memory
    0 bytes of CONST memory (+ 4 bytes shared)
    1 byte  of XDATA memory
 
 Errors: none
-Warnings: 1
+Warnings: none

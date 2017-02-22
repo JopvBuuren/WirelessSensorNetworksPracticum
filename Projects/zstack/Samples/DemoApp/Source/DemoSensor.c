@@ -193,25 +193,9 @@ void zb_HandleOsalEvent( uint16 event )
  */
 void zb_HandleKeys( uint8 shift, uint8 keys )
 {
-  // Shift is used to make each button/switch dual purpose.
-  if ( shift )
-  {
-    if ( keys & HAL_KEY_SW_1 )
-    {
-    }
-    if ( keys & HAL_KEY_SW_2 )
-    {
-    }
-    if ( keys & HAL_KEY_SW_3 )
-    {
-    }
-    if ( keys & HAL_KEY_SW_4 )
-    {
-    }
-  }
-  else
-  {
-    if ( keys & HAL_KEY_SW_1 )
+  // shift is not used and keys HAL_KEY_SW_3 and HAL_KEY_SW_4 are not used, so 
+  // removed code
+  if ( keys & HAL_KEY_SW_1 )
     {
       // Start reporting
       if ( reportState == FALSE ) {
@@ -225,13 +209,6 @@ void zb_HandleKeys( uint8 shift, uint8 keys )
     if ( keys & HAL_KEY_SW_2 )
     {
     }
-    if ( keys & HAL_KEY_SW_3 )
-    {
-    }
-    if ( keys & HAL_KEY_SW_4 )
-    {
-    }
-  }
 }
 
 /******************************************************************************

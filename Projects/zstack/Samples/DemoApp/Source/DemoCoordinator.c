@@ -90,6 +90,16 @@
 // Application osal event identifiers
 #define MY_START_EVT                        0x0001
 
+// Port and pin for door limit switch
+#define PORT_DOOR_LIMIT_SWITCH              0
+#define PIN_DOOR_LIMIT_SWITCH               2
+// Port and pin for green LED
+#define PORT_GREEN_LED                      1
+#define PIN_GREEN_LED                       2
+// Port and pin for door control
+#define PORT_DOOR_CONTROL                   0
+#define PIN_DOOR_CONTROL                    6
+
 /******************************************************************************
  * TYPEDEFS
  */
@@ -165,8 +175,17 @@ void zb_HandleOsalEvent( uint16 event )
 
   if( event & ZB_ENTRY_EVENT )
   {
+    /* If we get this event, then we can initialise things */
+    
     // Initialise UART
     initUart(uartRxCB);
+    
+    // Initialise the door limit switch as input and internal pull-up activated
+    MCU_IO_INPUT( PORT_DOOR_LIMIT_SWITCH, PIN_DOOR_LIMIT_SWITCH, MCU_IO_PULLUP );
+    // Initialise the green LED as output
+    MCU_IO_DIR_OUTPUT( PORT_GREEN_LED, PIN_GREEN_LED );
+    // Initialise the door control as output
+    MCU_IO_DIR_OUTPUT( PORT_DOOR_CONTROL, PIN_DOOR_CONTROL );
 
     // blind LED 1 to indicate starting/joining a network
     HalLedBlink ( HAL_LED_1, 0, 50, 500 );
@@ -201,56 +220,38 @@ void zb_HandleKeys( uint8 shift, uint8 keys )
 {
   static uint8 allowBind = FALSE;
 
-  // Shift is used to make each button/switch dual purpose.
-  if ( shift )
+  // shift is not used and keys HAL_KEY_SW_3 and HAL_KEY_SW_4 are not used, so 
+  // removed code
+  if ( keys & HAL_KEY_SW_1 )
   {
-    if ( keys & HAL_KEY_SW_1 )
+    if ( appState == APP_RUN )
     {
-    }
-    if ( keys & HAL_KEY_SW_2 )
-    {
-    }
-    if ( keys & HAL_KEY_SW_3 )
-    {
-    }
-    if ( keys & HAL_KEY_SW_4 )
-    {
+      allowBind ^= 1;
+      if ( allowBind )
+      {
+        // Turn ON Allow Bind mode infinitly
+        zb_AllowBind( 0xFF );
+        HalLedSet( HAL_LED_2, HAL_LED_MODE_ON );
+      }
+      else
+      {
+        // Turn OFF Allow Bind mode infinitly
+        zb_AllowBind( 0x00 );
+        HalLedSet( HAL_LED_2, HAL_LED_MODE_OFF );
+      }
     }
   }
-  else
+  if ( keys & HAL_KEY_SW_2 )
   {
-    if ( keys & HAL_KEY_SW_1 )
+    MCU_IO_GET( PORT_DOOR_LIMIT_SWITCH, PIN_DOOR_LIMIT_SWITCH );
+    MCU_IO_SET( PORT_GREEN_LED, PIN_GREEN_LED, MCU_IO_GET( PORT_DOOR_LIMIT_SWITCH, PIN_DOOR_LIMIT_SWITCH ) );
+    /*if ( appState == APP_RUN ) 
     {
-      if ( appState == APP_RUN )
-      {
-        allowBind ^= 1;
-        if ( allowBind )
-        {
-          // Turn ON Allow Bind mode infinitly
-          zb_AllowBind( 0xFF );
-          HalLedSet( HAL_LED_2, HAL_LED_MODE_ON );
-        }
-        else
-        {
-          // Turn OFF Allow Bind mode infinitly
-          zb_AllowBind( 0x00 );
-          HalLedSet( HAL_LED_2, HAL_LED_MODE_OFF );
-        }
-      }
-    }
-    if ( keys & HAL_KEY_SW_2 )
-    {
-      if ( appState == APP_RUN ) 
-      {
-        HalLedSet( HAL_LED_1, HAL_LED_MODE_OFF );
-      }
-    }
-    if ( keys & HAL_KEY_SW_3 )
-    {
-    }
-    if ( keys & HAL_KEY_SW_4 )
-    {
-    }
+      MCU_IO_SET_HIGH( 0, 5 );
+      
+      
+      HalLedSet( HAL_LED_1, HAL_LED_MODE_OFF );
+    }*/
   }
 }
 

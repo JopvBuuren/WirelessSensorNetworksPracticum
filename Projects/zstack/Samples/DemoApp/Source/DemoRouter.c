@@ -191,44 +191,21 @@ void zb_HandleOsalEvent( uint16 event )
  */
 void zb_HandleKeys( uint8 shift, uint8 keys )
 {
-  // Shift is used to make each button/switch dual purpose.
-  if ( shift )
+  // shift is not used and keys HAL_KEY_SW_3 and HAL_KEY_SW_4 are not used, so 
+  // removed code
+  if ( keys & HAL_KEY_SW_1 )
   {
-    if ( keys & HAL_KEY_SW_1 )
-    {
-    }
-    if ( keys & HAL_KEY_SW_2 )
-    {
-    }
-    if ( keys & HAL_KEY_SW_3 )
-    {
-    }
-    if ( keys & HAL_KEY_SW_4 )
-    {
+    // Start reporting
+    if ( reportState == FALSE ) {
+      osal_start_reload_timer( sapi_TaskID, MY_REPORT_EVT, myReportPeriod );
+      reportState = TRUE;
+
+      // switch LED 2 on to indicate reporting
+      HalLedSet( HAL_LED_2, HAL_LED_MODE_ON );
     }
   }
-  else
+  if ( keys & HAL_KEY_SW_2 )
   {
-    if ( keys & HAL_KEY_SW_1 )
-    {
-      // Start reporting
-      if ( reportState == FALSE ) {
-        osal_start_reload_timer( sapi_TaskID, MY_REPORT_EVT, myReportPeriod );
-        reportState = TRUE;
-
-        // switch LED 2 on to indicate reporting
-        HalLedSet( HAL_LED_2, HAL_LED_MODE_ON );
-      }
-    }
-    if ( keys & HAL_KEY_SW_2 )
-    {
-    }
-    if ( keys & HAL_KEY_SW_3 )
-    {
-    }
-    if ( keys & HAL_KEY_SW_4 )
-    {
-    }
   }
 }
 

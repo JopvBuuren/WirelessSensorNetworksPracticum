@@ -1,6 +1,6 @@
 ###############################################################################
 #
-# IAR C/C++ Compiler V9.20.1.2476 for 8051                17/Feb/2017  12:45:16
+# IAR C/C++ Compiler V9.20.1.2476 for 8051                22/Feb/2017  13:47:36
 # Copyright 2004-2015 IAR Systems AB.
 # Standalone license - IAR Embedded Workbench for 8051
 #
@@ -12,14 +12,14 @@
 #    Dptr setup         =  1,16
 #                          
 #    Source file        =  
-#        D:\Jop van
-#        Buuren\Documents\Hogeschool\Vakken\wt\WirelessSensorNetworksPracticum\Projects\zstack\ZMain\TI2530DB\ZMain.c
+#        D:\School\Jaar_3\WTWS\Projects\WirelessSensorNetworksPracticum\Projects\zstack\ZMain\TI2530DB\ZMain.c
 #    Command line       =  
-#        -f "D:\Jop van
-#        Buuren\Documents\Hogeschool\Vakken\wt\WirelessSensorNetworksPracticum\Projects\zstack\Samples\DemoApp\CC2530DB\..\..\..\Tools\CC2530DB\f8wEndev.cfg"
-#        (-DCPU32MHZ -DROOT=__near_func -DMAC_CFG_TX_DATA_MAX=3
-#        -DMAC_CFG_TX_MAX=6 -DMAC_CFG_RX_MAX=3) -f "D:\Jop van
-#        Buuren\Documents\Hogeschool\Vakken\wt\WirelessSensorNetworksPracticum\Projects\zstack\Samples\DemoApp\CC2530DB\..\..\..\Tools\CC2530DB\f8wConfig.cfg"
+#        -f
+#        D:\School\Jaar_3\WTWS\Projects\WirelessSensorNetworksPracticum\Projects\zstack\Samples\DemoApp\CC2530DB\..\..\..\Tools\CC2530DB\f8wCoord.cfg
+#        (-DCPU32MHZ -DROOT=__near_func -DMAC_CFG_APP_PENDING_QUEUE=TRUE
+#        -DMAC_CFG_TX_DATA_MAX=5 -DMAC_CFG_TX_MAX=8 -DMAC_CFG_RX_MAX=5
+#        -DZDO_COORDINATOR -DRTR_NWK) -f
+#        D:\School\Jaar_3\WTWS\Projects\WirelessSensorNetworksPracticum\Projects\zstack\Samples\DemoApp\CC2530DB\..\..\..\Tools\CC2530DB\f8wConfig.cfg
 #        (-DZIGBEEPRO -DSECURE=0 -DZG_SECURE_DYNAMIC=0 -DREFLECTOR
 #        -DDEFAULT_CHANLIST=0x00100000 -DZDAPP_CONFIG_PAN_ID=0x0DAD
 #        -DNWK_START_DELAY=100 -DEXTENDED_JOINING_RANDOM_MASK=0x007F
@@ -34,75 +34,70 @@
 #        -DMAC_MAX_FRAME_SIZE=116 -DZDNWKMGR_MIN_TRANSMISSIONS=20
 #        "-DCONST=const __code" -DGENERIC=__generic -DRFD_RCVC_ALWAYS_ON=FALSE
 #        -DPOLL_RATE=1000 -DQUEUED_POLL_RATE=100 -DRESPONSE_POLL_RATE=100)
-#        -DREJOIN_POLL_RATE=440 "D:\Jop van
-#        Buuren\Documents\Hogeschool\Vakken\wt\WirelessSensorNetworksPracticum\Projects\zstack\ZMain\TI2530DB\ZMain.c"
-#        -D NWK_AUTO_POLL -D HOLD_AUTO_START -D POWER_SAVING -D NV_INIT -D
-#        DEVICE_LOGICAL_TYPE=ZG_DEVICETYPE_ENDDEVICE -lC "D:\Jop van
-#        Buuren\Documents\Hogeschool\Vakken\wt\WirelessSensorNetworksPracticum\Projects\zstack\Samples\DemoApp\CC2530DB\SensorEB\List\"
-#        -lA "D:\Jop van
-#        Buuren\Documents\Hogeschool\Vakken\wt\WirelessSensorNetworksPracticum\Projects\zstack\Samples\DemoApp\CC2530DB\SensorEB\List\"
-#        --diag_suppress Pe001,Pa010,Pe1665 -o "D:\Jop van
-#        Buuren\Documents\Hogeschool\Vakken\wt\WirelessSensorNetworksPracticum\Projects\zstack\Samples\DemoApp\CC2530DB\SensorEB\Obj\"
+#        -DREJOIN_POLL_RATE=440
+#        D:\School\Jaar_3\WTWS\Projects\WirelessSensorNetworksPracticum\Projects\zstack\ZMain\TI2530DB\ZMain.c
+#        -D HOLD_AUTO_START -D BUILD_ALL_DEVICES -D REFLECTOR -D NV_INIT -D
+#        NV_RESTORE -D HAL_UART=TRUE -lC
+#        D:\School\Jaar_3\WTWS\Projects\WirelessSensorNetworksPracticum\Projects\zstack\Samples\DemoApp\CC2530DB\CoordinatorEB\List\
+#        -lA
+#        D:\School\Jaar_3\WTWS\Projects\WirelessSensorNetworksPracticum\Projects\zstack\Samples\DemoApp\CC2530DB\CoordinatorEB\List\
+#        --diag_suppress Pe001,Pa010,Pe1665 -o
+#        D:\School\Jaar_3\WTWS\Projects\WirelessSensorNetworksPracticum\Projects\zstack\Samples\DemoApp\CC2530DB\CoordinatorEB\Obj\
 #        -e --no_cse --no_unroll --no_inline --no_code_motion --no_tbaa --debug
 #        --core=plain --dptr=16,1 --data_model=large --code_model=banked
 #        --calling_convention=xdata_reentrant --place_constants=data_rom
-#        --nr_virtual_regs 16 -I "D:\Jop van
-#        Buuren\Documents\Hogeschool\Vakken\wt\WirelessSensorNetworksPracticum\Projects\zstack\Samples\DemoApp\CC2530DB\"
-#        -I "D:\Jop van
-#        Buuren\Documents\Hogeschool\Vakken\wt\WirelessSensorNetworksPracticum\Projects\zstack\Samples\DemoApp\CC2530DB\..\Source\"
-#        -I "D:\Jop van
-#        Buuren\Documents\Hogeschool\Vakken\wt\WirelessSensorNetworksPracticum\Projects\zstack\Samples\DemoApp\CC2530DB\..\..\..\ZMain\TI2530DB\"
-#        -I "D:\Jop van
-#        Buuren\Documents\Hogeschool\Vakken\wt\WirelessSensorNetworksPracticum\Projects\zstack\Samples\DemoApp\CC2530DB\..\..\..\..\..\Components\hal\include\"
-#        -I "D:\Jop van
-#        Buuren\Documents\Hogeschool\Vakken\wt\WirelessSensorNetworksPracticum\Projects\zstack\Samples\DemoApp\CC2530DB\..\..\..\..\..\Components\hal\target\CC2530EB\"
-#        -I "D:\Jop van
-#        Buuren\Documents\Hogeschool\Vakken\wt\WirelessSensorNetworksPracticum\Projects\zstack\Samples\DemoApp\CC2530DB\..\..\..\..\..\Components\mac\include\"
-#        -I "D:\Jop van
-#        Buuren\Documents\Hogeschool\Vakken\wt\WirelessSensorNetworksPracticum\Projects\zstack\Samples\DemoApp\CC2530DB\..\..\..\..\..\Components\mac\high_level\"
-#        -I "D:\Jop van
-#        Buuren\Documents\Hogeschool\Vakken\wt\WirelessSensorNetworksPracticum\Projects\zstack\Samples\DemoApp\CC2530DB\..\..\..\..\..\Components\mac\low_level\srf04\"
-#        -I "D:\Jop van
-#        Buuren\Documents\Hogeschool\Vakken\wt\WirelessSensorNetworksPracticum\Projects\zstack\Samples\DemoApp\CC2530DB\..\..\..\..\..\Components\mac\low_level\srf04\single_chip\"
-#        -I "D:\Jop van
-#        Buuren\Documents\Hogeschool\Vakken\wt\WirelessSensorNetworksPracticum\Projects\zstack\Samples\DemoApp\CC2530DB\..\..\..\..\..\Components\mt\"
-#        -I "D:\Jop van
-#        Buuren\Documents\Hogeschool\Vakken\wt\WirelessSensorNetworksPracticum\Projects\zstack\Samples\DemoApp\CC2530DB\..\..\..\..\..\Components\osal\include\"
-#        -I "D:\Jop van
-#        Buuren\Documents\Hogeschool\Vakken\wt\WirelessSensorNetworksPracticum\Projects\zstack\Samples\DemoApp\CC2530DB\..\..\..\..\..\Components\services\saddr\"
-#        -I "D:\Jop van
-#        Buuren\Documents\Hogeschool\Vakken\wt\WirelessSensorNetworksPracticum\Projects\zstack\Samples\DemoApp\CC2530DB\..\..\..\..\..\Components\services\sdata\"
-#        -I "D:\Jop van
-#        Buuren\Documents\Hogeschool\Vakken\wt\WirelessSensorNetworksPracticum\Projects\zstack\Samples\DemoApp\CC2530DB\..\..\..\..\..\Components\stack\af\"
-#        -I "D:\Jop van
-#        Buuren\Documents\Hogeschool\Vakken\wt\WirelessSensorNetworksPracticum\Projects\zstack\Samples\DemoApp\CC2530DB\..\..\..\..\..\Components\stack\nwk\"
-#        -I "D:\Jop van
-#        Buuren\Documents\Hogeschool\Vakken\wt\WirelessSensorNetworksPracticum\Projects\zstack\Samples\DemoApp\CC2530DB\..\..\..\..\..\Components\stack\sapi\"
-#        -I "D:\Jop van
-#        Buuren\Documents\Hogeschool\Vakken\wt\WirelessSensorNetworksPracticum\Projects\zstack\Samples\DemoApp\CC2530DB\..\..\..\..\..\Components\stack\sec\"
-#        -I "D:\Jop van
-#        Buuren\Documents\Hogeschool\Vakken\wt\WirelessSensorNetworksPracticum\Projects\zstack\Samples\DemoApp\CC2530DB\..\..\..\..\..\Components\stack\sys\"
-#        -I "D:\Jop van
-#        Buuren\Documents\Hogeschool\Vakken\wt\WirelessSensorNetworksPracticum\Projects\zstack\Samples\DemoApp\CC2530DB\..\..\..\..\..\Components\stack\zdo\"
-#        -I "D:\Jop van
-#        Buuren\Documents\Hogeschool\Vakken\wt\WirelessSensorNetworksPracticum\Projects\zstack\Samples\DemoApp\CC2530DB\..\..\..\..\..\Components\zmac\"
-#        -I "D:\Jop van
-#        Buuren\Documents\Hogeschool\Vakken\wt\WirelessSensorNetworksPracticum\Projects\zstack\Samples\DemoApp\CC2530DB\..\..\..\..\..\Components\zmac\f8w\"
+#        --nr_virtual_regs 16 -I
+#        D:\School\Jaar_3\WTWS\Projects\WirelessSensorNetworksPracticum\Projects\zstack\Samples\DemoApp\CC2530DB\
+#        -I
+#        D:\School\Jaar_3\WTWS\Projects\WirelessSensorNetworksPracticum\Projects\zstack\Samples\DemoApp\CC2530DB\..\Source\
+#        -I
+#        D:\School\Jaar_3\WTWS\Projects\WirelessSensorNetworksPracticum\Projects\zstack\Samples\DemoApp\CC2530DB\..\..\..\ZMain\TI2530DB\
+#        -I
+#        D:\School\Jaar_3\WTWS\Projects\WirelessSensorNetworksPracticum\Projects\zstack\Samples\DemoApp\CC2530DB\..\..\..\..\..\Components\hal\include\
+#        -I
+#        D:\School\Jaar_3\WTWS\Projects\WirelessSensorNetworksPracticum\Projects\zstack\Samples\DemoApp\CC2530DB\..\..\..\..\..\Components\hal\target\CC2530EB\
+#        -I
+#        D:\School\Jaar_3\WTWS\Projects\WirelessSensorNetworksPracticum\Projects\zstack\Samples\DemoApp\CC2530DB\..\..\..\..\..\Components\mac\include\
+#        -I
+#        D:\School\Jaar_3\WTWS\Projects\WirelessSensorNetworksPracticum\Projects\zstack\Samples\DemoApp\CC2530DB\..\..\..\..\..\Components\mac\high_level\
+#        -I
+#        D:\School\Jaar_3\WTWS\Projects\WirelessSensorNetworksPracticum\Projects\zstack\Samples\DemoApp\CC2530DB\..\..\..\..\..\Components\mac\low_level\srf04\
+#        -I
+#        D:\School\Jaar_3\WTWS\Projects\WirelessSensorNetworksPracticum\Projects\zstack\Samples\DemoApp\CC2530DB\..\..\..\..\..\Components\mac\low_level\srf04\single_chip\
+#        -I
+#        D:\School\Jaar_3\WTWS\Projects\WirelessSensorNetworksPracticum\Projects\zstack\Samples\DemoApp\CC2530DB\..\..\..\..\..\Components\mt\
+#        -I
+#        D:\School\Jaar_3\WTWS\Projects\WirelessSensorNetworksPracticum\Projects\zstack\Samples\DemoApp\CC2530DB\..\..\..\..\..\Components\osal\include\
+#        -I
+#        D:\School\Jaar_3\WTWS\Projects\WirelessSensorNetworksPracticum\Projects\zstack\Samples\DemoApp\CC2530DB\..\..\..\..\..\Components\services\saddr\
+#        -I
+#        D:\School\Jaar_3\WTWS\Projects\WirelessSensorNetworksPracticum\Projects\zstack\Samples\DemoApp\CC2530DB\..\..\..\..\..\Components\services\sdata\
+#        -I
+#        D:\School\Jaar_3\WTWS\Projects\WirelessSensorNetworksPracticum\Projects\zstack\Samples\DemoApp\CC2530DB\..\..\..\..\..\Components\stack\af\
+#        -I
+#        D:\School\Jaar_3\WTWS\Projects\WirelessSensorNetworksPracticum\Projects\zstack\Samples\DemoApp\CC2530DB\..\..\..\..\..\Components\stack\nwk\
+#        -I
+#        D:\School\Jaar_3\WTWS\Projects\WirelessSensorNetworksPracticum\Projects\zstack\Samples\DemoApp\CC2530DB\..\..\..\..\..\Components\stack\sapi\
+#        -I
+#        D:\School\Jaar_3\WTWS\Projects\WirelessSensorNetworksPracticum\Projects\zstack\Samples\DemoApp\CC2530DB\..\..\..\..\..\Components\stack\sec\
+#        -I
+#        D:\School\Jaar_3\WTWS\Projects\WirelessSensorNetworksPracticum\Projects\zstack\Samples\DemoApp\CC2530DB\..\..\..\..\..\Components\stack\sys\
+#        -I
+#        D:\School\Jaar_3\WTWS\Projects\WirelessSensorNetworksPracticum\Projects\zstack\Samples\DemoApp\CC2530DB\..\..\..\..\..\Components\stack\zdo\
+#        -I
+#        D:\School\Jaar_3\WTWS\Projects\WirelessSensorNetworksPracticum\Projects\zstack\Samples\DemoApp\CC2530DB\..\..\..\..\..\Components\zmac\
+#        -I
+#        D:\School\Jaar_3\WTWS\Projects\WirelessSensorNetworksPracticum\Projects\zstack\Samples\DemoApp\CC2530DB\..\..\..\..\..\Components\zmac\f8w\
 #        -Ol --require_prototypes
 #    List file          =  
-#        D:\Jop van
-#        Buuren\Documents\Hogeschool\Vakken\wt\WirelessSensorNetworksPracticum\Projects\zstack\Samples\DemoApp\CC2530DB\SensorEB\List\ZMain.lst
+#        D:\School\Jaar_3\WTWS\Projects\WirelessSensorNetworksPracticum\Projects\zstack\Samples\DemoApp\CC2530DB\CoordinatorEB\List\ZMain.lst
 #    Object file        =  
-#        D:\Jop van
-#        Buuren\Documents\Hogeschool\Vakken\wt\WirelessSensorNetworksPracticum\Projects\zstack\Samples\DemoApp\CC2530DB\SensorEB\Obj\ZMain.r51
+#        D:\School\Jaar_3\WTWS\Projects\WirelessSensorNetworksPracticum\Projects\zstack\Samples\DemoApp\CC2530DB\CoordinatorEB\Obj\ZMain.r51
 #
 ###############################################################################
 
-D:\Jop van Buuren\Documents\Hogeschool\Vakken\wt\WirelessSensorNetworksPracticum\Projects\zstack\ZMain\TI2530DB\ZMain.c
+D:\School\Jaar_3\WTWS\Projects\WirelessSensorNetworksPracticum\Projects\zstack\ZMain\TI2530DB\ZMain.c
       1          /**************************************************************************************************
-                                                                                                                   ^
-Warning[Pa050]: non-native end of line sequence detected (this diagnostic is
-          only issued once)
       2            Filename:       ZMain.c
       3            Revised:        $Date: 2010-09-17 16:25:30 -0700 (Fri, 17 Sep 2010) $
       4            Revision:       $Revision: 23835 $
@@ -571,7 +566,7 @@ Warning[Pa050]: non-native end of line sequence detected (this diagnostic is
    \   000106   12....       LCALL   `??osal_memcpy::?relay`; Banked call to: osal_memcpy
    \   000109   7403         MOV     A,#0x3
    \   00010B   12....       LCALL   ?DEALLOC_XSTACK8
-   \   00010E   8067         SJMP    ??zmain_ext_addr_2
+   \   00010E   8065         SJMP    ??zmain_ext_addr_2
     194                }
     195                else  // No valid extended address was found.
     196                {
@@ -579,8 +574,6 @@ Warning[Pa050]: non-native end of line sequence detected (this diagnostic is
     198                  
     199          #if !defined ( NV_RESTORE )
     200                  writeNV = FALSE;  // Make this a temporary IEEE address
-   \                     ??zmain_ext_addr_3:
-   \   000110   7E00         MOV     R6,#0x0
     201          #endif
     202          
     203                  /* Attempt to create a sufficiently random extended address for expediency.
@@ -588,56 +581,57 @@ Warning[Pa050]: non-native end of line sequence detected (this diagnostic is
     205                   *       must never be used for a commercial product.
     206                   */
     207                  for (idx = 0; idx < (Z_EXTADDR_LEN - 2);)
-   \   000112   7F00         MOV     R7,#0x0
-   \   000114   8038         SJMP    ??zmain_ext_addr_4
+   \                     ??zmain_ext_addr_3:
+   \   000110   7F00         MOV     R7,#0x0
+   \   000112   8038         SJMP    ??zmain_ext_addr_4
     208                  {
     209                    uint16 randy = osal_rand();
    \                     ??zmain_ext_addr_5:
-   \   000116                ; Setup parameters for call to function osal_rand
-   \   000116   12....       LCALL   `??osal_rand::?relay`; Banked call to: osal_rand
-   \   000119   8A..         MOV     ?V0,R2
-   \   00011B   8B..         MOV     ?V1,R3
-   \   00011D   A8..         MOV     R0,?V0
-   \   00011F   A9..         MOV     R1,?V1
+   \   000114                ; Setup parameters for call to function osal_rand
+   \   000114   12....       LCALL   `??osal_rand::?relay`; Banked call to: osal_rand
+   \   000117   8A..         MOV     ?V0,R2
+   \   000119   8B..         MOV     ?V1,R3
+   \   00011B   A8..         MOV     R0,?V0
+   \   00011D   A9..         MOV     R1,?V1
     210                    aExtendedAddress[idx++] = LO_UINT16(randy);
-   \   000121   E8           MOV     A,R0
-   \   000122   C0E0         PUSH    A
-   \   000124   EF           MOV     A,R7
-   \   000125   FA           MOV     R2,A
-   \   000126   7B00         MOV     R3,#0x0
-   \   000128   74..         MOV     A,#aExtendedAddress & 0xff
-   \   00012A   2A           ADD     A,R2
-   \   00012B   F582         MOV     DPL,A
-   \   00012D   74..         MOV     A,#(aExtendedAddress >> 8) & 0xff
-   \   00012F   3B           ADDC    A,R3
-   \   000130   F583         MOV     DPH,A
-   \   000132   D0E0         POP     A
-   \   000134   F0           MOVX    @DPTR,A
-   \   000135   0F           INC     R7
+   \   00011F   E8           MOV     A,R0
+   \   000120   C0E0         PUSH    A
+   \   000122   EF           MOV     A,R7
+   \   000123   FA           MOV     R2,A
+   \   000124   7B00         MOV     R3,#0x0
+   \   000126   74..         MOV     A,#aExtendedAddress & 0xff
+   \   000128   2A           ADD     A,R2
+   \   000129   F582         MOV     DPL,A
+   \   00012B   74..         MOV     A,#(aExtendedAddress >> 8) & 0xff
+   \   00012D   3B           ADDC    A,R3
+   \   00012E   F583         MOV     DPH,A
+   \   000130   D0E0         POP     A
+   \   000132   F0           MOVX    @DPTR,A
+   \   000133   0F           INC     R7
     211                    aExtendedAddress[idx++] = HI_UINT16(randy);
-   \   000136   E4           CLR     A
-   \   000137   C9           XCH     A,R1
-   \   000138   F8           MOV     R0,A
-   \   000139   E8           MOV     A,R0
-   \   00013A   C0E0         PUSH    A
-   \   00013C   EF           MOV     A,R7
-   \   00013D   F8           MOV     R0,A
-   \   00013E   7900         MOV     R1,#0x0
-   \   000140   74..         MOV     A,#aExtendedAddress & 0xff
-   \   000142   28           ADD     A,R0
-   \   000143   F582         MOV     DPL,A
-   \   000145   74..         MOV     A,#(aExtendedAddress >> 8) & 0xff
-   \   000147   39           ADDC    A,R1
-   \   000148   F583         MOV     DPH,A
-   \   00014A   D0E0         POP     A
-   \   00014C   F0           MOVX    @DPTR,A
-   \   00014D   0F           INC     R7
+   \   000134   E4           CLR     A
+   \   000135   C9           XCH     A,R1
+   \   000136   F8           MOV     R0,A
+   \   000137   E8           MOV     A,R0
+   \   000138   C0E0         PUSH    A
+   \   00013A   EF           MOV     A,R7
+   \   00013B   F8           MOV     R0,A
+   \   00013C   7900         MOV     R1,#0x0
+   \   00013E   74..         MOV     A,#aExtendedAddress & 0xff
+   \   000140   28           ADD     A,R0
+   \   000141   F582         MOV     DPL,A
+   \   000143   74..         MOV     A,#(aExtendedAddress >> 8) & 0xff
+   \   000145   39           ADDC    A,R1
+   \   000146   F583         MOV     DPH,A
+   \   000148   D0E0         POP     A
+   \   00014A   F0           MOVX    @DPTR,A
+   \   00014B   0F           INC     R7
     212                  }
    \                     ??zmain_ext_addr_4:
-   \   00014E   EF           MOV     A,R7
-   \   00014F   C3           CLR     C
-   \   000150   9406         SUBB    A,#0x6
-   \   000152   40C2         JC      ??zmain_ext_addr_5
+   \   00014C   EF           MOV     A,R7
+   \   00014D   C3           CLR     C
+   \   00014E   9406         SUBB    A,#0x6
+   \   000150   40C2         JC      ??zmain_ext_addr_5
     213                  // Next-to-MSB identifies ZigBee devicetype.
     214          #if ZG_BUILD_COORDINATOR_TYPE && !ZG_BUILD_JOINING_TYPE
     215                  aExtendedAddress[idx++] = 0x10;
@@ -645,76 +639,76 @@ Warning[Pa050]: non-native end of line sequence detected (this diagnostic is
     217                  aExtendedAddress[idx++] = 0x20;
     218          #else
     219                  aExtendedAddress[idx++] = 0x30;
-   \   000154   EF           MOV     A,R7
-   \   000155   F8           MOV     R0,A
-   \   000156   7900         MOV     R1,#0x0
-   \   000158   74..         MOV     A,#aExtendedAddress & 0xff
-   \   00015A   28           ADD     A,R0
-   \   00015B   F582         MOV     DPL,A
-   \   00015D   74..         MOV     A,#(aExtendedAddress >> 8) & 0xff
-   \   00015F   39           ADDC    A,R1
-   \   000160   F583         MOV     DPH,A
-   \   000162   7430         MOV     A,#0x30
-   \   000164   F0           MOVX    @DPTR,A
-   \   000165   0F           INC     R7
+   \   000152   EF           MOV     A,R7
+   \   000153   F8           MOV     R0,A
+   \   000154   7900         MOV     R1,#0x0
+   \   000156   74..         MOV     A,#aExtendedAddress & 0xff
+   \   000158   28           ADD     A,R0
+   \   000159   F582         MOV     DPL,A
+   \   00015B   74..         MOV     A,#(aExtendedAddress >> 8) & 0xff
+   \   00015D   39           ADDC    A,R1
+   \   00015E   F583         MOV     DPH,A
+   \   000160   7430         MOV     A,#0x30
+   \   000162   F0           MOVX    @DPTR,A
+   \   000163   0F           INC     R7
     220          #endif
     221                  // MSB has historical signficance.
     222                  aExtendedAddress[idx] = 0xF8;
-   \   000166   EF           MOV     A,R7
-   \   000167   F8           MOV     R0,A
-   \   000168   7900         MOV     R1,#0x0
-   \   00016A   74..         MOV     A,#aExtendedAddress & 0xff
-   \   00016C   28           ADD     A,R0
-   \   00016D   F582         MOV     DPL,A
-   \   00016F   74..         MOV     A,#(aExtendedAddress >> 8) & 0xff
-   \   000171   39           ADDC    A,R1
-   \   000172   F583         MOV     DPH,A
-   \   000174   74F8         MOV     A,#-0x8
-   \   000176   F0           MOVX    @DPTR,A
+   \   000164   EF           MOV     A,R7
+   \   000165   F8           MOV     R0,A
+   \   000166   7900         MOV     R1,#0x0
+   \   000168   74..         MOV     A,#aExtendedAddress & 0xff
+   \   00016A   28           ADD     A,R0
+   \   00016B   F582         MOV     DPL,A
+   \   00016D   74..         MOV     A,#(aExtendedAddress >> 8) & 0xff
+   \   00016F   39           ADDC    A,R1
+   \   000170   F583         MOV     DPH,A
+   \   000172   74F8         MOV     A,#-0x8
+   \   000174   F0           MOVX    @DPTR,A
     223                }
     224              }
     225          
     226              if (writeNV)
    \                     ??zmain_ext_addr_2:
-   \   000177   EE           MOV     A,R6
-   \   000178   6027         JZ      ??zmain_ext_addr_1
+   \   000175   EE           MOV     A,R6
+   \   000176   6027         JZ      ??zmain_ext_addr_1
     227              {
     228                (void)osal_nv_write(ZCD_NV_EXTADDR, 0, Z_EXTADDR_LEN, aExtendedAddress);
-   \   00017A                ; Setup parameters for call to function osal_nv_write
-   \   00017A   75....       MOV     ?V0,#aExtendedAddress & 0xff
-   \   00017D   75....       MOV     ?V1,#(aExtendedAddress >> 8) & 0xff
-   \   000180   78..         MOV     R0,#?V0
-   \   000182   12....       LCALL   ?PUSH_XSTACK_I_TWO
-   \   000185   75..08       MOV     ?V0,#0x8
-   \   000188   75..00       MOV     ?V1,#0x0
-   \   00018B   78..         MOV     R0,#?V0
-   \   00018D   12....       LCALL   ?PUSH_XSTACK_I_TWO
-   \   000190   7C00         MOV     R4,#0x0
-   \   000192   7D00         MOV     R5,#0x0
-   \   000194   7A01         MOV     R2,#0x1
-   \   000196   7B00         MOV     R3,#0x0
-   \   000198   12....       LCALL   `??osal_nv_write::?relay`; Banked call to: osal_nv_write
-   \   00019B   7404         MOV     A,#0x4
-   \   00019D   12....       LCALL   ?DEALLOC_XSTACK8
-   \   0001A0   E9           MOV     A,R1
+   \   000178                ; Setup parameters for call to function osal_nv_write
+   \   000178   75....       MOV     ?V0,#aExtendedAddress & 0xff
+   \   00017B   75....       MOV     ?V1,#(aExtendedAddress >> 8) & 0xff
+   \   00017E   78..         MOV     R0,#?V0
+   \   000180   12....       LCALL   ?PUSH_XSTACK_I_TWO
+   \   000183   75..08       MOV     ?V0,#0x8
+   \   000186   75..00       MOV     ?V1,#0x0
+   \   000189   78..         MOV     R0,#?V0
+   \   00018B   12....       LCALL   ?PUSH_XSTACK_I_TWO
+   \   00018E   7C00         MOV     R4,#0x0
+   \   000190   7D00         MOV     R5,#0x0
+   \   000192   7A01         MOV     R2,#0x1
+   \   000194   7B00         MOV     R3,#0x0
+   \   000196   12....       LCALL   `??osal_nv_write::?relay`; Banked call to: osal_nv_write
+   \   000199   7404         MOV     A,#0x4
+   \   00019B   12....       LCALL   ?DEALLOC_XSTACK8
+   \   00019E   E9           MOV     A,R1
     229              }
     230            }
     231          
     232            // Set the MAC PIB extended address according to results from above.
     233            (void)ZMacSetReq(MAC_EXTENDED_ADDRESS, aExtendedAddress);
    \                     ??zmain_ext_addr_1:
-   \   0001A1                ; Setup parameters for call to function ZMacSetReq
-   \   0001A1   7A..         MOV     R2,#aExtendedAddress & 0xff
-   \   0001A3   7B..         MOV     R3,#(aExtendedAddress >> 8) & 0xff
-   \   0001A5   79E2         MOV     R1,#-0x1e
-   \   0001A7   12....       LCALL   `??ZMacSetReq::?relay`; Banked call to: ZMacSetReq
-   \   0001AA   E9           MOV     A,R1
-   \   0001AB   F8           MOV     R0,A
+   \   00019F                ; Setup parameters for call to function ZMacSetReq
+   \   00019F   7A..         MOV     R2,#aExtendedAddress & 0xff
+   \   0001A1   7B..         MOV     R3,#(aExtendedAddress >> 8) & 0xff
+   \   0001A3   79E2         MOV     R1,#-0x1e
+   \   0001A5   12....       LCALL   `??ZMacSetReq::?relay`; Banked call to: ZMacSetReq
+   \   0001A8   E9           MOV     A,R1
+   \   0001A9   F8           MOV     R0,A
     234          }
-   \   0001AC   7408         MOV     A,#0x8
-   \   0001AE   12....       LCALL   ?DEALLOC_XSTACK8
-   \   0001B1   7F03         MOV     R7,#0x3
-   \   0001B3   02....       LJMP    ?BANKED_LEAVE_XDATA
+   \   0001AA   7408         MOV     A,#0x8
+   \   0001AC   12....       LCALL   ?DEALLOC_XSTACK8
+   \   0001AF   7F03         MOV     R7,#0x3
+   \   0001B1   02....       LJMP    ?BANKED_LEAVE_XDATA
     235          
     236          #if defined ZCL_KEY_ESTABLISH
     237          /**************************************************************************************************
@@ -930,20 +924,20 @@ Warning[Pa050]: non-native end of line sequence detected (this diagnostic is
        6  main::?relay
        3  zmain_dev_info
        6  zmain_dev_info::?relay
-     438  zmain_ext_addr
+     436  zmain_ext_addr
        6  zmain_ext_addr::?relay
       24  zmain_vdd_check
        6  zmain_vdd_check::?relay
 
  
- 593 bytes in segment BANKED_CODE
+ 591 bytes in segment BANKED_CODE
   24 bytes in segment BANK_RELAYS
    7 bytes in segment SFR_AN
    8 bytes in segment XDATA_ROM_C
  
- 617 bytes of CODE  memory
+ 615 bytes of CODE  memory
    8 bytes of CONST memory
    0 bytes of DATA  memory (+ 7 bytes shared)
 
 Errors: none
-Warnings: 1
+Warnings: none

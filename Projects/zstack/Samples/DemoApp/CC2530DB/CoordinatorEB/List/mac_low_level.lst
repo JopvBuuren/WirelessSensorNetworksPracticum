@@ -1,6 +1,6 @@
 ###############################################################################
 #
-# IAR C/C++ Compiler V9.20.1.2476 for 8051                17/Feb/2017  12:45:11
+# IAR C/C++ Compiler V9.20.1.2476 for 8051                22/Feb/2017  13:47:15
 # Copyright 2004-2015 IAR Systems AB.
 # Standalone license - IAR Embedded Workbench for 8051
 #
@@ -12,14 +12,14 @@
 #    Dptr setup         =  1,16
 #                          
 #    Source file        =  
-#        D:\Jop van
-#        Buuren\Documents\Hogeschool\Vakken\wt\WirelessSensorNetworksPracticum\Components\mac\low_level\srf04\mac_low_level.c
+#        D:\School\Jaar_3\WTWS\Projects\WirelessSensorNetworksPracticum\Components\mac\low_level\srf04\mac_low_level.c
 #    Command line       =  
-#        -f "D:\Jop van
-#        Buuren\Documents\Hogeschool\Vakken\wt\WirelessSensorNetworksPracticum\Projects\zstack\Samples\DemoApp\CC2530DB\..\..\..\Tools\CC2530DB\f8wEndev.cfg"
-#        (-DCPU32MHZ -DROOT=__near_func -DMAC_CFG_TX_DATA_MAX=3
-#        -DMAC_CFG_TX_MAX=6 -DMAC_CFG_RX_MAX=3) -f "D:\Jop van
-#        Buuren\Documents\Hogeschool\Vakken\wt\WirelessSensorNetworksPracticum\Projects\zstack\Samples\DemoApp\CC2530DB\..\..\..\Tools\CC2530DB\f8wConfig.cfg"
+#        -f
+#        D:\School\Jaar_3\WTWS\Projects\WirelessSensorNetworksPracticum\Projects\zstack\Samples\DemoApp\CC2530DB\..\..\..\Tools\CC2530DB\f8wCoord.cfg
+#        (-DCPU32MHZ -DROOT=__near_func -DMAC_CFG_APP_PENDING_QUEUE=TRUE
+#        -DMAC_CFG_TX_DATA_MAX=5 -DMAC_CFG_TX_MAX=8 -DMAC_CFG_RX_MAX=5
+#        -DZDO_COORDINATOR -DRTR_NWK) -f
+#        D:\School\Jaar_3\WTWS\Projects\WirelessSensorNetworksPracticum\Projects\zstack\Samples\DemoApp\CC2530DB\..\..\..\Tools\CC2530DB\f8wConfig.cfg
 #        (-DZIGBEEPRO -DSECURE=0 -DZG_SECURE_DYNAMIC=0 -DREFLECTOR
 #        -DDEFAULT_CHANLIST=0x00100000 -DZDAPP_CONFIG_PAN_ID=0x0DAD
 #        -DNWK_START_DELAY=100 -DEXTENDED_JOINING_RANDOM_MASK=0x007F
@@ -34,75 +34,70 @@
 #        -DMAC_MAX_FRAME_SIZE=116 -DZDNWKMGR_MIN_TRANSMISSIONS=20
 #        "-DCONST=const __code" -DGENERIC=__generic -DRFD_RCVC_ALWAYS_ON=FALSE
 #        -DPOLL_RATE=1000 -DQUEUED_POLL_RATE=100 -DRESPONSE_POLL_RATE=100)
-#        -DREJOIN_POLL_RATE=440 "D:\Jop van
-#        Buuren\Documents\Hogeschool\Vakken\wt\WirelessSensorNetworksPracticum\Components\mac\low_level\srf04\mac_low_level.c"
-#        -D NWK_AUTO_POLL -D HOLD_AUTO_START -D POWER_SAVING -D NV_INIT -D
-#        DEVICE_LOGICAL_TYPE=ZG_DEVICETYPE_ENDDEVICE -lC "D:\Jop van
-#        Buuren\Documents\Hogeschool\Vakken\wt\WirelessSensorNetworksPracticum\Projects\zstack\Samples\DemoApp\CC2530DB\SensorEB\List\"
-#        -lA "D:\Jop van
-#        Buuren\Documents\Hogeschool\Vakken\wt\WirelessSensorNetworksPracticum\Projects\zstack\Samples\DemoApp\CC2530DB\SensorEB\List\"
-#        --diag_suppress Pe001,Pa010,Pe1665 -o "D:\Jop van
-#        Buuren\Documents\Hogeschool\Vakken\wt\WirelessSensorNetworksPracticum\Projects\zstack\Samples\DemoApp\CC2530DB\SensorEB\Obj\"
+#        -DREJOIN_POLL_RATE=440
+#        D:\School\Jaar_3\WTWS\Projects\WirelessSensorNetworksPracticum\Components\mac\low_level\srf04\mac_low_level.c
+#        -D HOLD_AUTO_START -D BUILD_ALL_DEVICES -D REFLECTOR -D NV_INIT -D
+#        NV_RESTORE -D HAL_UART=TRUE -lC
+#        D:\School\Jaar_3\WTWS\Projects\WirelessSensorNetworksPracticum\Projects\zstack\Samples\DemoApp\CC2530DB\CoordinatorEB\List\
+#        -lA
+#        D:\School\Jaar_3\WTWS\Projects\WirelessSensorNetworksPracticum\Projects\zstack\Samples\DemoApp\CC2530DB\CoordinatorEB\List\
+#        --diag_suppress Pe001,Pa010,Pe1665 -o
+#        D:\School\Jaar_3\WTWS\Projects\WirelessSensorNetworksPracticum\Projects\zstack\Samples\DemoApp\CC2530DB\CoordinatorEB\Obj\
 #        -e --no_cse --no_unroll --no_inline --no_code_motion --no_tbaa --debug
 #        --core=plain --dptr=16,1 --data_model=large --code_model=banked
 #        --calling_convention=xdata_reentrant --place_constants=data_rom
-#        --nr_virtual_regs 16 -I "D:\Jop van
-#        Buuren\Documents\Hogeschool\Vakken\wt\WirelessSensorNetworksPracticum\Projects\zstack\Samples\DemoApp\CC2530DB\"
-#        -I "D:\Jop van
-#        Buuren\Documents\Hogeschool\Vakken\wt\WirelessSensorNetworksPracticum\Projects\zstack\Samples\DemoApp\CC2530DB\..\Source\"
-#        -I "D:\Jop van
-#        Buuren\Documents\Hogeschool\Vakken\wt\WirelessSensorNetworksPracticum\Projects\zstack\Samples\DemoApp\CC2530DB\..\..\..\ZMain\TI2530DB\"
-#        -I "D:\Jop van
-#        Buuren\Documents\Hogeschool\Vakken\wt\WirelessSensorNetworksPracticum\Projects\zstack\Samples\DemoApp\CC2530DB\..\..\..\..\..\Components\hal\include\"
-#        -I "D:\Jop van
-#        Buuren\Documents\Hogeschool\Vakken\wt\WirelessSensorNetworksPracticum\Projects\zstack\Samples\DemoApp\CC2530DB\..\..\..\..\..\Components\hal\target\CC2530EB\"
-#        -I "D:\Jop van
-#        Buuren\Documents\Hogeschool\Vakken\wt\WirelessSensorNetworksPracticum\Projects\zstack\Samples\DemoApp\CC2530DB\..\..\..\..\..\Components\mac\include\"
-#        -I "D:\Jop van
-#        Buuren\Documents\Hogeschool\Vakken\wt\WirelessSensorNetworksPracticum\Projects\zstack\Samples\DemoApp\CC2530DB\..\..\..\..\..\Components\mac\high_level\"
-#        -I "D:\Jop van
-#        Buuren\Documents\Hogeschool\Vakken\wt\WirelessSensorNetworksPracticum\Projects\zstack\Samples\DemoApp\CC2530DB\..\..\..\..\..\Components\mac\low_level\srf04\"
-#        -I "D:\Jop van
-#        Buuren\Documents\Hogeschool\Vakken\wt\WirelessSensorNetworksPracticum\Projects\zstack\Samples\DemoApp\CC2530DB\..\..\..\..\..\Components\mac\low_level\srf04\single_chip\"
-#        -I "D:\Jop van
-#        Buuren\Documents\Hogeschool\Vakken\wt\WirelessSensorNetworksPracticum\Projects\zstack\Samples\DemoApp\CC2530DB\..\..\..\..\..\Components\mt\"
-#        -I "D:\Jop van
-#        Buuren\Documents\Hogeschool\Vakken\wt\WirelessSensorNetworksPracticum\Projects\zstack\Samples\DemoApp\CC2530DB\..\..\..\..\..\Components\osal\include\"
-#        -I "D:\Jop van
-#        Buuren\Documents\Hogeschool\Vakken\wt\WirelessSensorNetworksPracticum\Projects\zstack\Samples\DemoApp\CC2530DB\..\..\..\..\..\Components\services\saddr\"
-#        -I "D:\Jop van
-#        Buuren\Documents\Hogeschool\Vakken\wt\WirelessSensorNetworksPracticum\Projects\zstack\Samples\DemoApp\CC2530DB\..\..\..\..\..\Components\services\sdata\"
-#        -I "D:\Jop van
-#        Buuren\Documents\Hogeschool\Vakken\wt\WirelessSensorNetworksPracticum\Projects\zstack\Samples\DemoApp\CC2530DB\..\..\..\..\..\Components\stack\af\"
-#        -I "D:\Jop van
-#        Buuren\Documents\Hogeschool\Vakken\wt\WirelessSensorNetworksPracticum\Projects\zstack\Samples\DemoApp\CC2530DB\..\..\..\..\..\Components\stack\nwk\"
-#        -I "D:\Jop van
-#        Buuren\Documents\Hogeschool\Vakken\wt\WirelessSensorNetworksPracticum\Projects\zstack\Samples\DemoApp\CC2530DB\..\..\..\..\..\Components\stack\sapi\"
-#        -I "D:\Jop van
-#        Buuren\Documents\Hogeschool\Vakken\wt\WirelessSensorNetworksPracticum\Projects\zstack\Samples\DemoApp\CC2530DB\..\..\..\..\..\Components\stack\sec\"
-#        -I "D:\Jop van
-#        Buuren\Documents\Hogeschool\Vakken\wt\WirelessSensorNetworksPracticum\Projects\zstack\Samples\DemoApp\CC2530DB\..\..\..\..\..\Components\stack\sys\"
-#        -I "D:\Jop van
-#        Buuren\Documents\Hogeschool\Vakken\wt\WirelessSensorNetworksPracticum\Projects\zstack\Samples\DemoApp\CC2530DB\..\..\..\..\..\Components\stack\zdo\"
-#        -I "D:\Jop van
-#        Buuren\Documents\Hogeschool\Vakken\wt\WirelessSensorNetworksPracticum\Projects\zstack\Samples\DemoApp\CC2530DB\..\..\..\..\..\Components\zmac\"
-#        -I "D:\Jop van
-#        Buuren\Documents\Hogeschool\Vakken\wt\WirelessSensorNetworksPracticum\Projects\zstack\Samples\DemoApp\CC2530DB\..\..\..\..\..\Components\zmac\f8w\"
+#        --nr_virtual_regs 16 -I
+#        D:\School\Jaar_3\WTWS\Projects\WirelessSensorNetworksPracticum\Projects\zstack\Samples\DemoApp\CC2530DB\
+#        -I
+#        D:\School\Jaar_3\WTWS\Projects\WirelessSensorNetworksPracticum\Projects\zstack\Samples\DemoApp\CC2530DB\..\Source\
+#        -I
+#        D:\School\Jaar_3\WTWS\Projects\WirelessSensorNetworksPracticum\Projects\zstack\Samples\DemoApp\CC2530DB\..\..\..\ZMain\TI2530DB\
+#        -I
+#        D:\School\Jaar_3\WTWS\Projects\WirelessSensorNetworksPracticum\Projects\zstack\Samples\DemoApp\CC2530DB\..\..\..\..\..\Components\hal\include\
+#        -I
+#        D:\School\Jaar_3\WTWS\Projects\WirelessSensorNetworksPracticum\Projects\zstack\Samples\DemoApp\CC2530DB\..\..\..\..\..\Components\hal\target\CC2530EB\
+#        -I
+#        D:\School\Jaar_3\WTWS\Projects\WirelessSensorNetworksPracticum\Projects\zstack\Samples\DemoApp\CC2530DB\..\..\..\..\..\Components\mac\include\
+#        -I
+#        D:\School\Jaar_3\WTWS\Projects\WirelessSensorNetworksPracticum\Projects\zstack\Samples\DemoApp\CC2530DB\..\..\..\..\..\Components\mac\high_level\
+#        -I
+#        D:\School\Jaar_3\WTWS\Projects\WirelessSensorNetworksPracticum\Projects\zstack\Samples\DemoApp\CC2530DB\..\..\..\..\..\Components\mac\low_level\srf04\
+#        -I
+#        D:\School\Jaar_3\WTWS\Projects\WirelessSensorNetworksPracticum\Projects\zstack\Samples\DemoApp\CC2530DB\..\..\..\..\..\Components\mac\low_level\srf04\single_chip\
+#        -I
+#        D:\School\Jaar_3\WTWS\Projects\WirelessSensorNetworksPracticum\Projects\zstack\Samples\DemoApp\CC2530DB\..\..\..\..\..\Components\mt\
+#        -I
+#        D:\School\Jaar_3\WTWS\Projects\WirelessSensorNetworksPracticum\Projects\zstack\Samples\DemoApp\CC2530DB\..\..\..\..\..\Components\osal\include\
+#        -I
+#        D:\School\Jaar_3\WTWS\Projects\WirelessSensorNetworksPracticum\Projects\zstack\Samples\DemoApp\CC2530DB\..\..\..\..\..\Components\services\saddr\
+#        -I
+#        D:\School\Jaar_3\WTWS\Projects\WirelessSensorNetworksPracticum\Projects\zstack\Samples\DemoApp\CC2530DB\..\..\..\..\..\Components\services\sdata\
+#        -I
+#        D:\School\Jaar_3\WTWS\Projects\WirelessSensorNetworksPracticum\Projects\zstack\Samples\DemoApp\CC2530DB\..\..\..\..\..\Components\stack\af\
+#        -I
+#        D:\School\Jaar_3\WTWS\Projects\WirelessSensorNetworksPracticum\Projects\zstack\Samples\DemoApp\CC2530DB\..\..\..\..\..\Components\stack\nwk\
+#        -I
+#        D:\School\Jaar_3\WTWS\Projects\WirelessSensorNetworksPracticum\Projects\zstack\Samples\DemoApp\CC2530DB\..\..\..\..\..\Components\stack\sapi\
+#        -I
+#        D:\School\Jaar_3\WTWS\Projects\WirelessSensorNetworksPracticum\Projects\zstack\Samples\DemoApp\CC2530DB\..\..\..\..\..\Components\stack\sec\
+#        -I
+#        D:\School\Jaar_3\WTWS\Projects\WirelessSensorNetworksPracticum\Projects\zstack\Samples\DemoApp\CC2530DB\..\..\..\..\..\Components\stack\sys\
+#        -I
+#        D:\School\Jaar_3\WTWS\Projects\WirelessSensorNetworksPracticum\Projects\zstack\Samples\DemoApp\CC2530DB\..\..\..\..\..\Components\stack\zdo\
+#        -I
+#        D:\School\Jaar_3\WTWS\Projects\WirelessSensorNetworksPracticum\Projects\zstack\Samples\DemoApp\CC2530DB\..\..\..\..\..\Components\zmac\
+#        -I
+#        D:\School\Jaar_3\WTWS\Projects\WirelessSensorNetworksPracticum\Projects\zstack\Samples\DemoApp\CC2530DB\..\..\..\..\..\Components\zmac\f8w\
 #        -Ol --require_prototypes
 #    List file          =  
-#        D:\Jop van
-#        Buuren\Documents\Hogeschool\Vakken\wt\WirelessSensorNetworksPracticum\Projects\zstack\Samples\DemoApp\CC2530DB\SensorEB\List\mac_low_level.lst
+#        D:\School\Jaar_3\WTWS\Projects\WirelessSensorNetworksPracticum\Projects\zstack\Samples\DemoApp\CC2530DB\CoordinatorEB\List\mac_low_level.lst
 #    Object file        =  
-#        D:\Jop van
-#        Buuren\Documents\Hogeschool\Vakken\wt\WirelessSensorNetworksPracticum\Projects\zstack\Samples\DemoApp\CC2530DB\SensorEB\Obj\mac_low_level.r51
+#        D:\School\Jaar_3\WTWS\Projects\WirelessSensorNetworksPracticum\Projects\zstack\Samples\DemoApp\CC2530DB\CoordinatorEB\Obj\mac_low_level.r51
 #
 ###############################################################################
 
-D:\Jop van Buuren\Documents\Hogeschool\Vakken\wt\WirelessSensorNetworksPracticum\Components\mac\low_level\srf04\mac_low_level.c
+D:\School\Jaar_3\WTWS\Projects\WirelessSensorNetworksPracticum\Components\mac\low_level\srf04\mac_low_level.c
       1          /**************************************************************************************************
-                                                                                                                   ^
-Warning[Pa050]: non-native end of line sequence detected (this diagnostic is
-          only issued once)
       2            Filename:       mac_low_level.c
       3            Revised:        $Date: 2014-03-13 10:50:10 -0700 (Thu, 13 Mar 2014) $
       4            Revision:       $Revision: 37663 $
@@ -527,4 +522,4 @@ Warning[Pa050]: non-native end of line sequence detected (this diagnostic is
    0 bytes of DATA memory (+ 1 byte shared)
 
 Errors: none
-Warnings: 1
+Warnings: none

@@ -1,6 +1,6 @@
 ///////////////////////////////////////////////////////////////////////////////
 //
-// IAR C/C++ Compiler V9.20.1.2476 for 8051               17/Feb/2017  12:45:15
+// IAR C/C++ Compiler V9.20.1.2476 for 8051               22/Feb/2017  13:47:35
 // Copyright 2004-2015 IAR Systems AB.
 // Standalone license - IAR Embedded Workbench for 8051
 //
@@ -12,14 +12,14 @@
 //    Dptr setup         =  1,16
 //                          
 //    Source file        =  
-//        D:\Jop van
-//        Buuren\Documents\Hogeschool\Vakken\wt\WirelessSensorNetworksPracticum\Components\zmac\f8w\zmac_cb.c
+//        D:\School\Jaar_3\WTWS\Projects\WirelessSensorNetworksPracticum\Components\zmac\f8w\zmac_cb.c
 //    Command line       =  
-//        -f "D:\Jop van
-//        Buuren\Documents\Hogeschool\Vakken\wt\WirelessSensorNetworksPracticum\Projects\zstack\Samples\DemoApp\CC2530DB\..\..\..\Tools\CC2530DB\f8wEndev.cfg"
-//        (-DCPU32MHZ -DROOT=__near_func -DMAC_CFG_TX_DATA_MAX=3
-//        -DMAC_CFG_TX_MAX=6 -DMAC_CFG_RX_MAX=3) -f "D:\Jop van
-//        Buuren\Documents\Hogeschool\Vakken\wt\WirelessSensorNetworksPracticum\Projects\zstack\Samples\DemoApp\CC2530DB\..\..\..\Tools\CC2530DB\f8wConfig.cfg"
+//        -f
+//        D:\School\Jaar_3\WTWS\Projects\WirelessSensorNetworksPracticum\Projects\zstack\Samples\DemoApp\CC2530DB\..\..\..\Tools\CC2530DB\f8wCoord.cfg
+//        (-DCPU32MHZ -DROOT=__near_func -DMAC_CFG_APP_PENDING_QUEUE=TRUE
+//        -DMAC_CFG_TX_DATA_MAX=5 -DMAC_CFG_TX_MAX=8 -DMAC_CFG_RX_MAX=5
+//        -DZDO_COORDINATOR -DRTR_NWK) -f
+//        D:\School\Jaar_3\WTWS\Projects\WirelessSensorNetworksPracticum\Projects\zstack\Samples\DemoApp\CC2530DB\..\..\..\Tools\CC2530DB\f8wConfig.cfg
 //        (-DZIGBEEPRO -DSECURE=0 -DZG_SECURE_DYNAMIC=0 -DREFLECTOR
 //        -DDEFAULT_CHANLIST=0x00100000 -DZDAPP_CONFIG_PAN_ID=0x0DAD
 //        -DNWK_START_DELAY=100 -DEXTENDED_JOINING_RANDOM_MASK=0x007F
@@ -34,64 +34,63 @@
 //        -DMAC_MAX_FRAME_SIZE=116 -DZDNWKMGR_MIN_TRANSMISSIONS=20
 //        "-DCONST=const __code" -DGENERIC=__generic -DRFD_RCVC_ALWAYS_ON=FALSE
 //        -DPOLL_RATE=1000 -DQUEUED_POLL_RATE=100 -DRESPONSE_POLL_RATE=100)
-//        -DREJOIN_POLL_RATE=440 "D:\Jop van
-//        Buuren\Documents\Hogeschool\Vakken\wt\WirelessSensorNetworksPracticum\Components\zmac\f8w\zmac_cb.c"
-//        -D NWK_AUTO_POLL -D HOLD_AUTO_START -D POWER_SAVING -D NV_INIT -D
-//        DEVICE_LOGICAL_TYPE=ZG_DEVICETYPE_ENDDEVICE -lC "D:\Jop van
-//        Buuren\Documents\Hogeschool\Vakken\wt\WirelessSensorNetworksPracticum\Projects\zstack\Samples\DemoApp\CC2530DB\SensorEB\List\"
-//        -lA "D:\Jop van
-//        Buuren\Documents\Hogeschool\Vakken\wt\WirelessSensorNetworksPracticum\Projects\zstack\Samples\DemoApp\CC2530DB\SensorEB\List\"
-//        --diag_suppress Pe001,Pa010,Pe1665 -o "D:\Jop van
-//        Buuren\Documents\Hogeschool\Vakken\wt\WirelessSensorNetworksPracticum\Projects\zstack\Samples\DemoApp\CC2530DB\SensorEB\Obj\"
+//        -DREJOIN_POLL_RATE=440
+//        D:\School\Jaar_3\WTWS\Projects\WirelessSensorNetworksPracticum\Components\zmac\f8w\zmac_cb.c
+//        -D HOLD_AUTO_START -D BUILD_ALL_DEVICES -D REFLECTOR -D NV_INIT -D
+//        NV_RESTORE -D HAL_UART=TRUE -lC
+//        D:\School\Jaar_3\WTWS\Projects\WirelessSensorNetworksPracticum\Projects\zstack\Samples\DemoApp\CC2530DB\CoordinatorEB\List\
+//        -lA
+//        D:\School\Jaar_3\WTWS\Projects\WirelessSensorNetworksPracticum\Projects\zstack\Samples\DemoApp\CC2530DB\CoordinatorEB\List\
+//        --diag_suppress Pe001,Pa010,Pe1665 -o
+//        D:\School\Jaar_3\WTWS\Projects\WirelessSensorNetworksPracticum\Projects\zstack\Samples\DemoApp\CC2530DB\CoordinatorEB\Obj\
 //        -e --no_cse --no_unroll --no_inline --no_code_motion --no_tbaa
 //        --debug --core=plain --dptr=16,1 --data_model=large
 //        --code_model=banked --calling_convention=xdata_reentrant
-//        --place_constants=data_rom --nr_virtual_regs 16 -I "D:\Jop van
-//        Buuren\Documents\Hogeschool\Vakken\wt\WirelessSensorNetworksPracticum\Projects\zstack\Samples\DemoApp\CC2530DB\"
-//        -I "D:\Jop van
-//        Buuren\Documents\Hogeschool\Vakken\wt\WirelessSensorNetworksPracticum\Projects\zstack\Samples\DemoApp\CC2530DB\..\Source\"
-//        -I "D:\Jop van
-//        Buuren\Documents\Hogeschool\Vakken\wt\WirelessSensorNetworksPracticum\Projects\zstack\Samples\DemoApp\CC2530DB\..\..\..\ZMain\TI2530DB\"
-//        -I "D:\Jop van
-//        Buuren\Documents\Hogeschool\Vakken\wt\WirelessSensorNetworksPracticum\Projects\zstack\Samples\DemoApp\CC2530DB\..\..\..\..\..\Components\hal\include\"
-//        -I "D:\Jop van
-//        Buuren\Documents\Hogeschool\Vakken\wt\WirelessSensorNetworksPracticum\Projects\zstack\Samples\DemoApp\CC2530DB\..\..\..\..\..\Components\hal\target\CC2530EB\"
-//        -I "D:\Jop van
-//        Buuren\Documents\Hogeschool\Vakken\wt\WirelessSensorNetworksPracticum\Projects\zstack\Samples\DemoApp\CC2530DB\..\..\..\..\..\Components\mac\include\"
-//        -I "D:\Jop van
-//        Buuren\Documents\Hogeschool\Vakken\wt\WirelessSensorNetworksPracticum\Projects\zstack\Samples\DemoApp\CC2530DB\..\..\..\..\..\Components\mac\high_level\"
-//        -I "D:\Jop van
-//        Buuren\Documents\Hogeschool\Vakken\wt\WirelessSensorNetworksPracticum\Projects\zstack\Samples\DemoApp\CC2530DB\..\..\..\..\..\Components\mac\low_level\srf04\"
-//        -I "D:\Jop van
-//        Buuren\Documents\Hogeschool\Vakken\wt\WirelessSensorNetworksPracticum\Projects\zstack\Samples\DemoApp\CC2530DB\..\..\..\..\..\Components\mac\low_level\srf04\single_chip\"
-//        -I "D:\Jop van
-//        Buuren\Documents\Hogeschool\Vakken\wt\WirelessSensorNetworksPracticum\Projects\zstack\Samples\DemoApp\CC2530DB\..\..\..\..\..\Components\mt\"
-//        -I "D:\Jop van
-//        Buuren\Documents\Hogeschool\Vakken\wt\WirelessSensorNetworksPracticum\Projects\zstack\Samples\DemoApp\CC2530DB\..\..\..\..\..\Components\osal\include\"
-//        -I "D:\Jop van
-//        Buuren\Documents\Hogeschool\Vakken\wt\WirelessSensorNetworksPracticum\Projects\zstack\Samples\DemoApp\CC2530DB\..\..\..\..\..\Components\services\saddr\"
-//        -I "D:\Jop van
-//        Buuren\Documents\Hogeschool\Vakken\wt\WirelessSensorNetworksPracticum\Projects\zstack\Samples\DemoApp\CC2530DB\..\..\..\..\..\Components\services\sdata\"
-//        -I "D:\Jop van
-//        Buuren\Documents\Hogeschool\Vakken\wt\WirelessSensorNetworksPracticum\Projects\zstack\Samples\DemoApp\CC2530DB\..\..\..\..\..\Components\stack\af\"
-//        -I "D:\Jop van
-//        Buuren\Documents\Hogeschool\Vakken\wt\WirelessSensorNetworksPracticum\Projects\zstack\Samples\DemoApp\CC2530DB\..\..\..\..\..\Components\stack\nwk\"
-//        -I "D:\Jop van
-//        Buuren\Documents\Hogeschool\Vakken\wt\WirelessSensorNetworksPracticum\Projects\zstack\Samples\DemoApp\CC2530DB\..\..\..\..\..\Components\stack\sapi\"
-//        -I "D:\Jop van
-//        Buuren\Documents\Hogeschool\Vakken\wt\WirelessSensorNetworksPracticum\Projects\zstack\Samples\DemoApp\CC2530DB\..\..\..\..\..\Components\stack\sec\"
-//        -I "D:\Jop van
-//        Buuren\Documents\Hogeschool\Vakken\wt\WirelessSensorNetworksPracticum\Projects\zstack\Samples\DemoApp\CC2530DB\..\..\..\..\..\Components\stack\sys\"
-//        -I "D:\Jop van
-//        Buuren\Documents\Hogeschool\Vakken\wt\WirelessSensorNetworksPracticum\Projects\zstack\Samples\DemoApp\CC2530DB\..\..\..\..\..\Components\stack\zdo\"
-//        -I "D:\Jop van
-//        Buuren\Documents\Hogeschool\Vakken\wt\WirelessSensorNetworksPracticum\Projects\zstack\Samples\DemoApp\CC2530DB\..\..\..\..\..\Components\zmac\"
-//        -I "D:\Jop van
-//        Buuren\Documents\Hogeschool\Vakken\wt\WirelessSensorNetworksPracticum\Projects\zstack\Samples\DemoApp\CC2530DB\..\..\..\..\..\Components\zmac\f8w\"
+//        --place_constants=data_rom --nr_virtual_regs 16 -I
+//        D:\School\Jaar_3\WTWS\Projects\WirelessSensorNetworksPracticum\Projects\zstack\Samples\DemoApp\CC2530DB\
+//        -I
+//        D:\School\Jaar_3\WTWS\Projects\WirelessSensorNetworksPracticum\Projects\zstack\Samples\DemoApp\CC2530DB\..\Source\
+//        -I
+//        D:\School\Jaar_3\WTWS\Projects\WirelessSensorNetworksPracticum\Projects\zstack\Samples\DemoApp\CC2530DB\..\..\..\ZMain\TI2530DB\
+//        -I
+//        D:\School\Jaar_3\WTWS\Projects\WirelessSensorNetworksPracticum\Projects\zstack\Samples\DemoApp\CC2530DB\..\..\..\..\..\Components\hal\include\
+//        -I
+//        D:\School\Jaar_3\WTWS\Projects\WirelessSensorNetworksPracticum\Projects\zstack\Samples\DemoApp\CC2530DB\..\..\..\..\..\Components\hal\target\CC2530EB\
+//        -I
+//        D:\School\Jaar_3\WTWS\Projects\WirelessSensorNetworksPracticum\Projects\zstack\Samples\DemoApp\CC2530DB\..\..\..\..\..\Components\mac\include\
+//        -I
+//        D:\School\Jaar_3\WTWS\Projects\WirelessSensorNetworksPracticum\Projects\zstack\Samples\DemoApp\CC2530DB\..\..\..\..\..\Components\mac\high_level\
+//        -I
+//        D:\School\Jaar_3\WTWS\Projects\WirelessSensorNetworksPracticum\Projects\zstack\Samples\DemoApp\CC2530DB\..\..\..\..\..\Components\mac\low_level\srf04\
+//        -I
+//        D:\School\Jaar_3\WTWS\Projects\WirelessSensorNetworksPracticum\Projects\zstack\Samples\DemoApp\CC2530DB\..\..\..\..\..\Components\mac\low_level\srf04\single_chip\
+//        -I
+//        D:\School\Jaar_3\WTWS\Projects\WirelessSensorNetworksPracticum\Projects\zstack\Samples\DemoApp\CC2530DB\..\..\..\..\..\Components\mt\
+//        -I
+//        D:\School\Jaar_3\WTWS\Projects\WirelessSensorNetworksPracticum\Projects\zstack\Samples\DemoApp\CC2530DB\..\..\..\..\..\Components\osal\include\
+//        -I
+//        D:\School\Jaar_3\WTWS\Projects\WirelessSensorNetworksPracticum\Projects\zstack\Samples\DemoApp\CC2530DB\..\..\..\..\..\Components\services\saddr\
+//        -I
+//        D:\School\Jaar_3\WTWS\Projects\WirelessSensorNetworksPracticum\Projects\zstack\Samples\DemoApp\CC2530DB\..\..\..\..\..\Components\services\sdata\
+//        -I
+//        D:\School\Jaar_3\WTWS\Projects\WirelessSensorNetworksPracticum\Projects\zstack\Samples\DemoApp\CC2530DB\..\..\..\..\..\Components\stack\af\
+//        -I
+//        D:\School\Jaar_3\WTWS\Projects\WirelessSensorNetworksPracticum\Projects\zstack\Samples\DemoApp\CC2530DB\..\..\..\..\..\Components\stack\nwk\
+//        -I
+//        D:\School\Jaar_3\WTWS\Projects\WirelessSensorNetworksPracticum\Projects\zstack\Samples\DemoApp\CC2530DB\..\..\..\..\..\Components\stack\sapi\
+//        -I
+//        D:\School\Jaar_3\WTWS\Projects\WirelessSensorNetworksPracticum\Projects\zstack\Samples\DemoApp\CC2530DB\..\..\..\..\..\Components\stack\sec\
+//        -I
+//        D:\School\Jaar_3\WTWS\Projects\WirelessSensorNetworksPracticum\Projects\zstack\Samples\DemoApp\CC2530DB\..\..\..\..\..\Components\stack\sys\
+//        -I
+//        D:\School\Jaar_3\WTWS\Projects\WirelessSensorNetworksPracticum\Projects\zstack\Samples\DemoApp\CC2530DB\..\..\..\..\..\Components\stack\zdo\
+//        -I
+//        D:\School\Jaar_3\WTWS\Projects\WirelessSensorNetworksPracticum\Projects\zstack\Samples\DemoApp\CC2530DB\..\..\..\..\..\Components\zmac\
+//        -I
+//        D:\School\Jaar_3\WTWS\Projects\WirelessSensorNetworksPracticum\Projects\zstack\Samples\DemoApp\CC2530DB\..\..\..\..\..\Components\zmac\f8w\
 //        -Ol --require_prototypes
 //    List file          =  
-//        D:\Jop van
-//        Buuren\Documents\Hogeschool\Vakken\wt\WirelessSensorNetworksPracticum\Projects\zstack\Samples\DemoApp\CC2530DB\SensorEB\List\zmac_cb.s51
+//        D:\School\Jaar_3\WTWS\Projects\WirelessSensorNetworksPracticum\Projects\zstack\Samples\DemoApp\CC2530DB\CoordinatorEB\List\zmac_cb.s51
 //
 ///////////////////////////////////////////////////////////////////////////////
 
@@ -146,8 +145,9 @@
         PUBLIC `??ZMacLqiAdjustMode::?relay`
         FUNCTION `??ZMacLqiAdjustMode::?relay`,0203H
         PUBLIC MAC_CbackCheckPending
-        FUNCTION MAC_CbackCheckPending,0203H
+        FUNCTION MAC_CbackCheckPending,021203H
         ARGFRAME XSTACK, 0, STACK
+        LOCFRAME ISTACK, 2, STACK
         PUBLIC MAC_CbackEvent
         FUNCTION MAC_CbackEvent,0a1203H
         ARGFRAME XSTACK, 0, STACK
@@ -261,6 +261,8 @@ MAC_MlmeGetReq      SYMBOL "MAC_MlmeGetReq"
 `??MAC_MlmeGetReq::?relay` SYMBOL "?relay", MAC_MlmeGetReq
 mac_msg_deallocate  SYMBOL "mac_msg_deallocate"
 `??mac_msg_deallocate::?relay` SYMBOL "?relay", mac_msg_deallocate
+nwkDB_ReturnIndirectHoldingCnt SYMBOL "nwkDB_ReturnIndirectHoldingCnt"
+`??nwkDB_ReturnIndirectHoldingCnt::?relay` SYMBOL "?relay", nwkDB_ReturnIndirectHoldingCnt
 nwk_broadcastSend   SYMBOL "nwk_broadcastSend"
 `??nwk_broadcastSend::?relay` SYMBOL "?relay", nwk_broadcastSend
 osal_mem_free       SYMBOL "osal_mem_free"
@@ -284,6 +286,8 @@ ZMacLqiAdjustMode   SYMBOL "ZMacLqiAdjustMode"
         FUNCTION `??MAC_MlmeGetReq::?relay`,00H
         EXTERN `??mac_msg_deallocate::?relay`
         FUNCTION `??mac_msg_deallocate::?relay`,00H
+        EXTERN `??nwkDB_ReturnIndirectHoldingCnt::?relay`
+        FUNCTION `??nwkDB_ReturnIndirectHoldingCnt::?relay`,00H
         EXTERN `??nwk_broadcastSend::?relay`
         FUNCTION `??nwk_broadcastSend::?relay`,00H
         EXTERN `??osal_mem_free::?relay`
@@ -309,6 +313,13 @@ ZMacLqiAdjustMode   SYMBOL "ZMacLqiAdjustMode"
         ARGFRAME ISTACK, 0, STACK
         ARGFRAME PSTACK, 0, STACK
         ARGFRAME XSTACK, 20, STACK
+        ARGFRAME IOVERLAY, 0, STATIC
+        ARGFRAME DOVERLAY, 0, STATIC
+        EXTERN nwkDB_ReturnIndirectHoldingCnt
+        FUNCTION nwkDB_ReturnIndirectHoldingCnt,0202H
+        ARGFRAME ISTACK, 2, STACK
+        ARGFRAME PSTACK, 0, STACK
+        ARGFRAME XSTACK, 0, STACK
         ARGFRAME IOVERLAY, 0, STATIC
         ARGFRAME DOVERLAY, 0, STATIC
         EXTERN nwk_broadcastSend
@@ -346,8 +357,9 @@ ZMacLqiAdjustMode   SYMBOL "ZMacLqiAdjustMode"
         ARGFRAME XSTACK, 20, STACK
         ARGFRAME IOVERLAY, 0, STATIC
         ARGFRAME DOVERLAY, 0, STATIC
+        EXTERN zgDeviceLogicalType
 
-// D:\Jop van Buuren\Documents\Hogeschool\Vakken\wt\WirelessSensorNetworksPracticum\Components\zmac\f8w\zmac_cb.c
+// D:\School\Jaar_3\WTWS\Projects\WirelessSensorNetworksPracticum\Components\zmac\f8w\zmac_cb.c
 //    1 /**************************************************************************************************
 //    2   Filename:       zmac_cb.c
 //    3   Revised:        $Date: 2014-06-04 08:52:26 -0700 (Wed, 04 Jun 2014) $
@@ -2058,17 +2070,53 @@ MAC_CbackCheckPending:
           CFI Function MAC_CbackCheckPending
         CODE
 //  469 {
-        ; Saved register size: 0
+        FUNCALL MAC_CbackCheckPending, nwkDB_ReturnIndirectHoldingCnt
+        LOCFRAME ISTACK, 2, STACK
+        LOCFRAME PSTACK, 0, STACK
+        LOCFRAME XSTACK, 0, STACK
+        LOCFRAME IOVERLAY, 0, STATIC
+        LOCFRAME DOVERLAY, 0, STATIC
+        ARGFRAME ISTACK, 2, STACK
+        ARGFRAME PSTACK, 0, STACK
+        ARGFRAME XSTACK, 0, STACK
+        ARGFRAME IOVERLAY, 0, STATIC
+        ARGFRAME DOVERLAY, 0, STATIC
+        PUSH    DPL
+          CFI DPL0 Frame(CFA_SP, 4)
+          CFI CFA_SP SP+-4
+        PUSH    DPH
+          CFI DPH0 Frame(CFA_SP, 5)
+          CFI CFA_SP SP+-5
+        ; Saved register size: 2
         ; Auto size: 0
 //  470 #if !defined (NONWK)
 //  471   if ( ZSTACK_ROUTER_BUILD )
+        MOV     DPTR,#zgDeviceLogicalType
+        MOVX    A,@DPTR
+        JZ      ??MAC_CbackCheckPending_0
+        MOV     DPTR,#zgDeviceLogicalType
+        MOVX    A,@DPTR
+        XRL     A,#0x1
+        JNZ     ??MAC_CbackCheckPending_1
 //  472   {
 //  473     return (nwkDB_ReturnIndirectHoldingCnt());
+??MAC_CbackCheckPending_0:
+        ; Setup parameters for call to function nwkDB_ReturnIndirectHoldingCnt
+        LCALL   `??nwkDB_ReturnIndirectHoldingCnt::?relay`; Banked call to: nwkDB_ReturnIndirectHoldingCnt
+        SJMP    ??MAC_CbackCheckPending_2
 //  474   }
 //  475   else
 //  476   {
 //  477     return (0);
+??MAC_CbackCheckPending_1:
         MOV     R1,#0x0
+??MAC_CbackCheckPending_2:
+        POP     DPH
+          CFI DPH0 SameValue
+          CFI CFA_SP SP+-4
+        POP     DPL
+          CFI DPL0 SameValue
+          CFI CFA_SP SP+-3
         LJMP    ?BRET
 //  478   }
 //  479 #else
@@ -2387,15 +2435,15 @@ ZMacLqiAdjust:
         END
 //  590 #endif
 // 
-// 1 577 bytes in segment BANKED_CODE
+// 1 604 bytes in segment BANKED_CODE
 //    30 bytes in segment BANK_RELAYS
 //    17 bytes in segment CODE_C
 //     1 byte  in segment SFR_AN
 //     3 bytes in segment XDATA_Z
 // 
-// 1 624 bytes of CODE  memory
+// 1 651 bytes of CODE  memory
 //     0 bytes of DATA  memory (+ 1 byte shared)
 //     3 bytes of XDATA memory
 //
 //Errors: none
-//Warnings: 1
+//Warnings: none

@@ -1,6 +1,6 @@
 ///////////////////////////////////////////////////////////////////////////////
 //
-// IAR C/C++ Compiler V9.20.1.2476 for 8051               17/Feb/2017  12:45:15
+// IAR C/C++ Compiler V9.20.1.2476 for 8051               22/Feb/2017  13:47:33
 // Copyright 2004-2015 IAR Systems AB.
 // Standalone license - IAR Embedded Workbench for 8051
 //
@@ -12,14 +12,14 @@
 //    Dptr setup         =  1,16
 //                          
 //    Source file        =  
-//        D:\Jop van
-//        Buuren\Documents\Hogeschool\Vakken\wt\WirelessSensorNetworksPracticum\Components\stack\zdo\ZDSecMgr.c
+//        D:\School\Jaar_3\WTWS\Projects\WirelessSensorNetworksPracticum\Components\stack\zdo\ZDSecMgr.c
 //    Command line       =  
-//        -f "D:\Jop van
-//        Buuren\Documents\Hogeschool\Vakken\wt\WirelessSensorNetworksPracticum\Projects\zstack\Samples\DemoApp\CC2530DB\..\..\..\Tools\CC2530DB\f8wEndev.cfg"
-//        (-DCPU32MHZ -DROOT=__near_func -DMAC_CFG_TX_DATA_MAX=3
-//        -DMAC_CFG_TX_MAX=6 -DMAC_CFG_RX_MAX=3) -f "D:\Jop van
-//        Buuren\Documents\Hogeschool\Vakken\wt\WirelessSensorNetworksPracticum\Projects\zstack\Samples\DemoApp\CC2530DB\..\..\..\Tools\CC2530DB\f8wConfig.cfg"
+//        -f
+//        D:\School\Jaar_3\WTWS\Projects\WirelessSensorNetworksPracticum\Projects\zstack\Samples\DemoApp\CC2530DB\..\..\..\Tools\CC2530DB\f8wCoord.cfg
+//        (-DCPU32MHZ -DROOT=__near_func -DMAC_CFG_APP_PENDING_QUEUE=TRUE
+//        -DMAC_CFG_TX_DATA_MAX=5 -DMAC_CFG_TX_MAX=8 -DMAC_CFG_RX_MAX=5
+//        -DZDO_COORDINATOR -DRTR_NWK) -f
+//        D:\School\Jaar_3\WTWS\Projects\WirelessSensorNetworksPracticum\Projects\zstack\Samples\DemoApp\CC2530DB\..\..\..\Tools\CC2530DB\f8wConfig.cfg
 //        (-DZIGBEEPRO -DSECURE=0 -DZG_SECURE_DYNAMIC=0 -DREFLECTOR
 //        -DDEFAULT_CHANLIST=0x00100000 -DZDAPP_CONFIG_PAN_ID=0x0DAD
 //        -DNWK_START_DELAY=100 -DEXTENDED_JOINING_RANDOM_MASK=0x007F
@@ -34,64 +34,63 @@
 //        -DMAC_MAX_FRAME_SIZE=116 -DZDNWKMGR_MIN_TRANSMISSIONS=20
 //        "-DCONST=const __code" -DGENERIC=__generic -DRFD_RCVC_ALWAYS_ON=FALSE
 //        -DPOLL_RATE=1000 -DQUEUED_POLL_RATE=100 -DRESPONSE_POLL_RATE=100)
-//        -DREJOIN_POLL_RATE=440 "D:\Jop van
-//        Buuren\Documents\Hogeschool\Vakken\wt\WirelessSensorNetworksPracticum\Components\stack\zdo\ZDSecMgr.c"
-//        -D NWK_AUTO_POLL -D HOLD_AUTO_START -D POWER_SAVING -D NV_INIT -D
-//        DEVICE_LOGICAL_TYPE=ZG_DEVICETYPE_ENDDEVICE -lC "D:\Jop van
-//        Buuren\Documents\Hogeschool\Vakken\wt\WirelessSensorNetworksPracticum\Projects\zstack\Samples\DemoApp\CC2530DB\SensorEB\List\"
-//        -lA "D:\Jop van
-//        Buuren\Documents\Hogeschool\Vakken\wt\WirelessSensorNetworksPracticum\Projects\zstack\Samples\DemoApp\CC2530DB\SensorEB\List\"
-//        --diag_suppress Pe001,Pa010,Pe1665 -o "D:\Jop van
-//        Buuren\Documents\Hogeschool\Vakken\wt\WirelessSensorNetworksPracticum\Projects\zstack\Samples\DemoApp\CC2530DB\SensorEB\Obj\"
+//        -DREJOIN_POLL_RATE=440
+//        D:\School\Jaar_3\WTWS\Projects\WirelessSensorNetworksPracticum\Components\stack\zdo\ZDSecMgr.c
+//        -D HOLD_AUTO_START -D BUILD_ALL_DEVICES -D REFLECTOR -D NV_INIT -D
+//        NV_RESTORE -D HAL_UART=TRUE -lC
+//        D:\School\Jaar_3\WTWS\Projects\WirelessSensorNetworksPracticum\Projects\zstack\Samples\DemoApp\CC2530DB\CoordinatorEB\List\
+//        -lA
+//        D:\School\Jaar_3\WTWS\Projects\WirelessSensorNetworksPracticum\Projects\zstack\Samples\DemoApp\CC2530DB\CoordinatorEB\List\
+//        --diag_suppress Pe001,Pa010,Pe1665 -o
+//        D:\School\Jaar_3\WTWS\Projects\WirelessSensorNetworksPracticum\Projects\zstack\Samples\DemoApp\CC2530DB\CoordinatorEB\Obj\
 //        -e --no_cse --no_unroll --no_inline --no_code_motion --no_tbaa
 //        --debug --core=plain --dptr=16,1 --data_model=large
 //        --code_model=banked --calling_convention=xdata_reentrant
-//        --place_constants=data_rom --nr_virtual_regs 16 -I "D:\Jop van
-//        Buuren\Documents\Hogeschool\Vakken\wt\WirelessSensorNetworksPracticum\Projects\zstack\Samples\DemoApp\CC2530DB\"
-//        -I "D:\Jop van
-//        Buuren\Documents\Hogeschool\Vakken\wt\WirelessSensorNetworksPracticum\Projects\zstack\Samples\DemoApp\CC2530DB\..\Source\"
-//        -I "D:\Jop van
-//        Buuren\Documents\Hogeschool\Vakken\wt\WirelessSensorNetworksPracticum\Projects\zstack\Samples\DemoApp\CC2530DB\..\..\..\ZMain\TI2530DB\"
-//        -I "D:\Jop van
-//        Buuren\Documents\Hogeschool\Vakken\wt\WirelessSensorNetworksPracticum\Projects\zstack\Samples\DemoApp\CC2530DB\..\..\..\..\..\Components\hal\include\"
-//        -I "D:\Jop van
-//        Buuren\Documents\Hogeschool\Vakken\wt\WirelessSensorNetworksPracticum\Projects\zstack\Samples\DemoApp\CC2530DB\..\..\..\..\..\Components\hal\target\CC2530EB\"
-//        -I "D:\Jop van
-//        Buuren\Documents\Hogeschool\Vakken\wt\WirelessSensorNetworksPracticum\Projects\zstack\Samples\DemoApp\CC2530DB\..\..\..\..\..\Components\mac\include\"
-//        -I "D:\Jop van
-//        Buuren\Documents\Hogeschool\Vakken\wt\WirelessSensorNetworksPracticum\Projects\zstack\Samples\DemoApp\CC2530DB\..\..\..\..\..\Components\mac\high_level\"
-//        -I "D:\Jop van
-//        Buuren\Documents\Hogeschool\Vakken\wt\WirelessSensorNetworksPracticum\Projects\zstack\Samples\DemoApp\CC2530DB\..\..\..\..\..\Components\mac\low_level\srf04\"
-//        -I "D:\Jop van
-//        Buuren\Documents\Hogeschool\Vakken\wt\WirelessSensorNetworksPracticum\Projects\zstack\Samples\DemoApp\CC2530DB\..\..\..\..\..\Components\mac\low_level\srf04\single_chip\"
-//        -I "D:\Jop van
-//        Buuren\Documents\Hogeschool\Vakken\wt\WirelessSensorNetworksPracticum\Projects\zstack\Samples\DemoApp\CC2530DB\..\..\..\..\..\Components\mt\"
-//        -I "D:\Jop van
-//        Buuren\Documents\Hogeschool\Vakken\wt\WirelessSensorNetworksPracticum\Projects\zstack\Samples\DemoApp\CC2530DB\..\..\..\..\..\Components\osal\include\"
-//        -I "D:\Jop van
-//        Buuren\Documents\Hogeschool\Vakken\wt\WirelessSensorNetworksPracticum\Projects\zstack\Samples\DemoApp\CC2530DB\..\..\..\..\..\Components\services\saddr\"
-//        -I "D:\Jop van
-//        Buuren\Documents\Hogeschool\Vakken\wt\WirelessSensorNetworksPracticum\Projects\zstack\Samples\DemoApp\CC2530DB\..\..\..\..\..\Components\services\sdata\"
-//        -I "D:\Jop van
-//        Buuren\Documents\Hogeschool\Vakken\wt\WirelessSensorNetworksPracticum\Projects\zstack\Samples\DemoApp\CC2530DB\..\..\..\..\..\Components\stack\af\"
-//        -I "D:\Jop van
-//        Buuren\Documents\Hogeschool\Vakken\wt\WirelessSensorNetworksPracticum\Projects\zstack\Samples\DemoApp\CC2530DB\..\..\..\..\..\Components\stack\nwk\"
-//        -I "D:\Jop van
-//        Buuren\Documents\Hogeschool\Vakken\wt\WirelessSensorNetworksPracticum\Projects\zstack\Samples\DemoApp\CC2530DB\..\..\..\..\..\Components\stack\sapi\"
-//        -I "D:\Jop van
-//        Buuren\Documents\Hogeschool\Vakken\wt\WirelessSensorNetworksPracticum\Projects\zstack\Samples\DemoApp\CC2530DB\..\..\..\..\..\Components\stack\sec\"
-//        -I "D:\Jop van
-//        Buuren\Documents\Hogeschool\Vakken\wt\WirelessSensorNetworksPracticum\Projects\zstack\Samples\DemoApp\CC2530DB\..\..\..\..\..\Components\stack\sys\"
-//        -I "D:\Jop van
-//        Buuren\Documents\Hogeschool\Vakken\wt\WirelessSensorNetworksPracticum\Projects\zstack\Samples\DemoApp\CC2530DB\..\..\..\..\..\Components\stack\zdo\"
-//        -I "D:\Jop van
-//        Buuren\Documents\Hogeschool\Vakken\wt\WirelessSensorNetworksPracticum\Projects\zstack\Samples\DemoApp\CC2530DB\..\..\..\..\..\Components\zmac\"
-//        -I "D:\Jop van
-//        Buuren\Documents\Hogeschool\Vakken\wt\WirelessSensorNetworksPracticum\Projects\zstack\Samples\DemoApp\CC2530DB\..\..\..\..\..\Components\zmac\f8w\"
+//        --place_constants=data_rom --nr_virtual_regs 16 -I
+//        D:\School\Jaar_3\WTWS\Projects\WirelessSensorNetworksPracticum\Projects\zstack\Samples\DemoApp\CC2530DB\
+//        -I
+//        D:\School\Jaar_3\WTWS\Projects\WirelessSensorNetworksPracticum\Projects\zstack\Samples\DemoApp\CC2530DB\..\Source\
+//        -I
+//        D:\School\Jaar_3\WTWS\Projects\WirelessSensorNetworksPracticum\Projects\zstack\Samples\DemoApp\CC2530DB\..\..\..\ZMain\TI2530DB\
+//        -I
+//        D:\School\Jaar_3\WTWS\Projects\WirelessSensorNetworksPracticum\Projects\zstack\Samples\DemoApp\CC2530DB\..\..\..\..\..\Components\hal\include\
+//        -I
+//        D:\School\Jaar_3\WTWS\Projects\WirelessSensorNetworksPracticum\Projects\zstack\Samples\DemoApp\CC2530DB\..\..\..\..\..\Components\hal\target\CC2530EB\
+//        -I
+//        D:\School\Jaar_3\WTWS\Projects\WirelessSensorNetworksPracticum\Projects\zstack\Samples\DemoApp\CC2530DB\..\..\..\..\..\Components\mac\include\
+//        -I
+//        D:\School\Jaar_3\WTWS\Projects\WirelessSensorNetworksPracticum\Projects\zstack\Samples\DemoApp\CC2530DB\..\..\..\..\..\Components\mac\high_level\
+//        -I
+//        D:\School\Jaar_3\WTWS\Projects\WirelessSensorNetworksPracticum\Projects\zstack\Samples\DemoApp\CC2530DB\..\..\..\..\..\Components\mac\low_level\srf04\
+//        -I
+//        D:\School\Jaar_3\WTWS\Projects\WirelessSensorNetworksPracticum\Projects\zstack\Samples\DemoApp\CC2530DB\..\..\..\..\..\Components\mac\low_level\srf04\single_chip\
+//        -I
+//        D:\School\Jaar_3\WTWS\Projects\WirelessSensorNetworksPracticum\Projects\zstack\Samples\DemoApp\CC2530DB\..\..\..\..\..\Components\mt\
+//        -I
+//        D:\School\Jaar_3\WTWS\Projects\WirelessSensorNetworksPracticum\Projects\zstack\Samples\DemoApp\CC2530DB\..\..\..\..\..\Components\osal\include\
+//        -I
+//        D:\School\Jaar_3\WTWS\Projects\WirelessSensorNetworksPracticum\Projects\zstack\Samples\DemoApp\CC2530DB\..\..\..\..\..\Components\services\saddr\
+//        -I
+//        D:\School\Jaar_3\WTWS\Projects\WirelessSensorNetworksPracticum\Projects\zstack\Samples\DemoApp\CC2530DB\..\..\..\..\..\Components\services\sdata\
+//        -I
+//        D:\School\Jaar_3\WTWS\Projects\WirelessSensorNetworksPracticum\Projects\zstack\Samples\DemoApp\CC2530DB\..\..\..\..\..\Components\stack\af\
+//        -I
+//        D:\School\Jaar_3\WTWS\Projects\WirelessSensorNetworksPracticum\Projects\zstack\Samples\DemoApp\CC2530DB\..\..\..\..\..\Components\stack\nwk\
+//        -I
+//        D:\School\Jaar_3\WTWS\Projects\WirelessSensorNetworksPracticum\Projects\zstack\Samples\DemoApp\CC2530DB\..\..\..\..\..\Components\stack\sapi\
+//        -I
+//        D:\School\Jaar_3\WTWS\Projects\WirelessSensorNetworksPracticum\Projects\zstack\Samples\DemoApp\CC2530DB\..\..\..\..\..\Components\stack\sec\
+//        -I
+//        D:\School\Jaar_3\WTWS\Projects\WirelessSensorNetworksPracticum\Projects\zstack\Samples\DemoApp\CC2530DB\..\..\..\..\..\Components\stack\sys\
+//        -I
+//        D:\School\Jaar_3\WTWS\Projects\WirelessSensorNetworksPracticum\Projects\zstack\Samples\DemoApp\CC2530DB\..\..\..\..\..\Components\stack\zdo\
+//        -I
+//        D:\School\Jaar_3\WTWS\Projects\WirelessSensorNetworksPracticum\Projects\zstack\Samples\DemoApp\CC2530DB\..\..\..\..\..\Components\zmac\
+//        -I
+//        D:\School\Jaar_3\WTWS\Projects\WirelessSensorNetworksPracticum\Projects\zstack\Samples\DemoApp\CC2530DB\..\..\..\..\..\Components\zmac\f8w\
 //        -Ol --require_prototypes
 //    List file          =  
-//        D:\Jop van
-//        Buuren\Documents\Hogeschool\Vakken\wt\WirelessSensorNetworksPracticum\Projects\zstack\Samples\DemoApp\CC2530DB\SensorEB\List\ZDSecMgr.s51
+//        D:\School\Jaar_3\WTWS\Projects\WirelessSensorNetworksPracticum\Projects\zstack\Samples\DemoApp\CC2530DB\CoordinatorEB\List\ZDSecMgr.s51
 //
 ///////////////////////////////////////////////////////////////////////////////
 
@@ -115,13 +114,14 @@
         RSEG XSTACK:XDATA:NOROOT(0)
 
         EXTERN ?V0
-        EXTERN ?V1
         EXTERN ?V2
         EXTERN ?V3
         EXTERN ?V4
         EXTERN ?V5
+        EXTERN ?V1
         EXTERN ?V6
         EXTERN ?V7
+        EXTERN ?V8
         EXTERN ?ALLOC_XSTACK8
         EXTERN ?BANKED_ENTER_XDATA
         EXTERN ?BANKED_LEAVE_XDATA
@@ -137,6 +137,7 @@
         EXTERN ?PUSH_XSTACK8_X_TWO
         EXTERN ?PUSH_XSTACK_I_THREE
         EXTERN ?PUSH_XSTACK_I_TWO
+        EXTERN ?UL_DIV_MOD
         EXTERN ?UL_GT_X
         EXTERN ?XLOAD_R0123
         EXTERN ?XSP
@@ -176,6 +177,8 @@
         FUNCTION `??ZDSecMgrAppKeyGet::?relay`,0203H
         PUBLIC `??ZDSecMgrAppKeyReq::?relay`
         FUNCTION `??ZDSecMgrAppKeyReq::?relay`,0203H
+        PUBLIC `??ZDSecMgrAppKeyTypeSet::?relay`
+        FUNCTION `??ZDSecMgrAppKeyTypeSet::?relay`,0203H
         PUBLIC `??ZDSecMgrApsLinkKeyInit::?relay`
         FUNCTION `??ZDSecMgrApsLinkKeyInit::?relay`,0203H
         PUBLIC `??ZDSecMgrAssocDeviceAuth::?relay`
@@ -186,6 +189,8 @@
         FUNCTION `??ZDSecMgrAuthenticationCheck::?relay`,0203H
         PUBLIC `??ZDSecMgrAuthenticationSet::?relay`
         FUNCTION `??ZDSecMgrAuthenticationSet::?relay`,0203H
+        PUBLIC `??ZDSecMgrClearNVKeyValues::?relay`
+        FUNCTION `??ZDSecMgrClearNVKeyValues::?relay`,0203H
         PUBLIC `??ZDSecMgrConfig::?relay`
         FUNCTION `??ZDSecMgrConfig::?relay`,0203H
         PUBLIC `??ZDSecMgrDeviceJoin::?relay`
@@ -246,6 +251,7 @@
         FUNCTION `??ZDSecMgrRequestAppKey::?relay`,0203H
         PUBLIC `??ZDSecMgrRequestKeyInd::?relay`
         FUNCTION `??ZDSecMgrRequestKeyInd::?relay`,0203H
+        FUNCTION `??ZDSecMgrRestoreFromNV::?relay`,0203H
         PUBLIC `??ZDSecMgrSaveApsLinkKey::?relay`
         FUNCTION `??ZDSecMgrSaveApsLinkKey::?relay`,0203H
         PUBLIC `??ZDSecMgrSaveTCLinkKey::?relay`
@@ -258,6 +264,8 @@
         FUNCTION `??ZDSecMgrSetupPartner::?relay`,0203H
         PUBLIC `??ZDSecMgrSwitchKeyInd::?relay`
         FUNCTION `??ZDSecMgrSwitchKeyInd::?relay`,0203H
+        PUBLIC `??ZDSecMgrSwitchNwkKey::?relay`
+        FUNCTION `??ZDSecMgrSwitchNwkKey::?relay`,0203H
         PUBLIC `??ZDSecMgrTCDataLoad::?relay`
         FUNCTION `??ZDSecMgrTCDataLoad::?relay`,0203H
         PUBLIC `??ZDSecMgrTCExtAddrCheck::?relay`
@@ -266,11 +274,15 @@
         FUNCTION `??ZDSecMgrTransportKeyInd::?relay`,0203H
         PUBLIC `??ZDSecMgrUpdateDeviceInd::?relay`
         FUNCTION `??ZDSecMgrUpdateDeviceInd::?relay`,0203H
+        FUNCTION `??ZDSecMgrUpdateNV::?relay`,0203H
+        PUBLIC `??ZDSecMgrUpdateNwkKey::?relay`
+        FUNCTION `??ZDSecMgrUpdateNwkKey::?relay`,0203H
         PUBLIC `??ZDSecMgrUpdateTCAddress::?relay`
         FUNCTION `??ZDSecMgrUpdateTCAddress::?relay`,0203H
+        FUNCTION `??ZDSecMgrWriteNV::?relay`,0203H
         PUBLIC APSME_IsDefaultTCLK
         FUNCTION APSME_IsDefaultTCLK,021203H
-        ARGFRAME XSTACK, 61, STACK
+        ARGFRAME XSTACK, 62, STACK
         ARGFRAME IOVERLAY, 0, STATIC
         ARGFRAME DOVERLAY, 0, STATIC
         LOCFRAME ISTACK, 2, STACK
@@ -299,11 +311,11 @@
         ARGFRAME XSTACK, 9, STACK
         ARGFRAME IOVERLAY, 0, STATIC
         ARGFRAME DOVERLAY, 0, STATIC
-        LOCFRAME XSTACK, 47, STACK
+        LOCFRAME XSTACK, 48, STACK
         PUBLIC APSME_TCLinkKeyLoad
         FUNCTION APSME_TCLinkKeyLoad,0a1203H
         ARGFRAME XSTACK, 0, STACK
-        LOCFRAME XSTACK, 65, STACK
+        LOCFRAME XSTACK, 66, STACK
         PUBLIC APSME_TCLinkKeySync
         FUNCTION APSME_TCLinkKeySync,0a1203H
         ARGFRAME XSTACK, 0, STACK
@@ -345,12 +357,16 @@
         ARGFRAME DOVERLAY, 0, STATIC
         LOCFRAME XSTACK, 57, STACK
         PUBLIC ZDSecMgrAppKeyType
+        PUBLIC ZDSecMgrAppKeyTypeSet
+        FUNCTION ZDSecMgrAppKeyTypeSet,0203H
+        ARGFRAME XSTACK, 0, STACK
+        LOCFRAME ISTACK, 2, STACK
         PUBLIC ZDSecMgrApsLinkKeyInit
         FUNCTION ZDSecMgrApsLinkKeyInit,0a1203H
         ARGFRAME XSTACK, 9, STACK
         ARGFRAME IOVERLAY, 0, STATIC
         ARGFRAME DOVERLAY, 0, STATIC
-        LOCFRAME XSTACK, 38, STACK
+        LOCFRAME XSTACK, 36, STACK
         PUBLIC ZDSecMgrAssocDeviceAuth
         FUNCTION ZDSecMgrAssocDeviceAuth,0203H
         ARGFRAME XSTACK, 33, STACK
@@ -371,6 +387,10 @@
         ARGFRAME XSTACK, 0, STACK
         LOCFRAME ISTACK, 1, STACK
         LOCFRAME XSTACK, 11, STACK
+        PUBLIC ZDSecMgrClearNVKeyValues
+        FUNCTION ZDSecMgrClearNVKeyValues,0a1203H
+        ARGFRAME XSTACK, 0, STACK
+        LOCFRAME XSTACK, 52, STACK
         PUBLIC ZDSecMgrConfig
         FUNCTION ZDSecMgrConfig,021203H
         ARGFRAME XSTACK, 0, STACK
@@ -385,11 +405,13 @@
         LOCFRAME XSTACK, 32, STACK
         PUBLIC ZDSecMgrDeviceJoinDirect
         FUNCTION ZDSecMgrDeviceJoinDirect,0a1203H
-        ARGFRAME XSTACK, 0, STACK
+        ARGFRAME XSTACK, 9, STACK
+        ARGFRAME IOVERLAY, 0, STATIC
+        ARGFRAME DOVERLAY, 0, STATIC
         LOCFRAME XSTACK, 9, STACK
         PUBLIC ZDSecMgrDeviceJoinFwd
         FUNCTION ZDSecMgrDeviceJoinFwd,0a1203H
-        ARGFRAME XSTACK, 0, STACK
+        ARGFRAME XSTACK, 9, STACK
         ARGFRAME IOVERLAY, 0, STATIC
         ARGFRAME DOVERLAY, 0, STATIC
         LOCFRAME XSTACK, 18, STACK
@@ -398,7 +420,7 @@
         ARGFRAME XSTACK, 33, STACK
         ARGFRAME IOVERLAY, 0, STATIC
         ARGFRAME DOVERLAY, 0, STATIC
-        LOCFRAME ISTACK, 2, STACK
+        LOCFRAME XSTACK, 9, STACK
         PUBLIC ZDSecMgrDeviceRemove
         FUNCTION ZDSecMgrDeviceRemove,0a1203H
         ARGFRAME XSTACK, 29, STACK
@@ -427,11 +449,11 @@
         ARGFRAME XSTACK, 11, STACK
         ARGFRAME IOVERLAY, 0, STATIC
         ARGFRAME DOVERLAY, 0, STATIC
-        LOCFRAME XSTACK, 16, STACK
+        LOCFRAME XSTACK, 20, STACK
         PUBLIC ZDSecMgrEntryInit
         FUNCTION ZDSecMgrEntryInit,021203H
         ARGFRAME XSTACK, 0, STACK
-        LOCFRAME ISTACK, 2, STACK
+        LOCFRAME XSTACK, 9, STACK
         PUBLIC ZDSecMgrEntryLookup
         FUNCTION ZDSecMgrEntryLookup,0a1203H
         ARGFRAME XSTACK, 0, STACK
@@ -444,7 +466,9 @@
         LOCFRAME XSTACK, 9, STACK
         PUBLIC ZDSecMgrEntryLookupAMIGetIndex
         FUNCTION ZDSecMgrEntryLookupAMIGetIndex,080203H
-        ARGFRAME XSTACK, 0, STACK
+        ARGFRAME XSTACK, 16, STACK
+        ARGFRAME IOVERLAY, 0, STATIC
+        ARGFRAME DOVERLAY, 0, STATIC
         LOCFRAME XSTACK, 9, STACK
         PUBLIC ZDSecMgrEntryLookupExt
         FUNCTION ZDSecMgrEntryLookupExt,0a1203H
@@ -526,6 +550,11 @@
         FUNCTION ZDSecMgrRequestKeyInd,021203H
         ARGFRAME XSTACK, 0, STACK
         LOCFRAME ISTACK, 2, STACK
+        FUNCTION ZDSecMgrRestoreFromNV,0a1203H
+        ARGFRAME XSTACK, 9, STACK
+        ARGFRAME IOVERLAY, 0, STATIC
+        ARGFRAME DOVERLAY, 0, STATIC
+        LOCFRAME XSTACK, 22, STACK
         PUBLIC ZDSecMgrSaveApsLinkKey
         FUNCTION ZDSecMgrSaveApsLinkKey,0a1203H
         ARGFRAME XSTACK, 0, STACK
@@ -553,6 +582,11 @@
         FUNCTION ZDSecMgrSwitchKeyInd,021203H
         ARGFRAME XSTACK, 0, STACK
         LOCFRAME ISTACK, 2, STACK
+        PUBLIC ZDSecMgrSwitchNwkKey
+        FUNCTION ZDSecMgrSwitchNwkKey,021203H
+        ARGFRAME XSTACK, 0, STACK
+        LOCFRAME ISTACK, 1, STACK
+        LOCFRAME XSTACK, 13, STACK
         PUBLIC ZDSecMgrTCAuthenticated
         PUBLIC ZDSecMgrTCDataLoad
         FUNCTION ZDSecMgrTCDataLoad,0a1203H
@@ -574,13 +608,31 @@
         ARGFRAME XSTACK, 0, STACK
         LOCFRAME ISTACK, 2, STACK
         LOCFRAME XSTACK, 8, STACK
+        FUNCTION ZDSecMgrUpdateNV,0a1203H
+        ARGFRAME XSTACK, 16, STACK
+        ARGFRAME IOVERLAY, 0, STATIC
+        ARGFRAME DOVERLAY, 0, STATIC
+        LOCFRAME XSTACK, 16, STACK
+        PUBLIC ZDSecMgrUpdateNwkKey
+        FUNCTION ZDSecMgrUpdateNwkKey,0a1203H
+        ARGFRAME XSTACK, 0, STACK
+        LOCFRAME ISTACK, 1, STACK
+        LOCFRAME XSTACK, 23, STACK
         PUBLIC ZDSecMgrUpdateTCAddress
         FUNCTION ZDSecMgrUpdateTCAddress,0a1203H
         ARGFRAME XSTACK, 25, STACK
         ARGFRAME IOVERLAY, 0, STATIC
         ARGFRAME DOVERLAY, 0, STATIC
-        LOCFRAME XSTACK, 18, STACK
+        LOCFRAME XSTACK, 22, STACK
+        FUNCTION ZDSecMgrWriteNV,0a1203H
+        ARGFRAME XSTACK, 14, STACK
+        ARGFRAME IOVERLAY, 0, STATIC
+        ARGFRAME DOVERLAY, 0, STATIC
+        LOCFRAME XSTACK, 16, STACK
         PUBWEAK __Constant_1
+        PUBWEAK __Constant_3e9
+        PUBWEAK __Constant_a
+        PUBWEAK __Constant_b
         
           CFI Names cfiNames0
           CFI StackFrame CFA_SP SP IDATA
@@ -686,6 +738,8 @@ APSME_SecurityNM    SYMBOL "APSME_SecurityNM"
 `??APSME_SecurityNM::?relay` SYMBOL "?relay", APSME_SecurityNM
 APSME_SetRequest    SYMBOL "APSME_SetRequest"
 `??APSME_SetRequest::?relay` SYMBOL "?relay", APSME_SetRequest
+APSME_SwitchKeyReq  SYMBOL "APSME_SwitchKeyReq"
+`??APSME_SwitchKeyReq::?relay` SYMBOL "?relay", APSME_SwitchKeyReq
 APSME_TransportKeyReq SYMBOL "APSME_TransportKeyReq"
 `??APSME_TransportKeyReq::?relay` SYMBOL "?relay", APSME_TransportKeyReq
 APSME_UpdateDeviceReq SYMBOL "APSME_UpdateDeviceReq"
@@ -782,6 +836,8 @@ ZDSecMgrAppKeyGet   SYMBOL "ZDSecMgrAppKeyGet"
 `??ZDSecMgrAppKeyGet::?relay` SYMBOL "?relay", ZDSecMgrAppKeyGet
 ZDSecMgrAppKeyReq   SYMBOL "ZDSecMgrAppKeyReq"
 `??ZDSecMgrAppKeyReq::?relay` SYMBOL "?relay", ZDSecMgrAppKeyReq
+ZDSecMgrAppKeyTypeSet SYMBOL "ZDSecMgrAppKeyTypeSet"
+`??ZDSecMgrAppKeyTypeSet::?relay` SYMBOL "?relay", ZDSecMgrAppKeyTypeSet
 ZDSecMgrApsLinkKeyInit SYMBOL "ZDSecMgrApsLinkKeyInit"
 `??ZDSecMgrApsLinkKeyInit::?relay` SYMBOL "?relay", ZDSecMgrApsLinkKeyInit
 ZDSecMgrAssocDeviceAuth SYMBOL "ZDSecMgrAssocDeviceAuth"
@@ -792,6 +848,8 @@ ZDSecMgrAuthenticationCheck SYMBOL "ZDSecMgrAuthenticationCheck"
 `??ZDSecMgrAuthenticationCheck::?relay` SYMBOL "?relay", ZDSecMgrAuthenticationCheck
 ZDSecMgrAuthenticationSet SYMBOL "ZDSecMgrAuthenticationSet"
 `??ZDSecMgrAuthenticationSet::?relay` SYMBOL "?relay", ZDSecMgrAuthenticationSet
+ZDSecMgrClearNVKeyValues SYMBOL "ZDSecMgrClearNVKeyValues"
+`??ZDSecMgrClearNVKeyValues::?relay` SYMBOL "?relay", ZDSecMgrClearNVKeyValues
 ZDSecMgrConfig      SYMBOL "ZDSecMgrConfig"
 `??ZDSecMgrConfig::?relay` SYMBOL "?relay", ZDSecMgrConfig
 ZDSecMgrDeviceJoin  SYMBOL "ZDSecMgrDeviceJoin"
@@ -864,6 +922,8 @@ ZDSecMgrSetupPartner SYMBOL "ZDSecMgrSetupPartner"
 `??ZDSecMgrSetupPartner::?relay` SYMBOL "?relay", ZDSecMgrSetupPartner
 ZDSecMgrSwitchKeyInd SYMBOL "ZDSecMgrSwitchKeyInd"
 `??ZDSecMgrSwitchKeyInd::?relay` SYMBOL "?relay", ZDSecMgrSwitchKeyInd
+ZDSecMgrSwitchNwkKey SYMBOL "ZDSecMgrSwitchNwkKey"
+`??ZDSecMgrSwitchNwkKey::?relay` SYMBOL "?relay", ZDSecMgrSwitchNwkKey
 ZDSecMgrTCDataLoad  SYMBOL "ZDSecMgrTCDataLoad"
 `??ZDSecMgrTCDataLoad::?relay` SYMBOL "?relay", ZDSecMgrTCDataLoad
 ZDSecMgrTCExtAddrCheck SYMBOL "ZDSecMgrTCExtAddrCheck"
@@ -872,6 +932,8 @@ ZDSecMgrTransportKeyInd SYMBOL "ZDSecMgrTransportKeyInd"
 `??ZDSecMgrTransportKeyInd::?relay` SYMBOL "?relay", ZDSecMgrTransportKeyInd
 ZDSecMgrUpdateDeviceInd SYMBOL "ZDSecMgrUpdateDeviceInd"
 `??ZDSecMgrUpdateDeviceInd::?relay` SYMBOL "?relay", ZDSecMgrUpdateDeviceInd
+ZDSecMgrUpdateNwkKey SYMBOL "ZDSecMgrUpdateNwkKey"
+`??ZDSecMgrUpdateNwkKey::?relay` SYMBOL "?relay", ZDSecMgrUpdateNwkKey
 ZDSecMgrUpdateTCAddress SYMBOL "ZDSecMgrUpdateTCAddress"
 `??ZDSecMgrUpdateTCAddress::?relay` SYMBOL "?relay", ZDSecMgrUpdateTCAddress
 
@@ -891,6 +953,8 @@ ZDSecMgrUpdateTCAddress SYMBOL "ZDSecMgrUpdateTCAddress"
         FUNCTION `??APSME_SecurityNM::?relay`,00H
         EXTERN `??APSME_SetRequest::?relay`
         FUNCTION `??APSME_SetRequest::?relay`,00H
+        EXTERN `??APSME_SwitchKeyReq::?relay`
+        FUNCTION `??APSME_SwitchKeyReq::?relay`,00H
         EXTERN `??APSME_TransportKeyReq::?relay`
         FUNCTION `??APSME_TransportKeyReq::?relay`,00H
         EXTERN `??APSME_UpdateDeviceReq::?relay`
@@ -970,7 +1034,7 @@ ZDSecMgrUpdateTCAddress SYMBOL "ZDSecMgrUpdateTCAddress"
         FUNCTION APSME_IsDistributedSecurity,0202H
         ARGFRAME ISTACK, 0, STACK
         ARGFRAME PSTACK, 0, STACK
-        ARGFRAME XSTACK, 61, STACK
+        ARGFRAME XSTACK, 62, STACK
         ARGFRAME IOVERLAY, 0, STATIC
         ARGFRAME DOVERLAY, 0, STATIC
         EXTERN APSME_LookupExtAddr
@@ -1015,6 +1079,13 @@ ZDSecMgrUpdateTCAddress SYMBOL "ZDSecMgrUpdateTCAddress"
         ARGFRAME XSTACK, 18, STACK
         ARGFRAME IOVERLAY, 0, STATIC
         ARGFRAME DOVERLAY, 0, STATIC
+        EXTERN APSME_SwitchKeyReq
+        FUNCTION APSME_SwitchKeyReq,0202H
+        ARGFRAME ISTACK, 0, STACK
+        ARGFRAME PSTACK, 0, STACK
+        ARGFRAME XSTACK, 13, STACK
+        ARGFRAME IOVERLAY, 0, STATIC
+        ARGFRAME DOVERLAY, 0, STATIC
         EXTERN APSME_TransportKeyReq
         FUNCTION APSME_TransportKeyReq,0202H
         ARGFRAME ISTACK, 0, STACK
@@ -1047,14 +1118,14 @@ ZDSecMgrUpdateTCAddress SYMBOL "ZDSecMgrUpdateTCAddress"
         FUNCTION AddrMgrEntryLookupNwk,0202H
         ARGFRAME ISTACK, 0, STACK
         ARGFRAME PSTACK, 0, STACK
-        ARGFRAME XSTACK, 61, STACK
+        ARGFRAME XSTACK, 62, STACK
         ARGFRAME IOVERLAY, 0, STATIC
         ARGFRAME DOVERLAY, 0, STATIC
         EXTERN AddrMgrEntryRelease
         FUNCTION AddrMgrEntryRelease,0202H
         ARGFRAME ISTACK, 0, STACK
         ARGFRAME PSTACK, 0, STACK
-        ARGFRAME XSTACK, 61, STACK
+        ARGFRAME XSTACK, 62, STACK
         ARGFRAME IOVERLAY, 0, STATIC
         ARGFRAME DOVERLAY, 0, STATIC
         EXTERN AddrMgrEntryUpdate
@@ -1068,7 +1139,7 @@ ZDSecMgrUpdateTCAddress SYMBOL "ZDSecMgrUpdateTCAddress"
         FUNCTION AddrMgrExtAddrEqual,0202H
         ARGFRAME ISTACK, 0, STACK
         ARGFRAME PSTACK, 0, STACK
-        ARGFRAME XSTACK, 61, STACK
+        ARGFRAME XSTACK, 62, STACK
         ARGFRAME IOVERLAY, 0, STATIC
         ARGFRAME DOVERLAY, 0, STATIC
         EXTERN AddrMgrExtAddrSet
@@ -1082,7 +1153,7 @@ ZDSecMgrUpdateTCAddress SYMBOL "ZDSecMgrUpdateTCAddress"
         FUNCTION AddrMgrExtAddrValid,0202H
         ARGFRAME ISTACK, 0, STACK
         ARGFRAME PSTACK, 0, STACK
-        ARGFRAME XSTACK, 61, STACK
+        ARGFRAME XSTACK, 62, STACK
         ARGFRAME IOVERLAY, 0, STATIC
         ARGFRAME DOVERLAY, 0, STATIC
         EXTERN AssocGetWithExt
@@ -1153,7 +1224,7 @@ ZDSecMgrUpdateTCAddress SYMBOL "ZDSecMgrUpdateTCAddress"
         FUNCTION ZDApp_NVUpdate,0202H
         ARGFRAME ISTACK, 2, STACK
         ARGFRAME PSTACK, 0, STACK
-        ARGFRAME XSTACK, 0, STACK
+        ARGFRAME XSTACK, 23, STACK
         ARGFRAME IOVERLAY, 0, STATIC
         ARGFRAME DOVERLAY, 0, STATIC
         EXTERN ZDP_IEEEAddrReq
@@ -1177,12 +1248,12 @@ ZDSecMgrUpdateTCAddress SYMBOL "ZDSecMgrUpdateTCAddress"
         FUNCTION osal_isbufset,0202H
         ARGFRAME ISTACK, 2, STACK
         ARGFRAME PSTACK, 0, STACK
-        ARGFRAME XSTACK, 0, STACK
+        ARGFRAME XSTACK, 25, STACK
         ARGFRAME IOVERLAY, 0, STATIC
         ARGFRAME DOVERLAY, 0, STATIC
         EXTERN osal_mem_alloc
         FUNCTION osal_mem_alloc,0202H
-        ARGFRAME ISTACK, 2, STACK
+        ARGFRAME ISTACK, 0, STACK
         ARGFRAME PSTACK, 0, STACK
         ARGFRAME XSTACK, 33, STACK
         ARGFRAME IOVERLAY, 0, STATIC
@@ -1205,14 +1276,14 @@ ZDSecMgrUpdateTCAddress SYMBOL "ZDSecMgrUpdateTCAddress"
         FUNCTION osal_memcpy,0202H
         ARGFRAME ISTACK, 0, STACK
         ARGFRAME PSTACK, 0, STACK
-        ARGFRAME XSTACK, 46, STACK
+        ARGFRAME XSTACK, 47, STACK
         ARGFRAME IOVERLAY, 0, STATIC
         ARGFRAME DOVERLAY, 0, STATIC
         EXTERN osal_memset
         FUNCTION osal_memset,0202H
         ARGFRAME ISTACK, 0, STACK
         ARGFRAME PSTACK, 0, STACK
-        ARGFRAME XSTACK, 61, STACK
+        ARGFRAME XSTACK, 62, STACK
         ARGFRAME IOVERLAY, 0, STATIC
         ARGFRAME DOVERLAY, 0, STATIC
         EXTERN osal_nv_item_init
@@ -1226,7 +1297,7 @@ ZDSecMgrUpdateTCAddress SYMBOL "ZDSecMgrUpdateTCAddress"
         FUNCTION osal_nv_read,0202H
         ARGFRAME ISTACK, 0, STACK
         ARGFRAME PSTACK, 0, STACK
-        ARGFRAME XSTACK, 65, STACK
+        ARGFRAME XSTACK, 66, STACK
         ARGFRAME IOVERLAY, 0, STATIC
         ARGFRAME DOVERLAY, 0, STATIC
         EXTERN osal_nv_write
@@ -1240,7 +1311,7 @@ ZDSecMgrUpdateTCAddress SYMBOL "ZDSecMgrUpdateTCAddress"
         FUNCTION osal_set_event,0202H
         ARGFRAME ISTACK, 2, STACK
         ARGFRAME PSTACK, 0, STACK
-        ARGFRAME XSTACK, 0, STACK
+        ARGFRAME XSTACK, 62, STACK
         ARGFRAME IOVERLAY, 0, STATIC
         ARGFRAME DOVERLAY, 0, STATIC
         EXTERN sAddrExtCmp
@@ -1260,11 +1331,12 @@ ZDSecMgrUpdateTCAddress SYMBOL "ZDSecMgrUpdateTCAddress"
         EXTERN zdoCBFunc
         EXTERN zgApsLinkKeyType
         EXTERN zgApsTrustCenterAddr
+        EXTERN zgDeviceLogicalType
         EXTERN zgPreConfigKeys
         EXTERN zgSecurePermitJoin
         EXTERN zgUseDefaultTCLK
 
-// D:\Jop van Buuren\Documents\Hogeschool\Vakken\wt\WirelessSensorNetworksPracticum\Components\stack\zdo\ZDSecMgr.c
+// D:\School\Jaar_3\WTWS\Projects\WirelessSensorNetworksPracticum\Components\stack\zdo\ZDSecMgr.c
 //    1 /******************************************************************************
 //    2   Filename:       ZDSecMgr.c
 //    3   Revised:        $Date: 2014-06-05 11:25:00 -0700 (Thu, 05 Jun 2014) $
@@ -2208,24 +2280,44 @@ ZDSecMgrEntryInit:
         CODE
 //  405 {
         FUNCALL ZDSecMgrEntryInit, osal_mem_alloc
-        LOCFRAME ISTACK, 2, STACK
+        LOCFRAME ISTACK, 0, STACK
         LOCFRAME PSTACK, 0, STACK
-        LOCFRAME XSTACK, 0, STACK
+        LOCFRAME XSTACK, 9, STACK
         LOCFRAME IOVERLAY, 0, STATIC
         LOCFRAME DOVERLAY, 0, STATIC
-        ARGFRAME ISTACK, 2, STACK
+        ARGFRAME ISTACK, 0, STACK
         ARGFRAME PSTACK, 0, STACK
-        ARGFRAME XSTACK, 0, STACK
+        ARGFRAME XSTACK, 9, STACK
         ARGFRAME IOVERLAY, 0, STATIC
         ARGFRAME DOVERLAY, 0, STATIC
-        PUSH    DPL
-          CFI DPL0 Frame(CFA_SP, 4)
-          CFI CFA_SP SP+-4
-        PUSH    DPH
-          CFI DPH0 Frame(CFA_SP, 5)
-          CFI CFA_SP SP+-5
-        ; Saved register size: 2
+        FUNCALL ZDSecMgrEntryInit, ZDSecMgrRestoreFromNV
+        LOCFRAME ISTACK, 0, STACK
+        LOCFRAME PSTACK, 0, STACK
+        LOCFRAME XSTACK, 9, STACK
+        LOCFRAME IOVERLAY, 0, STATIC
+        LOCFRAME DOVERLAY, 0, STATIC
+        ARGFRAME ISTACK, 0, STACK
+        ARGFRAME PSTACK, 0, STACK
+        ARGFRAME XSTACK, 9, STACK
+        ARGFRAME IOVERLAY, 0, STATIC
+        ARGFRAME DOVERLAY, 0, STATIC
+        MOV     A,#-0x9
+        LCALL   ?BANKED_ENTER_XDATA
+          CFI DPH0 load(1, XDATA, add(CFA_XSP16, literal(-1)))
+          CFI DPL0 load(1, XDATA, add(CFA_XSP16, literal(-2)))
+          CFI ?BRET_EXT load(1, XDATA, add(CFA_XSP16, literal(-3)))
+          CFI ?RET_HIGH load(1, XDATA, add(CFA_XSP16, literal(-4)))
+          CFI ?RET_LOW load(1, XDATA, add(CFA_XSP16, literal(-5)))
+          CFI R7 load(1, XDATA, add(CFA_XSP16, literal(-6)))
+          CFI V0 load(1, XDATA, add(CFA_XSP16, literal(-7)))
+          CFI VB load(1, XDATA, add(CFA_XSP16, literal(-8)))
+          CFI R6 load(1, XDATA, add(CFA_XSP16, literal(-9)))
+          CFI CFA_SP SP+0
+          CFI CFA_XSP16 add(XSP16, 9)
+        ; Saved register size: 9
         ; Auto size: 0
+        MOV     A,R1
+        MOV     R6,A
 //  406   if (ZDSecMgrEntries == NULL)
         MOV     DPTR,#ZDSecMgrEntries
         MOVX    A,@DPTR
@@ -2259,7 +2351,7 @@ ZDSecMgrEntryInit:
         MOV     R1,A
         MOV     A,R0
         ORL     A,R1
-        JZ      ??ZDSecMgrEntryInit_0
+        JZ      ??ZDSecMgrEntryInit_1
 //  411     {
 //  412       return;
 //  413     }
@@ -2267,10 +2359,10 @@ ZDSecMgrEntryInit:
 //  415     for (index = 0; index < ZDSECMGR_ENTRY_MAX; index++)
         MOV     R0,#0x0
         MOV     R1,#0x0
-        SJMP    ??ZDSecMgrEntryInit_1
+        SJMP    ??ZDSecMgrEntryInit_2
 //  416     {
 //  417       ZDSecMgrEntries[index].ami = INVALID_NODE_ADDR;
-??ZDSecMgrEntryInit_2:
+??ZDSecMgrEntryInit_3:
         MOV     A,R0
         MOV     R2,A
         MOV     A,R1
@@ -2342,34 +2434,45 @@ ZDSecMgrEntryInit:
 //  420     }
         INC     R0
         MOV     A,R0
-        JNZ     ??ZDSecMgrEntryInit_1
+        JNZ     ??ZDSecMgrEntryInit_2
         INC     R1
-??ZDSecMgrEntryInit_1:
+??ZDSecMgrEntryInit_2:
         CLR     C
         MOV     A,R0
         SUBB    A,#0x3
         MOV     A,R1
         SUBB    A,#0x0
-        JC      ??ZDSecMgrEntryInit_2
+        JC      ??ZDSecMgrEntryInit_3
 //  421   }
 //  422 
 //  423 #if defined NV_RESTORE
 //  424   if (state == ZDO_INITDEV_RESTORED_NETWORK_STATE)
+??ZDSecMgrEntryInit_0:
+        MOV     A,R6
+        JNZ     ??ZDSecMgrEntryInit_1
 //  425   {
 //  426     ZDSecMgrRestoreFromNV();
+        ; Setup parameters for call to function ZDSecMgrRestoreFromNV
+        LCALL   `??ZDSecMgrRestoreFromNV::?relay`; Banked call to: ZDSecMgrRestoreFromNV
 //  427   }
 //  428 #else
 //  429   (void)state;
 //  430 #endif
 //  431 }
-??ZDSecMgrEntryInit_0:
-        POP     DPH
-          CFI DPH0 SameValue
-          CFI CFA_SP SP+-4
-        POP     DPL
+??ZDSecMgrEntryInit_1:
+        MOV     R7,#0x1
+        LJMP    ?BANKED_LEAVE_XDATA
+          CFI R6 SameValue
+          CFI VB SameValue
+          CFI V0 SameValue
+          CFI R7 SameValue
+          CFI ?RET_LOW Frame(CFA_SP, 1)
+          CFI ?RET_HIGH Frame(CFA_SP, 2)
+          CFI ?BRET_EXT Frame(CFA_SP, 3)
           CFI DPL0 SameValue
+          CFI DPH0 SameValue
           CFI CFA_SP SP+-3
-        LJMP    ?BRET
+          CFI CFA_XSP16 XSP16+0
           CFI EndBlock cfiBlock4
 //  432 
 //  433 /******************************************************************************
@@ -3274,29 +3377,7 @@ ZDSecMgrEntryFree:
           CFI Function ZDSecMgrEntryFree
         CODE
 //  622 {
-        FUNCALL ZDSecMgrEntryFree, osal_mem_alloc
-        LOCFRAME ISTACK, 0, STACK
-        LOCFRAME PSTACK, 0, STACK
-        LOCFRAME XSTACK, 12, STACK
-        LOCFRAME IOVERLAY, 0, STATIC
-        LOCFRAME DOVERLAY, 0, STATIC
-        ARGFRAME ISTACK, 0, STACK
-        ARGFRAME PSTACK, 0, STACK
-        ARGFRAME XSTACK, 12, STACK
-        ARGFRAME IOVERLAY, 0, STATIC
-        ARGFRAME DOVERLAY, 0, STATIC
-        FUNCALL ZDSecMgrEntryFree, osal_memset
-        LOCFRAME ISTACK, 0, STACK
-        LOCFRAME PSTACK, 0, STACK
-        LOCFRAME XSTACK, 12, STACK
-        LOCFRAME IOVERLAY, 0, STATIC
-        LOCFRAME DOVERLAY, 0, STATIC
-        ARGFRAME ISTACK, 0, STACK
-        ARGFRAME PSTACK, 0, STACK
-        ARGFRAME XSTACK, 12, STACK
-        ARGFRAME IOVERLAY, 0, STATIC
-        ARGFRAME DOVERLAY, 0, STATIC
-        FUNCALL ZDSecMgrEntryFree, osal_nv_write
+        FUNCALL ZDSecMgrEntryFree, ZDSecMgrEntryLookupAMIGetIndex
         LOCFRAME ISTACK, 0, STACK
         LOCFRAME PSTACK, 0, STACK
         LOCFRAME XSTACK, 16, STACK
@@ -3307,22 +3388,67 @@ ZDSecMgrEntryFree:
         ARGFRAME XSTACK, 16, STACK
         ARGFRAME IOVERLAY, 0, STATIC
         ARGFRAME DOVERLAY, 0, STATIC
-        FUNCALL ZDSecMgrEntryFree, osal_mem_free
+        FUNCALL ZDSecMgrEntryFree, osal_mem_alloc
         LOCFRAME ISTACK, 0, STACK
         LOCFRAME PSTACK, 0, STACK
-        LOCFRAME XSTACK, 12, STACK
+        LOCFRAME XSTACK, 16, STACK
         LOCFRAME IOVERLAY, 0, STATIC
         LOCFRAME DOVERLAY, 0, STATIC
         ARGFRAME ISTACK, 0, STACK
         ARGFRAME PSTACK, 0, STACK
-        ARGFRAME XSTACK, 12, STACK
+        ARGFRAME XSTACK, 16, STACK
+        ARGFRAME IOVERLAY, 0, STATIC
+        ARGFRAME DOVERLAY, 0, STATIC
+        FUNCALL ZDSecMgrEntryFree, osal_memset
+        LOCFRAME ISTACK, 0, STACK
+        LOCFRAME PSTACK, 0, STACK
+        LOCFRAME XSTACK, 16, STACK
+        LOCFRAME IOVERLAY, 0, STATIC
+        LOCFRAME DOVERLAY, 0, STATIC
+        ARGFRAME ISTACK, 0, STACK
+        ARGFRAME PSTACK, 0, STACK
+        ARGFRAME XSTACK, 16, STACK
+        ARGFRAME IOVERLAY, 0, STATIC
+        ARGFRAME DOVERLAY, 0, STATIC
+        FUNCALL ZDSecMgrEntryFree, osal_nv_write
+        LOCFRAME ISTACK, 0, STACK
+        LOCFRAME PSTACK, 0, STACK
+        LOCFRAME XSTACK, 20, STACK
+        LOCFRAME IOVERLAY, 0, STATIC
+        LOCFRAME DOVERLAY, 0, STATIC
+        ARGFRAME ISTACK, 0, STACK
+        ARGFRAME PSTACK, 0, STACK
+        ARGFRAME XSTACK, 20, STACK
+        ARGFRAME IOVERLAY, 0, STATIC
+        ARGFRAME DOVERLAY, 0, STATIC
+        FUNCALL ZDSecMgrEntryFree, osal_mem_free
+        LOCFRAME ISTACK, 0, STACK
+        LOCFRAME PSTACK, 0, STACK
+        LOCFRAME XSTACK, 16, STACK
+        LOCFRAME IOVERLAY, 0, STATIC
+        LOCFRAME DOVERLAY, 0, STATIC
+        ARGFRAME ISTACK, 0, STACK
+        ARGFRAME PSTACK, 0, STACK
+        ARGFRAME XSTACK, 16, STACK
+        ARGFRAME IOVERLAY, 0, STATIC
+        ARGFRAME DOVERLAY, 0, STATIC
+        FUNCALL ZDSecMgrEntryFree, ZDSecMgrUpdateNV
+        LOCFRAME ISTACK, 0, STACK
+        LOCFRAME PSTACK, 0, STACK
+        LOCFRAME XSTACK, 16, STACK
+        LOCFRAME IOVERLAY, 0, STATIC
+        LOCFRAME DOVERLAY, 0, STATIC
+        ARGFRAME ISTACK, 0, STACK
+        ARGFRAME PSTACK, 0, STACK
+        ARGFRAME XSTACK, 16, STACK
         ARGFRAME IOVERLAY, 0, STATIC
         ARGFRAME DOVERLAY, 0, STATIC
         REQUIRE ?V0
-        REQUIRE ?V1
         REQUIRE ?V2
         REQUIRE ?V3
-        MOV     A,#-0xc
+        REQUIRE ?V4
+        REQUIRE ?V5
+        MOV     A,#-0xe
         LCALL   ?BANKED_ENTER_XDATA
           CFI DPH0 load(1, XDATA, add(CFA_XSP16, literal(-1)))
           CFI DPL0 load(1, XDATA, add(CFA_XSP16, literal(-2)))
@@ -3330,29 +3456,47 @@ ZDSecMgrEntryFree:
           CFI ?RET_HIGH load(1, XDATA, add(CFA_XSP16, literal(-4)))
           CFI ?RET_LOW load(1, XDATA, add(CFA_XSP16, literal(-5)))
           CFI R7 load(1, XDATA, add(CFA_XSP16, literal(-6)))
-          CFI V3 load(1, XDATA, add(CFA_XSP16, literal(-7)))
-          CFI V2 load(1, XDATA, add(CFA_XSP16, literal(-8)))
-          CFI V1 load(1, XDATA, add(CFA_XSP16, literal(-9)))
-          CFI V0 load(1, XDATA, add(CFA_XSP16, literal(-10)))
-          CFI VB load(1, XDATA, add(CFA_XSP16, literal(-11)))
-          CFI R6 load(1, XDATA, add(CFA_XSP16, literal(-12)))
+          CFI V5 load(1, XDATA, add(CFA_XSP16, literal(-7)))
+          CFI V4 load(1, XDATA, add(CFA_XSP16, literal(-8)))
+          CFI V3 load(1, XDATA, add(CFA_XSP16, literal(-9)))
+          CFI V2 load(1, XDATA, add(CFA_XSP16, literal(-10)))
+          CFI V1 load(1, XDATA, add(CFA_XSP16, literal(-11)))
+          CFI V0 load(1, XDATA, add(CFA_XSP16, literal(-12)))
+          CFI VB load(1, XDATA, add(CFA_XSP16, literal(-13)))
+          CFI R6 load(1, XDATA, add(CFA_XSP16, literal(-14)))
           CFI CFA_SP SP+0
-          CFI CFA_XSP16 add(XSP16, 12)
-        ; Saved register size: 12
-        ; Auto size: 0
+          CFI CFA_XSP16 add(XSP16, 14)
+        ; Saved register size: 14
+        ; Auto size: 2
+        MOV     A,#-0x2
+        LCALL   ?ALLOC_XSTACK8
+          CFI CFA_XSP16 add(XSP16, 16)
         MOV     A,R2
         MOV     R6,A
         MOV     A,R3
         MOV     R7,A
 //  623   APSME_LinkKeyData_t   *pApsLinkKey = NULL;
-        MOV     ?V0,#0x0
-        MOV     ?V1,#0x0
+        MOV     ?V2,#0x0
+        MOV     ?V3,#0x0
 //  624 
 //  625 #if defined ( NV_RESTORE )
 //  626   ZStatus_t status;
 //  627   uint16 entryIndex;
 //  628 
 //  629   status = ZDSecMgrEntryLookupAMIGetIndex( entry->ami, &entryIndex );
+        ; Setup parameters for call to function ZDSecMgrEntryLookupAMIGetIndex
+        MOV     R4,?XSP + 0
+        MOV     R5,?XSP + 1
+        MOV     DPL,R6
+        MOV     DPH,R7
+        MOVX    A,@DPTR
+        MOV     R2,A
+        INC     DPTR
+        MOVX    A,@DPTR
+        MOV     R3,A
+        LCALL   `??ZDSecMgrEntryLookupAMIGetIndex::?relay`; Banked call to: ZDSecMgrEntryLookupAMIGetIndex
+        MOV     A,R1
+        MOV     ?V0,A
 //  630 #endif
 //  631 
 //  632   pApsLinkKey = (APSME_LinkKeyData_t *)osal_mem_alloc(sizeof(APSME_LinkKeyData_t));
@@ -3360,14 +3504,14 @@ ZDSecMgrEntryFree:
         MOV     R2,#0x18
         MOV     R3,#0x0
         LCALL   `??osal_mem_alloc::?relay`; Banked call to: osal_mem_alloc
-        MOV     ?V2,R2
-        MOV     ?V3,R3
-        MOV     ?V0,?V2
-        MOV     ?V1,?V3
+        MOV     ?V4,R2
+        MOV     ?V5,R3
+        MOV     ?V2,?V4
+        MOV     ?V3,?V5
 //  633 
 //  634   if (pApsLinkKey != NULL)
-        MOV     A,?V0
-        ORL     A,?V1
+        MOV     A,?V2
+        ORL     A,?V3
         JZ      ??ZDSecMgrEntryFree_0
 //  635   {
 //  636     osal_memset( pApsLinkKey, 0x00, sizeof(APSME_LinkKeyData_t) );
@@ -3375,22 +3519,22 @@ ZDSecMgrEntryFree:
         MOV     R4,#0x18
         MOV     R5,#0x0
         MOV     R1,#0x0
-        MOV     R2,?V0
-        MOV     R3,?V1
+        MOV     R2,?V2
+        MOV     R3,?V3
         LCALL   `??osal_memset::?relay`; Banked call to: osal_memset
 //  637 
 //  638     // Clear the APS Link key in NV
 //  639     osal_nv_write( entry->keyNvId, 0,
 //  640                         sizeof(APSME_LinkKeyData_t), pApsLinkKey);
         ; Setup parameters for call to function osal_nv_write
-        MOV     R0,#?V0
-        LCALL   ?PUSH_XSTACK_I_TWO
-          CFI CFA_XSP16 add(XSP16, 14)
-        MOV     ?V2,#0x18
-        MOV     ?V3,#0x0
         MOV     R0,#?V2
         LCALL   ?PUSH_XSTACK_I_TWO
-          CFI CFA_XSP16 add(XSP16, 16)
+          CFI CFA_XSP16 add(XSP16, 18)
+        MOV     ?V4,#0x18
+        MOV     ?V5,#0x0
+        MOV     R0,#?V4
+        LCALL   ?PUSH_XSTACK_I_TWO
+          CFI CFA_XSP16 add(XSP16, 20)
         MOV     R4,#0x0
         MOV     R5,#0x0
         MOV     DPL,R6
@@ -3405,7 +3549,7 @@ ZDSecMgrEntryFree:
         LCALL   `??osal_nv_write::?relay`; Banked call to: osal_nv_write
         MOV     A,#0x4
         LCALL   ?DEALLOC_XSTACK8
-          CFI CFA_XSP16 add(XSP16, 12)
+          CFI CFA_XSP16 add(XSP16, 16)
         MOV     A,R1
 //  641 
 //  642     // set entry to invalid Key
@@ -3422,8 +3566,8 @@ ZDSecMgrEntryFree:
 //  644 
 //  645     osal_mem_free(pApsLinkKey);
         ; Setup parameters for call to function osal_mem_free
-        MOV     R2,?V0
-        MOV     R3,?V1
+        MOV     R2,?V2
+        MOV     R3,?V3
         LCALL   `??osal_mem_free::?relay`; Banked call to: osal_mem_free
 //  646   }
 //  647 
@@ -3451,12 +3595,27 @@ ZDSecMgrEntryFree:
 //  653 
 //  654 #if defined ( NV_RESTORE )
 //  655   if ( status == ZSuccess )
+        MOV     A,?V0
+        JNZ     ??ZDSecMgrEntryFree_1
 //  656   {
 //  657     ZDSecMgrUpdateNV(entryIndex);
+        ; Setup parameters for call to function ZDSecMgrUpdateNV
+        MOV     DPL,?XSP + 0
+        MOV     DPH,?XSP + 1
+        MOVX    A,@DPTR
+        MOV     R2,A
+        INC     DPTR
+        MOVX    A,@DPTR
+        MOV     R3,A
+        LCALL   `??ZDSecMgrUpdateNV::?relay`; Banked call to: ZDSecMgrUpdateNV
 //  658   }
 //  659 #endif
 //  660 }
-        MOV     R7,#0x4
+??ZDSecMgrEntryFree_1:
+        MOV     A,#0x2
+        LCALL   ?DEALLOC_XSTACK8
+          CFI CFA_XSP16 add(XSP16, 14)
+        MOV     R7,#0x6
         LJMP    ?BANKED_LEAVE_XDATA
           CFI R6 SameValue
           CFI VB SameValue
@@ -3464,6 +3623,8 @@ ZDSecMgrEntryFree:
           CFI V1 SameValue
           CFI V2 SameValue
           CFI V3 SameValue
+          CFI V4 SameValue
+          CFI V5 SameValue
           CFI R7 SameValue
           CFI ?RET_LOW Frame(CFA_SP, 1)
           CFI ?RET_HIGH Frame(CFA_SP, 2)
@@ -6076,50 +6237,112 @@ ZDSecMgrDeviceNew:
           CFI Function ZDSecMgrDeviceNew
         CODE
 // 1308 {
-        FUNCALL ZDSecMgrDeviceNew, ZDSecMgrDeviceJoinFwd
-        LOCFRAME ISTACK, 2, STACK
+        FUNCALL ZDSecMgrDeviceNew, APSME_IsDistributedSecurity
+        LOCFRAME ISTACK, 0, STACK
         LOCFRAME PSTACK, 0, STACK
-        LOCFRAME XSTACK, 0, STACK
+        LOCFRAME XSTACK, 9, STACK
         LOCFRAME IOVERLAY, 0, STATIC
         LOCFRAME DOVERLAY, 0, STATIC
-        ARGFRAME ISTACK, 2, STACK
+        ARGFRAME ISTACK, 0, STACK
         ARGFRAME PSTACK, 0, STACK
-        ARGFRAME XSTACK, 0, STACK
+        ARGFRAME XSTACK, 9, STACK
         ARGFRAME IOVERLAY, 0, STATIC
         ARGFRAME DOVERLAY, 0, STATIC
-        PUSH    DPL
-          CFI DPL0 Frame(CFA_SP, 4)
-          CFI CFA_SP SP+-4
-        PUSH    DPH
-          CFI DPH0 Frame(CFA_SP, 5)
-          CFI CFA_SP SP+-5
-        ; Saved register size: 2
+        FUNCALL ZDSecMgrDeviceNew, ZDSecMgrDeviceJoinDirect
+        LOCFRAME ISTACK, 0, STACK
+        LOCFRAME PSTACK, 0, STACK
+        LOCFRAME XSTACK, 9, STACK
+        LOCFRAME IOVERLAY, 0, STATIC
+        LOCFRAME DOVERLAY, 0, STATIC
+        ARGFRAME ISTACK, 0, STACK
+        ARGFRAME PSTACK, 0, STACK
+        ARGFRAME XSTACK, 9, STACK
+        ARGFRAME IOVERLAY, 0, STATIC
+        ARGFRAME DOVERLAY, 0, STATIC
+        FUNCALL ZDSecMgrDeviceNew, ZDSecMgrDeviceJoinFwd
+        LOCFRAME ISTACK, 0, STACK
+        LOCFRAME PSTACK, 0, STACK
+        LOCFRAME XSTACK, 9, STACK
+        LOCFRAME IOVERLAY, 0, STATIC
+        LOCFRAME DOVERLAY, 0, STATIC
+        ARGFRAME ISTACK, 0, STACK
+        ARGFRAME PSTACK, 0, STACK
+        ARGFRAME XSTACK, 9, STACK
+        ARGFRAME IOVERLAY, 0, STATIC
+        ARGFRAME DOVERLAY, 0, STATIC
+        MOV     A,#-0x9
+        LCALL   ?BANKED_ENTER_XDATA
+          CFI DPH0 load(1, XDATA, add(CFA_XSP16, literal(-1)))
+          CFI DPL0 load(1, XDATA, add(CFA_XSP16, literal(-2)))
+          CFI ?BRET_EXT load(1, XDATA, add(CFA_XSP16, literal(-3)))
+          CFI ?RET_HIGH load(1, XDATA, add(CFA_XSP16, literal(-4)))
+          CFI ?RET_LOW load(1, XDATA, add(CFA_XSP16, literal(-5)))
+          CFI R7 load(1, XDATA, add(CFA_XSP16, literal(-6)))
+          CFI V0 load(1, XDATA, add(CFA_XSP16, literal(-7)))
+          CFI VB load(1, XDATA, add(CFA_XSP16, literal(-8)))
+          CFI R6 load(1, XDATA, add(CFA_XSP16, literal(-9)))
+          CFI CFA_SP SP+0
+          CFI CFA_XSP16 add(XSP16, 9)
+        ; Saved register size: 9
         ; Auto size: 0
+        MOV     A,R2
+        MOV     R6,A
+        MOV     A,R3
+        MOV     R7,A
 // 1309   ZStatus_t status;
 // 1310 
 // 1311   if ( ( ( ZG_BUILD_COORDINATOR_TYPE ) && ( ZG_DEVICE_COORDINATOR_TYPE ) )
 // 1312       || ( ( ZG_BUILD_RTR_TYPE ) && APSME_IsDistributedSecurity() ) )
+        MOV     DPTR,#zgDeviceLogicalType
+        MOVX    A,@DPTR
+        JZ      ??ZDSecMgrDeviceNew_0
+        ; Setup parameters for call to function APSME_IsDistributedSecurity
+        LCALL   `??APSME_IsDistributedSecurity::?relay`; Banked call to: APSME_IsDistributedSecurity
+        MOV     A,R1
+        JZ      ??ZDSecMgrDeviceNew_1
 // 1313   {
 // 1314     // try to join this device
 // 1315     status = ZDSecMgrDeviceJoinDirect( joiner );
+??ZDSecMgrDeviceNew_0:
+        ; Setup parameters for call to function ZDSecMgrDeviceJoinDirect
+        MOV     A,R6
+        MOV     R2,A
+        MOV     A,R7
+        MOV     R3,A
+        LCALL   `??ZDSecMgrDeviceJoinDirect::?relay`; Banked call to: ZDSecMgrDeviceJoinDirect
+        MOV     A,R1
+        MOV     R1,A
+        SJMP    ??ZDSecMgrDeviceNew_2
 // 1316   }
 // 1317   else
 // 1318   {
 // 1319     status = ZDSecMgrDeviceJoinFwd( joiner );
+??ZDSecMgrDeviceNew_1:
         ; Setup parameters for call to function ZDSecMgrDeviceJoinFwd
+        MOV     A,R6
+        MOV     R2,A
+        MOV     A,R7
+        MOV     R3,A
         LCALL   `??ZDSecMgrDeviceJoinFwd::?relay`; Banked call to: ZDSecMgrDeviceJoinFwd
         MOV     A,R1
         MOV     R1,A
 // 1320   }
 // 1321 
 // 1322   return status;
-        POP     DPH
-          CFI DPH0 SameValue
-          CFI CFA_SP SP+-4
-        POP     DPL
+??ZDSecMgrDeviceNew_2:
+        MOV     R7,#0x1
+        LJMP    ?BANKED_LEAVE_XDATA
+          CFI R6 SameValue
+          CFI VB SameValue
+          CFI V0 SameValue
+          CFI R7 SameValue
+          CFI ?RET_LOW Frame(CFA_SP, 1)
+          CFI ?RET_HIGH Frame(CFA_SP, 2)
+          CFI ?BRET_EXT Frame(CFA_SP, 3)
           CFI DPL0 SameValue
+          CFI DPH0 SameValue
           CFI CFA_SP SP+-3
-        LJMP    ?BRET
+          CFI CFA_XSP16 XSP16+0
 // 1323 }
           CFI EndBlock cfiBlock22
 // 1324 
@@ -7205,6 +7428,17 @@ ZDSecMgrTransportKeyInd:
         ARGFRAME XSTACK, 25, STACK
         ARGFRAME IOVERLAY, 0, STATIC
         ARGFRAME DOVERLAY, 0, STATIC
+        FUNCALL ZDSecMgrTransportKeyInd, osal_isbufset
+        LOCFRAME ISTACK, 0, STACK
+        LOCFRAME PSTACK, 0, STACK
+        LOCFRAME XSTACK, 25, STACK
+        LOCFRAME IOVERLAY, 0, STATIC
+        LOCFRAME DOVERLAY, 0, STATIC
+        ARGFRAME ISTACK, 0, STACK
+        ARGFRAME PSTACK, 0, STACK
+        ARGFRAME XSTACK, 25, STACK
+        ARGFRAME IOVERLAY, 0, STATIC
+        ARGFRAME DOVERLAY, 0, STATIC
         FUNCALL ZDSecMgrTransportKeyInd, ZDSecMgrTCDataLoad
         LOCFRAME ISTACK, 0, STACK
         LOCFRAME PSTACK, 0, STACK
@@ -7329,12 +7563,28 @@ ZDSecMgrTransportKeyInd:
         LCALL   `??ZDSecMgrUpdateTCAddress::?relay`; Banked call to: ZDSecMgrUpdateTCAddress
 // 1663   // check for distributed security
 // 1664   if ( ( ZG_BUILD_RTR_TYPE ) && osal_isbufset( ind->srcExtAddr, 0xFF, Z_EXTADDR_LEN ) )
+        ; Setup parameters for call to function osal_isbufset
+        MOV     R4,#0x8
+        MOV     R1,#-0x1
+        MOV     A,R6
+        ADD     A,#0x16
+        MOV     R2,A
+        CLR     A
+        ADDC    A,R7
+        MOV     R3,A
+        LCALL   `??osal_isbufset::?relay`; Banked call to: osal_isbufset
+        MOV     A,R1
+        JZ      ??ZDSecMgrTransportKeyInd_0
 // 1665   {
 // 1666     ZDSecMgrPermitJoiningEnabled = TRUE;
+        MOV     DPTR,#ZDSecMgrPermitJoiningEnabled
+        MOV     A,#0x1
+        MOVX    @DPTR,A
 // 1667   }
 // 1668 
 // 1669   // load Trust Center data if needed
 // 1670   ZDSecMgrTCDataLoad( ind->srcExtAddr );
+??ZDSecMgrTransportKeyInd_0:
         ; Setup parameters for call to function ZDSecMgrTCDataLoad
         MOV     A,R6
         ADD     A,#0x16
@@ -7354,7 +7604,7 @@ ZDSecMgrTransportKeyInd:
         INC     DPTR
         MOVX    A,@DPTR
         XRL     A,#0x1
-        JZ      ??ZDSecMgrTransportKeyInd_0
+        JZ      ??ZDSecMgrTransportKeyInd_1
         MOV     DPL,R6
         MOV     DPH,R7
         INC     DPTR
@@ -7364,22 +7614,22 @@ ZDSecMgrTransportKeyInd:
         MOVX    A,@DPTR
         XRL     A,#0x6
         JZ      $+5
-        LJMP    ??ZDSecMgrTransportKeyInd_1 & 0xFFFF
+        LJMP    ??ZDSecMgrTransportKeyInd_2 & 0xFFFF
 // 1674   {
 // 1675     // check for dummy NWK key (all zeros)
 // 1676     for ( index = 0;
-??ZDSecMgrTransportKeyInd_0:
+??ZDSecMgrTransportKeyInd_1:
         MOV     R2,#0x0
-        SJMP    ??ZDSecMgrTransportKeyInd_2
+        SJMP    ??ZDSecMgrTransportKeyInd_3
 // 1677           ( (index < SEC_KEY_LEN) && (ind->key[index] == 0) );
 // 1678           index++ );
-??ZDSecMgrTransportKeyInd_3:
+??ZDSecMgrTransportKeyInd_4:
         INC     R2
-??ZDSecMgrTransportKeyInd_2:
+??ZDSecMgrTransportKeyInd_3:
         MOV     A,R2
         CLR     C
         SUBB    A,#0x10
-        JNC     ??ZDSecMgrTransportKeyInd_4
+        JNC     ??ZDSecMgrTransportKeyInd_5
         MOV     A,R2
         MOV     R0,A
         MOV     R1,#0x0
@@ -7396,19 +7646,19 @@ ZDSecMgrTransportKeyInd:
         INC     DPTR
         INC     DPTR
         MOVX    A,@DPTR
-        JZ      ??ZDSecMgrTransportKeyInd_3
+        JZ      ??ZDSecMgrTransportKeyInd_4
 // 1679 
 // 1680     if ( index == SEC_KEY_LEN )
-??ZDSecMgrTransportKeyInd_4:
+??ZDSecMgrTransportKeyInd_5:
         MOV     A,#0x10
         XRL     A,R2
-        JNZ     ??ZDSecMgrTransportKeyInd_5
+        JNZ     ??ZDSecMgrTransportKeyInd_6
 // 1681     {
 // 1682       // load preconfigured key - once!!
 // 1683       if ( !_NIB.nwkKeyLoaded )
         MOV     DPTR,#_NIB + 61
         MOVX    A,@DPTR
-        JNZ     ??ZDSecMgrTransportKeyInd_6
+        JNZ     ??ZDSecMgrTransportKeyInd_7
 // 1684       {
 // 1685         ZDSecMgrReadKeyFromNv(ZCD_NV_PRECFGKEY, zgPreConfigKey);
         ; Setup parameters for call to function ZDSecMgrReadKeyFromNv
@@ -7438,13 +7688,13 @@ ZDSecMgrTransportKeyInd:
         MOV     R2,?XSP + 0
         MOV     R3,?XSP + 1
         LCALL   `??osal_memset::?relay`; Banked call to: osal_memset
-        SJMP    ??ZDSecMgrTransportKeyInd_6
+        SJMP    ??ZDSecMgrTransportKeyInd_7
 // 1691       }
 // 1692     }
 // 1693     else
 // 1694     {
 // 1695       SSP_UpdateNwkKey( ind->key, ind->keySeqNum );
-??ZDSecMgrTransportKeyInd_5:
+??ZDSecMgrTransportKeyInd_6:
         ; Setup parameters for call to function SSP_UpdateNwkKey
         MOV     DPL,R6
         MOV     DPH,R7
@@ -7465,7 +7715,7 @@ ZDSecMgrTransportKeyInd:
 // 1696       if ( !_NIB.nwkKeyLoaded )
         MOV     DPTR,#_NIB + 61
         MOVX    A,@DPTR
-        JNZ     ??ZDSecMgrTransportKeyInd_6
+        JNZ     ??ZDSecMgrTransportKeyInd_7
 // 1697       {
 // 1698         SSP_SwitchNwkKey( ind->keySeqNum );
         ; Setup parameters for call to function SSP_SwitchNwkKey
@@ -7484,13 +7734,13 @@ ZDSecMgrTransportKeyInd:
 // 1701 
 // 1702     // handle next step in authentication process
 // 1703     ZDSecMgrAuthNwkKey();
-??ZDSecMgrTransportKeyInd_6:
+??ZDSecMgrTransportKeyInd_7:
         ; Setup parameters for call to function ZDSecMgrAuthNwkKey
         LCALL   `??ZDSecMgrAuthNwkKey::?relay`; Banked call to: ZDSecMgrAuthNwkKey
-        SJMP    ??ZDSecMgrTransportKeyInd_7
+        SJMP    ??ZDSecMgrTransportKeyInd_8
 // 1704   }
 // 1705   else if ( ind->keyType == KEY_TYPE_TC_LINK )
-??ZDSecMgrTransportKeyInd_1:
+??ZDSecMgrTransportKeyInd_2:
         MOV     DPL,R6
         MOV     DPH,R7
         INC     DPTR
@@ -7499,7 +7749,7 @@ ZDSecMgrTransportKeyInd:
         INC     DPTR
         MOVX    A,@DPTR
         XRL     A,#0x4
-        JZ      ??ZDSecMgrTransportKeyInd_7
+        JZ      ??ZDSecMgrTransportKeyInd_8
 // 1706   {
 // 1707     // This should not happen because TCLK should not be Tx
 // 1708   }
@@ -7546,7 +7796,7 @@ ZDSecMgrTransportKeyInd:
 // 1741     }
 // 1742   }
 // 1743 }
-??ZDSecMgrTransportKeyInd_7:
+??ZDSecMgrTransportKeyInd_8:
         MOV     A,#0x10
         LCALL   ?DEALLOC_XSTACK8
           CFI CFA_XSP16 add(XSP16, 9)
@@ -8053,20 +8303,129 @@ ZDSecMgrSwitchKeyInd:
 // 1858  *
 // 1859  * @return      ZStatus_t
 // 1860  */
+
+        RSEG BANKED_CODE:CODE:NOROOT(0)
 // 1861 ZStatus_t ZDSecMgrUpdateNwkKey( uint8* key, uint8 keySeqNum, uint16 dstAddr )
+ZDSecMgrUpdateNwkKey:
+          CFI Block cfiBlock37 Using cfiCommon0
+          CFI Function ZDSecMgrUpdateNwkKey
+        CODE
 // 1862 {
+        FUNCALL ZDSecMgrUpdateNwkKey, APSME_TransportKeyReq
+        LOCFRAME ISTACK, 0, STACK
+        LOCFRAME PSTACK, 0, STACK
+        LOCFRAME XSTACK, 23, STACK
+        LOCFRAME IOVERLAY, 0, STATIC
+        LOCFRAME DOVERLAY, 0, STATIC
+        ARGFRAME ISTACK, 0, STACK
+        ARGFRAME PSTACK, 0, STACK
+        ARGFRAME XSTACK, 23, STACK
+        ARGFRAME IOVERLAY, 0, STATIC
+        ARGFRAME DOVERLAY, 0, STATIC
+        FUNCALL ZDSecMgrUpdateNwkKey, SSP_UpdateNwkKey
+        LOCFRAME ISTACK, 0, STACK
+        LOCFRAME PSTACK, 0, STACK
+        LOCFRAME XSTACK, 23, STACK
+        LOCFRAME IOVERLAY, 0, STATIC
+        LOCFRAME DOVERLAY, 0, STATIC
+        ARGFRAME ISTACK, 0, STACK
+        ARGFRAME PSTACK, 0, STACK
+        ARGFRAME XSTACK, 23, STACK
+        ARGFRAME IOVERLAY, 0, STATIC
+        ARGFRAME DOVERLAY, 0, STATIC
+        FUNCALL ZDSecMgrUpdateNwkKey, ZDApp_NVUpdate
+        LOCFRAME ISTACK, 0, STACK
+        LOCFRAME PSTACK, 0, STACK
+        LOCFRAME XSTACK, 23, STACK
+        LOCFRAME IOVERLAY, 0, STATIC
+        LOCFRAME DOVERLAY, 0, STATIC
+        ARGFRAME ISTACK, 0, STACK
+        ARGFRAME PSTACK, 0, STACK
+        ARGFRAME XSTACK, 23, STACK
+        ARGFRAME IOVERLAY, 0, STATIC
+        ARGFRAME DOVERLAY, 0, STATIC
+        REQUIRE ?V0
+        REQUIRE ?V1
+        MOV     A,#-0xa
+        LCALL   ?BANKED_ENTER_XDATA
+          CFI DPH0 load(1, XDATA, add(CFA_XSP16, literal(-1)))
+          CFI DPL0 load(1, XDATA, add(CFA_XSP16, literal(-2)))
+          CFI ?BRET_EXT load(1, XDATA, add(CFA_XSP16, literal(-3)))
+          CFI ?RET_HIGH load(1, XDATA, add(CFA_XSP16, literal(-4)))
+          CFI ?RET_LOW load(1, XDATA, add(CFA_XSP16, literal(-5)))
+          CFI R7 load(1, XDATA, add(CFA_XSP16, literal(-6)))
+          CFI V1 load(1, XDATA, add(CFA_XSP16, literal(-7)))
+          CFI V0 load(1, XDATA, add(CFA_XSP16, literal(-8)))
+          CFI VB load(1, XDATA, add(CFA_XSP16, literal(-9)))
+          CFI R6 load(1, XDATA, add(CFA_XSP16, literal(-10)))
+          CFI CFA_SP SP+0
+          CFI CFA_XSP16 add(XSP16, 10)
+        ; Saved register size: 10
+        ; Auto size: 13
+        MOV     A,#-0xd
+        LCALL   ?ALLOC_XSTACK8
+          CFI CFA_XSP16 add(XSP16, 23)
+        MOV     A,R2
+        MOV     R6,A
+        MOV     A,R3
+        MOV     R7,A
+        MOV     ?V1,R1
 // 1863   ZStatus_t               status;
 // 1864   APSME_TransportKeyReq_t req;
 // 1865 
 // 1866   // initialize common elements of local variables
 // 1867   req.keyType   = KEY_TYPE_NWK;
+        MOV     A,#0x2
+        LCALL   ?XSTACK_DISP0_8
+        MOV     A,#0x1
+        MOVX    @DPTR,A
 // 1868 
 // 1869   req.dstAddr   = dstAddr;
+        MOV     DPL,?XSP + 0
+        MOV     DPH,?XSP + 1
+        MOV     A,R4
+        MOVX    @DPTR,A
+        INC     DPTR
+        MOV     A,R5
+        MOVX    @DPTR,A
 // 1870   req.keySeqNum = keySeqNum;
+        MOV     A,?V1
+        PUSH    A
+          CFI CFA_SP SP+-1
+        MOV     A,#0x3
+        LCALL   ?XSTACK_DISP0_8
+        POP     A
+          CFI CFA_SP SP+0
+        MOVX    @DPTR,A
 // 1871   req.key       = key;
+        MOV     A,#0x4
+        LCALL   ?XSTACK_DISP0_8
+        MOV     A,R6
+        MOVX    @DPTR,A
+        INC     DPTR
+        MOV     A,R7
+        MOVX    @DPTR,A
 // 1872   req.extAddr   = NULL;
+        MOV     A,#0x6
+        LCALL   ?XSTACK_DISP0_8
+        MOV     A,#0x0
+        MOVX    @DPTR,A
+        INC     DPTR
+        MOV     A,#0x0
+        MOVX    @DPTR,A
 // 1873   req.nwkSecure = TRUE;
+        MOV     A,#0xa
+        LCALL   ?XSTACK_DISP0_8
+        MOV     A,#0x1
+        MOVX    @DPTR,A
 // 1874   req.tunnel    = NULL;
+        MOV     A,#0xb
+        LCALL   ?XSTACK_DISP0_8
+        MOV     A,#0x0
+        MOVX    @DPTR,A
+        INC     DPTR
+        MOV     A,#0x0
+        MOVX    @DPTR,A
 // 1875 
 // 1876   if ( ZG_CHECK_SECURITY_MODE == ZG_SECURITY_SE_STANDARD )
 // 1877   {
@@ -8098,16 +8457,54 @@ ZDSecMgrSwitchKeyInd:
 // 1903   else // ( ZG_CHECK_SECURITY_MODE == ZG_SECURITY_RESIDENTIAL )
 // 1904   {
 // 1905     req.apsSecure = FALSE;
+        MOV     A,#0x9
+        LCALL   ?XSTACK_DISP0_8
+        MOV     A,#0x0
+        MOVX    @DPTR,A
 // 1906     status = APSME_TransportKeyReq( &req );
+        ; Setup parameters for call to function APSME_TransportKeyReq
+        MOV     R2,?XSP + 0
+        MOV     R3,?XSP + 1
+        LCALL   `??APSME_TransportKeyReq::?relay`; Banked call to: APSME_TransportKeyReq
+        MOV     A,R1
+        MOV     ?V0,A
 // 1907   }
 // 1908 
 // 1909   SSP_UpdateNwkKey( key, keySeqNum );
+        ; Setup parameters for call to function SSP_UpdateNwkKey
+        MOV     R1,?V1
+        MOV     A,R6
+        MOV     R2,A
+        MOV     A,R7
+        MOV     R3,A
+        LCALL   `??SSP_UpdateNwkKey::?relay`; Banked call to: SSP_UpdateNwkKey
 // 1910 
 // 1911   // Save if nv
 // 1912   ZDApp_NVUpdate();
+        ; Setup parameters for call to function ZDApp_NVUpdate
+        LCALL   `??ZDApp_NVUpdate::?relay`; Banked call to: ZDApp_NVUpdate
 // 1913 
 // 1914   return status;
+        MOV     R1,?V0
+        MOV     A,#0xd
+        LCALL   ?DEALLOC_XSTACK8
+          CFI CFA_XSP16 add(XSP16, 10)
+        MOV     R7,#0x2
+        LJMP    ?BANKED_LEAVE_XDATA
+          CFI R6 SameValue
+          CFI VB SameValue
+          CFI V0 SameValue
+          CFI V1 SameValue
+          CFI R7 SameValue
+          CFI ?RET_LOW Frame(CFA_SP, 1)
+          CFI ?RET_HIGH Frame(CFA_SP, 2)
+          CFI ?BRET_EXT Frame(CFA_SP, 3)
+          CFI DPL0 SameValue
+          CFI DPH0 SameValue
+          CFI CFA_SP SP+-3
+          CFI CFA_XSP16 XSP16+0
 // 1915 }
+          CFI EndBlock cfiBlock37
 // 1916 #endif // ( ZG_BUILD_COORDINATOR_TYPE )
 // 1917 
 // 1918 #if ( ZG_BUILD_COORDINATOR_TYPE )
@@ -8120,14 +8517,88 @@ ZDSecMgrSwitchKeyInd:
 // 1925  *
 // 1926  * @return      ZStatus_t
 // 1927  */
+
+        RSEG BANKED_CODE:CODE:NOROOT(0)
 // 1928 ZStatus_t ZDSecMgrSwitchNwkKey( uint8 keySeqNum, uint16 dstAddr )
+ZDSecMgrSwitchNwkKey:
+          CFI Block cfiBlock38 Using cfiCommon0
+          CFI Function ZDSecMgrSwitchNwkKey
+        CODE
 // 1929 {
+        FUNCALL ZDSecMgrSwitchNwkKey, APSME_SwitchKeyReq
+        LOCFRAME ISTACK, 0, STACK
+        LOCFRAME PSTACK, 0, STACK
+        LOCFRAME XSTACK, 13, STACK
+        LOCFRAME IOVERLAY, 0, STATIC
+        LOCFRAME DOVERLAY, 0, STATIC
+        ARGFRAME ISTACK, 0, STACK
+        ARGFRAME PSTACK, 0, STACK
+        ARGFRAME XSTACK, 13, STACK
+        ARGFRAME IOVERLAY, 0, STATIC
+        ARGFRAME DOVERLAY, 0, STATIC
+        FUNCALL ZDSecMgrSwitchNwkKey, SSP_SwitchNwkKey
+        LOCFRAME ISTACK, 0, STACK
+        LOCFRAME PSTACK, 0, STACK
+        LOCFRAME XSTACK, 13, STACK
+        LOCFRAME IOVERLAY, 0, STATIC
+        LOCFRAME DOVERLAY, 0, STATIC
+        ARGFRAME ISTACK, 0, STACK
+        ARGFRAME PSTACK, 0, STACK
+        ARGFRAME XSTACK, 13, STACK
+        ARGFRAME IOVERLAY, 0, STATIC
+        ARGFRAME DOVERLAY, 0, STATIC
+        FUNCALL ZDSecMgrSwitchNwkKey, ZDApp_NVUpdate
+        LOCFRAME ISTACK, 0, STACK
+        LOCFRAME PSTACK, 0, STACK
+        LOCFRAME XSTACK, 13, STACK
+        LOCFRAME IOVERLAY, 0, STATIC
+        LOCFRAME DOVERLAY, 0, STATIC
+        ARGFRAME ISTACK, 0, STACK
+        ARGFRAME PSTACK, 0, STACK
+        ARGFRAME XSTACK, 13, STACK
+        ARGFRAME IOVERLAY, 0, STATIC
+        ARGFRAME DOVERLAY, 0, STATIC
+        MOV     A,#-0x9
+        LCALL   ?BANKED_ENTER_XDATA
+          CFI DPH0 load(1, XDATA, add(CFA_XSP16, literal(-1)))
+          CFI DPL0 load(1, XDATA, add(CFA_XSP16, literal(-2)))
+          CFI ?BRET_EXT load(1, XDATA, add(CFA_XSP16, literal(-3)))
+          CFI ?RET_HIGH load(1, XDATA, add(CFA_XSP16, literal(-4)))
+          CFI ?RET_LOW load(1, XDATA, add(CFA_XSP16, literal(-5)))
+          CFI R7 load(1, XDATA, add(CFA_XSP16, literal(-6)))
+          CFI V0 load(1, XDATA, add(CFA_XSP16, literal(-7)))
+          CFI VB load(1, XDATA, add(CFA_XSP16, literal(-8)))
+          CFI R6 load(1, XDATA, add(CFA_XSP16, literal(-9)))
+          CFI CFA_SP SP+0
+          CFI CFA_XSP16 add(XSP16, 9)
+        ; Saved register size: 9
+        ; Auto size: 4
+        MOV     A,#-0x4
+        LCALL   ?ALLOC_XSTACK8
+          CFI CFA_XSP16 add(XSP16, 13)
+        MOV     A,R1
+        MOV     R7,A
 // 1930   ZStatus_t            status;
 // 1931   APSME_SwitchKeyReq_t req;
 // 1932 
 // 1933   // initialize common elements of local variables
 // 1934   req.dstAddr = dstAddr;
+        MOV     DPL,?XSP + 0
+        MOV     DPH,?XSP + 1
+        MOV     A,R2
+        MOVX    @DPTR,A
+        INC     DPTR
+        MOV     A,R3
+        MOVX    @DPTR,A
 // 1935   req.keySeqNum = keySeqNum;
+        MOV     A,R7
+        PUSH    A
+          CFI CFA_SP SP+-1
+        MOV     A,#0x2
+        LCALL   ?XSTACK_DISP0_8
+        POP     A
+          CFI CFA_SP SP+0
+        MOVX    @DPTR,A
 // 1936 
 // 1937   if ( ZG_CHECK_SECURITY_MODE == ZG_SECURITY_SE_STANDARD )
 // 1938   {
@@ -8159,16 +8630,51 @@ ZDSecMgrSwitchKeyInd:
 // 1964   else // ( ZG_CHECK_SECURITY_MODE == ZG_SECURITY_RESIDENTIAL )
 // 1965   {
 // 1966     req.apsSecure = FALSE;
+        MOV     A,#0x3
+        LCALL   ?XSTACK_DISP0_8
+        MOV     A,#0x0
+        MOVX    @DPTR,A
 // 1967     status = APSME_SwitchKeyReq( &req );
+        ; Setup parameters for call to function APSME_SwitchKeyReq
+        MOV     R2,?XSP + 0
+        MOV     R3,?XSP + 1
+        LCALL   `??APSME_SwitchKeyReq::?relay`; Banked call to: APSME_SwitchKeyReq
+        MOV     A,R1
+        MOV     R6,A
 // 1968   }
 // 1969 
 // 1970   SSP_SwitchNwkKey( keySeqNum );
+        ; Setup parameters for call to function SSP_SwitchNwkKey
+        MOV     A,R7
+        MOV     R1,A
+        LCALL   `??SSP_SwitchNwkKey::?relay`; Banked call to: SSP_SwitchNwkKey
 // 1971 
 // 1972   // Save if nv
 // 1973   ZDApp_NVUpdate();
+        ; Setup parameters for call to function ZDApp_NVUpdate
+        LCALL   `??ZDApp_NVUpdate::?relay`; Banked call to: ZDApp_NVUpdate
 // 1974 
 // 1975   return status;
+        MOV     A,R6
+        MOV     R1,A
+        MOV     A,#0x4
+        LCALL   ?DEALLOC_XSTACK8
+          CFI CFA_XSP16 add(XSP16, 9)
+        MOV     R7,#0x1
+        LJMP    ?BANKED_LEAVE_XDATA
+          CFI R6 SameValue
+          CFI VB SameValue
+          CFI V0 SameValue
+          CFI R7 SameValue
+          CFI ?RET_LOW Frame(CFA_SP, 1)
+          CFI ?RET_HIGH Frame(CFA_SP, 2)
+          CFI ?BRET_EXT Frame(CFA_SP, 3)
+          CFI DPL0 SameValue
+          CFI DPH0 SameValue
+          CFI CFA_SP SP+-3
+          CFI CFA_XSP16 XSP16+0
 // 1976 }
+          CFI EndBlock cfiBlock38
 // 1977 #endif // ( ZG_BUILD_COORDINATOR_TYPE )
 // 1978 
 // 1979 /******************************************************************************
@@ -8184,7 +8690,7 @@ ZDSecMgrSwitchKeyInd:
         RSEG BANKED_CODE:CODE:NOROOT(0)
 // 1988 ZStatus_t ZDSecMgrRequestAppKey( uint8 *partExtAddr )
 ZDSecMgrRequestAppKey:
-          CFI Block cfiBlock37 Using cfiCommon0
+          CFI Block cfiBlock39 Using cfiCommon0
           CFI Function ZDSecMgrRequestAppKey
         CODE
 // 1989 {
@@ -8252,7 +8758,7 @@ ZDSecMgrRequestAppKey:
           CFI CFA_SP SP+-3
         LJMP    ?BRET
 // 2000 }
-          CFI EndBlock cfiBlock37
+          CFI EndBlock cfiBlock39
 // 2001 
 // 2002 #if ( ZG_BUILD_JOINING_TYPE )
 // 2003 /******************************************************************************
@@ -8268,7 +8774,7 @@ ZDSecMgrRequestAppKey:
         RSEG BANKED_CODE:CODE:NOROOT(0)
 // 2012 ZStatus_t ZDSecMgrSetupPartner( uint16 partNwkAddr, uint8* partExtAddr )
 ZDSecMgrSetupPartner:
-          CFI Block cfiBlock38 Using cfiCommon0
+          CFI Block cfiBlock40 Using cfiCommon0
           CFI Function ZDSecMgrSetupPartner
         CODE
 // 2013 {
@@ -8472,7 +8978,7 @@ ZDSecMgrSetupPartner:
           CFI CFA_SP SP+-3
           CFI CFA_XSP16 XSP16+0
 // 2040 }
-          CFI EndBlock cfiBlock38
+          CFI EndBlock cfiBlock40
 // 2041 #endif // ( ZG_BUILD_JOINING_TYPE )
 // 2042 
 // 2043 #if ( ZG_BUILD_COORDINATOR_TYPE )
@@ -8486,19 +8992,56 @@ ZDSecMgrSetupPartner:
 // 2051  *
 // 2052  * @return      ZStatus_t
 // 2053  */
+
+        RSEG BANKED_CODE:CODE:NOROOT(0)
 // 2054 ZStatus_t ZDSecMgrAppKeyTypeSet( uint8 keyType )
+ZDSecMgrAppKeyTypeSet:
+          CFI Block cfiBlock41 Using cfiCommon0
+          CFI Function ZDSecMgrAppKeyTypeSet
+        CODE
 // 2055 {
+        PUSH    DPL
+          CFI DPL0 Frame(CFA_SP, 4)
+          CFI CFA_SP SP+-4
+        PUSH    DPH
+          CFI DPH0 Frame(CFA_SP, 5)
+          CFI CFA_SP SP+-5
+        ; Saved register size: 2
+        ; Auto size: 0
+        MOV     A,R1
+        MOV     R0,A
 // 2056   if ( keyType == KEY_TYPE_APP_LINK )
+        MOV     A,#0x3
+        XRL     A,R0
+        JNZ     ??ZDSecMgrAppKeyTypeSet_0
 // 2057   {
 // 2058     ZDSecMgrAppKeyType = KEY_TYPE_APP_LINK;
+        MOV     DPTR,#ZDSecMgrAppKeyType
+        MOV     A,#0x3
+        MOVX    @DPTR,A
+        SJMP    ??ZDSecMgrAppKeyTypeSet_1
 // 2059   }
 // 2060   else
 // 2061   {
 // 2062     ZDSecMgrAppKeyType = KEY_TYPE_APP_MASTER;
+??ZDSecMgrAppKeyTypeSet_0:
+        MOV     DPTR,#ZDSecMgrAppKeyType
+        MOV     A,#0x2
+        MOVX    @DPTR,A
 // 2063   }
 // 2064 
 // 2065   return ZSuccess;
+??ZDSecMgrAppKeyTypeSet_1:
+        MOV     R1,#0x0
+        POP     DPH
+          CFI DPH0 SameValue
+          CFI CFA_SP SP+-4
+        POP     DPL
+          CFI DPL0 SameValue
+          CFI CFA_SP SP+-3
+        LJMP    ?BRET
 // 2066 }
+          CFI EndBlock cfiBlock41
 // 2067 #endif
 // 2068 
 // 2069 /******************************************************************************
@@ -8520,7 +9063,7 @@ ZDSecMgrSetupPartner:
         RSEG BANKED_CODE:CODE:NOROOT(0)
 // 2084 ZStatus_t ZDSecMgrLinkKeySet( uint8* extAddr, uint8* key )
 APSME_LinkKeySet:
-          CFI Block cfiBlock39 Using cfiCommon0
+          CFI Block cfiBlock42 Using cfiCommon0
           CFI Function APSME_LinkKeySet
         CODE
 // 2085 {
@@ -8986,7 +9529,7 @@ APSME_LinkKeySet:
           CFI CFA_SP SP+-3
           CFI CFA_XSP16 XSP16+0
 // 2127 }
-          CFI EndBlock cfiBlock39
+          CFI EndBlock cfiBlock42
 // 2128 
 // 2129 /******************************************************************************
 // 2130  * @fn          ZDSecMgrAuthenticationSet
@@ -9002,7 +9545,7 @@ APSME_LinkKeySet:
         RSEG BANKED_CODE:CODE:NOROOT(0)
 // 2139 ZStatus_t ZDSecMgrAuthenticationSet( uint8* extAddr, ZDSecMgr_Authentication_Option option )
 ZDSecMgrAuthenticationSet:
-          CFI Block cfiBlock40 Using cfiCommon0
+          CFI Block cfiBlock43 Using cfiCommon0
           CFI Function ZDSecMgrAuthenticationSet
         CODE
 // 2140 {
@@ -9094,7 +9637,7 @@ ZDSecMgrAuthenticationSet:
           CFI CFA_SP SP+-3
           CFI CFA_XSP16 XSP16+0
 // 2154 }
-          CFI EndBlock cfiBlock40
+          CFI EndBlock cfiBlock43
 // 2155 
 // 2156 /******************************************************************************
 // 2157  * @fn          ZDSecMgrAuthenticationCheck
@@ -9112,7 +9655,7 @@ ZDSecMgrAuthenticationSet:
         RSEG BANKED_CODE:CODE:NOROOT(0)
 // 2168 uint8 ZDSecMgrAuthenticationCheck( uint16 shortAddr )
 ZDSecMgrAuthenticationCheck:
-          CFI Block cfiBlock41 Using cfiCommon0
+          CFI Block cfiBlock44 Using cfiCommon0
           CFI Function ZDSecMgrAuthenticationCheck
         CODE
 // 2169 {
@@ -9168,7 +9711,7 @@ ZDSecMgrAuthenticationCheck:
 // 2215 
 // 2216 #endif // TC_LINKKEY_JOIN
 // 2217 }
-          CFI EndBlock cfiBlock41
+          CFI EndBlock cfiBlock44
 // 2218 
 // 2219 /******************************************************************************
 // 2220  * @fn          ZDSecMgrLinkKeyNVIdGet (stubs APSME_LinkKeyNVIdGet)
@@ -9184,7 +9727,7 @@ ZDSecMgrAuthenticationCheck:
         RSEG BANKED_CODE:CODE:NOROOT(0)
 // 2229 ZStatus_t ZDSecMgrLinkKeyNVIdGet(uint8* extAddr, uint16 *pKeyNvId)
 APSME_LinkKeyNVIdGet:
-          CFI Block cfiBlock42 Using cfiCommon0
+          CFI Block cfiBlock45 Using cfiCommon0
           CFI Function APSME_LinkKeyNVIdGet
         CODE
 // 2230 {
@@ -9295,7 +9838,7 @@ APSME_LinkKeyNVIdGet:
           CFI CFA_SP SP+-3
           CFI CFA_XSP16 XSP16+0
 // 2248 }
-          CFI EndBlock cfiBlock42
+          CFI EndBlock cfiBlock45
 // 2249 
 // 2250 /******************************************************************************
 // 2251  * @fn          ZDSecMgrIsLinkKeyValid (stubs APSME_IsLinkKeyValid)
@@ -9311,7 +9854,7 @@ APSME_LinkKeyNVIdGet:
         RSEG BANKED_CODE:CODE:NOROOT(0)
 // 2260 uint8 ZDSecMgrIsLinkKeyValid(uint8* extAddr)
 APSME_IsLinkKeyValid:
-          CFI Block cfiBlock43 Using cfiCommon0
+          CFI Block cfiBlock46 Using cfiCommon0
           CFI Function APSME_IsLinkKeyValid
         CODE
 // 2261 {
@@ -9585,7 +10128,7 @@ APSME_IsLinkKeyValid:
           CFI CFA_SP SP+-3
           CFI CFA_XSP16 XSP16+0
 // 2298 }
-          CFI EndBlock cfiBlock43
+          CFI EndBlock cfiBlock46
 // 2299 
 // 2300 /******************************************************************************
 // 2301  * @fn          ZDSecMgrKeyFwdToChild (stubs APSME_KeyFwdToChild)
@@ -9600,7 +10143,7 @@ APSME_IsLinkKeyValid:
         RSEG BANKED_CODE:CODE:NOROOT(0)
 // 2309 uint8 ZDSecMgrKeyFwdToChild( APSME_TransportKeyInd_t* ind )
 APSME_KeyFwdToChild:
-          CFI Block cfiBlock44 Using cfiCommon0
+          CFI Block cfiBlock47 Using cfiCommon0
           CFI Function APSME_KeyFwdToChild
         CODE
 // 2310 {
@@ -9705,7 +10248,7 @@ APSME_KeyFwdToChild:
           CFI CFA_SP SP+-3
         LJMP    ?BRET
 // 2326 }
-          CFI EndBlock cfiBlock44
+          CFI EndBlock cfiBlock47
 // 2327 
 // 2328 /******************************************************************************
 // 2329  * @fn          ZDSecMgrAddLinkKey
@@ -9724,7 +10267,7 @@ APSME_KeyFwdToChild:
         RSEG BANKED_CODE:CODE:NOROOT(0)
 // 2341 ZStatus_t ZDSecMgrAddLinkKey( uint16 shortAddr, uint8 *extAddr, uint8 *key)
 ZDSecMgrAddLinkKey:
-          CFI Block cfiBlock45 Using cfiCommon0
+          CFI Block cfiBlock48 Using cfiCommon0
           CFI Function ZDSecMgrAddLinkKey
         CODE
 // 2342 {
@@ -9762,6 +10305,17 @@ ZDSecMgrAddLinkKey:
         ARGFRAME IOVERLAY, 0, STATIC
         ARGFRAME DOVERLAY, 0, STATIC
         FUNCALL ZDSecMgrAddLinkKey, APSME_LinkKeySet
+        LOCFRAME ISTACK, 0, STACK
+        LOCFRAME PSTACK, 0, STACK
+        LOCFRAME XSTACK, 14, STACK
+        LOCFRAME IOVERLAY, 0, STATIC
+        LOCFRAME DOVERLAY, 0, STATIC
+        ARGFRAME ISTACK, 0, STACK
+        ARGFRAME PSTACK, 0, STACK
+        ARGFRAME XSTACK, 14, STACK
+        ARGFRAME IOVERLAY, 0, STATIC
+        ARGFRAME DOVERLAY, 0, STATIC
+        FUNCALL ZDSecMgrAddLinkKey, ZDSecMgrWriteNV
         LOCFRAME ISTACK, 0, STACK
         LOCFRAME PSTACK, 0, STACK
         LOCFRAME XSTACK, 14, STACK
@@ -9917,6 +10471,8 @@ ZDSecMgrAddLinkKey:
 // 2376 
 // 2377 #if defined NV_RESTORE
 // 2378   ZDSecMgrWriteNV();  // Write the new established link key to NV.
+        ; Setup parameters for call to function ZDSecMgrWriteNV
+        LCALL   `??ZDSecMgrWriteNV::?relay`; Banked call to: ZDSecMgrWriteNV
 // 2379 #endif
 // 2380 
 // 2381   return ZSuccess;
@@ -9932,7 +10488,7 @@ ZDSecMgrAddLinkKey:
         MOV     R1,#0x11
         SJMP    ??ZDSecMgrAddLinkKey_1
 // 2382 }
-          CFI EndBlock cfiBlock45
+          CFI EndBlock cfiBlock48
 // 2383 
 // 2384 /******************************************************************************
 // 2385  * @fn          ZDSecMgrInitNV
@@ -9947,7 +10503,7 @@ ZDSecMgrAddLinkKey:
         RSEG BANKED_CODE:CODE:NOROOT(0)
 // 2393 uint8 ZDSecMgrInitNV(void)
 ZDSecMgrInitNV:
-          CFI Block cfiBlock46 Using cfiCommon0
+          CFI Block cfiBlock49 Using cfiCommon0
           CFI Function ZDSecMgrInitNV
         CODE
 // 2394 {
@@ -10108,7 +10664,7 @@ ZDSecMgrInitNV:
           CFI CFA_SP SP+-3
           CFI CFA_XSP16 XSP16+0
 // 2411 }
-          CFI EndBlock cfiBlock46
+          CFI EndBlock cfiBlock49
 // 2412 
 // 2413 #if defined ( NV_RESTORE )
 // 2414 /*********************************************************************
@@ -10120,32 +10676,266 @@ ZDSecMgrInitNV:
 // 2420  *
 // 2421  * @return  none
 // 2422  */
+
+        RSEG BANKED_CODE:CODE:NOROOT(0)
 // 2423 static void ZDSecMgrWriteNV( void )
+ZDSecMgrWriteNV:
+          CFI Block cfiBlock50 Using cfiCommon0
+          CFI Function ZDSecMgrWriteNV
+        CODE
 // 2424 {
+        FUNCALL ZDSecMgrWriteNV, osal_nv_write
+        LOCFRAME ISTACK, 0, STACK
+        LOCFRAME PSTACK, 0, STACK
+        LOCFRAME XSTACK, 16, STACK
+        LOCFRAME IOVERLAY, 0, STATIC
+        LOCFRAME DOVERLAY, 0, STATIC
+        ARGFRAME ISTACK, 0, STACK
+        ARGFRAME PSTACK, 0, STACK
+        ARGFRAME XSTACK, 16, STACK
+        ARGFRAME IOVERLAY, 0, STATIC
+        ARGFRAME DOVERLAY, 0, STATIC
+        FUNCALL ZDSecMgrWriteNV, osal_nv_write
+        LOCFRAME ISTACK, 0, STACK
+        LOCFRAME PSTACK, 0, STACK
+        LOCFRAME XSTACK, 16, STACK
+        LOCFRAME IOVERLAY, 0, STATIC
+        LOCFRAME DOVERLAY, 0, STATIC
+        ARGFRAME ISTACK, 0, STACK
+        ARGFRAME PSTACK, 0, STACK
+        ARGFRAME XSTACK, 16, STACK
+        ARGFRAME IOVERLAY, 0, STATIC
+        ARGFRAME DOVERLAY, 0, STATIC
+        REQUIRE ?V0
+        REQUIRE ?V1
+        MOV     A,#-0xa
+        LCALL   ?BANKED_ENTER_XDATA
+          CFI DPH0 load(1, XDATA, add(CFA_XSP16, literal(-1)))
+          CFI DPL0 load(1, XDATA, add(CFA_XSP16, literal(-2)))
+          CFI ?BRET_EXT load(1, XDATA, add(CFA_XSP16, literal(-3)))
+          CFI ?RET_HIGH load(1, XDATA, add(CFA_XSP16, literal(-4)))
+          CFI ?RET_LOW load(1, XDATA, add(CFA_XSP16, literal(-5)))
+          CFI R7 load(1, XDATA, add(CFA_XSP16, literal(-6)))
+          CFI V1 load(1, XDATA, add(CFA_XSP16, literal(-7)))
+          CFI V0 load(1, XDATA, add(CFA_XSP16, literal(-8)))
+          CFI VB load(1, XDATA, add(CFA_XSP16, literal(-9)))
+          CFI R6 load(1, XDATA, add(CFA_XSP16, literal(-10)))
+          CFI CFA_SP SP+0
+          CFI CFA_XSP16 add(XSP16, 10)
+        ; Saved register size: 10
+        ; Auto size: 2
+        MOV     A,#-0x2
+        LCALL   ?ALLOC_XSTACK8
+          CFI CFA_XSP16 add(XSP16, 12)
 // 2425   uint16 i;
 // 2426   nvDeviceListHdr_t hdr;
 // 2427 
 // 2428   hdr.numRecs = 0;
+        MOV     DPL,?XSP + 0
+        MOV     DPH,?XSP + 1
+        MOV     A,#0x0
+        MOVX    @DPTR,A
+        INC     DPTR
+        MOV     A,#0x0
+        MOVX    @DPTR,A
 // 2429 
 // 2430   if (ZDSecMgrEntries != NULL)
+        MOV     DPTR,#ZDSecMgrEntries
+        MOVX    A,@DPTR
+        MOV     R0,A
+        INC     DPTR
+        MOVX    A,@DPTR
+        MOV     R1,A
+        MOV     A,R0
+        ORL     A,R1
+        JNZ     $+5
+        LJMP    ??ZDSecMgrWriteNV_0 & 0xFFFF
 // 2431   {
 // 2432     for ( i = 0; i < ZDSECMGR_ENTRY_MAX; i++ )
+        MOV     R6,#0x0
+        MOV     R7,#0x0
+        LJMP    ??ZDSecMgrWriteNV_1 & 0xFFFF
 // 2433     {
 // 2434       // Save off the record
 // 2435       osal_nv_write( ZCD_NV_APS_LINK_KEY_TABLE,
 // 2436                     (uint16)((sizeof(nvDeviceListHdr_t)) + (i * sizeof(ZDSecMgrEntry_t))),
 // 2437                     sizeof(ZDSecMgrEntry_t), &ZDSecMgrEntries[i] );
+??ZDSecMgrWriteNV_2:
+        ; Setup parameters for call to function osal_nv_write
+        MOV     A,R6
+        MOV     R0,A
+        MOV     A,R7
+        MOV     R1,A
+        MOV     A,R0
+        MOV     B,#0x5
+        MUL     AB
+        XCH     A,R0
+        MOV     R2,B
+        MOV     B,#0x0
+        MUL     AB
+        ADD     A,R2
+        MOV     R2,A
+        MOV     B,#0x5
+        MOV     A,R1
+        MUL     AB
+        ADD     A,R2
+        MOV     R1,A
+        MOV     DPTR,#ZDSecMgrEntries
+        MOVX    A,@DPTR
+        ADD     A,R0
+        MOV     ?V0,A
+        INC     DPTR
+        MOVX    A,@DPTR
+        ADDC    A,R1
+        MOV     ?V1,A
+        MOV     R0,#?V0
+        LCALL   ?PUSH_XSTACK_I_TWO
+          CFI CFA_XSP16 add(XSP16, 14)
+        MOV     ?V0,#0x5
+        MOV     ?V1,#0x0
+        MOV     R0,#?V0
+        LCALL   ?PUSH_XSTACK_I_TWO
+          CFI CFA_XSP16 add(XSP16, 16)
+        MOV     A,R6
+        MOV     R0,A
+        MOV     A,R7
+        MOV     R1,A
+        MOV     A,R0
+        MOV     B,#0x5
+        MUL     AB
+        XCH     A,R0
+        MOV     R2,B
+        MOV     B,#0x0
+        MUL     AB
+        ADD     A,R2
+        MOV     R2,A
+        MOV     B,#0x5
+        MOV     A,R1
+        MUL     AB
+        ADD     A,R2
+        MOV     R1,A
+        MOV     A,R0
+        ADD     A,#0x2
+        MOV     R4,A
+        CLR     A
+        ADDC    A,R1
+        MOV     R5,A
+        MOV     R2,#0x4c
+        MOV     R3,#0x0
+        LCALL   `??osal_nv_write::?relay`; Banked call to: osal_nv_write
+        MOV     A,#0x4
+        LCALL   ?DEALLOC_XSTACK8
+          CFI CFA_XSP16 add(XSP16, 12)
+        MOV     A,R1
 // 2438 
 // 2439       if ( ZDSecMgrEntries[i].ami != INVALID_NODE_ADDR )
+        MOV     A,R6
+        MOV     R0,A
+        MOV     A,R7
+        MOV     R1,A
+        MOV     A,R0
+        MOV     B,#0x5
+        MUL     AB
+        XCH     A,R0
+        MOV     R2,B
+        MOV     B,#0x0
+        MUL     AB
+        ADD     A,R2
+        MOV     R2,A
+        MOV     B,#0x5
+        MOV     A,R1
+        MUL     AB
+        ADD     A,R2
+        MOV     R1,A
+        MOV     DPTR,#ZDSecMgrEntries
+        MOVX    A,@DPTR
+        ADD     A,R0
+        MOV     R2,A
+        INC     DPTR
+        MOVX    A,@DPTR
+        ADDC    A,R1
+        MOV     DPL,R2
+        MOV     DPH,A
+        MOVX    A,@DPTR
+        XRL     A,#0xfe
+        JNZ     ??ZDSecMgrWriteNV_3
+        INC     DPTR
+        MOVX    A,@DPTR
+        XRL     A,#0xff
+??ZDSecMgrWriteNV_3:
+        JZ      ??ZDSecMgrWriteNV_4
 // 2440       {
 // 2441         hdr.numRecs++;
+        MOV     DPL,?XSP + 0
+        MOV     DPH,?XSP + 1
+        MOVX    A,@DPTR
+        ADD     A,#0x1
+        MOVX    @DPTR,A
+        INC     DPTR
+        MOVX    A,@DPTR
+        ADDC    A,#0x0
+        MOVX    @DPTR,A
 // 2442       }
 // 2443     }
+??ZDSecMgrWriteNV_4:
+        INC     R6
+        MOV     A,R6
+        JNZ     ??ZDSecMgrWriteNV_1
+        INC     R7
+??ZDSecMgrWriteNV_1:
+        CLR     C
+        MOV     A,R6
+        SUBB    A,#0x3
+        MOV     A,R7
+        SUBB    A,#0x0
+        JNC     $+5
+        LJMP    ??ZDSecMgrWriteNV_2 & 0xFFFF
 // 2444   }
 // 2445 
 // 2446   // Save off the header
 // 2447   osal_nv_write( ZCD_NV_APS_LINK_KEY_TABLE, 0, sizeof( nvDeviceListHdr_t ), &hdr );
+??ZDSecMgrWriteNV_0:
+        ; Setup parameters for call to function osal_nv_write
+        MOV     R0,?XSP + 0
+        MOV     R1,?XSP + 1
+        MOV     ?V0,R0
+        MOV     ?V1,R1
+        MOV     R0,#?V0
+        LCALL   ?PUSH_XSTACK_I_TWO
+          CFI CFA_XSP16 add(XSP16, 14)
+        MOV     ?V0,#0x2
+        MOV     ?V1,#0x0
+        MOV     R0,#?V0
+        LCALL   ?PUSH_XSTACK_I_TWO
+          CFI CFA_XSP16 add(XSP16, 16)
+        MOV     R4,#0x0
+        MOV     R5,#0x0
+        MOV     R2,#0x4c
+        MOV     R3,#0x0
+        LCALL   `??osal_nv_write::?relay`; Banked call to: osal_nv_write
+        MOV     A,#0x4
+        LCALL   ?DEALLOC_XSTACK8
+          CFI CFA_XSP16 add(XSP16, 12)
+        MOV     A,R1
 // 2448 }
+        MOV     A,#0x2
+        LCALL   ?DEALLOC_XSTACK8
+          CFI CFA_XSP16 add(XSP16, 10)
+        MOV     R7,#0x2
+        LJMP    ?BANKED_LEAVE_XDATA
+          CFI R6 SameValue
+          CFI VB SameValue
+          CFI V0 SameValue
+          CFI V1 SameValue
+          CFI R7 SameValue
+          CFI ?RET_LOW Frame(CFA_SP, 1)
+          CFI ?RET_HIGH Frame(CFA_SP, 2)
+          CFI ?BRET_EXT Frame(CFA_SP, 3)
+          CFI DPL0 SameValue
+          CFI DPH0 SameValue
+          CFI CFA_SP SP+-3
+          CFI CFA_XSP16 XSP16+0
+          CFI EndBlock cfiBlock50
 // 2449 #endif // NV_RESTORE
 // 2450 
 // 2451 #if defined ( NV_RESTORE )
@@ -10161,61 +10951,649 @@ ZDSecMgrInitNV:
 // 2461  *
 // 2462  * @return      None.
 // 2463  */
+
+        RSEG BANKED_CODE:CODE:NOROOT(0)
 // 2464 static void ZDSecMgrRestoreFromNV( void )
+ZDSecMgrRestoreFromNV:
+          CFI Block cfiBlock51 Using cfiCommon0
+          CFI Function ZDSecMgrRestoreFromNV
+        CODE
 // 2465 {
+        FUNCALL ZDSecMgrRestoreFromNV, osal_nv_read
+        LOCFRAME ISTACK, 0, STACK
+        LOCFRAME PSTACK, 0, STACK
+        LOCFRAME XSTACK, 22, STACK
+        LOCFRAME IOVERLAY, 0, STATIC
+        LOCFRAME DOVERLAY, 0, STATIC
+        ARGFRAME ISTACK, 0, STACK
+        ARGFRAME PSTACK, 0, STACK
+        ARGFRAME XSTACK, 22, STACK
+        ARGFRAME IOVERLAY, 0, STATIC
+        ARGFRAME DOVERLAY, 0, STATIC
+        FUNCALL ZDSecMgrRestoreFromNV, osal_mem_alloc
+        LOCFRAME ISTACK, 0, STACK
+        LOCFRAME PSTACK, 0, STACK
+        LOCFRAME XSTACK, 18, STACK
+        LOCFRAME IOVERLAY, 0, STATIC
+        LOCFRAME DOVERLAY, 0, STATIC
+        ARGFRAME ISTACK, 0, STACK
+        ARGFRAME PSTACK, 0, STACK
+        ARGFRAME XSTACK, 18, STACK
+        ARGFRAME IOVERLAY, 0, STATIC
+        ARGFRAME DOVERLAY, 0, STATIC
+        FUNCALL ZDSecMgrRestoreFromNV, osal_nv_read
+        LOCFRAME ISTACK, 0, STACK
+        LOCFRAME PSTACK, 0, STACK
+        LOCFRAME XSTACK, 22, STACK
+        LOCFRAME IOVERLAY, 0, STATIC
+        LOCFRAME DOVERLAY, 0, STATIC
+        ARGFRAME ISTACK, 0, STACK
+        ARGFRAME PSTACK, 0, STACK
+        ARGFRAME XSTACK, 22, STACK
+        ARGFRAME IOVERLAY, 0, STATIC
+        ARGFRAME DOVERLAY, 0, STATIC
+        FUNCALL ZDSecMgrRestoreFromNV, osal_nv_read
+        LOCFRAME ISTACK, 0, STACK
+        LOCFRAME PSTACK, 0, STACK
+        LOCFRAME XSTACK, 22, STACK
+        LOCFRAME IOVERLAY, 0, STATIC
+        LOCFRAME DOVERLAY, 0, STATIC
+        ARGFRAME ISTACK, 0, STACK
+        ARGFRAME PSTACK, 0, STACK
+        ARGFRAME XSTACK, 22, STACK
+        ARGFRAME IOVERLAY, 0, STATIC
+        ARGFRAME DOVERLAY, 0, STATIC
+        FUNCALL ZDSecMgrRestoreFromNV, osal_nv_write
+        LOCFRAME ISTACK, 0, STACK
+        LOCFRAME PSTACK, 0, STACK
+        LOCFRAME XSTACK, 22, STACK
+        LOCFRAME IOVERLAY, 0, STATIC
+        LOCFRAME DOVERLAY, 0, STATIC
+        ARGFRAME ISTACK, 0, STACK
+        ARGFRAME PSTACK, 0, STACK
+        ARGFRAME XSTACK, 22, STACK
+        ARGFRAME IOVERLAY, 0, STATIC
+        ARGFRAME DOVERLAY, 0, STATIC
+        FUNCALL ZDSecMgrRestoreFromNV, osal_memset
+        LOCFRAME ISTACK, 0, STACK
+        LOCFRAME PSTACK, 0, STACK
+        LOCFRAME XSTACK, 18, STACK
+        LOCFRAME IOVERLAY, 0, STATIC
+        LOCFRAME DOVERLAY, 0, STATIC
+        ARGFRAME ISTACK, 0, STACK
+        ARGFRAME PSTACK, 0, STACK
+        ARGFRAME XSTACK, 18, STACK
+        ARGFRAME IOVERLAY, 0, STATIC
+        ARGFRAME DOVERLAY, 0, STATIC
+        FUNCALL ZDSecMgrRestoreFromNV, osal_mem_free
+        LOCFRAME ISTACK, 0, STACK
+        LOCFRAME PSTACK, 0, STACK
+        LOCFRAME XSTACK, 18, STACK
+        LOCFRAME IOVERLAY, 0, STATIC
+        LOCFRAME DOVERLAY, 0, STATIC
+        ARGFRAME ISTACK, 0, STACK
+        ARGFRAME PSTACK, 0, STACK
+        ARGFRAME XSTACK, 18, STACK
+        ARGFRAME IOVERLAY, 0, STATIC
+        ARGFRAME DOVERLAY, 0, STATIC
+        FUNCALL ZDSecMgrRestoreFromNV, osal_nv_read
+        LOCFRAME ISTACK, 0, STACK
+        LOCFRAME PSTACK, 0, STACK
+        LOCFRAME XSTACK, 22, STACK
+        LOCFRAME IOVERLAY, 0, STATIC
+        LOCFRAME DOVERLAY, 0, STATIC
+        ARGFRAME ISTACK, 0, STACK
+        ARGFRAME PSTACK, 0, STACK
+        ARGFRAME XSTACK, 22, STACK
+        ARGFRAME IOVERLAY, 0, STATIC
+        ARGFRAME DOVERLAY, 0, STATIC
+        REQUIRE ?V0
+        REQUIRE ?V1
+        REQUIRE ?V2
+        REQUIRE ?V3
+        REQUIRE ?V4
+        REQUIRE ?V5
+        REQUIRE ?V6
+        REQUIRE ?V7
+        MOV     A,#-0x10
+        LCALL   ?BANKED_ENTER_XDATA
+          CFI DPH0 load(1, XDATA, add(CFA_XSP16, literal(-1)))
+          CFI DPL0 load(1, XDATA, add(CFA_XSP16, literal(-2)))
+          CFI ?BRET_EXT load(1, XDATA, add(CFA_XSP16, literal(-3)))
+          CFI ?RET_HIGH load(1, XDATA, add(CFA_XSP16, literal(-4)))
+          CFI ?RET_LOW load(1, XDATA, add(CFA_XSP16, literal(-5)))
+          CFI R7 load(1, XDATA, add(CFA_XSP16, literal(-6)))
+          CFI V7 load(1, XDATA, add(CFA_XSP16, literal(-7)))
+          CFI V6 load(1, XDATA, add(CFA_XSP16, literal(-8)))
+          CFI V5 load(1, XDATA, add(CFA_XSP16, literal(-9)))
+          CFI V4 load(1, XDATA, add(CFA_XSP16, literal(-10)))
+          CFI V3 load(1, XDATA, add(CFA_XSP16, literal(-11)))
+          CFI V2 load(1, XDATA, add(CFA_XSP16, literal(-12)))
+          CFI V1 load(1, XDATA, add(CFA_XSP16, literal(-13)))
+          CFI V0 load(1, XDATA, add(CFA_XSP16, literal(-14)))
+          CFI VB load(1, XDATA, add(CFA_XSP16, literal(-15)))
+          CFI R6 load(1, XDATA, add(CFA_XSP16, literal(-16)))
+          CFI CFA_SP SP+0
+          CFI CFA_XSP16 add(XSP16, 16)
+        ; Saved register size: 16
+        ; Auto size: 2
+        MOV     A,#-0x2
+        LCALL   ?ALLOC_XSTACK8
+          CFI CFA_XSP16 add(XSP16, 18)
 // 2466   nvDeviceListHdr_t hdr;
 // 2467   APSME_LinkKeyData_t *pApsLinkKey = NULL;
+        MOV     ?V0,#0x0
+        MOV     ?V1,#0x0
 // 2468 
 // 2469   if ((osal_nv_read(ZCD_NV_APS_LINK_KEY_TABLE, 0, sizeof(nvDeviceListHdr_t), &hdr) == ZSUCCESS) &&
 // 2470       ((hdr.numRecs > 0) && (hdr.numRecs <= ZDSECMGR_ENTRY_MAX)))
+        ; Setup parameters for call to function osal_nv_read
+        MOV     R0,?XSP + 0
+        MOV     R1,?XSP + 1
+        MOV     ?V2,R0
+        MOV     ?V3,R1
+        MOV     R0,#?V2
+        LCALL   ?PUSH_XSTACK_I_TWO
+          CFI CFA_XSP16 add(XSP16, 20)
+        MOV     ?V2,#0x2
+        MOV     ?V3,#0x0
+        MOV     R0,#?V2
+        LCALL   ?PUSH_XSTACK_I_TWO
+          CFI CFA_XSP16 add(XSP16, 22)
+        MOV     R4,#0x0
+        MOV     R5,#0x0
+        MOV     R2,#0x4c
+        MOV     R3,#0x0
+        LCALL   `??osal_nv_read::?relay`; Banked call to: osal_nv_read
+        MOV     A,#0x4
+        LCALL   ?DEALLOC_XSTACK8
+          CFI CFA_XSP16 add(XSP16, 18)
+        MOV     A,R1
+        JZ      $+5
+        LJMP    ??ZDSecMgrRestoreFromNV_0 & 0xFFFF
+        MOV     DPL,?XSP + 0
+        MOV     DPH,?XSP + 1
+        MOVX    A,@DPTR
+        MOV     R0,A
+        INC     DPTR
+        MOVX    A,@DPTR
+        MOV     R1,A
+        MOV     A,R0
+        ORL     A,R1
+        JNZ     $+5
+        LJMP    ??ZDSecMgrRestoreFromNV_0 & 0xFFFF
+        MOV     DPL,?XSP + 0
+        MOV     DPH,?XSP + 1
+        CLR     C
+        MOVX    A,@DPTR
+        SUBB    A,#0x4
+        INC     DPTR
+        MOVX    A,@DPTR
+        SUBB    A,#0x0
+        JC      $+5
+        LJMP    ??ZDSecMgrRestoreFromNV_0 & 0xFFFF
 // 2471   {
 // 2472     uint8 x;
 // 2473 
 // 2474     pApsLinkKey = (APSME_LinkKeyData_t *)osal_mem_alloc(sizeof(APSME_LinkKeyData_t));
+        ; Setup parameters for call to function osal_mem_alloc
+        MOV     R2,#0x18
+        MOV     R3,#0x0
+        LCALL   `??osal_mem_alloc::?relay`; Banked call to: osal_mem_alloc
+        MOV     ?V2,R2
+        MOV     ?V3,R3
+        MOV     ?V0,?V2
+        MOV     ?V1,?V3
 // 2475 
 // 2476     for (x = 0; x < ZDSECMGR_ENTRY_MAX; x++)
+        MOV     R6,#0x0
+        LJMP    ??ZDSecMgrRestoreFromNV_1 & 0xFFFF
 // 2477     {
 // 2478       if ( osal_nv_read( ZCD_NV_APS_LINK_KEY_TABLE,
 // 2479                         (uint16)(sizeof(nvDeviceListHdr_t) + (x * sizeof(ZDSecMgrEntry_t))),
 // 2480                         sizeof(ZDSecMgrEntry_t), &ZDSecMgrEntries[x] ) == SUCCESS )
+??ZDSecMgrRestoreFromNV_2:
+        ; Setup parameters for call to function osal_nv_read
+        MOV     A,R6
+        MOV     R0,A
+        MOV     R1,#0x0
+        MOV     A,R0
+        MOV     B,#0x5
+        MUL     AB
+        XCH     A,R0
+        MOV     R2,B
+        MOV     B,#0x0
+        MUL     AB
+        ADD     A,R2
+        MOV     R2,A
+        MOV     B,#0x5
+        MOV     A,R1
+        MUL     AB
+        ADD     A,R2
+        MOV     R1,A
+        MOV     DPTR,#ZDSecMgrEntries
+        MOVX    A,@DPTR
+        ADD     A,R0
+        MOV     ?V2,A
+        INC     DPTR
+        MOVX    A,@DPTR
+        ADDC    A,R1
+        MOV     ?V3,A
+        MOV     R0,#?V2
+        LCALL   ?PUSH_XSTACK_I_TWO
+          CFI CFA_XSP16 add(XSP16, 20)
+        MOV     ?V2,#0x5
+        MOV     ?V3,#0x0
+        MOV     R0,#?V2
+        LCALL   ?PUSH_XSTACK_I_TWO
+          CFI CFA_XSP16 add(XSP16, 22)
+        MOV     A,R6
+        MOV     R0,A
+        MOV     R1,#0x0
+        MOV     A,R0
+        MOV     B,#0x5
+        MUL     AB
+        XCH     A,R0
+        MOV     R2,B
+        MOV     B,#0x0
+        MUL     AB
+        ADD     A,R2
+        MOV     R2,A
+        MOV     B,#0x5
+        MOV     A,R1
+        MUL     AB
+        ADD     A,R2
+        MOV     R1,A
+        MOV     A,R0
+        ADD     A,#0x2
+        MOV     R4,A
+        CLR     A
+        ADDC    A,R1
+        MOV     R5,A
+        MOV     R2,#0x4c
+        MOV     R3,#0x0
+        LCALL   `??osal_nv_read::?relay`; Banked call to: osal_nv_read
+        MOV     A,#0x4
+        LCALL   ?DEALLOC_XSTACK8
+          CFI CFA_XSP16 add(XSP16, 18)
+        MOV     A,R1
+        JZ      $+5
+        LJMP    ??ZDSecMgrRestoreFromNV_3 & 0xFFFF
 // 2481       {
 // 2482         // update data only for valid entries
 // 2483         if ( ZDSecMgrEntries[x].ami != INVALID_NODE_ADDR )
+        MOV     A,R6
+        MOV     R0,A
+        MOV     R1,#0x0
+        MOV     A,R0
+        MOV     B,#0x5
+        MUL     AB
+        XCH     A,R0
+        MOV     R2,B
+        MOV     B,#0x0
+        MUL     AB
+        ADD     A,R2
+        MOV     R2,A
+        MOV     B,#0x5
+        MOV     A,R1
+        MUL     AB
+        ADD     A,R2
+        MOV     R1,A
+        MOV     DPTR,#ZDSecMgrEntries
+        MOVX    A,@DPTR
+        ADD     A,R0
+        MOV     R2,A
+        INC     DPTR
+        MOVX    A,@DPTR
+        ADDC    A,R1
+        MOV     DPL,R2
+        MOV     DPH,A
+        MOVX    A,@DPTR
+        XRL     A,#0xfe
+        JNZ     ??ZDSecMgrRestoreFromNV_4
+        INC     DPTR
+        MOVX    A,@DPTR
+        XRL     A,#0xff
+??ZDSecMgrRestoreFromNV_4:
+        JNZ     $+5
+        LJMP    ??ZDSecMgrRestoreFromNV_3 & 0xFFFF
 // 2484         {
 // 2485           if (pApsLinkKey != NULL)
+        MOV     A,?V0
+        ORL     A,?V1
+        JNZ     $+5
+        LJMP    ??ZDSecMgrRestoreFromNV_3 & 0xFFFF
 // 2486           {
 // 2487             // read the key form NV, keyNvId must be ZCD_NV_APS_LINK_KEY_DATA_START based
 // 2488             osal_nv_read( ZDSecMgrEntries[x].keyNvId, 0,
 // 2489                          sizeof(APSME_LinkKeyData_t), pApsLinkKey );
+        ; Setup parameters for call to function osal_nv_read
+        MOV     R0,#?V0
+        LCALL   ?PUSH_XSTACK_I_TWO
+          CFI CFA_XSP16 add(XSP16, 20)
+        MOV     ?V2,#0x18
+        MOV     ?V3,#0x0
+        MOV     R0,#?V2
+        LCALL   ?PUSH_XSTACK_I_TWO
+          CFI CFA_XSP16 add(XSP16, 22)
+        MOV     R4,#0x0
+        MOV     R5,#0x0
+        MOV     A,R6
+        MOV     R0,A
+        MOV     R1,#0x0
+        MOV     A,R0
+        MOV     B,#0x5
+        MUL     AB
+        XCH     A,R0
+        MOV     R2,B
+        MOV     B,#0x0
+        MUL     AB
+        ADD     A,R2
+        MOV     R2,A
+        MOV     B,#0x5
+        MOV     A,R1
+        MUL     AB
+        ADD     A,R2
+        MOV     R1,A
+        MOV     DPTR,#ZDSecMgrEntries
+        MOVX    A,@DPTR
+        ADD     A,R0
+        MOV     R2,A
+        INC     DPTR
+        MOVX    A,@DPTR
+        ADDC    A,R1
+        MOV     DPL,R2
+        MOV     DPH,A
+        INC     DPTR
+        INC     DPTR
+        MOVX    A,@DPTR
+        MOV     R2,A
+        INC     DPTR
+        MOVX    A,@DPTR
+        MOV     R3,A
+        LCALL   `??osal_nv_read::?relay`; Banked call to: osal_nv_read
+        MOV     A,#0x4
+        LCALL   ?DEALLOC_XSTACK8
+          CFI CFA_XSP16 add(XSP16, 18)
+        MOV     A,R1
 // 2490 
 // 2491             // set new values for the counter
 // 2492             pApsLinkKey->txFrmCntr += ( MAX_APS_FRAMECOUNTER_CHANGES + 1 );
+        MOV     DPTR,#__Constant_3e9
+        MOV     R0,#?V4
+        LCALL   ?L_MOV_X
+        MOV     A,?V0
+        ADD     A,#0x10
+        MOV     DPL,A
+        CLR     A
+        ADDC    A,?V1
+        MOV     DPH,A
+        MOV     R0,#?V4
+        LCALL   ?L_ADD_TO_X
 // 2493 
 // 2494             // restore values for counters in RAM
 // 2495             ApsLinkKeyFrmCntr[ZDSecMgrEntries[x].keyNvId - ZCD_NV_APS_LINK_KEY_DATA_START].txFrmCntr =
 // 2496                                             pApsLinkKey->txFrmCntr;
+        MOV     A,?V0
+        ADD     A,#0x10
+        MOV     DPL,A
+        CLR     A
+        ADDC    A,?V1
+        MOV     DPH,A
+        LCALL   ?XLOAD_R0123
+        MOV     A,R6
+        MOV     R4,A
+        MOV     R5,#0x0
+        MOV     A,R4
+        MOV     B,#0x5
+        MUL     AB
+        XCH     A,R4
+        MOV     R7,B
+        MOV     B,#0x0
+        MUL     AB
+        ADD     A,R7
+        MOV     R7,A
+        MOV     B,#0x5
+        MOV     A,R5
+        MUL     AB
+        ADD     A,R7
+        MOV     R5,A
+        MOV     DPTR,#ZDSecMgrEntries
+        MOVX    A,@DPTR
+        ADD     A,R4
+        MOV     R7,A
+        INC     DPTR
+        MOVX    A,@DPTR
+        ADDC    A,R5
+        MOV     DPL,R7
+        MOV     DPH,A
+        INC     DPTR
+        INC     DPTR
+        MOVX    A,@DPTR
+        MOV     R4,A
+        INC     DPTR
+        MOVX    A,@DPTR
+        MOV     R5,A
+        MOV     A,R4
+        MOV     B,#0x9
+        MUL     AB
+        XCH     A,R4
+        MOV     R7,B
+        MOV     B,#0x0
+        MUL     AB
+        ADD     A,R7
+        MOV     R7,A
+        MOV     B,#0x9
+        MOV     A,R5
+        MUL     AB
+        ADD     A,R7
+        MOV     R5,A
+        MOV     A,#(ApsLinkKeyFrmCntr + 247) & 0xff
+        ADD     A,R4
+        MOV     DPL,A
+        MOV     A,#((ApsLinkKeyFrmCntr - 4617) >> 8) & 0xff
+        ADDC    A,R5
+        MOV     DPH,A
+        LCALL   ?XSTORE_R0123
 // 2497 
 // 2498             ApsLinkKeyFrmCntr[ZDSecMgrEntries[x].keyNvId - ZCD_NV_APS_LINK_KEY_DATA_START].rxFrmCntr =
 // 2499                                             pApsLinkKey->rxFrmCntr;
+        MOV     A,?V0
+        ADD     A,#0x14
+        MOV     DPL,A
+        CLR     A
+        ADDC    A,?V1
+        MOV     DPH,A
+        LCALL   ?XLOAD_R0123
+        MOV     A,R6
+        MOV     R4,A
+        MOV     R5,#0x0
+        MOV     A,R4
+        MOV     B,#0x5
+        MUL     AB
+        XCH     A,R4
+        MOV     R7,B
+        MOV     B,#0x0
+        MUL     AB
+        ADD     A,R7
+        MOV     R7,A
+        MOV     B,#0x5
+        MOV     A,R5
+        MUL     AB
+        ADD     A,R7
+        MOV     R5,A
+        MOV     DPTR,#ZDSecMgrEntries
+        MOVX    A,@DPTR
+        ADD     A,R4
+        MOV     R7,A
+        INC     DPTR
+        MOVX    A,@DPTR
+        ADDC    A,R5
+        MOV     DPL,R7
+        MOV     DPH,A
+        INC     DPTR
+        INC     DPTR
+        MOVX    A,@DPTR
+        MOV     R4,A
+        INC     DPTR
+        MOVX    A,@DPTR
+        MOV     R5,A
+        MOV     A,R4
+        MOV     B,#0x9
+        MUL     AB
+        XCH     A,R4
+        MOV     R7,B
+        MOV     B,#0x0
+        MUL     AB
+        ADD     A,R7
+        MOV     R7,A
+        MOV     B,#0x9
+        MOV     A,R5
+        MUL     AB
+        ADD     A,R7
+        MOV     R5,A
+        MOV     A,#(ApsLinkKeyFrmCntr + 251) & 0xff
+        ADD     A,R4
+        MOV     DPL,A
+        MOV     A,#((ApsLinkKeyFrmCntr - 4613) >> 8) & 0xff
+        ADDC    A,R5
+        MOV     DPH,A
+        LCALL   ?XSTORE_R0123
 // 2500 
 // 2501             osal_nv_write( ZDSecMgrEntries[x].keyNvId, 0,
 // 2502                           sizeof(APSME_LinkKeyData_t), pApsLinkKey );
+        ; Setup parameters for call to function osal_nv_write
+        MOV     R0,#?V0
+        LCALL   ?PUSH_XSTACK_I_TWO
+          CFI CFA_XSP16 add(XSP16, 20)
+        MOV     ?V2,#0x18
+        MOV     ?V3,#0x0
+        MOV     R0,#?V2
+        LCALL   ?PUSH_XSTACK_I_TWO
+          CFI CFA_XSP16 add(XSP16, 22)
+        MOV     R4,#0x0
+        MOV     R5,#0x0
+        MOV     A,R6
+        MOV     R0,A
+        MOV     R1,#0x0
+        MOV     A,R0
+        MOV     B,#0x5
+        MUL     AB
+        XCH     A,R0
+        MOV     R2,B
+        MOV     B,#0x0
+        MUL     AB
+        ADD     A,R2
+        MOV     R2,A
+        MOV     B,#0x5
+        MOV     A,R1
+        MUL     AB
+        ADD     A,R2
+        MOV     R1,A
+        MOV     DPTR,#ZDSecMgrEntries
+        MOVX    A,@DPTR
+        ADD     A,R0
+        MOV     R2,A
+        INC     DPTR
+        MOVX    A,@DPTR
+        ADDC    A,R1
+        MOV     DPL,R2
+        MOV     DPH,A
+        INC     DPTR
+        INC     DPTR
+        MOVX    A,@DPTR
+        MOV     R2,A
+        INC     DPTR
+        MOVX    A,@DPTR
+        MOV     R3,A
+        LCALL   `??osal_nv_write::?relay`; Banked call to: osal_nv_write
+        MOV     A,#0x4
+        LCALL   ?DEALLOC_XSTACK8
+          CFI CFA_XSP16 add(XSP16, 18)
+        MOV     A,R1
 // 2503 
 // 2504             // clear copy of key in RAM
 // 2505             osal_memset(pApsLinkKey, 0x00, sizeof(APSME_LinkKeyData_t));
+        ; Setup parameters for call to function osal_memset
+        MOV     R4,#0x18
+        MOV     R5,#0x0
+        MOV     R1,#0x0
+        MOV     R2,?V0
+        MOV     R3,?V1
+        LCALL   `??osal_memset::?relay`; Banked call to: osal_memset
 // 2506           }
 // 2507         }
 // 2508       }
 // 2509     }
+??ZDSecMgrRestoreFromNV_3:
+        INC     R6
+??ZDSecMgrRestoreFromNV_1:
+        MOV     A,R6
+        CLR     C
+        SUBB    A,#0x3
+        JNC     $+5
+        LJMP    ??ZDSecMgrRestoreFromNV_2 & 0xFFFF
 // 2510 
 // 2511     if (pApsLinkKey != NULL)
+        MOV     A,?V0
+        ORL     A,?V1
+        JZ      ??ZDSecMgrRestoreFromNV_0
 // 2512     {
 // 2513       osal_mem_free(pApsLinkKey);
+        ; Setup parameters for call to function osal_mem_free
+        MOV     R2,?V0
+        MOV     R3,?V1
+        LCALL   `??osal_mem_free::?relay`; Banked call to: osal_mem_free
 // 2514     }
 // 2515   }
 // 2516 
 // 2517   osal_nv_read( ZCD_NV_TRUSTCENTER_ADDR, 0, Z_EXTADDR_LEN, zgApsTrustCenterAddr );
+??ZDSecMgrRestoreFromNV_0:
+        ; Setup parameters for call to function osal_nv_read
+        MOV     ?V0,#zgApsTrustCenterAddr & 0xff
+        MOV     ?V1,#(zgApsTrustCenterAddr >> 8) & 0xff
+        MOV     R0,#?V0
+        LCALL   ?PUSH_XSTACK_I_TWO
+          CFI CFA_XSP16 add(XSP16, 20)
+        MOV     ?V0,#0x8
+        MOV     ?V1,#0x0
+        MOV     R0,#?V0
+        LCALL   ?PUSH_XSTACK_I_TWO
+          CFI CFA_XSP16 add(XSP16, 22)
+        MOV     R4,#0x0
+        MOV     R5,#0x0
+        MOV     R2,#0x71
+        MOV     R3,#0x0
+        LCALL   `??osal_nv_read::?relay`; Banked call to: osal_nv_read
+        MOV     A,#0x4
+        LCALL   ?DEALLOC_XSTACK8
+          CFI CFA_XSP16 add(XSP16, 18)
+        MOV     A,R1
 // 2518 }
+        MOV     A,#0x2
+        LCALL   ?DEALLOC_XSTACK8
+          CFI CFA_XSP16 add(XSP16, 16)
+        MOV     R7,#0x8
+        LJMP    ?BANKED_LEAVE_XDATA
+          CFI R6 SameValue
+          CFI VB SameValue
+          CFI V0 SameValue
+          CFI V1 SameValue
+          CFI V2 SameValue
+          CFI V3 SameValue
+          CFI V4 SameValue
+          CFI V5 SameValue
+          CFI V6 SameValue
+          CFI V7 SameValue
+          CFI R7 SameValue
+          CFI ?RET_LOW Frame(CFA_SP, 1)
+          CFI ?RET_HIGH Frame(CFA_SP, 2)
+          CFI ?BRET_EXT Frame(CFA_SP, 3)
+          CFI DPL0 SameValue
+          CFI DPH0 SameValue
+          CFI CFA_SP SP+-3
+          CFI CFA_XSP16 XSP16+0
+          CFI EndBlock cfiBlock51
 // 2519 #endif // NV_RESTORE
 // 2520 
 // 2521 /*********************************************************************
@@ -10231,7 +11609,7 @@ ZDSecMgrInitNV:
         RSEG BANKED_CODE:CODE:NOROOT(0)
 // 2530 void ZDSecMgrSetDefaultNV( void )
 ZDSecMgrSetDefaultNV:
-          CFI Block cfiBlock47 Using cfiCommon0
+          CFI Block cfiBlock52 Using cfiCommon0
           CFI Function ZDSecMgrSetDefaultNV
         CODE
 // 2531 {
@@ -10550,7 +11928,7 @@ ZDSecMgrSetDefaultNV:
           CFI DPH0 SameValue
           CFI CFA_SP SP+-3
           CFI CFA_XSP16 XSP16+0
-          CFI EndBlock cfiBlock47
+          CFI EndBlock cfiBlock52
 // 2569 
 // 2570 #if defined ( NV_RESTORE )
 // 2571 /*********************************************************************
@@ -10562,36 +11940,303 @@ ZDSecMgrSetDefaultNV:
 // 2577  *
 // 2578  * @return  none
 // 2579  */
+
+        RSEG BANKED_CODE:CODE:NOROOT(0)
 // 2580 static void ZDSecMgrUpdateNV( uint16 index )
+ZDSecMgrUpdateNV:
+          CFI Block cfiBlock53 Using cfiCommon0
+          CFI Function ZDSecMgrUpdateNV
+        CODE
 // 2581 {
+        FUNCALL ZDSecMgrUpdateNV, osal_nv_write
+        LOCFRAME ISTACK, 0, STACK
+        LOCFRAME PSTACK, 0, STACK
+        LOCFRAME XSTACK, 16, STACK
+        LOCFRAME IOVERLAY, 0, STATIC
+        LOCFRAME DOVERLAY, 0, STATIC
+        ARGFRAME ISTACK, 0, STACK
+        ARGFRAME PSTACK, 0, STACK
+        ARGFRAME XSTACK, 16, STACK
+        ARGFRAME IOVERLAY, 0, STATIC
+        ARGFRAME DOVERLAY, 0, STATIC
+        FUNCALL ZDSecMgrUpdateNV, osal_nv_read
+        LOCFRAME ISTACK, 0, STACK
+        LOCFRAME PSTACK, 0, STACK
+        LOCFRAME XSTACK, 16, STACK
+        LOCFRAME IOVERLAY, 0, STATIC
+        LOCFRAME DOVERLAY, 0, STATIC
+        ARGFRAME ISTACK, 0, STACK
+        ARGFRAME PSTACK, 0, STACK
+        ARGFRAME XSTACK, 16, STACK
+        ARGFRAME IOVERLAY, 0, STATIC
+        ARGFRAME DOVERLAY, 0, STATIC
+        FUNCALL ZDSecMgrUpdateNV, osal_nv_write
+        LOCFRAME ISTACK, 0, STACK
+        LOCFRAME PSTACK, 0, STACK
+        LOCFRAME XSTACK, 16, STACK
+        LOCFRAME IOVERLAY, 0, STATIC
+        LOCFRAME DOVERLAY, 0, STATIC
+        ARGFRAME ISTACK, 0, STACK
+        ARGFRAME PSTACK, 0, STACK
+        ARGFRAME XSTACK, 16, STACK
+        ARGFRAME IOVERLAY, 0, STATIC
+        ARGFRAME DOVERLAY, 0, STATIC
+        REQUIRE ?V0
+        REQUIRE ?V1
+        MOV     A,#-0xa
+        LCALL   ?BANKED_ENTER_XDATA
+          CFI DPH0 load(1, XDATA, add(CFA_XSP16, literal(-1)))
+          CFI DPL0 load(1, XDATA, add(CFA_XSP16, literal(-2)))
+          CFI ?BRET_EXT load(1, XDATA, add(CFA_XSP16, literal(-3)))
+          CFI ?RET_HIGH load(1, XDATA, add(CFA_XSP16, literal(-4)))
+          CFI ?RET_LOW load(1, XDATA, add(CFA_XSP16, literal(-5)))
+          CFI R7 load(1, XDATA, add(CFA_XSP16, literal(-6)))
+          CFI V1 load(1, XDATA, add(CFA_XSP16, literal(-7)))
+          CFI V0 load(1, XDATA, add(CFA_XSP16, literal(-8)))
+          CFI VB load(1, XDATA, add(CFA_XSP16, literal(-9)))
+          CFI R6 load(1, XDATA, add(CFA_XSP16, literal(-10)))
+          CFI CFA_SP SP+0
+          CFI CFA_XSP16 add(XSP16, 10)
+        ; Saved register size: 10
+        ; Auto size: 2
+        MOV     A,#-0x2
+        LCALL   ?ALLOC_XSTACK8
+          CFI CFA_XSP16 add(XSP16, 12)
+        MOV     A,R2
+        MOV     R6,A
+        MOV     A,R3
+        MOV     R7,A
 // 2582   nvDeviceListHdr_t hdr;
 // 2583 
 // 2584   if (ZDSecMgrEntries != NULL)
+        MOV     DPTR,#ZDSecMgrEntries
+        MOVX    A,@DPTR
+        MOV     R0,A
+        INC     DPTR
+        MOVX    A,@DPTR
+        MOV     R1,A
+        MOV     A,R0
+        ORL     A,R1
+        JZ      ??ZDSecMgrUpdateNV_0
 // 2585   {
 // 2586     // Save off the record
 // 2587     osal_nv_write( ZCD_NV_APS_LINK_KEY_TABLE,
 // 2588                    (uint16)((sizeof(nvDeviceListHdr_t)) + (index * sizeof(ZDSecMgrEntry_t))),
 // 2589                    sizeof(ZDSecMgrEntry_t), &ZDSecMgrEntries[index] );
+        ; Setup parameters for call to function osal_nv_write
+        MOV     A,R6
+        MOV     R0,A
+        MOV     A,R7
+        MOV     R1,A
+        MOV     A,R0
+        MOV     B,#0x5
+        MUL     AB
+        XCH     A,R0
+        MOV     R2,B
+        MOV     B,#0x0
+        MUL     AB
+        ADD     A,R2
+        MOV     R2,A
+        MOV     B,#0x5
+        MOV     A,R1
+        MUL     AB
+        ADD     A,R2
+        MOV     R1,A
+        MOV     DPTR,#ZDSecMgrEntries
+        MOVX    A,@DPTR
+        ADD     A,R0
+        MOV     ?V0,A
+        INC     DPTR
+        MOVX    A,@DPTR
+        ADDC    A,R1
+        MOV     ?V1,A
+        MOV     R0,#?V0
+        LCALL   ?PUSH_XSTACK_I_TWO
+          CFI CFA_XSP16 add(XSP16, 14)
+        MOV     ?V0,#0x5
+        MOV     ?V1,#0x0
+        MOV     R0,#?V0
+        LCALL   ?PUSH_XSTACK_I_TWO
+          CFI CFA_XSP16 add(XSP16, 16)
+        MOV     A,R6
+        MOV     R0,A
+        MOV     A,R7
+        MOV     R1,A
+        MOV     A,R0
+        MOV     B,#0x5
+        MUL     AB
+        XCH     A,R0
+        MOV     R2,B
+        MOV     B,#0x0
+        MUL     AB
+        ADD     A,R2
+        MOV     R2,A
+        MOV     B,#0x5
+        MOV     A,R1
+        MUL     AB
+        ADD     A,R2
+        MOV     R1,A
+        MOV     A,R0
+        ADD     A,#0x2
+        MOV     R4,A
+        CLR     A
+        ADDC    A,R1
+        MOV     R5,A
+        MOV     R2,#0x4c
+        MOV     R3,#0x0
+        LCALL   `??osal_nv_write::?relay`; Banked call to: osal_nv_write
+        MOV     A,#0x4
+        LCALL   ?DEALLOC_XSTACK8
+          CFI CFA_XSP16 add(XSP16, 12)
+        MOV     A,R1
 // 2590   }
 // 2591 
 // 2592   if (osal_nv_read(ZCD_NV_APS_LINK_KEY_TABLE, 0, sizeof(nvDeviceListHdr_t), &hdr) == ZSUCCESS)
+??ZDSecMgrUpdateNV_0:
+        ; Setup parameters for call to function osal_nv_read
+        MOV     R0,?XSP + 0
+        MOV     R1,?XSP + 1
+        MOV     ?V0,R0
+        MOV     ?V1,R1
+        MOV     R0,#?V0
+        LCALL   ?PUSH_XSTACK_I_TWO
+          CFI CFA_XSP16 add(XSP16, 14)
+        MOV     ?V0,#0x2
+        MOV     ?V1,#0x0
+        MOV     R0,#?V0
+        LCALL   ?PUSH_XSTACK_I_TWO
+          CFI CFA_XSP16 add(XSP16, 16)
+        MOV     R4,#0x0
+        MOV     R5,#0x0
+        MOV     R2,#0x4c
+        MOV     R3,#0x0
+        LCALL   `??osal_nv_read::?relay`; Banked call to: osal_nv_read
+        MOV     A,#0x4
+        LCALL   ?DEALLOC_XSTACK8
+          CFI CFA_XSP16 add(XSP16, 12)
+        MOV     A,R1
+        JZ      $+5
+        LJMP    ??ZDSecMgrUpdateNV_1 & 0xFFFF
 // 2593   {
 // 2594     if ( ZDSecMgrEntries[index].ami == INVALID_NODE_ADDR )
+        MOV     A,R6
+        MOV     B,#0x5
+        MUL     AB
+        XCH     A,R6
+        MOV     R0,B
+        MOV     B,#0x0
+        MUL     AB
+        ADD     A,R0
+        MOV     R0,A
+        MOV     B,#0x5
+        MOV     A,R7
+        MUL     AB
+        ADD     A,R0
+        MOV     R7,A
+        MOV     DPTR,#ZDSecMgrEntries
+        MOVX    A,@DPTR
+        ADD     A,R6
+        MOV     R0,A
+        INC     DPTR
+        MOVX    A,@DPTR
+        ADDC    A,R7
+        MOV     DPL,R0
+        MOV     DPH,A
+        MOVX    A,@DPTR
+        XRL     A,#0xfe
+        JNZ     ??ZDSecMgrUpdateNV_2
+        INC     DPTR
+        MOVX    A,@DPTR
+        XRL     A,#0xff
+??ZDSecMgrUpdateNV_2:
+        JNZ     ??ZDSecMgrUpdateNV_3
 // 2595     {
 // 2596       if (hdr.numRecs > 0)
+        MOV     DPL,?XSP + 0
+        MOV     DPH,?XSP + 1
+        MOVX    A,@DPTR
+        MOV     R0,A
+        INC     DPTR
+        MOVX    A,@DPTR
+        MOV     R1,A
+        MOV     A,R0
+        ORL     A,R1
+        JZ      ??ZDSecMgrUpdateNV_4
 // 2597       {
 // 2598         hdr.numRecs--;
+        MOV     DPL,?XSP + 0
+        MOV     DPH,?XSP + 1
+        MOVX    A,@DPTR
+        ADD     A,#-0x1
+        MOVX    @DPTR,A
+        INC     DPTR
+        MOVX    A,@DPTR
+        ADDC    A,#-0x1
+        MOVX    @DPTR,A
+        SJMP    ??ZDSecMgrUpdateNV_4
 // 2599       }
 // 2600     }
 // 2601     else
 // 2602     {
 // 2603       hdr.numRecs++;
+??ZDSecMgrUpdateNV_3:
+        MOV     DPL,?XSP + 0
+        MOV     DPH,?XSP + 1
+        MOVX    A,@DPTR
+        ADD     A,#0x1
+        MOVX    @DPTR,A
+        INC     DPTR
+        MOVX    A,@DPTR
+        ADDC    A,#0x0
+        MOVX    @DPTR,A
 // 2604     }
 // 2605 
 // 2606     // Save off the header
 // 2607     osal_nv_write( ZCD_NV_APS_LINK_KEY_TABLE, 0, sizeof( nvDeviceListHdr_t ), &hdr );
+??ZDSecMgrUpdateNV_4:
+        ; Setup parameters for call to function osal_nv_write
+        MOV     R0,?XSP + 0
+        MOV     R1,?XSP + 1
+        MOV     ?V0,R0
+        MOV     ?V1,R1
+        MOV     R0,#?V0
+        LCALL   ?PUSH_XSTACK_I_TWO
+          CFI CFA_XSP16 add(XSP16, 14)
+        MOV     ?V0,#0x2
+        MOV     ?V1,#0x0
+        MOV     R0,#?V0
+        LCALL   ?PUSH_XSTACK_I_TWO
+          CFI CFA_XSP16 add(XSP16, 16)
+        MOV     R4,#0x0
+        MOV     R5,#0x0
+        MOV     R2,#0x4c
+        MOV     R3,#0x0
+        LCALL   `??osal_nv_write::?relay`; Banked call to: osal_nv_write
+        MOV     A,#0x4
+        LCALL   ?DEALLOC_XSTACK8
+          CFI CFA_XSP16 add(XSP16, 12)
+        MOV     A,R1
 // 2608   }
 // 2609 }
+??ZDSecMgrUpdateNV_1:
+        MOV     A,#0x2
+        LCALL   ?DEALLOC_XSTACK8
+          CFI CFA_XSP16 add(XSP16, 10)
+        MOV     R7,#0x2
+        LJMP    ?BANKED_LEAVE_XDATA
+          CFI R6 SameValue
+          CFI VB SameValue
+          CFI V0 SameValue
+          CFI V1 SameValue
+          CFI R7 SameValue
+          CFI ?RET_LOW Frame(CFA_SP, 1)
+          CFI ?RET_HIGH Frame(CFA_SP, 2)
+          CFI ?BRET_EXT Frame(CFA_SP, 3)
+          CFI DPL0 SameValue
+          CFI DPH0 SameValue
+          CFI CFA_SP SP+-3
+          CFI CFA_XSP16 XSP16+0
+          CFI EndBlock cfiBlock53
 // 2610 #endif // NV_RESTORE
 // 2611 
 // 2612 /******************************************************************************
@@ -10609,7 +12254,7 @@ ZDSecMgrSetDefaultNV:
         RSEG BANKED_CODE:CODE:NOROOT(0)
 // 2623 ZStatus_t ZDSecMgrAPSRemove( uint16 nwkAddr, uint8 *extAddr, uint16 parentAddr )
 ZDSecMgrAPSRemove:
-          CFI Block cfiBlock48 Using cfiCommon0
+          CFI Block cfiBlock54 Using cfiCommon0
           CFI Function ZDSecMgrAPSRemove
         CODE
 // 2624 {
@@ -10718,7 +12363,7 @@ ZDSecMgrAPSRemove:
           CFI CFA_SP SP+-3
         LJMP    ?BRET
 // 2642 }
-          CFI EndBlock cfiBlock48
+          CFI EndBlock cfiBlock54
 // 2643 
 // 2644 /******************************************************************************
 // 2645  * @fn          APSME_TCLinkKeyInit
@@ -10737,33 +12382,55 @@ ZDSecMgrAPSRemove:
         RSEG BANKED_CODE:CODE:NOROOT(0)
 // 2657 void APSME_TCLinkKeyInit(uint8 setDefault)
 APSME_TCLinkKeyInit:
-          CFI Block cfiBlock49 Using cfiCommon0
+          CFI Block cfiBlock55 Using cfiCommon0
           CFI Function APSME_TCLinkKeyInit
         CODE
 // 2658 {
-        FUNCALL APSME_TCLinkKeyInit, osal_memset
+        FUNCALL APSME_TCLinkKeyInit, osal_nv_write
         LOCFRAME ISTACK, 0, STACK
         LOCFRAME PSTACK, 0, STACK
-        LOCFRAME XSTACK, 43, STACK
+        LOCFRAME XSTACK, 48, STACK
         LOCFRAME IOVERLAY, 0, STATIC
         LOCFRAME DOVERLAY, 0, STATIC
         ARGFRAME ISTACK, 0, STACK
         ARGFRAME PSTACK, 0, STACK
-        ARGFRAME XSTACK, 43, STACK
+        ARGFRAME XSTACK, 48, STACK
         ARGFRAME IOVERLAY, 0, STATIC
         ARGFRAME DOVERLAY, 0, STATIC
         FUNCALL APSME_TCLinkKeyInit, osal_memset
         LOCFRAME ISTACK, 0, STACK
         LOCFRAME PSTACK, 0, STACK
-        LOCFRAME XSTACK, 43, STACK
+        LOCFRAME XSTACK, 44, STACK
         LOCFRAME IOVERLAY, 0, STATIC
         LOCFRAME DOVERLAY, 0, STATIC
         ARGFRAME ISTACK, 0, STACK
         ARGFRAME PSTACK, 0, STACK
-        ARGFRAME XSTACK, 43, STACK
+        ARGFRAME XSTACK, 44, STACK
+        ARGFRAME IOVERLAY, 0, STATIC
+        ARGFRAME DOVERLAY, 0, STATIC
+        FUNCALL APSME_TCLinkKeyInit, osal_memset
+        LOCFRAME ISTACK, 0, STACK
+        LOCFRAME PSTACK, 0, STACK
+        LOCFRAME XSTACK, 44, STACK
+        LOCFRAME IOVERLAY, 0, STATIC
+        LOCFRAME DOVERLAY, 0, STATIC
+        ARGFRAME ISTACK, 0, STACK
+        ARGFRAME PSTACK, 0, STACK
+        ARGFRAME XSTACK, 44, STACK
         ARGFRAME IOVERLAY, 0, STATIC
         ARGFRAME DOVERLAY, 0, STATIC
         FUNCALL APSME_TCLinkKeyInit, osal_memcpy
+        LOCFRAME ISTACK, 0, STACK
+        LOCFRAME PSTACK, 0, STACK
+        LOCFRAME XSTACK, 47, STACK
+        LOCFRAME IOVERLAY, 0, STATIC
+        LOCFRAME DOVERLAY, 0, STATIC
+        ARGFRAME ISTACK, 0, STACK
+        ARGFRAME PSTACK, 0, STACK
+        ARGFRAME XSTACK, 47, STACK
+        ARGFRAME IOVERLAY, 0, STATIC
+        ARGFRAME DOVERLAY, 0, STATIC
+        FUNCALL APSME_TCLinkKeyInit, osal_nv_item_init
         LOCFRAME ISTACK, 0, STACK
         LOCFRAME PSTACK, 0, STACK
         LOCFRAME XSTACK, 46, STACK
@@ -10774,54 +12441,33 @@ APSME_TCLinkKeyInit:
         ARGFRAME XSTACK, 46, STACK
         ARGFRAME IOVERLAY, 0, STATIC
         ARGFRAME DOVERLAY, 0, STATIC
-        FUNCALL APSME_TCLinkKeyInit, osal_nv_item_init
-        LOCFRAME ISTACK, 0, STACK
-        LOCFRAME PSTACK, 0, STACK
-        LOCFRAME XSTACK, 45, STACK
-        LOCFRAME IOVERLAY, 0, STATIC
-        LOCFRAME DOVERLAY, 0, STATIC
-        ARGFRAME ISTACK, 0, STACK
-        ARGFRAME PSTACK, 0, STACK
-        ARGFRAME XSTACK, 45, STACK
-        ARGFRAME IOVERLAY, 0, STATIC
-        ARGFRAME DOVERLAY, 0, STATIC
         FUNCALL APSME_TCLinkKeyInit, osal_nv_read
         LOCFRAME ISTACK, 0, STACK
         LOCFRAME PSTACK, 0, STACK
-        LOCFRAME XSTACK, 47, STACK
+        LOCFRAME XSTACK, 48, STACK
         LOCFRAME IOVERLAY, 0, STATIC
         LOCFRAME DOVERLAY, 0, STATIC
         ARGFRAME ISTACK, 0, STACK
         ARGFRAME PSTACK, 0, STACK
-        ARGFRAME XSTACK, 47, STACK
-        ARGFRAME IOVERLAY, 0, STATIC
-        ARGFRAME DOVERLAY, 0, STATIC
-        FUNCALL APSME_TCLinkKeyInit, osal_nv_write
-        LOCFRAME ISTACK, 0, STACK
-        LOCFRAME PSTACK, 0, STACK
-        LOCFRAME XSTACK, 47, STACK
-        LOCFRAME IOVERLAY, 0, STATIC
-        LOCFRAME DOVERLAY, 0, STATIC
-        ARGFRAME ISTACK, 0, STACK
-        ARGFRAME PSTACK, 0, STACK
-        ARGFRAME XSTACK, 47, STACK
+        ARGFRAME XSTACK, 48, STACK
         ARGFRAME IOVERLAY, 0, STATIC
         ARGFRAME DOVERLAY, 0, STATIC
         FUNCALL APSME_TCLinkKeyInit, osal_memset
         LOCFRAME ISTACK, 0, STACK
         LOCFRAME PSTACK, 0, STACK
-        LOCFRAME XSTACK, 43, STACK
+        LOCFRAME XSTACK, 44, STACK
         LOCFRAME IOVERLAY, 0, STATIC
         LOCFRAME DOVERLAY, 0, STATIC
         ARGFRAME ISTACK, 0, STACK
         ARGFRAME PSTACK, 0, STACK
-        ARGFRAME XSTACK, 43, STACK
+        ARGFRAME XSTACK, 44, STACK
         ARGFRAME IOVERLAY, 0, STATIC
         ARGFRAME DOVERLAY, 0, STATIC
         REQUIRE ?V0
         REQUIRE ?V1
         REQUIRE ?V2
-        MOV     A,#-0xb
+        REQUIRE ?V3
+        MOV     A,#-0xc
         LCALL   ?BANKED_ENTER_XDATA
           CFI DPH0 load(1, XDATA, add(CFA_XSP16, literal(-1)))
           CFI DPL0 load(1, XDATA, add(CFA_XSP16, literal(-2)))
@@ -10829,18 +12475,21 @@ APSME_TCLinkKeyInit:
           CFI ?RET_HIGH load(1, XDATA, add(CFA_XSP16, literal(-4)))
           CFI ?RET_LOW load(1, XDATA, add(CFA_XSP16, literal(-5)))
           CFI R7 load(1, XDATA, add(CFA_XSP16, literal(-6)))
-          CFI V2 load(1, XDATA, add(CFA_XSP16, literal(-7)))
-          CFI V1 load(1, XDATA, add(CFA_XSP16, literal(-8)))
-          CFI V0 load(1, XDATA, add(CFA_XSP16, literal(-9)))
-          CFI VB load(1, XDATA, add(CFA_XSP16, literal(-10)))
-          CFI R6 load(1, XDATA, add(CFA_XSP16, literal(-11)))
+          CFI V3 load(1, XDATA, add(CFA_XSP16, literal(-7)))
+          CFI V2 load(1, XDATA, add(CFA_XSP16, literal(-8)))
+          CFI V1 load(1, XDATA, add(CFA_XSP16, literal(-9)))
+          CFI V0 load(1, XDATA, add(CFA_XSP16, literal(-10)))
+          CFI VB load(1, XDATA, add(CFA_XSP16, literal(-11)))
+          CFI R6 load(1, XDATA, add(CFA_XSP16, literal(-12)))
           CFI CFA_SP SP+0
-          CFI CFA_XSP16 add(XSP16, 11)
-        ; Saved register size: 11
+          CFI CFA_XSP16 add(XSP16, 12)
+        ; Saved register size: 12
         ; Auto size: 32
         MOV     A,#-0x20
         LCALL   ?ALLOC_XSTACK8
-          CFI CFA_XSP16 add(XSP16, 43)
+          CFI CFA_XSP16 add(XSP16, 44)
+        MOV     A,R1
+        MOV     R7,A
 // 2659   uint8             i;
 // 2660   APSME_TCLinkKey_t tcLinkKey;
 // 2661   uint8             rtrn;
@@ -10852,118 +12501,24 @@ APSME_TCLinkKeyInit:
 // 2665   {
 // 2666     // Making sure data is cleared for every key all the time
 // 2667     osal_memset( &tcLinkKey, 0x00, sizeof(APSME_TCLinkKey_t) );
-??APSME_TCLinkKeyInit_1:
-        ; Setup parameters for call to function osal_memset
-        MOV     R4,#0x20
-        MOV     R5,#0x0
-        MOV     R1,#0x0
-        MOV     R2,?XSP + 0
-        MOV     R3,?XSP + 1
-        LCALL   `??osal_memset::?relay`; Banked call to: osal_memset
 // 2668 
 // 2669     // Initialize first element of the table with the default TCLK
 // 2670     if((i == 0) && ( zgUseDefaultTCLK == TRUE ))
-        MOV     A,R6
-        JNZ     ??APSME_TCLinkKeyInit_2
-        MOV     DPTR,#zgUseDefaultTCLK
-        MOVX    A,@DPTR
-        XRL     A,#0x1
-        JNZ     ??APSME_TCLinkKeyInit_2
 // 2671     {
 // 2672       osal_memset( tcLinkKey.extAddr, 0xFF, Z_EXTADDR_LEN );
-        ; Setup parameters for call to function osal_memset
-        MOV     R4,#0x8
-        MOV     R5,#0x0
-        MOV     R1,#-0x1
-        MOV     R2,?XSP + 0
-        MOV     R3,?XSP + 1
-        LCALL   `??osal_memset::?relay`; Banked call to: osal_memset
 // 2673       osal_memcpy( tcLinkKey.key, defaultTCLinkKey, SEC_KEY_LEN);
-        ; Setup parameters for call to function osal_memcpy
-        MOV     ?V0,#defaultTCLinkKey & 0xff
-        MOV     ?V1,#(defaultTCLinkKey >> 8) & 0xff
-        MOV     ?V2,#-0x80
-        MOV     R0,#?V0
-        LCALL   ?PUSH_XSTACK_I_THREE
-          CFI CFA_XSP16 add(XSP16, 46)
-        MOV     R4,#0x10
-        MOV     R5,#0x0
-        MOV     A,#0xb
-        LCALL   ?XSTACK_DISP0_8
-        MOV     R2,DPL
-        MOV     R3,DPH
-        LCALL   `??osal_memcpy::?relay`; Banked call to: osal_memcpy
-        MOV     A,#0x3
-        LCALL   ?DEALLOC_XSTACK8
-          CFI CFA_XSP16 add(XSP16, 43)
 // 2674     }
 // 2675 
 // 2676     // If the item doesn't exist in NV memory, create and initialize
 // 2677     // it with the default value passed in, either defaultTCLK or 0
 // 2678     rtrn = osal_nv_item_init( (ZCD_NV_TCLK_TABLE_START + i),
 // 2679                                sizeof(APSME_TCLinkKey_t), &tcLinkKey);
-??APSME_TCLinkKeyInit_2:
-        ; Setup parameters for call to function osal_nv_item_init
-        MOV     R0,?XSP + 0
-        MOV     R1,?XSP + 1
-        MOV     ?V0,R0
-        MOV     ?V1,R1
-        MOV     R0,#?V0
-        LCALL   ?PUSH_XSTACK_I_TWO
-          CFI CFA_XSP16 add(XSP16, 45)
-        MOV     R4,#0x20
-        MOV     R5,#0x0
-        MOV     A,R6
-        MOV     R0,A
-        MOV     R1,#0x0
-        MOV     A,R0
-        ADD     A,#0x1
-        MOV     R2,A
-        MOV     A,R1
-        ADDC    A,#0x1
-        MOV     R3,A
-        LCALL   `??osal_nv_item_init::?relay`; Banked call to: osal_nv_item_init
-        MOV     A,#0x2
-        LCALL   ?DEALLOC_XSTACK8
-          CFI CFA_XSP16 add(XSP16, 43)
-        MOV     A,R1
 // 2680 
 // 2681     if (rtrn == SUCCESS)
-        JZ      $+5
-        LJMP    ??APSME_TCLinkKeyInit_3 & 0xFFFF
 // 2682     {
 // 2683       // set the Frame counters to 0 to existing keys in NV
 // 2684       osal_nv_read( ( ZCD_NV_TCLK_TABLE_START + i), 0,
 // 2685                      sizeof(APSME_TCLinkKey_t), &tcLinkKey );
-        ; Setup parameters for call to function osal_nv_read
-        MOV     R0,?XSP + 0
-        MOV     R1,?XSP + 1
-        MOV     ?V0,R0
-        MOV     ?V1,R1
-        MOV     R0,#?V0
-        LCALL   ?PUSH_XSTACK_I_TWO
-          CFI CFA_XSP16 add(XSP16, 45)
-        MOV     ?V0,#0x20
-        MOV     ?V1,#0x0
-        MOV     R0,#?V0
-        LCALL   ?PUSH_XSTACK_I_TWO
-          CFI CFA_XSP16 add(XSP16, 47)
-        MOV     R4,#0x0
-        MOV     R5,#0x0
-        MOV     A,R6
-        MOV     R0,A
-        MOV     R1,#0x0
-        MOV     A,R0
-        ADD     A,#0x1
-        MOV     R2,A
-        MOV     A,R1
-        ADDC    A,#0x1
-        MOV     R3,A
-        LCALL   `??osal_nv_read::?relay`; Banked call to: osal_nv_read
-        MOV     A,#0x4
-        LCALL   ?DEALLOC_XSTACK8
-          CFI CFA_XSP16 add(XSP16, 43)
-        MOV     A,R1
 // 2686 
 // 2687 #if defined ( NV_RESTORE )
 // 2688       if (setDefault == TRUE)
@@ -10975,50 +12530,25 @@ APSME_TCLinkKeyInit:
 // 2694       {
 // 2695         // increase the value stored in NV
 // 2696         tcLinkKey.txFrmCntr += ( MAX_TCLK_FRAMECOUNTER_CHANGES + 1 );
+??APSME_TCLinkKeyInit_1:
+        MOV     DPTR,#__Constant_b
+        MOV     R0,#?V0
+        LCALL   ?L_MOV_X
+        MOV     A,#0x18
+        LCALL   ?XSTACK_DISP0_8
+        MOV     R0,#?V0
+        LCALL   ?L_ADD_TO_X
 // 2697       }
 // 2698 #else
 // 2699       // Clear the counters if NV_RESTORE is not enabled and this NV item
 // 2700       // already existed in the NV memory
 // 2701       tcLinkKey.txFrmCntr = 0;
-        MOV     R2,#0x0
-        MOV     R3,#0x0
-        MOV     R4,#0x0
-        MOV     R5,#0x0
-        MOV     A,#0x18
-        LCALL   ?XSTACK_DISP0_8
-        MOV     A,R2
-        MOVX    @DPTR,A
-        INC     DPTR
-        MOV     A,R3
-        MOVX    @DPTR,A
-        INC     DPTR
-        MOV     A,R4
-        MOVX    @DPTR,A
-        INC     DPTR
-        MOV     A,R5
-        MOVX    @DPTR,A
 // 2702       tcLinkKey.rxFrmCntr = 0;
-        MOV     R2,#0x0
-        MOV     R3,#0x0
-        MOV     R4,#0x0
-        MOV     R5,#0x0
-        MOV     A,#0x1c
-        LCALL   ?XSTACK_DISP0_8
-        MOV     A,R2
-        MOVX    @DPTR,A
-        INC     DPTR
-        MOV     A,R3
-        MOVX    @DPTR,A
-        INC     DPTR
-        MOV     A,R4
-        MOVX    @DPTR,A
-        INC     DPTR
-        MOV     A,R5
-        MOVX    @DPTR,A
 // 2703 #endif  // NV_RESTORE
 // 2704 
 // 2705       osal_nv_write( ( ZCD_NV_TCLK_TABLE_START + i), 0,
 // 2706                       sizeof(APSME_TCLinkKey_t), &tcLinkKey );
+??APSME_TCLinkKeyInit_2:
         ; Setup parameters for call to function osal_nv_write
         MOV     R0,?XSP + 0
         MOV     R1,?XSP + 1
@@ -11026,12 +12556,12 @@ APSME_TCLinkKeyInit:
         MOV     ?V1,R1
         MOV     R0,#?V0
         LCALL   ?PUSH_XSTACK_I_TWO
-          CFI CFA_XSP16 add(XSP16, 45)
+          CFI CFA_XSP16 add(XSP16, 46)
         MOV     ?V0,#0x20
         MOV     ?V1,#0x0
         MOV     R0,#?V0
         LCALL   ?PUSH_XSTACK_I_TWO
-          CFI CFA_XSP16 add(XSP16, 47)
+          CFI CFA_XSP16 add(XSP16, 48)
         MOV     R4,#0x0
         MOV     R5,#0x0
         MOV     A,R6
@@ -11046,7 +12576,7 @@ APSME_TCLinkKeyInit:
         LCALL   `??osal_nv_write::?relay`; Banked call to: osal_nv_write
         MOV     A,#0x4
         LCALL   ?DEALLOC_XSTACK8
-          CFI CFA_XSP16 add(XSP16, 43)
+          CFI CFA_XSP16 add(XSP16, 44)
         MOV     A,R1
 // 2707 
 // 2708       // set initial values for counters in RAM
@@ -11061,15 +12591,15 @@ APSME_TCLinkKeyInit:
         MOV     B,#0x9
         MUL     AB
         XCH     A,R4
-        MOV     R7,B
+        MOV     ?V0,B
         MOV     B,#0x0
         MUL     AB
-        ADD     A,R7
-        MOV     R7,A
+        ADD     A,?V0
+        MOV     ?V0,A
         MOV     B,#0x9
         MOV     A,R5
         MUL     AB
-        ADD     A,R7
+        ADD     A,?V0
         MOV     R5,A
         MOV     A,#TCLinkKeyFrmCntr & 0xff
         ADD     A,R4
@@ -11089,15 +12619,15 @@ APSME_TCLinkKeyInit:
         MOV     B,#0x9
         MUL     AB
         XCH     A,R4
-        MOV     R7,B
+        MOV     ?V0,B
         MOV     B,#0x0
         MUL     AB
-        ADD     A,R7
-        MOV     R7,A
+        ADD     A,?V0
+        MOV     ?V0,A
         MOV     B,#0x9
         MOV     A,R5
         MUL     AB
-        ADD     A,R7
+        ADD     A,?V0
         MOV     R5,A
         MOV     A,#(TCLinkKeyFrmCntr + 4) & 0xff
         ADD     A,R4
@@ -11106,17 +12636,132 @@ APSME_TCLinkKeyInit:
         ADDC    A,R5
         MOV     DPH,A
         LCALL   ?XSTORE_R0123
-// 2711     }
-// 2712   }
 ??APSME_TCLinkKeyInit_3:
         INC     R6
 ??APSME_TCLinkKeyInit_0:
         MOV     A,R6
-        JNZ     $+5
+        JZ      $+5
+        LJMP    ??APSME_TCLinkKeyInit_4 & 0xFFFF
+        ; Setup parameters for call to function osal_memset
+        MOV     R4,#0x20
+        MOV     R5,#0x0
+        MOV     R1,#0x0
+        MOV     R2,?XSP + 0
+        MOV     R3,?XSP + 1
+        LCALL   `??osal_memset::?relay`; Banked call to: osal_memset
+        MOV     A,R6
+        JNZ     ??APSME_TCLinkKeyInit_5
+        MOV     DPTR,#zgUseDefaultTCLK
+        MOVX    A,@DPTR
+        XRL     A,#0x1
+        JNZ     ??APSME_TCLinkKeyInit_5
+        ; Setup parameters for call to function osal_memset
+        MOV     R4,#0x8
+        MOV     R5,#0x0
+        MOV     R1,#-0x1
+        MOV     R2,?XSP + 0
+        MOV     R3,?XSP + 1
+        LCALL   `??osal_memset::?relay`; Banked call to: osal_memset
+        ; Setup parameters for call to function osal_memcpy
+        MOV     ?V0,#defaultTCLinkKey & 0xff
+        MOV     ?V1,#(defaultTCLinkKey >> 8) & 0xff
+        MOV     ?V2,#-0x80
+        MOV     R0,#?V0
+        LCALL   ?PUSH_XSTACK_I_THREE
+          CFI CFA_XSP16 add(XSP16, 47)
+        MOV     R4,#0x10
+        MOV     R5,#0x0
+        MOV     A,#0xb
+        LCALL   ?XSTACK_DISP0_8
+        MOV     R2,DPL
+        MOV     R3,DPH
+        LCALL   `??osal_memcpy::?relay`; Banked call to: osal_memcpy
+        MOV     A,#0x3
+        LCALL   ?DEALLOC_XSTACK8
+          CFI CFA_XSP16 add(XSP16, 44)
+??APSME_TCLinkKeyInit_5:
+        ; Setup parameters for call to function osal_nv_item_init
+        MOV     R0,?XSP + 0
+        MOV     R1,?XSP + 1
+        MOV     ?V0,R0
+        MOV     ?V1,R1
+        MOV     R0,#?V0
+        LCALL   ?PUSH_XSTACK_I_TWO
+          CFI CFA_XSP16 add(XSP16, 46)
+        MOV     R4,#0x20
+        MOV     R5,#0x0
+        MOV     A,R6
+        MOV     R0,A
+        MOV     R1,#0x0
+        MOV     A,R0
+        ADD     A,#0x1
+        MOV     R2,A
+        MOV     A,R1
+        ADDC    A,#0x1
+        MOV     R3,A
+        LCALL   `??osal_nv_item_init::?relay`; Banked call to: osal_nv_item_init
+        MOV     A,#0x2
+        LCALL   ?DEALLOC_XSTACK8
+          CFI CFA_XSP16 add(XSP16, 44)
+        MOV     A,R1
+        JNZ     ??APSME_TCLinkKeyInit_3
+        ; Setup parameters for call to function osal_nv_read
+        MOV     R0,?XSP + 0
+        MOV     R1,?XSP + 1
+        MOV     ?V0,R0
+        MOV     ?V1,R1
+        MOV     R0,#?V0
+        LCALL   ?PUSH_XSTACK_I_TWO
+          CFI CFA_XSP16 add(XSP16, 46)
+        MOV     ?V0,#0x20
+        MOV     ?V1,#0x0
+        MOV     R0,#?V0
+        LCALL   ?PUSH_XSTACK_I_TWO
+          CFI CFA_XSP16 add(XSP16, 48)
+        MOV     R4,#0x0
+        MOV     R5,#0x0
+        MOV     A,R6
+        MOV     R0,A
+        MOV     R1,#0x0
+        MOV     A,R0
+        ADD     A,#0x1
+        MOV     R2,A
+        MOV     A,R1
+        ADDC    A,#0x1
+        MOV     R3,A
+        LCALL   `??osal_nv_read::?relay`; Banked call to: osal_nv_read
+        MOV     A,#0x4
+        LCALL   ?DEALLOC_XSTACK8
+          CFI CFA_XSP16 add(XSP16, 44)
+        MOV     A,R1
+        MOV     A,#0x1
+        XRL     A,R7
+        JZ      $+5
         LJMP    ??APSME_TCLinkKeyInit_1 & 0xFFFF
+        MOV     R2,#0x0
+        MOV     R3,#0x0
+        MOV     R4,#0x0
+        MOV     R5,#0x0
+        MOV     A,#0x18
+        LCALL   ?XSTACK_DISP0_8
+        MOV     A,R2
+        MOVX    @DPTR,A
+        INC     DPTR
+        MOV     A,R3
+        MOVX    @DPTR,A
+        INC     DPTR
+        MOV     A,R4
+        MOVX    @DPTR,A
+        INC     DPTR
+        MOV     A,R5
+        MOVX    @DPTR,A
+        LJMP    ??APSME_TCLinkKeyInit_2 & 0xFFFF
+// 2711     }
+// 2712   }
 // 2713 
 // 2714   // clear copy of key in RAM
 // 2715   osal_memset( &tcLinkKey, 0x00, sizeof(APSME_TCLinkKey_t) );
+??APSME_TCLinkKeyInit_4:
         ; Setup parameters for call to function osal_memset
         MOV     R4,#0x20
         MOV     R5,#0x0
@@ -11128,14 +12773,15 @@ APSME_TCLinkKeyInit:
 // 2717 }
         MOV     A,#0x20
         LCALL   ?DEALLOC_XSTACK8
-          CFI CFA_XSP16 add(XSP16, 11)
-        MOV     R7,#0x3
+          CFI CFA_XSP16 add(XSP16, 12)
+        MOV     R7,#0x4
         LJMP    ?BANKED_LEAVE_XDATA
           CFI R6 SameValue
           CFI VB SameValue
           CFI V0 SameValue
           CFI V1 SameValue
           CFI V2 SameValue
+          CFI V3 SameValue
           CFI R7 SameValue
           CFI ?RET_LOW Frame(CFA_SP, 1)
           CFI ?RET_HIGH Frame(CFA_SP, 2)
@@ -11144,7 +12790,7 @@ APSME_TCLinkKeyInit:
           CFI DPH0 SameValue
           CFI CFA_SP SP+-3
           CFI CFA_XSP16 XSP16+0
-          CFI EndBlock cfiBlock49
+          CFI EndBlock cfiBlock55
 // 2718 
 // 2719 /******************************************************************************
 // 2720  * @fn          APSME_TCLinkKeySync
@@ -11160,7 +12806,7 @@ APSME_TCLinkKeyInit:
         RSEG BANKED_CODE:CODE:NOROOT(0)
 // 2729 ZStatus_t APSME_TCLinkKeySync( uint16 srcAddr, SSP_Info_t* si )
 APSME_TCLinkKeySync:
-          CFI Block cfiBlock50 Using cfiCommon0
+          CFI Block cfiBlock56 Using cfiCommon0
           CFI Function APSME_TCLinkKeySync
         CODE
 // 2730 {
@@ -11634,7 +13280,7 @@ APSME_TCLinkKeySync:
           CFI CFA_SP SP+-3
           CFI CFA_XSP16 XSP16+0
 // 2814 }
-          CFI EndBlock cfiBlock50
+          CFI EndBlock cfiBlock56
 // 2815 
 // 2816 /******************************************************************************
 // 2817  * @fn          APSME_TCLinkKeyLoad
@@ -11650,96 +13296,107 @@ APSME_TCLinkKeySync:
         RSEG BANKED_CODE:CODE:NOROOT(0)
 // 2826 ZStatus_t APSME_TCLinkKeyLoad( uint16 dstAddr, SSP_Info_t* si )
 APSME_TCLinkKeyLoad:
-          CFI Block cfiBlock51 Using cfiCommon0
+          CFI Block cfiBlock57 Using cfiCommon0
           CFI Function APSME_TCLinkKeyLoad
         CODE
 // 2827 {
         FUNCALL APSME_TCLinkKeyLoad, AddrMgrExtAddrValid
         LOCFRAME ISTACK, 0, STACK
         LOCFRAME PSTACK, 0, STACK
-        LOCFRAME XSTACK, 61, STACK
+        LOCFRAME XSTACK, 62, STACK
         LOCFRAME IOVERLAY, 0, STATIC
         LOCFRAME DOVERLAY, 0, STATIC
         ARGFRAME ISTACK, 0, STACK
         ARGFRAME PSTACK, 0, STACK
-        ARGFRAME XSTACK, 61, STACK
+        ARGFRAME XSTACK, 62, STACK
         ARGFRAME IOVERLAY, 0, STATIC
         ARGFRAME DOVERLAY, 0, STATIC
         FUNCALL APSME_TCLinkKeyLoad, osal_nv_read
         LOCFRAME ISTACK, 0, STACK
         LOCFRAME PSTACK, 0, STACK
-        LOCFRAME XSTACK, 65, STACK
+        LOCFRAME XSTACK, 66, STACK
         LOCFRAME IOVERLAY, 0, STATIC
         LOCFRAME DOVERLAY, 0, STATIC
         ARGFRAME ISTACK, 0, STACK
         ARGFRAME PSTACK, 0, STACK
-        ARGFRAME XSTACK, 65, STACK
+        ARGFRAME XSTACK, 66, STACK
         ARGFRAME IOVERLAY, 0, STATIC
         ARGFRAME DOVERLAY, 0, STATIC
         FUNCALL APSME_TCLinkKeyLoad, AddrMgrExtAddrEqual
         LOCFRAME ISTACK, 0, STACK
         LOCFRAME PSTACK, 0, STACK
-        LOCFRAME XSTACK, 61, STACK
+        LOCFRAME XSTACK, 62, STACK
         LOCFRAME IOVERLAY, 0, STATIC
         LOCFRAME DOVERLAY, 0, STATIC
         ARGFRAME ISTACK, 0, STACK
         ARGFRAME PSTACK, 0, STACK
-        ARGFRAME XSTACK, 61, STACK
+        ARGFRAME XSTACK, 62, STACK
         ARGFRAME IOVERLAY, 0, STATIC
         ARGFRAME DOVERLAY, 0, STATIC
         FUNCALL APSME_TCLinkKeyLoad, APSME_IsDefaultTCLK
         LOCFRAME ISTACK, 0, STACK
         LOCFRAME PSTACK, 0, STACK
-        LOCFRAME XSTACK, 61, STACK
+        LOCFRAME XSTACK, 62, STACK
         LOCFRAME IOVERLAY, 0, STATIC
         LOCFRAME DOVERLAY, 0, STATIC
         ARGFRAME ISTACK, 0, STACK
         ARGFRAME PSTACK, 0, STACK
-        ARGFRAME XSTACK, 61, STACK
+        ARGFRAME XSTACK, 62, STACK
         ARGFRAME IOVERLAY, 0, STATIC
         ARGFRAME DOVERLAY, 0, STATIC
         FUNCALL APSME_TCLinkKeyLoad, APSME_IsDistributedSecurity
         LOCFRAME ISTACK, 0, STACK
         LOCFRAME PSTACK, 0, STACK
-        LOCFRAME XSTACK, 61, STACK
+        LOCFRAME XSTACK, 62, STACK
         LOCFRAME IOVERLAY, 0, STATIC
         LOCFRAME DOVERLAY, 0, STATIC
         ARGFRAME ISTACK, 0, STACK
         ARGFRAME PSTACK, 0, STACK
-        ARGFRAME XSTACK, 61, STACK
+        ARGFRAME XSTACK, 62, STACK
+        ARGFRAME IOVERLAY, 0, STATIC
+        ARGFRAME DOVERLAY, 0, STATIC
+        FUNCALL APSME_TCLinkKeyLoad, osal_set_event
+        LOCFRAME ISTACK, 0, STACK
+        LOCFRAME PSTACK, 0, STACK
+        LOCFRAME XSTACK, 62, STACK
+        LOCFRAME IOVERLAY, 0, STATIC
+        LOCFRAME DOVERLAY, 0, STATIC
+        ARGFRAME ISTACK, 0, STACK
+        ARGFRAME PSTACK, 0, STACK
+        ARGFRAME XSTACK, 62, STACK
         ARGFRAME IOVERLAY, 0, STATIC
         ARGFRAME DOVERLAY, 0, STATIC
         FUNCALL APSME_TCLinkKeyLoad, AddrMgrEntryLookupNwk
         LOCFRAME ISTACK, 0, STACK
         LOCFRAME PSTACK, 0, STACK
-        LOCFRAME XSTACK, 61, STACK
+        LOCFRAME XSTACK, 62, STACK
         LOCFRAME IOVERLAY, 0, STATIC
         LOCFRAME DOVERLAY, 0, STATIC
         ARGFRAME ISTACK, 0, STACK
         ARGFRAME PSTACK, 0, STACK
-        ARGFRAME XSTACK, 61, STACK
+        ARGFRAME XSTACK, 62, STACK
         ARGFRAME IOVERLAY, 0, STATIC
         ARGFRAME DOVERLAY, 0, STATIC
         FUNCALL APSME_TCLinkKeyLoad, AddrMgrEntryRelease
         LOCFRAME ISTACK, 0, STACK
         LOCFRAME PSTACK, 0, STACK
-        LOCFRAME XSTACK, 61, STACK
+        LOCFRAME XSTACK, 62, STACK
         LOCFRAME IOVERLAY, 0, STATIC
         LOCFRAME DOVERLAY, 0, STATIC
         ARGFRAME ISTACK, 0, STACK
         ARGFRAME PSTACK, 0, STACK
-        ARGFRAME XSTACK, 61, STACK
+        ARGFRAME XSTACK, 62, STACK
         ARGFRAME IOVERLAY, 0, STATIC
         ARGFRAME DOVERLAY, 0, STATIC
         FUNCALL APSME_TCLinkKeyLoad, osal_memset
         LOCFRAME ISTACK, 0, STACK
         LOCFRAME PSTACK, 0, STACK
-        LOCFRAME XSTACK, 61, STACK
+        LOCFRAME XSTACK, 62, STACK
         LOCFRAME IOVERLAY, 0, STATIC
         LOCFRAME DOVERLAY, 0, STATIC
         ARGFRAME ISTACK, 0, STACK
         ARGFRAME PSTACK, 0, STACK
-        ARGFRAME XSTACK, 61, STACK
+        ARGFRAME XSTACK, 62, STACK
         ARGFRAME IOVERLAY, 0, STATIC
         ARGFRAME DOVERLAY, 0, STATIC
         REQUIRE ?V0
@@ -11750,7 +13407,8 @@ APSME_TCLinkKeyLoad:
         REQUIRE ?V5
         REQUIRE ?V6
         REQUIRE ?V7
-        MOV     A,#-0x10
+        REQUIRE ?V8
+        MOV     A,#-0x11
         LCALL   ?BANKED_ENTER_XDATA
           CFI DPH0 load(1, XDATA, add(CFA_XSP16, literal(-1)))
           CFI DPL0 load(1, XDATA, add(CFA_XSP16, literal(-2)))
@@ -11758,25 +13416,26 @@ APSME_TCLinkKeyLoad:
           CFI ?RET_HIGH load(1, XDATA, add(CFA_XSP16, literal(-4)))
           CFI ?RET_LOW load(1, XDATA, add(CFA_XSP16, literal(-5)))
           CFI R7 load(1, XDATA, add(CFA_XSP16, literal(-6)))
-          CFI V7 load(1, XDATA, add(CFA_XSP16, literal(-7)))
-          CFI V6 load(1, XDATA, add(CFA_XSP16, literal(-8)))
-          CFI V5 load(1, XDATA, add(CFA_XSP16, literal(-9)))
-          CFI V4 load(1, XDATA, add(CFA_XSP16, literal(-10)))
-          CFI V3 load(1, XDATA, add(CFA_XSP16, literal(-11)))
-          CFI V2 load(1, XDATA, add(CFA_XSP16, literal(-12)))
-          CFI V1 load(1, XDATA, add(CFA_XSP16, literal(-13)))
-          CFI V0 load(1, XDATA, add(CFA_XSP16, literal(-14)))
-          CFI VB load(1, XDATA, add(CFA_XSP16, literal(-15)))
-          CFI R6 load(1, XDATA, add(CFA_XSP16, literal(-16)))
+          CFI V8 load(1, XDATA, add(CFA_XSP16, literal(-7)))
+          CFI V7 load(1, XDATA, add(CFA_XSP16, literal(-8)))
+          CFI V6 load(1, XDATA, add(CFA_XSP16, literal(-9)))
+          CFI V5 load(1, XDATA, add(CFA_XSP16, literal(-10)))
+          CFI V4 load(1, XDATA, add(CFA_XSP16, literal(-11)))
+          CFI V3 load(1, XDATA, add(CFA_XSP16, literal(-12)))
+          CFI V2 load(1, XDATA, add(CFA_XSP16, literal(-13)))
+          CFI V1 load(1, XDATA, add(CFA_XSP16, literal(-14)))
+          CFI V0 load(1, XDATA, add(CFA_XSP16, literal(-15)))
+          CFI VB load(1, XDATA, add(CFA_XSP16, literal(-16)))
+          CFI R6 load(1, XDATA, add(CFA_XSP16, literal(-17)))
           CFI CFA_SP SP+0
-          CFI CFA_XSP16 add(XSP16, 16)
-        ; Saved register size: 16
+          CFI CFA_XSP16 add(XSP16, 17)
+        ; Saved register size: 17
         ; Auto size: 45
         MOV     A,#-0x2d
         LCALL   ?ALLOC_XSTACK8
-          CFI CFA_XSP16 add(XSP16, 61)
-        MOV     ?V2,R4
-        MOV     ?V3,R5
+          CFI CFA_XSP16 add(XSP16, 62)
+        MOV     ?V0,R4
+        MOV     ?V1,R5
 // 2828   uint8 i;
 // 2829   ZStatus_t status = ZSecNoKey;
         MOV     R6,#-0x5f
@@ -11785,7 +13444,7 @@ APSME_TCLinkKeyLoad:
 // 2832   uint32 *tclkTxFrmCntr;
 // 2833   uint8 extAddrFound;
 // 2834   uint8 defaultTCLKIdx = ZDSECMGR_TC_DEVICE_MAX;
-        MOV     ?V0,#0x1
+        MOV     ?V8,#0x1
 // 2835 
 // 2836   // Look up the ami of the srcAddr if available
 // 2837   addrEntry.user    = ADDRMGR_USER_DEFAULT;
@@ -11804,15 +13463,15 @@ APSME_TCLinkKeyLoad:
 // 2839 
 // 2840   extAddrFound = AddrMgrExtAddrValid( si->extAddr );
         ; Setup parameters for call to function AddrMgrExtAddrValid
-        MOV     A,?V2
+        MOV     A,?V0
         ADD     A,#0x6
         MOV     R2,A
         CLR     A
-        ADDC    A,?V3
+        ADDC    A,?V1
         MOV     R3,A
         LCALL   `??AddrMgrExtAddrValid::?relay`; Banked call to: AddrMgrExtAddrValid
         MOV     A,R1
-        MOV     ?V1,A
+        MOV     ?V2,A
 // 2841 
 // 2842   // Look up the TC link key associated with the device
 // 2843   // or the master TC link key (ami = 0xFFFF), whichever is found
@@ -11843,7 +13502,7 @@ APSME_TCLinkKeyLoad:
 // 2866       // Remember the last default TCLK index
 // 2867       defaultTCLKIdx = i;
 ??APSME_TCLinkKeyLoad_1:
-        MOV     ?V0,R7
+        MOV     ?V8,R7
 ??APSME_TCLinkKeyLoad_2:
         INC     R7
 ??APSME_TCLinkKeyLoad_0:
@@ -11856,12 +13515,12 @@ APSME_TCLinkKeyLoad:
         MOV     ?V5,R1
         MOV     R0,#?V4
         LCALL   ?PUSH_XSTACK_I_TWO
-          CFI CFA_XSP16 add(XSP16, 63)
+          CFI CFA_XSP16 add(XSP16, 64)
         MOV     ?V4,#0x20
         MOV     ?V5,#0x0
         MOV     R0,#?V4
         LCALL   ?PUSH_XSTACK_I_TWO
-          CFI CFA_XSP16 add(XSP16, 65)
+          CFI CFA_XSP16 add(XSP16, 66)
         MOV     R4,#0x0
         MOV     R5,#0x0
         MOV     A,R7
@@ -11876,18 +13535,18 @@ APSME_TCLinkKeyLoad:
         LCALL   `??osal_nv_read::?relay`; Banked call to: osal_nv_read
         MOV     A,#0x4
         LCALL   ?DEALLOC_XSTACK8
-          CFI CFA_XSP16 add(XSP16, 61)
+          CFI CFA_XSP16 add(XSP16, 62)
         MOV     A,R1
-        MOV     A,?V1
+        MOV     A,?V2
         JZ      ??APSME_TCLinkKeyLoad_4
         ; Setup parameters for call to function AddrMgrExtAddrEqual
         MOV     A,#0xd
         LCALL   ?XSTACK_DISP102_8
-        MOV     A,?V2
+        MOV     A,?V0
         ADD     A,#0x6
         MOV     R2,A
         CLR     A
-        ADDC    A,?V3
+        ADDC    A,?V1
         MOV     R3,A
         LCALL   `??AddrMgrExtAddrEqual::?relay`; Banked call to: AddrMgrExtAddrEqual
         MOV     A,R1
@@ -11901,7 +13560,7 @@ APSME_TCLinkKeyLoad:
         LCALL   `??APSME_IsDefaultTCLK::?relay`; Banked call to: APSME_IsDefaultTCLK
         MOV     A,R1
         JZ      ??APSME_TCLinkKeyLoad_2
-        MOV     A,?V1
+        MOV     A,?V2
         JNZ     ??APSME_TCLinkKeyLoad_1
         ; Setup parameters for call to function APSME_IsDistributedSecurity
         LCALL   `??APSME_IsDistributedSecurity::?relay`; Banked call to: APSME_IsDistributedSecurity
@@ -11915,12 +13574,12 @@ APSME_TCLinkKeyLoad:
 ??APSME_TCLinkKeyLoad_3:
         MOV     A,R6
         JZ      ??APSME_TCLinkKeyLoad_5
-        MOV     A,?V0
+        MOV     A,?V8
         JNZ     ??APSME_TCLinkKeyLoad_5
 // 2872   {
 // 2873     // Exact match was not found; use the last default TC Link Key
 // 2874     i = defaultTCLKIdx;
-        MOV     R7,?V0
+        MOV     R7,?V8
 // 2875     status = ZSuccess;
         MOV     R6,#0x0
 // 2876   }
@@ -11928,7 +13587,8 @@ APSME_TCLinkKeyLoad:
 // 2878   if ( status == ZSuccess )
 ??APSME_TCLinkKeyLoad_5:
         MOV     A,R6
-        JNZ     ??APSME_TCLinkKeyLoad_6
+        JZ      $+5
+        LJMP    ??APSME_TCLinkKeyLoad_6 & 0xFFFF
 // 2879   {
 // 2880     tclkTxFrmCntr = &TCLinkKeyFrmCntr[i].txFrmCntr;
         MOV     A,R7
@@ -11966,11 +13626,11 @@ APSME_TCLinkKeyLoad:
         MOV     A,R1
         ADDC    A,#0x1
         MOV     R1,A
-        MOV     A,?V2
+        MOV     A,?V0
         ADD     A,#0xf
         MOV     DPL,A
         CLR     A
-        ADDC    A,?V3
+        ADDC    A,?V1
         MOV     DPH,A
         MOV     A,R0
         MOVX    @DPTR,A
@@ -11980,11 +13640,11 @@ APSME_TCLinkKeyLoad:
 // 2884 
 // 2885     // update link key related fields
 // 2886     si->keyID   = SEC_KEYID_LINK;
-        MOV     A,?V2
+        MOV     A,?V0
         ADD     A,#0xe
         MOV     DPL,A
         CLR     A
-        ADDC    A,?V3
+        ADDC    A,?V1
         MOV     DPH,A
         MOV     A,#0x0
         MOVX    @DPTR,A
@@ -11992,33 +13652,81 @@ APSME_TCLinkKeyLoad:
         MOV     DPL,R4
         MOV     DPH,R5
         LCALL   ?XLOAD_R0123
-        MOV     A,?V2
+        MOV     A,?V0
         ADD     A,#0x12
         MOV     DPL,A
         CLR     A
-        ADDC    A,?V3
+        ADDC    A,?V1
         MOV     DPH,A
         LCALL   ?XSTORE_R0123
 // 2888 
 // 2889     // update outgoing frame counter
 // 2890     (*tclkTxFrmCntr)++;
         MOV     DPTR,#__Constant_1
-        MOV     R0,#?V4
+        MOV     R0,#?V0
         LCALL   ?L_MOV_X
         MOV     DPL,R4
         MOV     DPH,R5
-        MOV     R0,#?V4
+        MOV     R0,#?V0
         LCALL   ?L_ADD_TO_X
 // 2891 
 // 2892 #if defined ( NV_RESTORE )
 // 2893     // write periodically to NV
 // 2894     if ( !(*tclkTxFrmCntr % MAX_TCLK_FRAMECOUNTER_CHANGES) )
+        MOV     DPL,R4
+        MOV     DPH,R5
+        MOV     R0,#?V4
+        LCALL   ?L_MOV_X
+        MOV     DPTR,#__Constant_a
+        MOV     R0,#?V0
+        LCALL   ?L_MOV_X
+        MOV     R0,#?V4
+        MOV     R1,#?V0
+        LCALL   ?UL_DIV_MOD
+        MOV     A,?V0
+        ORL     A,?V1
+        ORL     A,?V2
+        ORL     A,?V3
+        JNZ     ??APSME_TCLinkKeyLoad_6
 // 2895     {
 // 2896       // set the flag to write key to NV
 // 2897       TCLinkKeyFrmCntr[i].pendingFlag = TRUE;
+        MOV     A,R7
+        MOV     R0,A
+        MOV     R1,#0x0
+        MOV     A,R0
+        MOV     B,#0x9
+        MUL     AB
+        XCH     A,R0
+        MOV     R2,B
+        MOV     B,#0x0
+        MUL     AB
+        ADD     A,R2
+        MOV     R2,A
+        MOV     B,#0x9
+        MOV     A,R1
+        MUL     AB
+        ADD     A,R2
+        MOV     R1,A
+        MOV     A,#(TCLinkKeyFrmCntr + 8) & 0xff
+        ADD     A,R0
+        MOV     DPL,A
+        MOV     A,#((TCLinkKeyFrmCntr + 8) >> 8) & 0xff
+        ADDC    A,R1
+        MOV     DPH,A
+        MOV     A,#0x1
+        MOVX    @DPTR,A
 // 2898 
 // 2899       // Notify the ZDApp that the frame counter has changed.
 // 2900       osal_set_event( ZDAppTaskID, ZDO_TCLK_FRAMECOUNTER_CHANGE );
+        ; Setup parameters for call to function osal_set_event
+        MOV     R2,#0x0
+        MOV     R3,#0x4
+        MOV     DPTR,#ZDAppTaskID
+        MOVX    A,@DPTR
+        MOV     R1,A
+        LCALL   `??osal_set_event::?relay`; Banked call to: osal_set_event
+        MOV     A,R1
 // 2901     }
 // 2902 #endif
 // 2903   }
@@ -12060,8 +13768,8 @@ APSME_TCLinkKeyLoad:
         MOV     R1,A
         MOV     A,#0x2d
         LCALL   ?DEALLOC_XSTACK8
-          CFI CFA_XSP16 add(XSP16, 16)
-        MOV     R7,#0x8
+          CFI CFA_XSP16 add(XSP16, 17)
+        MOV     R7,#0x9
         LJMP    ?BANKED_LEAVE_XDATA
           CFI R6 SameValue
           CFI VB SameValue
@@ -12073,6 +13781,7 @@ APSME_TCLinkKeyLoad:
           CFI V5 SameValue
           CFI V6 SameValue
           CFI V7 SameValue
+          CFI V8 SameValue
           CFI R7 SameValue
           CFI ?RET_LOW Frame(CFA_SP, 1)
           CFI ?RET_HIGH Frame(CFA_SP, 2)
@@ -12082,7 +13791,7 @@ APSME_TCLinkKeyLoad:
           CFI CFA_SP SP+-3
           CFI CFA_XSP16 XSP16+0
 // 2915 }
-          CFI EndBlock cfiBlock51
+          CFI EndBlock cfiBlock57
 // 2916 
 // 2917 /******************************************************************************
 // 2918  * @fn          APSME_IsDefaultTCLK
@@ -12099,7 +13808,7 @@ APSME_TCLinkKeyLoad:
         RSEG BANKED_CODE:CODE:NOROOT(0)
 // 2928 uint8 APSME_IsDefaultTCLK( uint8 *extAddr )
 APSME_IsDefaultTCLK:
-          CFI Block cfiBlock52 Using cfiCommon0
+          CFI Block cfiBlock58 Using cfiCommon0
           CFI Function APSME_IsDefaultTCLK
         CODE
 // 2929 {
@@ -12135,7 +13844,7 @@ APSME_IsDefaultTCLK:
           CFI CFA_SP SP+-3
         LJMP    ?BRET
 // 2931 }
-          CFI EndBlock cfiBlock52
+          CFI EndBlock cfiBlock58
 // 2932 
 // 2933 /******************************************************************************
 // 2934  * @fn          ZDSecMgrNwkKeyInit
@@ -12153,7 +13862,7 @@ APSME_IsDefaultTCLK:
         RSEG BANKED_CODE:CODE:NOROOT(0)
 // 2945 void ZDSecMgrNwkKeyInit(uint8 setDefault)
 ZDSecMgrNwkKeyInit:
-          CFI Block cfiBlock53 Using cfiCommon0
+          CFI Block cfiBlock59 Using cfiCommon0
           CFI Function ZDSecMgrNwkKeyInit
         CODE
 // 2946 {
@@ -12266,6 +13975,8 @@ ZDSecMgrNwkKeyInit:
         MOV     A,#-0x26
         LCALL   ?ALLOC_XSTACK8
           CFI CFA_XSP16 add(XSP16, 48)
+        MOV     A,R1
+        MOV     R6,A
 // 2947   uint8 status;
 // 2948   nwkKeyDesc nwkKey;
 // 2949 
@@ -12304,18 +14015,13 @@ ZDSecMgrNwkKeyInit:
 // 2958 #if defined ( NV_RESTORE )
 // 2959   // reset the values of NV items if NV_RESTORE is not enabled
 // 2960   if ((status == SUCCESS) && (setDefault == TRUE))
+        JNZ     ??ZDSecMgrNwkKeyInit_0
+        MOV     A,#0x1
+        XRL     A,R6
+        JNZ     ??ZDSecMgrNwkKeyInit_0
 // 2961   {
 // 2962     // clear NV data to default values
 // 2963     osal_nv_write( ZCD_NV_NWKKEY, 0, sizeof(nwkActiveKeyItems), &keyItems );
-// 2964   }
-// 2965 #else
-// 2966   (void)setDefault;   // to eliminate compiler warning
-// 2967 
-// 2968   // reset the values of NV items if NV_RESTORE is not enabled
-// 2969   if (status == SUCCESS)
-        JNZ     ??ZDSecMgrNwkKeyInit_0
-// 2970   {
-// 2971     osal_nv_write( ZCD_NV_NWKKEY, 0, sizeof(nwkActiveKeyItems), &keyItems );
         ; Setup parameters for call to function osal_nv_write
         MOV     A,#0x11
         LCALL   ?XSTACK_DISP100_8
@@ -12338,6 +14044,14 @@ ZDSecMgrNwkKeyInit:
         LCALL   ?DEALLOC_XSTACK8
           CFI CFA_XSP16 add(XSP16, 48)
         MOV     A,R1
+// 2964   }
+// 2965 #else
+// 2966   (void)setDefault;   // to eliminate compiler warning
+// 2967 
+// 2968   // reset the values of NV items if NV_RESTORE is not enabled
+// 2969   if (status == SUCCESS)
+// 2970   {
+// 2971     osal_nv_write( ZCD_NV_NWKKEY, 0, sizeof(nwkActiveKeyItems), &keyItems );
 // 2972   }
 // 2973 #endif // defined (NV_RESTORE)
 // 2974 
@@ -12375,16 +14089,13 @@ ZDSecMgrNwkKeyInit:
 // 2981 #if defined ( NV_RESTORE )
 // 2982   // reset the values of NV items if NV_RESTORE is not enabled
 // 2983   if ((status == SUCCESS) && (setDefault == TRUE))
+        JNZ     ??ZDSecMgrNwkKeyInit_1
+        MOV     A,#0x1
+        XRL     A,R6
+        JNZ     ??ZDSecMgrNwkKeyInit_1
 // 2984   {
 // 2985     // clear NV data to default values
 // 2986     osal_nv_write( ZCD_NV_NWK_ACTIVE_KEY_INFO, 0, sizeof(nwkKey), &nwkKey );
-// 2987   }
-// 2988 #else
-// 2989   // reset the values of NV items if NV_RESTORE is not enabled
-// 2990   if (status == SUCCESS)
-        JNZ     ??ZDSecMgrNwkKeyInit_1
-// 2991   {
-// 2992     osal_nv_write( ZCD_NV_NWK_ACTIVE_KEY_INFO, 0, sizeof(nwkKey), &nwkKey );
         ; Setup parameters for call to function osal_nv_write
         MOV     R0,?XSP + 0
         MOV     R1,?XSP + 1
@@ -12407,6 +14118,12 @@ ZDSecMgrNwkKeyInit:
         LCALL   ?DEALLOC_XSTACK8
           CFI CFA_XSP16 add(XSP16, 48)
         MOV     A,R1
+// 2987   }
+// 2988 #else
+// 2989   // reset the values of NV items if NV_RESTORE is not enabled
+// 2990   if (status == SUCCESS)
+// 2991   {
+// 2992     osal_nv_write( ZCD_NV_NWK_ACTIVE_KEY_INFO, 0, sizeof(nwkKey), &nwkKey );
 // 2993   }
 // 2994 #endif // defined (NV_RESTORE)
 // 2995 
@@ -12433,16 +14150,13 @@ ZDSecMgrNwkKeyInit:
 // 2998 #if defined ( NV_RESTORE )
 // 2999   // reset the values of NV items if NV_RESTORE is not enabled
 // 3000   if ((status == SUCCESS) && (setDefault == TRUE))
+        JNZ     ??ZDSecMgrNwkKeyInit_2
+        MOV     A,#0x1
+        XRL     A,R6
+        JNZ     ??ZDSecMgrNwkKeyInit_2
 // 3001   {
 // 3002     // clear NV data to default values
 // 3003     osal_nv_write( ZCD_NV_NWK_ALTERN_KEY_INFO, 0, sizeof(nwkKey), &nwkKey );
-// 3004   }
-// 3005 #else
-// 3006   // reset the values of NV items if NV_RESTORE is not enabled
-// 3007   if (status == SUCCESS)
-        JNZ     ??ZDSecMgrNwkKeyInit_2
-// 3008   {
-// 3009     osal_nv_write( ZCD_NV_NWK_ALTERN_KEY_INFO, 0, sizeof(nwkKey), &nwkKey );
         ; Setup parameters for call to function osal_nv_write
         MOV     R0,?XSP + 0
         MOV     R1,?XSP + 1
@@ -12465,6 +14179,12 @@ ZDSecMgrNwkKeyInit:
         LCALL   ?DEALLOC_XSTACK8
           CFI CFA_XSP16 add(XSP16, 48)
         MOV     A,R1
+// 3004   }
+// 3005 #else
+// 3006   // reset the values of NV items if NV_RESTORE is not enabled
+// 3007   if (status == SUCCESS)
+// 3008   {
+// 3009     osal_nv_write( ZCD_NV_NWK_ALTERN_KEY_INFO, 0, sizeof(nwkKey), &nwkKey );
 // 3010   }
 // 3011 #endif // defined (NV_RESTORE)
 // 3012 
@@ -12487,7 +14207,7 @@ ZDSecMgrNwkKeyInit:
           CFI DPH0 SameValue
           CFI CFA_SP SP+-3
           CFI CFA_XSP16 XSP16+0
-          CFI EndBlock cfiBlock53
+          CFI EndBlock cfiBlock59
 // 3014 
 // 3015 /*********************************************************************
 // 3016  * @fn          ZDSecMgrReadKeyFromNv
@@ -12511,7 +14231,7 @@ ZDSecMgrNwkKeyInit:
         RSEG BANKED_CODE:CODE:NOROOT(0)
 // 3033 ZStatus_t ZDSecMgrReadKeyFromNv(uint16 keyNvId, void *keyinfo)
 ZDSecMgrReadKeyFromNv:
-          CFI Block cfiBlock54 Using cfiCommon0
+          CFI Block cfiBlock60 Using cfiCommon0
           CFI Function ZDSecMgrReadKeyFromNv
         CODE
 // 3034 {
@@ -12757,7 +14477,7 @@ ZDSecMgrReadKeyFromNv:
           CFI CFA_SP SP+-3
           CFI CFA_XSP16 XSP16+0
 // 3074 }
-          CFI EndBlock cfiBlock54
+          CFI EndBlock cfiBlock60
 // 3075 
 // 3076 /******************************************************************************
 // 3077  * @fn          ZDSecMgrApsLinkKeyInit
@@ -12772,7 +14492,7 @@ ZDSecMgrReadKeyFromNv:
         RSEG BANKED_CODE:CODE:NOROOT(0)
 // 3085 void ZDSecMgrApsLinkKeyInit(void)
 ZDSecMgrApsLinkKeyInit:
-          CFI Block cfiBlock55 Using cfiCommon0
+          CFI Block cfiBlock61 Using cfiCommon0
           CFI Function ZDSecMgrApsLinkKeyInit
         CODE
 // 3086 {
@@ -12796,17 +14516,6 @@ ZDSecMgrApsLinkKeyInit:
         ARGFRAME ISTACK, 0, STACK
         ARGFRAME PSTACK, 0, STACK
         ARGFRAME XSTACK, 36, STACK
-        ARGFRAME IOVERLAY, 0, STATIC
-        ARGFRAME DOVERLAY, 0, STATIC
-        FUNCALL ZDSecMgrApsLinkKeyInit, osal_nv_write
-        LOCFRAME ISTACK, 0, STACK
-        LOCFRAME PSTACK, 0, STACK
-        LOCFRAME XSTACK, 38, STACK
-        LOCFRAME IOVERLAY, 0, STATIC
-        LOCFRAME DOVERLAY, 0, STATIC
-        ARGFRAME ISTACK, 0, STACK
-        ARGFRAME PSTACK, 0, STACK
-        ARGFRAME XSTACK, 38, STACK
         ARGFRAME IOVERLAY, 0, STATIC
         ARGFRAME DOVERLAY, 0, STATIC
         REQUIRE ?V0
@@ -12881,44 +14590,13 @@ ZDSecMgrApsLinkKeyInit:
 // 3101 #else
 // 3102     // reset the values of NV items if NV_RESTORE is not enabled
 // 3103     if (status == SUCCESS)
-        JNZ     ??ZDSecMgrApsLinkKeyInit_2
 // 3104     {
 // 3105       osal_nv_write( (ZCD_NV_APS_LINK_KEY_DATA_START + i), 0,
 // 3106                      sizeof(APSME_LinkKeyData_t), &pApsLinkKey );
-        ; Setup parameters for call to function osal_nv_write
-        MOV     R0,?XSP + 0
-        MOV     R1,?XSP + 1
-        MOV     ?V0,R0
-        MOV     ?V1,R1
-        MOV     R0,#?V0
-        LCALL   ?PUSH_XSTACK_I_TWO
-          CFI CFA_XSP16 add(XSP16, 36)
-        MOV     ?V0,#0x18
-        MOV     ?V1,#0x0
-        MOV     R0,#?V0
-        LCALL   ?PUSH_XSTACK_I_TWO
-          CFI CFA_XSP16 add(XSP16, 38)
-        MOV     R4,#0x0
-        MOV     R5,#0x0
-        MOV     A,R6
-        MOV     R0,A
-        MOV     R1,#0x0
-        MOV     A,R0
-        ADD     A,#0x1
-        MOV     R2,A
-        MOV     A,R1
-        ADDC    A,#0x2
-        MOV     R3,A
-        LCALL   `??osal_nv_write::?relay`; Banked call to: osal_nv_write
-        MOV     A,#0x4
-        LCALL   ?DEALLOC_XSTACK8
-          CFI CFA_XSP16 add(XSP16, 34)
-        MOV     A,R1
 // 3107 
 // 3108     }
 // 3109 #endif // defined (NV_RESTORE)
 // 3110   }
-??ZDSecMgrApsLinkKeyInit_2:
         INC     R6
 ??ZDSecMgrApsLinkKeyInit_0:
         MOV     A,R6
@@ -12943,7 +14621,7 @@ ZDSecMgrApsLinkKeyInit:
           CFI DPH0 SameValue
           CFI CFA_SP SP+-3
           CFI CFA_XSP16 XSP16+0
-          CFI EndBlock cfiBlock55
+          CFI EndBlock cfiBlock61
 // 3112 
 // 3113 /******************************************************************************
 // 3114  * @fn          ZDSecMgrInitNVKeyTables
@@ -12958,7 +14636,7 @@ ZDSecMgrApsLinkKeyInit:
         RSEG BANKED_CODE:CODE:NOROOT(0)
 // 3122 void ZDSecMgrInitNVKeyTables(uint8 setDefault)
 ZDSecMgrInitNVKeyTables:
-          CFI Block cfiBlock56 Using cfiCommon0
+          CFI Block cfiBlock62 Using cfiCommon0
           CFI Function ZDSecMgrInitNVKeyTables
         CODE
 // 3123 {
@@ -13039,7 +14717,7 @@ ZDSecMgrInitNVKeyTables:
           CFI DPH0 SameValue
           CFI CFA_SP SP+-3
           CFI CFA_XSP16 XSP16+0
-          CFI EndBlock cfiBlock56
+          CFI EndBlock cfiBlock62
 // 3128 
 // 3129 /******************************************************************************
 // 3130  * @fn          ZDSecMgrSaveApsLinkKey
@@ -13055,7 +14733,7 @@ ZDSecMgrInitNVKeyTables:
         RSEG BANKED_CODE:CODE:NOROOT(0)
 // 3139 void ZDSecMgrSaveApsLinkKey(void)
 ZDSecMgrSaveApsLinkKey:
-          CFI Block cfiBlock57 Using cfiCommon0
+          CFI Block cfiBlock63 Using cfiCommon0
           CFI Function ZDSecMgrSaveApsLinkKey
         CODE
 // 3140 {
@@ -13397,7 +15075,7 @@ ZDSecMgrSaveApsLinkKey:
           CFI DPH0 SameValue
           CFI CFA_SP SP+-3
           CFI CFA_XSP16 XSP16+0
-          CFI EndBlock cfiBlock57
+          CFI EndBlock cfiBlock63
 // 3176 
 // 3177 /******************************************************************************
 // 3178  * @fn          ZDSecMgrSaveTCLinkKey
@@ -13413,7 +15091,7 @@ ZDSecMgrSaveApsLinkKey:
         RSEG BANKED_CODE:CODE:NOROOT(0)
 // 3187 void ZDSecMgrSaveTCLinkKey(void)
 ZDSecMgrSaveTCLinkKey:
-          CFI Block cfiBlock58 Using cfiCommon0
+          CFI Block cfiBlock64 Using cfiCommon0
           CFI Function ZDSecMgrSaveTCLinkKey
         CODE
 // 3188 {
@@ -13746,7 +15424,7 @@ ZDSecMgrSaveTCLinkKey:
           CFI DPH0 SameValue
           CFI CFA_SP SP+-3
           CFI CFA_XSP16 XSP16+0
-          CFI EndBlock cfiBlock58
+          CFI EndBlock cfiBlock64
 // 3221 
 // 3222 /******************************************************************************
 // 3223  * @fn          ZDSecMgrUpdateTCAddress
@@ -13761,7 +15439,7 @@ ZDSecMgrSaveTCLinkKey:
         RSEG BANKED_CODE:CODE:NOROOT(0)
 // 3231 void ZDSecMgrUpdateTCAddress( uint8 *extAddr )
 ZDSecMgrUpdateTCAddress:
-          CFI Block cfiBlock59 Using cfiCommon0
+          CFI Block cfiBlock65 Using cfiCommon0
           CFI Function ZDSecMgrUpdateTCAddress
         CODE
 // 3232 {
@@ -13774,6 +15452,17 @@ ZDSecMgrUpdateTCAddress:
         ARGFRAME ISTACK, 0, STACK
         ARGFRAME PSTACK, 0, STACK
         ARGFRAME XSTACK, 18, STACK
+        ARGFRAME IOVERLAY, 0, STATIC
+        ARGFRAME DOVERLAY, 0, STATIC
+        FUNCALL ZDSecMgrUpdateTCAddress, osal_nv_write
+        LOCFRAME ISTACK, 0, STACK
+        LOCFRAME PSTACK, 0, STACK
+        LOCFRAME XSTACK, 22, STACK
+        LOCFRAME IOVERLAY, 0, STATIC
+        LOCFRAME DOVERLAY, 0, STATIC
+        ARGFRAME ISTACK, 0, STACK
+        ARGFRAME PSTACK, 0, STACK
+        ARGFRAME XSTACK, 22, STACK
         ARGFRAME IOVERLAY, 0, STATIC
         ARGFRAME DOVERLAY, 0, STATIC
         REQUIRE ?V0
@@ -13826,6 +15515,26 @@ ZDSecMgrUpdateTCAddress:
         MOV     A,R1
 // 3235 #if defined ( NV_RESTORE )
 // 3236   osal_nv_write( ZCD_NV_TRUSTCENTER_ADDR, 0, Z_EXTADDR_LEN, zgApsTrustCenterAddr );
+        ; Setup parameters for call to function osal_nv_write
+        MOV     ?V0,#zgApsTrustCenterAddr & 0xff
+        MOV     ?V1,#(zgApsTrustCenterAddr >> 8) & 0xff
+        MOV     R0,#?V0
+        LCALL   ?PUSH_XSTACK_I_TWO
+          CFI CFA_XSP16 add(XSP16, 20)
+        MOV     ?V0,#0x8
+        MOV     ?V1,#0x0
+        MOV     R0,#?V0
+        LCALL   ?PUSH_XSTACK_I_TWO
+          CFI CFA_XSP16 add(XSP16, 22)
+        MOV     R4,#0x0
+        MOV     R5,#0x0
+        MOV     R2,#0x71
+        MOV     R3,#0x0
+        LCALL   `??osal_nv_write::?relay`; Banked call to: osal_nv_write
+        MOV     A,#0x4
+        LCALL   ?DEALLOC_XSTACK8
+          CFI CFA_XSP16 add(XSP16, 18)
+        MOV     A,R1
 // 3237 #endif
 // 3238 }
         MOV     A,#0x8
@@ -13845,7 +15554,245 @@ ZDSecMgrUpdateTCAddress:
           CFI DPH0 SameValue
           CFI CFA_SP SP+-3
           CFI CFA_XSP16 XSP16+0
-          CFI EndBlock cfiBlock59
+          CFI EndBlock cfiBlock65
+// 3239 
+// 3240 #if defined ( ZBA_FALLBACK_NWKKEY )
+// 3241 /******************************************************************************
+// 3242  * @fn          ZDSecMgrFallbackNwkKey
+// 3243  *
+// 3244  * @brief       Use the ZBA fallback network key.
+// 3245  *
+// 3246  * @param       none
+// 3247  *
+// 3248  * @return      none
+// 3249  */
+// 3250 void ZDSecMgrFallbackNwkKey( void )
+// 3251 {
+// 3252   if ( !_NIB.nwkKeyLoaded )
+// 3253   {
+// 3254     uint8 fallbackKey[SEC_KEY_LEN];
+// 3255 
+// 3256     ZDSecMgrReadKeyFromNv( ZCD_NV_PRECFGKEY, fallbackKey );
+// 3257     SSP_UpdateNwkKey( fallbackKey, 0);
+// 3258     SSP_SwitchNwkKey( 0 );
+// 3259 
+// 3260     // clear local copy of key
+// 3261     osal_memset( fallbackKey, 0x00, SEC_KEY_LEN );
+// 3262 
+// 3263     // handle next step in authentication process
+// 3264     ZDSecMgrAuthNwkKey();
+// 3265   }
+// 3266 }
+// 3267 #endif // defined ( ZBA_FALLBACK_NWKKEY )
+// 3268 
+// 3269 #if defined ( NV_RESTORE )
+// 3270 /******************************************************************************
+// 3271  * @fn          ZDSecMgrClearNVKeyValues
+// 3272  *
+// 3273  * @brief       If NV_RESTORE is enabled and the status of the network needs
+// 3274  *              default values this fuction clears ZCD_NV_NWKKEY,
+// 3275  *              ZCD_NV_NWK_ACTIVE_KEY_INFO and ZCD_NV_NWK_ALTERN_KEY_INFO link
+// 3276  *
+// 3277  * @param       none
+// 3278  *
+// 3279  * @return      none
+// 3280  */
+
+        RSEG BANKED_CODE:CODE:NOROOT(0)
+// 3281 void ZDSecMgrClearNVKeyValues(void)
+ZDSecMgrClearNVKeyValues:
+          CFI Block cfiBlock66 Using cfiCommon0
+          CFI Function ZDSecMgrClearNVKeyValues
+        CODE
+// 3282 {
+        FUNCALL ZDSecMgrClearNVKeyValues, osal_memset
+        LOCFRAME ISTACK, 0, STACK
+        LOCFRAME PSTACK, 0, STACK
+        LOCFRAME XSTACK, 48, STACK
+        LOCFRAME IOVERLAY, 0, STATIC
+        LOCFRAME DOVERLAY, 0, STATIC
+        ARGFRAME ISTACK, 0, STACK
+        ARGFRAME PSTACK, 0, STACK
+        ARGFRAME XSTACK, 48, STACK
+        ARGFRAME IOVERLAY, 0, STATIC
+        ARGFRAME DOVERLAY, 0, STATIC
+        FUNCALL ZDSecMgrClearNVKeyValues, osal_nv_write
+        LOCFRAME ISTACK, 0, STACK
+        LOCFRAME PSTACK, 0, STACK
+        LOCFRAME XSTACK, 52, STACK
+        LOCFRAME IOVERLAY, 0, STATIC
+        LOCFRAME DOVERLAY, 0, STATIC
+        ARGFRAME ISTACK, 0, STACK
+        ARGFRAME PSTACK, 0, STACK
+        ARGFRAME XSTACK, 52, STACK
+        ARGFRAME IOVERLAY, 0, STATIC
+        ARGFRAME DOVERLAY, 0, STATIC
+        FUNCALL ZDSecMgrClearNVKeyValues, osal_memset
+        LOCFRAME ISTACK, 0, STACK
+        LOCFRAME PSTACK, 0, STACK
+        LOCFRAME XSTACK, 48, STACK
+        LOCFRAME IOVERLAY, 0, STATIC
+        LOCFRAME DOVERLAY, 0, STATIC
+        ARGFRAME ISTACK, 0, STACK
+        ARGFRAME PSTACK, 0, STACK
+        ARGFRAME XSTACK, 48, STACK
+        ARGFRAME IOVERLAY, 0, STATIC
+        ARGFRAME DOVERLAY, 0, STATIC
+        FUNCALL ZDSecMgrClearNVKeyValues, osal_nv_write
+        LOCFRAME ISTACK, 0, STACK
+        LOCFRAME PSTACK, 0, STACK
+        LOCFRAME XSTACK, 52, STACK
+        LOCFRAME IOVERLAY, 0, STATIC
+        LOCFRAME DOVERLAY, 0, STATIC
+        ARGFRAME ISTACK, 0, STACK
+        ARGFRAME PSTACK, 0, STACK
+        ARGFRAME XSTACK, 52, STACK
+        ARGFRAME IOVERLAY, 0, STATIC
+        ARGFRAME DOVERLAY, 0, STATIC
+        FUNCALL ZDSecMgrClearNVKeyValues, osal_nv_write
+        LOCFRAME ISTACK, 0, STACK
+        LOCFRAME PSTACK, 0, STACK
+        LOCFRAME XSTACK, 52, STACK
+        LOCFRAME IOVERLAY, 0, STATIC
+        LOCFRAME DOVERLAY, 0, STATIC
+        ARGFRAME ISTACK, 0, STACK
+        ARGFRAME PSTACK, 0, STACK
+        ARGFRAME XSTACK, 52, STACK
+        ARGFRAME IOVERLAY, 0, STATIC
+        ARGFRAME DOVERLAY, 0, STATIC
+        REQUIRE ?V0
+        REQUIRE ?V1
+        MOV     A,#-0xa
+        LCALL   ?BANKED_ENTER_XDATA
+          CFI DPH0 load(1, XDATA, add(CFA_XSP16, literal(-1)))
+          CFI DPL0 load(1, XDATA, add(CFA_XSP16, literal(-2)))
+          CFI ?BRET_EXT load(1, XDATA, add(CFA_XSP16, literal(-3)))
+          CFI ?RET_HIGH load(1, XDATA, add(CFA_XSP16, literal(-4)))
+          CFI ?RET_LOW load(1, XDATA, add(CFA_XSP16, literal(-5)))
+          CFI R7 load(1, XDATA, add(CFA_XSP16, literal(-6)))
+          CFI V1 load(1, XDATA, add(CFA_XSP16, literal(-7)))
+          CFI V0 load(1, XDATA, add(CFA_XSP16, literal(-8)))
+          CFI VB load(1, XDATA, add(CFA_XSP16, literal(-9)))
+          CFI R6 load(1, XDATA, add(CFA_XSP16, literal(-10)))
+          CFI CFA_SP SP+0
+          CFI CFA_XSP16 add(XSP16, 10)
+        ; Saved register size: 10
+        ; Auto size: 38
+        MOV     A,#-0x26
+        LCALL   ?ALLOC_XSTACK8
+          CFI CFA_XSP16 add(XSP16, 48)
+// 3283   nwkActiveKeyItems keyItems;
+// 3284   nwkKeyDesc nwkKey;
+// 3285 
+// 3286   osal_memset(&keyItems, 0x00, sizeof(nwkActiveKeyItems));
+        ; Setup parameters for call to function osal_memset
+        MOV     R4,#0x15
+        MOV     R5,#0x0
+        MOV     R1,#0x0
+        MOV     A,#0x11
+        LCALL   ?XSTACK_DISP101_8
+        LCALL   `??osal_memset::?relay`; Banked call to: osal_memset
+// 3287 
+// 3288   osal_nv_write(ZCD_NV_NWKKEY, 0, sizeof(nwkActiveKeyItems), &keyItems);
+        ; Setup parameters for call to function osal_nv_write
+        MOV     A,#0x11
+        LCALL   ?XSTACK_DISP100_8
+        MOV     ?V0,R0
+        MOV     ?V1,R1
+        MOV     R0,#?V0
+        LCALL   ?PUSH_XSTACK_I_TWO
+          CFI CFA_XSP16 add(XSP16, 50)
+        MOV     ?V0,#0x15
+        MOV     ?V1,#0x0
+        MOV     R0,#?V0
+        LCALL   ?PUSH_XSTACK_I_TWO
+          CFI CFA_XSP16 add(XSP16, 52)
+        MOV     R4,#0x0
+        MOV     R5,#0x0
+        MOV     R2,#-0x7e
+        MOV     R3,#0x0
+        LCALL   `??osal_nv_write::?relay`; Banked call to: osal_nv_write
+        MOV     A,#0x4
+        LCALL   ?DEALLOC_XSTACK8
+          CFI CFA_XSP16 add(XSP16, 48)
+        MOV     A,R1
+// 3289 
+// 3290   // Initialize NV items for NWK Active and Alternate keys.
+// 3291   osal_memset( &nwkKey, 0x00, sizeof(nwkKeyDesc) );
+        ; Setup parameters for call to function osal_memset
+        MOV     R4,#0x11
+        MOV     R5,#0x0
+        MOV     R1,#0x0
+        MOV     R2,?XSP + 0
+        MOV     R3,?XSP + 1
+        LCALL   `??osal_memset::?relay`; Banked call to: osal_memset
+// 3292 
+// 3293   osal_nv_write(ZCD_NV_NWK_ACTIVE_KEY_INFO, 0, sizeof(nwkKeyDesc), &nwkKey);
+        ; Setup parameters for call to function osal_nv_write
+        MOV     R0,?XSP + 0
+        MOV     R1,?XSP + 1
+        MOV     ?V0,R0
+        MOV     ?V1,R1
+        MOV     R0,#?V0
+        LCALL   ?PUSH_XSTACK_I_TWO
+          CFI CFA_XSP16 add(XSP16, 50)
+        MOV     ?V0,#0x11
+        MOV     ?V1,#0x0
+        MOV     R0,#?V0
+        LCALL   ?PUSH_XSTACK_I_TWO
+          CFI CFA_XSP16 add(XSP16, 52)
+        MOV     R4,#0x0
+        MOV     R5,#0x0
+        MOV     R2,#0x3a
+        MOV     R3,#0x0
+        LCALL   `??osal_nv_write::?relay`; Banked call to: osal_nv_write
+        MOV     A,#0x4
+        LCALL   ?DEALLOC_XSTACK8
+          CFI CFA_XSP16 add(XSP16, 48)
+        MOV     A,R1
+// 3294 
+// 3295   osal_nv_write(ZCD_NV_NWK_ALTERN_KEY_INFO, 0, sizeof(nwkKeyDesc), &nwkKey);
+        ; Setup parameters for call to function osal_nv_write
+        MOV     R0,?XSP + 0
+        MOV     R1,?XSP + 1
+        MOV     ?V0,R0
+        MOV     ?V1,R1
+        MOV     R0,#?V0
+        LCALL   ?PUSH_XSTACK_I_TWO
+          CFI CFA_XSP16 add(XSP16, 50)
+        MOV     ?V0,#0x11
+        MOV     ?V1,#0x0
+        MOV     R0,#?V0
+        LCALL   ?PUSH_XSTACK_I_TWO
+          CFI CFA_XSP16 add(XSP16, 52)
+        MOV     R4,#0x0
+        MOV     R5,#0x0
+        MOV     R2,#0x3b
+        MOV     R3,#0x0
+        LCALL   `??osal_nv_write::?relay`; Banked call to: osal_nv_write
+        MOV     A,#0x4
+        LCALL   ?DEALLOC_XSTACK8
+          CFI CFA_XSP16 add(XSP16, 48)
+        MOV     A,R1
+// 3296 }
+        MOV     A,#0x26
+        LCALL   ?DEALLOC_XSTACK8
+          CFI CFA_XSP16 add(XSP16, 10)
+        MOV     R7,#0x2
+        LJMP    ?BANKED_LEAVE_XDATA
+          CFI R6 SameValue
+          CFI VB SameValue
+          CFI V0 SameValue
+          CFI V1 SameValue
+          CFI R7 SameValue
+          CFI ?RET_LOW Frame(CFA_SP, 1)
+          CFI ?RET_HIGH Frame(CFA_SP, 2)
+          CFI ?BRET_EXT Frame(CFA_SP, 3)
+          CFI DPL0 SameValue
+          CFI DPH0 SameValue
+          CFI CFA_SP SP+-3
+          CFI CFA_XSP16 XSP16+0
+          CFI EndBlock cfiBlock66
 
         RSEG XDATA_ID:CODE:NOROOT(0)
 `?<Initializer for ZDSecMgrAppKeyType>`:
@@ -14112,6 +16059,20 @@ ZDSecMgrUpdateTCAddress:
         DC24    ZDSecMgrSwitchKeyInd
 
         RSEG BANK_RELAYS:CODE:REORDER:NOROOT(0)
+`??ZDSecMgrUpdateNwkKey::?relay`:
+        CODE
+        LCALL   ?BDISPATCH
+        DATA24
+        DC24    ZDSecMgrUpdateNwkKey
+
+        RSEG BANK_RELAYS:CODE:REORDER:NOROOT(0)
+`??ZDSecMgrSwitchNwkKey::?relay`:
+        CODE
+        LCALL   ?BDISPATCH
+        DATA24
+        DC24    ZDSecMgrSwitchNwkKey
+
+        RSEG BANK_RELAYS:CODE:REORDER:NOROOT(0)
 `??ZDSecMgrRequestAppKey::?relay`:
         CODE
         LCALL   ?BDISPATCH
@@ -14124,6 +16085,13 @@ ZDSecMgrUpdateTCAddress:
         LCALL   ?BDISPATCH
         DATA24
         DC24    ZDSecMgrSetupPartner
+
+        RSEG BANK_RELAYS:CODE:REORDER:NOROOT(0)
+`??ZDSecMgrAppKeyTypeSet::?relay`:
+        CODE
+        LCALL   ?BDISPATCH
+        DATA24
+        DC24    ZDSecMgrAppKeyTypeSet
 
         RSEG BANK_RELAYS:CODE:REORDER:NOROOT(0)
 `??APSME_LinkKeySet::?relay`:
@@ -14182,11 +16150,32 @@ ZDSecMgrUpdateTCAddress:
         DC24    ZDSecMgrInitNV
 
         RSEG BANK_RELAYS:CODE:REORDER:NOROOT(0)
+`??ZDSecMgrWriteNV::?relay`:
+        CODE
+        LCALL   ?BDISPATCH
+        DATA24
+        DC24    ZDSecMgrWriteNV
+
+        RSEG BANK_RELAYS:CODE:REORDER:NOROOT(0)
+`??ZDSecMgrRestoreFromNV::?relay`:
+        CODE
+        LCALL   ?BDISPATCH
+        DATA24
+        DC24    ZDSecMgrRestoreFromNV
+
+        RSEG BANK_RELAYS:CODE:REORDER:NOROOT(0)
 `??ZDSecMgrSetDefaultNV::?relay`:
         CODE
         LCALL   ?BDISPATCH
         DATA24
         DC24    ZDSecMgrSetDefaultNV
+
+        RSEG BANK_RELAYS:CODE:REORDER:NOROOT(0)
+`??ZDSecMgrUpdateNV::?relay`:
+        CODE
+        LCALL   ?BDISPATCH
+        DATA24
+        DC24    ZDSecMgrUpdateNV
 
         RSEG BANK_RELAYS:CODE:REORDER:NOROOT(0)
 `??ZDSecMgrAPSRemove::?relay`:
@@ -14272,6 +16261,13 @@ ZDSecMgrUpdateTCAddress:
         DATA24
         DC24    ZDSecMgrUpdateTCAddress
 
+        RSEG BANK_RELAYS:CODE:REORDER:NOROOT(0)
+`??ZDSecMgrClearNVKeyValues::?relay`:
+        CODE
+        LCALL   ?BDISPATCH
+        DATA24
+        DC24    ZDSecMgrClearNVKeyValues
+
         RSEG XDATA_ROM_C:CONST:REORDER:NOROOT(0)
         DATA8
 `?<Constant {255, 255, 255, 255, 255, 255, 255,`:
@@ -14286,83 +16282,40 @@ ZDSecMgrUpdateTCAddress:
 
         RSEG XDATA_ROM_C:CONST:REORDER:NOROOT(0)
         DATA32
+__Constant_3e9:
+        DD 1001
+
+        RSEG XDATA_ROM_C:CONST:REORDER:NOROOT(0)
+        DATA32
+__Constant_b:
+        DD 11
+
+        RSEG XDATA_ROM_C:CONST:REORDER:NOROOT(0)
+        DATA32
 __Constant_1:
         DD 1
 
+        RSEG XDATA_ROM_C:CONST:REORDER:NOROOT(0)
+        DATA32
+__Constant_a:
+        DD 10
+
         END
-// 3239 
-// 3240 #if defined ( ZBA_FALLBACK_NWKKEY )
-// 3241 /******************************************************************************
-// 3242  * @fn          ZDSecMgrFallbackNwkKey
-// 3243  *
-// 3244  * @brief       Use the ZBA fallback network key.
-// 3245  *
-// 3246  * @param       none
-// 3247  *
-// 3248  * @return      none
-// 3249  */
-// 3250 void ZDSecMgrFallbackNwkKey( void )
-// 3251 {
-// 3252   if ( !_NIB.nwkKeyLoaded )
-// 3253   {
-// 3254     uint8 fallbackKey[SEC_KEY_LEN];
-// 3255 
-// 3256     ZDSecMgrReadKeyFromNv( ZCD_NV_PRECFGKEY, fallbackKey );
-// 3257     SSP_UpdateNwkKey( fallbackKey, 0);
-// 3258     SSP_SwitchNwkKey( 0 );
-// 3259 
-// 3260     // clear local copy of key
-// 3261     osal_memset( fallbackKey, 0x00, SEC_KEY_LEN );
-// 3262 
-// 3263     // handle next step in authentication process
-// 3264     ZDSecMgrAuthNwkKey();
-// 3265   }
-// 3266 }
-// 3267 #endif // defined ( ZBA_FALLBACK_NWKKEY )
-// 3268 
-// 3269 #if defined ( NV_RESTORE )
-// 3270 /******************************************************************************
-// 3271  * @fn          ZDSecMgrClearNVKeyValues
-// 3272  *
-// 3273  * @brief       If NV_RESTORE is enabled and the status of the network needs
-// 3274  *              default values this fuction clears ZCD_NV_NWKKEY,
-// 3275  *              ZCD_NV_NWK_ACTIVE_KEY_INFO and ZCD_NV_NWK_ALTERN_KEY_INFO link
-// 3276  *
-// 3277  * @param       none
-// 3278  *
-// 3279  * @return      none
-// 3280  */
-// 3281 void ZDSecMgrClearNVKeyValues(void)
-// 3282 {
-// 3283   nwkActiveKeyItems keyItems;
-// 3284   nwkKeyDesc nwkKey;
-// 3285 
-// 3286   osal_memset(&keyItems, 0x00, sizeof(nwkActiveKeyItems));
-// 3287 
-// 3288   osal_nv_write(ZCD_NV_NWKKEY, 0, sizeof(nwkActiveKeyItems), &keyItems);
-// 3289 
-// 3290   // Initialize NV items for NWK Active and Alternate keys.
-// 3291   osal_memset( &nwkKey, 0x00, sizeof(nwkKeyDesc) );
-// 3292 
-// 3293   osal_nv_write(ZCD_NV_NWK_ACTIVE_KEY_INFO, 0, sizeof(nwkKeyDesc), &nwkKey);
-// 3294 
-// 3295   osal_nv_write(ZCD_NV_NWK_ALTERN_KEY_INFO, 0, sizeof(nwkKeyDesc), &nwkKey);
-// 3296 }
 // 3297 #endif // defined ( NV_RESTORE )
 // 3298 
 // 3299 /******************************************************************************
 // 3300 ******************************************************************************/
 // 
-// 8 863 bytes in segment BANKED_CODE
-//   360 bytes in segment BANK_RELAYS
-//     1 byte  in segment XDATA_I
-//     1 byte  in segment XDATA_ID
-//    12 bytes in segment XDATA_ROM_C
-//    81 bytes in segment XDATA_Z
+// 10 801 bytes in segment BANKED_CODE
+//    402 bytes in segment BANK_RELAYS
+//      1 byte  in segment XDATA_I
+//      1 byte  in segment XDATA_ID
+//     24 bytes in segment XDATA_ROM_C
+//     81 bytes in segment XDATA_Z
 // 
-// 9 224 bytes of CODE  memory
-//     8 bytes of CONST memory (+ 4 bytes shared)
-//    82 bytes of XDATA memory
+// 11 204 bytes of CODE  memory
+//      8 bytes of CONST memory (+ 16 bytes shared)
+//     82 bytes of XDATA memory
 //
 //Errors: none
-//Warnings: 1
+//Warnings: none

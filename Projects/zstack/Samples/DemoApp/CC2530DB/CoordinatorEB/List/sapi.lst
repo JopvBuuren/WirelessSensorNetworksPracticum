@@ -1,6 +1,6 @@
 ###############################################################################
 #
-# IAR C/C++ Compiler V9.20.1.2476 for 8051                17/Feb/2017  12:45:13
+# IAR C/C++ Compiler V9.20.1.2476 for 8051                22/Feb/2017  13:47:27
 # Copyright 2004-2015 IAR Systems AB.
 # Standalone license - IAR Embedded Workbench for 8051
 #
@@ -12,14 +12,14 @@
 #    Dptr setup         =  1,16
 #                          
 #    Source file        =  
-#        D:\Jop van
-#        Buuren\Documents\Hogeschool\Vakken\wt\WirelessSensorNetworksPracticum\Components\stack\sapi\sapi.c
+#        D:\School\Jaar_3\WTWS\Projects\WirelessSensorNetworksPracticum\Components\stack\sapi\sapi.c
 #    Command line       =  
-#        -f "D:\Jop van
-#        Buuren\Documents\Hogeschool\Vakken\wt\WirelessSensorNetworksPracticum\Projects\zstack\Samples\DemoApp\CC2530DB\..\..\..\Tools\CC2530DB\f8wEndev.cfg"
-#        (-DCPU32MHZ -DROOT=__near_func -DMAC_CFG_TX_DATA_MAX=3
-#        -DMAC_CFG_TX_MAX=6 -DMAC_CFG_RX_MAX=3) -f "D:\Jop van
-#        Buuren\Documents\Hogeschool\Vakken\wt\WirelessSensorNetworksPracticum\Projects\zstack\Samples\DemoApp\CC2530DB\..\..\..\Tools\CC2530DB\f8wConfig.cfg"
+#        -f
+#        D:\School\Jaar_3\WTWS\Projects\WirelessSensorNetworksPracticum\Projects\zstack\Samples\DemoApp\CC2530DB\..\..\..\Tools\CC2530DB\f8wCoord.cfg
+#        (-DCPU32MHZ -DROOT=__near_func -DMAC_CFG_APP_PENDING_QUEUE=TRUE
+#        -DMAC_CFG_TX_DATA_MAX=5 -DMAC_CFG_TX_MAX=8 -DMAC_CFG_RX_MAX=5
+#        -DZDO_COORDINATOR -DRTR_NWK) -f
+#        D:\School\Jaar_3\WTWS\Projects\WirelessSensorNetworksPracticum\Projects\zstack\Samples\DemoApp\CC2530DB\..\..\..\Tools\CC2530DB\f8wConfig.cfg
 #        (-DZIGBEEPRO -DSECURE=0 -DZG_SECURE_DYNAMIC=0 -DREFLECTOR
 #        -DDEFAULT_CHANLIST=0x00100000 -DZDAPP_CONFIG_PAN_ID=0x0DAD
 #        -DNWK_START_DELAY=100 -DEXTENDED_JOINING_RANDOM_MASK=0x007F
@@ -34,75 +34,70 @@
 #        -DMAC_MAX_FRAME_SIZE=116 -DZDNWKMGR_MIN_TRANSMISSIONS=20
 #        "-DCONST=const __code" -DGENERIC=__generic -DRFD_RCVC_ALWAYS_ON=FALSE
 #        -DPOLL_RATE=1000 -DQUEUED_POLL_RATE=100 -DRESPONSE_POLL_RATE=100)
-#        -DREJOIN_POLL_RATE=440 "D:\Jop van
-#        Buuren\Documents\Hogeschool\Vakken\wt\WirelessSensorNetworksPracticum\Components\stack\sapi\sapi.c"
-#        -D NWK_AUTO_POLL -D HOLD_AUTO_START -D POWER_SAVING -D NV_INIT -D
-#        DEVICE_LOGICAL_TYPE=ZG_DEVICETYPE_ENDDEVICE -lC "D:\Jop van
-#        Buuren\Documents\Hogeschool\Vakken\wt\WirelessSensorNetworksPracticum\Projects\zstack\Samples\DemoApp\CC2530DB\SensorEB\List\"
-#        -lA "D:\Jop van
-#        Buuren\Documents\Hogeschool\Vakken\wt\WirelessSensorNetworksPracticum\Projects\zstack\Samples\DemoApp\CC2530DB\SensorEB\List\"
-#        --diag_suppress Pe001,Pa010,Pe1665 -o "D:\Jop van
-#        Buuren\Documents\Hogeschool\Vakken\wt\WirelessSensorNetworksPracticum\Projects\zstack\Samples\DemoApp\CC2530DB\SensorEB\Obj\"
+#        -DREJOIN_POLL_RATE=440
+#        D:\School\Jaar_3\WTWS\Projects\WirelessSensorNetworksPracticum\Components\stack\sapi\sapi.c
+#        -D HOLD_AUTO_START -D BUILD_ALL_DEVICES -D REFLECTOR -D NV_INIT -D
+#        NV_RESTORE -D HAL_UART=TRUE -lC
+#        D:\School\Jaar_3\WTWS\Projects\WirelessSensorNetworksPracticum\Projects\zstack\Samples\DemoApp\CC2530DB\CoordinatorEB\List\
+#        -lA
+#        D:\School\Jaar_3\WTWS\Projects\WirelessSensorNetworksPracticum\Projects\zstack\Samples\DemoApp\CC2530DB\CoordinatorEB\List\
+#        --diag_suppress Pe001,Pa010,Pe1665 -o
+#        D:\School\Jaar_3\WTWS\Projects\WirelessSensorNetworksPracticum\Projects\zstack\Samples\DemoApp\CC2530DB\CoordinatorEB\Obj\
 #        -e --no_cse --no_unroll --no_inline --no_code_motion --no_tbaa --debug
 #        --core=plain --dptr=16,1 --data_model=large --code_model=banked
 #        --calling_convention=xdata_reentrant --place_constants=data_rom
-#        --nr_virtual_regs 16 -I "D:\Jop van
-#        Buuren\Documents\Hogeschool\Vakken\wt\WirelessSensorNetworksPracticum\Projects\zstack\Samples\DemoApp\CC2530DB\"
-#        -I "D:\Jop van
-#        Buuren\Documents\Hogeschool\Vakken\wt\WirelessSensorNetworksPracticum\Projects\zstack\Samples\DemoApp\CC2530DB\..\Source\"
-#        -I "D:\Jop van
-#        Buuren\Documents\Hogeschool\Vakken\wt\WirelessSensorNetworksPracticum\Projects\zstack\Samples\DemoApp\CC2530DB\..\..\..\ZMain\TI2530DB\"
-#        -I "D:\Jop van
-#        Buuren\Documents\Hogeschool\Vakken\wt\WirelessSensorNetworksPracticum\Projects\zstack\Samples\DemoApp\CC2530DB\..\..\..\..\..\Components\hal\include\"
-#        -I "D:\Jop van
-#        Buuren\Documents\Hogeschool\Vakken\wt\WirelessSensorNetworksPracticum\Projects\zstack\Samples\DemoApp\CC2530DB\..\..\..\..\..\Components\hal\target\CC2530EB\"
-#        -I "D:\Jop van
-#        Buuren\Documents\Hogeschool\Vakken\wt\WirelessSensorNetworksPracticum\Projects\zstack\Samples\DemoApp\CC2530DB\..\..\..\..\..\Components\mac\include\"
-#        -I "D:\Jop van
-#        Buuren\Documents\Hogeschool\Vakken\wt\WirelessSensorNetworksPracticum\Projects\zstack\Samples\DemoApp\CC2530DB\..\..\..\..\..\Components\mac\high_level\"
-#        -I "D:\Jop van
-#        Buuren\Documents\Hogeschool\Vakken\wt\WirelessSensorNetworksPracticum\Projects\zstack\Samples\DemoApp\CC2530DB\..\..\..\..\..\Components\mac\low_level\srf04\"
-#        -I "D:\Jop van
-#        Buuren\Documents\Hogeschool\Vakken\wt\WirelessSensorNetworksPracticum\Projects\zstack\Samples\DemoApp\CC2530DB\..\..\..\..\..\Components\mac\low_level\srf04\single_chip\"
-#        -I "D:\Jop van
-#        Buuren\Documents\Hogeschool\Vakken\wt\WirelessSensorNetworksPracticum\Projects\zstack\Samples\DemoApp\CC2530DB\..\..\..\..\..\Components\mt\"
-#        -I "D:\Jop van
-#        Buuren\Documents\Hogeschool\Vakken\wt\WirelessSensorNetworksPracticum\Projects\zstack\Samples\DemoApp\CC2530DB\..\..\..\..\..\Components\osal\include\"
-#        -I "D:\Jop van
-#        Buuren\Documents\Hogeschool\Vakken\wt\WirelessSensorNetworksPracticum\Projects\zstack\Samples\DemoApp\CC2530DB\..\..\..\..\..\Components\services\saddr\"
-#        -I "D:\Jop van
-#        Buuren\Documents\Hogeschool\Vakken\wt\WirelessSensorNetworksPracticum\Projects\zstack\Samples\DemoApp\CC2530DB\..\..\..\..\..\Components\services\sdata\"
-#        -I "D:\Jop van
-#        Buuren\Documents\Hogeschool\Vakken\wt\WirelessSensorNetworksPracticum\Projects\zstack\Samples\DemoApp\CC2530DB\..\..\..\..\..\Components\stack\af\"
-#        -I "D:\Jop van
-#        Buuren\Documents\Hogeschool\Vakken\wt\WirelessSensorNetworksPracticum\Projects\zstack\Samples\DemoApp\CC2530DB\..\..\..\..\..\Components\stack\nwk\"
-#        -I "D:\Jop van
-#        Buuren\Documents\Hogeschool\Vakken\wt\WirelessSensorNetworksPracticum\Projects\zstack\Samples\DemoApp\CC2530DB\..\..\..\..\..\Components\stack\sapi\"
-#        -I "D:\Jop van
-#        Buuren\Documents\Hogeschool\Vakken\wt\WirelessSensorNetworksPracticum\Projects\zstack\Samples\DemoApp\CC2530DB\..\..\..\..\..\Components\stack\sec\"
-#        -I "D:\Jop van
-#        Buuren\Documents\Hogeschool\Vakken\wt\WirelessSensorNetworksPracticum\Projects\zstack\Samples\DemoApp\CC2530DB\..\..\..\..\..\Components\stack\sys\"
-#        -I "D:\Jop van
-#        Buuren\Documents\Hogeschool\Vakken\wt\WirelessSensorNetworksPracticum\Projects\zstack\Samples\DemoApp\CC2530DB\..\..\..\..\..\Components\stack\zdo\"
-#        -I "D:\Jop van
-#        Buuren\Documents\Hogeschool\Vakken\wt\WirelessSensorNetworksPracticum\Projects\zstack\Samples\DemoApp\CC2530DB\..\..\..\..\..\Components\zmac\"
-#        -I "D:\Jop van
-#        Buuren\Documents\Hogeschool\Vakken\wt\WirelessSensorNetworksPracticum\Projects\zstack\Samples\DemoApp\CC2530DB\..\..\..\..\..\Components\zmac\f8w\"
+#        --nr_virtual_regs 16 -I
+#        D:\School\Jaar_3\WTWS\Projects\WirelessSensorNetworksPracticum\Projects\zstack\Samples\DemoApp\CC2530DB\
+#        -I
+#        D:\School\Jaar_3\WTWS\Projects\WirelessSensorNetworksPracticum\Projects\zstack\Samples\DemoApp\CC2530DB\..\Source\
+#        -I
+#        D:\School\Jaar_3\WTWS\Projects\WirelessSensorNetworksPracticum\Projects\zstack\Samples\DemoApp\CC2530DB\..\..\..\ZMain\TI2530DB\
+#        -I
+#        D:\School\Jaar_3\WTWS\Projects\WirelessSensorNetworksPracticum\Projects\zstack\Samples\DemoApp\CC2530DB\..\..\..\..\..\Components\hal\include\
+#        -I
+#        D:\School\Jaar_3\WTWS\Projects\WirelessSensorNetworksPracticum\Projects\zstack\Samples\DemoApp\CC2530DB\..\..\..\..\..\Components\hal\target\CC2530EB\
+#        -I
+#        D:\School\Jaar_3\WTWS\Projects\WirelessSensorNetworksPracticum\Projects\zstack\Samples\DemoApp\CC2530DB\..\..\..\..\..\Components\mac\include\
+#        -I
+#        D:\School\Jaar_3\WTWS\Projects\WirelessSensorNetworksPracticum\Projects\zstack\Samples\DemoApp\CC2530DB\..\..\..\..\..\Components\mac\high_level\
+#        -I
+#        D:\School\Jaar_3\WTWS\Projects\WirelessSensorNetworksPracticum\Projects\zstack\Samples\DemoApp\CC2530DB\..\..\..\..\..\Components\mac\low_level\srf04\
+#        -I
+#        D:\School\Jaar_3\WTWS\Projects\WirelessSensorNetworksPracticum\Projects\zstack\Samples\DemoApp\CC2530DB\..\..\..\..\..\Components\mac\low_level\srf04\single_chip\
+#        -I
+#        D:\School\Jaar_3\WTWS\Projects\WirelessSensorNetworksPracticum\Projects\zstack\Samples\DemoApp\CC2530DB\..\..\..\..\..\Components\mt\
+#        -I
+#        D:\School\Jaar_3\WTWS\Projects\WirelessSensorNetworksPracticum\Projects\zstack\Samples\DemoApp\CC2530DB\..\..\..\..\..\Components\osal\include\
+#        -I
+#        D:\School\Jaar_3\WTWS\Projects\WirelessSensorNetworksPracticum\Projects\zstack\Samples\DemoApp\CC2530DB\..\..\..\..\..\Components\services\saddr\
+#        -I
+#        D:\School\Jaar_3\WTWS\Projects\WirelessSensorNetworksPracticum\Projects\zstack\Samples\DemoApp\CC2530DB\..\..\..\..\..\Components\services\sdata\
+#        -I
+#        D:\School\Jaar_3\WTWS\Projects\WirelessSensorNetworksPracticum\Projects\zstack\Samples\DemoApp\CC2530DB\..\..\..\..\..\Components\stack\af\
+#        -I
+#        D:\School\Jaar_3\WTWS\Projects\WirelessSensorNetworksPracticum\Projects\zstack\Samples\DemoApp\CC2530DB\..\..\..\..\..\Components\stack\nwk\
+#        -I
+#        D:\School\Jaar_3\WTWS\Projects\WirelessSensorNetworksPracticum\Projects\zstack\Samples\DemoApp\CC2530DB\..\..\..\..\..\Components\stack\sapi\
+#        -I
+#        D:\School\Jaar_3\WTWS\Projects\WirelessSensorNetworksPracticum\Projects\zstack\Samples\DemoApp\CC2530DB\..\..\..\..\..\Components\stack\sec\
+#        -I
+#        D:\School\Jaar_3\WTWS\Projects\WirelessSensorNetworksPracticum\Projects\zstack\Samples\DemoApp\CC2530DB\..\..\..\..\..\Components\stack\sys\
+#        -I
+#        D:\School\Jaar_3\WTWS\Projects\WirelessSensorNetworksPracticum\Projects\zstack\Samples\DemoApp\CC2530DB\..\..\..\..\..\Components\stack\zdo\
+#        -I
+#        D:\School\Jaar_3\WTWS\Projects\WirelessSensorNetworksPracticum\Projects\zstack\Samples\DemoApp\CC2530DB\..\..\..\..\..\Components\zmac\
+#        -I
+#        D:\School\Jaar_3\WTWS\Projects\WirelessSensorNetworksPracticum\Projects\zstack\Samples\DemoApp\CC2530DB\..\..\..\..\..\Components\zmac\f8w\
 #        -Ol --require_prototypes
 #    List file          =  
-#        D:\Jop van
-#        Buuren\Documents\Hogeschool\Vakken\wt\WirelessSensorNetworksPracticum\Projects\zstack\Samples\DemoApp\CC2530DB\SensorEB\List\sapi.lst
+#        D:\School\Jaar_3\WTWS\Projects\WirelessSensorNetworksPracticum\Projects\zstack\Samples\DemoApp\CC2530DB\CoordinatorEB\List\sapi.lst
 #    Object file        =  
-#        D:\Jop van
-#        Buuren\Documents\Hogeschool\Vakken\wt\WirelessSensorNetworksPracticum\Projects\zstack\Samples\DemoApp\CC2530DB\SensorEB\Obj\sapi.r51
+#        D:\School\Jaar_3\WTWS\Projects\WirelessSensorNetworksPracticum\Projects\zstack\Samples\DemoApp\CC2530DB\CoordinatorEB\Obj\sapi.r51
 #
 ###############################################################################
 
-D:\Jop van Buuren\Documents\Hogeschool\Vakken\wt\WirelessSensorNetworksPracticum\Components\stack\sapi\sapi.c
+D:\School\Jaar_3\WTWS\Projects\WirelessSensorNetworksPracticum\Components\stack\sapi\sapi.c
       1          /**************************************************************************************************
-                                                                                                                   ^
-Warning[Pa050]: non-native end of line sequence detected (this diagnostic is
-          only issued once)
       2            Filename:       sapi.c
       3            Revised:        $Date: 2010-05-03 17:46:57 -0700 (Mon, 03 May 2010) $
       4            Revision:       $Revision: 22364 $
@@ -352,60 +347,50 @@ Warning[Pa050]: non-native end of line sequence detected (this diagnostic is
    \   00001B   E0           MOVX    A,@DPTR
    \   00001C   C3           CLR     C
    \   00001D   9403         SUBB    A,#0x3
-   \   00001F   5014         JNC     ??zb_StartRequest_0
-   \   000021   85..82       MOV     DPL,?XSP + 0
-   \   000024   85..83       MOV     DPH,?XSP + 1
-   \   000027   E0           MOVX    A,@DPTR
-   \   000028   6401         XRL     A,#0x1
-   \   00002A   6009         JZ      ??zb_StartRequest_0
-   \   00002C   85..82       MOV     DPL,?XSP + 0
-   \   00002F   85..83       MOV     DPH,?XSP + 1
-   \   000032   E0           MOVX    A,@DPTR
-   \   000033   701C         JNZ     ??zb_StartRequest_1
+   \   00001F   401C         JC      ??zb_StartRequest_0
     189            {
     190              logicalType = ZB_INVALID_PARAMETER;
-   \                     ??zb_StartRequest_0:
-   \   000035   85..82       MOV     DPL,?XSP + 0
-   \   000038   85..83       MOV     DPH,?XSP + 1
-   \   00003B   7402         MOV     A,#0x2
-   \   00003D   F0           MOVX    @DPTR,A
+   \   000021   85..82       MOV     DPL,?XSP + 0
+   \   000024   85..83       MOV     DPH,?XSP + 1
+   \   000027   7402         MOV     A,#0x2
+   \   000029   F0           MOVX    @DPTR,A
     191              SAPI_SendCback(SAPICB_START_CNF, logicalType, 0);
-   \   00003E                ; Setup parameters for call to function SAPI_SendCback
-   \   00003E   7C00         MOV     R4,#0x0
-   \   000040   7D00         MOV     R5,#0x0
-   \   000042   85..82       MOV     DPL,?XSP + 0
-   \   000045   85..83       MOV     DPH,?XSP + 1
-   \   000048   E0           MOVX    A,@DPTR
-   \   000049   FA           MOV     R2,A
-   \   00004A   79E2         MOV     R1,#-0x1e
-   \   00004C   12....       LCALL   `??SAPI_SendCback::?relay`; Banked call to: SAPI_SendCback
-   \   00004F   8014         SJMP    ??zb_StartRequest_2
+   \   00002A                ; Setup parameters for call to function SAPI_SendCback
+   \   00002A   7C00         MOV     R4,#0x0
+   \   00002C   7D00         MOV     R5,#0x0
+   \   00002E   85..82       MOV     DPL,?XSP + 0
+   \   000031   85..83       MOV     DPH,?XSP + 1
+   \   000034   E0           MOVX    A,@DPTR
+   \   000035   FA           MOV     R2,A
+   \   000036   79E2         MOV     R1,#-0x1e
+   \   000038   12....       LCALL   `??SAPI_SendCback::?relay`; Banked call to: SAPI_SendCback
+   \   00003B   8014         SJMP    ??zb_StartRequest_1
     192            }
     193            else
     194            {
     195              logicalType = ZB_SUCCESS;
-   \                     ??zb_StartRequest_1:
-   \   000051   85..82       MOV     DPL,?XSP + 0
-   \   000054   85..83       MOV     DPH,?XSP + 1
-   \   000057   7400         MOV     A,#0x0
-   \   000059   F0           MOVX    @DPTR,A
+   \                     ??zb_StartRequest_0:
+   \   00003D   85..82       MOV     DPL,?XSP + 0
+   \   000040   85..83       MOV     DPH,?XSP + 1
+   \   000043   7400         MOV     A,#0x0
+   \   000045   F0           MOVX    @DPTR,A
     196              ZDOInitDevice(zgStartDelay);
-   \   00005A                ; Setup parameters for call to function ZDOInitDevice
-   \   00005A   90....       MOV     DPTR,#zgStartDelay
-   \   00005D   E0           MOVX    A,@DPTR
-   \   00005E   FA           MOV     R2,A
-   \   00005F   7B00         MOV     R3,#0x0
-   \   000061   12....       LCALL   `??ZDOInitDevice::?relay`; Banked call to: ZDOInitDevice
-   \   000064   E9           MOV     A,R1
+   \   000046                ; Setup parameters for call to function ZDOInitDevice
+   \   000046   90....       MOV     DPTR,#zgStartDelay
+   \   000049   E0           MOVX    A,@DPTR
+   \   00004A   FA           MOV     R2,A
+   \   00004B   7B00         MOV     R3,#0x0
+   \   00004D   12....       LCALL   `??ZDOInitDevice::?relay`; Banked call to: ZDOInitDevice
+   \   000050   E9           MOV     A,R1
     197            }
     198          
     199            return;
-   \                     ??zb_StartRequest_2:
-   \   000065   7401         MOV     A,#0x1
-   \   000067   12....       LCALL   ?DEALLOC_XSTACK8
-   \   00006A   D083         POP     DPH
-   \   00006C   D082         POP     DPL
-   \   00006E   02....       LJMP    ?BRET
+   \                     ??zb_StartRequest_1:
+   \   000051   7401         MOV     A,#0x1
+   \   000053   12....       LCALL   ?DEALLOC_XSTACK8
+   \   000056   D083         POP     DPH
+   \   000058   D082         POP     DPL
+   \   00005A   02....       LJMP    ?BRET
     200          }
     201          
     202          /******************************************************************************
@@ -760,7 +745,7 @@ Warning[Pa050]: non-native end of line sequence detected (this diagnostic is
    \   0001DC   6003         JZ      $+5
    \   0001DE   02....       LJMP    ??zb_BindDevice_2 & 0xFFFF
    \   0001E1                ; Setup parameters for call to function osal_start_timerEx
-   \   0001E1   90....       MOV     DPTR,#zgApsDefaultMaxBindingTime
+   \   0001E1   90....       MOV     DPTR,#AIB_MaxBindingTime
    \   0001E4   E0           MOVX    A,@DPTR
    \   0001E5   F5..         MOV     ?V4,A
    \   0001E7   A3           INC     DPTR
@@ -3151,7 +3136,7 @@ Warning[Pa050]: non-native end of line sequence detected (this diagnostic is
        6  zb_ReadConfiguration::?relay
      205  zb_SendDataRequest
        6  zb_SendDataRequest::?relay
-     113  zb_StartRequest
+      93  zb_StartRequest
        6  zb_StartRequest::?relay
        6  zb_SystemReset
        6  zb_SystemReset::?relay
@@ -3159,14 +3144,14 @@ Warning[Pa050]: non-native end of line sequence detected (this diagnostic is
        6  zb_WriteConfiguration::?relay
 
  
- 2 818 bytes in segment BANKED_CODE
+ 2 798 bytes in segment BANKED_CODE
    120 bytes in segment BANK_RELAYS
     17 bytes in segment XDATA_ROM_C
     11 bytes in segment XDATA_Z
  
- 2 938 bytes of CODE  memory
+ 2 918 bytes of CODE  memory
     13 bytes of CONST memory (+ 4 bytes shared)
     11 bytes of XDATA memory
 
 Errors: none
-Warnings: 1
+Warnings: none

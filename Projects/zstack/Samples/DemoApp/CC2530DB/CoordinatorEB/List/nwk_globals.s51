@@ -1,6 +1,6 @@
 ///////////////////////////////////////////////////////////////////////////////
 //
-// IAR C/C++ Compiler V9.20.1.2476 for 8051               17/Feb/2017  12:45:12
+// IAR C/C++ Compiler V9.20.1.2476 for 8051               22/Feb/2017  13:47:21
 // Copyright 2004-2015 IAR Systems AB.
 // Standalone license - IAR Embedded Workbench for 8051
 //
@@ -12,14 +12,14 @@
 //    Dptr setup         =  1,16
 //                          
 //    Source file        =  
-//        D:\Jop van
-//        Buuren\Documents\Hogeschool\Vakken\wt\WirelessSensorNetworksPracticum\Components\stack\nwk\nwk_globals.c
+//        D:\School\Jaar_3\WTWS\Projects\WirelessSensorNetworksPracticum\Components\stack\nwk\nwk_globals.c
 //    Command line       =  
-//        -f "D:\Jop van
-//        Buuren\Documents\Hogeschool\Vakken\wt\WirelessSensorNetworksPracticum\Projects\zstack\Samples\DemoApp\CC2530DB\..\..\..\Tools\CC2530DB\f8wEndev.cfg"
-//        (-DCPU32MHZ -DROOT=__near_func -DMAC_CFG_TX_DATA_MAX=3
-//        -DMAC_CFG_TX_MAX=6 -DMAC_CFG_RX_MAX=3) -f "D:\Jop van
-//        Buuren\Documents\Hogeschool\Vakken\wt\WirelessSensorNetworksPracticum\Projects\zstack\Samples\DemoApp\CC2530DB\..\..\..\Tools\CC2530DB\f8wConfig.cfg"
+//        -f
+//        D:\School\Jaar_3\WTWS\Projects\WirelessSensorNetworksPracticum\Projects\zstack\Samples\DemoApp\CC2530DB\..\..\..\Tools\CC2530DB\f8wCoord.cfg
+//        (-DCPU32MHZ -DROOT=__near_func -DMAC_CFG_APP_PENDING_QUEUE=TRUE
+//        -DMAC_CFG_TX_DATA_MAX=5 -DMAC_CFG_TX_MAX=8 -DMAC_CFG_RX_MAX=5
+//        -DZDO_COORDINATOR -DRTR_NWK) -f
+//        D:\School\Jaar_3\WTWS\Projects\WirelessSensorNetworksPracticum\Projects\zstack\Samples\DemoApp\CC2530DB\..\..\..\Tools\CC2530DB\f8wConfig.cfg
 //        (-DZIGBEEPRO -DSECURE=0 -DZG_SECURE_DYNAMIC=0 -DREFLECTOR
 //        -DDEFAULT_CHANLIST=0x00100000 -DZDAPP_CONFIG_PAN_ID=0x0DAD
 //        -DNWK_START_DELAY=100 -DEXTENDED_JOINING_RANDOM_MASK=0x007F
@@ -34,64 +34,63 @@
 //        -DMAC_MAX_FRAME_SIZE=116 -DZDNWKMGR_MIN_TRANSMISSIONS=20
 //        "-DCONST=const __code" -DGENERIC=__generic -DRFD_RCVC_ALWAYS_ON=FALSE
 //        -DPOLL_RATE=1000 -DQUEUED_POLL_RATE=100 -DRESPONSE_POLL_RATE=100)
-//        -DREJOIN_POLL_RATE=440 "D:\Jop van
-//        Buuren\Documents\Hogeschool\Vakken\wt\WirelessSensorNetworksPracticum\Components\stack\nwk\nwk_globals.c"
-//        -D NWK_AUTO_POLL -D HOLD_AUTO_START -D POWER_SAVING -D NV_INIT -D
-//        DEVICE_LOGICAL_TYPE=ZG_DEVICETYPE_ENDDEVICE -lC "D:\Jop van
-//        Buuren\Documents\Hogeschool\Vakken\wt\WirelessSensorNetworksPracticum\Projects\zstack\Samples\DemoApp\CC2530DB\SensorEB\List\"
-//        -lA "D:\Jop van
-//        Buuren\Documents\Hogeschool\Vakken\wt\WirelessSensorNetworksPracticum\Projects\zstack\Samples\DemoApp\CC2530DB\SensorEB\List\"
-//        --diag_suppress Pe001,Pa010,Pe1665 -o "D:\Jop van
-//        Buuren\Documents\Hogeschool\Vakken\wt\WirelessSensorNetworksPracticum\Projects\zstack\Samples\DemoApp\CC2530DB\SensorEB\Obj\"
+//        -DREJOIN_POLL_RATE=440
+//        D:\School\Jaar_3\WTWS\Projects\WirelessSensorNetworksPracticum\Components\stack\nwk\nwk_globals.c
+//        -D HOLD_AUTO_START -D BUILD_ALL_DEVICES -D REFLECTOR -D NV_INIT -D
+//        NV_RESTORE -D HAL_UART=TRUE -lC
+//        D:\School\Jaar_3\WTWS\Projects\WirelessSensorNetworksPracticum\Projects\zstack\Samples\DemoApp\CC2530DB\CoordinatorEB\List\
+//        -lA
+//        D:\School\Jaar_3\WTWS\Projects\WirelessSensorNetworksPracticum\Projects\zstack\Samples\DemoApp\CC2530DB\CoordinatorEB\List\
+//        --diag_suppress Pe001,Pa010,Pe1665 -o
+//        D:\School\Jaar_3\WTWS\Projects\WirelessSensorNetworksPracticum\Projects\zstack\Samples\DemoApp\CC2530DB\CoordinatorEB\Obj\
 //        -e --no_cse --no_unroll --no_inline --no_code_motion --no_tbaa
 //        --debug --core=plain --dptr=16,1 --data_model=large
 //        --code_model=banked --calling_convention=xdata_reentrant
-//        --place_constants=data_rom --nr_virtual_regs 16 -I "D:\Jop van
-//        Buuren\Documents\Hogeschool\Vakken\wt\WirelessSensorNetworksPracticum\Projects\zstack\Samples\DemoApp\CC2530DB\"
-//        -I "D:\Jop van
-//        Buuren\Documents\Hogeschool\Vakken\wt\WirelessSensorNetworksPracticum\Projects\zstack\Samples\DemoApp\CC2530DB\..\Source\"
-//        -I "D:\Jop van
-//        Buuren\Documents\Hogeschool\Vakken\wt\WirelessSensorNetworksPracticum\Projects\zstack\Samples\DemoApp\CC2530DB\..\..\..\ZMain\TI2530DB\"
-//        -I "D:\Jop van
-//        Buuren\Documents\Hogeschool\Vakken\wt\WirelessSensorNetworksPracticum\Projects\zstack\Samples\DemoApp\CC2530DB\..\..\..\..\..\Components\hal\include\"
-//        -I "D:\Jop van
-//        Buuren\Documents\Hogeschool\Vakken\wt\WirelessSensorNetworksPracticum\Projects\zstack\Samples\DemoApp\CC2530DB\..\..\..\..\..\Components\hal\target\CC2530EB\"
-//        -I "D:\Jop van
-//        Buuren\Documents\Hogeschool\Vakken\wt\WirelessSensorNetworksPracticum\Projects\zstack\Samples\DemoApp\CC2530DB\..\..\..\..\..\Components\mac\include\"
-//        -I "D:\Jop van
-//        Buuren\Documents\Hogeschool\Vakken\wt\WirelessSensorNetworksPracticum\Projects\zstack\Samples\DemoApp\CC2530DB\..\..\..\..\..\Components\mac\high_level\"
-//        -I "D:\Jop van
-//        Buuren\Documents\Hogeschool\Vakken\wt\WirelessSensorNetworksPracticum\Projects\zstack\Samples\DemoApp\CC2530DB\..\..\..\..\..\Components\mac\low_level\srf04\"
-//        -I "D:\Jop van
-//        Buuren\Documents\Hogeschool\Vakken\wt\WirelessSensorNetworksPracticum\Projects\zstack\Samples\DemoApp\CC2530DB\..\..\..\..\..\Components\mac\low_level\srf04\single_chip\"
-//        -I "D:\Jop van
-//        Buuren\Documents\Hogeschool\Vakken\wt\WirelessSensorNetworksPracticum\Projects\zstack\Samples\DemoApp\CC2530DB\..\..\..\..\..\Components\mt\"
-//        -I "D:\Jop van
-//        Buuren\Documents\Hogeschool\Vakken\wt\WirelessSensorNetworksPracticum\Projects\zstack\Samples\DemoApp\CC2530DB\..\..\..\..\..\Components\osal\include\"
-//        -I "D:\Jop van
-//        Buuren\Documents\Hogeschool\Vakken\wt\WirelessSensorNetworksPracticum\Projects\zstack\Samples\DemoApp\CC2530DB\..\..\..\..\..\Components\services\saddr\"
-//        -I "D:\Jop van
-//        Buuren\Documents\Hogeschool\Vakken\wt\WirelessSensorNetworksPracticum\Projects\zstack\Samples\DemoApp\CC2530DB\..\..\..\..\..\Components\services\sdata\"
-//        -I "D:\Jop van
-//        Buuren\Documents\Hogeschool\Vakken\wt\WirelessSensorNetworksPracticum\Projects\zstack\Samples\DemoApp\CC2530DB\..\..\..\..\..\Components\stack\af\"
-//        -I "D:\Jop van
-//        Buuren\Documents\Hogeschool\Vakken\wt\WirelessSensorNetworksPracticum\Projects\zstack\Samples\DemoApp\CC2530DB\..\..\..\..\..\Components\stack\nwk\"
-//        -I "D:\Jop van
-//        Buuren\Documents\Hogeschool\Vakken\wt\WirelessSensorNetworksPracticum\Projects\zstack\Samples\DemoApp\CC2530DB\..\..\..\..\..\Components\stack\sapi\"
-//        -I "D:\Jop van
-//        Buuren\Documents\Hogeschool\Vakken\wt\WirelessSensorNetworksPracticum\Projects\zstack\Samples\DemoApp\CC2530DB\..\..\..\..\..\Components\stack\sec\"
-//        -I "D:\Jop van
-//        Buuren\Documents\Hogeschool\Vakken\wt\WirelessSensorNetworksPracticum\Projects\zstack\Samples\DemoApp\CC2530DB\..\..\..\..\..\Components\stack\sys\"
-//        -I "D:\Jop van
-//        Buuren\Documents\Hogeschool\Vakken\wt\WirelessSensorNetworksPracticum\Projects\zstack\Samples\DemoApp\CC2530DB\..\..\..\..\..\Components\stack\zdo\"
-//        -I "D:\Jop van
-//        Buuren\Documents\Hogeschool\Vakken\wt\WirelessSensorNetworksPracticum\Projects\zstack\Samples\DemoApp\CC2530DB\..\..\..\..\..\Components\zmac\"
-//        -I "D:\Jop van
-//        Buuren\Documents\Hogeschool\Vakken\wt\WirelessSensorNetworksPracticum\Projects\zstack\Samples\DemoApp\CC2530DB\..\..\..\..\..\Components\zmac\f8w\"
+//        --place_constants=data_rom --nr_virtual_regs 16 -I
+//        D:\School\Jaar_3\WTWS\Projects\WirelessSensorNetworksPracticum\Projects\zstack\Samples\DemoApp\CC2530DB\
+//        -I
+//        D:\School\Jaar_3\WTWS\Projects\WirelessSensorNetworksPracticum\Projects\zstack\Samples\DemoApp\CC2530DB\..\Source\
+//        -I
+//        D:\School\Jaar_3\WTWS\Projects\WirelessSensorNetworksPracticum\Projects\zstack\Samples\DemoApp\CC2530DB\..\..\..\ZMain\TI2530DB\
+//        -I
+//        D:\School\Jaar_3\WTWS\Projects\WirelessSensorNetworksPracticum\Projects\zstack\Samples\DemoApp\CC2530DB\..\..\..\..\..\Components\hal\include\
+//        -I
+//        D:\School\Jaar_3\WTWS\Projects\WirelessSensorNetworksPracticum\Projects\zstack\Samples\DemoApp\CC2530DB\..\..\..\..\..\Components\hal\target\CC2530EB\
+//        -I
+//        D:\School\Jaar_3\WTWS\Projects\WirelessSensorNetworksPracticum\Projects\zstack\Samples\DemoApp\CC2530DB\..\..\..\..\..\Components\mac\include\
+//        -I
+//        D:\School\Jaar_3\WTWS\Projects\WirelessSensorNetworksPracticum\Projects\zstack\Samples\DemoApp\CC2530DB\..\..\..\..\..\Components\mac\high_level\
+//        -I
+//        D:\School\Jaar_3\WTWS\Projects\WirelessSensorNetworksPracticum\Projects\zstack\Samples\DemoApp\CC2530DB\..\..\..\..\..\Components\mac\low_level\srf04\
+//        -I
+//        D:\School\Jaar_3\WTWS\Projects\WirelessSensorNetworksPracticum\Projects\zstack\Samples\DemoApp\CC2530DB\..\..\..\..\..\Components\mac\low_level\srf04\single_chip\
+//        -I
+//        D:\School\Jaar_3\WTWS\Projects\WirelessSensorNetworksPracticum\Projects\zstack\Samples\DemoApp\CC2530DB\..\..\..\..\..\Components\mt\
+//        -I
+//        D:\School\Jaar_3\WTWS\Projects\WirelessSensorNetworksPracticum\Projects\zstack\Samples\DemoApp\CC2530DB\..\..\..\..\..\Components\osal\include\
+//        -I
+//        D:\School\Jaar_3\WTWS\Projects\WirelessSensorNetworksPracticum\Projects\zstack\Samples\DemoApp\CC2530DB\..\..\..\..\..\Components\services\saddr\
+//        -I
+//        D:\School\Jaar_3\WTWS\Projects\WirelessSensorNetworksPracticum\Projects\zstack\Samples\DemoApp\CC2530DB\..\..\..\..\..\Components\services\sdata\
+//        -I
+//        D:\School\Jaar_3\WTWS\Projects\WirelessSensorNetworksPracticum\Projects\zstack\Samples\DemoApp\CC2530DB\..\..\..\..\..\Components\stack\af\
+//        -I
+//        D:\School\Jaar_3\WTWS\Projects\WirelessSensorNetworksPracticum\Projects\zstack\Samples\DemoApp\CC2530DB\..\..\..\..\..\Components\stack\nwk\
+//        -I
+//        D:\School\Jaar_3\WTWS\Projects\WirelessSensorNetworksPracticum\Projects\zstack\Samples\DemoApp\CC2530DB\..\..\..\..\..\Components\stack\sapi\
+//        -I
+//        D:\School\Jaar_3\WTWS\Projects\WirelessSensorNetworksPracticum\Projects\zstack\Samples\DemoApp\CC2530DB\..\..\..\..\..\Components\stack\sec\
+//        -I
+//        D:\School\Jaar_3\WTWS\Projects\WirelessSensorNetworksPracticum\Projects\zstack\Samples\DemoApp\CC2530DB\..\..\..\..\..\Components\stack\sys\
+//        -I
+//        D:\School\Jaar_3\WTWS\Projects\WirelessSensorNetworksPracticum\Projects\zstack\Samples\DemoApp\CC2530DB\..\..\..\..\..\Components\stack\zdo\
+//        -I
+//        D:\School\Jaar_3\WTWS\Projects\WirelessSensorNetworksPracticum\Projects\zstack\Samples\DemoApp\CC2530DB\..\..\..\..\..\Components\zmac\
+//        -I
+//        D:\School\Jaar_3\WTWS\Projects\WirelessSensorNetworksPracticum\Projects\zstack\Samples\DemoApp\CC2530DB\..\..\..\..\..\Components\zmac\f8w\
 //        -Ol --require_prototypes
 //    List file          =  
-//        D:\Jop van
-//        Buuren\Documents\Hogeschool\Vakken\wt\WirelessSensorNetworksPracticum\Projects\zstack\Samples\DemoApp\CC2530DB\SensorEB\List\nwk_globals.s51
+//        D:\School\Jaar_3\WTWS\Projects\WirelessSensorNetworksPracticum\Projects\zstack\Samples\DemoApp\CC2530DB\CoordinatorEB\List\nwk_globals.s51
 //
 ///////////////////////////////////////////////////////////////////////////////
 
@@ -123,6 +122,8 @@
         EXTERN ?BANKED_LEAVE_XDATA
         EXTERN ?BDISPATCH
         EXTERN ?BRET
+        EXTERN ?DEALLOC_XSTACK8
+        EXTERN ?PUSH_XSTACK_I_TWO
         EXTERN __INIT_XDATA_I
         EXTERN __INIT_XDATA_Z
 
@@ -140,9 +141,9 @@
         PUBLIC CskipChldrn
         PUBLIC CskipRtrs
         PUBLIC NIB_init
-        FUNCTION NIB_init,021203H
+        FUNCTION NIB_init,0a1203H
         ARGFRAME XSTACK, 0, STACK
-        LOCFRAME ISTACK, 2, STACK
+        LOCFRAME XSTACK, 14, STACK
         PUBLIC apsEndDeviceBroadcastTable
         PUBLIC bcastHoldAckMask
         PUBLIC bcastHoldHandle
@@ -157,6 +158,7 @@
         PUBLIC gGOOD_LINK_COST
         PUBLIC gKEEPALIVE_TIMEOUT_MAX
         PUBLIC gLINK_DOWN_TRIGGER
+        PUBLIC gLINK_STATUS_JITTER_MASK
         PUBLIC gMAX_BCAST
         PUBLIC gMAX_BINDING_CLUSTER_IDS
         PUBLIC gMAX_BROADCAST_QUEUED
@@ -172,6 +174,7 @@
         PUBLIC gMTO_ROUTE_EXPIRY_TIME
         PUBLIC gMTO_RREQ_LIMIT_TIME
         PUBLIC gNWK_CONFLICTED_ADDR_EXPIRY_TIME
+        PUBLIC gNWK_FREQ_AGILITY_ALL_MAC_ERRS
         PUBLIC gNWK_INDIRECT_CNT_RTG_TMR
         PUBLIC gNWK_INDIRECT_MSG_MAX_ALL
         PUBLIC gNWK_INDIRECT_MSG_MAX_PER
@@ -294,8 +297,18 @@
         
 AddrMgrInit         SYMBOL "AddrMgrInit"
 `??AddrMgrInit::?relay` SYMBOL "?relay", AddrMgrInit
+NLME_InitLinkStatus SYMBOL "NLME_InitLinkStatus"
+`??NLME_InitLinkStatus::?relay` SYMBOL "?relay", NLME_InitLinkStatus
+NLME_InitStochasticAddressing SYMBOL "NLME_InitStochasticAddressing"
+`??NLME_InitStochasticAddressing::?relay` SYMBOL "?relay", NLME_InitStochasticAddressing
+NwkFreqAgilityInit  SYMBOL "NwkFreqAgilityInit"
+`??NwkFreqAgilityInit::?relay` SYMBOL "?relay", NwkFreqAgilityInit
+NwkInitChildAging   SYMBOL "NwkInitChildAging"
+`??NwkInitChildAging::?relay` SYMBOL "?relay", NwkInitChildAging
 osal_memset         SYMBOL "osal_memset"
 `??osal_memset::?relay` SYMBOL "?relay", osal_memset
+osal_nv_read        SYMBOL "osal_nv_read"
+`??osal_nv_read::?relay` SYMBOL "?relay", osal_nv_read
 osal_rand           SYMBOL "osal_rand"
 `??osal_rand::?relay` SYMBOL "?relay", osal_rand
 sAddrExtCpy         SYMBOL "sAddrExtCpy"
@@ -311,8 +324,18 @@ nwk_globals_init    SYMBOL "nwk_globals_init"
 
         EXTERN `??AddrMgrInit::?relay`
         FUNCTION `??AddrMgrInit::?relay`,00H
+        EXTERN `??NLME_InitLinkStatus::?relay`
+        FUNCTION `??NLME_InitLinkStatus::?relay`,00H
+        EXTERN `??NLME_InitStochasticAddressing::?relay`
+        FUNCTION `??NLME_InitStochasticAddressing::?relay`,00H
+        EXTERN `??NwkFreqAgilityInit::?relay`
+        FUNCTION `??NwkFreqAgilityInit::?relay`,00H
+        EXTERN `??NwkInitChildAging::?relay`
+        FUNCTION `??NwkInitChildAging::?relay`,00H
         EXTERN `??osal_memset::?relay`
         FUNCTION `??osal_memset::?relay`,00H
+        EXTERN `??osal_nv_read::?relay`
+        FUNCTION `??osal_nv_read::?relay`,00H
         EXTERN `??osal_rand::?relay`
         FUNCTION `??osal_rand::?relay`,00H
         EXTERN `??sAddrExtCpy::?relay`
@@ -324,33 +347,70 @@ nwk_globals_init    SYMBOL "nwk_globals_init"
         ARGFRAME XSTACK, 0, STACK
         ARGFRAME IOVERLAY, 0, STATIC
         ARGFRAME DOVERLAY, 0, STATIC
-        EXTERN ZDO_Config_Node_Descriptor
-        EXTERN _NIB
-        EXTERN osal_memset
-        FUNCTION osal_memset,0202H
+        EXTERN NLME_InitLinkStatus
+        FUNCTION NLME_InitLinkStatus,0202H
         ARGFRAME ISTACK, 2, STACK
         ARGFRAME PSTACK, 0, STACK
         ARGFRAME XSTACK, 0, STACK
         ARGFRAME IOVERLAY, 0, STATIC
         ARGFRAME DOVERLAY, 0, STATIC
+        EXTERN NLME_InitStochasticAddressing
+        FUNCTION NLME_InitStochasticAddressing,0202H
+        ARGFRAME ISTACK, 0, STACK
+        ARGFRAME PSTACK, 0, STACK
+        ARGFRAME XSTACK, 10, STACK
+        ARGFRAME IOVERLAY, 0, STATIC
+        ARGFRAME DOVERLAY, 0, STATIC
+        EXTERN NwkFreqAgilityInit
+        FUNCTION NwkFreqAgilityInit,0202H
+        ARGFRAME ISTACK, 2, STACK
+        ARGFRAME PSTACK, 0, STACK
+        ARGFRAME XSTACK, 0, STACK
+        ARGFRAME IOVERLAY, 0, STATIC
+        ARGFRAME DOVERLAY, 0, STATIC
+        EXTERN NwkInitChildAging
+        FUNCTION NwkInitChildAging,0202H
+        ARGFRAME ISTACK, 2, STACK
+        ARGFRAME PSTACK, 0, STACK
+        ARGFRAME XSTACK, 0, STACK
+        ARGFRAME IOVERLAY, 0, STATIC
+        ARGFRAME DOVERLAY, 0, STATIC
+        EXTERN ZDO_Config_Node_Descriptor
+        EXTERN _NIB
+        EXTERN osal_memset
+        FUNCTION osal_memset,0202H
+        ARGFRAME ISTACK, 0, STACK
+        ARGFRAME PSTACK, 0, STACK
+        ARGFRAME XSTACK, 10, STACK
+        ARGFRAME IOVERLAY, 0, STATIC
+        ARGFRAME DOVERLAY, 0, STATIC
+        EXTERN osal_nv_read
+        FUNCTION osal_nv_read,0202H
+        ARGFRAME ISTACK, 0, STACK
+        ARGFRAME PSTACK, 0, STACK
+        ARGFRAME XSTACK, 14, STACK
+        ARGFRAME IOVERLAY, 0, STATIC
+        ARGFRAME DOVERLAY, 0, STATIC
         EXTERN osal_rand
         FUNCTION osal_rand,0202H
-        ARGFRAME ISTACK, 2, STACK
+        ARGFRAME ISTACK, 0, STACK
         ARGFRAME PSTACK, 0, STACK
         ARGFRAME XSTACK, 14, STACK
         ARGFRAME IOVERLAY, 0, STATIC
         ARGFRAME DOVERLAY, 0, STATIC
         EXTERN sAddrExtCpy
         FUNCTION sAddrExtCpy,0202H
-        ARGFRAME ISTACK, 2, STACK
+        ARGFRAME ISTACK, 0, STACK
         ARGFRAME PSTACK, 0, STACK
-        ARGFRAME XSTACK, 0, STACK
+        ARGFRAME XSTACK, 10, STACK
         ARGFRAME IOVERLAY, 0, STATIC
         ARGFRAME DOVERLAY, 0, STATIC
         EXTERN zgBcastDeliveryTime
+        EXTERN zgChildAgingEnable
         EXTERN zgConcentratorDiscoveryTime
         EXTERN zgConcentratorEnable
         EXTERN zgConcentratorRadius
+        EXTERN zgDeviceLogicalType
         EXTERN zgExtendedPANID
         EXTERN zgIndirectMsgTimeout
         EXTERN zgMaxBcastRetires
@@ -358,7 +418,7 @@ nwk_globals_init    SYMBOL "nwk_globals_init"
         EXTERN zgRouteDiscoveryTime
         EXTERN zgRouteExpiryTime
 
-// D:\Jop van Buuren\Documents\Hogeschool\Vakken\wt\WirelessSensorNetworksPracticum\Components\stack\nwk\nwk_globals.c
+// D:\School\Jaar_3\WTWS\Projects\WirelessSensorNetworksPracticum\Components\stack\nwk\nwk_globals.c
 //    1 /**************************************************************************************************
 //    2   Filename:       nwk_globals.c
 //    3   Revised:        $Date: 2014-05-17 12:12:11 -0700 (Sat, 17 May 2014) $
@@ -626,7 +686,7 @@ gMAX_RREQ_ENTRIES:
         DATA8
 //  162 CONFIG_ITEM neighborTableIndex_t gMAX_NEIGHBOR_ENTRIES = MAX_NEIGHBOR_ENTRIES;
 gMAX_NEIGHBOR_ENTRIES:
-        DB 4
+        DB 16
 //  163 
 //  164  // Table of neighboring nodes (not including child nodes)
 
@@ -634,7 +694,7 @@ gMAX_NEIGHBOR_ENTRIES:
         DATA8
 //  165 neighborEntry_t neighborTable[MAX_NEIGHBOR_ENTRIES];
 neighborTable:
-        DS 92
+        DS 368
         REQUIRE __INIT_XDATA_Z
 //  166 
 
@@ -762,7 +822,12 @@ gNWK_CONFLICTED_ADDR_EXPIRY_TIME:
 //  207 #endif
 //  208 
 //  209 #if defined ( ZIGBEE_FREQ_AGILITY ) || defined ( ZBIT )
+
+        RSEG CODE_C:CODE:REORDER:NOROOT(0)
+        DATA8
 //  210 CONST uint8 gNWK_FREQ_AGILITY_ALL_MAC_ERRS = NWK_FREQ_AGILITY_ALL_MAC_ERRS;
+gNWK_FREQ_AGILITY_ALL_MAC_ERRS:
+        DB 0
 //  211 #endif
 //  212 
 //  213 // The time limited to one MTO RReq (Concentrator Announce) in milliseconds.
@@ -798,7 +863,12 @@ gDEF_NWK_RADIUS:
         DB 30
 //  224 
 //  225 #if ( ZSTACK_ROUTER_BUILD ) || defined ( ZBIT )
+
+        RSEG CODE_C:CODE:REORDER:NOROOT(0)
+        DATA16
 //  226 CONST uint16 gLINK_STATUS_JITTER_MASK = LINK_STATUS_JITTER_MASK;
+gLINK_STATUS_JITTER_MASK:
+        DW 127
 //  227 #endif
 //  228 
 //  229 // Maximum number of devices either aged out or not recognized as child
@@ -1034,6 +1104,39 @@ nwk_globals_init:
         ARGFRAME XSTACK, 0, STACK
         ARGFRAME IOVERLAY, 0, STATIC
         ARGFRAME DOVERLAY, 0, STATIC
+        FUNCALL nwk_globals_init, NLME_InitLinkStatus
+        LOCFRAME ISTACK, 2, STACK
+        LOCFRAME PSTACK, 0, STACK
+        LOCFRAME XSTACK, 0, STACK
+        LOCFRAME IOVERLAY, 0, STATIC
+        LOCFRAME DOVERLAY, 0, STATIC
+        ARGFRAME ISTACK, 2, STACK
+        ARGFRAME PSTACK, 0, STACK
+        ARGFRAME XSTACK, 0, STACK
+        ARGFRAME IOVERLAY, 0, STATIC
+        ARGFRAME DOVERLAY, 0, STATIC
+        FUNCALL nwk_globals_init, NwkFreqAgilityInit
+        LOCFRAME ISTACK, 2, STACK
+        LOCFRAME PSTACK, 0, STACK
+        LOCFRAME XSTACK, 0, STACK
+        LOCFRAME IOVERLAY, 0, STATIC
+        LOCFRAME DOVERLAY, 0, STATIC
+        ARGFRAME ISTACK, 2, STACK
+        ARGFRAME PSTACK, 0, STACK
+        ARGFRAME XSTACK, 0, STACK
+        ARGFRAME IOVERLAY, 0, STATIC
+        ARGFRAME DOVERLAY, 0, STATIC
+        FUNCALL nwk_globals_init, NwkInitChildAging
+        LOCFRAME ISTACK, 2, STACK
+        LOCFRAME PSTACK, 0, STACK
+        LOCFRAME XSTACK, 0, STACK
+        LOCFRAME IOVERLAY, 0, STATIC
+        LOCFRAME DOVERLAY, 0, STATIC
+        ARGFRAME ISTACK, 2, STACK
+        ARGFRAME PSTACK, 0, STACK
+        ARGFRAME XSTACK, 0, STACK
+        ARGFRAME IOVERLAY, 0, STATIC
+        ARGFRAME DOVERLAY, 0, STATIC
         PUSH    DPL
           CFI DPL0 Frame(CFA_SP, 4)
           CFI CFA_SP SP+-4
@@ -1060,22 +1163,50 @@ nwk_globals_init:
 //  351   // To compile out the Link Status Feature, set NWK_LINK_STATUS_PERIOD
 //  352   // to 0 (compiler flag).
 //  353   if ( ZSTACK_ROUTER_BUILD && NWK_LINK_STATUS_PERIOD )
+        MOV     DPTR,#zgDeviceLogicalType
+        MOVX    A,@DPTR
+        JZ      ??nwk_globals_init_0
+        MOV     DPTR,#zgDeviceLogicalType
+        MOVX    A,@DPTR
+        XRL     A,#0x1
+        JNZ     ??nwk_globals_init_1
 //  354   {
 //  355     NLME_InitLinkStatus();
+??nwk_globals_init_0:
+        ; Setup parameters for call to function NLME_InitLinkStatus
+        LCALL   `??NLME_InitLinkStatus::?relay`; Banked call to: NLME_InitLinkStatus
 //  356   }
 //  357 
 //  358 #if defined ( ZIGBEE_FREQ_AGILITY )
 //  359   NwkFreqAgilityInit();
+??nwk_globals_init_1:
+        ; Setup parameters for call to function NwkFreqAgilityInit
+        LCALL   `??NwkFreqAgilityInit::?relay`; Banked call to: NwkFreqAgilityInit
 //  360 #endif
 //  361 
 //  362 #if defined ( ZIGBEE_CHILD_AGING )
 //  363   if ( ( ZSTACK_ROUTER_BUILD ) && ( zgChildAgingEnable == TRUE ) )
+        MOV     DPTR,#zgDeviceLogicalType
+        MOVX    A,@DPTR
+        JZ      ??nwk_globals_init_2
+        MOV     DPTR,#zgDeviceLogicalType
+        MOVX    A,@DPTR
+        XRL     A,#0x1
+        JNZ     ??nwk_globals_init_3
+??nwk_globals_init_2:
+        MOV     DPTR,#zgChildAgingEnable
+        MOVX    A,@DPTR
+        XRL     A,#0x1
+        JNZ     ??nwk_globals_init_3
 //  364   {
 //  365     // Set the function pointers for the Child Aging feature
 //  366     NwkInitChildAging();
+        ; Setup parameters for call to function NwkInitChildAging
+        LCALL   `??NwkInitChildAging::?relay`; Banked call to: NwkInitChildAging
 //  367   }
 //  368 #endif  // ZIGBEE_CHILD_AGING
 //  369 }
+??nwk_globals_init_3:
         POP     DPH
           CFI DPH0 SameValue
           CFI CFA_SP SP+-4
@@ -1105,45 +1236,77 @@ NIB_init:
         CODE
 //  383 {
         FUNCALL NIB_init, osal_rand
-        LOCFRAME ISTACK, 2, STACK
+        LOCFRAME ISTACK, 0, STACK
         LOCFRAME PSTACK, 0, STACK
-        LOCFRAME XSTACK, 0, STACK
+        LOCFRAME XSTACK, 10, STACK
         LOCFRAME IOVERLAY, 0, STATIC
         LOCFRAME DOVERLAY, 0, STATIC
-        ARGFRAME ISTACK, 2, STACK
+        ARGFRAME ISTACK, 0, STACK
         ARGFRAME PSTACK, 0, STACK
-        ARGFRAME XSTACK, 0, STACK
+        ARGFRAME XSTACK, 10, STACK
         ARGFRAME IOVERLAY, 0, STATIC
         ARGFRAME DOVERLAY, 0, STATIC
         FUNCALL NIB_init, osal_memset
-        LOCFRAME ISTACK, 2, STACK
+        LOCFRAME ISTACK, 0, STACK
         LOCFRAME PSTACK, 0, STACK
-        LOCFRAME XSTACK, 0, STACK
+        LOCFRAME XSTACK, 10, STACK
         LOCFRAME IOVERLAY, 0, STATIC
         LOCFRAME DOVERLAY, 0, STATIC
-        ARGFRAME ISTACK, 2, STACK
+        ARGFRAME ISTACK, 0, STACK
         ARGFRAME PSTACK, 0, STACK
-        ARGFRAME XSTACK, 0, STACK
+        ARGFRAME XSTACK, 10, STACK
         ARGFRAME IOVERLAY, 0, STATIC
         ARGFRAME DOVERLAY, 0, STATIC
         FUNCALL NIB_init, sAddrExtCpy
-        LOCFRAME ISTACK, 2, STACK
+        LOCFRAME ISTACK, 0, STACK
         LOCFRAME PSTACK, 0, STACK
-        LOCFRAME XSTACK, 0, STACK
+        LOCFRAME XSTACK, 10, STACK
         LOCFRAME IOVERLAY, 0, STATIC
         LOCFRAME DOVERLAY, 0, STATIC
-        ARGFRAME ISTACK, 2, STACK
+        ARGFRAME ISTACK, 0, STACK
         ARGFRAME PSTACK, 0, STACK
-        ARGFRAME XSTACK, 0, STACK
+        ARGFRAME XSTACK, 10, STACK
         ARGFRAME IOVERLAY, 0, STATIC
         ARGFRAME DOVERLAY, 0, STATIC
-        PUSH    DPL
-          CFI DPL0 Frame(CFA_SP, 4)
-          CFI CFA_SP SP+-4
-        PUSH    DPH
-          CFI DPH0 Frame(CFA_SP, 5)
-          CFI CFA_SP SP+-5
-        ; Saved register size: 2
+        FUNCALL NIB_init, osal_nv_read
+        LOCFRAME ISTACK, 0, STACK
+        LOCFRAME PSTACK, 0, STACK
+        LOCFRAME XSTACK, 14, STACK
+        LOCFRAME IOVERLAY, 0, STATIC
+        LOCFRAME DOVERLAY, 0, STATIC
+        ARGFRAME ISTACK, 0, STACK
+        ARGFRAME PSTACK, 0, STACK
+        ARGFRAME XSTACK, 14, STACK
+        ARGFRAME IOVERLAY, 0, STATIC
+        ARGFRAME DOVERLAY, 0, STATIC
+        FUNCALL NIB_init, NLME_InitStochasticAddressing
+        LOCFRAME ISTACK, 0, STACK
+        LOCFRAME PSTACK, 0, STACK
+        LOCFRAME XSTACK, 10, STACK
+        LOCFRAME IOVERLAY, 0, STATIC
+        LOCFRAME DOVERLAY, 0, STATIC
+        ARGFRAME ISTACK, 0, STACK
+        ARGFRAME PSTACK, 0, STACK
+        ARGFRAME XSTACK, 10, STACK
+        ARGFRAME IOVERLAY, 0, STATIC
+        ARGFRAME DOVERLAY, 0, STATIC
+        REQUIRE ?V0
+        REQUIRE ?V1
+        MOV     A,#-0xa
+        LCALL   ?BANKED_ENTER_XDATA
+          CFI DPH0 load(1, XDATA, add(CFA_XSP16, literal(-1)))
+          CFI DPL0 load(1, XDATA, add(CFA_XSP16, literal(-2)))
+          CFI ?BRET_EXT load(1, XDATA, add(CFA_XSP16, literal(-3)))
+          CFI ?RET_HIGH load(1, XDATA, add(CFA_XSP16, literal(-4)))
+          CFI ?RET_LOW load(1, XDATA, add(CFA_XSP16, literal(-5)))
+          CFI R7 load(1, XDATA, add(CFA_XSP16, literal(-6)))
+          CFI V1 load(1, XDATA, add(CFA_XSP16, literal(-7)))
+          CFI V0 load(1, XDATA, add(CFA_XSP16, literal(-8)))
+          CFI VB load(1, XDATA, add(CFA_XSP16, literal(-9)))
+          CFI R6 load(1, XDATA, add(CFA_XSP16, literal(-10)))
+          CFI CFA_SP SP+0
+          CFI CFA_XSP16 add(XSP16, 10)
+        ; Saved register size: 10
         ; Auto size: 0
 //  384   _NIB.SequenceNum = LO_UINT16(osal_rand());
         ; Setup parameters for call to function osal_rand
@@ -1358,6 +1521,27 @@ NIB_init:
 //  461 #if defined ( NV_RESTORE )
 //  462   if ( osal_nv_read( ZCD_NV_NWKMGR_ADDR, 0, sizeof( _NIB.nwkManagerAddr ),
 //  463                      &_NIB.nwkManagerAddr ) != SUCCESS )
+        ; Setup parameters for call to function osal_nv_read
+        MOV     ?V0,#(_NIB + 105) & 0xff
+        MOV     ?V1,#((_NIB + 105) >> 8) & 0xff
+        MOV     R0,#?V0
+        LCALL   ?PUSH_XSTACK_I_TWO
+          CFI CFA_XSP16 add(XSP16, 12)
+        MOV     ?V0,#0x2
+        MOV     ?V1,#0x0
+        MOV     R0,#?V0
+        LCALL   ?PUSH_XSTACK_I_TWO
+          CFI CFA_XSP16 add(XSP16, 14)
+        MOV     R4,#0x0
+        MOV     R5,#0x0
+        MOV     R2,#-0x77
+        MOV     R3,#0x0
+        LCALL   `??osal_nv_read::?relay`; Banked call to: osal_nv_read
+        MOV     A,#0x4
+        LCALL   ?DEALLOC_XSTACK8
+          CFI CFA_XSP16 add(XSP16, 10)
+        MOV     A,R1
+        JZ      ??NIB_init_0
 //  464 #endif
 //  465   {
 //  466     _NIB.nwkManagerAddr = 0x0000;
@@ -1370,6 +1554,7 @@ NIB_init:
 //  467   }
 //  468 
 //  469   _NIB.nwkUpdateId = 0;
+??NIB_init_0:
         MOV     DPTR,#_NIB + 109
         MOV     A,#0x0
         MOVX    @DPTR,A
@@ -1382,21 +1567,39 @@ NIB_init:
         MOVX    @DPTR,A
 //  471 
 //  472   if ( ZSTACK_ROUTER_BUILD )
+        MOV     DPTR,#zgDeviceLogicalType
+        MOVX    A,@DPTR
+        JZ      ??NIB_init_1
+        MOV     DPTR,#zgDeviceLogicalType
+        MOVX    A,@DPTR
+        XRL     A,#0x1
+        JNZ     ??NIB_init_2
 //  473   {
 //  474 #if defined ( ZIGBEE_STOCHASTIC_ADDRESSING )
 //  475     NLME_InitStochasticAddressing();
+??NIB_init_1:
+        ; Setup parameters for call to function NLME_InitStochasticAddressing
+        LCALL   `??NLME_InitStochasticAddressing::?relay`; Banked call to: NLME_InitStochasticAddressing
 //  476 #else
 //  477     NLME_InitTreeAddressing();
 //  478 #endif
 //  479   }
 //  480 }
-        POP     DPH
-          CFI DPH0 SameValue
-          CFI CFA_SP SP+-4
-        POP     DPL
+??NIB_init_2:
+        MOV     R7,#0x2
+        LJMP    ?BANKED_LEAVE_XDATA
+          CFI R6 SameValue
+          CFI VB SameValue
+          CFI V0 SameValue
+          CFI V1 SameValue
+          CFI R7 SameValue
+          CFI ?RET_LOW Frame(CFA_SP, 1)
+          CFI ?RET_HIGH Frame(CFA_SP, 2)
+          CFI ?BRET_EXT Frame(CFA_SP, 3)
           CFI DPL0 SameValue
+          CFI DPH0 SameValue
           CFI CFA_SP SP+-3
-        LJMP    ?BRET
+          CFI CFA_XSP16 XSP16+0
           CFI EndBlock cfiBlock1
 //  481 
 //  482 /*********************************************************************
@@ -1696,15 +1899,15 @@ nwk_adjustDelay:
 //  609 /*********************************************************************
 //  610 *********************************************************************/
 // 
-//   409 bytes in segment BANKED_CODE
+//   511 bytes in segment BANKED_CODE
 //    24 bytes in segment BANK_RELAYS
-//    76 bytes in segment CODE_C
+//    79 bytes in segment CODE_C
 //     2 bytes in segment XDATA_I
 //     2 bytes in segment XDATA_ID
-// 1 281 bytes in segment XDATA_Z
+// 1 557 bytes in segment XDATA_Z
 // 
-//   511 bytes of CODE  memory
-// 1 283 bytes of XDATA memory
+//   616 bytes of CODE  memory
+// 1 559 bytes of XDATA memory
 //
 //Errors: none
-//Warnings: 1
+//Warnings: none

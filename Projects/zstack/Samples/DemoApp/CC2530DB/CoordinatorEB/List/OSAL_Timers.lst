@@ -1,6 +1,6 @@
 ###############################################################################
 #
-# IAR C/C++ Compiler V9.20.1.2476 for 8051                17/Feb/2017  12:45:13
+# IAR C/C++ Compiler V9.20.1.2476 for 8051                22/Feb/2017  13:47:25
 # Copyright 2004-2015 IAR Systems AB.
 # Standalone license - IAR Embedded Workbench for 8051
 #
@@ -12,14 +12,14 @@
 #    Dptr setup         =  1,16
 #                          
 #    Source file        =  
-#        D:\Jop van
-#        Buuren\Documents\Hogeschool\Vakken\wt\WirelessSensorNetworksPracticum\Components\osal\common\OSAL_Timers.c
+#        D:\School\Jaar_3\WTWS\Projects\WirelessSensorNetworksPracticum\Components\osal\common\OSAL_Timers.c
 #    Command line       =  
-#        -f "D:\Jop van
-#        Buuren\Documents\Hogeschool\Vakken\wt\WirelessSensorNetworksPracticum\Projects\zstack\Samples\DemoApp\CC2530DB\..\..\..\Tools\CC2530DB\f8wEndev.cfg"
-#        (-DCPU32MHZ -DROOT=__near_func -DMAC_CFG_TX_DATA_MAX=3
-#        -DMAC_CFG_TX_MAX=6 -DMAC_CFG_RX_MAX=3) -f "D:\Jop van
-#        Buuren\Documents\Hogeschool\Vakken\wt\WirelessSensorNetworksPracticum\Projects\zstack\Samples\DemoApp\CC2530DB\..\..\..\Tools\CC2530DB\f8wConfig.cfg"
+#        -f
+#        D:\School\Jaar_3\WTWS\Projects\WirelessSensorNetworksPracticum\Projects\zstack\Samples\DemoApp\CC2530DB\..\..\..\Tools\CC2530DB\f8wCoord.cfg
+#        (-DCPU32MHZ -DROOT=__near_func -DMAC_CFG_APP_PENDING_QUEUE=TRUE
+#        -DMAC_CFG_TX_DATA_MAX=5 -DMAC_CFG_TX_MAX=8 -DMAC_CFG_RX_MAX=5
+#        -DZDO_COORDINATOR -DRTR_NWK) -f
+#        D:\School\Jaar_3\WTWS\Projects\WirelessSensorNetworksPracticum\Projects\zstack\Samples\DemoApp\CC2530DB\..\..\..\Tools\CC2530DB\f8wConfig.cfg
 #        (-DZIGBEEPRO -DSECURE=0 -DZG_SECURE_DYNAMIC=0 -DREFLECTOR
 #        -DDEFAULT_CHANLIST=0x00100000 -DZDAPP_CONFIG_PAN_ID=0x0DAD
 #        -DNWK_START_DELAY=100 -DEXTENDED_JOINING_RANDOM_MASK=0x007F
@@ -34,75 +34,70 @@
 #        -DMAC_MAX_FRAME_SIZE=116 -DZDNWKMGR_MIN_TRANSMISSIONS=20
 #        "-DCONST=const __code" -DGENERIC=__generic -DRFD_RCVC_ALWAYS_ON=FALSE
 #        -DPOLL_RATE=1000 -DQUEUED_POLL_RATE=100 -DRESPONSE_POLL_RATE=100)
-#        -DREJOIN_POLL_RATE=440 "D:\Jop van
-#        Buuren\Documents\Hogeschool\Vakken\wt\WirelessSensorNetworksPracticum\Components\osal\common\OSAL_Timers.c"
-#        -D NWK_AUTO_POLL -D HOLD_AUTO_START -D POWER_SAVING -D NV_INIT -D
-#        DEVICE_LOGICAL_TYPE=ZG_DEVICETYPE_ENDDEVICE -lC "D:\Jop van
-#        Buuren\Documents\Hogeschool\Vakken\wt\WirelessSensorNetworksPracticum\Projects\zstack\Samples\DemoApp\CC2530DB\SensorEB\List\"
-#        -lA "D:\Jop van
-#        Buuren\Documents\Hogeschool\Vakken\wt\WirelessSensorNetworksPracticum\Projects\zstack\Samples\DemoApp\CC2530DB\SensorEB\List\"
-#        --diag_suppress Pe001,Pa010,Pe1665 -o "D:\Jop van
-#        Buuren\Documents\Hogeschool\Vakken\wt\WirelessSensorNetworksPracticum\Projects\zstack\Samples\DemoApp\CC2530DB\SensorEB\Obj\"
+#        -DREJOIN_POLL_RATE=440
+#        D:\School\Jaar_3\WTWS\Projects\WirelessSensorNetworksPracticum\Components\osal\common\OSAL_Timers.c
+#        -D HOLD_AUTO_START -D BUILD_ALL_DEVICES -D REFLECTOR -D NV_INIT -D
+#        NV_RESTORE -D HAL_UART=TRUE -lC
+#        D:\School\Jaar_3\WTWS\Projects\WirelessSensorNetworksPracticum\Projects\zstack\Samples\DemoApp\CC2530DB\CoordinatorEB\List\
+#        -lA
+#        D:\School\Jaar_3\WTWS\Projects\WirelessSensorNetworksPracticum\Projects\zstack\Samples\DemoApp\CC2530DB\CoordinatorEB\List\
+#        --diag_suppress Pe001,Pa010,Pe1665 -o
+#        D:\School\Jaar_3\WTWS\Projects\WirelessSensorNetworksPracticum\Projects\zstack\Samples\DemoApp\CC2530DB\CoordinatorEB\Obj\
 #        -e --no_cse --no_unroll --no_inline --no_code_motion --no_tbaa --debug
 #        --core=plain --dptr=16,1 --data_model=large --code_model=banked
 #        --calling_convention=xdata_reentrant --place_constants=data_rom
-#        --nr_virtual_regs 16 -I "D:\Jop van
-#        Buuren\Documents\Hogeschool\Vakken\wt\WirelessSensorNetworksPracticum\Projects\zstack\Samples\DemoApp\CC2530DB\"
-#        -I "D:\Jop van
-#        Buuren\Documents\Hogeschool\Vakken\wt\WirelessSensorNetworksPracticum\Projects\zstack\Samples\DemoApp\CC2530DB\..\Source\"
-#        -I "D:\Jop van
-#        Buuren\Documents\Hogeschool\Vakken\wt\WirelessSensorNetworksPracticum\Projects\zstack\Samples\DemoApp\CC2530DB\..\..\..\ZMain\TI2530DB\"
-#        -I "D:\Jop van
-#        Buuren\Documents\Hogeschool\Vakken\wt\WirelessSensorNetworksPracticum\Projects\zstack\Samples\DemoApp\CC2530DB\..\..\..\..\..\Components\hal\include\"
-#        -I "D:\Jop van
-#        Buuren\Documents\Hogeschool\Vakken\wt\WirelessSensorNetworksPracticum\Projects\zstack\Samples\DemoApp\CC2530DB\..\..\..\..\..\Components\hal\target\CC2530EB\"
-#        -I "D:\Jop van
-#        Buuren\Documents\Hogeschool\Vakken\wt\WirelessSensorNetworksPracticum\Projects\zstack\Samples\DemoApp\CC2530DB\..\..\..\..\..\Components\mac\include\"
-#        -I "D:\Jop van
-#        Buuren\Documents\Hogeschool\Vakken\wt\WirelessSensorNetworksPracticum\Projects\zstack\Samples\DemoApp\CC2530DB\..\..\..\..\..\Components\mac\high_level\"
-#        -I "D:\Jop van
-#        Buuren\Documents\Hogeschool\Vakken\wt\WirelessSensorNetworksPracticum\Projects\zstack\Samples\DemoApp\CC2530DB\..\..\..\..\..\Components\mac\low_level\srf04\"
-#        -I "D:\Jop van
-#        Buuren\Documents\Hogeschool\Vakken\wt\WirelessSensorNetworksPracticum\Projects\zstack\Samples\DemoApp\CC2530DB\..\..\..\..\..\Components\mac\low_level\srf04\single_chip\"
-#        -I "D:\Jop van
-#        Buuren\Documents\Hogeschool\Vakken\wt\WirelessSensorNetworksPracticum\Projects\zstack\Samples\DemoApp\CC2530DB\..\..\..\..\..\Components\mt\"
-#        -I "D:\Jop van
-#        Buuren\Documents\Hogeschool\Vakken\wt\WirelessSensorNetworksPracticum\Projects\zstack\Samples\DemoApp\CC2530DB\..\..\..\..\..\Components\osal\include\"
-#        -I "D:\Jop van
-#        Buuren\Documents\Hogeschool\Vakken\wt\WirelessSensorNetworksPracticum\Projects\zstack\Samples\DemoApp\CC2530DB\..\..\..\..\..\Components\services\saddr\"
-#        -I "D:\Jop van
-#        Buuren\Documents\Hogeschool\Vakken\wt\WirelessSensorNetworksPracticum\Projects\zstack\Samples\DemoApp\CC2530DB\..\..\..\..\..\Components\services\sdata\"
-#        -I "D:\Jop van
-#        Buuren\Documents\Hogeschool\Vakken\wt\WirelessSensorNetworksPracticum\Projects\zstack\Samples\DemoApp\CC2530DB\..\..\..\..\..\Components\stack\af\"
-#        -I "D:\Jop van
-#        Buuren\Documents\Hogeschool\Vakken\wt\WirelessSensorNetworksPracticum\Projects\zstack\Samples\DemoApp\CC2530DB\..\..\..\..\..\Components\stack\nwk\"
-#        -I "D:\Jop van
-#        Buuren\Documents\Hogeschool\Vakken\wt\WirelessSensorNetworksPracticum\Projects\zstack\Samples\DemoApp\CC2530DB\..\..\..\..\..\Components\stack\sapi\"
-#        -I "D:\Jop van
-#        Buuren\Documents\Hogeschool\Vakken\wt\WirelessSensorNetworksPracticum\Projects\zstack\Samples\DemoApp\CC2530DB\..\..\..\..\..\Components\stack\sec\"
-#        -I "D:\Jop van
-#        Buuren\Documents\Hogeschool\Vakken\wt\WirelessSensorNetworksPracticum\Projects\zstack\Samples\DemoApp\CC2530DB\..\..\..\..\..\Components\stack\sys\"
-#        -I "D:\Jop van
-#        Buuren\Documents\Hogeschool\Vakken\wt\WirelessSensorNetworksPracticum\Projects\zstack\Samples\DemoApp\CC2530DB\..\..\..\..\..\Components\stack\zdo\"
-#        -I "D:\Jop van
-#        Buuren\Documents\Hogeschool\Vakken\wt\WirelessSensorNetworksPracticum\Projects\zstack\Samples\DemoApp\CC2530DB\..\..\..\..\..\Components\zmac\"
-#        -I "D:\Jop van
-#        Buuren\Documents\Hogeschool\Vakken\wt\WirelessSensorNetworksPracticum\Projects\zstack\Samples\DemoApp\CC2530DB\..\..\..\..\..\Components\zmac\f8w\"
+#        --nr_virtual_regs 16 -I
+#        D:\School\Jaar_3\WTWS\Projects\WirelessSensorNetworksPracticum\Projects\zstack\Samples\DemoApp\CC2530DB\
+#        -I
+#        D:\School\Jaar_3\WTWS\Projects\WirelessSensorNetworksPracticum\Projects\zstack\Samples\DemoApp\CC2530DB\..\Source\
+#        -I
+#        D:\School\Jaar_3\WTWS\Projects\WirelessSensorNetworksPracticum\Projects\zstack\Samples\DemoApp\CC2530DB\..\..\..\ZMain\TI2530DB\
+#        -I
+#        D:\School\Jaar_3\WTWS\Projects\WirelessSensorNetworksPracticum\Projects\zstack\Samples\DemoApp\CC2530DB\..\..\..\..\..\Components\hal\include\
+#        -I
+#        D:\School\Jaar_3\WTWS\Projects\WirelessSensorNetworksPracticum\Projects\zstack\Samples\DemoApp\CC2530DB\..\..\..\..\..\Components\hal\target\CC2530EB\
+#        -I
+#        D:\School\Jaar_3\WTWS\Projects\WirelessSensorNetworksPracticum\Projects\zstack\Samples\DemoApp\CC2530DB\..\..\..\..\..\Components\mac\include\
+#        -I
+#        D:\School\Jaar_3\WTWS\Projects\WirelessSensorNetworksPracticum\Projects\zstack\Samples\DemoApp\CC2530DB\..\..\..\..\..\Components\mac\high_level\
+#        -I
+#        D:\School\Jaar_3\WTWS\Projects\WirelessSensorNetworksPracticum\Projects\zstack\Samples\DemoApp\CC2530DB\..\..\..\..\..\Components\mac\low_level\srf04\
+#        -I
+#        D:\School\Jaar_3\WTWS\Projects\WirelessSensorNetworksPracticum\Projects\zstack\Samples\DemoApp\CC2530DB\..\..\..\..\..\Components\mac\low_level\srf04\single_chip\
+#        -I
+#        D:\School\Jaar_3\WTWS\Projects\WirelessSensorNetworksPracticum\Projects\zstack\Samples\DemoApp\CC2530DB\..\..\..\..\..\Components\mt\
+#        -I
+#        D:\School\Jaar_3\WTWS\Projects\WirelessSensorNetworksPracticum\Projects\zstack\Samples\DemoApp\CC2530DB\..\..\..\..\..\Components\osal\include\
+#        -I
+#        D:\School\Jaar_3\WTWS\Projects\WirelessSensorNetworksPracticum\Projects\zstack\Samples\DemoApp\CC2530DB\..\..\..\..\..\Components\services\saddr\
+#        -I
+#        D:\School\Jaar_3\WTWS\Projects\WirelessSensorNetworksPracticum\Projects\zstack\Samples\DemoApp\CC2530DB\..\..\..\..\..\Components\services\sdata\
+#        -I
+#        D:\School\Jaar_3\WTWS\Projects\WirelessSensorNetworksPracticum\Projects\zstack\Samples\DemoApp\CC2530DB\..\..\..\..\..\Components\stack\af\
+#        -I
+#        D:\School\Jaar_3\WTWS\Projects\WirelessSensorNetworksPracticum\Projects\zstack\Samples\DemoApp\CC2530DB\..\..\..\..\..\Components\stack\nwk\
+#        -I
+#        D:\School\Jaar_3\WTWS\Projects\WirelessSensorNetworksPracticum\Projects\zstack\Samples\DemoApp\CC2530DB\..\..\..\..\..\Components\stack\sapi\
+#        -I
+#        D:\School\Jaar_3\WTWS\Projects\WirelessSensorNetworksPracticum\Projects\zstack\Samples\DemoApp\CC2530DB\..\..\..\..\..\Components\stack\sec\
+#        -I
+#        D:\School\Jaar_3\WTWS\Projects\WirelessSensorNetworksPracticum\Projects\zstack\Samples\DemoApp\CC2530DB\..\..\..\..\..\Components\stack\sys\
+#        -I
+#        D:\School\Jaar_3\WTWS\Projects\WirelessSensorNetworksPracticum\Projects\zstack\Samples\DemoApp\CC2530DB\..\..\..\..\..\Components\stack\zdo\
+#        -I
+#        D:\School\Jaar_3\WTWS\Projects\WirelessSensorNetworksPracticum\Projects\zstack\Samples\DemoApp\CC2530DB\..\..\..\..\..\Components\zmac\
+#        -I
+#        D:\School\Jaar_3\WTWS\Projects\WirelessSensorNetworksPracticum\Projects\zstack\Samples\DemoApp\CC2530DB\..\..\..\..\..\Components\zmac\f8w\
 #        -Ol --require_prototypes
 #    List file          =  
-#        D:\Jop van
-#        Buuren\Documents\Hogeschool\Vakken\wt\WirelessSensorNetworksPracticum\Projects\zstack\Samples\DemoApp\CC2530DB\SensorEB\List\OSAL_Timers.lst
+#        D:\School\Jaar_3\WTWS\Projects\WirelessSensorNetworksPracticum\Projects\zstack\Samples\DemoApp\CC2530DB\CoordinatorEB\List\OSAL_Timers.lst
 #    Object file        =  
-#        D:\Jop van
-#        Buuren\Documents\Hogeschool\Vakken\wt\WirelessSensorNetworksPracticum\Projects\zstack\Samples\DemoApp\CC2530DB\SensorEB\Obj\OSAL_Timers.r51
+#        D:\School\Jaar_3\WTWS\Projects\WirelessSensorNetworksPracticum\Projects\zstack\Samples\DemoApp\CC2530DB\CoordinatorEB\Obj\OSAL_Timers.r51
 #
 ###############################################################################
 
-D:\Jop van Buuren\Documents\Hogeschool\Vakken\wt\WirelessSensorNetworksPracticum\Components\osal\common\OSAL_Timers.c
+D:\School\Jaar_3\WTWS\Projects\WirelessSensorNetworksPracticum\Components\osal\common\OSAL_Timers.c
       1          /**************************************************************************************************
-                                                                                                                   ^
-Warning[Pa050]: non-native end of line sequence detected (this diagnostic is
-          only issued once)
       2            Filename:       OSAL_Timers.c
       3            Revised:        $Date: 2012-11-28 00:37:02 -0800 (Wed, 28 Nov 2012) $
       4            Revision:       $Revision: 32329 $
@@ -1682,71 +1677,21 @@ Warning[Pa050]: non-native end of line sequence detected (this diagnostic is
     535           *
     536           * @return  none
     537           *********************************************************************/
-
-   \                                 In  segment BANKED_CODE, align 1, keep-with-next
     538          void osal_adjust_timers( void )
-   \                     osal_adjust_timers:
     539          {
-   \   000000                REQUIRE ?V0
-   \   000000                REQUIRE ?V1
-   \   000000                REQUIRE ?V2
-   \   000000                REQUIRE ?V3
-   \   000000                REQUIRE ?V4
-   \   000000                REQUIRE ?V5
-   \   000000                REQUIRE ?V6
-   \   000000                REQUIRE ?V7
-   \   000000   74F0         MOV     A,#-0x10
-   \   000002   12....       LCALL   ?BANKED_ENTER_XDATA
-   \   000005                ; Saved register size: 16
-   \   000005                ; Auto size: 0
     540            uint32 eTime;
     541          
     542            if ( timerHead != NULL )
-   \   000005   90....       MOV     DPTR,#timerHead
-   \   000008   E0           MOVX    A,@DPTR
-   \   000009   F8           MOV     R0,A
-   \   00000A   A3           INC     DPTR
-   \   00000B   E0           MOVX    A,@DPTR
-   \   00000C   F9           MOV     R1,A
-   \   00000D   E8           MOV     A,R0
-   \   00000E   49           ORL     A,R1
-   \   00000F   602F         JZ      ??osal_adjust_timers_0
     543            {
     544              // Compute elapsed time (msec)
     545              eTime = TimerElapsed() / TICK_COUNT;
-   \   000011                ; Setup parameters for call to function TimerElapsed
-   \   000011   12....       LCALL   `??TimerElapsed::?relay`; Banked call to: TimerElapsed
-   \   000014   8A..         MOV     ?V0,R2
-   \   000016   8B..         MOV     ?V1,R3
-   \   000018   8C..         MOV     ?V2,R4
-   \   00001A   8D..         MOV     ?V3,R5
-   \   00001C   90....       MOV     DPTR,#__Constant_1
-   \   00001F   78..         MOV     R0,#?V4
-   \   000021   12....       LCALL   ?L_MOV_X
-   \   000024   78..         MOV     R0,#?V0
-   \   000026   79..         MOV     R1,#?V4
-   \   000028   12....       LCALL   ?UL_DIV_MOD
     546          
     547              if ( eTime )
-   \   00002B   E5..         MOV     A,?V0
-   \   00002D   45..         ORL     A,?V1
-   \   00002F   45..         ORL     A,?V2
-   \   000031   45..         ORL     A,?V3
-   \   000033   600B         JZ      ??osal_adjust_timers_0
     548              {
     549                osalTimerUpdate( eTime );
-   \   000035                ; Setup parameters for call to function osalTimerUpdate
-   \   000035   AA..         MOV     R2,?V0
-   \   000037   AB..         MOV     R3,?V1
-   \   000039   AC..         MOV     R4,?V2
-   \   00003B   AD..         MOV     R5,?V3
-   \   00003D   12....       LCALL   `??osalTimerUpdate::?relay`; Banked call to: osalTimerUpdate
     550              }
     551            }
     552          }
-   \                     ??osal_adjust_timers_0:
-   \   000040   7F08         MOV     R7,#0x8
-   \   000042   02....       LJMP    ?BANKED_LEAVE_XDATA
     553          
     554          /*********************************************************************
     555           * @fn      osal_next_timeout
@@ -1760,107 +1705,35 @@ Warning[Pa050]: non-native end of line sequence detected (this diagnostic is
     563           *
     564           * @return  none
     565           *********************************************************************/
-
-   \                                 In  segment BANKED_CODE, align 1, keep-with-next
     566          uint32 osal_next_timeout( void )
-   \                     osal_next_timeout:
     567          {
-   \   000000                REQUIRE ?V0
-   \   000000                REQUIRE ?V1
-   \   000000                REQUIRE ?V2
-   \   000000                REQUIRE ?V3
-   \   000000   74F4         MOV     A,#-0xc
-   \   000002   12....       LCALL   ?BANKED_ENTER_XDATA
-   \   000005                ; Saved register size: 12
-   \   000005                ; Auto size: 0
     568            uint32 nextTimeout;
     569            osalTimerRec_t *srchTimer;
     570          
     571            if ( timerHead != NULL )
-   \   000005   90....       MOV     DPTR,#timerHead
-   \   000008   E0           MOVX    A,@DPTR
-   \   000009   F8           MOV     R0,A
-   \   00000A   A3           INC     DPTR
-   \   00000B   E0           MOVX    A,@DPTR
-   \   00000C   F9           MOV     R1,A
-   \   00000D   E8           MOV     A,R0
-   \   00000E   49           ORL     A,R1
-   \   00000F   603F         JZ      ??osal_next_timeout_0
     572            {
     573              // Head of the timer list
     574              srchTimer = timerHead;
-   \   000011   90....       MOV     DPTR,#timerHead
-   \   000014   E0           MOVX    A,@DPTR
-   \   000015   FA           MOV     R2,A
-   \   000016   A3           INC     DPTR
-   \   000017   E0           MOVX    A,@DPTR
-   \   000018   FB           MOV     R3,A
     575              nextTimeout = OSAL_TIMERS_MAX_TIMEOUT;
-   \   000019   75..8E       MOV     ?V0,#-0x72
-   \   00001C   75..C2       MOV     ?V1,#-0x3e
-   \   00001F   75..F5       MOV     ?V2,#-0xb
-   \   000022   75..28       MOV     ?V3,#0x28
     576          
     577              // Look for the next timeout timer
     578              while ( srchTimer != NULL )
-   \                     ??osal_next_timeout_1:
-   \   000025   EA           MOV     A,R2
-   \   000026   4B           ORL     A,R3
-   \   000027   6033         JZ      ??osal_next_timeout_2
     579              {
     580                if (srchTimer->timeout.time32 < nextTimeout)
-   \   000029   8A82         MOV     DPL,R2
-   \   00002B   8B83         MOV     DPH,R3
-   \   00002D   A3           INC     DPTR
-   \   00002E   A3           INC     DPTR
-   \   00002F   78..         MOV     R0,#?V0
-   \   000031   12....       LCALL   ?UL_GT_X
-   \   000034   500B         JNC     ??osal_next_timeout_3
     581                {
     582                  nextTimeout = srchTimer->timeout.time32;
-   \   000036   8A82         MOV     DPL,R2
-   \   000038   8B83         MOV     DPH,R3
-   \   00003A   A3           INC     DPTR
-   \   00003B   A3           INC     DPTR
-   \   00003C   78..         MOV     R0,#?V0
-   \   00003E   12....       LCALL   ?L_MOV_X
     583                }
     584                // Check next timer
     585                srchTimer = srchTimer->next;
-   \                     ??osal_next_timeout_3:
-   \   000041   8A82         MOV     DPL,R2
-   \   000043   8B83         MOV     DPH,R3
-   \   000045   E0           MOVX    A,@DPTR
-   \   000046   F8           MOV     R0,A
-   \   000047   A3           INC     DPTR
-   \   000048   E0           MOVX    A,@DPTR
-   \   000049   F9           MOV     R1,A
-   \   00004A   E8           MOV     A,R0
-   \   00004B   FA           MOV     R2,A
-   \   00004C   E9           MOV     A,R1
-   \   00004D   FB           MOV     R3,A
-   \   00004E   80D5         SJMP    ??osal_next_timeout_1
     586              }
     587            }
     588            else
     589            {
     590              // No timers
     591              nextTimeout = 0;
-   \                     ??osal_next_timeout_0:
-   \   000050   75..00       MOV     ?V0,#0x0
-   \   000053   75..00       MOV     ?V1,#0x0
-   \   000056   75..00       MOV     ?V2,#0x0
-   \   000059   75..00       MOV     ?V3,#0x0
     592            }
     593          
     594            return ( nextTimeout );
-   \                     ??osal_next_timeout_2:
-   \   00005C   AA..         MOV     R2,?V0
-   \   00005E   AB..         MOV     R3,?V1
-   \   000060   AC..         MOV     R4,?V2
-   \   000062   AD..         MOV     R5,?V3
-   \   000064   7F04         MOV     R7,#0x4
-   \   000066   02....       LJMP    ?BANKED_LEAVE_XDATA
     595          }
     596          #endif // POWER_SAVING
     597          
@@ -1889,10 +1762,6 @@ Warning[Pa050]: non-native end of line sequence detected (this diagnostic is
    \   00000C   D082         POP     DPL
    \   00000E   02....       LJMP    ?BRET
     610          }
-
-   \                                 In  segment XDATA_ROM_C, align 1
-   \                     __Constant_1:
-   \   000000   01000000     DD 1
 
    \                                 In  segment BANK_RELAYS, align 1
    \                     `??osalTimerInit::?relay`:
@@ -1945,16 +1814,6 @@ Warning[Pa050]: non-native end of line sequence detected (this diagnostic is
    \   000003   ......       DC24    osalTimerUpdate
 
    \                                 In  segment BANK_RELAYS, align 1
-   \                     `??osal_adjust_timers::?relay`:
-   \   000000   12....       LCALL   ?BDISPATCH
-   \   000003   ......       DC24    osal_adjust_timers
-
-   \                                 In  segment BANK_RELAYS, align 1
-   \                     `??osal_next_timeout::?relay`:
-   \   000000   12....       LCALL   ?BDISPATCH
-   \   000003   ......       DC24    osal_next_timeout
-
-   \                                 In  segment BANK_RELAYS, align 1
    \                     `??osal_GetSystemClock::?relay`:
    \   000000   12....       LCALL   ?BDISPATCH
    \   000003   ......       DC24    osal_GetSystemClock
@@ -1972,16 +1831,12 @@ Warning[Pa050]: non-native end of line sequence detected (this diagnostic is
       2     12   osalDeleteTimer
       2     16   osalFindTimer
       0      9   osalTimerInit
-      0     39   osalTimerUpdate
+      0     23   osalTimerUpdate
         0     23   -> osal_mem_free
         0     23   -> osal_set_event
       2      0   osal_GetSystemClock
-      0     16   osal_adjust_timers
-        0     16   -> TimerElapsed
-        0     16   -> osalTimerUpdate
       0     14   osal_get_timeoutEx
         0     14   -> osalFindTimer
-      0     12   osal_next_timeout
       0     22   osal_start_reload_timer
         0     18   -> osalAddTimer
       0     18   osal_start_timerEx
@@ -1997,7 +1852,6 @@ Warning[Pa050]: non-native end of line sequence detected (this diagnostic is
    Bytes  Function/Label
    -----  --------------
        1  _A_IEN0
-       4  __Constant_1
      240  osalAddTimer
        6  osalAddTimer::?relay
       32  osalDeleteTimer
@@ -2010,12 +1864,8 @@ Warning[Pa050]: non-native end of line sequence detected (this diagnostic is
        6  osalTimerUpdate::?relay
       17  osal_GetSystemClock
        6  osal_GetSystemClock::?relay
-      69  osal_adjust_timers
-       6  osal_adjust_timers::?relay
       74  osal_get_timeoutEx
        6  osal_get_timeoutEx::?relay
-     105  osal_next_timeout
-       6  osal_next_timeout::?relay
       91  osal_start_reload_timer
        6  osal_start_reload_timer::?relay
       62  osal_start_timerEx
@@ -2028,16 +1878,14 @@ Warning[Pa050]: non-native end of line sequence detected (this diagnostic is
        2  timerHead
 
  
- 1 594 bytes in segment BANKED_CODE
-    78 bytes in segment BANK_RELAYS
+ 1 420 bytes in segment BANKED_CODE
+    66 bytes in segment BANK_RELAYS
      1 byte  in segment SFR_AN
-     4 bytes in segment XDATA_ROM_C
      6 bytes in segment XDATA_Z
  
- 1 672 bytes of CODE  memory
-     0 bytes of CONST memory (+ 4 bytes shared)
-     0 bytes of DATA  memory (+ 1 byte  shared)
+ 1 486 bytes of CODE  memory
+     0 bytes of DATA  memory (+ 1 byte shared)
      6 bytes of XDATA memory
 
 Errors: none
-Warnings: 1
+Warnings: none

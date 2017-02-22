@@ -1,6 +1,6 @@
 ///////////////////////////////////////////////////////////////////////////////
 //
-// IAR C/C++ Compiler V9.20.1.2476 for 8051               17/Feb/2017  12:45:13
+// IAR C/C++ Compiler V9.20.1.2476 for 8051               22/Feb/2017  13:47:24
 // Copyright 2004-2015 IAR Systems AB.
 // Standalone license - IAR Embedded Workbench for 8051
 //
@@ -12,14 +12,14 @@
 //    Dptr setup         =  1,16
 //                          
 //    Source file        =  
-//        D:\Jop van
-//        Buuren\Documents\Hogeschool\Vakken\wt\WirelessSensorNetworksPracticum\Components\osal\common\OSAL_PwrMgr.c
+//        D:\School\Jaar_3\WTWS\Projects\WirelessSensorNetworksPracticum\Components\osal\common\OSAL_PwrMgr.c
 //    Command line       =  
-//        -f "D:\Jop van
-//        Buuren\Documents\Hogeschool\Vakken\wt\WirelessSensorNetworksPracticum\Projects\zstack\Samples\DemoApp\CC2530DB\..\..\..\Tools\CC2530DB\f8wEndev.cfg"
-//        (-DCPU32MHZ -DROOT=__near_func -DMAC_CFG_TX_DATA_MAX=3
-//        -DMAC_CFG_TX_MAX=6 -DMAC_CFG_RX_MAX=3) -f "D:\Jop van
-//        Buuren\Documents\Hogeschool\Vakken\wt\WirelessSensorNetworksPracticum\Projects\zstack\Samples\DemoApp\CC2530DB\..\..\..\Tools\CC2530DB\f8wConfig.cfg"
+//        -f
+//        D:\School\Jaar_3\WTWS\Projects\WirelessSensorNetworksPracticum\Projects\zstack\Samples\DemoApp\CC2530DB\..\..\..\Tools\CC2530DB\f8wCoord.cfg
+//        (-DCPU32MHZ -DROOT=__near_func -DMAC_CFG_APP_PENDING_QUEUE=TRUE
+//        -DMAC_CFG_TX_DATA_MAX=5 -DMAC_CFG_TX_MAX=8 -DMAC_CFG_RX_MAX=5
+//        -DZDO_COORDINATOR -DRTR_NWK) -f
+//        D:\School\Jaar_3\WTWS\Projects\WirelessSensorNetworksPracticum\Projects\zstack\Samples\DemoApp\CC2530DB\..\..\..\Tools\CC2530DB\f8wConfig.cfg
 //        (-DZIGBEEPRO -DSECURE=0 -DZG_SECURE_DYNAMIC=0 -DREFLECTOR
 //        -DDEFAULT_CHANLIST=0x00100000 -DZDAPP_CONFIG_PAN_ID=0x0DAD
 //        -DNWK_START_DELAY=100 -DEXTENDED_JOINING_RANDOM_MASK=0x007F
@@ -34,64 +34,63 @@
 //        -DMAC_MAX_FRAME_SIZE=116 -DZDNWKMGR_MIN_TRANSMISSIONS=20
 //        "-DCONST=const __code" -DGENERIC=__generic -DRFD_RCVC_ALWAYS_ON=FALSE
 //        -DPOLL_RATE=1000 -DQUEUED_POLL_RATE=100 -DRESPONSE_POLL_RATE=100)
-//        -DREJOIN_POLL_RATE=440 "D:\Jop van
-//        Buuren\Documents\Hogeschool\Vakken\wt\WirelessSensorNetworksPracticum\Components\osal\common\OSAL_PwrMgr.c"
-//        -D NWK_AUTO_POLL -D HOLD_AUTO_START -D POWER_SAVING -D NV_INIT -D
-//        DEVICE_LOGICAL_TYPE=ZG_DEVICETYPE_ENDDEVICE -lC "D:\Jop van
-//        Buuren\Documents\Hogeschool\Vakken\wt\WirelessSensorNetworksPracticum\Projects\zstack\Samples\DemoApp\CC2530DB\SensorEB\List\"
-//        -lA "D:\Jop van
-//        Buuren\Documents\Hogeschool\Vakken\wt\WirelessSensorNetworksPracticum\Projects\zstack\Samples\DemoApp\CC2530DB\SensorEB\List\"
-//        --diag_suppress Pe001,Pa010,Pe1665 -o "D:\Jop van
-//        Buuren\Documents\Hogeschool\Vakken\wt\WirelessSensorNetworksPracticum\Projects\zstack\Samples\DemoApp\CC2530DB\SensorEB\Obj\"
+//        -DREJOIN_POLL_RATE=440
+//        D:\School\Jaar_3\WTWS\Projects\WirelessSensorNetworksPracticum\Components\osal\common\OSAL_PwrMgr.c
+//        -D HOLD_AUTO_START -D BUILD_ALL_DEVICES -D REFLECTOR -D NV_INIT -D
+//        NV_RESTORE -D HAL_UART=TRUE -lC
+//        D:\School\Jaar_3\WTWS\Projects\WirelessSensorNetworksPracticum\Projects\zstack\Samples\DemoApp\CC2530DB\CoordinatorEB\List\
+//        -lA
+//        D:\School\Jaar_3\WTWS\Projects\WirelessSensorNetworksPracticum\Projects\zstack\Samples\DemoApp\CC2530DB\CoordinatorEB\List\
+//        --diag_suppress Pe001,Pa010,Pe1665 -o
+//        D:\School\Jaar_3\WTWS\Projects\WirelessSensorNetworksPracticum\Projects\zstack\Samples\DemoApp\CC2530DB\CoordinatorEB\Obj\
 //        -e --no_cse --no_unroll --no_inline --no_code_motion --no_tbaa
 //        --debug --core=plain --dptr=16,1 --data_model=large
 //        --code_model=banked --calling_convention=xdata_reentrant
-//        --place_constants=data_rom --nr_virtual_regs 16 -I "D:\Jop van
-//        Buuren\Documents\Hogeschool\Vakken\wt\WirelessSensorNetworksPracticum\Projects\zstack\Samples\DemoApp\CC2530DB\"
-//        -I "D:\Jop van
-//        Buuren\Documents\Hogeschool\Vakken\wt\WirelessSensorNetworksPracticum\Projects\zstack\Samples\DemoApp\CC2530DB\..\Source\"
-//        -I "D:\Jop van
-//        Buuren\Documents\Hogeschool\Vakken\wt\WirelessSensorNetworksPracticum\Projects\zstack\Samples\DemoApp\CC2530DB\..\..\..\ZMain\TI2530DB\"
-//        -I "D:\Jop van
-//        Buuren\Documents\Hogeschool\Vakken\wt\WirelessSensorNetworksPracticum\Projects\zstack\Samples\DemoApp\CC2530DB\..\..\..\..\..\Components\hal\include\"
-//        -I "D:\Jop van
-//        Buuren\Documents\Hogeschool\Vakken\wt\WirelessSensorNetworksPracticum\Projects\zstack\Samples\DemoApp\CC2530DB\..\..\..\..\..\Components\hal\target\CC2530EB\"
-//        -I "D:\Jop van
-//        Buuren\Documents\Hogeschool\Vakken\wt\WirelessSensorNetworksPracticum\Projects\zstack\Samples\DemoApp\CC2530DB\..\..\..\..\..\Components\mac\include\"
-//        -I "D:\Jop van
-//        Buuren\Documents\Hogeschool\Vakken\wt\WirelessSensorNetworksPracticum\Projects\zstack\Samples\DemoApp\CC2530DB\..\..\..\..\..\Components\mac\high_level\"
-//        -I "D:\Jop van
-//        Buuren\Documents\Hogeschool\Vakken\wt\WirelessSensorNetworksPracticum\Projects\zstack\Samples\DemoApp\CC2530DB\..\..\..\..\..\Components\mac\low_level\srf04\"
-//        -I "D:\Jop van
-//        Buuren\Documents\Hogeschool\Vakken\wt\WirelessSensorNetworksPracticum\Projects\zstack\Samples\DemoApp\CC2530DB\..\..\..\..\..\Components\mac\low_level\srf04\single_chip\"
-//        -I "D:\Jop van
-//        Buuren\Documents\Hogeschool\Vakken\wt\WirelessSensorNetworksPracticum\Projects\zstack\Samples\DemoApp\CC2530DB\..\..\..\..\..\Components\mt\"
-//        -I "D:\Jop van
-//        Buuren\Documents\Hogeschool\Vakken\wt\WirelessSensorNetworksPracticum\Projects\zstack\Samples\DemoApp\CC2530DB\..\..\..\..\..\Components\osal\include\"
-//        -I "D:\Jop van
-//        Buuren\Documents\Hogeschool\Vakken\wt\WirelessSensorNetworksPracticum\Projects\zstack\Samples\DemoApp\CC2530DB\..\..\..\..\..\Components\services\saddr\"
-//        -I "D:\Jop van
-//        Buuren\Documents\Hogeschool\Vakken\wt\WirelessSensorNetworksPracticum\Projects\zstack\Samples\DemoApp\CC2530DB\..\..\..\..\..\Components\services\sdata\"
-//        -I "D:\Jop van
-//        Buuren\Documents\Hogeschool\Vakken\wt\WirelessSensorNetworksPracticum\Projects\zstack\Samples\DemoApp\CC2530DB\..\..\..\..\..\Components\stack\af\"
-//        -I "D:\Jop van
-//        Buuren\Documents\Hogeschool\Vakken\wt\WirelessSensorNetworksPracticum\Projects\zstack\Samples\DemoApp\CC2530DB\..\..\..\..\..\Components\stack\nwk\"
-//        -I "D:\Jop van
-//        Buuren\Documents\Hogeschool\Vakken\wt\WirelessSensorNetworksPracticum\Projects\zstack\Samples\DemoApp\CC2530DB\..\..\..\..\..\Components\stack\sapi\"
-//        -I "D:\Jop van
-//        Buuren\Documents\Hogeschool\Vakken\wt\WirelessSensorNetworksPracticum\Projects\zstack\Samples\DemoApp\CC2530DB\..\..\..\..\..\Components\stack\sec\"
-//        -I "D:\Jop van
-//        Buuren\Documents\Hogeschool\Vakken\wt\WirelessSensorNetworksPracticum\Projects\zstack\Samples\DemoApp\CC2530DB\..\..\..\..\..\Components\stack\sys\"
-//        -I "D:\Jop van
-//        Buuren\Documents\Hogeschool\Vakken\wt\WirelessSensorNetworksPracticum\Projects\zstack\Samples\DemoApp\CC2530DB\..\..\..\..\..\Components\stack\zdo\"
-//        -I "D:\Jop van
-//        Buuren\Documents\Hogeschool\Vakken\wt\WirelessSensorNetworksPracticum\Projects\zstack\Samples\DemoApp\CC2530DB\..\..\..\..\..\Components\zmac\"
-//        -I "D:\Jop van
-//        Buuren\Documents\Hogeschool\Vakken\wt\WirelessSensorNetworksPracticum\Projects\zstack\Samples\DemoApp\CC2530DB\..\..\..\..\..\Components\zmac\f8w\"
+//        --place_constants=data_rom --nr_virtual_regs 16 -I
+//        D:\School\Jaar_3\WTWS\Projects\WirelessSensorNetworksPracticum\Projects\zstack\Samples\DemoApp\CC2530DB\
+//        -I
+//        D:\School\Jaar_3\WTWS\Projects\WirelessSensorNetworksPracticum\Projects\zstack\Samples\DemoApp\CC2530DB\..\Source\
+//        -I
+//        D:\School\Jaar_3\WTWS\Projects\WirelessSensorNetworksPracticum\Projects\zstack\Samples\DemoApp\CC2530DB\..\..\..\ZMain\TI2530DB\
+//        -I
+//        D:\School\Jaar_3\WTWS\Projects\WirelessSensorNetworksPracticum\Projects\zstack\Samples\DemoApp\CC2530DB\..\..\..\..\..\Components\hal\include\
+//        -I
+//        D:\School\Jaar_3\WTWS\Projects\WirelessSensorNetworksPracticum\Projects\zstack\Samples\DemoApp\CC2530DB\..\..\..\..\..\Components\hal\target\CC2530EB\
+//        -I
+//        D:\School\Jaar_3\WTWS\Projects\WirelessSensorNetworksPracticum\Projects\zstack\Samples\DemoApp\CC2530DB\..\..\..\..\..\Components\mac\include\
+//        -I
+//        D:\School\Jaar_3\WTWS\Projects\WirelessSensorNetworksPracticum\Projects\zstack\Samples\DemoApp\CC2530DB\..\..\..\..\..\Components\mac\high_level\
+//        -I
+//        D:\School\Jaar_3\WTWS\Projects\WirelessSensorNetworksPracticum\Projects\zstack\Samples\DemoApp\CC2530DB\..\..\..\..\..\Components\mac\low_level\srf04\
+//        -I
+//        D:\School\Jaar_3\WTWS\Projects\WirelessSensorNetworksPracticum\Projects\zstack\Samples\DemoApp\CC2530DB\..\..\..\..\..\Components\mac\low_level\srf04\single_chip\
+//        -I
+//        D:\School\Jaar_3\WTWS\Projects\WirelessSensorNetworksPracticum\Projects\zstack\Samples\DemoApp\CC2530DB\..\..\..\..\..\Components\mt\
+//        -I
+//        D:\School\Jaar_3\WTWS\Projects\WirelessSensorNetworksPracticum\Projects\zstack\Samples\DemoApp\CC2530DB\..\..\..\..\..\Components\osal\include\
+//        -I
+//        D:\School\Jaar_3\WTWS\Projects\WirelessSensorNetworksPracticum\Projects\zstack\Samples\DemoApp\CC2530DB\..\..\..\..\..\Components\services\saddr\
+//        -I
+//        D:\School\Jaar_3\WTWS\Projects\WirelessSensorNetworksPracticum\Projects\zstack\Samples\DemoApp\CC2530DB\..\..\..\..\..\Components\services\sdata\
+//        -I
+//        D:\School\Jaar_3\WTWS\Projects\WirelessSensorNetworksPracticum\Projects\zstack\Samples\DemoApp\CC2530DB\..\..\..\..\..\Components\stack\af\
+//        -I
+//        D:\School\Jaar_3\WTWS\Projects\WirelessSensorNetworksPracticum\Projects\zstack\Samples\DemoApp\CC2530DB\..\..\..\..\..\Components\stack\nwk\
+//        -I
+//        D:\School\Jaar_3\WTWS\Projects\WirelessSensorNetworksPracticum\Projects\zstack\Samples\DemoApp\CC2530DB\..\..\..\..\..\Components\stack\sapi\
+//        -I
+//        D:\School\Jaar_3\WTWS\Projects\WirelessSensorNetworksPracticum\Projects\zstack\Samples\DemoApp\CC2530DB\..\..\..\..\..\Components\stack\sec\
+//        -I
+//        D:\School\Jaar_3\WTWS\Projects\WirelessSensorNetworksPracticum\Projects\zstack\Samples\DemoApp\CC2530DB\..\..\..\..\..\Components\stack\sys\
+//        -I
+//        D:\School\Jaar_3\WTWS\Projects\WirelessSensorNetworksPracticum\Projects\zstack\Samples\DemoApp\CC2530DB\..\..\..\..\..\Components\stack\zdo\
+//        -I
+//        D:\School\Jaar_3\WTWS\Projects\WirelessSensorNetworksPracticum\Projects\zstack\Samples\DemoApp\CC2530DB\..\..\..\..\..\Components\zmac\
+//        -I
+//        D:\School\Jaar_3\WTWS\Projects\WirelessSensorNetworksPracticum\Projects\zstack\Samples\DemoApp\CC2530DB\..\..\..\..\..\Components\zmac\f8w\
 //        -Ol --require_prototypes
 //    List file          =  
-//        D:\Jop van
-//        Buuren\Documents\Hogeschool\Vakken\wt\WirelessSensorNetworksPracticum\Projects\zstack\Samples\DemoApp\CC2530DB\SensorEB\List\OSAL_PwrMgr.s51
+//        D:\School\Jaar_3\WTWS\Projects\WirelessSensorNetworksPracticum\Projects\zstack\Samples\DemoApp\CC2530DB\CoordinatorEB\List\OSAL_PwrMgr.s51
 //
 ///////////////////////////////////////////////////////////////////////////////
 
@@ -116,8 +115,6 @@
 
         EXTERN ?V0
         EXTERN ?V1
-        EXTERN ?V2
-        EXTERN ?V3
         EXTERN ?BANKED_ENTER_XDATA
         EXTERN ?BANKED_LEAVE_XDATA
         EXTERN ?BDISPATCH
@@ -129,11 +126,8 @@
         FUNCTION `??osal_pwrmgr_device::?relay`,0203H
         PUBLIC `??osal_pwrmgr_init::?relay`
         FUNCTION `??osal_pwrmgr_init::?relay`,0203H
-        PUBLIC `??osal_pwrmgr_powerconserve::?relay`
-        FUNCTION `??osal_pwrmgr_powerconserve::?relay`,0203H
         PUBLIC `??osal_pwrmgr_task_state::?relay`
         FUNCTION `??osal_pwrmgr_task_state::?relay`,0203H
-        PUBWEAK _A_IEN0
         PUBLIC osal_pwrmgr_device
         FUNCTION osal_pwrmgr_device,0203H
         ARGFRAME XSTACK, 0, STACK
@@ -142,10 +136,6 @@
         FUNCTION osal_pwrmgr_init,0203H
         ARGFRAME XSTACK, 0, STACK
         LOCFRAME ISTACK, 2, STACK
-        PUBLIC osal_pwrmgr_powerconserve
-        FUNCTION osal_pwrmgr_powerconserve,0a1203H
-        ARGFRAME XSTACK, 0, STACK
-        LOCFRAME XSTACK, 12, STACK
         PUBLIC osal_pwrmgr_task_state
         FUNCTION osal_pwrmgr_task_state,080203H
         ARGFRAME XSTACK, 0, STACK
@@ -240,40 +230,16 @@
           CFI ?RET_LOW Frame(CFA_SP, 1)
           CFI EndCommon cfiCommon0
         
-halSleep            SYMBOL "halSleep"
-`??halSleep::?relay` SYMBOL "?relay", halSleep
-osal_next_timeout   SYMBOL "osal_next_timeout"
-`??osal_next_timeout::?relay` SYMBOL "?relay", osal_next_timeout
 osal_pwrmgr_device  SYMBOL "osal_pwrmgr_device"
 `??osal_pwrmgr_device::?relay` SYMBOL "?relay", osal_pwrmgr_device
 osal_pwrmgr_init    SYMBOL "osal_pwrmgr_init"
 `??osal_pwrmgr_init::?relay` SYMBOL "?relay", osal_pwrmgr_init
-osal_pwrmgr_powerconserve SYMBOL "osal_pwrmgr_powerconserve"
-`??osal_pwrmgr_powerconserve::?relay` SYMBOL "?relay", osal_pwrmgr_powerconserve
 osal_pwrmgr_task_state SYMBOL "osal_pwrmgr_task_state"
 `??osal_pwrmgr_task_state::?relay` SYMBOL "?relay", osal_pwrmgr_task_state
 
-        EXTERN `??halSleep::?relay`
-        FUNCTION `??halSleep::?relay`,00H
-        EXTERN `??osal_next_timeout::?relay`
-        FUNCTION `??osal_next_timeout::?relay`,00H
-        EXTERN halSleep
-        FUNCTION halSleep,0202H
-        ARGFRAME ISTACK, 0, STACK
-        ARGFRAME PSTACK, 0, STACK
-        ARGFRAME XSTACK, 12, STACK
-        ARGFRAME IOVERLAY, 0, STATIC
-        ARGFRAME DOVERLAY, 0, STATIC
-        EXTERN osal_next_timeout
-        FUNCTION osal_next_timeout,0202H
-        ARGFRAME ISTACK, 0, STACK
-        ARGFRAME PSTACK, 0, STACK
-        ARGFRAME XSTACK, 12, STACK
-        ARGFRAME IOVERLAY, 0, STATIC
-        ARGFRAME DOVERLAY, 0, STATIC
         EXTERN tasksCnt
 
-// D:\Jop van Buuren\Documents\Hogeschool\Vakken\wt\WirelessSensorNetworksPracticum\Components\osal\common\OSAL_PwrMgr.c
+// D:\School\Jaar_3\WTWS\Projects\WirelessSensorNetworksPracticum\Components\osal\common\OSAL_PwrMgr.c
 //    1 /**************************************************************************************************
 //    2   Filename:       OSAL_pwrmgr.c
 //    3   Revised:        $Date: 2011-09-16 19:09:24 -0700 (Fri, 16 Sep 2011) $
@@ -319,12 +285,6 @@ osal_pwrmgr_task_state SYMBOL "osal_pwrmgr_task_state"
 //   43 
 //   44 #include "comdef.h"
 //   45 #include "OnBoard.h"
-
-        ASEGN SFR_AN:DATA:NOROOT,0a8H
-// union <unnamed> volatile __sfr _A_IEN0
-_A_IEN0:
-        DATA8
-        DS 1
 //   46 #include "OSAL.h"
 //   47 #include "OSAL_Tasks.h"
 //   48 #include "OSAL_Timers.h"
@@ -584,146 +544,6 @@ osal_pwrmgr_task_state:
           CFI CFA_XSP16 XSP16+0
 //  152 }
           CFI EndBlock cfiBlock2
-//  153 
-//  154 #if defined( POWER_SAVING )
-//  155 /*********************************************************************
-//  156  * @fn      osal_pwrmgr_powerconserve
-//  157  *
-//  158  * @brief   This function is called from the main OSAL loop when there are
-//  159  *          no events scheduled and shouldn't be called from anywhere else.
-//  160  *
-//  161  * @param   none.
-//  162  *
-//  163  * @return  none.
-//  164  */
-
-        RSEG BANKED_CODE:CODE:NOROOT(0)
-//  165 void osal_pwrmgr_powerconserve( void )
-osal_pwrmgr_powerconserve:
-          CFI Block cfiBlock3 Using cfiCommon0
-          CFI Function osal_pwrmgr_powerconserve
-        CODE
-//  166 {
-        FUNCALL osal_pwrmgr_powerconserve, osal_next_timeout
-        LOCFRAME ISTACK, 0, STACK
-        LOCFRAME PSTACK, 0, STACK
-        LOCFRAME XSTACK, 12, STACK
-        LOCFRAME IOVERLAY, 0, STATIC
-        LOCFRAME DOVERLAY, 0, STATIC
-        ARGFRAME ISTACK, 0, STACK
-        ARGFRAME PSTACK, 0, STACK
-        ARGFRAME XSTACK, 12, STACK
-        ARGFRAME IOVERLAY, 0, STATIC
-        ARGFRAME DOVERLAY, 0, STATIC
-        FUNCALL osal_pwrmgr_powerconserve, halSleep
-        LOCFRAME ISTACK, 0, STACK
-        LOCFRAME PSTACK, 0, STACK
-        LOCFRAME XSTACK, 12, STACK
-        LOCFRAME IOVERLAY, 0, STATIC
-        LOCFRAME DOVERLAY, 0, STATIC
-        ARGFRAME ISTACK, 0, STACK
-        ARGFRAME PSTACK, 0, STACK
-        ARGFRAME XSTACK, 12, STACK
-        ARGFRAME IOVERLAY, 0, STATIC
-        ARGFRAME DOVERLAY, 0, STATIC
-        REQUIRE ?V0
-        REQUIRE ?V1
-        REQUIRE ?V2
-        REQUIRE ?V3
-        MOV     A,#-0xc
-        LCALL   ?BANKED_ENTER_XDATA
-          CFI DPH0 load(1, XDATA, add(CFA_XSP16, literal(-1)))
-          CFI DPL0 load(1, XDATA, add(CFA_XSP16, literal(-2)))
-          CFI ?BRET_EXT load(1, XDATA, add(CFA_XSP16, literal(-3)))
-          CFI ?RET_HIGH load(1, XDATA, add(CFA_XSP16, literal(-4)))
-          CFI ?RET_LOW load(1, XDATA, add(CFA_XSP16, literal(-5)))
-          CFI R7 load(1, XDATA, add(CFA_XSP16, literal(-6)))
-          CFI V3 load(1, XDATA, add(CFA_XSP16, literal(-7)))
-          CFI V2 load(1, XDATA, add(CFA_XSP16, literal(-8)))
-          CFI V1 load(1, XDATA, add(CFA_XSP16, literal(-9)))
-          CFI V0 load(1, XDATA, add(CFA_XSP16, literal(-10)))
-          CFI VB load(1, XDATA, add(CFA_XSP16, literal(-11)))
-          CFI R6 load(1, XDATA, add(CFA_XSP16, literal(-12)))
-          CFI CFA_SP SP+0
-          CFI CFA_XSP16 add(XSP16, 12)
-        ; Saved register size: 12
-        ; Auto size: 0
-//  167   uint32        next;
-//  168   halIntState_t intState;
-//  169 
-//  170   // Should we even look into power conservation
-//  171   if ( pwrmgr_attribute.pwrmgr_device != PWRMGR_ALWAYS_ON )
-        MOV     DPTR,#pwrmgr_attribute + 6
-        MOVX    A,@DPTR
-        JZ      ??osal_pwrmgr_powerconserve_0
-//  172   {
-//  173     // Are all tasks in agreement to conserve
-//  174     if ( pwrmgr_attribute.pwrmgr_task_state == 0 )
-        MOV     DPTR,#pwrmgr_attribute
-        MOVX    A,@DPTR
-        MOV     R0,A
-        INC     DPTR
-        MOVX    A,@DPTR
-        MOV     R1,A
-        MOV     A,R0
-        ORL     A,R1
-        JNZ     ??osal_pwrmgr_powerconserve_0
-//  175     {
-//  176       // Hold off interrupts.
-//  177       HAL_ENTER_CRITICAL_SECTION( intState );
-        MOV     C,0xa8.7
-        CLR     A
-        RLC     A
-        MOV     R6,A
-        CLR     0xa8.7
-//  178 
-//  179       // Get next time-out
-//  180       next = osal_next_timeout();
-        ; Setup parameters for call to function osal_next_timeout
-        LCALL   `??osal_next_timeout::?relay`; Banked call to: osal_next_timeout
-        MOV     ?V0,R2
-        MOV     ?V1,R3
-        MOV     ?V2,R4
-        MOV     ?V3,R5
-//  181 
-//  182       // Re-enable interrupts.
-//  183       HAL_EXIT_CRITICAL_SECTION( intState );
-        MOV     A,R6
-        MOV     R7,A
-        MOV     A,R6
-        MOV     C,0xE0 /* A   */.0
-        MOV     0xa8.7,C
-//  184 
-//  185       // Put the processor into sleep mode
-//  186       OSAL_SET_CPU_INTO_SLEEP( next );
-        ; Setup parameters for call to function halSleep
-        MOV     R2,?V0
-        MOV     R3,?V1
-        MOV     R4,?V2
-        MOV     R5,?V3
-        LCALL   `??halSleep::?relay` ; Banked call to: halSleep
-//  187     }
-//  188   }
-//  189 }
-??osal_pwrmgr_powerconserve_0:
-        MOV     R7,#0x4
-        LJMP    ?BANKED_LEAVE_XDATA
-          CFI R6 SameValue
-          CFI VB SameValue
-          CFI V0 SameValue
-          CFI V1 SameValue
-          CFI V2 SameValue
-          CFI V3 SameValue
-          CFI R7 SameValue
-          CFI ?RET_LOW Frame(CFA_SP, 1)
-          CFI ?RET_HIGH Frame(CFA_SP, 2)
-          CFI ?BRET_EXT Frame(CFA_SP, 3)
-          CFI DPL0 SameValue
-          CFI DPH0 SameValue
-          CFI CFA_SP SP+-3
-          CFI CFA_XSP16 XSP16+0
-          CFI EndBlock cfiBlock3
-        REQUIRE _A_IEN0
 
         RSEG BANK_RELAYS:CODE:REORDER:NOROOT(0)
 `??osal_pwrmgr_init::?relay`:
@@ -746,27 +566,55 @@ osal_pwrmgr_powerconserve:
         DATA24
         DC24    osal_pwrmgr_task_state
 
-        RSEG BANK_RELAYS:CODE:REORDER:NOROOT(0)
-`??osal_pwrmgr_powerconserve::?relay`:
-        CODE
-        LCALL   ?BDISPATCH
-        DATA24
-        DC24    osal_pwrmgr_powerconserve
-
         END
+//  153 
+//  154 #if defined( POWER_SAVING )
+//  155 /*********************************************************************
+//  156  * @fn      osal_pwrmgr_powerconserve
+//  157  *
+//  158  * @brief   This function is called from the main OSAL loop when there are
+//  159  *          no events scheduled and shouldn't be called from anywhere else.
+//  160  *
+//  161  * @param   none.
+//  162  *
+//  163  * @return  none.
+//  164  */
+//  165 void osal_pwrmgr_powerconserve( void )
+//  166 {
+//  167   uint32        next;
+//  168   halIntState_t intState;
+//  169 
+//  170   // Should we even look into power conservation
+//  171   if ( pwrmgr_attribute.pwrmgr_device != PWRMGR_ALWAYS_ON )
+//  172   {
+//  173     // Are all tasks in agreement to conserve
+//  174     if ( pwrmgr_attribute.pwrmgr_task_state == 0 )
+//  175     {
+//  176       // Hold off interrupts.
+//  177       HAL_ENTER_CRITICAL_SECTION( intState );
+//  178 
+//  179       // Get next time-out
+//  180       next = osal_next_timeout();
+//  181 
+//  182       // Re-enable interrupts.
+//  183       HAL_EXIT_CRITICAL_SECTION( intState );
+//  184 
+//  185       // Put the processor into sleep mode
+//  186       OSAL_SET_CPU_INTO_SLEEP( next );
+//  187     }
+//  188   }
+//  189 }
 //  190 #endif /* POWER_SAVING */
 //  191 
 //  192 /*********************************************************************
 //  193 *********************************************************************/
 // 
-// 194 bytes in segment BANKED_CODE
-//  24 bytes in segment BANK_RELAYS
-//   1 byte  in segment SFR_AN
+// 130 bytes in segment BANKED_CODE
+//  18 bytes in segment BANK_RELAYS
 //   7 bytes in segment XDATA_Z
 // 
-// 218 bytes of CODE  memory
-//   0 bytes of DATA  memory (+ 1 byte shared)
+// 148 bytes of CODE  memory
 //   7 bytes of XDATA memory
 //
 //Errors: none
-//Warnings: 1
+//Warnings: none

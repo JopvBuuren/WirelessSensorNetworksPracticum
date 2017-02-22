@@ -1,6 +1,6 @@
 ///////////////////////////////////////////////////////////////////////////////
 //
-// IAR C/C++ Compiler V9.20.1.2476 for 8051               17/Feb/2017  12:45:13
+// IAR C/C++ Compiler V9.20.1.2476 for 8051               22/Feb/2017  13:47:28
 // Copyright 2004-2015 IAR Systems AB.
 // Standalone license - IAR Embedded Workbench for 8051
 //
@@ -12,14 +12,14 @@
 //    Dptr setup         =  1,16
 //                          
 //    Source file        =  
-//        D:\Jop van
-//        Buuren\Documents\Hogeschool\Vakken\wt\WirelessSensorNetworksPracticum\Components\stack\zdo\ZDConfig.c
+//        D:\School\Jaar_3\WTWS\Projects\WirelessSensorNetworksPracticum\Components\stack\zdo\ZDConfig.c
 //    Command line       =  
-//        -f "D:\Jop van
-//        Buuren\Documents\Hogeschool\Vakken\wt\WirelessSensorNetworksPracticum\Projects\zstack\Samples\DemoApp\CC2530DB\..\..\..\Tools\CC2530DB\f8wEndev.cfg"
-//        (-DCPU32MHZ -DROOT=__near_func -DMAC_CFG_TX_DATA_MAX=3
-//        -DMAC_CFG_TX_MAX=6 -DMAC_CFG_RX_MAX=3) -f "D:\Jop van
-//        Buuren\Documents\Hogeschool\Vakken\wt\WirelessSensorNetworksPracticum\Projects\zstack\Samples\DemoApp\CC2530DB\..\..\..\Tools\CC2530DB\f8wConfig.cfg"
+//        -f
+//        D:\School\Jaar_3\WTWS\Projects\WirelessSensorNetworksPracticum\Projects\zstack\Samples\DemoApp\CC2530DB\..\..\..\Tools\CC2530DB\f8wCoord.cfg
+//        (-DCPU32MHZ -DROOT=__near_func -DMAC_CFG_APP_PENDING_QUEUE=TRUE
+//        -DMAC_CFG_TX_DATA_MAX=5 -DMAC_CFG_TX_MAX=8 -DMAC_CFG_RX_MAX=5
+//        -DZDO_COORDINATOR -DRTR_NWK) -f
+//        D:\School\Jaar_3\WTWS\Projects\WirelessSensorNetworksPracticum\Projects\zstack\Samples\DemoApp\CC2530DB\..\..\..\Tools\CC2530DB\f8wConfig.cfg
 //        (-DZIGBEEPRO -DSECURE=0 -DZG_SECURE_DYNAMIC=0 -DREFLECTOR
 //        -DDEFAULT_CHANLIST=0x00100000 -DZDAPP_CONFIG_PAN_ID=0x0DAD
 //        -DNWK_START_DELAY=100 -DEXTENDED_JOINING_RANDOM_MASK=0x007F
@@ -34,64 +34,63 @@
 //        -DMAC_MAX_FRAME_SIZE=116 -DZDNWKMGR_MIN_TRANSMISSIONS=20
 //        "-DCONST=const __code" -DGENERIC=__generic -DRFD_RCVC_ALWAYS_ON=FALSE
 //        -DPOLL_RATE=1000 -DQUEUED_POLL_RATE=100 -DRESPONSE_POLL_RATE=100)
-//        -DREJOIN_POLL_RATE=440 "D:\Jop van
-//        Buuren\Documents\Hogeschool\Vakken\wt\WirelessSensorNetworksPracticum\Components\stack\zdo\ZDConfig.c"
-//        -D NWK_AUTO_POLL -D HOLD_AUTO_START -D POWER_SAVING -D NV_INIT -D
-//        DEVICE_LOGICAL_TYPE=ZG_DEVICETYPE_ENDDEVICE -lC "D:\Jop van
-//        Buuren\Documents\Hogeschool\Vakken\wt\WirelessSensorNetworksPracticum\Projects\zstack\Samples\DemoApp\CC2530DB\SensorEB\List\"
-//        -lA "D:\Jop van
-//        Buuren\Documents\Hogeschool\Vakken\wt\WirelessSensorNetworksPracticum\Projects\zstack\Samples\DemoApp\CC2530DB\SensorEB\List\"
-//        --diag_suppress Pe001,Pa010,Pe1665 -o "D:\Jop van
-//        Buuren\Documents\Hogeschool\Vakken\wt\WirelessSensorNetworksPracticum\Projects\zstack\Samples\DemoApp\CC2530DB\SensorEB\Obj\"
+//        -DREJOIN_POLL_RATE=440
+//        D:\School\Jaar_3\WTWS\Projects\WirelessSensorNetworksPracticum\Components\stack\zdo\ZDConfig.c
+//        -D HOLD_AUTO_START -D BUILD_ALL_DEVICES -D REFLECTOR -D NV_INIT -D
+//        NV_RESTORE -D HAL_UART=TRUE -lC
+//        D:\School\Jaar_3\WTWS\Projects\WirelessSensorNetworksPracticum\Projects\zstack\Samples\DemoApp\CC2530DB\CoordinatorEB\List\
+//        -lA
+//        D:\School\Jaar_3\WTWS\Projects\WirelessSensorNetworksPracticum\Projects\zstack\Samples\DemoApp\CC2530DB\CoordinatorEB\List\
+//        --diag_suppress Pe001,Pa010,Pe1665 -o
+//        D:\School\Jaar_3\WTWS\Projects\WirelessSensorNetworksPracticum\Projects\zstack\Samples\DemoApp\CC2530DB\CoordinatorEB\Obj\
 //        -e --no_cse --no_unroll --no_inline --no_code_motion --no_tbaa
 //        --debug --core=plain --dptr=16,1 --data_model=large
 //        --code_model=banked --calling_convention=xdata_reentrant
-//        --place_constants=data_rom --nr_virtual_regs 16 -I "D:\Jop van
-//        Buuren\Documents\Hogeschool\Vakken\wt\WirelessSensorNetworksPracticum\Projects\zstack\Samples\DemoApp\CC2530DB\"
-//        -I "D:\Jop van
-//        Buuren\Documents\Hogeschool\Vakken\wt\WirelessSensorNetworksPracticum\Projects\zstack\Samples\DemoApp\CC2530DB\..\Source\"
-//        -I "D:\Jop van
-//        Buuren\Documents\Hogeschool\Vakken\wt\WirelessSensorNetworksPracticum\Projects\zstack\Samples\DemoApp\CC2530DB\..\..\..\ZMain\TI2530DB\"
-//        -I "D:\Jop van
-//        Buuren\Documents\Hogeschool\Vakken\wt\WirelessSensorNetworksPracticum\Projects\zstack\Samples\DemoApp\CC2530DB\..\..\..\..\..\Components\hal\include\"
-//        -I "D:\Jop van
-//        Buuren\Documents\Hogeschool\Vakken\wt\WirelessSensorNetworksPracticum\Projects\zstack\Samples\DemoApp\CC2530DB\..\..\..\..\..\Components\hal\target\CC2530EB\"
-//        -I "D:\Jop van
-//        Buuren\Documents\Hogeschool\Vakken\wt\WirelessSensorNetworksPracticum\Projects\zstack\Samples\DemoApp\CC2530DB\..\..\..\..\..\Components\mac\include\"
-//        -I "D:\Jop van
-//        Buuren\Documents\Hogeschool\Vakken\wt\WirelessSensorNetworksPracticum\Projects\zstack\Samples\DemoApp\CC2530DB\..\..\..\..\..\Components\mac\high_level\"
-//        -I "D:\Jop van
-//        Buuren\Documents\Hogeschool\Vakken\wt\WirelessSensorNetworksPracticum\Projects\zstack\Samples\DemoApp\CC2530DB\..\..\..\..\..\Components\mac\low_level\srf04\"
-//        -I "D:\Jop van
-//        Buuren\Documents\Hogeschool\Vakken\wt\WirelessSensorNetworksPracticum\Projects\zstack\Samples\DemoApp\CC2530DB\..\..\..\..\..\Components\mac\low_level\srf04\single_chip\"
-//        -I "D:\Jop van
-//        Buuren\Documents\Hogeschool\Vakken\wt\WirelessSensorNetworksPracticum\Projects\zstack\Samples\DemoApp\CC2530DB\..\..\..\..\..\Components\mt\"
-//        -I "D:\Jop van
-//        Buuren\Documents\Hogeschool\Vakken\wt\WirelessSensorNetworksPracticum\Projects\zstack\Samples\DemoApp\CC2530DB\..\..\..\..\..\Components\osal\include\"
-//        -I "D:\Jop van
-//        Buuren\Documents\Hogeschool\Vakken\wt\WirelessSensorNetworksPracticum\Projects\zstack\Samples\DemoApp\CC2530DB\..\..\..\..\..\Components\services\saddr\"
-//        -I "D:\Jop van
-//        Buuren\Documents\Hogeschool\Vakken\wt\WirelessSensorNetworksPracticum\Projects\zstack\Samples\DemoApp\CC2530DB\..\..\..\..\..\Components\services\sdata\"
-//        -I "D:\Jop van
-//        Buuren\Documents\Hogeschool\Vakken\wt\WirelessSensorNetworksPracticum\Projects\zstack\Samples\DemoApp\CC2530DB\..\..\..\..\..\Components\stack\af\"
-//        -I "D:\Jop van
-//        Buuren\Documents\Hogeschool\Vakken\wt\WirelessSensorNetworksPracticum\Projects\zstack\Samples\DemoApp\CC2530DB\..\..\..\..\..\Components\stack\nwk\"
-//        -I "D:\Jop van
-//        Buuren\Documents\Hogeschool\Vakken\wt\WirelessSensorNetworksPracticum\Projects\zstack\Samples\DemoApp\CC2530DB\..\..\..\..\..\Components\stack\sapi\"
-//        -I "D:\Jop van
-//        Buuren\Documents\Hogeschool\Vakken\wt\WirelessSensorNetworksPracticum\Projects\zstack\Samples\DemoApp\CC2530DB\..\..\..\..\..\Components\stack\sec\"
-//        -I "D:\Jop van
-//        Buuren\Documents\Hogeschool\Vakken\wt\WirelessSensorNetworksPracticum\Projects\zstack\Samples\DemoApp\CC2530DB\..\..\..\..\..\Components\stack\sys\"
-//        -I "D:\Jop van
-//        Buuren\Documents\Hogeschool\Vakken\wt\WirelessSensorNetworksPracticum\Projects\zstack\Samples\DemoApp\CC2530DB\..\..\..\..\..\Components\stack\zdo\"
-//        -I "D:\Jop van
-//        Buuren\Documents\Hogeschool\Vakken\wt\WirelessSensorNetworksPracticum\Projects\zstack\Samples\DemoApp\CC2530DB\..\..\..\..\..\Components\zmac\"
-//        -I "D:\Jop van
-//        Buuren\Documents\Hogeschool\Vakken\wt\WirelessSensorNetworksPracticum\Projects\zstack\Samples\DemoApp\CC2530DB\..\..\..\..\..\Components\zmac\f8w\"
+//        --place_constants=data_rom --nr_virtual_regs 16 -I
+//        D:\School\Jaar_3\WTWS\Projects\WirelessSensorNetworksPracticum\Projects\zstack\Samples\DemoApp\CC2530DB\
+//        -I
+//        D:\School\Jaar_3\WTWS\Projects\WirelessSensorNetworksPracticum\Projects\zstack\Samples\DemoApp\CC2530DB\..\Source\
+//        -I
+//        D:\School\Jaar_3\WTWS\Projects\WirelessSensorNetworksPracticum\Projects\zstack\Samples\DemoApp\CC2530DB\..\..\..\ZMain\TI2530DB\
+//        -I
+//        D:\School\Jaar_3\WTWS\Projects\WirelessSensorNetworksPracticum\Projects\zstack\Samples\DemoApp\CC2530DB\..\..\..\..\..\Components\hal\include\
+//        -I
+//        D:\School\Jaar_3\WTWS\Projects\WirelessSensorNetworksPracticum\Projects\zstack\Samples\DemoApp\CC2530DB\..\..\..\..\..\Components\hal\target\CC2530EB\
+//        -I
+//        D:\School\Jaar_3\WTWS\Projects\WirelessSensorNetworksPracticum\Projects\zstack\Samples\DemoApp\CC2530DB\..\..\..\..\..\Components\mac\include\
+//        -I
+//        D:\School\Jaar_3\WTWS\Projects\WirelessSensorNetworksPracticum\Projects\zstack\Samples\DemoApp\CC2530DB\..\..\..\..\..\Components\mac\high_level\
+//        -I
+//        D:\School\Jaar_3\WTWS\Projects\WirelessSensorNetworksPracticum\Projects\zstack\Samples\DemoApp\CC2530DB\..\..\..\..\..\Components\mac\low_level\srf04\
+//        -I
+//        D:\School\Jaar_3\WTWS\Projects\WirelessSensorNetworksPracticum\Projects\zstack\Samples\DemoApp\CC2530DB\..\..\..\..\..\Components\mac\low_level\srf04\single_chip\
+//        -I
+//        D:\School\Jaar_3\WTWS\Projects\WirelessSensorNetworksPracticum\Projects\zstack\Samples\DemoApp\CC2530DB\..\..\..\..\..\Components\mt\
+//        -I
+//        D:\School\Jaar_3\WTWS\Projects\WirelessSensorNetworksPracticum\Projects\zstack\Samples\DemoApp\CC2530DB\..\..\..\..\..\Components\osal\include\
+//        -I
+//        D:\School\Jaar_3\WTWS\Projects\WirelessSensorNetworksPracticum\Projects\zstack\Samples\DemoApp\CC2530DB\..\..\..\..\..\Components\services\saddr\
+//        -I
+//        D:\School\Jaar_3\WTWS\Projects\WirelessSensorNetworksPracticum\Projects\zstack\Samples\DemoApp\CC2530DB\..\..\..\..\..\Components\services\sdata\
+//        -I
+//        D:\School\Jaar_3\WTWS\Projects\WirelessSensorNetworksPracticum\Projects\zstack\Samples\DemoApp\CC2530DB\..\..\..\..\..\Components\stack\af\
+//        -I
+//        D:\School\Jaar_3\WTWS\Projects\WirelessSensorNetworksPracticum\Projects\zstack\Samples\DemoApp\CC2530DB\..\..\..\..\..\Components\stack\nwk\
+//        -I
+//        D:\School\Jaar_3\WTWS\Projects\WirelessSensorNetworksPracticum\Projects\zstack\Samples\DemoApp\CC2530DB\..\..\..\..\..\Components\stack\sapi\
+//        -I
+//        D:\School\Jaar_3\WTWS\Projects\WirelessSensorNetworksPracticum\Projects\zstack\Samples\DemoApp\CC2530DB\..\..\..\..\..\Components\stack\sec\
+//        -I
+//        D:\School\Jaar_3\WTWS\Projects\WirelessSensorNetworksPracticum\Projects\zstack\Samples\DemoApp\CC2530DB\..\..\..\..\..\Components\stack\sys\
+//        -I
+//        D:\School\Jaar_3\WTWS\Projects\WirelessSensorNetworksPracticum\Projects\zstack\Samples\DemoApp\CC2530DB\..\..\..\..\..\Components\stack\zdo\
+//        -I
+//        D:\School\Jaar_3\WTWS\Projects\WirelessSensorNetworksPracticum\Projects\zstack\Samples\DemoApp\CC2530DB\..\..\..\..\..\Components\zmac\
+//        -I
+//        D:\School\Jaar_3\WTWS\Projects\WirelessSensorNetworksPracticum\Projects\zstack\Samples\DemoApp\CC2530DB\..\..\..\..\..\Components\zmac\f8w\
 //        -Ol --require_prototypes
 //    List file          =  
-//        D:\Jop van
-//        Buuren\Documents\Hogeschool\Vakken\wt\WirelessSensorNetworksPracticum\Projects\zstack\Samples\DemoApp\CC2530DB\SensorEB\List\ZDConfig.s51
+//        D:\School\Jaar_3\WTWS\Projects\WirelessSensorNetworksPracticum\Projects\zstack\Samples\DemoApp\CC2530DB\CoordinatorEB\List\ZDConfig.s51
 //
 ///////////////////////////////////////////////////////////////////////////////
 
@@ -238,9 +237,10 @@ ZDConfig_UpdateNodeDescriptor SYMBOL "ZDConfig_UpdateNodeDescriptor"
 ZDConfig_UpdatePowerDescriptor SYMBOL "ZDConfig_UpdatePowerDescriptor"
 `??ZDConfig_UpdatePowerDescriptor::?relay` SYMBOL "?relay", ZDConfig_UpdatePowerDescriptor
 
+        EXTERN zgDeviceLogicalType
         EXTERN zgPollRate
 
-// D:\Jop van Buuren\Documents\Hogeschool\Vakken\wt\WirelessSensorNetworksPracticum\Components\stack\zdo\ZDConfig.c
+// D:\School\Jaar_3\WTWS\Projects\WirelessSensorNetworksPracticum\Components\stack\zdo\ZDConfig.c
 //    1 /**************************************************************************************************
 //    2   Filename:       ZDConfig.c
 //    3   Revised:        $Date: 2013-05-07 13:02:49 -0700 (Tue, 07 May 2013) $
@@ -428,10 +428,41 @@ ZDConfig_UpdateNodeDescriptor:
         ; Auto size: 0
 //  112   // Build the Node Descriptor
 //  113   if ( ZG_BUILD_COORDINATOR_TYPE && ZG_DEVICE_COORDINATOR_TYPE )
+        MOV     DPTR,#zgDeviceLogicalType
+        MOVX    A,@DPTR
+        JNZ     ??ZDConfig_UpdateNodeDescriptor_0
 //  114     ZDO_Config_Node_Descriptor.LogicalType = NODETYPE_COORDINATOR;
+        MOV     DPTR,#ZDO_Config_Node_Descriptor
+        MOVX    A,@DPTR
+        ANL     A,#0xf8
+        MOVX    @DPTR,A
+        SJMP    ??ZDConfig_UpdateNodeDescriptor_1
 //  115   else if ( ZSTACK_ROUTER_BUILD )
+??ZDConfig_UpdateNodeDescriptor_0:
+        MOV     DPTR,#zgDeviceLogicalType
+        MOVX    A,@DPTR
+        JZ      ??ZDConfig_UpdateNodeDescriptor_2
+        MOV     DPTR,#zgDeviceLogicalType
+        MOVX    A,@DPTR
+        XRL     A,#0x1
+        JNZ     ??ZDConfig_UpdateNodeDescriptor_3
 //  116     ZDO_Config_Node_Descriptor.LogicalType = NODETYPE_ROUTER;
+??ZDConfig_UpdateNodeDescriptor_2:
+        MOV     DPTR,#ZDO_Config_Node_Descriptor
+        MOVX    A,@DPTR
+        ANL     A,#0xf8
+        MOVX    @DPTR,A
+        MOV     DPTR,#ZDO_Config_Node_Descriptor
+        MOVX    A,@DPTR
+        ORL     A,#0x1
+        MOVX    @DPTR,A
+        SJMP    ??ZDConfig_UpdateNodeDescriptor_1
 //  117   else if ( ZSTACK_END_DEVICE_BUILD )
+??ZDConfig_UpdateNodeDescriptor_3:
+        MOV     DPTR,#zgDeviceLogicalType
+        MOVX    A,@DPTR
+        XRL     A,#0x2
+        JNZ     ??ZDConfig_UpdateNodeDescriptor_1
 //  118     ZDO_Config_Node_Descriptor.LogicalType = NODETYPE_DEVICE;
         MOV     DPTR,#ZDO_Config_Node_Descriptor
         MOVX    A,@DPTR
@@ -443,6 +474,7 @@ ZDConfig_UpdateNodeDescriptor:
         MOVX    @DPTR,A
 //  119 
 //  120   ZDO_Config_Node_Descriptor.ComplexDescAvail = FALSE;      // set elsewhere
+??ZDConfig_UpdateNodeDescriptor_1:
         MOV     DPTR,#ZDO_Config_Node_Descriptor
         MOVX    A,@DPTR
         CLR     0xE0 /* A   */.3
@@ -474,15 +506,39 @@ ZDConfig_UpdateNodeDescriptor:
 //  125 
 //  126   // MAC Capabilities
 //  127   if ( ZSTACK_ROUTER_BUILD )
+        MOV     DPTR,#zgDeviceLogicalType
+        MOVX    A,@DPTR
+        JZ      ??ZDConfig_UpdateNodeDescriptor_4
+        MOV     DPTR,#zgDeviceLogicalType
+        MOVX    A,@DPTR
+        XRL     A,#0x1
+        JNZ     ??ZDConfig_UpdateNodeDescriptor_5
 //  128   {
 //  129     ZDO_Config_Node_Descriptor.CapabilityFlags
 //  130               = (CAPINFO_DEVICETYPE_FFD | CAPINFO_POWER_AC |
 //  131                  CAPINFO_RCVR_ON_IDLE | CAPINFO_ALLOC_ADDR);
+??ZDConfig_UpdateNodeDescriptor_4:
+        MOV     DPTR,#ZDO_Config_Node_Descriptor + 2
+        MOV     A,#-0x72
+        MOVX    @DPTR,A
 //  132 
 //  133     if ( ZG_BUILD_COORDINATOR_TYPE && ZG_DEVICE_COORDINATOR_TYPE )
+        MOV     DPTR,#zgDeviceLogicalType
+        MOVX    A,@DPTR
+        JNZ     ??ZDConfig_UpdateNodeDescriptor_6
 //  134       ZDO_Config_Node_Descriptor.CapabilityFlags |= CAPINFO_ALTPANCOORD;
+        MOV     DPTR,#ZDO_Config_Node_Descriptor + 2
+        MOVX    A,@DPTR
+        SETB    0xE0 /* A   */.0
+        MOVX    @DPTR,A
+        SJMP    ??ZDConfig_UpdateNodeDescriptor_6
 //  135   }
 //  136   else if ( ZSTACK_END_DEVICE_BUILD )
+??ZDConfig_UpdateNodeDescriptor_5:
+        MOV     DPTR,#zgDeviceLogicalType
+        MOVX    A,@DPTR
+        XRL     A,#0x2
+        JNZ     ??ZDConfig_UpdateNodeDescriptor_6
 //  137   {
 //  138     ZDO_Config_Node_Descriptor.CapabilityFlags = (CAPINFO_DEVICETYPE_RFD
 //  139   #if ( RFD_RCVC_ALWAYS_ON == TRUE)
@@ -496,6 +552,7 @@ ZDConfig_UpdateNodeDescriptor:
 //  144 
 //  145   // Manufacturer Code - *YOU FILL IN*
 //  146   ZDO_Config_Node_Descriptor.ManufacturerCode[0] = 0;
+??ZDConfig_UpdateNodeDescriptor_6:
         MOV     DPTR,#ZDO_Config_Node_Descriptor + 3
         MOV     A,#0x0
         MOVX    @DPTR,A
@@ -582,13 +639,84 @@ ZDConfig_UpdatePowerDescriptor:
         ; Auto size: 0
 //  179   // Build the Power Descriptor
 //  180   if ( ZSTACK_ROUTER_BUILD )
+        MOV     DPTR,#zgDeviceLogicalType
+        MOVX    A,@DPTR
+        JZ      ??ZDConfig_UpdatePowerDescriptor_0
+        MOV     DPTR,#zgDeviceLogicalType
+        MOVX    A,@DPTR
+        XRL     A,#0x1
+        JNZ     ??ZDConfig_UpdatePowerDescriptor_1
 //  181   {
 //  182     ZDO_Config_Power_Descriptor.PowerMode = NODECURPWR_RCVR_ALWAYS_ON;
+??ZDConfig_UpdatePowerDescriptor_0:
+        MOV     DPTR,#ZDO_Config_Power_Descriptor
+        MOVX    A,@DPTR
+        ANL     A,#0xf0
+        MOVX    @DPTR,A
+        INC     DPTR
+        MOVX    A,@DPTR
+        ANL     A,#0xff
+        MOVX    @DPTR,A
 //  183     ZDO_Config_Power_Descriptor.AvailablePowerSources = NODEAVAILPWR_MAINS;
+        MOV     DPTR,#ZDO_Config_Power_Descriptor
+        MOVX    A,@DPTR
+        ANL     A,#0xf
+        MOVX    @DPTR,A
+        INC     DPTR
+        MOVX    A,@DPTR
+        ANL     A,#0xff
+        MOVX    @DPTR,A
+        MOV     DPTR,#ZDO_Config_Power_Descriptor
+        MOVX    A,@DPTR
+        ORL     A,#0x10
+        MOVX    @DPTR,A
+        INC     DPTR
+        MOVX    A,@DPTR
+        ORL     A,#0x0
+        MOVX    @DPTR,A
 //  184     ZDO_Config_Power_Descriptor.CurrentPowerSource = NODEAVAILPWR_MAINS;
+        MOV     DPTR,#ZDO_Config_Power_Descriptor
+        MOVX    A,@DPTR
+        ANL     A,#0xff
+        MOVX    @DPTR,A
+        INC     DPTR
+        MOVX    A,@DPTR
+        ANL     A,#0xf0
+        MOVX    @DPTR,A
+        MOV     DPTR,#ZDO_Config_Power_Descriptor
+        MOVX    A,@DPTR
+        ORL     A,#0x0
+        MOVX    @DPTR,A
+        INC     DPTR
+        MOVX    A,@DPTR
+        ORL     A,#0x1
+        MOVX    @DPTR,A
 //  185     ZDO_Config_Power_Descriptor.CurrentPowerSourceLevel = NODEPOWER_LEVEL_100;
+        MOV     DPTR,#ZDO_Config_Power_Descriptor
+        MOVX    A,@DPTR
+        ANL     A,#0xff
+        MOVX    @DPTR,A
+        INC     DPTR
+        MOVX    A,@DPTR
+        ANL     A,#0xf
+        MOVX    @DPTR,A
+        MOV     DPTR,#ZDO_Config_Power_Descriptor
+        MOVX    A,@DPTR
+        ORL     A,#0x0
+        MOVX    @DPTR,A
+        INC     DPTR
+        MOVX    A,@DPTR
+        ORL     A,#0xc0
+        MOVX    @DPTR,A
+        LJMP    ??ZDConfig_UpdatePowerDescriptor_2 & 0xFFFF
 //  186   }
 //  187   else if ( ZSTACK_END_DEVICE_BUILD )
+??ZDConfig_UpdatePowerDescriptor_1:
+        MOV     DPTR,#zgDeviceLogicalType
+        MOVX    A,@DPTR
+        XRL     A,#0x2
+        JZ      $+5
+        LJMP    ??ZDConfig_UpdatePowerDescriptor_2 & 0xFFFF
 //  188   {
 //  189     if ( zgPollRate )
         MOV     DPTR,#zgPollRate
@@ -599,7 +727,7 @@ ZDConfig_UpdatePowerDescriptor:
         MOV     R1,A
         MOV     A,R0
         ORL     A,R1
-        JZ      ??ZDConfig_UpdatePowerDescriptor_0
+        JZ      ??ZDConfig_UpdatePowerDescriptor_3
 //  190       ZDO_Config_Power_Descriptor.PowerMode = NODECURPWR_RCVR_AUTO;
         MOV     DPTR,#ZDO_Config_Power_Descriptor
         MOVX    A,@DPTR
@@ -617,10 +745,10 @@ ZDConfig_UpdatePowerDescriptor:
         MOVX    A,@DPTR
         ORL     A,#0x0
         MOVX    @DPTR,A
-        SJMP    ??ZDConfig_UpdatePowerDescriptor_1
+        SJMP    ??ZDConfig_UpdatePowerDescriptor_4
 //  191     else
 //  192       ZDO_Config_Power_Descriptor.PowerMode = NODECURPWR_RCVR_STIM;
-??ZDConfig_UpdatePowerDescriptor_0:
+??ZDConfig_UpdatePowerDescriptor_3:
         MOV     DPTR,#ZDO_Config_Power_Descriptor
         MOVX    A,@DPTR
         ANL     A,#0xf0
@@ -639,7 +767,7 @@ ZDConfig_UpdatePowerDescriptor:
         MOVX    @DPTR,A
 //  193 
 //  194     ZDO_Config_Power_Descriptor.AvailablePowerSources = NODEAVAILPWR_RECHARGE;
-??ZDConfig_UpdatePowerDescriptor_1:
+??ZDConfig_UpdatePowerDescriptor_4:
         MOV     DPTR,#ZDO_Config_Power_Descriptor
         MOVX    A,@DPTR
         ANL     A,#0xf
@@ -692,6 +820,7 @@ ZDConfig_UpdatePowerDescriptor:
         MOVX    @DPTR,A
 //  197   }
 //  198 }
+??ZDConfig_UpdatePowerDescriptor_2:
         POP     DPH
           CFI DPH0 SameValue
           CFI CFA_SP SP+-4
@@ -729,12 +858,12 @@ ZDConfig_UpdatePowerDescriptor:
 //  202 
 //  203 
 // 
-// 293 bytes in segment BANKED_CODE
+// 501 bytes in segment BANKED_CODE
 //  18 bytes in segment BANK_RELAYS
 //  15 bytes in segment XDATA_Z
 // 
-// 311 bytes of CODE  memory
+// 519 bytes of CODE  memory
 //  15 bytes of XDATA memory
 //
 //Errors: none
-//Warnings: 1
+//Warnings: none
