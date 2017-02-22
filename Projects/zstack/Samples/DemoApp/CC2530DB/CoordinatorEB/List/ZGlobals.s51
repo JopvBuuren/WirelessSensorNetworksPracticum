@@ -1,6 +1,6 @@
 ///////////////////////////////////////////////////////////////////////////////
 //
-// IAR C/C++ Compiler V9.20.1.2476 for 8051               17/Feb/2017  12:14:10
+// IAR C/C++ Compiler V9.20.1.2476 for 8051               17/Feb/2017  12:45:15
 // Copyright 2004-2015 IAR Systems AB.
 // Standalone license - IAR Embedded Workbench for 8051
 //
@@ -12,14 +12,14 @@
 //    Dptr setup         =  1,16
 //                          
 //    Source file        =  
-//        D:\School\Jaar_3\WTWS\Projects\WirelessSensorNetworksPracticum\Components\stack\sys\ZGlobals.c
+//        D:\Jop van
+//        Buuren\Documents\Hogeschool\Vakken\wt\WirelessSensorNetworksPracticum\Components\stack\sys\ZGlobals.c
 //    Command line       =  
-//        -f
-//        D:\School\Jaar_3\WTWS\Projects\WirelessSensorNetworksPracticum\Projects\zstack\Samples\DemoApp\CC2530DB\..\..\..\Tools\CC2530DB\f8wCoord.cfg
-//        (-DCPU32MHZ -DROOT=__near_func -DMAC_CFG_APP_PENDING_QUEUE=TRUE
-//        -DMAC_CFG_TX_DATA_MAX=5 -DMAC_CFG_TX_MAX=8 -DMAC_CFG_RX_MAX=5
-//        -DZDO_COORDINATOR -DRTR_NWK) -f
-//        D:\School\Jaar_3\WTWS\Projects\WirelessSensorNetworksPracticum\Projects\zstack\Samples\DemoApp\CC2530DB\..\..\..\Tools\CC2530DB\f8wConfig.cfg
+//        -f "D:\Jop van
+//        Buuren\Documents\Hogeschool\Vakken\wt\WirelessSensorNetworksPracticum\Projects\zstack\Samples\DemoApp\CC2530DB\..\..\..\Tools\CC2530DB\f8wEndev.cfg"
+//        (-DCPU32MHZ -DROOT=__near_func -DMAC_CFG_TX_DATA_MAX=3
+//        -DMAC_CFG_TX_MAX=6 -DMAC_CFG_RX_MAX=3) -f "D:\Jop van
+//        Buuren\Documents\Hogeschool\Vakken\wt\WirelessSensorNetworksPracticum\Projects\zstack\Samples\DemoApp\CC2530DB\..\..\..\Tools\CC2530DB\f8wConfig.cfg"
 //        (-DZIGBEEPRO -DSECURE=0 -DZG_SECURE_DYNAMIC=0 -DREFLECTOR
 //        -DDEFAULT_CHANLIST=0x00100000 -DZDAPP_CONFIG_PAN_ID=0x0DAD
 //        -DNWK_START_DELAY=100 -DEXTENDED_JOINING_RANDOM_MASK=0x007F
@@ -34,63 +34,64 @@
 //        -DMAC_MAX_FRAME_SIZE=116 -DZDNWKMGR_MIN_TRANSMISSIONS=20
 //        "-DCONST=const __code" -DGENERIC=__generic -DRFD_RCVC_ALWAYS_ON=FALSE
 //        -DPOLL_RATE=1000 -DQUEUED_POLL_RATE=100 -DRESPONSE_POLL_RATE=100)
-//        -DREJOIN_POLL_RATE=440
-//        D:\School\Jaar_3\WTWS\Projects\WirelessSensorNetworksPracticum\Components\stack\sys\ZGlobals.c
-//        -D HOLD_AUTO_START -D BUILD_ALL_DEVICES -D REFLECTOR -D NV_INIT -D
-//        NV_RESTORE -D HAL_UART=TRUE -lC
-//        D:\School\Jaar_3\WTWS\Projects\WirelessSensorNetworksPracticum\Projects\zstack\Samples\DemoApp\CC2530DB\CoordinatorEB\List\
-//        -lA
-//        D:\School\Jaar_3\WTWS\Projects\WirelessSensorNetworksPracticum\Projects\zstack\Samples\DemoApp\CC2530DB\CoordinatorEB\List\
-//        --diag_suppress Pe001,Pa010,Pe1665 -o
-//        D:\School\Jaar_3\WTWS\Projects\WirelessSensorNetworksPracticum\Projects\zstack\Samples\DemoApp\CC2530DB\CoordinatorEB\Obj\
+//        -DREJOIN_POLL_RATE=440 "D:\Jop van
+//        Buuren\Documents\Hogeschool\Vakken\wt\WirelessSensorNetworksPracticum\Components\stack\sys\ZGlobals.c"
+//        -D NWK_AUTO_POLL -D HOLD_AUTO_START -D POWER_SAVING -D NV_INIT -D
+//        DEVICE_LOGICAL_TYPE=ZG_DEVICETYPE_ENDDEVICE -lC "D:\Jop van
+//        Buuren\Documents\Hogeschool\Vakken\wt\WirelessSensorNetworksPracticum\Projects\zstack\Samples\DemoApp\CC2530DB\SensorEB\List\"
+//        -lA "D:\Jop van
+//        Buuren\Documents\Hogeschool\Vakken\wt\WirelessSensorNetworksPracticum\Projects\zstack\Samples\DemoApp\CC2530DB\SensorEB\List\"
+//        --diag_suppress Pe001,Pa010,Pe1665 -o "D:\Jop van
+//        Buuren\Documents\Hogeschool\Vakken\wt\WirelessSensorNetworksPracticum\Projects\zstack\Samples\DemoApp\CC2530DB\SensorEB\Obj\"
 //        -e --no_cse --no_unroll --no_inline --no_code_motion --no_tbaa
 //        --debug --core=plain --dptr=16,1 --data_model=large
 //        --code_model=banked --calling_convention=xdata_reentrant
-//        --place_constants=data_rom --nr_virtual_regs 16 -I
-//        D:\School\Jaar_3\WTWS\Projects\WirelessSensorNetworksPracticum\Projects\zstack\Samples\DemoApp\CC2530DB\
-//        -I
-//        D:\School\Jaar_3\WTWS\Projects\WirelessSensorNetworksPracticum\Projects\zstack\Samples\DemoApp\CC2530DB\..\Source\
-//        -I
-//        D:\School\Jaar_3\WTWS\Projects\WirelessSensorNetworksPracticum\Projects\zstack\Samples\DemoApp\CC2530DB\..\..\..\ZMain\TI2530DB\
-//        -I
-//        D:\School\Jaar_3\WTWS\Projects\WirelessSensorNetworksPracticum\Projects\zstack\Samples\DemoApp\CC2530DB\..\..\..\..\..\Components\hal\include\
-//        -I
-//        D:\School\Jaar_3\WTWS\Projects\WirelessSensorNetworksPracticum\Projects\zstack\Samples\DemoApp\CC2530DB\..\..\..\..\..\Components\hal\target\CC2530EB\
-//        -I
-//        D:\School\Jaar_3\WTWS\Projects\WirelessSensorNetworksPracticum\Projects\zstack\Samples\DemoApp\CC2530DB\..\..\..\..\..\Components\mac\include\
-//        -I
-//        D:\School\Jaar_3\WTWS\Projects\WirelessSensorNetworksPracticum\Projects\zstack\Samples\DemoApp\CC2530DB\..\..\..\..\..\Components\mac\high_level\
-//        -I
-//        D:\School\Jaar_3\WTWS\Projects\WirelessSensorNetworksPracticum\Projects\zstack\Samples\DemoApp\CC2530DB\..\..\..\..\..\Components\mac\low_level\srf04\
-//        -I
-//        D:\School\Jaar_3\WTWS\Projects\WirelessSensorNetworksPracticum\Projects\zstack\Samples\DemoApp\CC2530DB\..\..\..\..\..\Components\mac\low_level\srf04\single_chip\
-//        -I
-//        D:\School\Jaar_3\WTWS\Projects\WirelessSensorNetworksPracticum\Projects\zstack\Samples\DemoApp\CC2530DB\..\..\..\..\..\Components\mt\
-//        -I
-//        D:\School\Jaar_3\WTWS\Projects\WirelessSensorNetworksPracticum\Projects\zstack\Samples\DemoApp\CC2530DB\..\..\..\..\..\Components\osal\include\
-//        -I
-//        D:\School\Jaar_3\WTWS\Projects\WirelessSensorNetworksPracticum\Projects\zstack\Samples\DemoApp\CC2530DB\..\..\..\..\..\Components\services\saddr\
-//        -I
-//        D:\School\Jaar_3\WTWS\Projects\WirelessSensorNetworksPracticum\Projects\zstack\Samples\DemoApp\CC2530DB\..\..\..\..\..\Components\services\sdata\
-//        -I
-//        D:\School\Jaar_3\WTWS\Projects\WirelessSensorNetworksPracticum\Projects\zstack\Samples\DemoApp\CC2530DB\..\..\..\..\..\Components\stack\af\
-//        -I
-//        D:\School\Jaar_3\WTWS\Projects\WirelessSensorNetworksPracticum\Projects\zstack\Samples\DemoApp\CC2530DB\..\..\..\..\..\Components\stack\nwk\
-//        -I
-//        D:\School\Jaar_3\WTWS\Projects\WirelessSensorNetworksPracticum\Projects\zstack\Samples\DemoApp\CC2530DB\..\..\..\..\..\Components\stack\sapi\
-//        -I
-//        D:\School\Jaar_3\WTWS\Projects\WirelessSensorNetworksPracticum\Projects\zstack\Samples\DemoApp\CC2530DB\..\..\..\..\..\Components\stack\sec\
-//        -I
-//        D:\School\Jaar_3\WTWS\Projects\WirelessSensorNetworksPracticum\Projects\zstack\Samples\DemoApp\CC2530DB\..\..\..\..\..\Components\stack\sys\
-//        -I
-//        D:\School\Jaar_3\WTWS\Projects\WirelessSensorNetworksPracticum\Projects\zstack\Samples\DemoApp\CC2530DB\..\..\..\..\..\Components\stack\zdo\
-//        -I
-//        D:\School\Jaar_3\WTWS\Projects\WirelessSensorNetworksPracticum\Projects\zstack\Samples\DemoApp\CC2530DB\..\..\..\..\..\Components\zmac\
-//        -I
-//        D:\School\Jaar_3\WTWS\Projects\WirelessSensorNetworksPracticum\Projects\zstack\Samples\DemoApp\CC2530DB\..\..\..\..\..\Components\zmac\f8w\
+//        --place_constants=data_rom --nr_virtual_regs 16 -I "D:\Jop van
+//        Buuren\Documents\Hogeschool\Vakken\wt\WirelessSensorNetworksPracticum\Projects\zstack\Samples\DemoApp\CC2530DB\"
+//        -I "D:\Jop van
+//        Buuren\Documents\Hogeschool\Vakken\wt\WirelessSensorNetworksPracticum\Projects\zstack\Samples\DemoApp\CC2530DB\..\Source\"
+//        -I "D:\Jop van
+//        Buuren\Documents\Hogeschool\Vakken\wt\WirelessSensorNetworksPracticum\Projects\zstack\Samples\DemoApp\CC2530DB\..\..\..\ZMain\TI2530DB\"
+//        -I "D:\Jop van
+//        Buuren\Documents\Hogeschool\Vakken\wt\WirelessSensorNetworksPracticum\Projects\zstack\Samples\DemoApp\CC2530DB\..\..\..\..\..\Components\hal\include\"
+//        -I "D:\Jop van
+//        Buuren\Documents\Hogeschool\Vakken\wt\WirelessSensorNetworksPracticum\Projects\zstack\Samples\DemoApp\CC2530DB\..\..\..\..\..\Components\hal\target\CC2530EB\"
+//        -I "D:\Jop van
+//        Buuren\Documents\Hogeschool\Vakken\wt\WirelessSensorNetworksPracticum\Projects\zstack\Samples\DemoApp\CC2530DB\..\..\..\..\..\Components\mac\include\"
+//        -I "D:\Jop van
+//        Buuren\Documents\Hogeschool\Vakken\wt\WirelessSensorNetworksPracticum\Projects\zstack\Samples\DemoApp\CC2530DB\..\..\..\..\..\Components\mac\high_level\"
+//        -I "D:\Jop van
+//        Buuren\Documents\Hogeschool\Vakken\wt\WirelessSensorNetworksPracticum\Projects\zstack\Samples\DemoApp\CC2530DB\..\..\..\..\..\Components\mac\low_level\srf04\"
+//        -I "D:\Jop van
+//        Buuren\Documents\Hogeschool\Vakken\wt\WirelessSensorNetworksPracticum\Projects\zstack\Samples\DemoApp\CC2530DB\..\..\..\..\..\Components\mac\low_level\srf04\single_chip\"
+//        -I "D:\Jop van
+//        Buuren\Documents\Hogeschool\Vakken\wt\WirelessSensorNetworksPracticum\Projects\zstack\Samples\DemoApp\CC2530DB\..\..\..\..\..\Components\mt\"
+//        -I "D:\Jop van
+//        Buuren\Documents\Hogeschool\Vakken\wt\WirelessSensorNetworksPracticum\Projects\zstack\Samples\DemoApp\CC2530DB\..\..\..\..\..\Components\osal\include\"
+//        -I "D:\Jop van
+//        Buuren\Documents\Hogeschool\Vakken\wt\WirelessSensorNetworksPracticum\Projects\zstack\Samples\DemoApp\CC2530DB\..\..\..\..\..\Components\services\saddr\"
+//        -I "D:\Jop van
+//        Buuren\Documents\Hogeschool\Vakken\wt\WirelessSensorNetworksPracticum\Projects\zstack\Samples\DemoApp\CC2530DB\..\..\..\..\..\Components\services\sdata\"
+//        -I "D:\Jop van
+//        Buuren\Documents\Hogeschool\Vakken\wt\WirelessSensorNetworksPracticum\Projects\zstack\Samples\DemoApp\CC2530DB\..\..\..\..\..\Components\stack\af\"
+//        -I "D:\Jop van
+//        Buuren\Documents\Hogeschool\Vakken\wt\WirelessSensorNetworksPracticum\Projects\zstack\Samples\DemoApp\CC2530DB\..\..\..\..\..\Components\stack\nwk\"
+//        -I "D:\Jop van
+//        Buuren\Documents\Hogeschool\Vakken\wt\WirelessSensorNetworksPracticum\Projects\zstack\Samples\DemoApp\CC2530DB\..\..\..\..\..\Components\stack\sapi\"
+//        -I "D:\Jop van
+//        Buuren\Documents\Hogeschool\Vakken\wt\WirelessSensorNetworksPracticum\Projects\zstack\Samples\DemoApp\CC2530DB\..\..\..\..\..\Components\stack\sec\"
+//        -I "D:\Jop van
+//        Buuren\Documents\Hogeschool\Vakken\wt\WirelessSensorNetworksPracticum\Projects\zstack\Samples\DemoApp\CC2530DB\..\..\..\..\..\Components\stack\sys\"
+//        -I "D:\Jop van
+//        Buuren\Documents\Hogeschool\Vakken\wt\WirelessSensorNetworksPracticum\Projects\zstack\Samples\DemoApp\CC2530DB\..\..\..\..\..\Components\stack\zdo\"
+//        -I "D:\Jop van
+//        Buuren\Documents\Hogeschool\Vakken\wt\WirelessSensorNetworksPracticum\Projects\zstack\Samples\DemoApp\CC2530DB\..\..\..\..\..\Components\zmac\"
+//        -I "D:\Jop van
+//        Buuren\Documents\Hogeschool\Vakken\wt\WirelessSensorNetworksPracticum\Projects\zstack\Samples\DemoApp\CC2530DB\..\..\..\..\..\Components\zmac\f8w\"
 //        -Ol --require_prototypes
 //    List file          =  
-//        D:\School\Jaar_3\WTWS\Projects\WirelessSensorNetworksPracticum\Projects\zstack\Samples\DemoApp\CC2530DB\CoordinatorEB\List\ZGlobals.s51
+//        D:\Jop van
+//        Buuren\Documents\Hogeschool\Vakken\wt\WirelessSensorNetworksPracticum\Projects\zstack\Samples\DemoApp\CC2530DB\SensorEB\List\ZGlobals.s51
 //
 ///////////////////////////////////////////////////////////////////////////////
 
@@ -379,7 +380,7 @@ zgWriteStartupOptions SYMBOL "zgWriteStartupOptions"
         ARGFRAME IOVERLAY, 0, STATIC
         ARGFRAME DOVERLAY, 0, STATIC
 
-// D:\School\Jaar_3\WTWS\Projects\WirelessSensorNetworksPracticum\Components\stack\sys\ZGlobals.c
+// D:\Jop van Buuren\Documents\Hogeschool\Vakken\wt\WirelessSensorNetworksPracticum\Components\stack\sys\ZGlobals.c
 //    1 /**************************************************************************************************
 //    2   Filename:       ZGlobals.c
 //    3   Revised:        $Date: 2014-03-13 10:55:58 -0700 (Thu, 13 Mar 2014) $
@@ -899,12 +900,13 @@ zgConfigPANID:
 //  221 
 //  222 // Device Logical Type
 
-        RSEG XDATA_Z:XDATA:NOROOT(0)
-        DATA8
+        RSEG XDATA_I:XDATA:NOROOT(0)
 //  223 uint8 zgDeviceLogicalType = DEVICE_LOGICAL_TYPE;
 zgDeviceLogicalType:
+        DATA8
         DS 1
-        REQUIRE __INIT_XDATA_Z
+        REQUIRE `?<Initializer for zgDeviceLogicalType>`
+        REQUIRE __INIT_XDATA_I
 //  224 
 //  225 // Startup Delay
 
@@ -1747,32 +1749,24 @@ zgInitItems:
         MOV     R7,#0x0
 //  573 
 //  574   if ( ZG_BUILD_COORDINATOR_TYPE && ( zgApsLinkKeyType == ZG_UNIQUE_LINK_KEY ) )
-        MOV     DPTR,#zgApsLinkKeyType
-        MOVX    A,@DPTR
-        JNZ     ??zgInitItems_0
 //  575   {
 //  576     zgUseDefaultTCLK = FALSE;
-        MOV     DPTR,#zgUseDefaultTCLK
-        MOV     A,#0x0
-        MOVX    @DPTR,A
-        LJMP    ??zgInitItems_1 & 0xFFFF
 //  577   }
 //  578   else
 //  579   {
 //  580     // Most of the time default TCLK will be used
 //  581     zgUseDefaultTCLK = TRUE;
-??zgInitItems_0:
         MOV     DPTR,#zgUseDefaultTCLK
         MOV     A,#0x1
         MOVX    @DPTR,A
-        LJMP    ??zgInitItems_1 & 0xFFFF
+        LJMP    ??zgInitItems_0 & 0xFFFF
 //  582   }
 //  583 
 //  584   while ( zgItemTable[i].id != 0x00 )
 //  585   {
 //  586     // Initialize the item
 //  587     zgItemInit( zgItemTable[i].id, zgItemTable[i].len, zgItemTable[i].buf, setDefault  );
-??zgInitItems_2:
+??zgInitItems_1:
         ; Setup parameters for call to function zgItemInit
         MOV     A,R7
         MOV     R0,A
@@ -1875,7 +1869,7 @@ zgInitItems:
 //  590     i++;
         INC     R7
 //  591   }
-??zgInitItems_1:
+??zgInitItems_0:
         MOV     A,R7
         MOV     R0,A
         MOV     R1,#0x0
@@ -1908,7 +1902,7 @@ zgInitItems:
         MOV     A,R0
         ORL     A,R1
         JZ      $+5
-        LJMP    ??zgInitItems_2 & 0xFFFF
+        LJMP    ??zgInitItems_1 & 0xFFFF
 //  592 }
         MOV     R7,#0x1
         LJMP    ?BANKED_LEAVE_XDATA
@@ -2662,6 +2656,11 @@ zgSetItem:
         DW 3501
 
         RSEG XDATA_ID:CODE:NOROOT(0)
+`?<Initializer for zgDeviceLogicalType>`:
+        DATA8
+        DB 2
+
+        RSEG XDATA_ID:CODE:NOROOT(0)
 `?<Initializer for zgStartDelay>`:
         DATA8
         DB 10
@@ -2772,15 +2771,15 @@ zgSetItem:
 //  746 /*********************************************************************
 //  747 *********************************************************************/
 // 
-// 892 bytes in segment BANKED_CODE
+// 877 bytes in segment BANKED_CODE
 //  36 bytes in segment BANK_RELAYS
 // 306 bytes in segment CODE_C
-//  49 bytes in segment XDATA_I
-//  49 bytes in segment XDATA_ID
-//  35 bytes in segment XDATA_Z
+//  50 bytes in segment XDATA_I
+//  50 bytes in segment XDATA_ID
+//  34 bytes in segment XDATA_Z
 // 
-// 1 283 bytes of CODE  memory
+// 1 269 bytes of CODE  memory
 //    84 bytes of XDATA memory
 //
 //Errors: none
-//Warnings: none
+//Warnings: 1

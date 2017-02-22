@@ -1,6 +1,6 @@
 ###############################################################################
 #
-# IAR C/C++ Compiler V9.20.1.2476 for 8051                17/Feb/2017  12:13:45
+# IAR C/C++ Compiler V9.20.1.2476 for 8051                17/Feb/2017  12:45:10
 # Copyright 2004-2015 IAR Systems AB.
 # Standalone license - IAR Embedded Workbench for 8051
 #
@@ -12,14 +12,14 @@
 #    Dptr setup         =  1,16
 #                          
 #    Source file        =  
-#        D:\School\Jaar_3\WTWS\Projects\WirelessSensorNetworksPracticum\Components\hal\target\CC2530EB\hal_key.c
+#        D:\Jop van
+#        Buuren\Documents\Hogeschool\Vakken\wt\WirelessSensorNetworksPracticum\Components\hal\target\CC2530EB\hal_key.c
 #    Command line       =  
-#        -f
-#        D:\School\Jaar_3\WTWS\Projects\WirelessSensorNetworksPracticum\Projects\zstack\Samples\DemoApp\CC2530DB\..\..\..\Tools\CC2530DB\f8wCoord.cfg
-#        (-DCPU32MHZ -DROOT=__near_func -DMAC_CFG_APP_PENDING_QUEUE=TRUE
-#        -DMAC_CFG_TX_DATA_MAX=5 -DMAC_CFG_TX_MAX=8 -DMAC_CFG_RX_MAX=5
-#        -DZDO_COORDINATOR -DRTR_NWK) -f
-#        D:\School\Jaar_3\WTWS\Projects\WirelessSensorNetworksPracticum\Projects\zstack\Samples\DemoApp\CC2530DB\..\..\..\Tools\CC2530DB\f8wConfig.cfg
+#        -f "D:\Jop van
+#        Buuren\Documents\Hogeschool\Vakken\wt\WirelessSensorNetworksPracticum\Projects\zstack\Samples\DemoApp\CC2530DB\..\..\..\Tools\CC2530DB\f8wEndev.cfg"
+#        (-DCPU32MHZ -DROOT=__near_func -DMAC_CFG_TX_DATA_MAX=3
+#        -DMAC_CFG_TX_MAX=6 -DMAC_CFG_RX_MAX=3) -f "D:\Jop van
+#        Buuren\Documents\Hogeschool\Vakken\wt\WirelessSensorNetworksPracticum\Projects\zstack\Samples\DemoApp\CC2530DB\..\..\..\Tools\CC2530DB\f8wConfig.cfg"
 #        (-DZIGBEEPRO -DSECURE=0 -DZG_SECURE_DYNAMIC=0 -DREFLECTOR
 #        -DDEFAULT_CHANLIST=0x00100000 -DZDAPP_CONFIG_PAN_ID=0x0DAD
 #        -DNWK_START_DELAY=100 -DEXTENDED_JOINING_RANDOM_MASK=0x007F
@@ -34,70 +34,75 @@
 #        -DMAC_MAX_FRAME_SIZE=116 -DZDNWKMGR_MIN_TRANSMISSIONS=20
 #        "-DCONST=const __code" -DGENERIC=__generic -DRFD_RCVC_ALWAYS_ON=FALSE
 #        -DPOLL_RATE=1000 -DQUEUED_POLL_RATE=100 -DRESPONSE_POLL_RATE=100)
-#        -DREJOIN_POLL_RATE=440
-#        D:\School\Jaar_3\WTWS\Projects\WirelessSensorNetworksPracticum\Components\hal\target\CC2530EB\hal_key.c
-#        -D HOLD_AUTO_START -D BUILD_ALL_DEVICES -D REFLECTOR -D NV_INIT -D
-#        NV_RESTORE -D HAL_UART=TRUE -lC
-#        D:\School\Jaar_3\WTWS\Projects\WirelessSensorNetworksPracticum\Projects\zstack\Samples\DemoApp\CC2530DB\CoordinatorEB\List\
-#        -lA
-#        D:\School\Jaar_3\WTWS\Projects\WirelessSensorNetworksPracticum\Projects\zstack\Samples\DemoApp\CC2530DB\CoordinatorEB\List\
-#        --diag_suppress Pe001,Pa010,Pe1665 -o
-#        D:\School\Jaar_3\WTWS\Projects\WirelessSensorNetworksPracticum\Projects\zstack\Samples\DemoApp\CC2530DB\CoordinatorEB\Obj\
+#        -DREJOIN_POLL_RATE=440 "D:\Jop van
+#        Buuren\Documents\Hogeschool\Vakken\wt\WirelessSensorNetworksPracticum\Components\hal\target\CC2530EB\hal_key.c"
+#        -D NWK_AUTO_POLL -D HOLD_AUTO_START -D POWER_SAVING -D NV_INIT -D
+#        DEVICE_LOGICAL_TYPE=ZG_DEVICETYPE_ENDDEVICE -lC "D:\Jop van
+#        Buuren\Documents\Hogeschool\Vakken\wt\WirelessSensorNetworksPracticum\Projects\zstack\Samples\DemoApp\CC2530DB\SensorEB\List\"
+#        -lA "D:\Jop van
+#        Buuren\Documents\Hogeschool\Vakken\wt\WirelessSensorNetworksPracticum\Projects\zstack\Samples\DemoApp\CC2530DB\SensorEB\List\"
+#        --diag_suppress Pe001,Pa010,Pe1665 -o "D:\Jop van
+#        Buuren\Documents\Hogeschool\Vakken\wt\WirelessSensorNetworksPracticum\Projects\zstack\Samples\DemoApp\CC2530DB\SensorEB\Obj\"
 #        -e --no_cse --no_unroll --no_inline --no_code_motion --no_tbaa --debug
 #        --core=plain --dptr=16,1 --data_model=large --code_model=banked
 #        --calling_convention=xdata_reentrant --place_constants=data_rom
-#        --nr_virtual_regs 16 -I
-#        D:\School\Jaar_3\WTWS\Projects\WirelessSensorNetworksPracticum\Projects\zstack\Samples\DemoApp\CC2530DB\
-#        -I
-#        D:\School\Jaar_3\WTWS\Projects\WirelessSensorNetworksPracticum\Projects\zstack\Samples\DemoApp\CC2530DB\..\Source\
-#        -I
-#        D:\School\Jaar_3\WTWS\Projects\WirelessSensorNetworksPracticum\Projects\zstack\Samples\DemoApp\CC2530DB\..\..\..\ZMain\TI2530DB\
-#        -I
-#        D:\School\Jaar_3\WTWS\Projects\WirelessSensorNetworksPracticum\Projects\zstack\Samples\DemoApp\CC2530DB\..\..\..\..\..\Components\hal\include\
-#        -I
-#        D:\School\Jaar_3\WTWS\Projects\WirelessSensorNetworksPracticum\Projects\zstack\Samples\DemoApp\CC2530DB\..\..\..\..\..\Components\hal\target\CC2530EB\
-#        -I
-#        D:\School\Jaar_3\WTWS\Projects\WirelessSensorNetworksPracticum\Projects\zstack\Samples\DemoApp\CC2530DB\..\..\..\..\..\Components\mac\include\
-#        -I
-#        D:\School\Jaar_3\WTWS\Projects\WirelessSensorNetworksPracticum\Projects\zstack\Samples\DemoApp\CC2530DB\..\..\..\..\..\Components\mac\high_level\
-#        -I
-#        D:\School\Jaar_3\WTWS\Projects\WirelessSensorNetworksPracticum\Projects\zstack\Samples\DemoApp\CC2530DB\..\..\..\..\..\Components\mac\low_level\srf04\
-#        -I
-#        D:\School\Jaar_3\WTWS\Projects\WirelessSensorNetworksPracticum\Projects\zstack\Samples\DemoApp\CC2530DB\..\..\..\..\..\Components\mac\low_level\srf04\single_chip\
-#        -I
-#        D:\School\Jaar_3\WTWS\Projects\WirelessSensorNetworksPracticum\Projects\zstack\Samples\DemoApp\CC2530DB\..\..\..\..\..\Components\mt\
-#        -I
-#        D:\School\Jaar_3\WTWS\Projects\WirelessSensorNetworksPracticum\Projects\zstack\Samples\DemoApp\CC2530DB\..\..\..\..\..\Components\osal\include\
-#        -I
-#        D:\School\Jaar_3\WTWS\Projects\WirelessSensorNetworksPracticum\Projects\zstack\Samples\DemoApp\CC2530DB\..\..\..\..\..\Components\services\saddr\
-#        -I
-#        D:\School\Jaar_3\WTWS\Projects\WirelessSensorNetworksPracticum\Projects\zstack\Samples\DemoApp\CC2530DB\..\..\..\..\..\Components\services\sdata\
-#        -I
-#        D:\School\Jaar_3\WTWS\Projects\WirelessSensorNetworksPracticum\Projects\zstack\Samples\DemoApp\CC2530DB\..\..\..\..\..\Components\stack\af\
-#        -I
-#        D:\School\Jaar_3\WTWS\Projects\WirelessSensorNetworksPracticum\Projects\zstack\Samples\DemoApp\CC2530DB\..\..\..\..\..\Components\stack\nwk\
-#        -I
-#        D:\School\Jaar_3\WTWS\Projects\WirelessSensorNetworksPracticum\Projects\zstack\Samples\DemoApp\CC2530DB\..\..\..\..\..\Components\stack\sapi\
-#        -I
-#        D:\School\Jaar_3\WTWS\Projects\WirelessSensorNetworksPracticum\Projects\zstack\Samples\DemoApp\CC2530DB\..\..\..\..\..\Components\stack\sec\
-#        -I
-#        D:\School\Jaar_3\WTWS\Projects\WirelessSensorNetworksPracticum\Projects\zstack\Samples\DemoApp\CC2530DB\..\..\..\..\..\Components\stack\sys\
-#        -I
-#        D:\School\Jaar_3\WTWS\Projects\WirelessSensorNetworksPracticum\Projects\zstack\Samples\DemoApp\CC2530DB\..\..\..\..\..\Components\stack\zdo\
-#        -I
-#        D:\School\Jaar_3\WTWS\Projects\WirelessSensorNetworksPracticum\Projects\zstack\Samples\DemoApp\CC2530DB\..\..\..\..\..\Components\zmac\
-#        -I
-#        D:\School\Jaar_3\WTWS\Projects\WirelessSensorNetworksPracticum\Projects\zstack\Samples\DemoApp\CC2530DB\..\..\..\..\..\Components\zmac\f8w\
+#        --nr_virtual_regs 16 -I "D:\Jop van
+#        Buuren\Documents\Hogeschool\Vakken\wt\WirelessSensorNetworksPracticum\Projects\zstack\Samples\DemoApp\CC2530DB\"
+#        -I "D:\Jop van
+#        Buuren\Documents\Hogeschool\Vakken\wt\WirelessSensorNetworksPracticum\Projects\zstack\Samples\DemoApp\CC2530DB\..\Source\"
+#        -I "D:\Jop van
+#        Buuren\Documents\Hogeschool\Vakken\wt\WirelessSensorNetworksPracticum\Projects\zstack\Samples\DemoApp\CC2530DB\..\..\..\ZMain\TI2530DB\"
+#        -I "D:\Jop van
+#        Buuren\Documents\Hogeschool\Vakken\wt\WirelessSensorNetworksPracticum\Projects\zstack\Samples\DemoApp\CC2530DB\..\..\..\..\..\Components\hal\include\"
+#        -I "D:\Jop van
+#        Buuren\Documents\Hogeschool\Vakken\wt\WirelessSensorNetworksPracticum\Projects\zstack\Samples\DemoApp\CC2530DB\..\..\..\..\..\Components\hal\target\CC2530EB\"
+#        -I "D:\Jop van
+#        Buuren\Documents\Hogeschool\Vakken\wt\WirelessSensorNetworksPracticum\Projects\zstack\Samples\DemoApp\CC2530DB\..\..\..\..\..\Components\mac\include\"
+#        -I "D:\Jop van
+#        Buuren\Documents\Hogeschool\Vakken\wt\WirelessSensorNetworksPracticum\Projects\zstack\Samples\DemoApp\CC2530DB\..\..\..\..\..\Components\mac\high_level\"
+#        -I "D:\Jop van
+#        Buuren\Documents\Hogeschool\Vakken\wt\WirelessSensorNetworksPracticum\Projects\zstack\Samples\DemoApp\CC2530DB\..\..\..\..\..\Components\mac\low_level\srf04\"
+#        -I "D:\Jop van
+#        Buuren\Documents\Hogeschool\Vakken\wt\WirelessSensorNetworksPracticum\Projects\zstack\Samples\DemoApp\CC2530DB\..\..\..\..\..\Components\mac\low_level\srf04\single_chip\"
+#        -I "D:\Jop van
+#        Buuren\Documents\Hogeschool\Vakken\wt\WirelessSensorNetworksPracticum\Projects\zstack\Samples\DemoApp\CC2530DB\..\..\..\..\..\Components\mt\"
+#        -I "D:\Jop van
+#        Buuren\Documents\Hogeschool\Vakken\wt\WirelessSensorNetworksPracticum\Projects\zstack\Samples\DemoApp\CC2530DB\..\..\..\..\..\Components\osal\include\"
+#        -I "D:\Jop van
+#        Buuren\Documents\Hogeschool\Vakken\wt\WirelessSensorNetworksPracticum\Projects\zstack\Samples\DemoApp\CC2530DB\..\..\..\..\..\Components\services\saddr\"
+#        -I "D:\Jop van
+#        Buuren\Documents\Hogeschool\Vakken\wt\WirelessSensorNetworksPracticum\Projects\zstack\Samples\DemoApp\CC2530DB\..\..\..\..\..\Components\services\sdata\"
+#        -I "D:\Jop van
+#        Buuren\Documents\Hogeschool\Vakken\wt\WirelessSensorNetworksPracticum\Projects\zstack\Samples\DemoApp\CC2530DB\..\..\..\..\..\Components\stack\af\"
+#        -I "D:\Jop van
+#        Buuren\Documents\Hogeschool\Vakken\wt\WirelessSensorNetworksPracticum\Projects\zstack\Samples\DemoApp\CC2530DB\..\..\..\..\..\Components\stack\nwk\"
+#        -I "D:\Jop van
+#        Buuren\Documents\Hogeschool\Vakken\wt\WirelessSensorNetworksPracticum\Projects\zstack\Samples\DemoApp\CC2530DB\..\..\..\..\..\Components\stack\sapi\"
+#        -I "D:\Jop van
+#        Buuren\Documents\Hogeschool\Vakken\wt\WirelessSensorNetworksPracticum\Projects\zstack\Samples\DemoApp\CC2530DB\..\..\..\..\..\Components\stack\sec\"
+#        -I "D:\Jop van
+#        Buuren\Documents\Hogeschool\Vakken\wt\WirelessSensorNetworksPracticum\Projects\zstack\Samples\DemoApp\CC2530DB\..\..\..\..\..\Components\stack\sys\"
+#        -I "D:\Jop van
+#        Buuren\Documents\Hogeschool\Vakken\wt\WirelessSensorNetworksPracticum\Projects\zstack\Samples\DemoApp\CC2530DB\..\..\..\..\..\Components\stack\zdo\"
+#        -I "D:\Jop van
+#        Buuren\Documents\Hogeschool\Vakken\wt\WirelessSensorNetworksPracticum\Projects\zstack\Samples\DemoApp\CC2530DB\..\..\..\..\..\Components\zmac\"
+#        -I "D:\Jop van
+#        Buuren\Documents\Hogeschool\Vakken\wt\WirelessSensorNetworksPracticum\Projects\zstack\Samples\DemoApp\CC2530DB\..\..\..\..\..\Components\zmac\f8w\"
 #        -Ol --require_prototypes
 #    List file          =  
-#        D:\School\Jaar_3\WTWS\Projects\WirelessSensorNetworksPracticum\Projects\zstack\Samples\DemoApp\CC2530DB\CoordinatorEB\List\hal_key.lst
+#        D:\Jop van
+#        Buuren\Documents\Hogeschool\Vakken\wt\WirelessSensorNetworksPracticum\Projects\zstack\Samples\DemoApp\CC2530DB\SensorEB\List\hal_key.lst
 #    Object file        =  
-#        D:\School\Jaar_3\WTWS\Projects\WirelessSensorNetworksPracticum\Projects\zstack\Samples\DemoApp\CC2530DB\CoordinatorEB\Obj\hal_key.r51
+#        D:\Jop van
+#        Buuren\Documents\Hogeschool\Vakken\wt\WirelessSensorNetworksPracticum\Projects\zstack\Samples\DemoApp\CC2530DB\SensorEB\Obj\hal_key.r51
 #
 ###############################################################################
 
-D:\School\Jaar_3\WTWS\Projects\WirelessSensorNetworksPracticum\Components\hal\target\CC2530EB\hal_key.c
+D:\Jop van Buuren\Documents\Hogeschool\Vakken\wt\WirelessSensorNetworksPracticum\Components\hal\target\CC2530EB\hal_key.c
       1          /**************************************************************************************************
+                                                                                                                   ^
+Warning[Pa050]: non-native end of line sequence detected (this diagnostic is
+          only issued once)
       2            Filename:       hal_key.c
       3            Revised:        $Date: 2010-09-15 19:02:45 -0700 (Wed, 15 Sep 2010) $
       4            Revision:       $Revision: 23815 $
@@ -1054,18 +1059,19 @@ D:\School\Jaar_3\WTWS\Projects\WirelessSensorNetworksPracticum\Components\hal\ta
    \   00001A   C2C5         CLR     0xc0.5
     509          
     510            CLEAR_SLEEP_MODE();
+   \   00001C   75..00       MOV     halSleepPconValue,#0x0
     511            HAL_EXIT_ISR();
-   \   00001C   EE           MOV     A,R6
-   \   00001D   F8           MOV     R0,A
-   \   00001E   EE           MOV     A,R6
-   \   00001F   A2E0         MOV     C,0xE0 /* A   */.0
-   \   000021   92AF         MOV     0xa8.7,C
+   \   00001F   EE           MOV     A,R6
+   \   000020   F8           MOV     R0,A
+   \   000021   EE           MOV     A,R6
+   \   000022   A2E0         MOV     C,0xE0 /* A   */.0
+   \   000024   92AF         MOV     0xa8.7,C
     512          }
-   \   000023   7F01         MOV     R7,#0x1
-   \   000025   02....       LJMP    ?INTERRUPT_LEAVE_XSP
-   \   000028                REQUIRE _A_IEN0
-   \   000028                REQUIRE P0IFG
-   \   000028                REQUIRE _A_IRCON
+   \   000026   7F01         MOV     R7,#0x1
+   \   000028   02....       LJMP    ?INTERRUPT_LEAVE_XSP
+   \   00002B                REQUIRE _A_IEN0
+   \   00002B                REQUIRE P0IFG
+   \   00002B                REQUIRE _A_IRCON
     513          
     514          
     515          /**************************************************************************************************
@@ -1116,18 +1122,19 @@ D:\School\Jaar_3\WTWS\Projects\WirelessSensorNetworksPracticum\Components\hal\ta
    \   00001A   C2E8         CLR     0xe8.0
     540          
     541            CLEAR_SLEEP_MODE();
+   \   00001C   75..00       MOV     halSleepPconValue,#0x0
     542            HAL_EXIT_ISR();
-   \   00001C   EE           MOV     A,R6
-   \   00001D   F8           MOV     R0,A
-   \   00001E   EE           MOV     A,R6
-   \   00001F   A2E0         MOV     C,0xE0 /* A   */.0
-   \   000021   92AF         MOV     0xa8.7,C
+   \   00001F   EE           MOV     A,R6
+   \   000020   F8           MOV     R0,A
+   \   000021   EE           MOV     A,R6
+   \   000022   A2E0         MOV     C,0xE0 /* A   */.0
+   \   000024   92AF         MOV     0xa8.7,C
     543          }
-   \   000023   7F01         MOV     R7,#0x1
-   \   000025   02....       LJMP    ?INTERRUPT_LEAVE_XSP
-   \   000028                REQUIRE _A_IEN0
-   \   000028                REQUIRE P2IFG
-   \   000028                REQUIRE _A_IRCON2
+   \   000026   7F01         MOV     R7,#0x1
+   \   000028   02....       LJMP    ?INTERRUPT_LEAVE_XSP
+   \   00002B                REQUIRE _A_IEN0
+   \   00002B                REQUIRE P2IFG
+   \   00002B                REQUIRE _A_IRCON2
 
    \                                 In  segment INTVEC, offset 0x33, root
    \                     `??halKeyPort2Isr::??INTVEC 51`:
@@ -1261,9 +1268,9 @@ D:\School\Jaar_3\WTWS\Projects\WirelessSensorNetworksPracticum\Components\hal\ta
        4  __Constant_19
      107  halGetJoyKeyInput
        6  halGetJoyKeyInput::?relay
-      40  halKeyPort0Isr
+      43  halKeyPort0Isr
        3  halKeyPort0Isr::??INTVEC 107
-      40  halKeyPort2Isr
+      43  halKeyPort2Isr
        3  halKeyPort2Isr::??INTVEC 51
        1  halKeySavedKeys
       62  halProcessKeyInterrupt
@@ -1274,15 +1281,15 @@ D:\School\Jaar_3\WTWS\Projects\WirelessSensorNetworksPracticum\Components\hal\ta
  447 bytes in segment BANKED_CODE
   48 bytes in segment BANK_RELAYS
    6 bytes in segment INTVEC
-  80 bytes in segment NEAR_CODE
+  86 bytes in segment NEAR_CODE
   17 bytes in segment SFR_AN
    4 bytes in segment XDATA_ROM_C
    5 bytes in segment XDATA_Z
  
- 575 bytes of CODE  memory (+  6 bytes shared)
+ 581 bytes of CODE  memory (+  6 bytes shared)
    0 bytes of CONST memory (+  4 bytes shared)
    0 bytes of DATA  memory (+ 17 bytes shared)
    5 bytes of XDATA memory
 
 Errors: none
-Warnings: none
+Warnings: 1

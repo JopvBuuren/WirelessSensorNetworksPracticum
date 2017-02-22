@@ -1,6 +1,6 @@
 ###############################################################################
 #
-# IAR C/C++ Compiler V9.20.1.2476 for 8051                17/Feb/2017  12:13:57
+# IAR C/C++ Compiler V9.20.1.2476 for 8051                17/Feb/2017  12:45:12
 # Copyright 2004-2015 IAR Systems AB.
 # Standalone license - IAR Embedded Workbench for 8051
 #
@@ -12,14 +12,14 @@
 #    Dptr setup         =  1,16
 #                          
 #    Source file        =  
-#        D:\School\Jaar_3\WTWS\Projects\WirelessSensorNetworksPracticum\Components\stack\nwk\nwk_globals.c
+#        D:\Jop van
+#        Buuren\Documents\Hogeschool\Vakken\wt\WirelessSensorNetworksPracticum\Components\stack\nwk\nwk_globals.c
 #    Command line       =  
-#        -f
-#        D:\School\Jaar_3\WTWS\Projects\WirelessSensorNetworksPracticum\Projects\zstack\Samples\DemoApp\CC2530DB\..\..\..\Tools\CC2530DB\f8wCoord.cfg
-#        (-DCPU32MHZ -DROOT=__near_func -DMAC_CFG_APP_PENDING_QUEUE=TRUE
-#        -DMAC_CFG_TX_DATA_MAX=5 -DMAC_CFG_TX_MAX=8 -DMAC_CFG_RX_MAX=5
-#        -DZDO_COORDINATOR -DRTR_NWK) -f
-#        D:\School\Jaar_3\WTWS\Projects\WirelessSensorNetworksPracticum\Projects\zstack\Samples\DemoApp\CC2530DB\..\..\..\Tools\CC2530DB\f8wConfig.cfg
+#        -f "D:\Jop van
+#        Buuren\Documents\Hogeschool\Vakken\wt\WirelessSensorNetworksPracticum\Projects\zstack\Samples\DemoApp\CC2530DB\..\..\..\Tools\CC2530DB\f8wEndev.cfg"
+#        (-DCPU32MHZ -DROOT=__near_func -DMAC_CFG_TX_DATA_MAX=3
+#        -DMAC_CFG_TX_MAX=6 -DMAC_CFG_RX_MAX=3) -f "D:\Jop van
+#        Buuren\Documents\Hogeschool\Vakken\wt\WirelessSensorNetworksPracticum\Projects\zstack\Samples\DemoApp\CC2530DB\..\..\..\Tools\CC2530DB\f8wConfig.cfg"
 #        (-DZIGBEEPRO -DSECURE=0 -DZG_SECURE_DYNAMIC=0 -DREFLECTOR
 #        -DDEFAULT_CHANLIST=0x00100000 -DZDAPP_CONFIG_PAN_ID=0x0DAD
 #        -DNWK_START_DELAY=100 -DEXTENDED_JOINING_RANDOM_MASK=0x007F
@@ -34,70 +34,75 @@
 #        -DMAC_MAX_FRAME_SIZE=116 -DZDNWKMGR_MIN_TRANSMISSIONS=20
 #        "-DCONST=const __code" -DGENERIC=__generic -DRFD_RCVC_ALWAYS_ON=FALSE
 #        -DPOLL_RATE=1000 -DQUEUED_POLL_RATE=100 -DRESPONSE_POLL_RATE=100)
-#        -DREJOIN_POLL_RATE=440
-#        D:\School\Jaar_3\WTWS\Projects\WirelessSensorNetworksPracticum\Components\stack\nwk\nwk_globals.c
-#        -D HOLD_AUTO_START -D BUILD_ALL_DEVICES -D REFLECTOR -D NV_INIT -D
-#        NV_RESTORE -D HAL_UART=TRUE -lC
-#        D:\School\Jaar_3\WTWS\Projects\WirelessSensorNetworksPracticum\Projects\zstack\Samples\DemoApp\CC2530DB\CoordinatorEB\List\
-#        -lA
-#        D:\School\Jaar_3\WTWS\Projects\WirelessSensorNetworksPracticum\Projects\zstack\Samples\DemoApp\CC2530DB\CoordinatorEB\List\
-#        --diag_suppress Pe001,Pa010,Pe1665 -o
-#        D:\School\Jaar_3\WTWS\Projects\WirelessSensorNetworksPracticum\Projects\zstack\Samples\DemoApp\CC2530DB\CoordinatorEB\Obj\
+#        -DREJOIN_POLL_RATE=440 "D:\Jop van
+#        Buuren\Documents\Hogeschool\Vakken\wt\WirelessSensorNetworksPracticum\Components\stack\nwk\nwk_globals.c"
+#        -D NWK_AUTO_POLL -D HOLD_AUTO_START -D POWER_SAVING -D NV_INIT -D
+#        DEVICE_LOGICAL_TYPE=ZG_DEVICETYPE_ENDDEVICE -lC "D:\Jop van
+#        Buuren\Documents\Hogeschool\Vakken\wt\WirelessSensorNetworksPracticum\Projects\zstack\Samples\DemoApp\CC2530DB\SensorEB\List\"
+#        -lA "D:\Jop van
+#        Buuren\Documents\Hogeschool\Vakken\wt\WirelessSensorNetworksPracticum\Projects\zstack\Samples\DemoApp\CC2530DB\SensorEB\List\"
+#        --diag_suppress Pe001,Pa010,Pe1665 -o "D:\Jop van
+#        Buuren\Documents\Hogeschool\Vakken\wt\WirelessSensorNetworksPracticum\Projects\zstack\Samples\DemoApp\CC2530DB\SensorEB\Obj\"
 #        -e --no_cse --no_unroll --no_inline --no_code_motion --no_tbaa --debug
 #        --core=plain --dptr=16,1 --data_model=large --code_model=banked
 #        --calling_convention=xdata_reentrant --place_constants=data_rom
-#        --nr_virtual_regs 16 -I
-#        D:\School\Jaar_3\WTWS\Projects\WirelessSensorNetworksPracticum\Projects\zstack\Samples\DemoApp\CC2530DB\
-#        -I
-#        D:\School\Jaar_3\WTWS\Projects\WirelessSensorNetworksPracticum\Projects\zstack\Samples\DemoApp\CC2530DB\..\Source\
-#        -I
-#        D:\School\Jaar_3\WTWS\Projects\WirelessSensorNetworksPracticum\Projects\zstack\Samples\DemoApp\CC2530DB\..\..\..\ZMain\TI2530DB\
-#        -I
-#        D:\School\Jaar_3\WTWS\Projects\WirelessSensorNetworksPracticum\Projects\zstack\Samples\DemoApp\CC2530DB\..\..\..\..\..\Components\hal\include\
-#        -I
-#        D:\School\Jaar_3\WTWS\Projects\WirelessSensorNetworksPracticum\Projects\zstack\Samples\DemoApp\CC2530DB\..\..\..\..\..\Components\hal\target\CC2530EB\
-#        -I
-#        D:\School\Jaar_3\WTWS\Projects\WirelessSensorNetworksPracticum\Projects\zstack\Samples\DemoApp\CC2530DB\..\..\..\..\..\Components\mac\include\
-#        -I
-#        D:\School\Jaar_3\WTWS\Projects\WirelessSensorNetworksPracticum\Projects\zstack\Samples\DemoApp\CC2530DB\..\..\..\..\..\Components\mac\high_level\
-#        -I
-#        D:\School\Jaar_3\WTWS\Projects\WirelessSensorNetworksPracticum\Projects\zstack\Samples\DemoApp\CC2530DB\..\..\..\..\..\Components\mac\low_level\srf04\
-#        -I
-#        D:\School\Jaar_3\WTWS\Projects\WirelessSensorNetworksPracticum\Projects\zstack\Samples\DemoApp\CC2530DB\..\..\..\..\..\Components\mac\low_level\srf04\single_chip\
-#        -I
-#        D:\School\Jaar_3\WTWS\Projects\WirelessSensorNetworksPracticum\Projects\zstack\Samples\DemoApp\CC2530DB\..\..\..\..\..\Components\mt\
-#        -I
-#        D:\School\Jaar_3\WTWS\Projects\WirelessSensorNetworksPracticum\Projects\zstack\Samples\DemoApp\CC2530DB\..\..\..\..\..\Components\osal\include\
-#        -I
-#        D:\School\Jaar_3\WTWS\Projects\WirelessSensorNetworksPracticum\Projects\zstack\Samples\DemoApp\CC2530DB\..\..\..\..\..\Components\services\saddr\
-#        -I
-#        D:\School\Jaar_3\WTWS\Projects\WirelessSensorNetworksPracticum\Projects\zstack\Samples\DemoApp\CC2530DB\..\..\..\..\..\Components\services\sdata\
-#        -I
-#        D:\School\Jaar_3\WTWS\Projects\WirelessSensorNetworksPracticum\Projects\zstack\Samples\DemoApp\CC2530DB\..\..\..\..\..\Components\stack\af\
-#        -I
-#        D:\School\Jaar_3\WTWS\Projects\WirelessSensorNetworksPracticum\Projects\zstack\Samples\DemoApp\CC2530DB\..\..\..\..\..\Components\stack\nwk\
-#        -I
-#        D:\School\Jaar_3\WTWS\Projects\WirelessSensorNetworksPracticum\Projects\zstack\Samples\DemoApp\CC2530DB\..\..\..\..\..\Components\stack\sapi\
-#        -I
-#        D:\School\Jaar_3\WTWS\Projects\WirelessSensorNetworksPracticum\Projects\zstack\Samples\DemoApp\CC2530DB\..\..\..\..\..\Components\stack\sec\
-#        -I
-#        D:\School\Jaar_3\WTWS\Projects\WirelessSensorNetworksPracticum\Projects\zstack\Samples\DemoApp\CC2530DB\..\..\..\..\..\Components\stack\sys\
-#        -I
-#        D:\School\Jaar_3\WTWS\Projects\WirelessSensorNetworksPracticum\Projects\zstack\Samples\DemoApp\CC2530DB\..\..\..\..\..\Components\stack\zdo\
-#        -I
-#        D:\School\Jaar_3\WTWS\Projects\WirelessSensorNetworksPracticum\Projects\zstack\Samples\DemoApp\CC2530DB\..\..\..\..\..\Components\zmac\
-#        -I
-#        D:\School\Jaar_3\WTWS\Projects\WirelessSensorNetworksPracticum\Projects\zstack\Samples\DemoApp\CC2530DB\..\..\..\..\..\Components\zmac\f8w\
+#        --nr_virtual_regs 16 -I "D:\Jop van
+#        Buuren\Documents\Hogeschool\Vakken\wt\WirelessSensorNetworksPracticum\Projects\zstack\Samples\DemoApp\CC2530DB\"
+#        -I "D:\Jop van
+#        Buuren\Documents\Hogeschool\Vakken\wt\WirelessSensorNetworksPracticum\Projects\zstack\Samples\DemoApp\CC2530DB\..\Source\"
+#        -I "D:\Jop van
+#        Buuren\Documents\Hogeschool\Vakken\wt\WirelessSensorNetworksPracticum\Projects\zstack\Samples\DemoApp\CC2530DB\..\..\..\ZMain\TI2530DB\"
+#        -I "D:\Jop van
+#        Buuren\Documents\Hogeschool\Vakken\wt\WirelessSensorNetworksPracticum\Projects\zstack\Samples\DemoApp\CC2530DB\..\..\..\..\..\Components\hal\include\"
+#        -I "D:\Jop van
+#        Buuren\Documents\Hogeschool\Vakken\wt\WirelessSensorNetworksPracticum\Projects\zstack\Samples\DemoApp\CC2530DB\..\..\..\..\..\Components\hal\target\CC2530EB\"
+#        -I "D:\Jop van
+#        Buuren\Documents\Hogeschool\Vakken\wt\WirelessSensorNetworksPracticum\Projects\zstack\Samples\DemoApp\CC2530DB\..\..\..\..\..\Components\mac\include\"
+#        -I "D:\Jop van
+#        Buuren\Documents\Hogeschool\Vakken\wt\WirelessSensorNetworksPracticum\Projects\zstack\Samples\DemoApp\CC2530DB\..\..\..\..\..\Components\mac\high_level\"
+#        -I "D:\Jop van
+#        Buuren\Documents\Hogeschool\Vakken\wt\WirelessSensorNetworksPracticum\Projects\zstack\Samples\DemoApp\CC2530DB\..\..\..\..\..\Components\mac\low_level\srf04\"
+#        -I "D:\Jop van
+#        Buuren\Documents\Hogeschool\Vakken\wt\WirelessSensorNetworksPracticum\Projects\zstack\Samples\DemoApp\CC2530DB\..\..\..\..\..\Components\mac\low_level\srf04\single_chip\"
+#        -I "D:\Jop van
+#        Buuren\Documents\Hogeschool\Vakken\wt\WirelessSensorNetworksPracticum\Projects\zstack\Samples\DemoApp\CC2530DB\..\..\..\..\..\Components\mt\"
+#        -I "D:\Jop van
+#        Buuren\Documents\Hogeschool\Vakken\wt\WirelessSensorNetworksPracticum\Projects\zstack\Samples\DemoApp\CC2530DB\..\..\..\..\..\Components\osal\include\"
+#        -I "D:\Jop van
+#        Buuren\Documents\Hogeschool\Vakken\wt\WirelessSensorNetworksPracticum\Projects\zstack\Samples\DemoApp\CC2530DB\..\..\..\..\..\Components\services\saddr\"
+#        -I "D:\Jop van
+#        Buuren\Documents\Hogeschool\Vakken\wt\WirelessSensorNetworksPracticum\Projects\zstack\Samples\DemoApp\CC2530DB\..\..\..\..\..\Components\services\sdata\"
+#        -I "D:\Jop van
+#        Buuren\Documents\Hogeschool\Vakken\wt\WirelessSensorNetworksPracticum\Projects\zstack\Samples\DemoApp\CC2530DB\..\..\..\..\..\Components\stack\af\"
+#        -I "D:\Jop van
+#        Buuren\Documents\Hogeschool\Vakken\wt\WirelessSensorNetworksPracticum\Projects\zstack\Samples\DemoApp\CC2530DB\..\..\..\..\..\Components\stack\nwk\"
+#        -I "D:\Jop van
+#        Buuren\Documents\Hogeschool\Vakken\wt\WirelessSensorNetworksPracticum\Projects\zstack\Samples\DemoApp\CC2530DB\..\..\..\..\..\Components\stack\sapi\"
+#        -I "D:\Jop van
+#        Buuren\Documents\Hogeschool\Vakken\wt\WirelessSensorNetworksPracticum\Projects\zstack\Samples\DemoApp\CC2530DB\..\..\..\..\..\Components\stack\sec\"
+#        -I "D:\Jop van
+#        Buuren\Documents\Hogeschool\Vakken\wt\WirelessSensorNetworksPracticum\Projects\zstack\Samples\DemoApp\CC2530DB\..\..\..\..\..\Components\stack\sys\"
+#        -I "D:\Jop van
+#        Buuren\Documents\Hogeschool\Vakken\wt\WirelessSensorNetworksPracticum\Projects\zstack\Samples\DemoApp\CC2530DB\..\..\..\..\..\Components\stack\zdo\"
+#        -I "D:\Jop van
+#        Buuren\Documents\Hogeschool\Vakken\wt\WirelessSensorNetworksPracticum\Projects\zstack\Samples\DemoApp\CC2530DB\..\..\..\..\..\Components\zmac\"
+#        -I "D:\Jop van
+#        Buuren\Documents\Hogeschool\Vakken\wt\WirelessSensorNetworksPracticum\Projects\zstack\Samples\DemoApp\CC2530DB\..\..\..\..\..\Components\zmac\f8w\"
 #        -Ol --require_prototypes
 #    List file          =  
-#        D:\School\Jaar_3\WTWS\Projects\WirelessSensorNetworksPracticum\Projects\zstack\Samples\DemoApp\CC2530DB\CoordinatorEB\List\nwk_globals.lst
+#        D:\Jop van
+#        Buuren\Documents\Hogeschool\Vakken\wt\WirelessSensorNetworksPracticum\Projects\zstack\Samples\DemoApp\CC2530DB\SensorEB\List\nwk_globals.lst
 #    Object file        =  
-#        D:\School\Jaar_3\WTWS\Projects\WirelessSensorNetworksPracticum\Projects\zstack\Samples\DemoApp\CC2530DB\CoordinatorEB\Obj\nwk_globals.r51
+#        D:\Jop van
+#        Buuren\Documents\Hogeschool\Vakken\wt\WirelessSensorNetworksPracticum\Projects\zstack\Samples\DemoApp\CC2530DB\SensorEB\Obj\nwk_globals.r51
 #
 ###############################################################################
 
-D:\School\Jaar_3\WTWS\Projects\WirelessSensorNetworksPracticum\Components\stack\nwk\nwk_globals.c
+D:\Jop van Buuren\Documents\Hogeschool\Vakken\wt\WirelessSensorNetworksPracticum\Components\stack\nwk\nwk_globals.c
       1          /**************************************************************************************************
+                                                                                                                   ^
+Warning[Pa050]: non-native end of line sequence detected (this diagnostic is
+          only issued once)
       2            Filename:       nwk_globals.c
       3            Revised:        $Date: 2014-05-17 12:12:11 -0700 (Sat, 17 May 2014) $
       4            Revision:       $Revision: 38578 $
@@ -344,15 +349,15 @@ D:\School\Jaar_3\WTWS\Projects\WirelessSensorNetworksPracticum\Components\stack\
    \                                 In  segment CODE_C, align 1
     162          CONFIG_ITEM neighborTableIndex_t gMAX_NEIGHBOR_ENTRIES = MAX_NEIGHBOR_ENTRIES;
    \                     gMAX_NEIGHBOR_ENTRIES:
-   \   000000   10           DB 16
+   \   000000   04           DB 4
     163          
     164           // Table of neighboring nodes (not including child nodes)
 
    \                                 In  segment XDATA_Z, align 1, keep-with-next
     165          neighborEntry_t neighborTable[MAX_NEIGHBOR_ENTRIES];
    \                     neighborTable:
-   \   000000                DS 368
-   \   000170                REQUIRE __INIT_XDATA_Z
+   \   000000                DS 92
+   \   00005C                REQUIRE __INIT_XDATA_Z
     166          
 
    \                                 In  segment CODE_C, align 1
@@ -464,11 +469,7 @@ D:\School\Jaar_3\WTWS\Projects\WirelessSensorNetworksPracticum\Components\stack\
     207          #endif
     208          
     209          #if defined ( ZIGBEE_FREQ_AGILITY ) || defined ( ZBIT )
-
-   \                                 In  segment CODE_C, align 1
     210          CONST uint8 gNWK_FREQ_AGILITY_ALL_MAC_ERRS = NWK_FREQ_AGILITY_ALL_MAC_ERRS;
-   \                     gNWK_FREQ_AGILITY_ALL_MAC_ERRS:
-   \   000000   00           DB 0
     211          #endif
     212          
     213          // The time limited to one MTO RReq (Concentrator Announce) in milliseconds.
@@ -500,11 +501,7 @@ D:\School\Jaar_3\WTWS\Projects\WirelessSensorNetworksPracticum\Components\stack\
    \   000000   1E           DB 30
     224          
     225          #if ( ZSTACK_ROUTER_BUILD ) || defined ( ZBIT )
-
-   \                                 In  segment CODE_C, align 1
     226          CONST uint16 gLINK_STATUS_JITTER_MASK = LINK_STATUS_JITTER_MASK;
-   \                     gLINK_STATUS_JITTER_MASK:
-   \   000000   7F00         DW 127
     227          #endif
     228          
     229          // Maximum number of devices either aged out or not recognized as child
@@ -734,53 +731,25 @@ D:\School\Jaar_3\WTWS\Projects\WirelessSensorNetworksPracticum\Components\stack\
     351            // To compile out the Link Status Feature, set NWK_LINK_STATUS_PERIOD
     352            // to 0 (compiler flag).
     353            if ( ZSTACK_ROUTER_BUILD && NWK_LINK_STATUS_PERIOD )
-   \   00000B   90....       MOV     DPTR,#zgDeviceLogicalType
-   \   00000E   E0           MOVX    A,@DPTR
-   \   00000F   6008         JZ      ??nwk_globals_init_0
-   \   000011   90....       MOV     DPTR,#zgDeviceLogicalType
-   \   000014   E0           MOVX    A,@DPTR
-   \   000015   6401         XRL     A,#0x1
-   \   000017   7003         JNZ     ??nwk_globals_init_1
     354            {
     355              NLME_InitLinkStatus();
-   \                     ??nwk_globals_init_0:
-   \   000019                ; Setup parameters for call to function NLME_InitLinkStatus
-   \   000019   12....       LCALL   `??NLME_InitLinkStatus::?relay`; Banked call to: NLME_InitLinkStatus
     356            }
     357          
     358          #if defined ( ZIGBEE_FREQ_AGILITY )
     359            NwkFreqAgilityInit();
-   \                     ??nwk_globals_init_1:
-   \   00001C                ; Setup parameters for call to function NwkFreqAgilityInit
-   \   00001C   12....       LCALL   `??NwkFreqAgilityInit::?relay`; Banked call to: NwkFreqAgilityInit
     360          #endif
     361          
     362          #if defined ( ZIGBEE_CHILD_AGING )
     363            if ( ( ZSTACK_ROUTER_BUILD ) && ( zgChildAgingEnable == TRUE ) )
-   \   00001F   90....       MOV     DPTR,#zgDeviceLogicalType
-   \   000022   E0           MOVX    A,@DPTR
-   \   000023   6008         JZ      ??nwk_globals_init_2
-   \   000025   90....       MOV     DPTR,#zgDeviceLogicalType
-   \   000028   E0           MOVX    A,@DPTR
-   \   000029   6401         XRL     A,#0x1
-   \   00002B   700B         JNZ     ??nwk_globals_init_3
-   \                     ??nwk_globals_init_2:
-   \   00002D   90....       MOV     DPTR,#zgChildAgingEnable
-   \   000030   E0           MOVX    A,@DPTR
-   \   000031   6401         XRL     A,#0x1
-   \   000033   7003         JNZ     ??nwk_globals_init_3
     364            {
     365              // Set the function pointers for the Child Aging feature
     366              NwkInitChildAging();
-   \   000035                ; Setup parameters for call to function NwkInitChildAging
-   \   000035   12....       LCALL   `??NwkInitChildAging::?relay`; Banked call to: NwkInitChildAging
     367            }
     368          #endif  // ZIGBEE_CHILD_AGING
     369          }
-   \                     ??nwk_globals_init_3:
-   \   000038   D083         POP     DPH
-   \   00003A   D082         POP     DPL
-   \   00003C   02....       LJMP    ?BRET
+   \   00000B   D083         POP     DPH
+   \   00000D   D082         POP     DPL
+   \   00000F   02....       LJMP    ?BRET
     370          
     371          /*********************************************************************
     372           * @fn       NIB_init()
@@ -798,37 +767,35 @@ D:\School\Jaar_3\WTWS\Projects\WirelessSensorNetworksPracticum\Components\stack\
     382          void NIB_init()
    \                     NIB_init:
     383          {
-   \   000000                REQUIRE ?V0
-   \   000000                REQUIRE ?V1
-   \   000000   74F6         MOV     A,#-0xa
-   \   000002   12....       LCALL   ?BANKED_ENTER_XDATA
-   \   000005                ; Saved register size: 10
-   \   000005                ; Auto size: 0
+   \   000000   C082         PUSH    DPL
+   \   000002   C083         PUSH    DPH
+   \   000004                ; Saved register size: 2
+   \   000004                ; Auto size: 0
     384            _NIB.SequenceNum = LO_UINT16(osal_rand());
-   \   000005                ; Setup parameters for call to function osal_rand
-   \   000005   12....       LCALL   `??osal_rand::?relay`; Banked call to: osal_rand
-   \   000008   EA           MOV     A,R2
-   \   000009   90....       MOV     DPTR,#_NIB
-   \   00000C   F0           MOVX    @DPTR,A
+   \   000004                ; Setup parameters for call to function osal_rand
+   \   000004   12....       LCALL   `??osal_rand::?relay`; Banked call to: osal_rand
+   \   000007   EA           MOV     A,R2
+   \   000008   90....       MOV     DPTR,#_NIB
+   \   00000B   F0           MOVX    @DPTR,A
     385          
     386            _NIB.nwkProtocolVersion = ZB_PROT_VERS;
-   \   00000D   90....       MOV     DPTR,#_NIB + 17
-   \   000010   7402         MOV     A,#0x2
-   \   000012   F0           MOVX    @DPTR,A
+   \   00000C   90....       MOV     DPTR,#_NIB + 17
+   \   00000F   7402         MOV     A,#0x2
+   \   000011   F0           MOVX    @DPTR,A
     387            _NIB.MaxDepth = MAX_NODE_DEPTH;
-   \   000013   90....       MOV     DPTR,#_NIB + 4
-   \   000016   7414         MOV     A,#0x14
-   \   000018   F0           MOVX    @DPTR,A
+   \   000012   90....       MOV     DPTR,#_NIB + 4
+   \   000015   7414         MOV     A,#0x14
+   \   000017   F0           MOVX    @DPTR,A
     388          
     389          #if ( NWK_MODE == NWK_MODE_MESH )
     390            _NIB.beaconOrder = BEACON_ORDER_NO_BEACONS;
-   \   000019   90....       MOV     DPTR,#_NIB + 40
-   \   00001C   740F         MOV     A,#0xf
-   \   00001E   F0           MOVX    @DPTR,A
+   \   000018   90....       MOV     DPTR,#_NIB + 40
+   \   00001B   740F         MOV     A,#0xf
+   \   00001D   F0           MOVX    @DPTR,A
     391            _NIB.superFrameOrder = BEACON_ORDER_NO_BEACONS;
-   \   00001F   90....       MOV     DPTR,#_NIB + 41
-   \   000022   740F         MOV     A,#0xf
-   \   000024   F0           MOVX    @DPTR,A
+   \   00001E   90....       MOV     DPTR,#_NIB + 41
+   \   000021   740F         MOV     A,#0xf
+   \   000023   F0           MOVX    @DPTR,A
     392          #endif
     393          
     394            // BROADCAST SETTINGS:
@@ -840,37 +807,37 @@ D:\School\Jaar_3\WTWS\Projects\WirelessSensorNetworksPracticum\Components\stack\
     400            //   Passive Ack Timeout
     401            //     - set to multiples of 100ms
     402            _NIB.BroadcastDeliveryTime = zgBcastDeliveryTime;
-   \   000025   90....       MOV     DPTR,#zgBcastDeliveryTime
-   \   000028   E0           MOVX    A,@DPTR
-   \   000029   90....       MOV     DPTR,#_NIB + 7
-   \   00002C   F0           MOVX    @DPTR,A
+   \   000024   90....       MOV     DPTR,#zgBcastDeliveryTime
+   \   000027   E0           MOVX    A,@DPTR
+   \   000028   90....       MOV     DPTR,#_NIB + 7
+   \   00002B   F0           MOVX    @DPTR,A
     403            _NIB.PassiveAckTimeout     = zgPassiveAckTimeout;
-   \   00002D   90....       MOV     DPTR,#zgPassiveAckTimeout
-   \   000030   E0           MOVX    A,@DPTR
-   \   000031   90....       MOV     DPTR,#_NIB + 1
-   \   000034   F0           MOVX    @DPTR,A
+   \   00002C   90....       MOV     DPTR,#zgPassiveAckTimeout
+   \   00002F   E0           MOVX    A,@DPTR
+   \   000030   90....       MOV     DPTR,#_NIB + 1
+   \   000033   F0           MOVX    @DPTR,A
     404            _NIB.MaxBroadcastRetries   = zgMaxBcastRetires;
-   \   000035   90....       MOV     DPTR,#zgMaxBcastRetires
-   \   000038   E0           MOVX    A,@DPTR
-   \   000039   90....       MOV     DPTR,#_NIB + 2
-   \   00003C   F0           MOVX    @DPTR,A
+   \   000034   90....       MOV     DPTR,#zgMaxBcastRetires
+   \   000037   E0           MOVX    A,@DPTR
+   \   000038   90....       MOV     DPTR,#_NIB + 2
+   \   00003B   F0           MOVX    @DPTR,A
     405          
     406            _NIB.ReportConstantCost = 0;
-   \   00003D   90....       MOV     DPTR,#_NIB + 8
-   \   000040   7400         MOV     A,#0x0
-   \   000042   F0           MOVX    @DPTR,A
+   \   00003C   90....       MOV     DPTR,#_NIB + 8
+   \   00003F   7400         MOV     A,#0x0
+   \   000041   F0           MOVX    @DPTR,A
     407            _NIB.RouteDiscRetries = 0;
-   \   000043   90....       MOV     DPTR,#_NIB + 9
-   \   000046   7400         MOV     A,#0x0
-   \   000048   F0           MOVX    @DPTR,A
+   \   000042   90....       MOV     DPTR,#_NIB + 9
+   \   000045   7400         MOV     A,#0x0
+   \   000047   F0           MOVX    @DPTR,A
     408            _NIB.SecureAllFrames = USE_NWK_SECURITY;
-   \   000049   90....       MOV     DPTR,#_NIB + 11
-   \   00004C   7400         MOV     A,#0x0
-   \   00004E   F0           MOVX    @DPTR,A
+   \   000048   90....       MOV     DPTR,#_NIB + 11
+   \   00004B   7400         MOV     A,#0x0
+   \   00004D   F0           MOVX    @DPTR,A
     409            _NIB.nwkAllFresh = NWK_ALL_FRESH;
-   \   00004F   90....       MOV     DPTR,#_NIB + 104
-   \   000052   7401         MOV     A,#0x1
-   \   000054   F0           MOVX    @DPTR,A
+   \   00004E   90....       MOV     DPTR,#_NIB + 104
+   \   000051   7401         MOV     A,#0x1
+   \   000053   F0           MOVX    @DPTR,A
     410          
     411            if ( ZG_SECURE_ENABLED )
     412            {
@@ -879,137 +846,137 @@ D:\School\Jaar_3\WTWS\Projects\WirelessSensorNetworksPracticum\Components\stack\
     415            else
     416            {
     417              _NIB.SecurityLevel = 0;
-   \   000055   90....       MOV     DPTR,#_NIB + 12
-   \   000058   7400         MOV     A,#0x0
-   \   00005A   F0           MOVX    @DPTR,A
+   \   000054   90....       MOV     DPTR,#_NIB + 12
+   \   000057   7400         MOV     A,#0x0
+   \   000059   F0           MOVX    @DPTR,A
     418            }
     419          
     420            _NIB.SymLink = TRUE;
-   \   00005B   90....       MOV     DPTR,#_NIB + 13
-   \   00005E   7401         MOV     A,#0x1
-   \   000060   F0           MOVX    @DPTR,A
+   \   00005A   90....       MOV     DPTR,#_NIB + 13
+   \   00005D   7401         MOV     A,#0x1
+   \   00005F   F0           MOVX    @DPTR,A
     421          
     422            _NIB.CapabilityFlags = ZDO_Config_Node_Descriptor.CapabilityFlags;
-   \   000061   90....       MOV     DPTR,#ZDO_Config_Node_Descriptor + 2
-   \   000064   E0           MOVX    A,@DPTR
-   \   000065   90....       MOV     DPTR,#_NIB + 14
-   \   000068   F0           MOVX    @DPTR,A
+   \   000060   90....       MOV     DPTR,#ZDO_Config_Node_Descriptor + 2
+   \   000063   E0           MOVX    A,@DPTR
+   \   000064   90....       MOV     DPTR,#_NIB + 14
+   \   000067   F0           MOVX    @DPTR,A
     423          
     424            _NIB.TransactionPersistenceTime = zgIndirectMsgTimeout;
-   \   000069   90....       MOV     DPTR,#zgIndirectMsgTimeout
-   \   00006C   E0           MOVX    A,@DPTR
-   \   00006D   F8           MOV     R0,A
-   \   00006E   7900         MOV     R1,#0x0
-   \   000070   90....       MOV     DPTR,#_NIB + 15
-   \   000073   E8           MOV     A,R0
-   \   000074   F0           MOVX    @DPTR,A
-   \   000075   A3           INC     DPTR
-   \   000076   E9           MOV     A,R1
-   \   000077   F0           MOVX    @DPTR,A
+   \   000068   90....       MOV     DPTR,#zgIndirectMsgTimeout
+   \   00006B   E0           MOVX    A,@DPTR
+   \   00006C   F8           MOV     R0,A
+   \   00006D   7900         MOV     R1,#0x0
+   \   00006F   90....       MOV     DPTR,#_NIB + 15
+   \   000072   E8           MOV     A,R0
+   \   000073   F0           MOVX    @DPTR,A
+   \   000074   A3           INC     DPTR
+   \   000075   E9           MOV     A,R1
+   \   000076   F0           MOVX    @DPTR,A
     425          
     426            _NIB.RouteDiscoveryTime = zgRouteDiscoveryTime;
-   \   000078   90....       MOV     DPTR,#zgRouteDiscoveryTime
-   \   00007B   E0           MOVX    A,@DPTR
-   \   00007C   90....       MOV     DPTR,#_NIB + 18
-   \   00007F   F0           MOVX    @DPTR,A
+   \   000077   90....       MOV     DPTR,#zgRouteDiscoveryTime
+   \   00007A   E0           MOVX    A,@DPTR
+   \   00007B   90....       MOV     DPTR,#_NIB + 18
+   \   00007E   F0           MOVX    @DPTR,A
     427            _NIB.RouteExpiryTime = zgRouteExpiryTime;
-   \   000080   90....       MOV     DPTR,#zgRouteExpiryTime
-   \   000083   E0           MOVX    A,@DPTR
-   \   000084   90....       MOV     DPTR,#_NIB + 19
-   \   000087   F0           MOVX    @DPTR,A
+   \   00007F   90....       MOV     DPTR,#zgRouteExpiryTime
+   \   000082   E0           MOVX    A,@DPTR
+   \   000083   90....       MOV     DPTR,#_NIB + 19
+   \   000086   F0           MOVX    @DPTR,A
     428          
     429            _NIB.nwkDevAddress = INVALID_NODE_ADDR;
-   \   000088   90....       MOV     DPTR,#_NIB + 20
-   \   00008B   74FE         MOV     A,#-0x2
-   \   00008D   F0           MOVX    @DPTR,A
-   \   00008E   A3           INC     DPTR
-   \   00008F   74FF         MOV     A,#-0x1
-   \   000091   F0           MOVX    @DPTR,A
+   \   000087   90....       MOV     DPTR,#_NIB + 20
+   \   00008A   74FE         MOV     A,#-0x2
+   \   00008C   F0           MOVX    @DPTR,A
+   \   00008D   A3           INC     DPTR
+   \   00008E   74FF         MOV     A,#-0x1
+   \   000090   F0           MOVX    @DPTR,A
     430            _NIB.nwkLogicalChannel = 0;
-   \   000092   90....       MOV     DPTR,#_NIB + 22
-   \   000095   7400         MOV     A,#0x0
-   \   000097   F0           MOVX    @DPTR,A
+   \   000091   90....       MOV     DPTR,#_NIB + 22
+   \   000094   7400         MOV     A,#0x0
+   \   000096   F0           MOVX    @DPTR,A
     431            _NIB.nwkCoordAddress = INVALID_NODE_ADDR;
-   \   000098   90....       MOV     DPTR,#_NIB + 23
-   \   00009B   74FE         MOV     A,#-0x2
-   \   00009D   F0           MOVX    @DPTR,A
-   \   00009E   A3           INC     DPTR
-   \   00009F   74FF         MOV     A,#-0x1
-   \   0000A1   F0           MOVX    @DPTR,A
+   \   000097   90....       MOV     DPTR,#_NIB + 23
+   \   00009A   74FE         MOV     A,#-0x2
+   \   00009C   F0           MOVX    @DPTR,A
+   \   00009D   A3           INC     DPTR
+   \   00009E   74FF         MOV     A,#-0x1
+   \   0000A0   F0           MOVX    @DPTR,A
     432            osal_memset( _NIB.nwkCoordExtAddress, 0, Z_EXTADDR_LEN );
-   \   0000A2                ; Setup parameters for call to function osal_memset
-   \   0000A2   7C08         MOV     R4,#0x8
-   \   0000A4   7D00         MOV     R5,#0x0
-   \   0000A6   7900         MOV     R1,#0x0
-   \   0000A8   7A..         MOV     R2,#(_NIB + 25) & 0xff
-   \   0000AA   7B..         MOV     R3,#((_NIB + 25) >> 8) & 0xff
-   \   0000AC   12....       LCALL   `??osal_memset::?relay`; Banked call to: osal_memset
+   \   0000A1                ; Setup parameters for call to function osal_memset
+   \   0000A1   7C08         MOV     R4,#0x8
+   \   0000A3   7D00         MOV     R5,#0x0
+   \   0000A5   7900         MOV     R1,#0x0
+   \   0000A7   7A..         MOV     R2,#(_NIB + 25) & 0xff
+   \   0000A9   7B..         MOV     R3,#((_NIB + 25) >> 8) & 0xff
+   \   0000AB   12....       LCALL   `??osal_memset::?relay`; Banked call to: osal_memset
     433            _NIB.nwkPanId = INVALID_NODE_ADDR;
-   \   0000AF   90....       MOV     DPTR,#_NIB + 33
-   \   0000B2   74FE         MOV     A,#-0x2
-   \   0000B4   F0           MOVX    @DPTR,A
-   \   0000B5   A3           INC     DPTR
-   \   0000B6   74FF         MOV     A,#-0x1
-   \   0000B8   F0           MOVX    @DPTR,A
+   \   0000AE   90....       MOV     DPTR,#_NIB + 33
+   \   0000B1   74FE         MOV     A,#-0x2
+   \   0000B3   F0           MOVX    @DPTR,A
+   \   0000B4   A3           INC     DPTR
+   \   0000B5   74FF         MOV     A,#-0x1
+   \   0000B7   F0           MOVX    @DPTR,A
     434          
     435            osal_cpyExtAddr( _NIB.extendedPANID, zgExtendedPANID );
-   \   0000B9                ; Setup parameters for call to function sAddrExtCpy
-   \   0000B9   7C..         MOV     R4,#zgExtendedPANID & 0xff
-   \   0000BB   7D..         MOV     R5,#(zgExtendedPANID >> 8) & 0xff
-   \   0000BD   7A..         MOV     R2,#(_NIB + 53) & 0xff
-   \   0000BF   7B..         MOV     R3,#((_NIB + 53) >> 8) & 0xff
-   \   0000C1   12....       LCALL   `??sAddrExtCpy::?relay`; Banked call to: sAddrExtCpy
+   \   0000B8                ; Setup parameters for call to function sAddrExtCpy
+   \   0000B8   7C..         MOV     R4,#zgExtendedPANID & 0xff
+   \   0000BA   7D..         MOV     R5,#(zgExtendedPANID >> 8) & 0xff
+   \   0000BC   7A..         MOV     R2,#(_NIB + 53) & 0xff
+   \   0000BE   7B..         MOV     R3,#((_NIB + 53) >> 8) & 0xff
+   \   0000C0   12....       LCALL   `??sAddrExtCpy::?relay`; Banked call to: sAddrExtCpy
     436          
     437            _NIB.nwkKeyLoaded = FALSE;
-   \   0000C4   90....       MOV     DPTR,#_NIB + 61
-   \   0000C7   7400         MOV     A,#0x0
-   \   0000C9   F0           MOVX    @DPTR,A
+   \   0000C3   90....       MOV     DPTR,#_NIB + 61
+   \   0000C6   7400         MOV     A,#0x0
+   \   0000C8   F0           MOVX    @DPTR,A
     438          
     439          #if defined ( ZIGBEE_STOCHASTIC_ADDRESSING )
     440            _NIB.nwkAddrAlloc  = NWK_ADDRESSING_STOCHASTIC;
-   \   0000CA   90....       MOV     DPTR,#_NIB + 96
-   \   0000CD   7402         MOV     A,#0x2
-   \   0000CF   F0           MOVX    @DPTR,A
+   \   0000C9   90....       MOV     DPTR,#_NIB + 96
+   \   0000CC   7402         MOV     A,#0x2
+   \   0000CE   F0           MOVX    @DPTR,A
     441            _NIB.nwkUniqueAddr = FALSE;
-   \   0000D0   90....       MOV     DPTR,#_NIB + 97
-   \   0000D3   7400         MOV     A,#0x0
-   \   0000D5   F0           MOVX    @DPTR,A
+   \   0000CF   90....       MOV     DPTR,#_NIB + 97
+   \   0000D2   7400         MOV     A,#0x0
+   \   0000D4   F0           MOVX    @DPTR,A
     442          #else
     443            _NIB.nwkAddrAlloc  = NWK_ADDRESSING_DISTRIBUTED;
     444            _NIB.nwkUniqueAddr = TRUE;
     445          #endif
     446          
     447            _NIB.nwkLinkStatusPeriod = NWK_LINK_STATUS_PERIOD;
-   \   0000D6   90....       MOV     DPTR,#_NIB + 98
-   \   0000D9   740F         MOV     A,#0xf
-   \   0000DB   F0           MOVX    @DPTR,A
+   \   0000D5   90....       MOV     DPTR,#_NIB + 98
+   \   0000D8   740F         MOV     A,#0xf
+   \   0000DA   F0           MOVX    @DPTR,A
     448            _NIB.nwkRouterAgeLimit = NWK_ROUTE_AGE_LIMIT;
-   \   0000DC   90....       MOV     DPTR,#_NIB + 99
-   \   0000DF   7403         MOV     A,#0x3
-   \   0000E1   F0           MOVX    @DPTR,A
+   \   0000DB   90....       MOV     DPTR,#_NIB + 99
+   \   0000DE   7403         MOV     A,#0x3
+   \   0000E0   F0           MOVX    @DPTR,A
     449          
     450            //MTO and source routing
     451            _NIB.nwkConcentratorDiscoveryTime = zgConcentratorDiscoveryTime;
-   \   0000E2   90....       MOV     DPTR,#zgConcentratorDiscoveryTime
-   \   0000E5   E0           MOVX    A,@DPTR
-   \   0000E6   90....       MOV     DPTR,#_NIB + 102
-   \   0000E9   F0           MOVX    @DPTR,A
+   \   0000E1   90....       MOV     DPTR,#zgConcentratorDiscoveryTime
+   \   0000E4   E0           MOVX    A,@DPTR
+   \   0000E5   90....       MOV     DPTR,#_NIB + 102
+   \   0000E8   F0           MOVX    @DPTR,A
     452            _NIB.nwkIsConcentrator = zgConcentratorEnable;
-   \   0000EA   90....       MOV     DPTR,#zgConcentratorEnable
-   \   0000ED   E0           MOVX    A,@DPTR
-   \   0000EE   90....       MOV     DPTR,#_NIB + 101
-   \   0000F1   F0           MOVX    @DPTR,A
+   \   0000E9   90....       MOV     DPTR,#zgConcentratorEnable
+   \   0000EC   E0           MOVX    A,@DPTR
+   \   0000ED   90....       MOV     DPTR,#_NIB + 101
+   \   0000F0   F0           MOVX    @DPTR,A
     453            _NIB.nwkConcentratorRadius = zgConcentratorRadius;
-   \   0000F2   90....       MOV     DPTR,#zgConcentratorRadius
-   \   0000F5   E0           MOVX    A,@DPTR
-   \   0000F6   90....       MOV     DPTR,#_NIB + 103
-   \   0000F9   F0           MOVX    @DPTR,A
+   \   0000F1   90....       MOV     DPTR,#zgConcentratorRadius
+   \   0000F4   E0           MOVX    A,@DPTR
+   \   0000F5   90....       MOV     DPTR,#_NIB + 103
+   \   0000F8   F0           MOVX    @DPTR,A
     454          
     455          #if defined ( ZIGBEE_MULTICAST )
     456            _NIB.nwkUseMultiCast = MULTICAST_ENABLED;
-   \   0000FA   90....       MOV     DPTR,#_NIB + 100
-   \   0000FD   7401         MOV     A,#0x1
-   \   0000FF   F0           MOVX    @DPTR,A
+   \   0000F9   90....       MOV     DPTR,#_NIB + 100
+   \   0000FC   7401         MOV     A,#0x1
+   \   0000FE   F0           MOVX    @DPTR,A
     457          #else
     458            _NIB.nwkUseMultiCast = FALSE;
     459          #endif
@@ -1017,70 +984,41 @@ D:\School\Jaar_3\WTWS\Projects\WirelessSensorNetworksPracticum\Components\stack\
     461          #if defined ( NV_RESTORE )
     462            if ( osal_nv_read( ZCD_NV_NWKMGR_ADDR, 0, sizeof( _NIB.nwkManagerAddr ),
     463                               &_NIB.nwkManagerAddr ) != SUCCESS )
-   \   000100                ; Setup parameters for call to function osal_nv_read
-   \   000100   75....       MOV     ?V0,#(_NIB + 105) & 0xff
-   \   000103   75....       MOV     ?V1,#((_NIB + 105) >> 8) & 0xff
-   \   000106   78..         MOV     R0,#?V0
-   \   000108   12....       LCALL   ?PUSH_XSTACK_I_TWO
-   \   00010B   75..02       MOV     ?V0,#0x2
-   \   00010E   75..00       MOV     ?V1,#0x0
-   \   000111   78..         MOV     R0,#?V0
-   \   000113   12....       LCALL   ?PUSH_XSTACK_I_TWO
-   \   000116   7C00         MOV     R4,#0x0
-   \   000118   7D00         MOV     R5,#0x0
-   \   00011A   7A89         MOV     R2,#-0x77
-   \   00011C   7B00         MOV     R3,#0x0
-   \   00011E   12....       LCALL   `??osal_nv_read::?relay`; Banked call to: osal_nv_read
-   \   000121   7404         MOV     A,#0x4
-   \   000123   12....       LCALL   ?DEALLOC_XSTACK8
-   \   000126   E9           MOV     A,R1
-   \   000127   600A         JZ      ??NIB_init_0
     464          #endif
     465            {
     466              _NIB.nwkManagerAddr = 0x0000;
-   \   000129   90....       MOV     DPTR,#_NIB + 105
-   \   00012C   7400         MOV     A,#0x0
-   \   00012E   F0           MOVX    @DPTR,A
-   \   00012F   A3           INC     DPTR
-   \   000130   7400         MOV     A,#0x0
-   \   000132   F0           MOVX    @DPTR,A
+   \   0000FF   90....       MOV     DPTR,#_NIB + 105
+   \   000102   7400         MOV     A,#0x0
+   \   000104   F0           MOVX    @DPTR,A
+   \   000105   A3           INC     DPTR
+   \   000106   7400         MOV     A,#0x0
+   \   000108   F0           MOVX    @DPTR,A
     467            }
     468          
     469            _NIB.nwkUpdateId = 0;
-   \                     ??NIB_init_0:
-   \   000133   90....       MOV     DPTR,#_NIB + 109
-   \   000136   7400         MOV     A,#0x0
-   \   000138   F0           MOVX    @DPTR,A
+   \   000109   90....       MOV     DPTR,#_NIB + 109
+   \   00010C   7400         MOV     A,#0x0
+   \   00010E   F0           MOVX    @DPTR,A
     470            _NIB.nwkTotalTransmissions = 0;
-   \   000139   90....       MOV     DPTR,#_NIB + 107
-   \   00013C   7400         MOV     A,#0x0
-   \   00013E   F0           MOVX    @DPTR,A
-   \   00013F   A3           INC     DPTR
-   \   000140   7400         MOV     A,#0x0
-   \   000142   F0           MOVX    @DPTR,A
+   \   00010F   90....       MOV     DPTR,#_NIB + 107
+   \   000112   7400         MOV     A,#0x0
+   \   000114   F0           MOVX    @DPTR,A
+   \   000115   A3           INC     DPTR
+   \   000116   7400         MOV     A,#0x0
+   \   000118   F0           MOVX    @DPTR,A
     471          
     472            if ( ZSTACK_ROUTER_BUILD )
-   \   000143   90....       MOV     DPTR,#zgDeviceLogicalType
-   \   000146   E0           MOVX    A,@DPTR
-   \   000147   6008         JZ      ??NIB_init_1
-   \   000149   90....       MOV     DPTR,#zgDeviceLogicalType
-   \   00014C   E0           MOVX    A,@DPTR
-   \   00014D   6401         XRL     A,#0x1
-   \   00014F   7003         JNZ     ??NIB_init_2
     473            {
     474          #if defined ( ZIGBEE_STOCHASTIC_ADDRESSING )
     475              NLME_InitStochasticAddressing();
-   \                     ??NIB_init_1:
-   \   000151                ; Setup parameters for call to function NLME_InitStochasticAddressing
-   \   000151   12....       LCALL   `??NLME_InitStochasticAddressing::?relay`; Banked call to: NLME_InitStochasticAddressing
     476          #else
     477              NLME_InitTreeAddressing();
     478          #endif
     479            }
     480          }
-   \                     ??NIB_init_2:
-   \   000154   7F02         MOV     R7,#0x2
-   \   000156   02....       LJMP    ?BANKED_LEAVE_XDATA
+   \   000119   D083         POP     DPH
+   \   00011B   D082         POP     DPL
+   \   00011D   02....       LJMP    ?BRET
     481          
     482          /*********************************************************************
     483           * @fn       nwk_Status()
@@ -1320,20 +1258,15 @@ D:\School\Jaar_3\WTWS\Projects\WirelessSensorNetworksPracticum\Components\stack\
 
    ISTACK XSTACK Function
    ------ ------ --------
-      0     14   NIB_init
-        0     10   -> NLME_InitStochasticAddressing
-        0     10   -> osal_memset
-        0     14   -> osal_nv_read
-        0     10   -> osal_rand
-        0     10   -> sAddrExtCpy
+      2      0   NIB_init
+        2      0   -> osal_memset
+        2      0   -> osal_rand
+        2      0   -> sAddrExtCpy
       0      0   nwk_Status
       0     14   nwk_adjustDelay
         0     14   -> osal_rand
       2      0   nwk_globals_init
         2      0   -> AddrMgrInit
-        2      0   -> NLME_InitLinkStatus
-        2      0   -> NwkFreqAgilityInit
-        2      0   -> NwkInitChildAging
 
 
    Segment part sizes:
@@ -1347,7 +1280,7 @@ D:\School\Jaar_3\WTWS\Projects\WirelessSensorNetworksPracticum\Components\stack\
        2  Cskip
        1  CskipChldrn
        1  CskipRtrs
-     345  NIB_init
+     288  NIB_init
        6  NIB_init::?relay
       90  apsEndDeviceBroadcastTable
       36  bcastHoldAckMask
@@ -1363,7 +1296,6 @@ D:\School\Jaar_3\WTWS\Projects\WirelessSensorNetworksPracticum\Components\stack\
        1  gGOOD_LINK_COST
        2  gKEEPALIVE_TIMEOUT_MAX
        1  gLINK_DOWN_TRIGGER
-       2  gLINK_STATUS_JITTER_MASK
        1  gMAX_BCAST
        1  gMAX_BINDING_CLUSTER_IDS
        1  gMAX_BROADCAST_QUEUED
@@ -1379,7 +1311,6 @@ D:\School\Jaar_3\WTWS\Projects\WirelessSensorNetworksPracticum\Components\stack\
        1  gMTO_ROUTE_EXPIRY_TIME
        2  gMTO_RREQ_LIMIT_TIME
        1  gNWK_CONFLICTED_ADDR_EXPIRY_TIME
-       1  gNWK_FREQ_AGILITY_ALL_MAC_ERRS
        1  gNWK_INDIRECT_CNT_RTG_TMR
        1  gNWK_INDIRECT_MSG_MAX_ALL
        1  gNWK_INDIRECT_MSG_MAX_PER
@@ -1394,13 +1325,13 @@ D:\School\Jaar_3\WTWS\Projects\WirelessSensorNetworksPracticum\Components\stack\
        2  gNWK_MIN_ROUTER_CHILDREN
        1  gNWK_TREE_ALLOCATE_ROUTERADDR_FOR_ENDDEVICE
        2  gTIMEOUT_COUNTER_MAX
-     368  neighborTable
+      92  neighborTable
       20  notMyChildList
        3  nwk_Status
        6  nwk_Status::?relay
      100  nwk_adjustDelay
        6  nwk_adjustDelay::?relay
-      63  nwk_globals_init
+      18  nwk_globals_init
        6  nwk_globals_init::?relay
       64  rtDiscTable
       24  rtgSrcRelayList
@@ -1408,15 +1339,15 @@ D:\School\Jaar_3\WTWS\Projects\WirelessSensorNetworksPracticum\Components\stack\
      280  rtgTable
 
  
-   511 bytes in segment BANKED_CODE
+   409 bytes in segment BANKED_CODE
     24 bytes in segment BANK_RELAYS
-    79 bytes in segment CODE_C
+    76 bytes in segment CODE_C
      2 bytes in segment XDATA_I
      2 bytes in segment XDATA_ID
- 1 557 bytes in segment XDATA_Z
+ 1 281 bytes in segment XDATA_Z
  
-   616 bytes of CODE  memory
- 1 559 bytes of XDATA memory
+   511 bytes of CODE  memory
+ 1 283 bytes of XDATA memory
 
 Errors: none
-Warnings: none
+Warnings: 1

@@ -1,6 +1,6 @@
 ///////////////////////////////////////////////////////////////////////////////
 //
-// IAR C/C++ Compiler V9.20.1.2476 for 8051               17/Feb/2017  12:14:08
+// IAR C/C++ Compiler V9.20.1.2476 for 8051               17/Feb/2017  12:45:15
 // Copyright 2004-2015 IAR Systems AB.
 // Standalone license - IAR Embedded Workbench for 8051
 //
@@ -12,14 +12,14 @@
 //    Dptr setup         =  1,16
 //                          
 //    Source file        =  
-//        D:\School\Jaar_3\WTWS\Projects\WirelessSensorNetworksPracticum\Components\stack\zdo\ZDObject.c
+//        D:\Jop van
+//        Buuren\Documents\Hogeschool\Vakken\wt\WirelessSensorNetworksPracticum\Components\stack\zdo\ZDObject.c
 //    Command line       =  
-//        -f
-//        D:\School\Jaar_3\WTWS\Projects\WirelessSensorNetworksPracticum\Projects\zstack\Samples\DemoApp\CC2530DB\..\..\..\Tools\CC2530DB\f8wCoord.cfg
-//        (-DCPU32MHZ -DROOT=__near_func -DMAC_CFG_APP_PENDING_QUEUE=TRUE
-//        -DMAC_CFG_TX_DATA_MAX=5 -DMAC_CFG_TX_MAX=8 -DMAC_CFG_RX_MAX=5
-//        -DZDO_COORDINATOR -DRTR_NWK) -f
-//        D:\School\Jaar_3\WTWS\Projects\WirelessSensorNetworksPracticum\Projects\zstack\Samples\DemoApp\CC2530DB\..\..\..\Tools\CC2530DB\f8wConfig.cfg
+//        -f "D:\Jop van
+//        Buuren\Documents\Hogeschool\Vakken\wt\WirelessSensorNetworksPracticum\Projects\zstack\Samples\DemoApp\CC2530DB\..\..\..\Tools\CC2530DB\f8wEndev.cfg"
+//        (-DCPU32MHZ -DROOT=__near_func -DMAC_CFG_TX_DATA_MAX=3
+//        -DMAC_CFG_TX_MAX=6 -DMAC_CFG_RX_MAX=3) -f "D:\Jop van
+//        Buuren\Documents\Hogeschool\Vakken\wt\WirelessSensorNetworksPracticum\Projects\zstack\Samples\DemoApp\CC2530DB\..\..\..\Tools\CC2530DB\f8wConfig.cfg"
 //        (-DZIGBEEPRO -DSECURE=0 -DZG_SECURE_DYNAMIC=0 -DREFLECTOR
 //        -DDEFAULT_CHANLIST=0x00100000 -DZDAPP_CONFIG_PAN_ID=0x0DAD
 //        -DNWK_START_DELAY=100 -DEXTENDED_JOINING_RANDOM_MASK=0x007F
@@ -34,63 +34,64 @@
 //        -DMAC_MAX_FRAME_SIZE=116 -DZDNWKMGR_MIN_TRANSMISSIONS=20
 //        "-DCONST=const __code" -DGENERIC=__generic -DRFD_RCVC_ALWAYS_ON=FALSE
 //        -DPOLL_RATE=1000 -DQUEUED_POLL_RATE=100 -DRESPONSE_POLL_RATE=100)
-//        -DREJOIN_POLL_RATE=440
-//        D:\School\Jaar_3\WTWS\Projects\WirelessSensorNetworksPracticum\Components\stack\zdo\ZDObject.c
-//        -D HOLD_AUTO_START -D BUILD_ALL_DEVICES -D REFLECTOR -D NV_INIT -D
-//        NV_RESTORE -D HAL_UART=TRUE -lC
-//        D:\School\Jaar_3\WTWS\Projects\WirelessSensorNetworksPracticum\Projects\zstack\Samples\DemoApp\CC2530DB\CoordinatorEB\List\
-//        -lA
-//        D:\School\Jaar_3\WTWS\Projects\WirelessSensorNetworksPracticum\Projects\zstack\Samples\DemoApp\CC2530DB\CoordinatorEB\List\
-//        --diag_suppress Pe001,Pa010,Pe1665 -o
-//        D:\School\Jaar_3\WTWS\Projects\WirelessSensorNetworksPracticum\Projects\zstack\Samples\DemoApp\CC2530DB\CoordinatorEB\Obj\
+//        -DREJOIN_POLL_RATE=440 "D:\Jop van
+//        Buuren\Documents\Hogeschool\Vakken\wt\WirelessSensorNetworksPracticum\Components\stack\zdo\ZDObject.c"
+//        -D NWK_AUTO_POLL -D HOLD_AUTO_START -D POWER_SAVING -D NV_INIT -D
+//        DEVICE_LOGICAL_TYPE=ZG_DEVICETYPE_ENDDEVICE -lC "D:\Jop van
+//        Buuren\Documents\Hogeschool\Vakken\wt\WirelessSensorNetworksPracticum\Projects\zstack\Samples\DemoApp\CC2530DB\SensorEB\List\"
+//        -lA "D:\Jop van
+//        Buuren\Documents\Hogeschool\Vakken\wt\WirelessSensorNetworksPracticum\Projects\zstack\Samples\DemoApp\CC2530DB\SensorEB\List\"
+//        --diag_suppress Pe001,Pa010,Pe1665 -o "D:\Jop van
+//        Buuren\Documents\Hogeschool\Vakken\wt\WirelessSensorNetworksPracticum\Projects\zstack\Samples\DemoApp\CC2530DB\SensorEB\Obj\"
 //        -e --no_cse --no_unroll --no_inline --no_code_motion --no_tbaa
 //        --debug --core=plain --dptr=16,1 --data_model=large
 //        --code_model=banked --calling_convention=xdata_reentrant
-//        --place_constants=data_rom --nr_virtual_regs 16 -I
-//        D:\School\Jaar_3\WTWS\Projects\WirelessSensorNetworksPracticum\Projects\zstack\Samples\DemoApp\CC2530DB\
-//        -I
-//        D:\School\Jaar_3\WTWS\Projects\WirelessSensorNetworksPracticum\Projects\zstack\Samples\DemoApp\CC2530DB\..\Source\
-//        -I
-//        D:\School\Jaar_3\WTWS\Projects\WirelessSensorNetworksPracticum\Projects\zstack\Samples\DemoApp\CC2530DB\..\..\..\ZMain\TI2530DB\
-//        -I
-//        D:\School\Jaar_3\WTWS\Projects\WirelessSensorNetworksPracticum\Projects\zstack\Samples\DemoApp\CC2530DB\..\..\..\..\..\Components\hal\include\
-//        -I
-//        D:\School\Jaar_3\WTWS\Projects\WirelessSensorNetworksPracticum\Projects\zstack\Samples\DemoApp\CC2530DB\..\..\..\..\..\Components\hal\target\CC2530EB\
-//        -I
-//        D:\School\Jaar_3\WTWS\Projects\WirelessSensorNetworksPracticum\Projects\zstack\Samples\DemoApp\CC2530DB\..\..\..\..\..\Components\mac\include\
-//        -I
-//        D:\School\Jaar_3\WTWS\Projects\WirelessSensorNetworksPracticum\Projects\zstack\Samples\DemoApp\CC2530DB\..\..\..\..\..\Components\mac\high_level\
-//        -I
-//        D:\School\Jaar_3\WTWS\Projects\WirelessSensorNetworksPracticum\Projects\zstack\Samples\DemoApp\CC2530DB\..\..\..\..\..\Components\mac\low_level\srf04\
-//        -I
-//        D:\School\Jaar_3\WTWS\Projects\WirelessSensorNetworksPracticum\Projects\zstack\Samples\DemoApp\CC2530DB\..\..\..\..\..\Components\mac\low_level\srf04\single_chip\
-//        -I
-//        D:\School\Jaar_3\WTWS\Projects\WirelessSensorNetworksPracticum\Projects\zstack\Samples\DemoApp\CC2530DB\..\..\..\..\..\Components\mt\
-//        -I
-//        D:\School\Jaar_3\WTWS\Projects\WirelessSensorNetworksPracticum\Projects\zstack\Samples\DemoApp\CC2530DB\..\..\..\..\..\Components\osal\include\
-//        -I
-//        D:\School\Jaar_3\WTWS\Projects\WirelessSensorNetworksPracticum\Projects\zstack\Samples\DemoApp\CC2530DB\..\..\..\..\..\Components\services\saddr\
-//        -I
-//        D:\School\Jaar_3\WTWS\Projects\WirelessSensorNetworksPracticum\Projects\zstack\Samples\DemoApp\CC2530DB\..\..\..\..\..\Components\services\sdata\
-//        -I
-//        D:\School\Jaar_3\WTWS\Projects\WirelessSensorNetworksPracticum\Projects\zstack\Samples\DemoApp\CC2530DB\..\..\..\..\..\Components\stack\af\
-//        -I
-//        D:\School\Jaar_3\WTWS\Projects\WirelessSensorNetworksPracticum\Projects\zstack\Samples\DemoApp\CC2530DB\..\..\..\..\..\Components\stack\nwk\
-//        -I
-//        D:\School\Jaar_3\WTWS\Projects\WirelessSensorNetworksPracticum\Projects\zstack\Samples\DemoApp\CC2530DB\..\..\..\..\..\Components\stack\sapi\
-//        -I
-//        D:\School\Jaar_3\WTWS\Projects\WirelessSensorNetworksPracticum\Projects\zstack\Samples\DemoApp\CC2530DB\..\..\..\..\..\Components\stack\sec\
-//        -I
-//        D:\School\Jaar_3\WTWS\Projects\WirelessSensorNetworksPracticum\Projects\zstack\Samples\DemoApp\CC2530DB\..\..\..\..\..\Components\stack\sys\
-//        -I
-//        D:\School\Jaar_3\WTWS\Projects\WirelessSensorNetworksPracticum\Projects\zstack\Samples\DemoApp\CC2530DB\..\..\..\..\..\Components\stack\zdo\
-//        -I
-//        D:\School\Jaar_3\WTWS\Projects\WirelessSensorNetworksPracticum\Projects\zstack\Samples\DemoApp\CC2530DB\..\..\..\..\..\Components\zmac\
-//        -I
-//        D:\School\Jaar_3\WTWS\Projects\WirelessSensorNetworksPracticum\Projects\zstack\Samples\DemoApp\CC2530DB\..\..\..\..\..\Components\zmac\f8w\
+//        --place_constants=data_rom --nr_virtual_regs 16 -I "D:\Jop van
+//        Buuren\Documents\Hogeschool\Vakken\wt\WirelessSensorNetworksPracticum\Projects\zstack\Samples\DemoApp\CC2530DB\"
+//        -I "D:\Jop van
+//        Buuren\Documents\Hogeschool\Vakken\wt\WirelessSensorNetworksPracticum\Projects\zstack\Samples\DemoApp\CC2530DB\..\Source\"
+//        -I "D:\Jop van
+//        Buuren\Documents\Hogeschool\Vakken\wt\WirelessSensorNetworksPracticum\Projects\zstack\Samples\DemoApp\CC2530DB\..\..\..\ZMain\TI2530DB\"
+//        -I "D:\Jop van
+//        Buuren\Documents\Hogeschool\Vakken\wt\WirelessSensorNetworksPracticum\Projects\zstack\Samples\DemoApp\CC2530DB\..\..\..\..\..\Components\hal\include\"
+//        -I "D:\Jop van
+//        Buuren\Documents\Hogeschool\Vakken\wt\WirelessSensorNetworksPracticum\Projects\zstack\Samples\DemoApp\CC2530DB\..\..\..\..\..\Components\hal\target\CC2530EB\"
+//        -I "D:\Jop van
+//        Buuren\Documents\Hogeschool\Vakken\wt\WirelessSensorNetworksPracticum\Projects\zstack\Samples\DemoApp\CC2530DB\..\..\..\..\..\Components\mac\include\"
+//        -I "D:\Jop van
+//        Buuren\Documents\Hogeschool\Vakken\wt\WirelessSensorNetworksPracticum\Projects\zstack\Samples\DemoApp\CC2530DB\..\..\..\..\..\Components\mac\high_level\"
+//        -I "D:\Jop van
+//        Buuren\Documents\Hogeschool\Vakken\wt\WirelessSensorNetworksPracticum\Projects\zstack\Samples\DemoApp\CC2530DB\..\..\..\..\..\Components\mac\low_level\srf04\"
+//        -I "D:\Jop van
+//        Buuren\Documents\Hogeschool\Vakken\wt\WirelessSensorNetworksPracticum\Projects\zstack\Samples\DemoApp\CC2530DB\..\..\..\..\..\Components\mac\low_level\srf04\single_chip\"
+//        -I "D:\Jop van
+//        Buuren\Documents\Hogeschool\Vakken\wt\WirelessSensorNetworksPracticum\Projects\zstack\Samples\DemoApp\CC2530DB\..\..\..\..\..\Components\mt\"
+//        -I "D:\Jop van
+//        Buuren\Documents\Hogeschool\Vakken\wt\WirelessSensorNetworksPracticum\Projects\zstack\Samples\DemoApp\CC2530DB\..\..\..\..\..\Components\osal\include\"
+//        -I "D:\Jop van
+//        Buuren\Documents\Hogeschool\Vakken\wt\WirelessSensorNetworksPracticum\Projects\zstack\Samples\DemoApp\CC2530DB\..\..\..\..\..\Components\services\saddr\"
+//        -I "D:\Jop van
+//        Buuren\Documents\Hogeschool\Vakken\wt\WirelessSensorNetworksPracticum\Projects\zstack\Samples\DemoApp\CC2530DB\..\..\..\..\..\Components\services\sdata\"
+//        -I "D:\Jop van
+//        Buuren\Documents\Hogeschool\Vakken\wt\WirelessSensorNetworksPracticum\Projects\zstack\Samples\DemoApp\CC2530DB\..\..\..\..\..\Components\stack\af\"
+//        -I "D:\Jop van
+//        Buuren\Documents\Hogeschool\Vakken\wt\WirelessSensorNetworksPracticum\Projects\zstack\Samples\DemoApp\CC2530DB\..\..\..\..\..\Components\stack\nwk\"
+//        -I "D:\Jop van
+//        Buuren\Documents\Hogeschool\Vakken\wt\WirelessSensorNetworksPracticum\Projects\zstack\Samples\DemoApp\CC2530DB\..\..\..\..\..\Components\stack\sapi\"
+//        -I "D:\Jop van
+//        Buuren\Documents\Hogeschool\Vakken\wt\WirelessSensorNetworksPracticum\Projects\zstack\Samples\DemoApp\CC2530DB\..\..\..\..\..\Components\stack\sec\"
+//        -I "D:\Jop van
+//        Buuren\Documents\Hogeschool\Vakken\wt\WirelessSensorNetworksPracticum\Projects\zstack\Samples\DemoApp\CC2530DB\..\..\..\..\..\Components\stack\sys\"
+//        -I "D:\Jop van
+//        Buuren\Documents\Hogeschool\Vakken\wt\WirelessSensorNetworksPracticum\Projects\zstack\Samples\DemoApp\CC2530DB\..\..\..\..\..\Components\stack\zdo\"
+//        -I "D:\Jop van
+//        Buuren\Documents\Hogeschool\Vakken\wt\WirelessSensorNetworksPracticum\Projects\zstack\Samples\DemoApp\CC2530DB\..\..\..\..\..\Components\zmac\"
+//        -I "D:\Jop van
+//        Buuren\Documents\Hogeschool\Vakken\wt\WirelessSensorNetworksPracticum\Projects\zstack\Samples\DemoApp\CC2530DB\..\..\..\..\..\Components\zmac\f8w\"
 //        -Ol --require_prototypes
 //    List file          =  
-//        D:\School\Jaar_3\WTWS\Projects\WirelessSensorNetworksPracticum\Projects\zstack\Samples\DemoApp\CC2530DB\CoordinatorEB\List\ZDObject.s51
+//        D:\Jop van
+//        Buuren\Documents\Hogeschool\Vakken\wt\WirelessSensorNetworksPracticum\Projects\zstack\Samples\DemoApp\CC2530DB\SensorEB\List\ZDObject.s51
 //
 ///////////////////////////////////////////////////////////////////////////////
 
@@ -156,24 +157,17 @@
 
         PUBLIC `??NLME_PermitJoiningTimeout::?relay`
         FUNCTION `??NLME_PermitJoiningTimeout::?relay`,0203H
-        PUBLIC `??ZDMatchSendState::?relay`
-        FUNCTION `??ZDMatchSendState::?relay`,0203H
         FUNCTION `??ZDODeviceSetup::?relay`,0203H
         PUBLIC `??ZDO_AnyClusterMatches::?relay`
         FUNCTION `??ZDO_AnyClusterMatches::?relay`,0203H
         PUBLIC `??ZDO_BuildSimpleDescBuf::?relay`
         FUNCTION `??ZDO_BuildSimpleDescBuf::?relay`,0203H
-        FUNCTION `??ZDO_CompareClusterLists::?relay`,0203H
         PUBLIC `??ZDO_ConvertOTAClusters::?relay`
         FUNCTION `??ZDO_ConvertOTAClusters::?relay`,0203H
-        FUNCTION `??ZDO_CopyMatchInfo::?relay`,0203H
-        FUNCTION `??ZDO_EndDeviceBindMatchTimeoutCB::?relay`,0203H
         PUBLIC `??ZDO_EndDeviceTimeoutCB::?relay`
         FUNCTION `??ZDO_EndDeviceTimeoutCB::?relay`,0203H
         PUBLIC `??ZDO_Init::?relay`
         FUNCTION `??ZDO_Init::?relay`,0203H
-        PUBLIC `??ZDO_MatchEndDeviceBind::?relay`
-        FUNCTION `??ZDO_MatchEndDeviceBind::?relay`,0203H
         PUBLIC `??ZDO_ParseAddrRsp::?relay`
         FUNCTION `??ZDO_ParseAddrRsp::?relay`,0203H
         PUBLIC `??ZDO_ParseBindUnbindReq::?relay`
@@ -247,7 +241,6 @@
         PUBLIC `??ZDO_ProcessUserDescSet::?relay`
         FUNCTION `??ZDO_ProcessUserDescSet::?relay`,0203H
         FUNCTION `??ZDO_RemoveEndDeviceBind::?relay`,0203H
-        FUNCTION `??ZDO_RemoveMatchMemory::?relay`,0203H
         FUNCTION `??ZDO_SendEDBindRsp::?relay`,0203H
         PUBLIC `??ZDO_StartDevice::?relay`
         FUNCTION `??ZDO_StartDevice::?relay`,0203H
@@ -259,13 +252,6 @@
         PUBLIC NLME_PermitJoiningTimeout
         FUNCTION NLME_PermitJoiningTimeout,0203H
         ARGFRAME XSTACK, 0, STACK
-        PUBLIC ZDMatchSendState
-        FUNCTION ZDMatchSendState,0a1203H
-        ARGFRAME XSTACK, 25, STACK
-        ARGFRAME IOVERLAY, 0, STATIC
-        ARGFRAME DOVERLAY, 0, STATIC
-        LOCFRAME ISTACK, 1, STACK
-        LOCFRAME XSTACK, 45, STACK
         FUNCTION ZDODeviceSetup,021203H
         ARGFRAME XSTACK, 0, STACK
         ARGFRAME IOVERLAY, 0, STATIC
@@ -282,25 +268,12 @@
         ARGFRAME XSTACK, 0, STACK
         LOCFRAME ISTACK, 1, STACK
         LOCFRAME XSTACK, 10, STACK
-        FUNCTION ZDO_CompareClusterLists,080203H
-        ARGFRAME XSTACK, 29, STACK
-        ARGFRAME IOVERLAY, 0, STATIC
-        ARGFRAME DOVERLAY, 0, STATIC
-        LOCFRAME XSTACK, 16, STACK
         PUBLIC ZDO_ConvertOTAClusters
         FUNCTION ZDO_ConvertOTAClusters,080203H
         ARGFRAME XSTACK, 31, STACK
         ARGFRAME IOVERLAY, 0, STATIC
         ARGFRAME DOVERLAY, 0, STATIC
         LOCFRAME XSTACK, 11, STACK
-        FUNCTION ZDO_CopyMatchInfo,0a1203H
-        ARGFRAME XSTACK, 25, STACK
-        ARGFRAME IOVERLAY, 0, STATIC
-        ARGFRAME DOVERLAY, 0, STATIC
-        LOCFRAME XSTACK, 18, STACK
-        FUNCTION ZDO_EndDeviceBindMatchTimeoutCB,021603H
-        ARGFRAME XSTACK, 0, STACK
-        LOCFRAME ISTACK, 2, STACK
         PUBLIC ZDO_EndDeviceTimeoutCB
         FUNCTION ZDO_EndDeviceTimeoutCB,021203H
         ARGFRAME XSTACK, 0, STACK
@@ -309,11 +282,6 @@
         FUNCTION ZDO_Init,021203H
         ARGFRAME XSTACK, 0, STACK
         LOCFRAME ISTACK, 2, STACK
-        PUBLIC ZDO_MatchEndDeviceBind
-        FUNCTION ZDO_MatchEndDeviceBind,0a1203H
-        ARGFRAME XSTACK, 0, STACK
-        LOCFRAME ISTACK, 1, STACK
-        LOCFRAME XSTACK, 30, STACK
         PUBLIC ZDO_ParseAddrRsp
         FUNCTION ZDO_ParseAddrRsp,0a1203H
         ARGFRAME XSTACK, 0, STACK
@@ -492,11 +460,6 @@
         ARGFRAME IOVERLAY, 0, STATIC
         ARGFRAME DOVERLAY, 0, STATIC
         LOCFRAME ISTACK, 2, STACK
-        FUNCTION ZDO_RemoveMatchMemory,021203H
-        ARGFRAME XSTACK, 37, STACK
-        ARGFRAME IOVERLAY, 0, STATIC
-        ARGFRAME DOVERLAY, 0, STATIC
-        LOCFRAME ISTACK, 2, STACK
         FUNCTION ZDO_SendEDBindRsp,0a1203H
         ARGFRAME XSTACK, 0, STACK
         ARGFRAME IOVERLAY, 0, STATIC
@@ -506,7 +469,7 @@
         PUBLIC ZDO_StartDevice
         FUNCTION ZDO_StartDevice,0a1203H
         ARGFRAME XSTACK, 0, STACK
-        LOCFRAME XSTACK, 31, STACK
+        LOCFRAME XSTACK, 25, STACK
         PUBLIC ZDO_UpdateAddrManager
         FUNCTION ZDO_UpdateAddrManager,021203H
         ARGFRAME XSTACK, 0, STACK
@@ -625,8 +588,6 @@ APSME_UnBindRequest SYMBOL "APSME_UnBindRequest"
 `??APSME_UnBindRequest::?relay` SYMBOL "?relay", APSME_UnBindRequest
 APS_ReflectorInit   SYMBOL "APS_ReflectorInit"
 `??APS_ReflectorInit::?relay` SYMBOL "?relay", APS_ReflectorInit
-APS_SetEndDeviceBindTimeout SYMBOL "APS_SetEndDeviceBindTimeout"
-`??APS_SetEndDeviceBindTimeout::?relay` SYMBOL "?relay", APS_SetEndDeviceBindTimeout
 AddrMgrEntryLookupExt SYMBOL "AddrMgrEntryLookupExt"
 `??AddrMgrEntryLookupExt::?relay` SYMBOL "?relay", AddrMgrEntryLookupExt
 AddrMgrEntryLookupNwk SYMBOL "AddrMgrEntryLookupNwk"
@@ -637,20 +598,12 @@ AddrMgrExtAddrSet   SYMBOL "AddrMgrExtAddrSet"
 `??AddrMgrExtAddrSet::?relay` SYMBOL "?relay", AddrMgrExtAddrSet
 AddrMgrExtAddrValid SYMBOL "AddrMgrExtAddrValid"
 `??AddrMgrExtAddrValid::?relay` SYMBOL "?relay", AddrMgrExtAddrValid
-AssocChangeNwkAddr  SYMBOL "AssocChangeNwkAddr"
-`??AssocChangeNwkAddr::?relay` SYMBOL "?relay", AssocChangeNwkAddr
 AssocCount          SYMBOL "AssocCount"
 `??AssocCount::?relay` SYMBOL "?relay", AssocCount
 AssocFindDevice     SYMBOL "AssocFindDevice"
 `??AssocFindDevice::?relay` SYMBOL "?relay", AssocFindDevice
-AssocGetWithExt     SYMBOL "AssocGetWithExt"
-`??AssocGetWithExt::?relay` SYMBOL "?relay", AssocGetWithExt
-AssocRemove         SYMBOL "AssocRemove"
-`??AssocRemove::?relay` SYMBOL "?relay", AssocRemove
 NLME_CheckNewAddrSet SYMBOL "NLME_CheckNewAddrSet"
 `??NLME_CheckNewAddrSet::?relay` SYMBOL "?relay", NLME_CheckNewAddrSet
-NLME_CoordinatorInit SYMBOL "NLME_CoordinatorInit"
-`??NLME_CoordinatorInit::?relay` SYMBOL "?relay", NLME_CoordinatorInit
 NLME_DeviceJoiningInit SYMBOL "NLME_DeviceJoiningInit"
 `??NLME_DeviceJoiningInit::?relay` SYMBOL "?relay", NLME_DeviceJoiningInit
 NLME_DirectJoinRequest SYMBOL "NLME_DirectJoinRequest"
@@ -671,8 +624,6 @@ NLME_LeaveReq       SYMBOL "NLME_LeaveReq"
 `??NLME_LeaveReq::?relay` SYMBOL "?relay", NLME_LeaveReq
 NLME_NetworkDiscoveryRequest SYMBOL "NLME_NetworkDiscoveryRequest"
 `??NLME_NetworkDiscoveryRequest::?relay` SYMBOL "?relay", NLME_NetworkDiscoveryRequest
-NLME_NetworkFormationRequest SYMBOL "NLME_NetworkFormationRequest"
-`??NLME_NetworkFormationRequest::?relay` SYMBOL "?relay", NLME_NetworkFormationRequest
 NLME_NwkDiscReq2    SYMBOL "NLME_NwkDiscReq2"
 `??NLME_NwkDiscReq2::?relay` SYMBOL "?relay", NLME_NwkDiscReq2
 NLME_NwkDiscTerm    SYMBOL "NLME_NwkDiscTerm"
@@ -683,16 +634,12 @@ NLME_PermitJoiningRequest SYMBOL "NLME_PermitJoiningRequest"
 `??NLME_PermitJoiningRequest::?relay` SYMBOL "?relay", NLME_PermitJoiningRequest
 NLME_SetPollRate    SYMBOL "NLME_SetPollRate"
 `??NLME_SetPollRate::?relay` SYMBOL "?relay", NLME_SetPollRate
-NLME_StartRouterRequest SYMBOL "NLME_StartRouterRequest"
-`??NLME_StartRouterRequest::?relay` SYMBOL "?relay", NLME_StartRouterRequest
 RTG_RemoveRtgEntry  SYMBOL "RTG_RemoveRtgEntry"
 `??RTG_RemoveRtgEntry::?relay` SYMBOL "?relay", RTG_RemoveRtgEntry
 ZDApp_GetEmptyPendingBindReq SYMBOL "ZDApp_GetEmptyPendingBindReq"
 `??ZDApp_GetEmptyPendingBindReq::?relay` SYMBOL "?relay", ZDApp_GetEmptyPendingBindReq
 ZDApp_NVUpdate      SYMBOL "ZDApp_NVUpdate"
 `??ZDApp_NVUpdate::?relay` SYMBOL "?relay", ZDApp_NVUpdate
-ZDP_BindUnbindReq   SYMBOL "ZDP_BindUnbindReq"
-`??ZDP_BindUnbindReq::?relay` SYMBOL "?relay", ZDP_BindUnbindReq
 ZDP_EPRsp           SYMBOL "ZDP_EPRsp"
 `??ZDP_EPRsp::?relay` SYMBOL "?relay", ZDP_EPRsp
 ZDP_GenericRsp      SYMBOL "ZDP_GenericRsp"
@@ -763,8 +710,6 @@ sAddrExtCpy         SYMBOL "sAddrExtCpy"
 `??sAddrExtCpy::?relay` SYMBOL "?relay", sAddrExtCpy
 NLME_PermitJoiningTimeout SYMBOL "NLME_PermitJoiningTimeout"
 `??NLME_PermitJoiningTimeout::?relay` SYMBOL "?relay", NLME_PermitJoiningTimeout
-ZDMatchSendState    SYMBOL "ZDMatchSendState"
-`??ZDMatchSendState::?relay` SYMBOL "?relay", ZDMatchSendState
 ZDO_AnyClusterMatches SYMBOL "ZDO_AnyClusterMatches"
 `??ZDO_AnyClusterMatches::?relay` SYMBOL "?relay", ZDO_AnyClusterMatches
 ZDO_BuildSimpleDescBuf SYMBOL "ZDO_BuildSimpleDescBuf"
@@ -775,8 +720,6 @@ ZDO_EndDeviceTimeoutCB SYMBOL "ZDO_EndDeviceTimeoutCB"
 `??ZDO_EndDeviceTimeoutCB::?relay` SYMBOL "?relay", ZDO_EndDeviceTimeoutCB
 ZDO_Init            SYMBOL "ZDO_Init"
 `??ZDO_Init::?relay` SYMBOL "?relay", ZDO_Init
-ZDO_MatchEndDeviceBind SYMBOL "ZDO_MatchEndDeviceBind"
-`??ZDO_MatchEndDeviceBind::?relay` SYMBOL "?relay", ZDO_MatchEndDeviceBind
 ZDO_ParseAddrRsp    SYMBOL "ZDO_ParseAddrRsp"
 `??ZDO_ParseAddrRsp::?relay` SYMBOL "?relay", ZDO_ParseAddrRsp
 ZDO_ParseBindUnbindReq SYMBOL "ZDO_ParseBindUnbindReq"
@@ -866,8 +809,6 @@ ZDO_UpdateNwkStatus SYMBOL "ZDO_UpdateNwkStatus"
         FUNCTION `??APSME_UnBindRequest::?relay`,00H
         EXTERN `??APS_ReflectorInit::?relay`
         FUNCTION `??APS_ReflectorInit::?relay`,00H
-        EXTERN `??APS_SetEndDeviceBindTimeout::?relay`
-        FUNCTION `??APS_SetEndDeviceBindTimeout::?relay`,00H
         EXTERN `??AddrMgrEntryLookupExt::?relay`
         FUNCTION `??AddrMgrEntryLookupExt::?relay`,00H
         EXTERN `??AddrMgrEntryLookupNwk::?relay`
@@ -878,20 +819,12 @@ ZDO_UpdateNwkStatus SYMBOL "ZDO_UpdateNwkStatus"
         FUNCTION `??AddrMgrExtAddrSet::?relay`,00H
         EXTERN `??AddrMgrExtAddrValid::?relay`
         FUNCTION `??AddrMgrExtAddrValid::?relay`,00H
-        EXTERN `??AssocChangeNwkAddr::?relay`
-        FUNCTION `??AssocChangeNwkAddr::?relay`,00H
         EXTERN `??AssocCount::?relay`
         FUNCTION `??AssocCount::?relay`,00H
         EXTERN `??AssocFindDevice::?relay`
         FUNCTION `??AssocFindDevice::?relay`,00H
-        EXTERN `??AssocGetWithExt::?relay`
-        FUNCTION `??AssocGetWithExt::?relay`,00H
-        EXTERN `??AssocRemove::?relay`
-        FUNCTION `??AssocRemove::?relay`,00H
         EXTERN `??NLME_CheckNewAddrSet::?relay`
         FUNCTION `??NLME_CheckNewAddrSet::?relay`,00H
-        EXTERN `??NLME_CoordinatorInit::?relay`
-        FUNCTION `??NLME_CoordinatorInit::?relay`,00H
         EXTERN `??NLME_DeviceJoiningInit::?relay`
         FUNCTION `??NLME_DeviceJoiningInit::?relay`,00H
         EXTERN `??NLME_DirectJoinRequest::?relay`
@@ -912,8 +845,6 @@ ZDO_UpdateNwkStatus SYMBOL "ZDO_UpdateNwkStatus"
         FUNCTION `??NLME_LeaveReq::?relay`,00H
         EXTERN `??NLME_NetworkDiscoveryRequest::?relay`
         FUNCTION `??NLME_NetworkDiscoveryRequest::?relay`,00H
-        EXTERN `??NLME_NetworkFormationRequest::?relay`
-        FUNCTION `??NLME_NetworkFormationRequest::?relay`,00H
         EXTERN `??NLME_NwkDiscReq2::?relay`
         FUNCTION `??NLME_NwkDiscReq2::?relay`,00H
         EXTERN `??NLME_NwkDiscTerm::?relay`
@@ -924,16 +855,12 @@ ZDO_UpdateNwkStatus SYMBOL "ZDO_UpdateNwkStatus"
         FUNCTION `??NLME_PermitJoiningRequest::?relay`,00H
         EXTERN `??NLME_SetPollRate::?relay`
         FUNCTION `??NLME_SetPollRate::?relay`,00H
-        EXTERN `??NLME_StartRouterRequest::?relay`
-        FUNCTION `??NLME_StartRouterRequest::?relay`,00H
         EXTERN `??RTG_RemoveRtgEntry::?relay`
         FUNCTION `??RTG_RemoveRtgEntry::?relay`,00H
         EXTERN `??ZDApp_GetEmptyPendingBindReq::?relay`
         FUNCTION `??ZDApp_GetEmptyPendingBindReq::?relay`,00H
         EXTERN `??ZDApp_NVUpdate::?relay`
         FUNCTION `??ZDApp_NVUpdate::?relay`,00H
-        EXTERN `??ZDP_BindUnbindReq::?relay`
-        FUNCTION `??ZDP_BindUnbindReq::?relay`,00H
         EXTERN `??ZDP_EPRsp::?relay`
         FUNCTION `??ZDP_EPRsp::?relay`,00H
         EXTERN `??ZDP_GenericRsp::?relay`
@@ -1002,7 +929,6 @@ ZDO_UpdateNwkStatus SYMBOL "ZDO_UpdateNwkStatus"
         FUNCTION `??sAddrExtCmp::?relay`,00H
         EXTERN `??sAddrExtCpy::?relay`
         FUNCTION `??sAddrExtCpy::?relay`,00H
-        EXTERN AIB_MaxBindingTime
         EXTERN AIB_apsUseExtendedPANID
         EXTERN APSME_BindRequest
         FUNCTION APSME_BindRequest,0202H
@@ -1037,13 +963,6 @@ ZDO_UpdateNwkStatus SYMBOL "ZDO_UpdateNwkStatus"
         ARGFRAME ISTACK, 2, STACK
         ARGFRAME PSTACK, 0, STACK
         ARGFRAME XSTACK, 0, STACK
-        ARGFRAME IOVERLAY, 0, STATIC
-        ARGFRAME DOVERLAY, 0, STATIC
-        EXTERN APS_SetEndDeviceBindTimeout
-        FUNCTION APS_SetEndDeviceBindTimeout,0202H
-        ARGFRAME ISTACK, 0, STACK
-        ARGFRAME PSTACK, 0, STACK
-        ARGFRAME XSTACK, 37, STACK
         ARGFRAME IOVERLAY, 0, STATIC
         ARGFRAME DOVERLAY, 0, STATIC
         EXTERN AddrMgrEntryLookupExt
@@ -1081,13 +1000,6 @@ ZDO_UpdateNwkStatus SYMBOL "ZDO_UpdateNwkStatus"
         ARGFRAME XSTACK, 18, STACK
         ARGFRAME IOVERLAY, 0, STATIC
         ARGFRAME DOVERLAY, 0, STATIC
-        EXTERN AssocChangeNwkAddr
-        FUNCTION AssocChangeNwkAddr,0202H
-        ARGFRAME ISTACK, 0, STACK
-        ARGFRAME PSTACK, 0, STACK
-        ARGFRAME XSTACK, 42, STACK
-        ARGFRAME IOVERLAY, 0, STATIC
-        ARGFRAME DOVERLAY, 0, STATIC
         EXTERN AssocCount
         FUNCTION AssocCount,0202H
         ARGFRAME ISTACK, 0, STACK
@@ -1102,32 +1014,11 @@ ZDO_UpdateNwkStatus SYMBOL "ZDO_UpdateNwkStatus"
         ARGFRAME XSTACK, 59, STACK
         ARGFRAME IOVERLAY, 0, STATIC
         ARGFRAME DOVERLAY, 0, STATIC
-        EXTERN AssocGetWithExt
-        FUNCTION AssocGetWithExt,0202H
-        ARGFRAME ISTACK, 0, STACK
-        ARGFRAME PSTACK, 0, STACK
-        ARGFRAME XSTACK, 42, STACK
-        ARGFRAME IOVERLAY, 0, STATIC
-        ARGFRAME DOVERLAY, 0, STATIC
-        EXTERN AssocRemove
-        FUNCTION AssocRemove,0202H
-        ARGFRAME ISTACK, 0, STACK
-        ARGFRAME PSTACK, 0, STACK
-        ARGFRAME XSTACK, 42, STACK
-        ARGFRAME IOVERLAY, 0, STATIC
-        ARGFRAME DOVERLAY, 0, STATIC
         EXTERN NLME_CheckNewAddrSet
         FUNCTION NLME_CheckNewAddrSet,0202H
         ARGFRAME ISTACK, 0, STACK
         ARGFRAME PSTACK, 0, STACK
         ARGFRAME XSTACK, 42, STACK
-        ARGFRAME IOVERLAY, 0, STATIC
-        ARGFRAME DOVERLAY, 0, STATIC
-        EXTERN NLME_CoordinatorInit
-        FUNCTION NLME_CoordinatorInit,0202H
-        ARGFRAME ISTACK, 2, STACK
-        ARGFRAME PSTACK, 0, STACK
-        ARGFRAME XSTACK, 0, STACK
         ARGFRAME IOVERLAY, 0, STATIC
         ARGFRAME DOVERLAY, 0, STATIC
         EXTERN NLME_DeviceJoiningInit
@@ -1197,14 +1088,7 @@ ZDO_UpdateNwkStatus SYMBOL "ZDO_UpdateNwkStatus"
         FUNCTION NLME_NetworkDiscoveryRequest,0202H
         ARGFRAME ISTACK, 0, STACK
         ARGFRAME PSTACK, 0, STACK
-        ARGFRAME XSTACK, 24, STACK
-        ARGFRAME IOVERLAY, 0, STATIC
-        ARGFRAME DOVERLAY, 0, STATIC
-        EXTERN NLME_NetworkFormationRequest
-        FUNCTION NLME_NetworkFormationRequest,0202H
-        ARGFRAME ISTACK, 0, STACK
-        ARGFRAME PSTACK, 0, STACK
-        ARGFRAME XSTACK, 31, STACK
+        ARGFRAME XSTACK, 21, STACK
         ARGFRAME IOVERLAY, 0, STATIC
         ARGFRAME DOVERLAY, 0, STATIC
         EXTERN NLME_NwkDiscReq2
@@ -1225,7 +1109,7 @@ ZDO_UpdateNwkStatus SYMBOL "ZDO_UpdateNwkStatus"
         FUNCTION NLME_OrphanJoinRequest,0202H
         ARGFRAME ISTACK, 0, STACK
         ARGFRAME PSTACK, 0, STACK
-        ARGFRAME XSTACK, 24, STACK
+        ARGFRAME XSTACK, 21, STACK
         ARGFRAME IOVERLAY, 0, STATIC
         ARGFRAME DOVERLAY, 0, STATIC
         EXTERN NLME_PermitJoiningRequest
@@ -1240,13 +1124,6 @@ ZDO_UpdateNwkStatus SYMBOL "ZDO_UpdateNwkStatus"
         ARGFRAME ISTACK, 0, STACK
         ARGFRAME PSTACK, 0, STACK
         ARGFRAME XSTACK, 18, STACK
-        ARGFRAME IOVERLAY, 0, STATIC
-        ARGFRAME DOVERLAY, 0, STATIC
-        EXTERN NLME_StartRouterRequest
-        FUNCTION NLME_StartRouterRequest,0202H
-        ARGFRAME ISTACK, 0, STACK
-        ARGFRAME PSTACK, 0, STACK
-        ARGFRAME XSTACK, 24, STACK
         ARGFRAME IOVERLAY, 0, STATIC
         ARGFRAME DOVERLAY, 0, STATIC
         EXTERN RTG_RemoveRtgEntry
@@ -1269,19 +1146,12 @@ ZDO_UpdateNwkStatus SYMBOL "ZDO_UpdateNwkStatus"
         FUNCTION ZDApp_NVUpdate,0202H
         ARGFRAME ISTACK, 0, STACK
         ARGFRAME PSTACK, 0, STACK
-        ARGFRAME XSTACK, 42, STACK
+        ARGFRAME XSTACK, 27, STACK
         ARGFRAME IOVERLAY, 0, STATIC
         ARGFRAME DOVERLAY, 0, STATIC
         EXTERN ZDO_Config_Node_Descriptor
         EXTERN ZDO_Config_Power_Descriptor
         EXTERN ZDO_UseExtendedPANID
-        EXTERN ZDP_BindUnbindReq
-        FUNCTION ZDP_BindUnbindReq,0202H
-        ARGFRAME ISTACK, 0, STACK
-        ARGFRAME PSTACK, 0, STACK
-        ARGFRAME XSTACK, 45, STACK
-        ARGFRAME IOVERLAY, 0, STATIC
-        ARGFRAME DOVERLAY, 0, STATIC
         EXTERN ZDP_EPRsp
         FUNCTION ZDP_EPRsp,0202H
         ARGFRAME ISTACK, 0, STACK
@@ -1342,7 +1212,7 @@ ZDO_UpdateNwkStatus SYMBOL "ZDO_UpdateNwkStatus"
         FUNCTION ZDP_SendData,0202H
         ARGFRAME ISTACK, 0, STACK
         ARGFRAME PSTACK, 0, STACK
-        ARGFRAME XSTACK, 42, STACK
+        ARGFRAME XSTACK, 40, STACK
         ARGFRAME IOVERLAY, 0, STATIC
         ARGFRAME DOVERLAY, 0, STATIC
         EXTERN ZDP_ServerDiscRsp
@@ -1359,7 +1229,6 @@ ZDO_UpdateNwkStatus SYMBOL "ZDO_UpdateNwkStatus"
         ARGFRAME XSTACK, 12, STACK
         ARGFRAME IOVERLAY, 0, STATIC
         ARGFRAME DOVERLAY, 0, STATIC
-        EXTERN ZDP_TransID
         EXTERN ZDP_UserDescRsp
         FUNCTION ZDP_UserDescRsp,0202H
         ARGFRAME ISTACK, 0, STACK
@@ -1423,7 +1292,7 @@ ZDO_UpdateNwkStatus SYMBOL "ZDO_UpdateNwkStatus"
         FUNCTION nwk_ScanJoiningOrphan,0202H
         ARGFRAME ISTACK, 0, STACK
         ARGFRAME PSTACK, 0, STACK
-        ARGFRAME XSTACK, 24, STACK
+        ARGFRAME XSTACK, 21, STACK
         ARGFRAME IOVERLAY, 0, STATIC
         ARGFRAME DOVERLAY, 0, STATIC
         EXTERN osal_build_uint32
@@ -1510,7 +1379,6 @@ ZDO_UpdateNwkStatus SYMBOL "ZDO_UpdateNwkStatus"
         ARGFRAME XSTACK, 31, STACK
         ARGFRAME IOVERLAY, 0, STATIC
         ARGFRAME DOVERLAY, 0, STATIC
-        EXTERN pNwkNotMyChildListDelete
         EXTERN sAddrExtCmp
         FUNCTION sAddrExtCmp,0202H
         ARGFRAME ISTACK, 0, STACK
@@ -1529,14 +1397,11 @@ ZDO_UpdateNwkStatus SYMBOL "ZDO_UpdateNwkStatus"
         EXTERN zdappMgmtNwkDiscRspAddr
         EXTERN zdappMgmtNwkDiscRspTransSeq
         EXTERN zdappMgmtNwkDiscStartIndex
-        EXTERN zgApsUseExtendedPANID
         EXTERN zgChildAgingEnable
-        EXTERN zgConfigPANID
         EXTERN zgDefaultChannelList
         EXTERN zgDefaultStartingScanDuration
-        EXTERN zgDeviceLogicalType
 
-// D:\School\Jaar_3\WTWS\Projects\WirelessSensorNetworksPracticum\Components\stack\zdo\ZDObject.c
+// D:\Jop van Buuren\Documents\Hogeschool\Vakken\wt\WirelessSensorNetworksPracticum\Components\stack\zdo\ZDObject.c
 //    1 /**************************************************************************************************
 //    2   Filename:       ZDObject.c
 //    3   Revised:        $Date: 2014-08-04 18:42:36 -0700 (Mon, 04 Aug 2014) $
@@ -1887,17 +1752,6 @@ ZDODeviceSetup:
           CFI Function ZDODeviceSetup
         CODE
 //  255 {
-        FUNCALL ZDODeviceSetup, NLME_CoordinatorInit
-        LOCFRAME ISTACK, 2, STACK
-        LOCFRAME PSTACK, 0, STACK
-        LOCFRAME XSTACK, 0, STACK
-        LOCFRAME IOVERLAY, 0, STATIC
-        LOCFRAME DOVERLAY, 0, STATIC
-        ARGFRAME ISTACK, 2, STACK
-        ARGFRAME PSTACK, 0, STACK
-        ARGFRAME XSTACK, 0, STACK
-        ARGFRAME IOVERLAY, 0, STATIC
-        ARGFRAME DOVERLAY, 0, STATIC
         FUNCALL ZDODeviceSetup, APS_ReflectorInit
         LOCFRAME ISTACK, 2, STACK
         LOCFRAME PSTACK, 0, STACK
@@ -1931,8 +1785,6 @@ ZDODeviceSetup:
 //  256   if ( ZG_BUILD_COORDINATOR_TYPE )
 //  257   {
 //  258     NLME_CoordinatorInit();
-        ; Setup parameters for call to function NLME_CoordinatorInit
-        LCALL   `??NLME_CoordinatorInit::?relay`; Banked call to: NLME_CoordinatorInit
 //  259   }
 //  260 
 //  261 #if defined ( REFLECTOR )
@@ -1977,78 +1829,53 @@ ZDO_StartDevice:
           CFI Function ZDO_StartDevice
         CODE
 //  284 {
-        FUNCALL ZDO_StartDevice, NLME_NetworkFormationRequest
-        LOCFRAME ISTACK, 0, STACK
-        LOCFRAME PSTACK, 0, STACK
-        LOCFRAME XSTACK, 31, STACK
-        LOCFRAME IOVERLAY, 0, STATIC
-        LOCFRAME DOVERLAY, 0, STATIC
-        ARGFRAME ISTACK, 0, STACK
-        ARGFRAME PSTACK, 0, STACK
-        ARGFRAME XSTACK, 31, STACK
-        ARGFRAME IOVERLAY, 0, STATIC
-        ARGFRAME DOVERLAY, 0, STATIC
-        FUNCALL ZDO_StartDevice, NLME_StartRouterRequest
-        LOCFRAME ISTACK, 0, STACK
-        LOCFRAME PSTACK, 0, STACK
-        LOCFRAME XSTACK, 24, STACK
-        LOCFRAME IOVERLAY, 0, STATIC
-        LOCFRAME DOVERLAY, 0, STATIC
-        ARGFRAME ISTACK, 0, STACK
-        ARGFRAME PSTACK, 0, STACK
-        ARGFRAME XSTACK, 24, STACK
-        ARGFRAME IOVERLAY, 0, STATIC
-        ARGFRAME DOVERLAY, 0, STATIC
         FUNCALL ZDO_StartDevice, NLME_NetworkDiscoveryRequest
         LOCFRAME ISTACK, 0, STACK
         LOCFRAME PSTACK, 0, STACK
-        LOCFRAME XSTACK, 24, STACK
+        LOCFRAME XSTACK, 21, STACK
         LOCFRAME IOVERLAY, 0, STATIC
         LOCFRAME DOVERLAY, 0, STATIC
         ARGFRAME ISTACK, 0, STACK
         ARGFRAME PSTACK, 0, STACK
-        ARGFRAME XSTACK, 24, STACK
+        ARGFRAME XSTACK, 21, STACK
         ARGFRAME IOVERLAY, 0, STATIC
         ARGFRAME DOVERLAY, 0, STATIC
         FUNCALL ZDO_StartDevice, nwk_ScanJoiningOrphan
         LOCFRAME ISTACK, 0, STACK
         LOCFRAME PSTACK, 0, STACK
-        LOCFRAME XSTACK, 24, STACK
+        LOCFRAME XSTACK, 21, STACK
         LOCFRAME IOVERLAY, 0, STATIC
         LOCFRAME DOVERLAY, 0, STATIC
         ARGFRAME ISTACK, 0, STACK
         ARGFRAME PSTACK, 0, STACK
-        ARGFRAME XSTACK, 24, STACK
+        ARGFRAME XSTACK, 21, STACK
         ARGFRAME IOVERLAY, 0, STATIC
         ARGFRAME DOVERLAY, 0, STATIC
         FUNCALL ZDO_StartDevice, NLME_OrphanJoinRequest
         LOCFRAME ISTACK, 0, STACK
         LOCFRAME PSTACK, 0, STACK
-        LOCFRAME XSTACK, 24, STACK
+        LOCFRAME XSTACK, 21, STACK
         LOCFRAME IOVERLAY, 0, STATIC
         LOCFRAME DOVERLAY, 0, STATIC
         ARGFRAME ISTACK, 0, STACK
         ARGFRAME PSTACK, 0, STACK
-        ARGFRAME XSTACK, 24, STACK
+        ARGFRAME XSTACK, 21, STACK
         ARGFRAME IOVERLAY, 0, STATIC
         ARGFRAME DOVERLAY, 0, STATIC
         FUNCALL ZDO_StartDevice, osal_start_timerEx
         LOCFRAME ISTACK, 0, STACK
         LOCFRAME PSTACK, 0, STACK
-        LOCFRAME XSTACK, 28, STACK
+        LOCFRAME XSTACK, 25, STACK
         LOCFRAME IOVERLAY, 0, STATIC
         LOCFRAME DOVERLAY, 0, STATIC
         ARGFRAME ISTACK, 0, STACK
         ARGFRAME PSTACK, 0, STACK
-        ARGFRAME XSTACK, 28, STACK
+        ARGFRAME XSTACK, 25, STACK
         ARGFRAME IOVERLAY, 0, STATIC
         ARGFRAME DOVERLAY, 0, STATIC
         REQUIRE ?V0
         REQUIRE ?V1
-        REQUIRE ?V2
-        REQUIRE ?V3
-        REQUIRE ?V4
-        MOV     A,#-0xd
+        MOV     A,#-0xa
         LCALL   ?BANKED_ENTER_XDATA
           CFI DPH0 load(1, XDATA, add(CFA_XSP16, literal(-1)))
           CFI DPL0 load(1, XDATA, add(CFA_XSP16, literal(-2)))
@@ -2056,24 +1883,19 @@ ZDO_StartDevice:
           CFI ?RET_HIGH load(1, XDATA, add(CFA_XSP16, literal(-4)))
           CFI ?RET_LOW load(1, XDATA, add(CFA_XSP16, literal(-5)))
           CFI R7 load(1, XDATA, add(CFA_XSP16, literal(-6)))
-          CFI V4 load(1, XDATA, add(CFA_XSP16, literal(-7)))
-          CFI V3 load(1, XDATA, add(CFA_XSP16, literal(-8)))
-          CFI V2 load(1, XDATA, add(CFA_XSP16, literal(-9)))
-          CFI V1 load(1, XDATA, add(CFA_XSP16, literal(-10)))
-          CFI V0 load(1, XDATA, add(CFA_XSP16, literal(-11)))
-          CFI VB load(1, XDATA, add(CFA_XSP16, literal(-12)))
-          CFI R6 load(1, XDATA, add(CFA_XSP16, literal(-13)))
+          CFI V1 load(1, XDATA, add(CFA_XSP16, literal(-7)))
+          CFI V0 load(1, XDATA, add(CFA_XSP16, literal(-8)))
+          CFI VB load(1, XDATA, add(CFA_XSP16, literal(-9)))
+          CFI R6 load(1, XDATA, add(CFA_XSP16, literal(-10)))
           CFI CFA_SP SP+0
-          CFI CFA_XSP16 add(XSP16, 13)
-        ; Saved register size: 13
+          CFI CFA_XSP16 add(XSP16, 10)
+        ; Saved register size: 10
         ; Auto size: 11
         MOV     A,#-0xb
         LCALL   ?ALLOC_XSTACK8
-          CFI CFA_XSP16 add(XSP16, 24)
-        MOV     ?V1,R1
-        MOV     ?V0,R2
-        MOV     ?V2,R3
-        MOV     ?V3,R4
+          CFI CFA_XSP16 add(XSP16, 21)
+        MOV     ?V0,R1
+        MOV     ?V1,R2
 //  285   ZStatus_t ret;
 //  286 #if defined ( ZIGBEE_FREQ_AGILITY )
 //  287   static uint8 discRetries = 0;
@@ -2086,77 +1908,19 @@ ZDO_StartDevice:
         MOV     R1,#0x12
 //  294 
 //  295   if ( ZG_BUILD_COORDINATOR_TYPE && logicalType == NODETYPE_COORDINATOR )
-        MOV     A,?V1
-        JNZ     ??ZDO_StartDevice_0
 //  296   {
 //  297     if ( startMode == MODE_HARD )
-        MOV     A,#0x2
-        XRL     A,?V0
-        JNZ     ??ZDO_StartDevice_1
 //  298     {
 //  299       devState = DEV_COORD_STARTING;
-        MOV     DPTR,#devState
-        MOV     A,#0x8
-        MOVX    @DPTR,A
 //  300       ret = NLME_NetworkFormationRequest( zgConfigPANID, zgApsUseExtendedPANID, zgDefaultChannelList,
 //  301                                           zgDefaultStartingScanDuration, beaconOrder,
 //  302                                           superframeOrder, false );
-        ; Setup parameters for call to function NLME_NetworkFormationRequest
-        MOV     ?V4,#0x0
-        MOV     R0,#?V4
-        LCALL   ?PUSH_XSTACK_I_ONE
-          CFI CFA_XSP16 add(XSP16, 25)
-        MOV     A,?V3
-        MOV     ?V4,A
-        MOV     R0,#?V4
-        LCALL   ?PUSH_XSTACK_I_ONE
-          CFI CFA_XSP16 add(XSP16, 26)
-        MOV     A,?V2
-        MOV     ?V4,A
-        MOV     R0,#?V4
-        LCALL   ?PUSH_XSTACK_I_ONE
-          CFI CFA_XSP16 add(XSP16, 27)
-        MOV     DPTR,#zgDefaultChannelList
-        LCALL   ?PUSH_XSTACK8_X_FOUR
-          CFI CFA_XSP16 add(XSP16, 31)
-        MOV     DPTR,#zgDefaultStartingScanDuration
-        MOVX    A,@DPTR
-        MOV     R1,A
-        MOV     R4,#zgApsUseExtendedPANID & 0xff
-        MOV     R5,#(zgApsUseExtendedPANID >> 8) & 0xff
-        MOV     DPTR,#zgConfigPANID
-        MOVX    A,@DPTR
-        MOV     R2,A
-        INC     DPTR
-        MOVX    A,@DPTR
-        MOV     R3,A
-        LCALL   `??NLME_NetworkFormationRequest::?relay`; Banked call to: NLME_NetworkFormationRequest
-        MOV     A,#0x7
-        LCALL   ?DEALLOC_XSTACK8
-          CFI CFA_XSP16 add(XSP16, 24)
-        MOV     A,R1
-        MOV     R1,A
-        SJMP    ??ZDO_StartDevice_0
 //  303     }
 //  304     else if ( startMode == MODE_RESUME )
-??ZDO_StartDevice_1:
-        MOV     A,#0x1
-        XRL     A,?V0
-        JNZ     ??ZDO_StartDevice_0
 //  305     {
 //  306       // Just start the coordinator
 //  307       devState = DEV_COORD_STARTING;
-        MOV     DPTR,#devState
-        MOV     A,#0x8
-        MOVX    @DPTR,A
 //  308       ret = NLME_StartRouterRequest( beaconOrder, beaconOrder, false );
-        ; Setup parameters for call to function NLME_StartRouterRequest
-        MOV     R3,#0x0
-        MOV     R2,?V2
-        MOV     R1,?V2
-        LCALL   `??NLME_StartRouterRequest::?relay`; Banked call to: NLME_StartRouterRequest
-        MOV     A,R1
-        MOV     R1,A
 //  309     }
 //  310     else
 //  311     {
@@ -2167,25 +1931,24 @@ ZDO_StartDevice:
 //  316   }
 //  317 
 //  318   if ( ZG_BUILD_JOINING_TYPE && (logicalType == NODETYPE_ROUTER || logicalType == NODETYPE_DEVICE) )
-??ZDO_StartDevice_0:
         MOV     A,#0x1
-        XRL     A,?V1
-        JZ      ??ZDO_StartDevice_2
+        XRL     A,?V0
+        JZ      ??ZDO_StartDevice_0
         MOV     A,#0x2
-        XRL     A,?V1
+        XRL     A,?V0
         JZ      $+5
-        LJMP    ??ZDO_StartDevice_3 & 0xFFFF
+        LJMP    ??ZDO_StartDevice_1 & 0xFFFF
 //  319   {
 //  320     if ( (startMode == MODE_JOIN) || (startMode == MODE_REJOIN) )
-??ZDO_StartDevice_2:
-        MOV     A,?V0
-        JZ      ??ZDO_StartDevice_4
+??ZDO_StartDevice_0:
+        MOV     A,?V1
+        JZ      ??ZDO_StartDevice_2
         MOV     A,#0x3
-        XRL     A,?V0
-        JNZ     ??ZDO_StartDevice_5
+        XRL     A,?V1
+        JNZ     ??ZDO_StartDevice_3
 //  321     {
 //  322       devState = DEV_NWK_DISC;
-??ZDO_StartDevice_4:
+??ZDO_StartDevice_2:
         MOV     DPTR,#devState
         MOV     A,#0x2
         MOVX    @DPTR,A
@@ -2207,20 +1970,6 @@ ZDO_StartDevice:
 //  329     #if defined ( ZIGBEE_FREQ_AGILITY )
 //  330       if ( !( ZDO_Config_Node_Descriptor.CapabilityFlags & CAPINFO_RCVR_ON_IDLE ) &&
 //  331             ( ret == ZSuccess ) && ( ++discRetries == 4 ) )
-        MOV     DPTR,#ZDO_Config_Node_Descriptor + 2
-        MOVX    A,@DPTR
-        MOV     C,0xE0 /* A   */.3
-        JC      ??ZDO_StartDevice_6
-        MOV     A,R1
-        JNZ     ??ZDO_StartDevice_6
-        MOV     DPTR,#??discRetries
-        MOVX    A,@DPTR
-        ADD     A,#0x1
-        MOVX    @DPTR,A
-        MOV     DPTR,#??discRetries
-        MOVX    A,@DPTR
-        XRL     A,#0x4
-        JNZ     ??ZDO_StartDevice_6
 //  332       {
 //  333         // For devices with RxOnWhenIdle equals to FALSE, any network channel
 //  334         // change will not be recieved. On these devices or routers that have
@@ -2229,31 +1978,14 @@ ZDO_StartDevice:
 //  337         // extended PANID isn't found using the Default Channel list, an scan
 //  338         // should be completed using all channels.
 //  339         zgDefaultChannelList = MAX_CHANNELS_24GHZ;
-        MOV     R4,#0x0
-        MOV     R5,#-0x8
-        MOV     R6,#-0x1
-        MOV     R7,#0x7
-        MOV     DPTR,#zgDefaultChannelList
-        MOV     A,R4
-        MOVX    @DPTR,A
-        INC     DPTR
-        MOV     A,R5
-        MOVX    @DPTR,A
-        INC     DPTR
-        MOV     A,R6
-        MOVX    @DPTR,A
-        INC     DPTR
-        MOV     A,R7
-        MOVX    @DPTR,A
 //  340       }
 //  341     #endif // ZIGBEE_FREQ_AGILITY
 //  342     #if defined ( ZIGBEE_COMMISSIONING )
 //  343       if (startMode == MODE_REJOIN && scanCnt++ >= 5 )
-??ZDO_StartDevice_6:
         MOV     A,#0x3
-        XRL     A,?V0
+        XRL     A,?V1
         JZ      $+5
-        LJMP    ??ZDO_StartDevice_3 & 0xFFFF
+        LJMP    ??ZDO_StartDevice_1 & 0xFFFF
         MOV     DPTR,#??scanCnt
         MOVX    A,@DPTR
         MOV     R0,A
@@ -2264,7 +1996,7 @@ ZDO_StartDevice:
         MOV     A,R0
         CLR     C
         SUBB    A,#0x5
-        JC      ??ZDO_StartDevice_3
+        JC      ??ZDO_StartDevice_1
 //  344       {
 //  345         // When ApsUseExtendedPanID is commissioned to a non zero value via
 //  346         // application specific means, the device shall conduct an active scan
@@ -2289,21 +2021,21 @@ ZDO_StartDevice:
         INC     DPTR
         MOV     A,R7
         MOVX    @DPTR,A
-        SJMP    ??ZDO_StartDevice_3
+        SJMP    ??ZDO_StartDevice_1
 //  352       }
 //  353     #endif // ZIGBEE_COMMISSIONING
 //  354   #endif
 //  355     }
 //  356     else if ( startMode == MODE_RESUME )
-??ZDO_StartDevice_5:
+??ZDO_StartDevice_3:
         MOV     A,#0x1
-        XRL     A,?V0
-        JNZ     ??ZDO_StartDevice_3
+        XRL     A,?V1
+        JNZ     ??ZDO_StartDevice_1
 //  357     {
 //  358       if ( logicalType == NODETYPE_ROUTER )
         MOV     A,#0x1
-        XRL     A,?V1
-        JNZ     ??ZDO_StartDevice_7
+        XRL     A,?V0
+        JNZ     ??ZDO_StartDevice_4
 //  359       {
 //  360         ZMacScanCnf_t scanCnf;
 //  361         devState = DEV_NWK_ORPHAN;
@@ -2353,12 +2085,12 @@ ZDO_StartDevice:
 //  369 
 //  370         ret = ZSuccess;
         MOV     R1,#0x0
-        SJMP    ??ZDO_StartDevice_3
+        SJMP    ??ZDO_StartDevice_1
 //  371       }
 //  372       else
 //  373       {
 //  374         devState = DEV_NWK_ORPHAN;
-??ZDO_StartDevice_7:
+??ZDO_StartDevice_4:
         MOV     DPTR,#devState
         MOV     A,#0xa
         MOVX    @DPTR,A
@@ -2384,15 +2116,15 @@ ZDO_StartDevice:
 //  385   }
 //  386 
 //  387   if ( ret != ZSuccess )
-??ZDO_StartDevice_3:
+??ZDO_StartDevice_1:
         MOV     A,R1
-        JZ      ??ZDO_StartDevice_8
+        JZ      ??ZDO_StartDevice_5
 //  388   {
 //  389     osal_start_timerEx(ZDAppTaskID, ZDO_NETWORK_INIT, NWK_RETRY_DELAY );
         ; Setup parameters for call to function osal_start_timerEx
         MOV     DPTR,#__Constant_3e8
         LCALL   ?PUSH_XSTACK8_X_FOUR
-          CFI CFA_XSP16 add(XSP16, 28)
+          CFI CFA_XSP16 add(XSP16, 25)
         MOV     R2,#0x1
         MOV     R3,#0x0
         MOV     DPTR,#ZDAppTaskID
@@ -2401,23 +2133,20 @@ ZDO_StartDevice:
         LCALL   `??osal_start_timerEx::?relay`; Banked call to: osal_start_timerEx
         MOV     A,#0x4
         LCALL   ?DEALLOC_XSTACK8
-          CFI CFA_XSP16 add(XSP16, 24)
+          CFI CFA_XSP16 add(XSP16, 21)
         MOV     A,R1
 //  390   }
 //  391 }
-??ZDO_StartDevice_8:
+??ZDO_StartDevice_5:
         MOV     A,#0xb
         LCALL   ?DEALLOC_XSTACK8
-          CFI CFA_XSP16 add(XSP16, 13)
-        MOV     R7,#0x5
+          CFI CFA_XSP16 add(XSP16, 10)
+        MOV     R7,#0x2
         LJMP    ?BANKED_LEAVE_XDATA
           CFI R6 SameValue
           CFI VB SameValue
           CFI V0 SameValue
           CFI V1 SameValue
-          CFI V2 SameValue
-          CFI V3 SameValue
-          CFI V4 SameValue
           CFI R7 SameValue
           CFI ?RET_LOW Frame(CFA_SP, 1)
           CFI ?RET_HIGH Frame(CFA_SP, 2)
@@ -2427,12 +2156,6 @@ ZDO_StartDevice:
           CFI CFA_SP SP+-3
           CFI CFA_XSP16 XSP16+0
           CFI EndBlock cfiBlock2
-
-        RSEG XDATA_Z:XDATA:NOROOT(0)
-        DATA8
-??discRetries:
-        DS 1
-        REQUIRE __INIT_XDATA_Z
 
         RSEG XDATA_Z:XDATA:NOROOT(0)
         DATA8
@@ -3210,216 +2933,28 @@ ZDO_SendEDBindRsp:
 //  558  *
 //  559  * @return      number of matches
 //  560  */
-
-        RSEG BANKED_CODE:CODE:NOROOT(0)
 //  561 static byte ZDO_CompareClusterLists( byte numList1, uint16 *list1,
-ZDO_CompareClusterLists:
-          CFI Block cfiBlock7 Using cfiCommon0
-          CFI Function ZDO_CompareClusterLists
-        CODE
 //  562                           byte numList2, uint16 *list2, uint16 *pMatches )
 //  563 {
-        REQUIRE ?V0
-        REQUIRE ?V1
-        REQUIRE ?V2
-        REQUIRE ?V3
-        REQUIRE ?V4
-        REQUIRE ?V5
-        REQUIRE ?V6
-        REQUIRE ?V7
-        MOV     A,#-0x10
-        LCALL   ?BANKED_ENTER_XDATA
-          CFI DPH0 load(1, XDATA, add(CFA_XSP16, literal(-1)))
-          CFI DPL0 load(1, XDATA, add(CFA_XSP16, literal(-2)))
-          CFI ?BRET_EXT load(1, XDATA, add(CFA_XSP16, literal(-3)))
-          CFI ?RET_HIGH load(1, XDATA, add(CFA_XSP16, literal(-4)))
-          CFI ?RET_LOW load(1, XDATA, add(CFA_XSP16, literal(-5)))
-          CFI R7 load(1, XDATA, add(CFA_XSP16, literal(-6)))
-          CFI V7 load(1, XDATA, add(CFA_XSP16, literal(-7)))
-          CFI V6 load(1, XDATA, add(CFA_XSP16, literal(-8)))
-          CFI V5 load(1, XDATA, add(CFA_XSP16, literal(-9)))
-          CFI V4 load(1, XDATA, add(CFA_XSP16, literal(-10)))
-          CFI V3 load(1, XDATA, add(CFA_XSP16, literal(-11)))
-          CFI V2 load(1, XDATA, add(CFA_XSP16, literal(-12)))
-          CFI V1 load(1, XDATA, add(CFA_XSP16, literal(-13)))
-          CFI V0 load(1, XDATA, add(CFA_XSP16, literal(-14)))
-          CFI VB load(1, XDATA, add(CFA_XSP16, literal(-15)))
-          CFI R6 load(1, XDATA, add(CFA_XSP16, literal(-16)))
-          CFI CFA_SP SP+0
-          CFI CFA_XSP16 add(XSP16, 16)
-        ; Saved register size: 16
-        ; Auto size: 0
-        MOV     ?V3,R1
-        MOV     ?V4,R4
 //  564   byte x, y;
 //  565   uint16 z;
 //  566   byte numMatches = 0;
-        MOV     ?V1,#0x0
 //  567 
 //  568   // Check the first in against the seconds out
 //  569   for ( x = 0; x < numList1; x++ )
-        MOV     ?V0,#0x0
-        MOV     A,#0x10
-        LCALL   ?XSTACK_DISP0_8
-        MOVX    A,@DPTR
-        MOV     R0,A
-        INC     DPTR
-        MOVX    A,@DPTR
-        MOV     R1,A
-        MOV     A,R0
-        MOV     R4,A
-        MOV     A,R1
-        MOV     R5,A
-        MOV     A,#0x12
-        LCALL   ?XSTACK_DISP0_8
-        MOVX    A,@DPTR
-        MOV     R0,A
-        INC     DPTR
-        MOVX    A,@DPTR
-        MOV     R1,A
-        MOV     A,R0
-        MOV     R6,A
-        MOV     A,R1
-        MOV     R7,A
-        LJMP    ??ZDO_CompareClusterLists_0 & 0xFFFF
 //  570   {
 //  571     for ( y = 0; y < numList2; y++ )
 //  572     {
 //  573       z = list2[y];
-??ZDO_CompareClusterLists_1:
-        MOV     R0,?V2
-        MOV     R1,#0x0
-        MOV     A,R0
-        MOV     B,#0x2
-        MUL     AB
-        XCH     A,R0
-        MOV     ?V5,B
-        MOV     B,#0x0
-        MUL     AB
-        ADD     A,?V5
-        MOV     ?V5,A
-        MOV     B,#0x2
-        MOV     A,R1
-        MUL     AB
-        ADD     A,?V5
-        MOV     R1,A
-        MOV     A,R4
-        ADD     A,R0
-        MOV     DPL,A
-        MOV     A,R5
-        ADDC    A,R1
-        MOV     DPH,A
-        MOVX    A,@DPTR
-        MOV     ?V6,A
-        INC     DPTR
-        MOVX    A,@DPTR
-        MOV     ?V7,A
 //  574       if ( list1[x] == z )
-        MOV     R0,?V0
-        MOV     R1,#0x0
-        MOV     A,R0
-        MOV     B,#0x2
-        MUL     AB
-        XCH     A,R0
-        MOV     ?V5,B
-        MOV     B,#0x0
-        MUL     AB
-        ADD     A,?V5
-        MOV     ?V5,A
-        MOV     B,#0x2
-        MOV     A,R1
-        MUL     AB
-        ADD     A,?V5
-        MOV     R1,A
-        MOV     A,R2
-        ADD     A,R0
-        MOV     DPL,A
-        MOV     A,R3
-        ADDC    A,R1
-        MOV     DPH,A
-        MOVX    A,@DPTR
-        XRL     A,?V6
-        JNZ     ??ZDO_CompareClusterLists_2
-        INC     DPTR
-        MOVX    A,@DPTR
-        XRL     A,?V7
-??ZDO_CompareClusterLists_2:
-        JNZ     ??ZDO_CompareClusterLists_3
 //  575       {
 //  576         pMatches[numMatches++] = z;
-        MOV     R0,?V1
-        MOV     R1,#0x0
-        MOV     A,R0
-        MOV     B,#0x2
-        MUL     AB
-        XCH     A,R0
-        MOV     ?V5,B
-        MOV     B,#0x0
-        MUL     AB
-        ADD     A,?V5
-        MOV     ?V5,A
-        MOV     B,#0x2
-        MOV     A,R1
-        MUL     AB
-        ADD     A,?V5
-        MOV     R1,A
-        MOV     A,R6
-        ADD     A,R0
-        MOV     DPL,A
-        MOV     A,R7
-        ADDC    A,R1
-        MOV     DPH,A
-        MOV     A,?V6
-        MOVX    @DPTR,A
-        INC     DPTR
-        MOV     A,?V7
-        MOVX    @DPTR,A
-        INC     ?V1
 //  577       }
 //  578     }
-??ZDO_CompareClusterLists_3:
-        INC     ?V2
-??ZDO_CompareClusterLists_4:
-        MOV     A,?V2
-        CLR     C
-        SUBB    A,?V4
-        JNC     $+5
-        LJMP    ??ZDO_CompareClusterLists_1 & 0xFFFF
-        INC     ?V0
-??ZDO_CompareClusterLists_0:
-        MOV     A,?V0
-        CLR     C
-        SUBB    A,?V3
-        JNC     ??ZDO_CompareClusterLists_5
-        MOV     ?V2,#0x0
-        SJMP    ??ZDO_CompareClusterLists_4
 //  579   }
 //  580 
 //  581   return ( numMatches );
-??ZDO_CompareClusterLists_5:
-        MOV     R1,?V1
-        MOV     R7,#0x8
-        LJMP    ?BANKED_LEAVE_XDATA
-          CFI R6 SameValue
-          CFI VB SameValue
-          CFI V0 SameValue
-          CFI V1 SameValue
-          CFI V2 SameValue
-          CFI V3 SameValue
-          CFI V4 SameValue
-          CFI V5 SameValue
-          CFI V6 SameValue
-          CFI V7 SameValue
-          CFI R7 SameValue
-          CFI ?RET_LOW Frame(CFA_SP, 1)
-          CFI ?RET_HIGH Frame(CFA_SP, 2)
-          CFI ?BRET_EXT Frame(CFA_SP, 3)
-          CFI DPL0 SameValue
-          CFI DPH0 SameValue
-          CFI CFA_SP SP+-3
-          CFI CFA_XSP16 XSP16+0
 //  582 }
-          CFI EndBlock cfiBlock7
 //  583 #endif // ZG_BUILD_COORDINATOR_TYPE
 //  584 
 //  585 /*********************************************************************
@@ -3442,7 +2977,7 @@ ZDO_CompareClusterLists:
         RSEG BANKED_CODE:CODE:NOROOT(0)
 //  601 byte ZDO_AnyClusterMatches( byte ACnt, uint16 *AList, byte BCnt, uint16 *BList )
 ZDO_AnyClusterMatches:
-          CFI Block cfiBlock8 Using cfiCommon0
+          CFI Block cfiBlock7 Using cfiCommon0
           CFI Function ZDO_AnyClusterMatches
         CODE
 //  602 {
@@ -3595,7 +3130,7 @@ ZDO_AnyClusterMatches:
           CFI CFA_SP SP+-3
           CFI CFA_XSP16 XSP16+0
 //  617 }
-          CFI EndBlock cfiBlock8
+          CFI EndBlock cfiBlock7
 //  618 
 //  619 /*********************************************************************
 //  620  * Callback functions from ZDProfile
@@ -3615,7 +3150,7 @@ ZDO_AnyClusterMatches:
         RSEG BANKED_CODE:CODE:NOROOT(0)
 //  633 void ZDO_ProcessNodeDescReq( zdoIncomingMsg_t *inMsg )
 ZDO_ProcessNodeDescReq:
-          CFI Block cfiBlock9 Using cfiCommon0
+          CFI Block cfiBlock8 Using cfiCommon0
           CFI Function ZDO_ProcessNodeDescReq
         CODE
 //  634 {
@@ -3807,7 +3342,7 @@ ZDO_ProcessNodeDescReq:
           CFI DPH0 SameValue
           CFI CFA_SP SP+-3
           CFI CFA_XSP16 XSP16+0
-          CFI EndBlock cfiBlock9
+          CFI EndBlock cfiBlock8
 //  653 
 //  654 /*********************************************************************
 //  655  * @fn          ZDO_ProcessPowerDescReq
@@ -3823,7 +3358,7 @@ ZDO_ProcessNodeDescReq:
         RSEG BANKED_CODE:CODE:NOROOT(0)
 //  664 void ZDO_ProcessPowerDescReq( zdoIncomingMsg_t *inMsg )
 ZDO_ProcessPowerDescReq:
-          CFI Block cfiBlock10 Using cfiCommon0
+          CFI Block cfiBlock9 Using cfiCommon0
           CFI Function ZDO_ProcessPowerDescReq
         CODE
 //  665 {
@@ -4015,7 +3550,7 @@ ZDO_ProcessPowerDescReq:
           CFI DPH0 SameValue
           CFI CFA_SP SP+-3
           CFI CFA_XSP16 XSP16+0
-          CFI EndBlock cfiBlock10
+          CFI EndBlock cfiBlock9
 //  684 
 //  685 /*********************************************************************
 //  686  * @fn          ZDO_ProcessSimpleDescReq
@@ -4031,7 +3566,7 @@ ZDO_ProcessPowerDescReq:
         RSEG BANKED_CODE:CODE:NOROOT(0)
 //  695 void ZDO_ProcessSimpleDescReq( zdoIncomingMsg_t *inMsg )
 ZDO_ProcessSimpleDescReq:
-          CFI Block cfiBlock11 Using cfiCommon0
+          CFI Block cfiBlock10 Using cfiCommon0
           CFI Function ZDO_ProcessSimpleDescReq
         CODE
 //  696 {
@@ -4215,28 +3750,13 @@ ZDO_ProcessSimpleDescReq:
 //  715   else
 //  716   {
 //  717     if ( ZSTACK_ROUTER_BUILD )
-??ZDO_ProcessSimpleDescReq_4:
-        MOV     DPTR,#zgDeviceLogicalType
-        MOVX    A,@DPTR
-        JZ      ??ZDO_ProcessSimpleDescReq_5
-        MOV     DPTR,#zgDeviceLogicalType
-        MOVX    A,@DPTR
-        XRL     A,#0x1
-        JNZ     ??ZDO_ProcessSimpleDescReq_6
 //  718     {
 //  719       stat = ZDP_DEVICE_NOT_FOUND;
-??ZDO_ProcessSimpleDescReq_5:
-        MOV     ?V0,#-0x7f
-        SJMP    ??ZDO_ProcessSimpleDescReq_2
 //  720     }
 //  721     else if ( ZSTACK_END_DEVICE_BUILD )
-??ZDO_ProcessSimpleDescReq_6:
-        MOV     DPTR,#zgDeviceLogicalType
-        MOVX    A,@DPTR
-        XRL     A,#0x2
-        JNZ     ??ZDO_ProcessSimpleDescReq_2
 //  722     {
 //  723       stat = ZDP_INVALID_REQTYPE;
+??ZDO_ProcessSimpleDescReq_4:
         MOV     ?V0,#-0x80
 //  724     }
 //  725   }
@@ -4261,7 +3781,7 @@ ZDO_ProcessSimpleDescReq:
 //  728 
 //  729   if ( free && sDesc )
         MOV     A,?V1
-        JZ      ??ZDO_ProcessSimpleDescReq_7
+        JZ      ??ZDO_ProcessSimpleDescReq_5
         MOV     DPL,?XSP + 0
         MOV     DPH,?XSP + 1
         MOVX    A,@DPTR
@@ -4271,7 +3791,7 @@ ZDO_ProcessSimpleDescReq:
         MOV     R1,A
         MOV     A,R0
         ORL     A,R1
-        JZ      ??ZDO_ProcessSimpleDescReq_7
+        JZ      ??ZDO_ProcessSimpleDescReq_5
 //  730   {
 //  731     osal_mem_free( sDesc );
         ; Setup parameters for call to function osal_mem_free
@@ -4285,7 +3805,7 @@ ZDO_ProcessSimpleDescReq:
         LCALL   `??osal_mem_free::?relay`; Banked call to: osal_mem_free
 //  732   }
 //  733 }
-??ZDO_ProcessSimpleDescReq_7:
+??ZDO_ProcessSimpleDescReq_5:
         MOV     A,#0x2
         LCALL   ?DEALLOC_XSTACK8
           CFI CFA_XSP16 add(XSP16, 10)
@@ -4303,7 +3823,7 @@ ZDO_ProcessSimpleDescReq:
           CFI DPH0 SameValue
           CFI CFA_SP SP+-3
           CFI CFA_XSP16 XSP16+0
-          CFI EndBlock cfiBlock11
+          CFI EndBlock cfiBlock10
 //  734 
 //  735 /*********************************************************************
 //  736  * @fn          ZDO_ProcessActiveEPReq
@@ -4319,7 +3839,7 @@ ZDO_ProcessSimpleDescReq:
         RSEG BANKED_CODE:CODE:NOROOT(0)
 //  745 void ZDO_ProcessActiveEPReq( zdoIncomingMsg_t *inMsg )
 ZDO_ProcessActiveEPReq:
-          CFI Block cfiBlock12 Using cfiCommon0
+          CFI Block cfiBlock11 Using cfiCommon0
           CFI Function ZDO_ProcessActiveEPReq
         CODE
 //  746 {
@@ -4552,7 +4072,7 @@ ZDO_ProcessActiveEPReq:
           CFI DPH0 SameValue
           CFI CFA_SP SP+-3
           CFI CFA_XSP16 XSP16+0
-          CFI EndBlock cfiBlock12
+          CFI EndBlock cfiBlock11
 //  766 
 //  767 /*********************************************************************
 //  768  * @fn          ZDO_ConvertOTAClusters
@@ -4568,7 +4088,7 @@ ZDO_ProcessActiveEPReq:
         RSEG BANKED_CODE:CODE:NOROOT(0)
 //  777 uint8 *ZDO_ConvertOTAClusters( uint8 cnt, uint8 *inBuf, uint16 *outList )
 ZDO_ConvertOTAClusters:
-          CFI Block cfiBlock13 Using cfiCommon0
+          CFI Block cfiBlock12 Using cfiCommon0
           CFI Function ZDO_ConvertOTAClusters
         CODE
 //  778 {
@@ -4680,7 +4200,7 @@ ZDO_ConvertOTAClusters:
           CFI CFA_SP SP+-3
           CFI CFA_XSP16 XSP16+0
 //  788 }
-          CFI EndBlock cfiBlock13
+          CFI EndBlock cfiBlock12
 //  789 
 //  790 /*********************************************************************
 //  791  * @fn          ZDO_ProcessMatchDescReq
@@ -4696,7 +4216,7 @@ ZDO_ConvertOTAClusters:
         RSEG BANKED_CODE:CODE:NOROOT(0)
 //  800 void ZDO_ProcessMatchDescReq( zdoIncomingMsg_t *inMsg )
 ZDO_ProcessMatchDescReq:
-          CFI Block cfiBlock14 Using cfiCommon0
+          CFI Block cfiBlock13 Using cfiCommon0
           CFI Function ZDO_ProcessMatchDescReq
         CODE
 //  801 {
@@ -6220,7 +5740,7 @@ ZDO_ProcessMatchDescReq:
           CFI DPH0 SameValue
           CFI CFA_SP SP+-3
           CFI CFA_XSP16 XSP16+0
-          CFI EndBlock cfiBlock14
+          CFI EndBlock cfiBlock13
 //  971 
 //  972 #if defined ( REFLECTOR )
 //  973 /*********************************************************************
@@ -6237,7 +5757,7 @@ ZDO_ProcessMatchDescReq:
         RSEG BANKED_CODE:CODE:NOROOT(0)
 //  983 void ZDO_ProcessBindUnbindReq( zdoIncomingMsg_t *inMsg, ZDO_BindUnbindReq_t *pReq )
 ZDO_ProcessBindUnbindReq:
-          CFI Block cfiBlock15 Using cfiCommon0
+          CFI Block cfiBlock14 Using cfiCommon0
           CFI Function ZDO_ProcessBindUnbindReq
         CODE
 //  984 {
@@ -7032,7 +6552,7 @@ ZDO_ProcessBindUnbindReq:
           CFI DPH0 SameValue
           CFI CFA_SP SP+-3
           CFI CFA_XSP16 XSP16+0
-          CFI EndBlock cfiBlock15
+          CFI EndBlock cfiBlock14
 // 1112 #endif // REFLECTOR
 // 1113 
 // 1114 /*********************************************************************
@@ -7049,7 +6569,7 @@ ZDO_ProcessBindUnbindReq:
         RSEG BANKED_CODE:CODE:NOROOT(0)
 // 1124 void ZDO_UpdateAddrManager( uint16 nwkAddr, uint8 *extAddr )
 ZDO_UpdateAddrManager:
-          CFI Block cfiBlock16 Using cfiCommon0
+          CFI Block cfiBlock15 Using cfiCommon0
           CFI Function ZDO_UpdateAddrManager
         CODE
 // 1125 {
@@ -7126,7 +6646,7 @@ ZDO_UpdateAddrManager:
           CFI DPL0 SameValue
           CFI CFA_SP SP+-3
         LJMP    ?BRET
-          CFI EndBlock cfiBlock16
+          CFI EndBlock cfiBlock15
 // 1134 
 // 1135 /*********************************************************************
 // 1136  * @fn      ZDO_ProcessServerDiscReq
@@ -7141,7 +6661,7 @@ ZDO_UpdateAddrManager:
         RSEG BANKED_CODE:CODE:NOROOT(0)
 // 1144 void ZDO_ProcessServerDiscReq( zdoIncomingMsg_t *inMsg )
 ZDO_ProcessServerDiscReq:
-          CFI Block cfiBlock17 Using cfiCommon0
+          CFI Block cfiBlock16 Using cfiCommon0
           CFI Function ZDO_ProcessServerDiscReq
         CODE
 // 1145 {
@@ -7288,7 +6808,7 @@ ZDO_ProcessServerDiscReq:
           CFI DPH0 SameValue
           CFI CFA_SP SP+-3
           CFI CFA_XSP16 XSP16+0
-          CFI EndBlock cfiBlock17
+          CFI EndBlock cfiBlock16
 // 1155 
 // 1156 #if defined ( ZIGBEE_CHILD_AGING )
 // 1157 /*********************************************************************
@@ -7305,32 +6825,10 @@ ZDO_ProcessServerDiscReq:
         RSEG BANKED_CODE:CODE:NOROOT(0)
 // 1167 void ZDO_ProcessEndDeviceTimeoutReq( zdoIncomingMsg_t *inMsg )
 ZDO_ProcessEndDeviceTimeoutReq:
-          CFI Block cfiBlock18 Using cfiCommon0
+          CFI Block cfiBlock17 Using cfiCommon0
           CFI Function ZDO_ProcessEndDeviceTimeoutReq
         CODE
 // 1168 {
-        FUNCALL ZDO_ProcessEndDeviceTimeoutReq, AssocGetWithExt
-        LOCFRAME ISTACK, 0, STACK
-        LOCFRAME PSTACK, 0, STACK
-        LOCFRAME XSTACK, 13, STACK
-        LOCFRAME IOVERLAY, 0, STATIC
-        LOCFRAME DOVERLAY, 0, STATIC
-        ARGFRAME ISTACK, 0, STACK
-        ARGFRAME PSTACK, 0, STACK
-        ARGFRAME XSTACK, 13, STACK
-        ARGFRAME IOVERLAY, 0, STATIC
-        ARGFRAME DOVERLAY, 0, STATIC
-        FUNCALL ZDO_ProcessEndDeviceTimeoutReq, ZDApp_NVUpdate
-        LOCFRAME ISTACK, 0, STACK
-        LOCFRAME PSTACK, 0, STACK
-        LOCFRAME XSTACK, 13, STACK
-        LOCFRAME IOVERLAY, 0, STATIC
-        LOCFRAME DOVERLAY, 0, STATIC
-        ARGFRAME ISTACK, 0, STACK
-        ARGFRAME PSTACK, 0, STACK
-        ARGFRAME XSTACK, 13, STACK
-        ARGFRAME IOVERLAY, 0, STATIC
-        ARGFRAME DOVERLAY, 0, STATIC
         FUNCALL ZDO_ProcessEndDeviceTimeoutReq, ZDP_SendData
         LOCFRAME ISTACK, 0, STACK
         LOCFRAME PSTACK, 0, STACK
@@ -7367,18 +6865,14 @@ ZDO_ProcessEndDeviceTimeoutReq:
         MOV     A,#-0x1
         LCALL   ?ALLOC_XSTACK8
           CFI CFA_XSP16 add(XSP16, 13)
-        MOV     A,R2
-        MOV     R6,A
-        MOV     A,R3
-        MOV     R7,A
 // 1169   uint8 stat = ZDP_SUCCESS;
         MOV     DPL,?XSP + 0
         MOV     DPH,?XSP + 1
         MOV     A,#0x0
         MOVX    @DPTR,A
 // 1170   uint8 *ieee = NULL;
-        MOV     R2,#0x0
-        MOV     R3,#0x0
+        MOV     R6,#0x0
+        MOV     R7,#0x0
 // 1171   uint16 reqTimeout;
 // 1172 
 // 1173   // Only process this message if Child Table Management is enabled OR
@@ -7390,17 +6884,17 @@ ZDO_ProcessEndDeviceTimeoutReq:
         MOV     DPTR,#zgChildAgingEnable
         MOVX    A,@DPTR
         JZ      ??ZDO_ProcessEndDeviceTimeoutReq_0
-        MOV     A,R6
+        MOV     A,R2
         ADD     A,#0xb
         MOV     DPL,A
         CLR     A
-        ADDC    A,R7
+        ADDC    A,R3
         MOV     DPH,A
         MOVX    A,@DPTR
         XRL     A,#0x1
         JZ      ??ZDO_ProcessEndDeviceTimeoutReq_0
-        MOV     DPL,R6
-        MOV     DPH,R7
+        MOV     DPL,R2
+        MOV     DPH,R3
         INC     DPTR
         INC     DPTR
         MOVX    A,@DPTR
@@ -7408,11 +6902,11 @@ ZDO_ProcessEndDeviceTimeoutReq:
         INC     DPTR
         MOVX    A,@DPTR
         MOV     R1,A
-        MOV     A,R6
+        MOV     A,R2
         ADD     A,#0x15
         MOV     DPL,A
         CLR     A
-        ADDC    A,R7
+        ADDC    A,R3
         MOV     DPH,A
         MOVX    A,@DPTR
         XRL     A,R0
@@ -7431,24 +6925,24 @@ ZDO_ProcessEndDeviceTimeoutReq:
 // 1183 
 // 1184   ieee = inMsg->asdu;
 ??ZDO_ProcessEndDeviceTimeoutReq_2:
-        MOV     A,R6
+        MOV     A,R2
         ADD     A,#0x13
         MOV     DPL,A
         CLR     A
-        ADDC    A,R7
+        ADDC    A,R3
         MOV     DPH,A
         MOVX    A,@DPTR
-        MOV     R2,A
+        MOV     R6,A
         INC     DPTR
         MOVX    A,@DPTR
-        MOV     R3,A
+        MOV     R7,A
 // 1185 
 // 1186   reqTimeout = BUILD_UINT16( inMsg->asdu[Z_EXTADDR_LEN], inMsg->asdu[Z_EXTADDR_LEN+1] );
-        MOV     A,R6
+        MOV     A,R2
         ADD     A,#0x13
         MOV     DPL,A
         CLR     A
-        ADDC    A,R7
+        ADDC    A,R3
         MOV     DPH,A
         MOVX    A,@DPTR
         MOV     R0,A
@@ -7463,11 +6957,11 @@ ZDO_ProcessEndDeviceTimeoutReq:
         MOVX    A,@DPTR
         MOV     R4,A
         MOV     R5,#0x0
-        MOV     A,R6
+        MOV     A,R2
         ADD     A,#0x13
         MOV     DPL,A
         CLR     A
-        ADDC    A,R7
+        ADDC    A,R3
         MOV     DPH,A
         MOVX    A,@DPTR
         MOV     R0,A
@@ -7494,27 +6988,12 @@ ZDO_ProcessEndDeviceTimeoutReq:
 // 1187 
 // 1188   if ( ( ( reqTimeout < ZDO_MIN_REQ_TIMEOUT ) || ( reqTimeout > ZDO_MAX_REQ_TIMEOUT ) ) ||
 // 1189        ( ZSTACK_END_DEVICE_BUILD ) )
-        MOV     A,?V0
-        ORL     A,?V1
-        JZ      ??ZDO_ProcessEndDeviceTimeoutReq_4
-        CLR     C
-        MOV     A,?V0
-        SUBB    A,#0x71
-        MOV     A,?V1
-        SUBB    A,#0x8
-        JNC     ??ZDO_ProcessEndDeviceTimeoutReq_4
-        MOV     DPTR,#zgDeviceLogicalType
-        MOVX    A,@DPTR
-        XRL     A,#0x2
-        JNZ     ??ZDO_ProcessEndDeviceTimeoutReq_5
 // 1190   {
 // 1191     stat = ZDP_INVALID_REQTYPE;
-??ZDO_ProcessEndDeviceTimeoutReq_4:
         MOV     DPL,?XSP + 0
         MOV     DPH,?XSP + 1
         MOV     A,#-0x80
         MOVX    @DPTR,A
-        SJMP    ??ZDO_ProcessEndDeviceTimeoutReq_6
 // 1192   }
 // 1193   else
 // 1194   {
@@ -7523,122 +7002,59 @@ ZDO_ProcessEndDeviceTimeoutReq:
 // 1197     if ( ( ( pAssoc = AssocGetWithExt( ieee ) ) != NULL ) &&
 // 1198          ( ( pAssoc->nodeRelation >= CHILD_RFD ) &&
 // 1199            ( pAssoc->nodeRelation <= CHILD_RFD_RX_IDLE ) ) )
-??ZDO_ProcessEndDeviceTimeoutReq_5:
-        ; Setup parameters for call to function AssocGetWithExt
-        LCALL   `??AssocGetWithExt::?relay`; Banked call to: AssocGetWithExt
-        MOV     ?V2,R2
-        MOV     ?V3,R3
-        MOV     R2,?V2
-        MOV     R3,?V3
-        MOV     A,R2
-        MOV     R0,A
-        MOV     A,R3
-        MOV     R1,A
-        MOV     A,R2
-        ORL     A,R3
-        JZ      ??ZDO_ProcessEndDeviceTimeoutReq_7
-        MOV     DPL,R0
-        MOV     DPH,R1
-        INC     DPTR
-        INC     DPTR
-        INC     DPTR
-        INC     DPTR
-        MOVX    A,@DPTR
-        JZ      ??ZDO_ProcessEndDeviceTimeoutReq_7
-        MOV     DPL,R0
-        MOV     DPH,R1
-        INC     DPTR
-        INC     DPTR
-        INC     DPTR
-        INC     DPTR
-        MOVX    A,@DPTR
-        CLR     C
-        SUBB    A,#0x3
-        JNC     ??ZDO_ProcessEndDeviceTimeoutReq_7
 // 1200     {
 // 1201       pAssoc->timeoutCounter = reqTimeout;
-        MOV     A,R0
-        ADD     A,#0x12
-        MOV     DPL,A
-        CLR     A
-        ADDC    A,R1
-        MOV     DPH,A
-        MOV     A,?V0
-        MOVX    @DPTR,A
-        INC     DPTR
-        MOV     A,?V1
-        MOVX    @DPTR,A
 // 1202       pAssoc->endDevKaTimeout = reqTimeout;
-        MOV     A,R0
-        ADD     A,#0x14
-        MOV     DPL,A
-        CLR     A
-        ADDC    A,R1
-        MOV     DPH,A
-        MOV     A,?V0
-        MOVX    @DPTR,A
-        INC     DPTR
-        MOV     A,?V1
-        MOVX    @DPTR,A
 // 1203 
 // 1204       // Set event to save NV
 // 1205       ZDApp_NVUpdate();
-        ; Setup parameters for call to function ZDApp_NVUpdate
-        LCALL   `??ZDApp_NVUpdate::?relay`; Banked call to: ZDApp_NVUpdate
-        SJMP    ??ZDO_ProcessEndDeviceTimeoutReq_6
 // 1206     }
 // 1207     else
 // 1208     {
 // 1209       stat = ZDP_DEVICE_NOT_FOUND;
-??ZDO_ProcessEndDeviceTimeoutReq_7:
-        MOV     DPL,?XSP + 0
-        MOV     DPH,?XSP + 1
-        MOV     A,#-0x7f
-        MOVX    @DPTR,A
 // 1210     }
 // 1211 
 // 1212   }
 // 1213 
 // 1214   ZDP_EndDeviceTimeoutRsp( inMsg->TransSeq, &(inMsg->srcAddr), stat,
 // 1215                            inMsg->SecurityUse );
-??ZDO_ProcessEndDeviceTimeoutReq_6:
         ; Setup parameters for call to function ZDP_SendData
-        MOV     A,R6
+        MOV     A,R2
         ADD     A,#0xe
         MOV     DPL,A
         CLR     A
-        ADDC    A,R7
+        ADDC    A,R3
         MOV     DPH,A
         MOVX    A,@DPTR
-        MOV     ?V0,A
-        MOV     R0,#?V0
+        MOV     ?V2,A
+        MOV     R0,#?V2
         LCALL   ?PUSH_XSTACK_I_ONE
           CFI CFA_XSP16 add(XSP16, 14)
         MOV     A,#0x1
         LCALL   ?XSTACK_DISP100_8
-        MOV     ?V0,R0
-        MOV     ?V1,R1
-        MOV     R0,#?V0
+        MOV     ?V2,R0
+        MOV     ?V3,R1
+        MOV     R0,#?V2
         LCALL   ?PUSH_XSTACK_I_TWO
           CFI CFA_XSP16 add(XSP16, 16)
-        MOV     ?V0,#0x1f
-        MOV     ?V1,#-0x80
-        MOV     R0,#?V0
+        MOV     ?V2,#0x1f
+        MOV     ?V3,#-0x80
+        MOV     R0,#?V2
         LCALL   ?PUSH_XSTACK_I_TWO
           CFI CFA_XSP16 add(XSP16, 18)
         MOV     R1,#0x1
-        MOV     A,R6
+        MOV     A,R2
         ADD     A,#0x2
         MOV     R4,A
         CLR     A
-        ADDC    A,R7
+        ADDC    A,R3
         MOV     R5,A
-        MOV     A,R6
+        MOV     A,R2
         ADD     A,#0xf
         MOV     R2,A
-        CLR     A
-        ADDC    A,R7
-        MOV     R3,A
+        JNC     ??ZDO_ProcessEndDeviceTimeoutReq_4
+        INC     R3
+??ZDO_ProcessEndDeviceTimeoutReq_4:
         LCALL   `??ZDP_SendData::?relay`; Banked call to: ZDP_SendData
         MOV     A,#0x5
         LCALL   ?DEALLOC_XSTACK8
@@ -7665,7 +7081,7 @@ ZDO_ProcessEndDeviceTimeoutReq:
           CFI DPH0 SameValue
           CFI CFA_SP SP+-3
           CFI CFA_XSP16 XSP16+0
-          CFI EndBlock cfiBlock18
+          CFI EndBlock cfiBlock17
 // 1217 #endif // ZIGBEE_CHILD_AGING
 // 1218 
 // 1219 /*********************************************************************
@@ -7686,7 +7102,7 @@ ZDO_ProcessEndDeviceTimeoutReq:
         RSEG BANKED_CODE:CODE:NOROOT(0)
 // 1233 void ZDO_EndDeviceTimeoutCB( void )
 ZDO_EndDeviceTimeoutCB:
-          CFI Block cfiBlock19 Using cfiCommon0
+          CFI Block cfiBlock18 Using cfiCommon0
           CFI Function ZDO_EndDeviceTimeoutCB
         CODE
 // 1234 {
@@ -7798,7 +7214,7 @@ ZDO_EndDeviceTimeoutCB:
           CFI DPL0 SameValue
           CFI CFA_SP SP+-3
         LJMP    ?BRET
-          CFI EndBlock cfiBlock19
+          CFI EndBlock cfiBlock18
 // 1249 
 // 1250 /*********************************************************************
 // 1251  * Optional Management Messages
@@ -7821,7 +7237,7 @@ ZDO_EndDeviceTimeoutCB:
         RSEG BANKED_CODE:CODE:NOROOT(0)
 // 1267 void ZDO_ProcessMgmtLqiReq( zdoIncomingMsg_t *inMsg )
 ZDO_ProcessMgmtLqiReq:
-          CFI Block cfiBlock20 Using cfiCommon0
+          CFI Block cfiBlock19 Using cfiCommon0
           CFI Function ZDO_ProcessMgmtLqiReq
         CODE
 // 1268 {
@@ -8873,7 +8289,7 @@ ZDO_ProcessMgmtLqiReq:
           CFI DPH0 SameValue
           CFI CFA_SP SP+-3
           CFI CFA_XSP16 XSP16+0
-          CFI EndBlock cfiBlock20
+          CFI EndBlock cfiBlock19
 // 1448 
 // 1449 /*********************************************************************
 // 1450  * @fn          ZDO_ProcessMgmtNwkDiscReq
@@ -8889,7 +8305,7 @@ ZDO_ProcessMgmtLqiReq:
         RSEG BANKED_CODE:CODE:NOROOT(0)
 // 1459 void ZDO_ProcessMgmtNwkDiscReq( zdoIncomingMsg_t *inMsg )
 ZDO_ProcessMgmtNwkDiscReq:
-          CFI Block cfiBlock21 Using cfiCommon0
+          CFI Block cfiBlock20 Using cfiCommon0
           CFI Function ZDO_ProcessMgmtNwkDiscReq
         CODE
 // 1460 {
@@ -9096,7 +8512,7 @@ ZDO_ProcessMgmtNwkDiscReq:
           CFI DPH0 SameValue
           CFI CFA_SP SP+-3
           CFI CFA_XSP16 XSP16+0
-          CFI EndBlock cfiBlock21
+          CFI EndBlock cfiBlock20
 // 1487 
 // 1488 #if defined ( ZDO_MGMT_NWKDISC_RESPONSE )
 // 1489 /*********************************************************************
@@ -9233,7 +8649,7 @@ ZDO_ProcessMgmtNwkDiscReq:
         RSEG BANKED_CODE:CODE:NOROOT(0)
 // 1619 void ZDO_ProcessMgmtRtgReq( zdoIncomingMsg_t *inMsg )
 ZDO_ProcessMgmtRtgReq:
-          CFI Block cfiBlock22 Using cfiCommon0
+          CFI Block cfiBlock21 Using cfiCommon0
           CFI Function ZDO_ProcessMgmtRtgReq
         CODE
 // 1620 {
@@ -9641,7 +9057,7 @@ ZDO_ProcessMgmtRtgReq:
           CFI DPH0 SameValue
           CFI CFA_SP SP+-3
           CFI CFA_XSP16 XSP16+0
-          CFI EndBlock cfiBlock22
+          CFI EndBlock cfiBlock21
 // 1695 
 // 1696 /*********************************************************************
 // 1697  * @fn          ZDO_ProcessMgmtBindReq
@@ -9660,7 +9076,7 @@ ZDO_ProcessMgmtRtgReq:
         RSEG BANKED_CODE:CODE:NOROOT(0)
 // 1709 void ZDO_ProcessMgmtBindReq( zdoIncomingMsg_t *inMsg )
 ZDO_ProcessMgmtBindReq:
-          CFI Block cfiBlock23 Using cfiCommon0
+          CFI Block cfiBlock22 Using cfiCommon0
           CFI Function ZDO_ProcessMgmtBindReq
         CODE
 // 1710 {
@@ -10035,7 +9451,7 @@ ZDO_ProcessMgmtBindReq:
           CFI DPH0 SameValue
           CFI CFA_SP SP+-3
           CFI CFA_XSP16 XSP16+0
-          CFI EndBlock cfiBlock23
+          CFI EndBlock cfiBlock22
 // 1772 
 // 1773 /*********************************************************************
 // 1774  * @fn          ZDO_ProcessMgmtDirectJoinReq
@@ -10051,7 +9467,7 @@ ZDO_ProcessMgmtBindReq:
         RSEG BANKED_CODE:CODE:NOROOT(0)
 // 1783 void ZDO_ProcessMgmtDirectJoinReq( zdoIncomingMsg_t *inMsg )
 ZDO_ProcessMgmtDirectJoinReq:
-          CFI Block cfiBlock24 Using cfiCommon0
+          CFI Block cfiBlock23 Using cfiCommon0
           CFI Function ZDO_ProcessMgmtDirectJoinReq
         CODE
 // 1784 {
@@ -10205,7 +9621,7 @@ ZDO_ProcessMgmtDirectJoinReq:
           CFI DPH0 SameValue
           CFI CFA_SP SP+-3
           CFI CFA_XSP16 XSP16+0
-          CFI EndBlock cfiBlock24
+          CFI EndBlock cfiBlock23
 // 1797 
 // 1798 /*********************************************************************
 // 1799  * @fn          ZDO_ProcessMgmtLeaveReq
@@ -10221,7 +9637,7 @@ ZDO_ProcessMgmtDirectJoinReq:
         RSEG BANKED_CODE:CODE:NOROOT(0)
 // 1808 void ZDO_ProcessMgmtLeaveReq( zdoIncomingMsg_t *inMsg )
 ZDO_ProcessMgmtLeaveReq:
-          CFI Block cfiBlock25 Using cfiCommon0
+          CFI Block cfiBlock24 Using cfiCommon0
           CFI Function ZDO_ProcessMgmtLeaveReq
         CODE
 // 1809 {
@@ -10512,7 +9928,7 @@ ZDO_ProcessMgmtLeaveReq:
           CFI DPH0 SameValue
           CFI CFA_SP SP+-3
           CFI CFA_XSP16 XSP16+0
-          CFI EndBlock cfiBlock25
+          CFI EndBlock cfiBlock24
 // 1850 
 // 1851 
 // 1852 /*********************************************************************
@@ -10529,7 +9945,7 @@ ZDO_ProcessMgmtLeaveReq:
         RSEG BANKED_CODE:CODE:NOROOT(0)
 // 1862 void ZDO_ProcessMgmtPermitJoinReq( zdoIncomingMsg_t *inMsg )
 ZDO_ProcessMgmtPermitJoinReq:
-          CFI Block cfiBlock26 Using cfiCommon0
+          CFI Block cfiBlock25 Using cfiCommon0
           CFI Function ZDO_ProcessMgmtPermitJoinReq
         CODE
 // 1863 {
@@ -10705,7 +10121,7 @@ ZDO_ProcessMgmtPermitJoinReq:
           CFI DPH0 SameValue
           CFI CFA_SP SP+-3
           CFI CFA_XSP16 XSP16+0
-          CFI EndBlock cfiBlock26
+          CFI EndBlock cfiBlock25
 // 1889 
 // 1890 /*
 // 1891  * This function stub allows the next higher layer to be notified of
@@ -10726,7 +10142,7 @@ ZDO_ProcessMgmtPermitJoinReq:
         RSEG BANKED_CODE:CODE:NOROOT(0)
 // 1905 void ZDO_ProcessMgmtPermitJoinTimeout( void )
 NLME_PermitJoiningTimeout:
-          CFI Block cfiBlock27 Using cfiCommon0
+          CFI Block cfiBlock26 Using cfiCommon0
           CFI Function NLME_PermitJoiningTimeout
         CODE
 // 1906 {
@@ -10741,7 +10157,7 @@ NLME_PermitJoiningTimeout:
 // 1913   #endif
 // 1914 }
         LJMP    ?BRET
-          CFI EndBlock cfiBlock27
+          CFI EndBlock cfiBlock26
 // 1915 
 // 1916 /*********************************************************************
 // 1917  * @fn          ZDO_ProcessUserDescReq
@@ -10757,7 +10173,7 @@ NLME_PermitJoiningTimeout:
         RSEG BANKED_CODE:CODE:NOROOT(0)
 // 1926 void ZDO_ProcessUserDescReq( zdoIncomingMsg_t *inMsg )
 ZDO_ProcessUserDescReq:
-          CFI Block cfiBlock28 Using cfiCommon0
+          CFI Block cfiBlock27 Using cfiCommon0
           CFI Function ZDO_ProcessUserDescReq
         CODE
 // 1927 {
@@ -11001,7 +10417,7 @@ ZDO_ProcessUserDescReq:
           CFI DPH0 SameValue
           CFI CFA_SP SP+-3
           CFI CFA_XSP16 XSP16+0
-          CFI EndBlock cfiBlock28
+          CFI EndBlock cfiBlock27
 // 1942 
 // 1943 /*********************************************************************
 // 1944  * @fn          ZDO_ProcessUserDescSet
@@ -11017,7 +10433,7 @@ ZDO_ProcessUserDescReq:
         RSEG BANKED_CODE:CODE:NOROOT(0)
 // 1953 void ZDO_ProcessUserDescSet( zdoIncomingMsg_t *inMsg )
 ZDO_ProcessUserDescSet:
-          CFI Block cfiBlock29 Using cfiCommon0
+          CFI Block cfiBlock28 Using cfiCommon0
           CFI Function ZDO_ProcessUserDescSet
         CODE
 // 1954 {
@@ -11356,7 +10772,7 @@ ZDO_ProcessUserDescSet:
           CFI DPH0 SameValue
           CFI CFA_SP SP+-3
           CFI CFA_XSP16 XSP16+0
-          CFI EndBlock cfiBlock29
+          CFI EndBlock cfiBlock28
 // 1994 
 // 1995 /*********************************************************************
 // 1996  * @fn          ZDO_ProcessDeviceAnnce
@@ -11371,7 +10787,7 @@ ZDO_ProcessUserDescSet:
         RSEG BANKED_CODE:CODE:NOROOT(0)
 // 2004 void ZDO_ProcessDeviceAnnce( zdoIncomingMsg_t *inMsg )
 ZDO_ProcessDeviceAnnce:
-          CFI Block cfiBlock30 Using cfiCommon0
+          CFI Block cfiBlock29 Using cfiCommon0
           CFI Function ZDO_ProcessDeviceAnnce
         CODE
 // 2005 {
@@ -11475,72 +10891,6 @@ ZDO_ProcessDeviceAnnce:
         ARGFRAME IOVERLAY, 0, STATIC
         ARGFRAME DOVERLAY, 0, STATIC
         FUNCALL ZDO_ProcessDeviceAnnce, ZMacSetReq
-        LOCFRAME ISTACK, 0, STACK
-        LOCFRAME PSTACK, 0, STACK
-        LOCFRAME XSTACK, 42, STACK
-        LOCFRAME IOVERLAY, 0, STATIC
-        LOCFRAME DOVERLAY, 0, STATIC
-        ARGFRAME ISTACK, 0, STACK
-        ARGFRAME PSTACK, 0, STACK
-        ARGFRAME XSTACK, 42, STACK
-        ARGFRAME IOVERLAY, 0, STATIC
-        ARGFRAME DOVERLAY, 0, STATIC
-        FUNCALL ZDO_ProcessDeviceAnnce, NLME_GetShortAddr
-        LOCFRAME ISTACK, 0, STACK
-        LOCFRAME PSTACK, 0, STACK
-        LOCFRAME XSTACK, 42, STACK
-        LOCFRAME IOVERLAY, 0, STATIC
-        LOCFRAME DOVERLAY, 0, STATIC
-        ARGFRAME ISTACK, 0, STACK
-        ARGFRAME PSTACK, 0, STACK
-        ARGFRAME XSTACK, 42, STACK
-        ARGFRAME IOVERLAY, 0, STATIC
-        ARGFRAME DOVERLAY, 0, STATIC
-        FUNCALL ZDO_ProcessDeviceAnnce, AssocGetWithExt
-        LOCFRAME ISTACK, 0, STACK
-        LOCFRAME PSTACK, 0, STACK
-        LOCFRAME XSTACK, 42, STACK
-        LOCFRAME IOVERLAY, 0, STATIC
-        LOCFRAME DOVERLAY, 0, STATIC
-        ARGFRAME ISTACK, 0, STACK
-        ARGFRAME PSTACK, 0, STACK
-        ARGFRAME XSTACK, 42, STACK
-        ARGFRAME IOVERLAY, 0, STATIC
-        ARGFRAME DOVERLAY, 0, STATIC
-        FUNCALL ZDO_ProcessDeviceAnnce, AssocRemove
-        LOCFRAME ISTACK, 0, STACK
-        LOCFRAME PSTACK, 0, STACK
-        LOCFRAME XSTACK, 42, STACK
-        LOCFRAME IOVERLAY, 0, STATIC
-        LOCFRAME DOVERLAY, 0, STATIC
-        ARGFRAME ISTACK, 0, STACK
-        ARGFRAME PSTACK, 0, STACK
-        ARGFRAME XSTACK, 42, STACK
-        ARGFRAME IOVERLAY, 0, STATIC
-        ARGFRAME DOVERLAY, 0, STATIC
-        FUNCALL ZDO_ProcessDeviceAnnce, NLME_GetShortAddr
-        LOCFRAME ISTACK, 0, STACK
-        LOCFRAME PSTACK, 0, STACK
-        LOCFRAME XSTACK, 42, STACK
-        LOCFRAME IOVERLAY, 0, STATIC
-        LOCFRAME DOVERLAY, 0, STATIC
-        ARGFRAME ISTACK, 0, STACK
-        ARGFRAME PSTACK, 0, STACK
-        ARGFRAME XSTACK, 42, STACK
-        ARGFRAME IOVERLAY, 0, STATIC
-        ARGFRAME DOVERLAY, 0, STATIC
-        FUNCALL ZDO_ProcessDeviceAnnce, AssocChangeNwkAddr
-        LOCFRAME ISTACK, 0, STACK
-        LOCFRAME PSTACK, 0, STACK
-        LOCFRAME XSTACK, 42, STACK
-        LOCFRAME IOVERLAY, 0, STATIC
-        LOCFRAME DOVERLAY, 0, STATIC
-        ARGFRAME ISTACK, 0, STACK
-        ARGFRAME PSTACK, 0, STACK
-        ARGFRAME XSTACK, 42, STACK
-        ARGFRAME IOVERLAY, 0, STATIC
-        ARGFRAME DOVERLAY, 0, STATIC
-        FUNCALL ZDO_ProcessDeviceAnnce, ZDApp_NVUpdate
         LOCFRAME ISTACK, 0, STACK
         LOCFRAME PSTACK, 0, STACK
         LOCFRAME XSTACK, 42, STACK
@@ -11682,10 +11032,6 @@ ZDO_ProcessDeviceAnnce:
         MOV     A,#-0x20
         LCALL   ?ALLOC_XSTACK8
           CFI CFA_XSP16 add(XSP16, 42)
-        MOV     A,R2
-        MOV     R6,A
-        MOV     A,R3
-        MOV     R7,A
 // 2006   ZDO_DeviceAnnce_t Annce;
 // 2007   AddrMgrEntry_t addrEntry;
 // 2008   uint8 parentExt[Z_EXTADDR_LEN];
@@ -11695,17 +11041,9 @@ ZDO_ProcessDeviceAnnce:
         ; Setup parameters for call to function ZDO_ParseDeviceAnnce
         MOV     R4,?XSP + 0
         MOV     R5,?XSP + 1
-        MOV     A,R6
-        MOV     R2,A
-        MOV     A,R7
-        MOV     R3,A
         LCALL   `??ZDO_ParseDeviceAnnce::?relay`; Banked call to: ZDO_ParseDeviceAnnce
 // 2012 
 // 2013   if ( ZSTACK_END_DEVICE_BUILD )
-        MOV     DPTR,#zgDeviceLogicalType
-        MOVX    A,@DPTR
-        XRL     A,#0x2
-        JNZ     ??ZDO_ProcessDeviceAnnce_0
 // 2014   {
 // 2015     // Make sure the message didn't come from myself - end device only
 // 2016     if ( osal_ExtAddrEqual( NLME_GetExtAddr(), Annce.extAddr ) && Annce.nwkAddr == NLME_GetShortAddr() )
@@ -11839,15 +11177,6 @@ ZDO_ProcessDeviceAnnce:
 // 2044   }
 // 2045 
 // 2046   if ( ZSTACK_ROUTER_BUILD )
-??ZDO_ProcessDeviceAnnce_3:
-        MOV     DPTR,#zgDeviceLogicalType
-        MOVX    A,@DPTR
-        JZ      ??ZDO_ProcessDeviceAnnce_5
-        MOV     DPTR,#zgDeviceLogicalType
-        MOVX    A,@DPTR
-        XRL     A,#0x1
-        JZ      $+5
-        LJMP    ??ZDO_ProcessDeviceAnnce_6 & 0xFFFF
 // 2047   {
 // 2048     // If the device annce comes from a end device child that has moved
 // 2049     // to another parent, remove it from associated device list
@@ -11858,77 +11187,17 @@ ZDO_ProcessDeviceAnnce:
 // 2054     // Remove it from the associated device list. If it is not
 // 2055     // a child, no action will be taken in AssocRemove() anyway.
 // 2056     if ( inMsg->macDestAddr != NLME_GetShortAddr() )
-??ZDO_ProcessDeviceAnnce_5:
-        ; Setup parameters for call to function NLME_GetShortAddr
-        LCALL   `??NLME_GetShortAddr::?relay`; Banked call to: NLME_GetShortAddr
-        MOV     ?V0,R2
-        MOV     ?V1,R3
-        MOV     R0,?V0
-        MOV     R1,?V1
-        MOV     A,R6
-        ADD     A,#0x11
-        MOV     DPL,A
-        CLR     A
-        ADDC    A,R7
-        MOV     DPH,A
-        MOVX    A,@DPTR
-        XRL     A,R0
-        JNZ     ??ZDO_ProcessDeviceAnnce_7
-        INC     DPTR
-        MOVX    A,@DPTR
-        XRL     A,R1
-??ZDO_ProcessDeviceAnnce_7:
-        JZ      ??ZDO_ProcessDeviceAnnce_8
 // 2057     {
 // 2058       associated_devices_t *dev_ptr;
 // 2059 
 // 2060       // If it's an end device child
 // 2061       dev_ptr = AssocGetWithExt( Annce.extAddr );
-        ; Setup parameters for call to function AssocGetWithExt
-        MOV     A,#0x2
-        LCALL   ?XSTACK_DISP0_8
-        MOV     R2,DPL
-        MOV     R3,DPH
-        LCALL   `??AssocGetWithExt::?relay`; Banked call to: AssocGetWithExt
-        MOV     ?V0,R2
-        MOV     ?V1,R3
-        MOV     R0,?V0
-        MOV     R1,?V1
 // 2062       if ( dev_ptr )
-        MOV     A,R0
-        ORL     A,R1
-        JZ      ??ZDO_ProcessDeviceAnnce_9
 // 2063       {
 // 2064         if ( dev_ptr->nodeRelation == CHILD_RFD ||
 // 2065              dev_ptr->nodeRelation == CHILD_RFD_RX_IDLE )
-        MOV     DPL,R0
-        MOV     DPH,R1
-        INC     DPTR
-        INC     DPTR
-        INC     DPTR
-        INC     DPTR
-        MOVX    A,@DPTR
-        XRL     A,#0x1
-        JZ      ??ZDO_ProcessDeviceAnnce_10
-        MOV     DPL,R0
-        MOV     DPH,R1
-        INC     DPTR
-        INC     DPTR
-        INC     DPTR
-        INC     DPTR
-        MOVX    A,@DPTR
-        XRL     A,#0x2
-        JNZ     ??ZDO_ProcessDeviceAnnce_9
 // 2066         {
 // 2067           AssocRemove( Annce.extAddr );
-??ZDO_ProcessDeviceAnnce_10:
-        ; Setup parameters for call to function AssocRemove
-        MOV     A,#0x2
-        LCALL   ?XSTACK_DISP0_8
-        MOV     R2,DPL
-        MOV     R3,DPH
-        LCALL   `??AssocRemove::?relay`; Banked call to: AssocRemove
-        MOV     A,R1
 // 2068         }
 // 2069       }
 // 2070 
@@ -11937,91 +11206,27 @@ ZDO_ProcessDeviceAnnce:
 // 2073       // just in case the device was aged out by Child Management Table process
 // 2074       if ( ( pNwkNotMyChildListDelete != NULL ) &&
 // 2075            ( zgChildAgingEnable == TRUE ) )
-??ZDO_ProcessDeviceAnnce_9:
-        MOV     DPTR,#pNwkNotMyChildListDelete
-        MOVX    A,@DPTR
-        MOV     R0,A
-        INC     DPTR
-        MOVX    A,@DPTR
-        MOV     R1,A
-        MOV     A,R0
-        ORL     A,R1
-        JZ      ??ZDO_ProcessDeviceAnnce_8
-        MOV     DPTR,#zgChildAgingEnable
-        MOVX    A,@DPTR
-        XRL     A,#0x1
-        JNZ     ??ZDO_ProcessDeviceAnnce_8
 // 2076       {
 // 2077         pNwkNotMyChildListDelete( Annce.nwkAddr );
-        ; Setup parameters for indirect call
-        MOV     DPL,?XSP + 0
-        MOV     DPH,?XSP + 1
-        MOVX    A,@DPTR
-        MOV     R2,A
-        INC     DPTR
-        MOVX    A,@DPTR
-        MOV     R3,A
-        MOV     DPTR,#pNwkNotMyChildListDelete
-        MOVX    A,@DPTR
-        MOV     R0,A
-        INC     DPTR
-        MOVX    A,@DPTR
-        MOV     DPH,A
-        MOV     DPL,R0
-        LCALL   ?CALL_IND
 // 2078       }
 // 2079 #endif // ZIGBEE_CHILD_AGING
 // 2080     }
 // 2081 
 // 2082     if ( Annce.nwkAddr != NLME_GetShortAddr() )
-??ZDO_ProcessDeviceAnnce_8:
-        ; Setup parameters for call to function NLME_GetShortAddr
-        LCALL   `??NLME_GetShortAddr::?relay`; Banked call to: NLME_GetShortAddr
-        MOV     ?V0,R2
-        MOV     ?V1,R3
-        MOV     R0,?V0
-        MOV     R1,?V1
-        MOV     DPL,?XSP + 0
-        MOV     DPH,?XSP + 1
-        MOVX    A,@DPTR
-        XRL     A,R0
-        JNZ     ??ZDO_ProcessDeviceAnnce_11
-        INC     DPTR
-        MOVX    A,@DPTR
-        XRL     A,R1
-??ZDO_ProcessDeviceAnnce_11:
-        JZ      ??ZDO_ProcessDeviceAnnce_6
 // 2083     {
 // 2084       // If an associated device is found with matched extended Address,
 // 2085       // update its short address
 // 2086       if ( AssocChangeNwkAddr( Annce.nwkAddr, Annce.extAddr ) )
-        ; Setup parameters for call to function AssocChangeNwkAddr
-        MOV     A,#0x2
-        LCALL   ?XSTACK_DISP0_8
-        MOV     R4,DPL
-        MOV     R5,DPH
-        MOV     DPL,?XSP + 0
-        MOV     DPH,?XSP + 1
-        MOVX    A,@DPTR
-        MOV     R2,A
-        INC     DPTR
-        MOVX    A,@DPTR
-        MOV     R3,A
-        LCALL   `??AssocChangeNwkAddr::?relay`; Banked call to: AssocChangeNwkAddr
-        MOV     A,R1
-        JZ      ??ZDO_ProcessDeviceAnnce_6
 // 2087       {
 // 2088         // Set event to save NV
 // 2089         ZDApp_NVUpdate();
-        ; Setup parameters for call to function ZDApp_NVUpdate
-        LCALL   `??ZDApp_NVUpdate::?relay`; Banked call to: ZDApp_NVUpdate
 // 2090       }
 // 2091     }
 // 2092   }
 // 2093 
 // 2094   // Update the neighbor table
 // 2095   nwkNeighborUpdateNwkAddr( Annce.nwkAddr, Annce.extAddr );
-??ZDO_ProcessDeviceAnnce_6:
+??ZDO_ProcessDeviceAnnce_3:
         ; Setup parameters for call to function nwkNeighborUpdateNwkAddr
         MOV     A,#0x2
         LCALL   ?XSTACK_DISP0_8
@@ -12079,7 +11284,7 @@ ZDO_ProcessDeviceAnnce:
         LCALL   ?XSTACK_DISP101_8
         LCALL   `??AddrMgrEntryLookupNwk::?relay`; Banked call to: AddrMgrEntryLookupNwk
         MOV     A,R1
-        JZ      ??ZDO_ProcessDeviceAnnce_12
+        JZ      ??ZDO_ProcessDeviceAnnce_5
 // 2106   {
 // 2107     osal_memset( parentExt, 0, Z_EXTADDR_LEN );
         ; Setup parameters for call to function osal_memset
@@ -12099,7 +11304,7 @@ ZDO_ProcessDeviceAnnce:
         LCALL   ?XSTACK_DISP101_8
         LCALL   `??sAddrExtCmp::?relay`; Banked call to: sAddrExtCmp
         MOV     A,R1
-        JZ      ??ZDO_ProcessDeviceAnnce_12
+        JZ      ??ZDO_ProcessDeviceAnnce_5
 // 2109     {
 // 2110       AddrMgrExtAddrSet( addrEntry.extAddr, Annce.extAddr );
         ; Setup parameters for call to function AddrMgrExtAddrSet
@@ -12123,7 +11328,7 @@ ZDO_ProcessDeviceAnnce:
 // 2114 
 // 2115   // Update the short address in address manager if it's been changed
 // 2116   AddrMgrExtAddrSet( addrEntry.extAddr, Annce.extAddr );
-??ZDO_ProcessDeviceAnnce_12:
+??ZDO_ProcessDeviceAnnce_5:
         ; Setup parameters for call to function AddrMgrExtAddrSet
         MOV     A,#0x2
         LCALL   ?XSTACK_DISP0_8
@@ -12154,11 +11359,11 @@ ZDO_ProcessDeviceAnnce:
         MOV     DPH,?XSP + 1
         MOVX    A,@DPTR
         XRL     A,R0
-        JNZ     ??ZDO_ProcessDeviceAnnce_13
+        JNZ     ??ZDO_ProcessDeviceAnnce_6
         INC     DPTR
         MOVX    A,@DPTR
         XRL     A,R1
-??ZDO_ProcessDeviceAnnce_13:
+??ZDO_ProcessDeviceAnnce_6:
         JZ      ??ZDO_ProcessDeviceAnnce_2
 // 2120     {
 // 2121       addrEntry.nwkAddr = Annce.nwkAddr;
@@ -12203,7 +11408,7 @@ ZDO_ProcessDeviceAnnce:
           CFI DPH0 SameValue
           CFI CFA_SP SP+-3
           CFI CFA_XSP16 XSP16+0
-          CFI EndBlock cfiBlock30
+          CFI EndBlock cfiBlock29
 // 2126 
 // 2127 /*********************************************************************
 // 2128  * @fn          ZDO_BuildSimpleDescBuf
@@ -12219,7 +11424,7 @@ ZDO_ProcessDeviceAnnce:
         RSEG BANKED_CODE:CODE:NOROOT(0)
 // 2137 void ZDO_BuildSimpleDescBuf( uint8 *buf, SimpleDescriptionFormat_t *desc )
 ZDO_BuildSimpleDescBuf:
-          CFI Block cfiBlock31 Using cfiCommon0
+          CFI Block cfiBlock30 Using cfiCommon0
           CFI Function ZDO_BuildSimpleDescBuf
         CODE
 // 2138 {
@@ -12628,7 +11833,7 @@ ZDO_BuildSimpleDescBuf:
           CFI DPH0 SameValue
           CFI CFA_SP SP+-3
           CFI CFA_XSP16 XSP16+0
-          CFI EndBlock cfiBlock31
+          CFI EndBlock cfiBlock30
 // 2166 
 // 2167 #if ( ZG_BUILD_COORDINATOR_TYPE )
 // 2168 /*********************************************************************
@@ -12643,636 +11848,72 @@ ZDO_BuildSimpleDescBuf:
 // 2177  *
 // 2178  * @return  none
 // 2179  */
-
-        RSEG BANKED_CODE:CODE:NOROOT(0)
 // 2180 void ZDO_MatchEndDeviceBind( ZDEndDeviceBind_t *bindReq )
-ZDO_MatchEndDeviceBind:
-          CFI Block cfiBlock32 Using cfiCommon0
-          CFI Function ZDO_MatchEndDeviceBind
-        CODE
 // 2181 {
-        FUNCALL ZDO_MatchEndDeviceBind, osal_mem_alloc
-        LOCFRAME ISTACK, 0, STACK
-        LOCFRAME PSTACK, 0, STACK
-        LOCFRAME XSTACK, 25, STACK
-        LOCFRAME IOVERLAY, 0, STATIC
-        LOCFRAME DOVERLAY, 0, STATIC
-        ARGFRAME ISTACK, 0, STACK
-        ARGFRAME PSTACK, 0, STACK
-        ARGFRAME XSTACK, 25, STACK
-        ARGFRAME IOVERLAY, 0, STATIC
-        ARGFRAME DOVERLAY, 0, STATIC
-        FUNCALL ZDO_MatchEndDeviceBind, osal_memset
-        LOCFRAME ISTACK, 0, STACK
-        LOCFRAME PSTACK, 0, STACK
-        LOCFRAME XSTACK, 25, STACK
-        LOCFRAME IOVERLAY, 0, STATIC
-        LOCFRAME DOVERLAY, 0, STATIC
-        ARGFRAME ISTACK, 0, STACK
-        ARGFRAME PSTACK, 0, STACK
-        ARGFRAME XSTACK, 25, STACK
-        ARGFRAME IOVERLAY, 0, STATIC
-        ARGFRAME DOVERLAY, 0, STATIC
-        FUNCALL ZDO_MatchEndDeviceBind, ZDO_CopyMatchInfo
-        LOCFRAME ISTACK, 0, STACK
-        LOCFRAME PSTACK, 0, STACK
-        LOCFRAME XSTACK, 25, STACK
-        LOCFRAME IOVERLAY, 0, STATIC
-        LOCFRAME DOVERLAY, 0, STATIC
-        ARGFRAME ISTACK, 0, STACK
-        ARGFRAME PSTACK, 0, STACK
-        ARGFRAME XSTACK, 25, STACK
-        ARGFRAME IOVERLAY, 0, STATIC
-        ARGFRAME DOVERLAY, 0, STATIC
-        FUNCALL ZDO_MatchEndDeviceBind, APS_SetEndDeviceBindTimeout
-        LOCFRAME ISTACK, 0, STACK
-        LOCFRAME PSTACK, 0, STACK
-        LOCFRAME XSTACK, 25, STACK
-        LOCFRAME IOVERLAY, 0, STATIC
-        LOCFRAME DOVERLAY, 0, STATIC
-        ARGFRAME ISTACK, 0, STACK
-        ARGFRAME PSTACK, 0, STACK
-        ARGFRAME XSTACK, 25, STACK
-        ARGFRAME IOVERLAY, 0, STATIC
-        ARGFRAME DOVERLAY, 0, STATIC
-        FUNCALL ZDO_MatchEndDeviceBind, ZDO_CopyMatchInfo
-        LOCFRAME ISTACK, 0, STACK
-        LOCFRAME PSTACK, 0, STACK
-        LOCFRAME XSTACK, 25, STACK
-        LOCFRAME IOVERLAY, 0, STATIC
-        LOCFRAME DOVERLAY, 0, STATIC
-        ARGFRAME ISTACK, 0, STACK
-        ARGFRAME PSTACK, 0, STACK
-        ARGFRAME XSTACK, 25, STACK
-        ARGFRAME IOVERLAY, 0, STATIC
-        ARGFRAME DOVERLAY, 0, STATIC
-        FUNCALL ZDO_MatchEndDeviceBind, ZDO_CompareClusterLists
-        LOCFRAME ISTACK, 0, STACK
-        LOCFRAME PSTACK, 0, STACK
-        LOCFRAME XSTACK, 29, STACK
-        LOCFRAME IOVERLAY, 0, STATIC
-        LOCFRAME DOVERLAY, 0, STATIC
-        ARGFRAME ISTACK, 0, STACK
-        ARGFRAME PSTACK, 0, STACK
-        ARGFRAME XSTACK, 29, STACK
-        ARGFRAME IOVERLAY, 0, STATIC
-        ARGFRAME DOVERLAY, 0, STATIC
-        FUNCALL ZDO_MatchEndDeviceBind, osal_mem_alloc
-        LOCFRAME ISTACK, 0, STACK
-        LOCFRAME PSTACK, 0, STACK
-        LOCFRAME XSTACK, 25, STACK
-        LOCFRAME IOVERLAY, 0, STATIC
-        LOCFRAME DOVERLAY, 0, STATIC
-        ARGFRAME ISTACK, 0, STACK
-        ARGFRAME PSTACK, 0, STACK
-        ARGFRAME XSTACK, 25, STACK
-        ARGFRAME IOVERLAY, 0, STATIC
-        ARGFRAME DOVERLAY, 0, STATIC
-        FUNCALL ZDO_MatchEndDeviceBind, osal_memcpy
-        LOCFRAME ISTACK, 0, STACK
-        LOCFRAME PSTACK, 0, STACK
-        LOCFRAME XSTACK, 28, STACK
-        LOCFRAME IOVERLAY, 0, STATIC
-        LOCFRAME DOVERLAY, 0, STATIC
-        ARGFRAME ISTACK, 0, STACK
-        ARGFRAME PSTACK, 0, STACK
-        ARGFRAME XSTACK, 28, STACK
-        ARGFRAME IOVERLAY, 0, STATIC
-        ARGFRAME DOVERLAY, 0, STATIC
-        FUNCALL ZDO_MatchEndDeviceBind, ZDO_CompareClusterLists
-        LOCFRAME ISTACK, 0, STACK
-        LOCFRAME PSTACK, 0, STACK
-        LOCFRAME XSTACK, 29, STACK
-        LOCFRAME IOVERLAY, 0, STATIC
-        LOCFRAME DOVERLAY, 0, STATIC
-        ARGFRAME ISTACK, 0, STACK
-        ARGFRAME PSTACK, 0, STACK
-        ARGFRAME XSTACK, 29, STACK
-        ARGFRAME IOVERLAY, 0, STATIC
-        ARGFRAME DOVERLAY, 0, STATIC
-        FUNCALL ZDO_MatchEndDeviceBind, osal_mem_alloc
-        LOCFRAME ISTACK, 0, STACK
-        LOCFRAME PSTACK, 0, STACK
-        LOCFRAME XSTACK, 25, STACK
-        LOCFRAME IOVERLAY, 0, STATIC
-        LOCFRAME DOVERLAY, 0, STATIC
-        ARGFRAME ISTACK, 0, STACK
-        ARGFRAME PSTACK, 0, STACK
-        ARGFRAME XSTACK, 25, STACK
-        ARGFRAME IOVERLAY, 0, STATIC
-        ARGFRAME DOVERLAY, 0, STATIC
-        FUNCALL ZDO_MatchEndDeviceBind, osal_memcpy
-        LOCFRAME ISTACK, 0, STACK
-        LOCFRAME PSTACK, 0, STACK
-        LOCFRAME XSTACK, 28, STACK
-        LOCFRAME IOVERLAY, 0, STATIC
-        LOCFRAME DOVERLAY, 0, STATIC
-        ARGFRAME ISTACK, 0, STACK
-        ARGFRAME PSTACK, 0, STACK
-        ARGFRAME XSTACK, 28, STACK
-        ARGFRAME IOVERLAY, 0, STATIC
-        ARGFRAME DOVERLAY, 0, STATIC
-        FUNCALL ZDO_MatchEndDeviceBind, ZDMatchSendState
-        LOCFRAME ISTACK, 0, STACK
-        LOCFRAME PSTACK, 0, STACK
-        LOCFRAME XSTACK, 25, STACK
-        LOCFRAME IOVERLAY, 0, STATIC
-        LOCFRAME DOVERLAY, 0, STATIC
-        ARGFRAME ISTACK, 0, STACK
-        ARGFRAME PSTACK, 0, STACK
-        ARGFRAME XSTACK, 25, STACK
-        ARGFRAME IOVERLAY, 0, STATIC
-        ARGFRAME DOVERLAY, 0, STATIC
-        FUNCALL ZDO_MatchEndDeviceBind, ZDP_SendData
-        LOCFRAME ISTACK, 0, STACK
-        LOCFRAME PSTACK, 0, STACK
-        LOCFRAME XSTACK, 30, STACK
-        LOCFRAME IOVERLAY, 0, STATIC
-        LOCFRAME DOVERLAY, 0, STATIC
-        ARGFRAME ISTACK, 0, STACK
-        ARGFRAME PSTACK, 0, STACK
-        ARGFRAME XSTACK, 30, STACK
-        ARGFRAME IOVERLAY, 0, STATIC
-        ARGFRAME DOVERLAY, 0, STATIC
-        FUNCALL ZDO_MatchEndDeviceBind, ZDP_SendData
-        LOCFRAME ISTACK, 0, STACK
-        LOCFRAME PSTACK, 0, STACK
-        LOCFRAME XSTACK, 30, STACK
-        LOCFRAME IOVERLAY, 0, STATIC
-        LOCFRAME DOVERLAY, 0, STATIC
-        ARGFRAME ISTACK, 0, STACK
-        ARGFRAME PSTACK, 0, STACK
-        ARGFRAME XSTACK, 30, STACK
-        ARGFRAME IOVERLAY, 0, STATIC
-        ARGFRAME DOVERLAY, 0, STATIC
-        FUNCALL ZDO_MatchEndDeviceBind, ZDO_RemoveMatchMemory
-        LOCFRAME ISTACK, 0, STACK
-        LOCFRAME PSTACK, 0, STACK
-        LOCFRAME XSTACK, 25, STACK
-        LOCFRAME IOVERLAY, 0, STATIC
-        LOCFRAME DOVERLAY, 0, STATIC
-        ARGFRAME ISTACK, 0, STACK
-        ARGFRAME PSTACK, 0, STACK
-        ARGFRAME XSTACK, 25, STACK
-        ARGFRAME IOVERLAY, 0, STATIC
-        ARGFRAME DOVERLAY, 0, STATIC
-        REQUIRE ?V0
-        REQUIRE ?V1
-        REQUIRE ?V2
-        REQUIRE ?V3
-        REQUIRE ?V4
-        REQUIRE ?V5
-        REQUIRE ?V6
-        MOV     A,#-0xf
-        LCALL   ?BANKED_ENTER_XDATA
-          CFI DPH0 load(1, XDATA, add(CFA_XSP16, literal(-1)))
-          CFI DPL0 load(1, XDATA, add(CFA_XSP16, literal(-2)))
-          CFI ?BRET_EXT load(1, XDATA, add(CFA_XSP16, literal(-3)))
-          CFI ?RET_HIGH load(1, XDATA, add(CFA_XSP16, literal(-4)))
-          CFI ?RET_LOW load(1, XDATA, add(CFA_XSP16, literal(-5)))
-          CFI R7 load(1, XDATA, add(CFA_XSP16, literal(-6)))
-          CFI V6 load(1, XDATA, add(CFA_XSP16, literal(-7)))
-          CFI V5 load(1, XDATA, add(CFA_XSP16, literal(-8)))
-          CFI V4 load(1, XDATA, add(CFA_XSP16, literal(-9)))
-          CFI V3 load(1, XDATA, add(CFA_XSP16, literal(-10)))
-          CFI V2 load(1, XDATA, add(CFA_XSP16, literal(-11)))
-          CFI V1 load(1, XDATA, add(CFA_XSP16, literal(-12)))
-          CFI V0 load(1, XDATA, add(CFA_XSP16, literal(-13)))
-          CFI VB load(1, XDATA, add(CFA_XSP16, literal(-14)))
-          CFI R6 load(1, XDATA, add(CFA_XSP16, literal(-15)))
-          CFI CFA_SP SP+0
-          CFI CFA_XSP16 add(XSP16, 15)
-        ; Saved register size: 15
-        ; Auto size: 10
-        MOV     A,#-0xa
-        LCALL   ?ALLOC_XSTACK8
-          CFI CFA_XSP16 add(XSP16, 25)
-        MOV     A,R2
-        MOV     R6,A
-        MOV     A,R3
-        MOV     R7,A
 // 2182   zAddrType_t dstAddr;
 // 2183   uint8 sendRsp = FALSE;
-        MOV     ?V0,#0x0
 // 2184   uint8 status;
 // 2185 
 // 2186   // Is this the first request?
 // 2187   if ( matchED == NULL )
-        MOV     DPTR,#matchED
-        MOVX    A,@DPTR
-        MOV     R0,A
-        INC     DPTR
-        MOVX    A,@DPTR
-        MOV     R1,A
-        MOV     A,R0
-        ORL     A,R1
-        JZ      $+5
-        LJMP    ??ZDO_MatchEndDeviceBind_0 & 0xFFFF
 // 2188   {
 // 2189     // Create match info structure
 // 2190     matchED = (ZDMatchEndDeviceBind_t *)osal_mem_alloc( sizeof ( ZDMatchEndDeviceBind_t ) );
-        ; Setup parameters for call to function osal_mem_alloc
-        MOV     R2,#0x37
-        MOV     R3,#0x0
-        LCALL   `??osal_mem_alloc::?relay`; Banked call to: osal_mem_alloc
-        MOV     DPTR,#matchED
-        MOV     A,R2
-        MOVX    @DPTR,A
-        INC     DPTR
-        MOV     A,R3
-        MOVX    @DPTR,A
 // 2191     if ( matchED )
-        MOV     DPTR,#matchED
-        MOVX    A,@DPTR
-        MOV     R0,A
-        INC     DPTR
-        MOVX    A,@DPTR
-        MOV     R1,A
-        MOV     A,R0
-        ORL     A,R1
-        JZ      ??ZDO_MatchEndDeviceBind_1
 // 2192     {
 // 2193       // Clear the structure
 // 2194       osal_memset( (uint8 *)matchED, 0, sizeof ( ZDMatchEndDeviceBind_t ) );
-        ; Setup parameters for call to function osal_memset
-        MOV     R4,#0x37
-        MOV     R5,#0x0
-        MOV     R1,#0x0
-        MOV     DPTR,#matchED
-        MOVX    A,@DPTR
-        MOV     R2,A
-        INC     DPTR
-        MOVX    A,@DPTR
-        MOV     R3,A
-        LCALL   `??osal_memset::?relay`; Banked call to: osal_memset
 // 2195 
 // 2196       // Copy the first request's information
 // 2197       if ( !ZDO_CopyMatchInfo( &(matchED->ed1), bindReq ) )
-        ; Setup parameters for call to function ZDO_CopyMatchInfo
-        MOV     A,R6
-        MOV     R4,A
-        MOV     A,R7
-        MOV     R5,A
-        MOV     DPTR,#matchED
-        MOVX    A,@DPTR
-        MOV     R2,A
-        INC     DPTR
-        MOVX    A,@DPTR
-        MOV     R3,A
-        LCALL   `??ZDO_CopyMatchInfo::?relay`; Banked call to: ZDO_CopyMatchInfo
-        MOV     A,R1
-        JNZ     ??ZDO_MatchEndDeviceBind_2
 // 2198       {
 // 2199         status = ZDP_NO_ENTRY;
-        MOV     DPL,?XSP + 0
-        MOV     DPH,?XSP + 1
-        MOV     A,#-0x78
-        MOVX    @DPTR,A
 // 2200         sendRsp = TRUE;
-        MOV     ?V0,#0x1
-        SJMP    ??ZDO_MatchEndDeviceBind_2
 // 2201       }
 // 2202     }
 // 2203     else
 // 2204     {
 // 2205       status = ZDP_NO_ENTRY;
-??ZDO_MatchEndDeviceBind_1:
-        MOV     DPL,?XSP + 0
-        MOV     DPH,?XSP + 1
-        MOV     A,#-0x78
-        MOVX    @DPTR,A
 // 2206       sendRsp = TRUE;
-        MOV     ?V0,#0x1
 // 2207     }
 // 2208 
 // 2209     if ( !sendRsp )
-??ZDO_MatchEndDeviceBind_2:
-        MOV     A,?V0
-        JZ      $+5
-        LJMP    ??ZDO_MatchEndDeviceBind_3 & 0xFFFF
 // 2210     {
 // 2211       // Set into the correct state
 // 2212       matchED->state = ZDMATCH_WAIT_REQ;
-        MOV     DPTR,#matchED
-        MOVX    A,@DPTR
-        MOV     R0,A
-        INC     DPTR
-        MOVX    A,@DPTR
-        XCH     A,R0
-        ADD     A,#0x2e
-        MOV     DPL,A
-        XCH     A,R0
-        ADDC    A,#0x0
-        MOV     DPH,A
-        MOV     A,#0x1
-        MOVX    @DPTR,A
 // 2213 
 // 2214       // Setup the timeout
 // 2215       APS_SetEndDeviceBindTimeout( AIB_MaxBindingTime, ZDO_EndDeviceBindMatchTimeoutCB );
-        ; Setup parameters for call to function APS_SetEndDeviceBindTimeout
-        MOV     R4,#`??ZDO_EndDeviceBindMatchTimeoutCB::?relay` & 0xff
-        MOV     R5,#(`??ZDO_EndDeviceBindMatchTimeoutCB::?relay` >> 8) & 0xff
-        MOV     DPTR,#AIB_MaxBindingTime
-        MOVX    A,@DPTR
-        MOV     R2,A
-        INC     DPTR
-        MOVX    A,@DPTR
-        MOV     R3,A
-        LCALL   `??APS_SetEndDeviceBindTimeout::?relay`; Banked call to: APS_SetEndDeviceBindTimeout
-        LJMP    ??ZDO_MatchEndDeviceBind_3 & 0xFFFF
 // 2216     }
 // 2217   }
 // 2218   else
 // 2219   {
 // 2220       matchED->state = ZDMATCH_SENDING_BINDS;
-??ZDO_MatchEndDeviceBind_0:
-        MOV     DPTR,#matchED
-        MOVX    A,@DPTR
-        MOV     R0,A
-        INC     DPTR
-        MOVX    A,@DPTR
-        XCH     A,R0
-        ADD     A,#0x2e
-        MOV     DPL,A
-        XCH     A,R0
-        ADDC    A,#0x0
-        MOV     DPH,A
-        MOV     A,#0x2
-        MOVX    @DPTR,A
 // 2221 
 // 2222       // Copy the 2nd request's information
 // 2223       if ( !ZDO_CopyMatchInfo( &(matchED->ed2), bindReq ) )
-        ; Setup parameters for call to function ZDO_CopyMatchInfo
-        MOV     A,R6
-        MOV     R4,A
-        MOV     A,R7
-        MOV     R5,A
-        MOV     DPTR,#matchED
-        MOVX    A,@DPTR
-        ADD     A,#0x17
-        MOV     R2,A
-        INC     DPTR
-        MOVX    A,@DPTR
-        ADDC    A,#0x0
-        MOV     R3,A
-        LCALL   `??ZDO_CopyMatchInfo::?relay`; Banked call to: ZDO_CopyMatchInfo
-        MOV     A,R1
-        JNZ     ??ZDO_MatchEndDeviceBind_4
 // 2224       {
 // 2225         status = ZDP_NO_ENTRY;
-        MOV     DPL,?XSP + 0
-        MOV     DPH,?XSP + 1
-        MOV     A,#-0x78
-        MOVX    @DPTR,A
 // 2226         sendRsp = TRUE;
-        MOV     ?V0,#0x1
 // 2227       }
 // 2228 
 // 2229       // Make a source match for ed1
 // 2230       matchED->ed1numMatched = ZDO_CompareClusterLists(
 // 2231                   matchED->ed1.numOutClusters, matchED->ed1.outClusters,
 // 2232                   matchED->ed2.numInClusters, matchED->ed2.inClusters, ZDOBuildBuf );
-??ZDO_MatchEndDeviceBind_4:
-        ; Setup parameters for call to function ZDO_CompareClusterLists
-        MOV     ?V2,#ZDOBuildBuf & 0xff
-        MOV     ?V3,#(ZDOBuildBuf >> 8) & 0xff
-        MOV     R0,#?V2
-        LCALL   ?PUSH_XSTACK_I_TWO
-          CFI CFA_XSP16 add(XSP16, 27)
-        MOV     DPTR,#matchED
-        MOVX    A,@DPTR
-        MOV     R0,A
-        INC     DPTR
-        MOVX    A,@DPTR
-        XCH     A,R0
-        ADD     A,#0x29
-        MOV     DPL,A
-        XCH     A,R0
-        ADDC    A,#0x0
-        MOV     DPH,A
-        LCALL   ?PUSH_XSTACK8_X_TWO
-          CFI CFA_XSP16 add(XSP16, 29)
-        MOV     DPTR,#matchED
-        MOVX    A,@DPTR
-        MOV     R0,A
-        INC     DPTR
-        MOVX    A,@DPTR
-        XCH     A,R0
-        ADD     A,#0x28
-        MOV     DPL,A
-        XCH     A,R0
-        ADDC    A,#0x0
-        MOV     DPH,A
-        MOVX    A,@DPTR
-        MOV     R4,A
-        MOV     DPTR,#matchED
-        MOVX    A,@DPTR
-        MOV     R0,A
-        INC     DPTR
-        MOVX    A,@DPTR
-        XCH     A,R0
-        ADD     A,#0x15
-        MOV     DPL,A
-        XCH     A,R0
-        ADDC    A,#0x0
-        MOV     DPH,A
-        MOVX    A,@DPTR
-        MOV     R2,A
-        INC     DPTR
-        MOVX    A,@DPTR
-        MOV     R3,A
-        MOV     DPTR,#matchED
-        MOVX    A,@DPTR
-        MOV     R0,A
-        INC     DPTR
-        MOVX    A,@DPTR
-        XCH     A,R0
-        ADD     A,#0x14
-        MOV     DPL,A
-        XCH     A,R0
-        ADDC    A,#0x0
-        MOV     DPH,A
-        MOVX    A,@DPTR
-        MOV     R1,A
-        LCALL   `??ZDO_CompareClusterLists::?relay`; Banked call to: ZDO_CompareClusterLists
-        MOV     A,#0x4
-        LCALL   ?DEALLOC_XSTACK8
-          CFI CFA_XSP16 add(XSP16, 25)
-        MOV     A,R1
-        PUSH    A
-          CFI CFA_SP SP+-1
-        MOV     DPTR,#matchED
-        MOVX    A,@DPTR
-        MOV     R0,A
-        INC     DPTR
-        MOVX    A,@DPTR
-        XCH     A,R0
-        ADD     A,#0x31
-        MOV     DPL,A
-        XCH     A,R0
-        ADDC    A,#0x0
-        MOV     DPH,A
-        POP     A
-          CFI CFA_SP SP+0
-        MOVX    @DPTR,A
 // 2233       if ( matchED->ed1numMatched )
-        MOV     DPTR,#matchED
-        MOVX    A,@DPTR
-        MOV     R0,A
-        INC     DPTR
-        MOVX    A,@DPTR
-        XCH     A,R0
-        ADD     A,#0x31
-        MOV     DPL,A
-        XCH     A,R0
-        ADDC    A,#0x0
-        MOV     DPH,A
-        MOVX    A,@DPTR
-        JNZ     $+5
-        LJMP    ??ZDO_MatchEndDeviceBind_5 & 0xFFFF
 // 2234       {
 // 2235         // Save the match list
 // 2236         matchED->ed1Matched = osal_mem_alloc( (short)(matchED->ed1numMatched * sizeof ( uint16 )) );
-        ; Setup parameters for call to function osal_mem_alloc
-        MOV     DPTR,#matchED
-        MOVX    A,@DPTR
-        MOV     R0,A
-        INC     DPTR
-        MOVX    A,@DPTR
-        XCH     A,R0
-        ADD     A,#0x31
-        MOV     DPL,A
-        XCH     A,R0
-        ADDC    A,#0x0
-        MOV     DPH,A
-        MOVX    A,@DPTR
-        MOV     R2,A
-        MOV     R3,#0x0
-        MOV     A,R2
-        MOV     B,#0x2
-        MUL     AB
-        XCH     A,R2
-        MOV     R0,B
-        MOV     B,#0x0
-        MUL     AB
-        ADD     A,R0
-        MOV     R0,A
-        MOV     B,#0x2
-        MOV     A,R3
-        MUL     AB
-        ADD     A,R0
-        MOV     R3,A
-        LCALL   `??osal_mem_alloc::?relay`; Banked call to: osal_mem_alloc
-        MOV     ?V2,R2
-        MOV     ?V3,R3
-        MOV     R0,?V2
-        MOV     R1,?V3
-        MOV     DPTR,#matchED
-        MOVX    A,@DPTR
-        MOV     R2,A
-        INC     DPTR
-        MOVX    A,@DPTR
-        XCH     A,R2
-        ADD     A,#0x32
-        MOV     DPL,A
-        XCH     A,R2
-        ADDC    A,#0x0
-        MOV     DPH,A
-        MOV     A,R0
-        MOVX    @DPTR,A
-        INC     DPTR
-        MOV     A,R1
-        MOVX    @DPTR,A
 // 2237         if ( matchED->ed1Matched )
-        MOV     DPTR,#matchED
-        MOVX    A,@DPTR
-        MOV     R0,A
-        INC     DPTR
-        MOVX    A,@DPTR
-        XCH     A,R0
-        ADD     A,#0x32
-        MOV     DPL,A
-        XCH     A,R0
-        ADDC    A,#0x0
-        MOV     DPH,A
-        MOVX    A,@DPTR
-        MOV     R0,A
-        INC     DPTR
-        MOVX    A,@DPTR
-        MOV     R1,A
-        MOV     A,R0
-        ORL     A,R1
-        JZ      ??ZDO_MatchEndDeviceBind_6
 // 2238         {
 // 2239           osal_memcpy( matchED->ed1Matched, ZDOBuildBuf, (matchED->ed1numMatched * sizeof ( uint16 )) );
-        ; Setup parameters for call to function osal_memcpy
-        MOV     ?V4,#ZDOBuildBuf & 0xff
-        MOV     ?V5,#(ZDOBuildBuf >> 8) & 0xff
-        MOV     ?V6,#0x0
-        MOV     R0,#?V4
-        LCALL   ?PUSH_XSTACK_I_THREE
-          CFI CFA_XSP16 add(XSP16, 28)
-        MOV     DPTR,#matchED
-        MOVX    A,@DPTR
-        MOV     R0,A
-        INC     DPTR
-        MOVX    A,@DPTR
-        XCH     A,R0
-        ADD     A,#0x31
-        MOV     DPL,A
-        XCH     A,R0
-        ADDC    A,#0x0
-        MOV     DPH,A
-        MOVX    A,@DPTR
-        MOV     R4,A
-        MOV     R5,#0x0
-        MOV     A,R4
-        MOV     B,#0x2
-        MUL     AB
-        XCH     A,R4
-        MOV     R0,B
-        MOV     B,#0x0
-        MUL     AB
-        ADD     A,R0
-        MOV     R0,A
-        MOV     B,#0x2
-        MOV     A,R5
-        MUL     AB
-        ADD     A,R0
-        MOV     R5,A
-        MOV     DPTR,#matchED
-        MOVX    A,@DPTR
-        MOV     R0,A
-        INC     DPTR
-        MOVX    A,@DPTR
-        XCH     A,R0
-        ADD     A,#0x32
-        MOV     DPL,A
-        XCH     A,R0
-        ADDC    A,#0x0
-        MOV     DPH,A
-        MOVX    A,@DPTR
-        MOV     R2,A
-        INC     DPTR
-        MOVX    A,@DPTR
-        MOV     R3,A
-        LCALL   `??osal_memcpy::?relay`; Banked call to: osal_memcpy
-        MOV     A,#0x3
-        LCALL   ?DEALLOC_XSTACK8
-          CFI CFA_XSP16 add(XSP16, 25)
-        SJMP    ??ZDO_MatchEndDeviceBind_5
 // 2240         }
 // 2241         else
 // 2242         {
 // 2243           // Allocation error, stop
 // 2244           status = ZDP_NO_ENTRY;
-??ZDO_MatchEndDeviceBind_6:
-        MOV     DPL,?XSP + 0
-        MOV     DPH,?XSP + 1
-        MOV     A,#-0x78
-        MOVX    @DPTR,A
 // 2245           sendRsp = TRUE;
-        MOV     ?V0,#0x1
 // 2246         }
 // 2247       }
 // 2248 
@@ -13280,489 +11921,53 @@ ZDO_MatchEndDeviceBind:
 // 2250       matchED->ed2numMatched = ZDO_CompareClusterLists(
 // 2251                   matchED->ed2.numOutClusters, matchED->ed2.outClusters,
 // 2252                   matchED->ed1.numInClusters, matchED->ed1.inClusters, ZDOBuildBuf );
-??ZDO_MatchEndDeviceBind_5:
-        ; Setup parameters for call to function ZDO_CompareClusterLists
-        MOV     ?V2,#ZDOBuildBuf & 0xff
-        MOV     ?V3,#(ZDOBuildBuf >> 8) & 0xff
-        MOV     R0,#?V2
-        LCALL   ?PUSH_XSTACK_I_TWO
-          CFI CFA_XSP16 add(XSP16, 27)
-        MOV     DPTR,#matchED
-        MOVX    A,@DPTR
-        MOV     R0,A
-        INC     DPTR
-        MOVX    A,@DPTR
-        XCH     A,R0
-        ADD     A,#0x12
-        MOV     DPL,A
-        XCH     A,R0
-        ADDC    A,#0x0
-        MOV     DPH,A
-        LCALL   ?PUSH_XSTACK8_X_TWO
-          CFI CFA_XSP16 add(XSP16, 29)
-        MOV     DPTR,#matchED
-        MOVX    A,@DPTR
-        MOV     R0,A
-        INC     DPTR
-        MOVX    A,@DPTR
-        XCH     A,R0
-        ADD     A,#0x11
-        MOV     DPL,A
-        XCH     A,R0
-        ADDC    A,#0x0
-        MOV     DPH,A
-        MOVX    A,@DPTR
-        MOV     R4,A
-        MOV     DPTR,#matchED
-        MOVX    A,@DPTR
-        MOV     R0,A
-        INC     DPTR
-        MOVX    A,@DPTR
-        XCH     A,R0
-        ADD     A,#0x2c
-        MOV     DPL,A
-        XCH     A,R0
-        ADDC    A,#0x0
-        MOV     DPH,A
-        MOVX    A,@DPTR
-        MOV     R2,A
-        INC     DPTR
-        MOVX    A,@DPTR
-        MOV     R3,A
-        MOV     DPTR,#matchED
-        MOVX    A,@DPTR
-        MOV     R0,A
-        INC     DPTR
-        MOVX    A,@DPTR
-        XCH     A,R0
-        ADD     A,#0x2b
-        MOV     DPL,A
-        XCH     A,R0
-        ADDC    A,#0x0
-        MOV     DPH,A
-        MOVX    A,@DPTR
-        MOV     R1,A
-        LCALL   `??ZDO_CompareClusterLists::?relay`; Banked call to: ZDO_CompareClusterLists
-        MOV     A,#0x4
-        LCALL   ?DEALLOC_XSTACK8
-          CFI CFA_XSP16 add(XSP16, 25)
-        MOV     A,R1
-        MOV     R0,A
-        MOV     A,R0
-        PUSH    A
-          CFI CFA_SP SP+-1
-        MOV     DPTR,#matchED
-        MOVX    A,@DPTR
-        MOV     R0,A
-        INC     DPTR
-        MOVX    A,@DPTR
-        XCH     A,R0
-        ADD     A,#0x34
-        MOV     DPL,A
-        XCH     A,R0
-        ADDC    A,#0x0
-        MOV     DPH,A
-        POP     A
-          CFI CFA_SP SP+0
-        MOVX    @DPTR,A
 // 2253       if ( matchED->ed2numMatched )
-        MOV     DPTR,#matchED
-        MOVX    A,@DPTR
-        MOV     R0,A
-        INC     DPTR
-        MOVX    A,@DPTR
-        XCH     A,R0
-        ADD     A,#0x34
-        MOV     DPL,A
-        XCH     A,R0
-        ADDC    A,#0x0
-        MOV     DPH,A
-        MOVX    A,@DPTR
-        JNZ     $+5
-        LJMP    ??ZDO_MatchEndDeviceBind_7 & 0xFFFF
 // 2254       {
 // 2255         // Save the match list
 // 2256         matchED->ed2Matched = osal_mem_alloc( (short)(matchED->ed2numMatched * sizeof ( uint16 )) );
-        ; Setup parameters for call to function osal_mem_alloc
-        MOV     DPTR,#matchED
-        MOVX    A,@DPTR
-        MOV     R0,A
-        INC     DPTR
-        MOVX    A,@DPTR
-        XCH     A,R0
-        ADD     A,#0x34
-        MOV     DPL,A
-        XCH     A,R0
-        ADDC    A,#0x0
-        MOV     DPH,A
-        MOVX    A,@DPTR
-        MOV     R2,A
-        MOV     R3,#0x0
-        MOV     A,R2
-        MOV     B,#0x2
-        MUL     AB
-        XCH     A,R2
-        MOV     R0,B
-        MOV     B,#0x0
-        MUL     AB
-        ADD     A,R0
-        MOV     R0,A
-        MOV     B,#0x2
-        MOV     A,R3
-        MUL     AB
-        ADD     A,R0
-        MOV     R3,A
-        LCALL   `??osal_mem_alloc::?relay`; Banked call to: osal_mem_alloc
-        MOV     ?V2,R2
-        MOV     ?V3,R3
-        MOV     R0,?V2
-        MOV     R1,?V3
-        MOV     DPTR,#matchED
-        MOVX    A,@DPTR
-        MOV     R2,A
-        INC     DPTR
-        MOVX    A,@DPTR
-        XCH     A,R2
-        ADD     A,#0x35
-        MOV     DPL,A
-        XCH     A,R2
-        ADDC    A,#0x0
-        MOV     DPH,A
-        MOV     A,R0
-        MOVX    @DPTR,A
-        INC     DPTR
-        MOV     A,R1
-        MOVX    @DPTR,A
 // 2257         if ( matchED->ed2Matched )
-        MOV     DPTR,#matchED
-        MOVX    A,@DPTR
-        MOV     R0,A
-        INC     DPTR
-        MOVX    A,@DPTR
-        XCH     A,R0
-        ADD     A,#0x35
-        MOV     DPL,A
-        XCH     A,R0
-        ADDC    A,#0x0
-        MOV     DPH,A
-        MOVX    A,@DPTR
-        MOV     R0,A
-        INC     DPTR
-        MOVX    A,@DPTR
-        MOV     R1,A
-        MOV     A,R0
-        ORL     A,R1
-        JZ      ??ZDO_MatchEndDeviceBind_8
 // 2258         {
 // 2259           osal_memcpy( matchED->ed2Matched, ZDOBuildBuf, (matchED->ed2numMatched * sizeof ( uint16 )) );
-        ; Setup parameters for call to function osal_memcpy
-        MOV     ?V4,#ZDOBuildBuf & 0xff
-        MOV     ?V5,#(ZDOBuildBuf >> 8) & 0xff
-        MOV     ?V6,#0x0
-        MOV     R0,#?V4
-        LCALL   ?PUSH_XSTACK_I_THREE
-          CFI CFA_XSP16 add(XSP16, 28)
-        MOV     DPTR,#matchED
-        MOVX    A,@DPTR
-        MOV     R0,A
-        INC     DPTR
-        MOVX    A,@DPTR
-        XCH     A,R0
-        ADD     A,#0x34
-        MOV     DPL,A
-        XCH     A,R0
-        ADDC    A,#0x0
-        MOV     DPH,A
-        MOVX    A,@DPTR
-        MOV     R4,A
-        MOV     R5,#0x0
-        MOV     A,R4
-        MOV     B,#0x2
-        MUL     AB
-        XCH     A,R4
-        MOV     R0,B
-        MOV     B,#0x0
-        MUL     AB
-        ADD     A,R0
-        MOV     R0,A
-        MOV     B,#0x2
-        MOV     A,R5
-        MUL     AB
-        ADD     A,R0
-        MOV     R5,A
-        MOV     DPTR,#matchED
-        MOVX    A,@DPTR
-        MOV     R0,A
-        INC     DPTR
-        MOVX    A,@DPTR
-        XCH     A,R0
-        ADD     A,#0x35
-        MOV     DPL,A
-        XCH     A,R0
-        ADDC    A,#0x0
-        MOV     DPH,A
-        MOVX    A,@DPTR
-        MOV     R2,A
-        INC     DPTR
-        MOVX    A,@DPTR
-        MOV     R3,A
-        LCALL   `??osal_memcpy::?relay`; Banked call to: osal_memcpy
-        MOV     A,#0x3
-        LCALL   ?DEALLOC_XSTACK8
-          CFI CFA_XSP16 add(XSP16, 25)
-        SJMP    ??ZDO_MatchEndDeviceBind_7
 // 2260         }
 // 2261         else
 // 2262         {
 // 2263           // Allocation error, stop
 // 2264           status = ZDP_NO_ENTRY;
-??ZDO_MatchEndDeviceBind_8:
-        MOV     DPL,?XSP + 0
-        MOV     DPH,?XSP + 1
-        MOV     A,#-0x78
-        MOVX    @DPTR,A
 // 2265           sendRsp = TRUE;
-        MOV     ?V0,#0x1
 // 2266         }
 // 2267       }
 // 2268 
 // 2269       if ( (sendRsp == FALSE) && (matchED->ed1numMatched || matchED->ed2numMatched) )
-??ZDO_MatchEndDeviceBind_7:
-        MOV     A,?V0
-        JNZ     ??ZDO_MatchEndDeviceBind_9
-        MOV     DPTR,#matchED
-        MOVX    A,@DPTR
-        MOV     R0,A
-        INC     DPTR
-        MOVX    A,@DPTR
-        XCH     A,R0
-        ADD     A,#0x31
-        MOV     DPL,A
-        XCH     A,R0
-        ADDC    A,#0x0
-        MOV     DPH,A
-        MOVX    A,@DPTR
-        JNZ     ??ZDO_MatchEndDeviceBind_10
-        MOV     DPTR,#matchED
-        MOVX    A,@DPTR
-        MOV     R0,A
-        INC     DPTR
-        MOVX    A,@DPTR
-        XCH     A,R0
-        ADD     A,#0x34
-        MOV     DPL,A
-        XCH     A,R0
-        ADDC    A,#0x0
-        MOV     DPH,A
-        MOVX    A,@DPTR
-        JZ      ??ZDO_MatchEndDeviceBind_9
 // 2270       {
 // 2271         // Do the first unbind/bind state
 // 2272         ZDMatchSendState( ZDMATCH_REASON_START, ZDP_SUCCESS, 0 );
-??ZDO_MatchEndDeviceBind_10:
-        ; Setup parameters for call to function ZDMatchSendState
-        MOV     R3,#0x0
-        MOV     R2,#0x0
-        MOV     R1,#0x0
-        LCALL   `??ZDMatchSendState::?relay`; Banked call to: ZDMatchSendState
-        MOV     A,R1
-        SJMP    ??ZDO_MatchEndDeviceBind_3
 // 2273       }
 // 2274       else
 // 2275       {
 // 2276         status = ZDP_NO_MATCH;
-??ZDO_MatchEndDeviceBind_9:
-        MOV     DPL,?XSP + 0
-        MOV     DPH,?XSP + 1
-        MOV     A,#-0x7a
-        MOVX    @DPTR,A
 // 2277         sendRsp = TRUE;
-        MOV     ?V0,#0x1
 // 2278       }
 // 2279   }
 // 2280 
 // 2281   if ( sendRsp )
-??ZDO_MatchEndDeviceBind_3:
-        MOV     A,?V0
-        JNZ     $+5
-        LJMP    ??ZDO_MatchEndDeviceBind_11 & 0xFFFF
 // 2282   {
 // 2283     // send response to this requester
 // 2284     dstAddr.addrMode = Addr16Bit;
-        MOV     A,#0x9
-        LCALL   ?XSTACK_DISP0_8
-        MOV     A,#0x2
-        MOVX    @DPTR,A
 // 2285     dstAddr.addr.shortAddr = bindReq->srcAddr;
-        MOV     DPL,R6
-        MOV     DPH,R7
-        INC     DPTR
-        INC     DPTR
-        MOVX    A,@DPTR
-        MOV     R0,A
-        INC     DPTR
-        MOVX    A,@DPTR
-        MOV     R1,A
-        MOV     A,#0x1
-        LCALL   ?XSTACK_DISP0_8
-        MOV     A,R0
-        MOVX    @DPTR,A
-        INC     DPTR
-        MOV     A,R1
-        MOVX    @DPTR,A
 // 2286     ZDP_EndDeviceBindRsp( bindReq->TransSeq, &dstAddr, status, bindReq->SecurityUse );
-        ; Setup parameters for call to function ZDP_SendData
-        MOV     DPL,R6
-        MOV     DPH,R7
-        INC     DPTR
-        MOVX    A,@DPTR
-        MOV     ?V0,A
-        MOV     R0,#?V0
-        LCALL   ?PUSH_XSTACK_I_ONE
-          CFI CFA_XSP16 add(XSP16, 26)
-        MOV     A,#0x1
-        LCALL   ?XSTACK_DISP100_8
-        MOV     ?V0,R0
-        MOV     ?V1,R1
-        MOV     R0,#?V0
-        LCALL   ?PUSH_XSTACK_I_TWO
-          CFI CFA_XSP16 add(XSP16, 28)
-        MOV     ?V0,#0x20
-        MOV     ?V1,#-0x80
-        MOV     R0,#?V0
-        LCALL   ?PUSH_XSTACK_I_TWO
-          CFI CFA_XSP16 add(XSP16, 30)
-        MOV     R1,#0x1
-        MOV     A,#0x6
-        LCALL   ?XSTACK_DISP102_8
-        MOV     A,R6
-        MOV     R2,A
-        MOV     A,R7
-        MOV     R3,A
-        LCALL   `??ZDP_SendData::?relay`; Banked call to: ZDP_SendData
-        MOV     A,#0x5
-        LCALL   ?DEALLOC_XSTACK8
-          CFI CFA_XSP16 add(XSP16, 25)
-        MOV     A,R1
 // 2287 
 // 2288     if ( matchED->state == ZDMATCH_SENDING_BINDS )
-        MOV     DPTR,#matchED
-        MOVX    A,@DPTR
-        MOV     R0,A
-        INC     DPTR
-        MOVX    A,@DPTR
-        XCH     A,R0
-        ADD     A,#0x2e
-        MOV     DPL,A
-        XCH     A,R0
-        ADDC    A,#0x0
-        MOV     DPH,A
-        MOVX    A,@DPTR
-        XRL     A,#0x2
-        JNZ     ??ZDO_MatchEndDeviceBind_12
 // 2289     {
 // 2290       // send response to first requester
 // 2291       dstAddr.addrMode = Addr16Bit;
-        MOV     A,#0x9
-        LCALL   ?XSTACK_DISP0_8
-        MOV     A,#0x2
-        MOVX    @DPTR,A
 // 2292       dstAddr.addr.shortAddr = matchED->ed1.srcAddr;
-        MOV     DPTR,#matchED
-        MOVX    A,@DPTR
-        MOV     R0,A
-        INC     DPTR
-        MOVX    A,@DPTR
-        MOV     DPH,A
-        MOV     DPL,R0
-        INC     DPTR
-        INC     DPTR
-        MOVX    A,@DPTR
-        MOV     R0,A
-        INC     DPTR
-        MOVX    A,@DPTR
-        MOV     R1,A
-        MOV     A,#0x1
-        LCALL   ?XSTACK_DISP0_8
-        MOV     A,R0
-        MOVX    @DPTR,A
-        INC     DPTR
-        MOV     A,R1
-        MOVX    @DPTR,A
 // 2293       ZDP_EndDeviceBindRsp( matchED->ed1.TransSeq, &dstAddr, status, matchED->ed1.SecurityUse );
-        ; Setup parameters for call to function ZDP_SendData
-        MOV     DPTR,#matchED
-        MOVX    A,@DPTR
-        MOV     R0,A
-        INC     DPTR
-        MOVX    A,@DPTR
-        MOV     DPH,A
-        MOV     DPL,R0
-        INC     DPTR
-        MOVX    A,@DPTR
-        MOV     ?V0,A
-        MOV     R0,#?V0
-        LCALL   ?PUSH_XSTACK_I_ONE
-          CFI CFA_XSP16 add(XSP16, 26)
-        MOV     A,#0x1
-        LCALL   ?XSTACK_DISP100_8
-        MOV     ?V0,R0
-        MOV     ?V1,R1
-        MOV     R0,#?V0
-        LCALL   ?PUSH_XSTACK_I_TWO
-          CFI CFA_XSP16 add(XSP16, 28)
-        MOV     ?V0,#0x20
-        MOV     ?V1,#-0x80
-        MOV     R0,#?V0
-        LCALL   ?PUSH_XSTACK_I_TWO
-          CFI CFA_XSP16 add(XSP16, 30)
-        MOV     R1,#0x1
-        MOV     A,#0x6
-        LCALL   ?XSTACK_DISP102_8
-        MOV     DPTR,#matchED
-        MOVX    A,@DPTR
-        MOV     R2,A
-        INC     DPTR
-        MOVX    A,@DPTR
-        MOV     R3,A
-        LCALL   `??ZDP_SendData::?relay`; Banked call to: ZDP_SendData
-        MOV     A,#0x5
-        LCALL   ?DEALLOC_XSTACK8
-          CFI CFA_XSP16 add(XSP16, 25)
-        MOV     A,R1
 // 2294     }
 // 2295 
 // 2296     // Process ended - release memory used
 // 2297     ZDO_RemoveMatchMemory();
-??ZDO_MatchEndDeviceBind_12:
-        ; Setup parameters for call to function ZDO_RemoveMatchMemory
-        LCALL   `??ZDO_RemoveMatchMemory::?relay`; Banked call to: ZDO_RemoveMatchMemory
 // 2298   }
 // 2299 }
-??ZDO_MatchEndDeviceBind_11:
-        MOV     A,#0xa
-        LCALL   ?DEALLOC_XSTACK8
-          CFI CFA_XSP16 add(XSP16, 15)
-        MOV     R7,#0x7
-        LJMP    ?BANKED_LEAVE_XDATA
-          CFI R6 SameValue
-          CFI VB SameValue
-          CFI V0 SameValue
-          CFI V1 SameValue
-          CFI V2 SameValue
-          CFI V3 SameValue
-          CFI V4 SameValue
-          CFI V5 SameValue
-          CFI V6 SameValue
-          CFI R7 SameValue
-          CFI ?RET_LOW Frame(CFA_SP, 1)
-          CFI ?RET_HIGH Frame(CFA_SP, 2)
-          CFI ?BRET_EXT Frame(CFA_SP, 3)
-          CFI DPL0 SameValue
-          CFI DPH0 SameValue
-          CFI CFA_SP SP+-3
-          CFI CFA_XSP16 XSP16+0
-          CFI EndBlock cfiBlock32
 // 2300 
 // 2301 /*********************************************************************
 // 2302  * @fn      ZDO_RemoveMatchMemory()
@@ -13773,391 +11978,39 @@ ZDO_MatchEndDeviceBind:
 // 2307  *
 // 2308  * @return  none
 // 2309  */
-
-        RSEG BANKED_CODE:CODE:NOROOT(0)
 // 2310 static void ZDO_RemoveMatchMemory( void )
-ZDO_RemoveMatchMemory:
-          CFI Block cfiBlock33 Using cfiCommon0
-          CFI Function ZDO_RemoveMatchMemory
-        CODE
 // 2311 {
-        FUNCALL ZDO_RemoveMatchMemory, osal_mem_free
-        LOCFRAME ISTACK, 2, STACK
-        LOCFRAME PSTACK, 0, STACK
-        LOCFRAME XSTACK, 0, STACK
-        LOCFRAME IOVERLAY, 0, STATIC
-        LOCFRAME DOVERLAY, 0, STATIC
-        ARGFRAME ISTACK, 2, STACK
-        ARGFRAME PSTACK, 0, STACK
-        ARGFRAME XSTACK, 0, STACK
-        ARGFRAME IOVERLAY, 0, STATIC
-        ARGFRAME DOVERLAY, 0, STATIC
-        FUNCALL ZDO_RemoveMatchMemory, osal_mem_free
-        LOCFRAME ISTACK, 2, STACK
-        LOCFRAME PSTACK, 0, STACK
-        LOCFRAME XSTACK, 0, STACK
-        LOCFRAME IOVERLAY, 0, STATIC
-        LOCFRAME DOVERLAY, 0, STATIC
-        ARGFRAME ISTACK, 2, STACK
-        ARGFRAME PSTACK, 0, STACK
-        ARGFRAME XSTACK, 0, STACK
-        ARGFRAME IOVERLAY, 0, STATIC
-        ARGFRAME DOVERLAY, 0, STATIC
-        FUNCALL ZDO_RemoveMatchMemory, osal_mem_free
-        LOCFRAME ISTACK, 2, STACK
-        LOCFRAME PSTACK, 0, STACK
-        LOCFRAME XSTACK, 0, STACK
-        LOCFRAME IOVERLAY, 0, STATIC
-        LOCFRAME DOVERLAY, 0, STATIC
-        ARGFRAME ISTACK, 2, STACK
-        ARGFRAME PSTACK, 0, STACK
-        ARGFRAME XSTACK, 0, STACK
-        ARGFRAME IOVERLAY, 0, STATIC
-        ARGFRAME DOVERLAY, 0, STATIC
-        FUNCALL ZDO_RemoveMatchMemory, osal_mem_free
-        LOCFRAME ISTACK, 2, STACK
-        LOCFRAME PSTACK, 0, STACK
-        LOCFRAME XSTACK, 0, STACK
-        LOCFRAME IOVERLAY, 0, STATIC
-        LOCFRAME DOVERLAY, 0, STATIC
-        ARGFRAME ISTACK, 2, STACK
-        ARGFRAME PSTACK, 0, STACK
-        ARGFRAME XSTACK, 0, STACK
-        ARGFRAME IOVERLAY, 0, STATIC
-        ARGFRAME DOVERLAY, 0, STATIC
-        FUNCALL ZDO_RemoveMatchMemory, osal_mem_free
-        LOCFRAME ISTACK, 2, STACK
-        LOCFRAME PSTACK, 0, STACK
-        LOCFRAME XSTACK, 0, STACK
-        LOCFRAME IOVERLAY, 0, STATIC
-        LOCFRAME DOVERLAY, 0, STATIC
-        ARGFRAME ISTACK, 2, STACK
-        ARGFRAME PSTACK, 0, STACK
-        ARGFRAME XSTACK, 0, STACK
-        ARGFRAME IOVERLAY, 0, STATIC
-        ARGFRAME DOVERLAY, 0, STATIC
-        FUNCALL ZDO_RemoveMatchMemory, osal_mem_free
-        LOCFRAME ISTACK, 2, STACK
-        LOCFRAME PSTACK, 0, STACK
-        LOCFRAME XSTACK, 0, STACK
-        LOCFRAME IOVERLAY, 0, STATIC
-        LOCFRAME DOVERLAY, 0, STATIC
-        ARGFRAME ISTACK, 2, STACK
-        ARGFRAME PSTACK, 0, STACK
-        ARGFRAME XSTACK, 0, STACK
-        ARGFRAME IOVERLAY, 0, STATIC
-        ARGFRAME DOVERLAY, 0, STATIC
-        FUNCALL ZDO_RemoveMatchMemory, osal_mem_free
-        LOCFRAME ISTACK, 2, STACK
-        LOCFRAME PSTACK, 0, STACK
-        LOCFRAME XSTACK, 0, STACK
-        LOCFRAME IOVERLAY, 0, STATIC
-        LOCFRAME DOVERLAY, 0, STATIC
-        ARGFRAME ISTACK, 2, STACK
-        ARGFRAME PSTACK, 0, STACK
-        ARGFRAME XSTACK, 0, STACK
-        ARGFRAME IOVERLAY, 0, STATIC
-        ARGFRAME DOVERLAY, 0, STATIC
-        PUSH    DPL
-          CFI DPL0 Frame(CFA_SP, 4)
-          CFI CFA_SP SP+-4
-        PUSH    DPH
-          CFI DPH0 Frame(CFA_SP, 5)
-          CFI CFA_SP SP+-5
-        ; Saved register size: 2
-        ; Auto size: 0
 // 2312   if ( matchED != NULL )
-        MOV     DPTR,#matchED
-        MOVX    A,@DPTR
-        MOV     R0,A
-        INC     DPTR
-        MOVX    A,@DPTR
-        MOV     R1,A
-        MOV     A,R0
-        ORL     A,R1
-        JNZ     $+5
-        LJMP    ??ZDO_RemoveMatchMemory_0 & 0xFFFF
 // 2313   {
 // 2314     if ( matchED->ed2Matched != NULL )
-        MOV     DPTR,#matchED
-        MOVX    A,@DPTR
-        MOV     R0,A
-        INC     DPTR
-        MOVX    A,@DPTR
-        XCH     A,R0
-        ADD     A,#0x35
-        MOV     DPL,A
-        XCH     A,R0
-        ADDC    A,#0x0
-        MOV     DPH,A
-        MOVX    A,@DPTR
-        MOV     R0,A
-        INC     DPTR
-        MOVX    A,@DPTR
-        MOV     R1,A
-        MOV     A,R0
-        ORL     A,R1
-        JZ      ??ZDO_RemoveMatchMemory_1
 // 2315     {
 // 2316       osal_mem_free( matchED->ed2Matched );
-        ; Setup parameters for call to function osal_mem_free
-        MOV     DPTR,#matchED
-        MOVX    A,@DPTR
-        MOV     R0,A
-        INC     DPTR
-        MOVX    A,@DPTR
-        XCH     A,R0
-        ADD     A,#0x35
-        MOV     DPL,A
-        XCH     A,R0
-        ADDC    A,#0x0
-        MOV     DPH,A
-        MOVX    A,@DPTR
-        MOV     R2,A
-        INC     DPTR
-        MOVX    A,@DPTR
-        MOV     R3,A
-        LCALL   `??osal_mem_free::?relay`; Banked call to: osal_mem_free
 // 2317     }
 // 2318     if ( matchED->ed1Matched != NULL )
-??ZDO_RemoveMatchMemory_1:
-        MOV     DPTR,#matchED
-        MOVX    A,@DPTR
-        MOV     R0,A
-        INC     DPTR
-        MOVX    A,@DPTR
-        XCH     A,R0
-        ADD     A,#0x32
-        MOV     DPL,A
-        XCH     A,R0
-        ADDC    A,#0x0
-        MOV     DPH,A
-        MOVX    A,@DPTR
-        MOV     R0,A
-        INC     DPTR
-        MOVX    A,@DPTR
-        MOV     R1,A
-        MOV     A,R0
-        ORL     A,R1
-        JZ      ??ZDO_RemoveMatchMemory_2
 // 2319     {
 // 2320       osal_mem_free( matchED->ed1Matched );
-        ; Setup parameters for call to function osal_mem_free
-        MOV     DPTR,#matchED
-        MOVX    A,@DPTR
-        MOV     R0,A
-        INC     DPTR
-        MOVX    A,@DPTR
-        XCH     A,R0
-        ADD     A,#0x32
-        MOV     DPL,A
-        XCH     A,R0
-        ADDC    A,#0x0
-        MOV     DPH,A
-        MOVX    A,@DPTR
-        MOV     R2,A
-        INC     DPTR
-        MOVX    A,@DPTR
-        MOV     R3,A
-        LCALL   `??osal_mem_free::?relay`; Banked call to: osal_mem_free
 // 2321     }
 // 2322     if ( matchED->ed1.inClusters != NULL )
-??ZDO_RemoveMatchMemory_2:
-        MOV     DPTR,#matchED
-        MOVX    A,@DPTR
-        MOV     R0,A
-        INC     DPTR
-        MOVX    A,@DPTR
-        XCH     A,R0
-        ADD     A,#0x12
-        MOV     DPL,A
-        XCH     A,R0
-        ADDC    A,#0x0
-        MOV     DPH,A
-        MOVX    A,@DPTR
-        MOV     R0,A
-        INC     DPTR
-        MOVX    A,@DPTR
-        MOV     R1,A
-        MOV     A,R0
-        ORL     A,R1
-        JZ      ??ZDO_RemoveMatchMemory_3
 // 2323     {
 // 2324       osal_mem_free( matchED->ed1.inClusters );
-        ; Setup parameters for call to function osal_mem_free
-        MOV     DPTR,#matchED
-        MOVX    A,@DPTR
-        MOV     R0,A
-        INC     DPTR
-        MOVX    A,@DPTR
-        XCH     A,R0
-        ADD     A,#0x12
-        MOV     DPL,A
-        XCH     A,R0
-        ADDC    A,#0x0
-        MOV     DPH,A
-        MOVX    A,@DPTR
-        MOV     R2,A
-        INC     DPTR
-        MOVX    A,@DPTR
-        MOV     R3,A
-        LCALL   `??osal_mem_free::?relay`; Banked call to: osal_mem_free
 // 2325     }
 // 2326     if ( matchED->ed1.outClusters != NULL )
-??ZDO_RemoveMatchMemory_3:
-        MOV     DPTR,#matchED
-        MOVX    A,@DPTR
-        MOV     R0,A
-        INC     DPTR
-        MOVX    A,@DPTR
-        XCH     A,R0
-        ADD     A,#0x15
-        MOV     DPL,A
-        XCH     A,R0
-        ADDC    A,#0x0
-        MOV     DPH,A
-        MOVX    A,@DPTR
-        MOV     R0,A
-        INC     DPTR
-        MOVX    A,@DPTR
-        MOV     R1,A
-        MOV     A,R0
-        ORL     A,R1
-        JZ      ??ZDO_RemoveMatchMemory_4
 // 2327     {
 // 2328       osal_mem_free( matchED->ed1.outClusters );
-        ; Setup parameters for call to function osal_mem_free
-        MOV     DPTR,#matchED
-        MOVX    A,@DPTR
-        MOV     R0,A
-        INC     DPTR
-        MOVX    A,@DPTR
-        XCH     A,R0
-        ADD     A,#0x15
-        MOV     DPL,A
-        XCH     A,R0
-        ADDC    A,#0x0
-        MOV     DPH,A
-        MOVX    A,@DPTR
-        MOV     R2,A
-        INC     DPTR
-        MOVX    A,@DPTR
-        MOV     R3,A
-        LCALL   `??osal_mem_free::?relay`; Banked call to: osal_mem_free
 // 2329     }
 // 2330     if ( matchED->ed2.inClusters != NULL )
-??ZDO_RemoveMatchMemory_4:
-        MOV     DPTR,#matchED
-        MOVX    A,@DPTR
-        MOV     R0,A
-        INC     DPTR
-        MOVX    A,@DPTR
-        XCH     A,R0
-        ADD     A,#0x29
-        MOV     DPL,A
-        XCH     A,R0
-        ADDC    A,#0x0
-        MOV     DPH,A
-        MOVX    A,@DPTR
-        MOV     R0,A
-        INC     DPTR
-        MOVX    A,@DPTR
-        MOV     R1,A
-        MOV     A,R0
-        ORL     A,R1
-        JZ      ??ZDO_RemoveMatchMemory_5
 // 2331     {
 // 2332       osal_mem_free( matchED->ed2.inClusters );
-        ; Setup parameters for call to function osal_mem_free
-        MOV     DPTR,#matchED
-        MOVX    A,@DPTR
-        MOV     R0,A
-        INC     DPTR
-        MOVX    A,@DPTR
-        XCH     A,R0
-        ADD     A,#0x29
-        MOV     DPL,A
-        XCH     A,R0
-        ADDC    A,#0x0
-        MOV     DPH,A
-        MOVX    A,@DPTR
-        MOV     R2,A
-        INC     DPTR
-        MOVX    A,@DPTR
-        MOV     R3,A
-        LCALL   `??osal_mem_free::?relay`; Banked call to: osal_mem_free
 // 2333     }
 // 2334     if ( matchED->ed2.outClusters != NULL )
-??ZDO_RemoveMatchMemory_5:
-        MOV     DPTR,#matchED
-        MOVX    A,@DPTR
-        MOV     R0,A
-        INC     DPTR
-        MOVX    A,@DPTR
-        XCH     A,R0
-        ADD     A,#0x2c
-        MOV     DPL,A
-        XCH     A,R0
-        ADDC    A,#0x0
-        MOV     DPH,A
-        MOVX    A,@DPTR
-        MOV     R0,A
-        INC     DPTR
-        MOVX    A,@DPTR
-        MOV     R1,A
-        MOV     A,R0
-        ORL     A,R1
-        JZ      ??ZDO_RemoveMatchMemory_6
 // 2335     {
 // 2336       osal_mem_free( matchED->ed2.outClusters );
-        ; Setup parameters for call to function osal_mem_free
-        MOV     DPTR,#matchED
-        MOVX    A,@DPTR
-        MOV     R0,A
-        INC     DPTR
-        MOVX    A,@DPTR
-        XCH     A,R0
-        ADD     A,#0x2c
-        MOV     DPL,A
-        XCH     A,R0
-        ADDC    A,#0x0
-        MOV     DPH,A
-        MOVX    A,@DPTR
-        MOV     R2,A
-        INC     DPTR
-        MOVX    A,@DPTR
-        MOV     R3,A
-        LCALL   `??osal_mem_free::?relay`; Banked call to: osal_mem_free
 // 2337     }
 // 2338 
 // 2339     osal_mem_free( matchED );
-??ZDO_RemoveMatchMemory_6:
-        ; Setup parameters for call to function osal_mem_free
-        MOV     DPTR,#matchED
-        MOVX    A,@DPTR
-        MOV     R2,A
-        INC     DPTR
-        MOVX    A,@DPTR
-        MOV     R3,A
-        LCALL   `??osal_mem_free::?relay`; Banked call to: osal_mem_free
 // 2340     matchED = (ZDMatchEndDeviceBind_t *)NULL;
-        MOV     DPTR,#matchED
-        MOV     A,#0x0
-        MOVX    @DPTR,A
-        INC     DPTR
-        MOV     A,#0x0
-        MOVX    @DPTR,A
 // 2341   }
 // 2342 }
-??ZDO_RemoveMatchMemory_0:
-        POP     DPH
-          CFI DPH0 SameValue
-          CFI CFA_SP SP+-4
-        POP     DPL
-          CFI DPL0 SameValue
-          CFI CFA_SP SP+-3
-        LJMP    ?BRET
-          CFI EndBlock cfiBlock33
 // 2343 
 // 2344 /*********************************************************************
 // 2345  * @fn      ZDO_CopyMatchInfo()
@@ -14169,532 +12022,63 @@ ZDO_RemoveMatchMemory:
 // 2351  *
 // 2352  * @return  TRUE if copy was successful.
 // 2353  */
-
-        RSEG BANKED_CODE:CODE:NOROOT(0)
 // 2354 static uint8 ZDO_CopyMatchInfo( ZDEndDeviceBind_t *destReq, ZDEndDeviceBind_t *srcReq )
-ZDO_CopyMatchInfo:
-          CFI Block cfiBlock34 Using cfiCommon0
-          CFI Function ZDO_CopyMatchInfo
-        CODE
 // 2355 {
-        FUNCALL ZDO_CopyMatchInfo, osal_memcpy
-        LOCFRAME ISTACK, 0, STACK
-        LOCFRAME PSTACK, 0, STACK
-        LOCFRAME XSTACK, 18, STACK
-        LOCFRAME IOVERLAY, 0, STATIC
-        LOCFRAME DOVERLAY, 0, STATIC
-        ARGFRAME ISTACK, 0, STACK
-        ARGFRAME PSTACK, 0, STACK
-        ARGFRAME XSTACK, 18, STACK
-        ARGFRAME IOVERLAY, 0, STATIC
-        ARGFRAME DOVERLAY, 0, STATIC
-        FUNCALL ZDO_CopyMatchInfo, osal_mem_alloc
-        LOCFRAME ISTACK, 0, STACK
-        LOCFRAME PSTACK, 0, STACK
-        LOCFRAME XSTACK, 15, STACK
-        LOCFRAME IOVERLAY, 0, STATIC
-        LOCFRAME DOVERLAY, 0, STATIC
-        ARGFRAME ISTACK, 0, STACK
-        ARGFRAME PSTACK, 0, STACK
-        ARGFRAME XSTACK, 15, STACK
-        ARGFRAME IOVERLAY, 0, STATIC
-        ARGFRAME DOVERLAY, 0, STATIC
-        FUNCALL ZDO_CopyMatchInfo, osal_memcpy
-        LOCFRAME ISTACK, 0, STACK
-        LOCFRAME PSTACK, 0, STACK
-        LOCFRAME XSTACK, 18, STACK
-        LOCFRAME IOVERLAY, 0, STATIC
-        LOCFRAME DOVERLAY, 0, STATIC
-        ARGFRAME ISTACK, 0, STACK
-        ARGFRAME PSTACK, 0, STACK
-        ARGFRAME XSTACK, 18, STACK
-        ARGFRAME IOVERLAY, 0, STATIC
-        ARGFRAME DOVERLAY, 0, STATIC
-        FUNCALL ZDO_CopyMatchInfo, osal_mem_alloc
-        LOCFRAME ISTACK, 0, STACK
-        LOCFRAME PSTACK, 0, STACK
-        LOCFRAME XSTACK, 15, STACK
-        LOCFRAME IOVERLAY, 0, STATIC
-        LOCFRAME DOVERLAY, 0, STATIC
-        ARGFRAME ISTACK, 0, STACK
-        ARGFRAME PSTACK, 0, STACK
-        ARGFRAME XSTACK, 15, STACK
-        ARGFRAME IOVERLAY, 0, STATIC
-        ARGFRAME DOVERLAY, 0, STATIC
-        FUNCALL ZDO_CopyMatchInfo, osal_memcpy
-        LOCFRAME ISTACK, 0, STACK
-        LOCFRAME PSTACK, 0, STACK
-        LOCFRAME XSTACK, 18, STACK
-        LOCFRAME IOVERLAY, 0, STATIC
-        LOCFRAME DOVERLAY, 0, STATIC
-        ARGFRAME ISTACK, 0, STACK
-        ARGFRAME PSTACK, 0, STACK
-        ARGFRAME XSTACK, 18, STACK
-        ARGFRAME IOVERLAY, 0, STATIC
-        ARGFRAME DOVERLAY, 0, STATIC
-        FUNCALL ZDO_CopyMatchInfo, osal_mem_free
-        LOCFRAME ISTACK, 0, STACK
-        LOCFRAME PSTACK, 0, STACK
-        LOCFRAME XSTACK, 15, STACK
-        LOCFRAME IOVERLAY, 0, STATIC
-        LOCFRAME DOVERLAY, 0, STATIC
-        ARGFRAME ISTACK, 0, STACK
-        ARGFRAME PSTACK, 0, STACK
-        ARGFRAME XSTACK, 15, STACK
-        ARGFRAME IOVERLAY, 0, STATIC
-        ARGFRAME DOVERLAY, 0, STATIC
-        FUNCALL ZDO_CopyMatchInfo, osal_mem_free
-        LOCFRAME ISTACK, 0, STACK
-        LOCFRAME PSTACK, 0, STACK
-        LOCFRAME XSTACK, 15, STACK
-        LOCFRAME IOVERLAY, 0, STATIC
-        LOCFRAME DOVERLAY, 0, STATIC
-        ARGFRAME ISTACK, 0, STACK
-        ARGFRAME PSTACK, 0, STACK
-        ARGFRAME XSTACK, 15, STACK
-        ARGFRAME IOVERLAY, 0, STATIC
-        ARGFRAME DOVERLAY, 0, STATIC
-        REQUIRE ?V0
-        REQUIRE ?V1
-        REQUIRE ?V2
-        REQUIRE ?V4
-        REQUIRE ?V5
-        REQUIRE ?V6
-        MOV     A,#-0xf
-        LCALL   ?BANKED_ENTER_XDATA
-          CFI DPH0 load(1, XDATA, add(CFA_XSP16, literal(-1)))
-          CFI DPL0 load(1, XDATA, add(CFA_XSP16, literal(-2)))
-          CFI ?BRET_EXT load(1, XDATA, add(CFA_XSP16, literal(-3)))
-          CFI ?RET_HIGH load(1, XDATA, add(CFA_XSP16, literal(-4)))
-          CFI ?RET_LOW load(1, XDATA, add(CFA_XSP16, literal(-5)))
-          CFI R7 load(1, XDATA, add(CFA_XSP16, literal(-6)))
-          CFI V6 load(1, XDATA, add(CFA_XSP16, literal(-7)))
-          CFI V5 load(1, XDATA, add(CFA_XSP16, literal(-8)))
-          CFI V4 load(1, XDATA, add(CFA_XSP16, literal(-9)))
-          CFI V3 load(1, XDATA, add(CFA_XSP16, literal(-10)))
-          CFI V2 load(1, XDATA, add(CFA_XSP16, literal(-11)))
-          CFI V1 load(1, XDATA, add(CFA_XSP16, literal(-12)))
-          CFI V0 load(1, XDATA, add(CFA_XSP16, literal(-13)))
-          CFI VB load(1, XDATA, add(CFA_XSP16, literal(-14)))
-          CFI R6 load(1, XDATA, add(CFA_XSP16, literal(-15)))
-          CFI CFA_SP SP+0
-          CFI CFA_XSP16 add(XSP16, 15)
-        ; Saved register size: 15
-        ; Auto size: 0
-        MOV     A,R2
-        MOV     R6,A
-        MOV     A,R3
-        MOV     R7,A
-        MOV     ?V0,R4
-        MOV     ?V1,R5
 // 2356   uint8 allOK = TRUE;
-        MOV     ?V2,#0x1
 // 2357 
 // 2358   // Copy bind information into the match info structure
 // 2359   osal_memcpy( (uint8 *)destReq, srcReq, sizeof ( ZDEndDeviceBind_t ) );
-        ; Setup parameters for call to function osal_memcpy
-        MOV     ?V4,?V0
-        MOV     ?V5,?V1
-        MOV     ?V6,#0x0
-        MOV     R0,#?V4
-        LCALL   ?PUSH_XSTACK_I_THREE
-          CFI CFA_XSP16 add(XSP16, 18)
-        MOV     R4,#0x17
-        MOV     R5,#0x0
-        MOV     A,R6
-        MOV     R2,A
-        MOV     A,R7
-        MOV     R3,A
-        LCALL   `??osal_memcpy::?relay`; Banked call to: osal_memcpy
-        MOV     A,#0x3
-        LCALL   ?DEALLOC_XSTACK8
-          CFI CFA_XSP16 add(XSP16, 15)
 // 2360 
 // 2361   // Initialize the destination cluster pointers
 // 2362   destReq->inClusters = NULL;
-        MOV     A,R6
-        ADD     A,#0x12
-        MOV     DPL,A
-        CLR     A
-        ADDC    A,R7
-        MOV     DPH,A
-        MOV     A,#0x0
-        MOVX    @DPTR,A
-        INC     DPTR
-        MOV     A,#0x0
-        MOVX    @DPTR,A
 // 2363   destReq->outClusters = NULL;
-        MOV     A,R6
-        ADD     A,#0x15
-        MOV     DPL,A
-        CLR     A
-        ADDC    A,R7
-        MOV     DPH,A
-        MOV     A,#0x0
-        MOVX    @DPTR,A
-        INC     DPTR
-        MOV     A,#0x0
-        MOVX    @DPTR,A
 // 2364 
 // 2365   // Copy input cluster IDs
 // 2366   if ( srcReq->numInClusters )
-        MOV     A,?V0
-        ADD     A,#0x11
-        MOV     DPL,A
-        CLR     A
-        ADDC    A,?V1
-        MOV     DPH,A
-        MOVX    A,@DPTR
-        JNZ     $+5
-        LJMP    ??ZDO_CopyMatchInfo_0 & 0xFFFF
 // 2367   {
 // 2368     destReq->inClusters = osal_mem_alloc( (short)(srcReq->numInClusters * sizeof ( uint16 )) );
-        ; Setup parameters for call to function osal_mem_alloc
-        MOV     A,?V0
-        ADD     A,#0x11
-        MOV     DPL,A
-        CLR     A
-        ADDC    A,?V1
-        MOV     DPH,A
-        MOVX    A,@DPTR
-        MOV     R2,A
-        MOV     R3,#0x0
-        MOV     A,R2
-        MOV     B,#0x2
-        MUL     AB
-        XCH     A,R2
-        MOV     R0,B
-        MOV     B,#0x0
-        MUL     AB
-        ADD     A,R0
-        MOV     R0,A
-        MOV     B,#0x2
-        MOV     A,R3
-        MUL     AB
-        ADD     A,R0
-        MOV     R3,A
-        LCALL   `??osal_mem_alloc::?relay`; Banked call to: osal_mem_alloc
-        MOV     A,R6
-        ADD     A,#0x12
-        MOV     DPL,A
-        CLR     A
-        ADDC    A,R7
-        MOV     DPH,A
-        MOV     A,R2
-        MOVX    @DPTR,A
-        INC     DPTR
-        MOV     A,R3
-        MOVX    @DPTR,A
 // 2369     if ( destReq->inClusters )
-        MOV     A,R6
-        ADD     A,#0x12
-        MOV     DPL,A
-        CLR     A
-        ADDC    A,R7
-        MOV     DPH,A
-        MOVX    A,@DPTR
-        MOV     R0,A
-        INC     DPTR
-        MOVX    A,@DPTR
-        MOV     R1,A
-        MOV     A,R0
-        ORL     A,R1
-        JZ      ??ZDO_CopyMatchInfo_1
 // 2370     {
 // 2371       // Copy the clusters
 // 2372       osal_memcpy( (uint8*)(destReq->inClusters), (uint8 *)(srcReq->inClusters),
 // 2373                       (srcReq->numInClusters * sizeof ( uint16 )) );
-        ; Setup parameters for call to function osal_memcpy
-        MOV     A,?V0
-        ADD     A,#0x12
-        MOV     DPL,A
-        CLR     A
-        ADDC    A,?V1
-        MOV     DPH,A
-        MOVX    A,@DPTR
-        MOV     ?V4,A
-        INC     DPTR
-        MOVX    A,@DPTR
-        MOV     ?V5,A
-        MOV     ?V6,#0x0
-        MOV     R0,#?V4
-        LCALL   ?PUSH_XSTACK_I_THREE
-          CFI CFA_XSP16 add(XSP16, 18)
-        MOV     A,?V0
-        ADD     A,#0x11
-        MOV     DPL,A
-        CLR     A
-        ADDC    A,?V1
-        MOV     DPH,A
-        MOVX    A,@DPTR
-        MOV     R4,A
-        MOV     R5,#0x0
-        MOV     A,R4
-        MOV     B,#0x2
-        MUL     AB
-        XCH     A,R4
-        MOV     R0,B
-        MOV     B,#0x0
-        MUL     AB
-        ADD     A,R0
-        MOV     R0,A
-        MOV     B,#0x2
-        MOV     A,R5
-        MUL     AB
-        ADD     A,R0
-        MOV     R5,A
-        MOV     A,R6
-        ADD     A,#0x12
-        MOV     DPL,A
-        CLR     A
-        ADDC    A,R7
-        MOV     DPH,A
-        MOVX    A,@DPTR
-        MOV     R2,A
-        INC     DPTR
-        MOVX    A,@DPTR
-        MOV     R3,A
-        LCALL   `??osal_memcpy::?relay`; Banked call to: osal_memcpy
-        MOV     A,#0x3
-        LCALL   ?DEALLOC_XSTACK8
-          CFI CFA_XSP16 add(XSP16, 15)
-        SJMP    ??ZDO_CopyMatchInfo_0
 // 2374     }
 // 2375     else
 // 2376     {
 // 2377       allOK = FALSE;
-??ZDO_CopyMatchInfo_1:
-        MOV     ?V2,#0x0
 // 2378     }
 // 2379   }
 // 2380 
 // 2381   // Copy output cluster IDs
 // 2382   if ( srcReq->numOutClusters )
-??ZDO_CopyMatchInfo_0:
-        MOV     A,?V0
-        ADD     A,#0x14
-        MOV     DPL,A
-        CLR     A
-        ADDC    A,?V1
-        MOV     DPH,A
-        MOVX    A,@DPTR
-        JNZ     $+5
-        LJMP    ??ZDO_CopyMatchInfo_2 & 0xFFFF
 // 2383   {
 // 2384     destReq->outClusters = osal_mem_alloc( (short)(srcReq->numOutClusters * sizeof ( uint16 )) );
-        ; Setup parameters for call to function osal_mem_alloc
-        MOV     A,?V0
-        ADD     A,#0x14
-        MOV     DPL,A
-        CLR     A
-        ADDC    A,?V1
-        MOV     DPH,A
-        MOVX    A,@DPTR
-        MOV     R2,A
-        MOV     R3,#0x0
-        MOV     A,R2
-        MOV     B,#0x2
-        MUL     AB
-        XCH     A,R2
-        MOV     R0,B
-        MOV     B,#0x0
-        MUL     AB
-        ADD     A,R0
-        MOV     R0,A
-        MOV     B,#0x2
-        MOV     A,R3
-        MUL     AB
-        ADD     A,R0
-        MOV     R3,A
-        LCALL   `??osal_mem_alloc::?relay`; Banked call to: osal_mem_alloc
-        MOV     A,R6
-        ADD     A,#0x15
-        MOV     DPL,A
-        CLR     A
-        ADDC    A,R7
-        MOV     DPH,A
-        MOV     A,R2
-        MOVX    @DPTR,A
-        INC     DPTR
-        MOV     A,R3
-        MOVX    @DPTR,A
 // 2385     if ( destReq->outClusters )
-        MOV     A,R6
-        ADD     A,#0x15
-        MOV     DPL,A
-        CLR     A
-        ADDC    A,R7
-        MOV     DPH,A
-        MOVX    A,@DPTR
-        MOV     R0,A
-        INC     DPTR
-        MOVX    A,@DPTR
-        MOV     R1,A
-        MOV     A,R0
-        ORL     A,R1
-        JZ      ??ZDO_CopyMatchInfo_3
 // 2386     {
 // 2387       // Copy the clusters
 // 2388       osal_memcpy( (uint8 *)(destReq->outClusters), (uint8 *)(srcReq->outClusters),
 // 2389                       (srcReq->numOutClusters * sizeof ( uint16 )) );
-        ; Setup parameters for call to function osal_memcpy
-        MOV     A,?V0
-        ADD     A,#0x15
-        MOV     DPL,A
-        CLR     A
-        ADDC    A,?V1
-        MOV     DPH,A
-        MOVX    A,@DPTR
-        MOV     ?V4,A
-        INC     DPTR
-        MOVX    A,@DPTR
-        MOV     ?V5,A
-        MOV     ?V6,#0x0
-        MOV     R0,#?V4
-        LCALL   ?PUSH_XSTACK_I_THREE
-          CFI CFA_XSP16 add(XSP16, 18)
-        MOV     A,?V0
-        ADD     A,#0x14
-        MOV     DPL,A
-        CLR     A
-        ADDC    A,?V1
-        MOV     DPH,A
-        MOVX    A,@DPTR
-        MOV     R4,A
-        MOV     R5,#0x0
-        MOV     A,R4
-        MOV     B,#0x2
-        MUL     AB
-        XCH     A,R4
-        MOV     R0,B
-        MOV     B,#0x0
-        MUL     AB
-        ADD     A,R0
-        MOV     R0,A
-        MOV     B,#0x2
-        MOV     A,R5
-        MUL     AB
-        ADD     A,R0
-        MOV     R5,A
-        MOV     A,R6
-        ADD     A,#0x15
-        MOV     DPL,A
-        CLR     A
-        ADDC    A,R7
-        MOV     DPH,A
-        MOVX    A,@DPTR
-        MOV     R2,A
-        INC     DPTR
-        MOVX    A,@DPTR
-        MOV     R3,A
-        LCALL   `??osal_memcpy::?relay`; Banked call to: osal_memcpy
-        MOV     A,#0x3
-        LCALL   ?DEALLOC_XSTACK8
-          CFI CFA_XSP16 add(XSP16, 15)
-        SJMP    ??ZDO_CopyMatchInfo_2
 // 2390     }
 // 2391     else
 // 2392     {
 // 2393       allOK = FALSE;
-??ZDO_CopyMatchInfo_3:
-        MOV     ?V2,#0x0
 // 2394     }
 // 2395   }
 // 2396 
 // 2397   if ( allOK == FALSE )
-??ZDO_CopyMatchInfo_2:
-        MOV     A,?V2
-        JNZ     ??ZDO_CopyMatchInfo_4
 // 2398   {
 // 2399     if ( destReq->inClusters != NULL )
-        MOV     A,R6
-        ADD     A,#0x12
-        MOV     DPL,A
-        CLR     A
-        ADDC    A,R7
-        MOV     DPH,A
-        MOVX    A,@DPTR
-        MOV     R0,A
-        INC     DPTR
-        MOVX    A,@DPTR
-        MOV     R1,A
-        MOV     A,R0
-        ORL     A,R1
-        JZ      ??ZDO_CopyMatchInfo_5
 // 2400     {
 // 2401       osal_mem_free( destReq->inClusters );
-        ; Setup parameters for call to function osal_mem_free
-        MOV     A,R6
-        ADD     A,#0x12
-        MOV     DPL,A
-        CLR     A
-        ADDC    A,R7
-        MOV     DPH,A
-        MOVX    A,@DPTR
-        MOV     R2,A
-        INC     DPTR
-        MOVX    A,@DPTR
-        MOV     R3,A
-        LCALL   `??osal_mem_free::?relay`; Banked call to: osal_mem_free
 // 2402     }
 // 2403     if ( destReq->outClusters != NULL )
-??ZDO_CopyMatchInfo_5:
-        MOV     A,R6
-        ADD     A,#0x15
-        MOV     DPL,A
-        CLR     A
-        ADDC    A,R7
-        MOV     DPH,A
-        MOVX    A,@DPTR
-        MOV     R0,A
-        INC     DPTR
-        MOVX    A,@DPTR
-        MOV     R1,A
-        MOV     A,R0
-        ORL     A,R1
-        JZ      ??ZDO_CopyMatchInfo_4
 // 2404     {
 // 2405       osal_mem_free( destReq->outClusters );
-        ; Setup parameters for call to function osal_mem_free
-        MOV     A,R6
-        ADD     A,#0x15
-        MOV     DPL,A
-        CLR     A
-        ADDC    A,R7
-        MOV     DPH,A
-        MOVX    A,@DPTR
-        MOV     R2,A
-        INC     DPTR
-        MOVX    A,@DPTR
-        MOV     R3,A
-        LCALL   `??osal_mem_free::?relay`; Banked call to: osal_mem_free
 // 2406     }
 // 2407   }
 // 2408 
 // 2409   return ( allOK );
-??ZDO_CopyMatchInfo_4:
-        MOV     R1,?V2
-        MOV     R7,#0x7
-        LJMP    ?BANKED_LEAVE_XDATA
-          CFI R6 SameValue
-          CFI VB SameValue
-          CFI V0 SameValue
-          CFI V1 SameValue
-          CFI V2 SameValue
-          CFI V3 SameValue
-          CFI V4 SameValue
-          CFI V5 SameValue
-          CFI V6 SameValue
-          CFI R7 SameValue
-          CFI ?RET_LOW Frame(CFA_SP, 1)
-          CFI ?RET_HIGH Frame(CFA_SP, 2)
-          CFI ?BRET_EXT Frame(CFA_SP, 3)
-          CFI DPL0 SameValue
-          CFI DPH0 SameValue
-          CFI CFA_SP SP+-3
-          CFI CFA_XSP16 XSP16+0
 // 2410 }
-          CFI EndBlock cfiBlock34
 // 2411 
 // 2412 /*********************************************************************
 // 2413  * @fn      ZDMatchSendState()
@@ -14708,981 +12092,138 @@ ZDO_CopyMatchInfo:
 // 2421  * @return  FALSE if error and we are not currently matching, TRUE
 // 2422  *          if success.
 // 2423  */
-
-        RSEG BANKED_CODE:CODE:NOROOT(0)
 // 2424 uint8 ZDMatchSendState( uint8 reason, uint8 status, uint8 TransSeq )
-ZDMatchSendState:
-          CFI Block cfiBlock35 Using cfiCommon0
-          CFI Function ZDMatchSendState
-        CODE
 // 2425 {
-        FUNCALL ZDMatchSendState, APS_SetEndDeviceBindTimeout
-        LOCFRAME ISTACK, 0, STACK
-        LOCFRAME PSTACK, 0, STACK
-        LOCFRAME XSTACK, 37, STACK
-        LOCFRAME IOVERLAY, 0, STATIC
-        LOCFRAME DOVERLAY, 0, STATIC
-        ARGFRAME ISTACK, 0, STACK
-        ARGFRAME PSTACK, 0, STACK
-        ARGFRAME XSTACK, 37, STACK
-        ARGFRAME IOVERLAY, 0, STATIC
-        ARGFRAME DOVERLAY, 0, STATIC
-        FUNCALL ZDMatchSendState, sAddrExtCpy
-        LOCFRAME ISTACK, 0, STACK
-        LOCFRAME PSTACK, 0, STACK
-        LOCFRAME XSTACK, 37, STACK
-        LOCFRAME IOVERLAY, 0, STATIC
-        LOCFRAME DOVERLAY, 0, STATIC
-        ARGFRAME ISTACK, 0, STACK
-        ARGFRAME PSTACK, 0, STACK
-        ARGFRAME XSTACK, 37, STACK
-        ARGFRAME IOVERLAY, 0, STATIC
-        ARGFRAME DOVERLAY, 0, STATIC
-        FUNCALL ZDMatchSendState, ZDP_BindUnbindReq
-        LOCFRAME ISTACK, 0, STACK
-        LOCFRAME PSTACK, 0, STACK
-        LOCFRAME XSTACK, 45, STACK
-        LOCFRAME IOVERLAY, 0, STATIC
-        LOCFRAME DOVERLAY, 0, STATIC
-        ARGFRAME ISTACK, 0, STACK
-        ARGFRAME PSTACK, 0, STACK
-        ARGFRAME XSTACK, 45, STACK
-        ARGFRAME IOVERLAY, 0, STATIC
-        ARGFRAME DOVERLAY, 0, STATIC
-        FUNCALL ZDMatchSendState, APS_SetEndDeviceBindTimeout
-        LOCFRAME ISTACK, 0, STACK
-        LOCFRAME PSTACK, 0, STACK
-        LOCFRAME XSTACK, 37, STACK
-        LOCFRAME IOVERLAY, 0, STATIC
-        LOCFRAME DOVERLAY, 0, STATIC
-        ARGFRAME ISTACK, 0, STACK
-        ARGFRAME PSTACK, 0, STACK
-        ARGFRAME XSTACK, 37, STACK
-        ARGFRAME IOVERLAY, 0, STATIC
-        ARGFRAME DOVERLAY, 0, STATIC
-        FUNCALL ZDMatchSendState, ZDP_SendData
-        LOCFRAME ISTACK, 0, STACK
-        LOCFRAME PSTACK, 0, STACK
-        LOCFRAME XSTACK, 42, STACK
-        LOCFRAME IOVERLAY, 0, STATIC
-        LOCFRAME DOVERLAY, 0, STATIC
-        ARGFRAME ISTACK, 0, STACK
-        ARGFRAME PSTACK, 0, STACK
-        ARGFRAME XSTACK, 42, STACK
-        ARGFRAME IOVERLAY, 0, STATIC
-        ARGFRAME DOVERLAY, 0, STATIC
-        FUNCALL ZDMatchSendState, ZDP_SendData
-        LOCFRAME ISTACK, 0, STACK
-        LOCFRAME PSTACK, 0, STACK
-        LOCFRAME XSTACK, 42, STACK
-        LOCFRAME IOVERLAY, 0, STATIC
-        LOCFRAME DOVERLAY, 0, STATIC
-        ARGFRAME ISTACK, 0, STACK
-        ARGFRAME PSTACK, 0, STACK
-        ARGFRAME XSTACK, 42, STACK
-        ARGFRAME IOVERLAY, 0, STATIC
-        ARGFRAME DOVERLAY, 0, STATIC
-        FUNCALL ZDMatchSendState, ZDO_RemoveMatchMemory
-        LOCFRAME ISTACK, 0, STACK
-        LOCFRAME PSTACK, 0, STACK
-        LOCFRAME XSTACK, 37, STACK
-        LOCFRAME IOVERLAY, 0, STATIC
-        LOCFRAME DOVERLAY, 0, STATIC
-        ARGFRAME ISTACK, 0, STACK
-        ARGFRAME PSTACK, 0, STACK
-        ARGFRAME XSTACK, 37, STACK
-        ARGFRAME IOVERLAY, 0, STATIC
-        ARGFRAME DOVERLAY, 0, STATIC
-        REQUIRE ?V0
-        REQUIRE ?V1
-        REQUIRE ?V2
-        REQUIRE ?V3
-        REQUIRE ?V4
-        REQUIRE ?V5
-        REQUIRE ?V6
-        REQUIRE ?V7
-        REQUIRE ?V8
-        REQUIRE ?V9
-        MOV     A,#-0x12
-        LCALL   ?BANKED_ENTER_XDATA
-          CFI DPH0 load(1, XDATA, add(CFA_XSP16, literal(-1)))
-          CFI DPL0 load(1, XDATA, add(CFA_XSP16, literal(-2)))
-          CFI ?BRET_EXT load(1, XDATA, add(CFA_XSP16, literal(-3)))
-          CFI ?RET_HIGH load(1, XDATA, add(CFA_XSP16, literal(-4)))
-          CFI ?RET_LOW load(1, XDATA, add(CFA_XSP16, literal(-5)))
-          CFI R7 load(1, XDATA, add(CFA_XSP16, literal(-6)))
-          CFI V9 load(1, XDATA, add(CFA_XSP16, literal(-7)))
-          CFI V8 load(1, XDATA, add(CFA_XSP16, literal(-8)))
-          CFI V7 load(1, XDATA, add(CFA_XSP16, literal(-9)))
-          CFI V6 load(1, XDATA, add(CFA_XSP16, literal(-10)))
-          CFI V5 load(1, XDATA, add(CFA_XSP16, literal(-11)))
-          CFI V4 load(1, XDATA, add(CFA_XSP16, literal(-12)))
-          CFI V3 load(1, XDATA, add(CFA_XSP16, literal(-13)))
-          CFI V2 load(1, XDATA, add(CFA_XSP16, literal(-14)))
-          CFI V1 load(1, XDATA, add(CFA_XSP16, literal(-15)))
-          CFI V0 load(1, XDATA, add(CFA_XSP16, literal(-16)))
-          CFI VB load(1, XDATA, add(CFA_XSP16, literal(-17)))
-          CFI R6 load(1, XDATA, add(CFA_XSP16, literal(-18)))
-          CFI CFA_SP SP+0
-          CFI CFA_XSP16 add(XSP16, 18)
-        ; Saved register size: 18
-        ; Auto size: 19
-        MOV     A,#-0x13
-        LCALL   ?ALLOC_XSTACK8
-          CFI CFA_XSP16 add(XSP16, 37)
-        MOV     ?V3,R1
-        MOV     ?V6,R2
-        MOV     ?V7,R3
 // 2426   uint8 *dstIEEEAddr = NULL;
-        MOV     ?V4,#0x0
-        MOV     ?V5,#0x0
 // 2427   uint8 dstEP = 0xFF;
-        MOV     ?V2,#-0x1
 // 2428   zAddrType_t dstAddr;
 // 2429   zAddrType_t destinationAddr;
 // 2430   uint16 msgType;
 // 2431   uint16 clusterID = 0xFFFF;
-        MOV     ?V8,#-0x1
-        MOV     ?V9,#-0x1
 // 2432   ZDEndDeviceBind_t *ed = NULL;
-        MOV     ?V0,#0x0
-        MOV     ?V1,#0x0
 // 2433   uint8 rspStatus = ZDP_SUCCESS;
-        MOV     DPL,?XSP + 0
-        MOV     DPH,?XSP + 1
-        MOV     A,#0x0
-        MOVX    @DPTR,A
 // 2434 
 // 2435   if ( matchED == NULL )
-        MOV     DPTR,#matchED
-        MOVX    A,@DPTR
-        MOV     R0,A
-        INC     DPTR
-        MOVX    A,@DPTR
-        MOV     R1,A
-        MOV     A,R0
-        ORL     A,R1
-        JNZ     ??ZDMatchSendState_0
 // 2436   {
 // 2437     return ( FALSE );
-        MOV     R1,#0x0
-        LJMP    ??ZDMatchSendState_1 & 0xFFFF
 // 2438   }
 // 2439 
 // 2440   // Check sequence number
 // 2441   if ( reason == ZDMATCH_REASON_BIND_RSP || reason == ZDMATCH_REASON_UNBIND_RSP )
-??ZDMatchSendState_0:
-        MOV     A,#0x3
-        XRL     A,?V3
-        JZ      ??ZDMatchSendState_2
-        MOV     A,#0x2
-        XRL     A,?V3
-        JNZ     ??ZDMatchSendState_3
 // 2442   {
 // 2443     if ( TransSeq != matchED->transSeq )
-??ZDMatchSendState_2:
-        MOV     DPTR,#matchED
-        MOVX    A,@DPTR
-        MOV     R0,A
-        INC     DPTR
-        MOVX    A,@DPTR
-        XCH     A,R0
-        ADD     A,#0x30
-        MOV     DPL,A
-        XCH     A,R0
-        ADDC    A,#0x0
-        MOV     DPH,A
-        MOVX    A,@DPTR
-        XRL     A,?V7
-        JZ      ??ZDMatchSendState_3
 // 2444     {
 // 2445       return( FALSE ); // ignore the message
-        MOV     R1,#0x0
-        LJMP    ??ZDMatchSendState_1 & 0xFFFF
 // 2446     }
 // 2447   }
 // 2448 
 // 2449   // turn off timer
 // 2450   APS_SetEndDeviceBindTimeout( 0, ZDO_EndDeviceBindMatchTimeoutCB );
-??ZDMatchSendState_3:
-        ; Setup parameters for call to function APS_SetEndDeviceBindTimeout
-        MOV     R4,#`??ZDO_EndDeviceBindMatchTimeoutCB::?relay` & 0xff
-        MOV     R5,#(`??ZDO_EndDeviceBindMatchTimeoutCB::?relay` >> 8) & 0xff
-        MOV     R2,#0x0
-        MOV     R3,#0x0
-        LCALL   `??APS_SetEndDeviceBindTimeout::?relay`; Banked call to: APS_SetEndDeviceBindTimeout
 // 2451 
 // 2452   if ( reason == ZDMATCH_REASON_TIMEOUT )
-        MOV     A,#0x1
-        XRL     A,?V3
-        JNZ     ??ZDMatchSendState_4
 // 2453   {
 // 2454     rspStatus = ZDP_TIMEOUT;    // The process will stop
-        MOV     DPL,?XSP + 0
-        MOV     DPH,?XSP + 1
-        MOV     A,#-0x7b
-        MOVX    @DPTR,A
 // 2455   }
 // 2456 
 // 2457   if ( reason == ZDMATCH_REASON_START || reason == ZDMATCH_REASON_BIND_RSP )
-??ZDMatchSendState_4:
-        MOV     A,?V3
-        JZ      ??ZDMatchSendState_5
-        MOV     A,#0x3
-        XRL     A,?V3
-        JNZ     ??ZDMatchSendState_6
 // 2458   {
 // 2459     matchED->sending = ZDMATCH_SENDING_UNBIND;
-??ZDMatchSendState_5:
-        MOV     DPTR,#matchED
-        MOVX    A,@DPTR
-        MOV     R0,A
-        INC     DPTR
-        MOVX    A,@DPTR
-        XCH     A,R0
-        ADD     A,#0x2f
-        MOV     DPL,A
-        XCH     A,R0
-        ADDC    A,#0x0
-        MOV     DPH,A
-        MOV     A,#0x1
-        MOVX    @DPTR,A
 // 2460 
 // 2461     if ( reason == ZDMATCH_REASON_BIND_RSP && status != ZDP_SUCCESS )
-        MOV     A,#0x3
-        XRL     A,?V3
-        JNZ     ??ZDMatchSendState_7
-        MOV     A,?V6
-        JZ      ??ZDMatchSendState_7
 // 2462     {
 // 2463       rspStatus = status;
-        MOV     A,?V6
-        PUSH    A
-          CFI CFA_SP SP+-1
-        MOV     DPL,?XSP + 0
-        MOV     DPH,?XSP + 1
-        POP     A
-          CFI CFA_SP SP+0
-        MOVX    @DPTR,A
-        SJMP    ??ZDMatchSendState_7
 // 2464     }
 // 2465   }
 // 2466   else if ( reason == ZDMATCH_REASON_UNBIND_RSP )
-??ZDMatchSendState_6:
-        MOV     A,#0x2
-        XRL     A,?V3
-        JNZ     ??ZDMatchSendState_7
 // 2467   {
 // 2468     if ( status == ZDP_SUCCESS )
-        MOV     A,?V6
-        JNZ     ??ZDMatchSendState_8
 // 2469     {
 // 2470       matchED->sending = ZDMATCH_SENDING_UNBIND;
-        MOV     DPTR,#matchED
-        MOVX    A,@DPTR
-        MOV     R0,A
-        INC     DPTR
-        MOVX    A,@DPTR
-        XCH     A,R0
-        ADD     A,#0x2f
-        MOV     DPL,A
-        XCH     A,R0
-        ADDC    A,#0x0
-        MOV     DPH,A
-        MOV     A,#0x1
-        MOVX    @DPTR,A
-        SJMP    ??ZDMatchSendState_7
 // 2471     }
 // 2472     else
 // 2473     {
 // 2474       matchED->sending = ZDMATCH_SENDING_BIND;
-??ZDMatchSendState_8:
-        MOV     DPTR,#matchED
-        MOVX    A,@DPTR
-        MOV     R0,A
-        INC     DPTR
-        MOVX    A,@DPTR
-        XCH     A,R0
-        ADD     A,#0x2f
-        MOV     DPL,A
-        XCH     A,R0
-        ADDC    A,#0x0
-        MOV     DPH,A
-        MOV     A,#0x2
-        MOVX    @DPTR,A
 // 2475     }
 // 2476   }
 // 2477 
 // 2478   if ( reason != ZDMATCH_REASON_START && matchED->sending == ZDMATCH_SENDING_UNBIND )
-??ZDMatchSendState_7:
-        MOV     A,?V3
-        JZ      ??ZDMatchSendState_9
-        MOV     DPTR,#matchED
-        MOVX    A,@DPTR
-        MOV     R0,A
-        INC     DPTR
-        MOVX    A,@DPTR
-        XCH     A,R0
-        ADD     A,#0x2f
-        MOV     DPL,A
-        XCH     A,R0
-        ADDC    A,#0x0
-        MOV     DPH,A
-        MOVX    A,@DPTR
-        XRL     A,#0x1
-        JNZ     ??ZDMatchSendState_9
 // 2479   {
 // 2480     // Move to the next cluster ID
 // 2481     if ( matchED->ed1numMatched )
-        MOV     DPTR,#matchED
-        MOVX    A,@DPTR
-        MOV     R0,A
-        INC     DPTR
-        MOVX    A,@DPTR
-        XCH     A,R0
-        ADD     A,#0x31
-        MOV     DPL,A
-        XCH     A,R0
-        ADDC    A,#0x0
-        MOV     DPH,A
-        MOVX    A,@DPTR
-        JZ      ??ZDMatchSendState_10
 // 2482     {
 // 2483       matchED->ed1numMatched--;
-        MOV     DPTR,#matchED
-        MOVX    A,@DPTR
-        MOV     R0,A
-        INC     DPTR
-        MOVX    A,@DPTR
-        XCH     A,R0
-        ADD     A,#0x31
-        MOV     DPL,A
-        XCH     A,R0
-        ADDC    A,#0x0
-        MOV     DPH,A
-        MOVX    A,@DPTR
-        ADD     A,#-0x1
-        MOVX    @DPTR,A
-        SJMP    ??ZDMatchSendState_9
 // 2484     }
 // 2485     else if ( matchED->ed2numMatched )
-??ZDMatchSendState_10:
-        MOV     DPTR,#matchED
-        MOVX    A,@DPTR
-        MOV     R0,A
-        INC     DPTR
-        MOVX    A,@DPTR
-        XCH     A,R0
-        ADD     A,#0x34
-        MOV     DPL,A
-        XCH     A,R0
-        ADDC    A,#0x0
-        MOV     DPH,A
-        MOVX    A,@DPTR
-        JZ      ??ZDMatchSendState_9
 // 2486     {
 // 2487       matchED->ed2numMatched--;
-        MOV     DPTR,#matchED
-        MOVX    A,@DPTR
-        MOV     R0,A
-        INC     DPTR
-        MOVX    A,@DPTR
-        XCH     A,R0
-        ADD     A,#0x34
-        MOV     DPL,A
-        XCH     A,R0
-        ADDC    A,#0x0
-        MOV     DPH,A
-        MOVX    A,@DPTR
-        ADD     A,#-0x1
-        MOVX    @DPTR,A
 // 2488     }
 // 2489   }
 // 2490 
 // 2491   // What message do we send now
 // 2492   if ( matchED->ed1numMatched )
-??ZDMatchSendState_9:
-        MOV     DPTR,#matchED
-        MOVX    A,@DPTR
-        MOV     R0,A
-        INC     DPTR
-        MOVX    A,@DPTR
-        XCH     A,R0
-        ADD     A,#0x31
-        MOV     DPL,A
-        XCH     A,R0
-        ADDC    A,#0x0
-        MOV     DPH,A
-        MOVX    A,@DPTR
-        JNZ     $+5
-        LJMP    ??ZDMatchSendState_11 & 0xFFFF
 // 2493   {
 // 2494     ed = &(matchED->ed1);
-        MOV     DPTR,#matchED
-        MOVX    A,@DPTR
-        MOV     ?V0,A
-        INC     DPTR
-        MOVX    A,@DPTR
-        MOV     ?V1,A
 // 2495     clusterID = matchED->ed1Matched[matchED->ed1numMatched-1];
-        MOV     DPTR,#matchED
-        MOVX    A,@DPTR
-        MOV     R0,A
-        INC     DPTR
-        MOVX    A,@DPTR
-        XCH     A,R0
-        ADD     A,#0x31
-        MOV     DPL,A
-        XCH     A,R0
-        ADDC    A,#0x0
-        MOV     DPH,A
-        MOVX    A,@DPTR
-        MOV     R0,A
-        MOV     R1,#0x0
-        MOV     A,R0
-        MOV     B,#0x2
-        MUL     AB
-        XCH     A,R0
-        MOV     R2,B
-        MOV     B,#0x0
-        MUL     AB
-        ADD     A,R2
-        MOV     R2,A
-        MOV     B,#0x2
-        MOV     A,R1
-        MUL     AB
-        ADD     A,R2
-        MOV     R1,A
-        MOV     DPTR,#matchED
-        MOVX    A,@DPTR
-        MOV     R2,A
-        INC     DPTR
-        MOVX    A,@DPTR
-        XCH     A,R2
-        ADD     A,#0x32
-        MOV     DPL,A
-        XCH     A,R2
-        ADDC    A,#0x0
-        MOV     DPH,A
-        MOVX    A,@DPTR
-        ADD     A,R0
-        MOV     R0,A
-        INC     DPTR
-        MOVX    A,@DPTR
-        ADDC    A,R1
-        MOV     R1,A
-        MOV     A,R0
-        ADD     A,#-0x2
-        MOV     DPL,A
-        MOV     A,R1
-        ADDC    A,#-0x1
-        MOV     DPH,A
-        MOVX    A,@DPTR
-        MOV     ?V8,A
-        INC     DPTR
-        MOVX    A,@DPTR
-        MOV     ?V9,A
 // 2496     dstIEEEAddr = matchED->ed2.ieeeAddr;
-        MOV     DPTR,#matchED
-        MOVX    A,@DPTR
-        ADD     A,#0x1d
-        MOV     ?V4,A
-        INC     DPTR
-        MOVX    A,@DPTR
-        ADDC    A,#0x0
-        MOV     ?V5,A
 // 2497     dstEP = matchED->ed2.endpoint;
-        MOV     DPTR,#matchED
-        MOVX    A,@DPTR
-        MOV     R0,A
-        INC     DPTR
-        MOVX    A,@DPTR
-        XCH     A,R0
-        ADD     A,#0x25
-        MOV     DPL,A
-        XCH     A,R0
-        ADDC    A,#0x0
-        MOV     DPH,A
-        MOVX    A,@DPTR
-        MOV     ?V2,A
-        LJMP    ??ZDMatchSendState_12 & 0xFFFF
 // 2498   }
 // 2499   else if ( matchED->ed2numMatched )
-??ZDMatchSendState_11:
-        MOV     DPTR,#matchED
-        MOVX    A,@DPTR
-        MOV     R0,A
-        INC     DPTR
-        MOVX    A,@DPTR
-        XCH     A,R0
-        ADD     A,#0x34
-        MOV     DPL,A
-        XCH     A,R0
-        ADDC    A,#0x0
-        MOV     DPH,A
-        MOVX    A,@DPTR
-        JNZ     $+5
-        LJMP    ??ZDMatchSendState_12 & 0xFFFF
 // 2500   {
 // 2501     ed = &(matchED->ed2);
-        MOV     DPTR,#matchED
-        MOVX    A,@DPTR
-        ADD     A,#0x17
-        MOV     ?V0,A
-        INC     DPTR
-        MOVX    A,@DPTR
-        ADDC    A,#0x0
-        MOV     ?V1,A
 // 2502     clusterID = matchED->ed2Matched[matchED->ed2numMatched-1];
-        MOV     DPTR,#matchED
-        MOVX    A,@DPTR
-        MOV     R0,A
-        INC     DPTR
-        MOVX    A,@DPTR
-        XCH     A,R0
-        ADD     A,#0x34
-        MOV     DPL,A
-        XCH     A,R0
-        ADDC    A,#0x0
-        MOV     DPH,A
-        MOVX    A,@DPTR
-        MOV     R0,A
-        MOV     R1,#0x0
-        MOV     A,R0
-        MOV     B,#0x2
-        MUL     AB
-        XCH     A,R0
-        MOV     R2,B
-        MOV     B,#0x0
-        MUL     AB
-        ADD     A,R2
-        MOV     R2,A
-        MOV     B,#0x2
-        MOV     A,R1
-        MUL     AB
-        ADD     A,R2
-        MOV     R1,A
-        MOV     DPTR,#matchED
-        MOVX    A,@DPTR
-        MOV     R2,A
-        INC     DPTR
-        MOVX    A,@DPTR
-        XCH     A,R2
-        ADD     A,#0x35
-        MOV     DPL,A
-        XCH     A,R2
-        ADDC    A,#0x0
-        MOV     DPH,A
-        MOVX    A,@DPTR
-        ADD     A,R0
-        MOV     R0,A
-        INC     DPTR
-        MOVX    A,@DPTR
-        ADDC    A,R1
-        MOV     R1,A
-        MOV     A,R0
-        ADD     A,#-0x2
-        MOV     DPL,A
-        MOV     A,R1
-        ADDC    A,#-0x1
-        MOV     DPH,A
-        MOVX    A,@DPTR
-        MOV     ?V8,A
-        INC     DPTR
-        MOVX    A,@DPTR
-        MOV     ?V9,A
 // 2503     dstIEEEAddr = matchED->ed1.ieeeAddr;
-        MOV     DPTR,#matchED
-        MOVX    A,@DPTR
-        ADD     A,#0x6
-        MOV     ?V4,A
-        INC     DPTR
-        MOVX    A,@DPTR
-        ADDC    A,#0x0
-        MOV     ?V5,A
 // 2504     dstEP = matchED->ed1.endpoint;
-        MOV     DPTR,#matchED
-        MOVX    A,@DPTR
-        MOV     R0,A
-        INC     DPTR
-        MOVX    A,@DPTR
-        XCH     A,R0
-        ADD     A,#0xe
-        MOV     DPL,A
-        XCH     A,R0
-        ADDC    A,#0x0
-        MOV     DPH,A
-        MOVX    A,@DPTR
-        MOV     ?V2,A
 // 2505   }
 // 2506 
 // 2507   dstAddr.addrMode = Addr16Bit;
-??ZDMatchSendState_12:
-        MOV     A,#0x9
-        LCALL   ?XSTACK_DISP0_8
-        MOV     A,#0x2
-        MOVX    @DPTR,A
 // 2508 
 // 2509   // Send the next message
 // 2510   if ( (rspStatus == ZDP_SUCCESS) && ed )
-        MOV     DPL,?XSP + 0
-        MOV     DPH,?XSP + 1
-        MOVX    A,@DPTR
-        JZ      $+5
-        LJMP    ??ZDMatchSendState_13 & 0xFFFF
-        MOV     A,?V0
-        ORL     A,?V1
-        JNZ     $+5
-        LJMP    ??ZDMatchSendState_13 & 0xFFFF
 // 2511   {
 // 2512     // Send unbind/bind message to source
 // 2513     if ( matchED->sending == ZDMATCH_SENDING_UNBIND )
-        MOV     DPTR,#matchED
-        MOVX    A,@DPTR
-        MOV     R0,A
-        INC     DPTR
-        MOVX    A,@DPTR
-        XCH     A,R0
-        ADD     A,#0x2f
-        MOV     DPL,A
-        XCH     A,R0
-        ADDC    A,#0x0
-        MOV     DPH,A
-        MOVX    A,@DPTR
-        XRL     A,#0x1
-        JNZ     ??ZDMatchSendState_14
 // 2514     {
 // 2515       msgType = Unbind_req;
-        MOV     R6,#0x22
-        MOV     R7,#0x0
-        SJMP    ??ZDMatchSendState_15
 // 2516     }
 // 2517     else
 // 2518     {
 // 2519       msgType = Bind_req;
-??ZDMatchSendState_14:
-        MOV     R6,#0x21
-        MOV     R7,#0x0
 // 2520     }
 // 2521 
 // 2522     dstAddr.addr.shortAddr = ed->srcAddr;
-??ZDMatchSendState_15:
-        MOV     DPL,?V0
-        MOV     DPH,?V1
-        INC     DPTR
-        INC     DPTR
-        MOVX    A,@DPTR
-        MOV     R0,A
-        INC     DPTR
-        MOVX    A,@DPTR
-        MOV     R1,A
-        MOV     A,#0x1
-        LCALL   ?XSTACK_DISP0_8
-        MOV     A,R0
-        MOVX    @DPTR,A
-        INC     DPTR
-        MOV     A,R1
-        MOVX    @DPTR,A
 // 2523 
 // 2524     // Save off the transaction sequence number
 // 2525     matchED->transSeq = ZDP_TransID;
-        MOV     DPTR,#ZDP_TransID
-        MOVX    A,@DPTR
-        PUSH    A
-          CFI CFA_SP SP+-1
-        MOV     DPTR,#matchED
-        MOVX    A,@DPTR
-        MOV     R0,A
-        INC     DPTR
-        MOVX    A,@DPTR
-        XCH     A,R0
-        ADD     A,#0x30
-        MOV     DPL,A
-        XCH     A,R0
-        ADDC    A,#0x0
-        MOV     DPH,A
-        POP     A
-          CFI CFA_SP SP+0
-        MOVX    @DPTR,A
 // 2526 
 // 2527     destinationAddr.addrMode = Addr64Bit;
-        MOV     A,#0x12
-        LCALL   ?XSTACK_DISP0_8
-        MOV     A,#0x3
-        MOVX    @DPTR,A
 // 2528     osal_cpyExtAddr( destinationAddr.addr.extAddr, dstIEEEAddr );
-        ; Setup parameters for call to function sAddrExtCpy
-        MOV     R4,?V4
-        MOV     R5,?V5
-        MOV     A,#0xa
-        LCALL   ?XSTACK_DISP101_8
-        LCALL   `??sAddrExtCpy::?relay`; Banked call to: sAddrExtCpy
 // 2529 
 // 2530     ZDP_BindUnbindReq( msgType, &dstAddr, ed->ieeeAddr, ed->endpoint, clusterID,
 // 2531         &destinationAddr, dstEP, ed->SecurityUse );
-        ; Setup parameters for call to function ZDP_BindUnbindReq
-        MOV     DPL,?V0
-        MOV     DPH,?V1
-        INC     DPTR
-        MOVX    A,@DPTR
-        MOV     ?V4,A
-        MOV     R0,#?V4
-        LCALL   ?PUSH_XSTACK_I_ONE
-          CFI CFA_XSP16 add(XSP16, 38)
-        MOV     A,?V2
-        MOV     ?V2,A
-        MOV     R0,#?V2
-        LCALL   ?PUSH_XSTACK_I_ONE
-          CFI CFA_XSP16 add(XSP16, 39)
-        MOV     A,#0xc
-        LCALL   ?XSTACK_DISP100_8
-        MOV     ?V4,R0
-        MOV     ?V5,R1
-        MOV     R0,#?V4
-        LCALL   ?PUSH_XSTACK_I_TWO
-          CFI CFA_XSP16 add(XSP16, 41)
-        MOV     R0,#?V8
-        LCALL   ?PUSH_XSTACK_I_TWO
-          CFI CFA_XSP16 add(XSP16, 43)
-        MOV     A,?V0
-        ADD     A,#0x6
-        MOV     ?V4,A
-        CLR     A
-        ADDC    A,?V1
-        MOV     ?V5,A
-        MOV     R0,#?V4
-        LCALL   ?PUSH_XSTACK_I_TWO
-          CFI CFA_XSP16 add(XSP16, 45)
-        MOV     A,?V0
-        ADD     A,#0xe
-        MOV     DPL,A
-        CLR     A
-        ADDC    A,?V1
-        MOV     DPH,A
-        MOVX    A,@DPTR
-        MOV     R1,A
-        MOV     A,#0x9
-        LCALL   ?XSTACK_DISP102_8
-        MOV     A,R6
-        MOV     R2,A
-        MOV     A,R7
-        MOV     R3,A
-        LCALL   `??ZDP_BindUnbindReq::?relay`; Banked call to: ZDP_BindUnbindReq
-        MOV     A,#0x8
-        LCALL   ?DEALLOC_XSTACK8
-          CFI CFA_XSP16 add(XSP16, 37)
-        MOV     A,R1
 // 2532 
 // 2533     // Set timeout for response
 // 2534     APS_SetEndDeviceBindTimeout( AIB_MaxBindingTime, ZDO_EndDeviceBindMatchTimeoutCB );
-        ; Setup parameters for call to function APS_SetEndDeviceBindTimeout
-        MOV     R4,#`??ZDO_EndDeviceBindMatchTimeoutCB::?relay` & 0xff
-        MOV     R5,#(`??ZDO_EndDeviceBindMatchTimeoutCB::?relay` >> 8) & 0xff
-        MOV     DPTR,#AIB_MaxBindingTime
-        MOVX    A,@DPTR
-        MOV     R2,A
-        INC     DPTR
-        MOVX    A,@DPTR
-        MOV     R3,A
-        LCALL   `??APS_SetEndDeviceBindTimeout::?relay`; Banked call to: APS_SetEndDeviceBindTimeout
-        LJMP    ??ZDMatchSendState_16 & 0xFFFF
 // 2535   }
 // 2536   else
 // 2537   {
 // 2538     // Send the response messages to requesting devices
 // 2539     // send response to first requester
 // 2540     dstAddr.addr.shortAddr = matchED->ed1.srcAddr;
-??ZDMatchSendState_13:
-        MOV     DPTR,#matchED
-        MOVX    A,@DPTR
-        MOV     R0,A
-        INC     DPTR
-        MOVX    A,@DPTR
-        MOV     DPH,A
-        MOV     DPL,R0
-        INC     DPTR
-        INC     DPTR
-        MOVX    A,@DPTR
-        MOV     R0,A
-        INC     DPTR
-        MOVX    A,@DPTR
-        MOV     R1,A
-        MOV     A,#0x1
-        LCALL   ?XSTACK_DISP0_8
-        MOV     A,R0
-        MOVX    @DPTR,A
-        INC     DPTR
-        MOV     A,R1
-        MOVX    @DPTR,A
 // 2541     ZDP_EndDeviceBindRsp( matchED->ed1.TransSeq, &dstAddr, rspStatus, matchED->ed1.SecurityUse );
-        ; Setup parameters for call to function ZDP_SendData
-        MOV     DPTR,#matchED
-        MOVX    A,@DPTR
-        MOV     R0,A
-        INC     DPTR
-        MOVX    A,@DPTR
-        MOV     DPH,A
-        MOV     DPL,R0
-        INC     DPTR
-        MOVX    A,@DPTR
-        MOV     ?V0,A
-        MOV     R0,#?V0
-        LCALL   ?PUSH_XSTACK_I_ONE
-          CFI CFA_XSP16 add(XSP16, 38)
-        MOV     A,#0x1
-        LCALL   ?XSTACK_DISP100_8
-        MOV     ?V0,R0
-        MOV     ?V1,R1
-        MOV     R0,#?V0
-        LCALL   ?PUSH_XSTACK_I_TWO
-          CFI CFA_XSP16 add(XSP16, 40)
-        MOV     ?V0,#0x20
-        MOV     ?V1,#-0x80
-        MOV     R0,#?V0
-        LCALL   ?PUSH_XSTACK_I_TWO
-          CFI CFA_XSP16 add(XSP16, 42)
-        MOV     R1,#0x1
-        MOV     A,#0x6
-        LCALL   ?XSTACK_DISP102_8
-        MOV     DPTR,#matchED
-        MOVX    A,@DPTR
-        MOV     R2,A
-        INC     DPTR
-        MOVX    A,@DPTR
-        MOV     R3,A
-        LCALL   `??ZDP_SendData::?relay`; Banked call to: ZDP_SendData
-        MOV     A,#0x5
-        LCALL   ?DEALLOC_XSTACK8
-          CFI CFA_XSP16 add(XSP16, 37)
-        MOV     A,R1
 // 2542 
 // 2543     // send response to second requester
 // 2544     if ( matchED->state == ZDMATCH_SENDING_BINDS )
-        MOV     DPTR,#matchED
-        MOVX    A,@DPTR
-        MOV     R0,A
-        INC     DPTR
-        MOVX    A,@DPTR
-        XCH     A,R0
-        ADD     A,#0x2e
-        MOV     DPL,A
-        XCH     A,R0
-        ADDC    A,#0x0
-        MOV     DPH,A
-        MOVX    A,@DPTR
-        XRL     A,#0x2
-        JNZ     ??ZDMatchSendState_17
 // 2545     {
 // 2546       dstAddr.addr.shortAddr = matchED->ed2.srcAddr;
-        MOV     DPTR,#matchED
-        MOVX    A,@DPTR
-        MOV     R0,A
-        INC     DPTR
-        MOVX    A,@DPTR
-        XCH     A,R0
-        ADD     A,#0x19
-        MOV     DPL,A
-        XCH     A,R0
-        ADDC    A,#0x0
-        MOV     DPH,A
-        MOVX    A,@DPTR
-        MOV     R0,A
-        INC     DPTR
-        MOVX    A,@DPTR
-        MOV     R1,A
-        MOV     A,#0x1
-        LCALL   ?XSTACK_DISP0_8
-        MOV     A,R0
-        MOVX    @DPTR,A
-        INC     DPTR
-        MOV     A,R1
-        MOVX    @DPTR,A
 // 2547       ZDP_EndDeviceBindRsp( matchED->ed2.TransSeq, &dstAddr, rspStatus, matchED->ed2.SecurityUse );
-        ; Setup parameters for call to function ZDP_SendData
-        MOV     DPTR,#matchED
-        MOVX    A,@DPTR
-        MOV     R0,A
-        INC     DPTR
-        MOVX    A,@DPTR
-        XCH     A,R0
-        ADD     A,#0x18
-        MOV     DPL,A
-        XCH     A,R0
-        ADDC    A,#0x0
-        MOV     DPH,A
-        MOVX    A,@DPTR
-        MOV     ?V0,A
-        MOV     R0,#?V0
-        LCALL   ?PUSH_XSTACK_I_ONE
-          CFI CFA_XSP16 add(XSP16, 38)
-        MOV     A,#0x1
-        LCALL   ?XSTACK_DISP100_8
-        MOV     ?V0,R0
-        MOV     ?V1,R1
-        MOV     R0,#?V0
-        LCALL   ?PUSH_XSTACK_I_TWO
-          CFI CFA_XSP16 add(XSP16, 40)
-        MOV     ?V0,#0x20
-        MOV     ?V1,#-0x80
-        MOV     R0,#?V0
-        LCALL   ?PUSH_XSTACK_I_TWO
-          CFI CFA_XSP16 add(XSP16, 42)
-        MOV     R1,#0x1
-        MOV     A,#0x6
-        LCALL   ?XSTACK_DISP102_8
-        MOV     DPTR,#matchED
-        MOVX    A,@DPTR
-        ADD     A,#0x17
-        MOV     R2,A
-        INC     DPTR
-        MOVX    A,@DPTR
-        ADDC    A,#0x0
-        MOV     R3,A
-        LCALL   `??ZDP_SendData::?relay`; Banked call to: ZDP_SendData
-        MOV     A,#0x5
-        LCALL   ?DEALLOC_XSTACK8
-          CFI CFA_XSP16 add(XSP16, 37)
-        MOV     A,R1
 // 2548     }
 // 2549 
 // 2550     // Process ended - release memory used
 // 2551     ZDO_RemoveMatchMemory();
-??ZDMatchSendState_17:
-        ; Setup parameters for call to function ZDO_RemoveMatchMemory
-        LCALL   `??ZDO_RemoveMatchMemory::?relay`; Banked call to: ZDO_RemoveMatchMemory
 // 2552   }
 // 2553 
 // 2554   return ( TRUE );
-??ZDMatchSendState_16:
-        MOV     R1,#0x1
-??ZDMatchSendState_1:
-        MOV     A,#0x13
-        LCALL   ?DEALLOC_XSTACK8
-          CFI CFA_XSP16 add(XSP16, 18)
-        MOV     R7,#0xa
-        LJMP    ?BANKED_LEAVE_XDATA
-          CFI R6 SameValue
-          CFI VB SameValue
-          CFI V0 SameValue
-          CFI V1 SameValue
-          CFI V2 SameValue
-          CFI V3 SameValue
-          CFI V4 SameValue
-          CFI V5 SameValue
-          CFI V6 SameValue
-          CFI V7 SameValue
-          CFI V8 SameValue
-          CFI V9 SameValue
-          CFI R7 SameValue
-          CFI ?RET_LOW Frame(CFA_SP, 1)
-          CFI ?RET_HIGH Frame(CFA_SP, 2)
-          CFI ?BRET_EXT Frame(CFA_SP, 3)
-          CFI DPL0 SameValue
-          CFI DPH0 SameValue
-          CFI CFA_SP SP+-3
-          CFI CFA_XSP16 XSP16+0
 // 2555 }
-          CFI EndBlock cfiBlock35
 // 2556 
 // 2557 /*********************************************************************
 // 2558  * @fn      ZDO_EndDeviceBindMatchTimeoutCB()
@@ -15693,49 +12234,10 @@ ZDMatchSendState:
 // 2563  *
 // 2564  * @return  none
 // 2565  */
-
-        RSEG BANKED_CODE:CODE:NOROOT(0)
 // 2566 static void ZDO_EndDeviceBindMatchTimeoutCB( void )
-ZDO_EndDeviceBindMatchTimeoutCB:
-          CFI Block cfiBlock36 Using cfiCommon0
-          CFI Function ZDO_EndDeviceBindMatchTimeoutCB
-        CODE
 // 2567 {
-        FUNCALL ZDO_EndDeviceBindMatchTimeoutCB, ZDMatchSendState
-        LOCFRAME ISTACK, 2, STACK
-        LOCFRAME PSTACK, 0, STACK
-        LOCFRAME XSTACK, 0, STACK
-        LOCFRAME IOVERLAY, 0, STATIC
-        LOCFRAME DOVERLAY, 0, STATIC
-        ARGFRAME ISTACK, 2, STACK
-        ARGFRAME PSTACK, 0, STACK
-        ARGFRAME XSTACK, 0, STACK
-        ARGFRAME IOVERLAY, 0, STATIC
-        ARGFRAME DOVERLAY, 0, STATIC
-        PUSH    DPL
-          CFI DPL0 Frame(CFA_SP, 4)
-          CFI CFA_SP SP+-4
-        PUSH    DPH
-          CFI DPH0 Frame(CFA_SP, 5)
-          CFI CFA_SP SP+-5
-        ; Saved register size: 2
-        ; Auto size: 0
 // 2568   ZDMatchSendState( ZDMATCH_REASON_TIMEOUT, ZDP_TIMEOUT, 0 );
-        ; Setup parameters for call to function ZDMatchSendState
-        MOV     R3,#0x0
-        MOV     R2,#-0x7b
-        MOV     R1,#0x1
-        LCALL   `??ZDMatchSendState::?relay`; Banked call to: ZDMatchSendState
-        MOV     A,R1
 // 2569 }
-        POP     DPH
-          CFI DPH0 SameValue
-          CFI CFA_SP SP+-4
-        POP     DPL
-          CFI DPL0 SameValue
-          CFI CFA_SP SP+-3
-        LJMP    ?BRET
-          CFI EndBlock cfiBlock36
 // 2570 #endif // ZG_BUILD_COORDINATOR_TYPE
 // 2571 
 // 2572 /*********************************************************************
@@ -15759,7 +12261,7 @@ ZDO_EndDeviceBindMatchTimeoutCB:
         RSEG BANKED_CODE:CODE:NOROOT(0)
 // 2589 void ZDO_ParseEndDeviceBindReq( zdoIncomingMsg_t *inMsg, ZDEndDeviceBind_t *bindReq )
 ZDO_ParseEndDeviceBindReq:
-          CFI Block cfiBlock37 Using cfiCommon0
+          CFI Block cfiBlock31 Using cfiCommon0
           CFI Function ZDO_ParseEndDeviceBindReq
         CODE
 // 2590 {
@@ -16324,7 +12826,7 @@ ZDO_ParseEndDeviceBindReq:
           CFI DPH0 SameValue
           CFI CFA_SP SP+-3
           CFI CFA_XSP16 XSP16+0
-          CFI EndBlock cfiBlock37
+          CFI EndBlock cfiBlock31
 // 2632 
 // 2633 /*********************************************************************
 // 2634  * @fn          ZDO_ParseBindUnbindReq
@@ -16340,7 +12842,7 @@ ZDO_ParseEndDeviceBindReq:
         RSEG BANKED_CODE:CODE:NOROOT(0)
 // 2643 void ZDO_ParseBindUnbindReq( zdoIncomingMsg_t *inMsg, ZDO_BindUnbindReq_t *pReq )
 ZDO_ParseBindUnbindReq:
-          CFI Block cfiBlock38 Using cfiCommon0
+          CFI Block cfiBlock32 Using cfiCommon0
           CFI Function ZDO_ParseBindUnbindReq
         CODE
 // 2644 {
@@ -16605,7 +13107,7 @@ ZDO_ParseBindUnbindReq:
           CFI DPH0 SameValue
           CFI CFA_SP SP+-3
           CFI CFA_XSP16 XSP16+0
-          CFI EndBlock cfiBlock38
+          CFI EndBlock cfiBlock32
 // 2666 
 // 2667 /*********************************************************************
 // 2668  * @fn      ZDO_ParseAddrRsp
@@ -16623,7 +13125,7 @@ ZDO_ParseBindUnbindReq:
         RSEG BANKED_CODE:CODE:NOROOT(0)
 // 2679 ZDO_NwkIEEEAddrResp_t *ZDO_ParseAddrRsp( zdoIncomingMsg_t *inMsg )
 ZDO_ParseAddrRsp:
-          CFI Block cfiBlock39 Using cfiCommon0
+          CFI Block cfiBlock33 Using cfiCommon0
           CFI Function ZDO_ParseAddrRsp
         CODE
 // 2680 {
@@ -17001,7 +13503,7 @@ ZDO_ParseAddrRsp:
           CFI CFA_SP SP+-3
           CFI CFA_XSP16 XSP16+0
 // 2732 }
-          CFI EndBlock cfiBlock39
+          CFI EndBlock cfiBlock33
 // 2733 
 // 2734 /*********************************************************************
 // 2735  * @fn          ZDO_ParseNodeDescRsp
@@ -17017,7 +13519,7 @@ ZDO_ParseAddrRsp:
         RSEG BANKED_CODE:CODE:NOROOT(0)
 // 2744 void ZDO_ParseNodeDescRsp( zdoIncomingMsg_t *inMsg, ZDO_NodeDescRsp_t *pNDRsp )
 ZDO_ParseNodeDescRsp:
-          CFI Block cfiBlock40 Using cfiCommon0
+          CFI Block cfiBlock34 Using cfiCommon0
           CFI Function ZDO_ParseNodeDescRsp
         CODE
 // 2745 {
@@ -17496,7 +13998,7 @@ ZDO_ParseNodeDescRsp:
           CFI DPH0 SameValue
           CFI CFA_SP SP+-3
           CFI CFA_XSP16 XSP16+0
-          CFI EndBlock cfiBlock40
+          CFI EndBlock cfiBlock34
 // 2777 
 // 2778 /*********************************************************************
 // 2779  * @fn          ZDO_ParsePowerDescRsp
@@ -17512,7 +14014,7 @@ ZDO_ParseNodeDescRsp:
         RSEG BANKED_CODE:CODE:NOROOT(0)
 // 2788 void ZDO_ParsePowerDescRsp( zdoIncomingMsg_t *inMsg, ZDO_PowerRsp_t *pNPRsp )
 ZDO_ParsePowerDescRsp:
-          CFI Block cfiBlock41 Using cfiCommon0
+          CFI Block cfiBlock35 Using cfiCommon0
           CFI Function ZDO_ParsePowerDescRsp
         CODE
 // 2789 {
@@ -17798,7 +14300,7 @@ ZDO_ParsePowerDescRsp:
           CFI DPH0 SameValue
           CFI CFA_SP SP+-3
           CFI CFA_XSP16 XSP16+0
-          CFI EndBlock cfiBlock41
+          CFI EndBlock cfiBlock35
 // 2805 
 // 2806 /*********************************************************************
 // 2807  * @fn          ZDO_ParseSimpleDescRsp
@@ -17819,7 +14321,7 @@ ZDO_ParsePowerDescRsp:
         RSEG BANKED_CODE:CODE:NOROOT(0)
 // 2821 void ZDO_ParseSimpleDescRsp( zdoIncomingMsg_t *inMsg, ZDO_SimpleDescRsp_t *pSimpleDescRsp )
 ZDO_ParseSimpleDescRsp:
-          CFI Block cfiBlock42 Using cfiCommon0
+          CFI Block cfiBlock36 Using cfiCommon0
           CFI Function ZDO_ParseSimpleDescRsp
         CODE
 // 2822 {
@@ -17954,7 +14456,7 @@ ZDO_ParseSimpleDescRsp:
           CFI DPH0 SameValue
           CFI CFA_SP SP+-3
           CFI CFA_XSP16 XSP16+0
-          CFI EndBlock cfiBlock42
+          CFI EndBlock cfiBlock36
 // 2836 
 // 2837 /*********************************************************************
 // 2838  * @fn          ZDO_ParseEPListRsp
@@ -17969,7 +14471,7 @@ ZDO_ParseSimpleDescRsp:
         RSEG BANKED_CODE:CODE:NOROOT(0)
 // 2846 ZDO_ActiveEndpointRsp_t *ZDO_ParseEPListRsp( zdoIncomingMsg_t *inMsg )
 ZDO_ParseEPListRsp:
-          CFI Block cfiBlock43 Using cfiCommon0
+          CFI Block cfiBlock37 Using cfiCommon0
           CFI Function ZDO_ParseEPListRsp
         CODE
 // 2847 {
@@ -18187,7 +14689,7 @@ ZDO_ParseEPListRsp:
           CFI CFA_SP SP+-3
           CFI CFA_XSP16 XSP16+0
 // 2869 }
-          CFI EndBlock cfiBlock43
+          CFI EndBlock cfiBlock37
 // 2870 
 // 2871 /*********************************************************************
 // 2872  * @fn          ZDO_ParseServerDiscRsp
@@ -18203,7 +14705,7 @@ ZDO_ParseEPListRsp:
         RSEG BANKED_CODE:CODE:NOROOT(0)
 // 2881 void ZDO_ParseServerDiscRsp( zdoIncomingMsg_t *inMsg, ZDO_ServerDiscRsp_t *pRsp )
 ZDO_ParseServerDiscRsp:
-          CFI Block cfiBlock44 Using cfiCommon0
+          CFI Block cfiBlock38 Using cfiCommon0
           CFI Function ZDO_ParseServerDiscRsp
         CODE
 // 2882 {
@@ -18308,7 +14810,7 @@ ZDO_ParseServerDiscRsp:
           CFI DPH0 SameValue
           CFI CFA_SP SP+-3
           CFI CFA_XSP16 XSP16+0
-          CFI EndBlock cfiBlock44
+          CFI EndBlock cfiBlock38
 // 2886 
 // 2887 /*********************************************************************
 // 2888  * @fn          ZDO_ParseMgmtLqiRsp
@@ -18326,7 +14828,7 @@ ZDO_ParseServerDiscRsp:
         RSEG BANKED_CODE:CODE:NOROOT(0)
 // 2899 ZDO_MgmtLqiRsp_t *ZDO_ParseMgmtLqiRsp( zdoIncomingMsg_t *inMsg )
 ZDO_ParseMgmtLqiRsp:
-          CFI Block cfiBlock45 Using cfiCommon0
+          CFI Block cfiBlock39 Using cfiCommon0
           CFI Function ZDO_ParseMgmtLqiRsp
         CODE
 // 2900 {
@@ -18811,7 +15313,7 @@ ZDO_ParseMgmtLqiRsp:
           CFI CFA_SP SP+-3
           CFI CFA_XSP16 XSP16+0
 // 2959 }
-          CFI EndBlock cfiBlock45
+          CFI EndBlock cfiBlock39
 // 2960 
 // 2961 /*********************************************************************
 // 2962  * @fn          ZDO_ParseMgmNwkDiscRsp
@@ -18829,7 +15331,7 @@ ZDO_ParseMgmtLqiRsp:
         RSEG BANKED_CODE:CODE:NOROOT(0)
 // 2973 ZDO_MgmNwkDiscRsp_t *ZDO_ParseMgmNwkDiscRsp( zdoIncomingMsg_t *inMsg )
 ZDO_ParseMgmNwkDiscRsp:
-          CFI Block cfiBlock46 Using cfiCommon0
+          CFI Block cfiBlock40 Using cfiCommon0
           CFI Function ZDO_ParseMgmNwkDiscRsp
         CODE
 // 2974 {
@@ -19267,7 +15769,7 @@ ZDO_ParseMgmNwkDiscRsp:
           CFI CFA_SP SP+-3
           CFI CFA_XSP16 XSP16+0
 // 3023 }
-          CFI EndBlock cfiBlock46
+          CFI EndBlock cfiBlock40
 // 3024 
 // 3025 /*********************************************************************
 // 3026  * @fn          ZDO_ParseMgmtRtgRsp
@@ -19285,7 +15787,7 @@ ZDO_ParseMgmNwkDiscRsp:
         RSEG BANKED_CODE:CODE:NOROOT(0)
 // 3037 ZDO_MgmtRtgRsp_t *ZDO_ParseMgmtRtgRsp( zdoIncomingMsg_t *inMsg )
 ZDO_ParseMgmtRtgRsp:
-          CFI Block cfiBlock47 Using cfiCommon0
+          CFI Block cfiBlock41 Using cfiCommon0
           CFI Function ZDO_ParseMgmtRtgRsp
         CODE
 // 3038 {
@@ -19646,7 +16148,7 @@ ZDO_ParseMgmtRtgRsp:
           CFI CFA_SP SP+-3
           CFI CFA_XSP16 XSP16+0
 // 3084 }
-          CFI EndBlock cfiBlock47
+          CFI EndBlock cfiBlock41
 // 3085 
 // 3086 /*********************************************************************
 // 3087  * @fn          ZDO_ParseMgmtBindRsp
@@ -19664,7 +16166,7 @@ ZDO_ParseMgmtRtgRsp:
         RSEG BANKED_CODE:CODE:NOROOT(0)
 // 3098 ZDO_MgmtBindRsp_t *ZDO_ParseMgmtBindRsp( zdoIncomingMsg_t *inMsg )
 ZDO_ParseMgmtBindRsp:
-          CFI Block cfiBlock48 Using cfiCommon0
+          CFI Block cfiBlock42 Using cfiCommon0
           CFI Function ZDO_ParseMgmtBindRsp
         CODE
 // 3099 {
@@ -20144,7 +16646,7 @@ ZDO_ParseMgmtBindRsp:
           CFI CFA_SP SP+-3
           CFI CFA_XSP16 XSP16+0
 // 3157 }
-          CFI EndBlock cfiBlock48
+          CFI EndBlock cfiBlock42
 // 3158 
 // 3159 /*********************************************************************
 // 3160  * @fn          ZDO_ParseUserDescRsp
@@ -20162,7 +16664,7 @@ ZDO_ParseMgmtBindRsp:
         RSEG BANKED_CODE:CODE:NOROOT(0)
 // 3171 ZDO_UserDescRsp_t *ZDO_ParseUserDescRsp( zdoIncomingMsg_t *inMsg )
 ZDO_ParseUserDescRsp:
-          CFI Block cfiBlock49 Using cfiCommon0
+          CFI Block cfiBlock43 Using cfiCommon0
           CFI Function ZDO_ParseUserDescRsp
         CODE
 // 3172 {
@@ -20385,7 +16887,7 @@ ZDO_ParseUserDescRsp:
           CFI CFA_SP SP+-3
           CFI CFA_XSP16 XSP16+0
 // 3197 }
-          CFI EndBlock cfiBlock49
+          CFI EndBlock cfiBlock43
 // 3198 
 // 3199 /*********************************************************************
 // 3200  * @fn          ZDO_ParseSimpleDescBuf
@@ -20409,7 +16911,7 @@ ZDO_ParseUserDescRsp:
         RSEG BANKED_CODE:CODE:NOROOT(0)
 // 3217 uint8 ZDO_ParseSimpleDescBuf( uint8 *buf, SimpleDescriptionFormat_t *desc )
 ZDO_ParseSimpleDescBuf:
-          CFI Block cfiBlock50 Using cfiCommon0
+          CFI Block cfiBlock44 Using cfiCommon0
           CFI Function ZDO_ParseSimpleDescBuf
         CODE
 // 3218 {
@@ -21037,7 +17539,7 @@ ZDO_ParseSimpleDescBuf:
           CFI CFA_SP SP+-3
           CFI CFA_XSP16 XSP16+0
 // 3269 }
-          CFI EndBlock cfiBlock50
+          CFI EndBlock cfiBlock44
 // 3270 
 // 3271 /*********************************************************************
 // 3272  * @fn          ZDO_ParseDeviceAnnce
@@ -21053,7 +17555,7 @@ ZDO_ParseSimpleDescBuf:
         RSEG BANKED_CODE:CODE:NOROOT(0)
 // 3281 void ZDO_ParseDeviceAnnce( zdoIncomingMsg_t *inMsg, ZDO_DeviceAnnce_t *pAnnce )
 ZDO_ParseDeviceAnnce:
-          CFI Block cfiBlock51 Using cfiCommon0
+          CFI Block cfiBlock45 Using cfiCommon0
           CFI Function ZDO_ParseDeviceAnnce
         CODE
 // 3282 {
@@ -21194,7 +17696,7 @@ ZDO_ParseDeviceAnnce:
           CFI DPH0 SameValue
           CFI CFA_SP SP+-3
           CFI CFA_XSP16 XSP16+0
-          CFI EndBlock cfiBlock51
+          CFI EndBlock cfiBlock45
 // 3293 
 // 3294 /*********************************************************************
 // 3295  * @fn          ZDO_ParseMgmtNwkUpdateNotify
@@ -21212,7 +17714,7 @@ ZDO_ParseDeviceAnnce:
         RSEG BANKED_CODE:CODE:NOROOT(0)
 // 3306 ZDO_MgmtNwkUpdateNotify_t *ZDO_ParseMgmtNwkUpdateNotify( zdoIncomingMsg_t *inMsg )
 ZDO_ParseMgmtNwkUpdateNotify:
-          CFI Block cfiBlock52 Using cfiCommon0
+          CFI Block cfiBlock46 Using cfiCommon0
           CFI Function ZDO_ParseMgmtNwkUpdateNotify
         CODE
 // 3307 {
@@ -21563,7 +18065,7 @@ ZDO_ParseMgmtNwkUpdateNotify:
           CFI CFA_SP SP+-3
           CFI CFA_XSP16 XSP16+0
 // 3346 }
-          CFI EndBlock cfiBlock52
+          CFI EndBlock cfiBlock46
 // 3347 
 // 3348 /*********************************************************************
 // 3349  * @fn          ZDO_ParseMgmtNwkUpdateReq
@@ -21580,7 +18082,7 @@ ZDO_ParseMgmtNwkUpdateNotify:
         RSEG BANKED_CODE:CODE:NOROOT(0)
 // 3359 void ZDO_ParseMgmtNwkUpdateReq( zdoIncomingMsg_t *inMsg, ZDO_MgmtNwkUpdateReq_t *pReq )
 ZDO_ParseMgmtNwkUpdateReq:
-          CFI Block cfiBlock53 Using cfiCommon0
+          CFI Block cfiBlock47 Using cfiCommon0
           CFI Function ZDO_ParseMgmtNwkUpdateReq
         CODE
 // 3360 {
@@ -21816,7 +18318,7 @@ ZDO_ParseMgmtNwkUpdateReq:
           CFI DPH0 SameValue
           CFI CFA_SP SP+-3
           CFI CFA_XSP16 XSP16+0
-          CFI EndBlock cfiBlock53
+          CFI EndBlock cfiBlock47
 // 3383 
 // 3384 /*********************************************************************
 // 3385  * @fn          ZDO_ParseEndDeviceTimeoutRsp
@@ -21832,7 +18334,7 @@ ZDO_ParseMgmtNwkUpdateReq:
         RSEG BANKED_CODE:CODE:NOROOT(0)
 // 3394 void ZDO_ParseEndDeviceTimeoutRsp( zdoIncomingMsg_t *inMsg, uint16 *pRsp )
 ZDO_ParseEndDeviceTimeoutRsp:
-          CFI Block cfiBlock54 Using cfiCommon0
+          CFI Block cfiBlock48 Using cfiCommon0
           CFI Function ZDO_ParseEndDeviceTimeoutRsp
         CODE
 // 3395 {
@@ -21875,7 +18377,7 @@ ZDO_ParseEndDeviceTimeoutRsp:
           CFI DPL0 SameValue
           CFI CFA_SP SP+-3
         LJMP    ?BRET
-          CFI EndBlock cfiBlock54
+          CFI EndBlock cfiBlock48
 
         RSEG XDATA_ID:CODE:NOROOT(0)
 `?<Initializer for zdpExternalStateTaskID>`:
@@ -21935,13 +18437,6 @@ __Constant_3e8:
         LCALL   ?BDISPATCH
         DATA24
         DC24    ZDO_SendEDBindRsp
-
-        RSEG BANK_RELAYS:CODE:REORDER:NOROOT(0)
-`??ZDO_CompareClusterLists::?relay`:
-        CODE
-        LCALL   ?BDISPATCH
-        DATA24
-        DC24    ZDO_CompareClusterLists
 
         RSEG BANK_RELAYS:CODE:REORDER:NOROOT(0)
 `??ZDO_AnyClusterMatches::?relay`:
@@ -22112,41 +18607,6 @@ __Constant_3e8:
         DC24    ZDO_BuildSimpleDescBuf
 
         RSEG BANK_RELAYS:CODE:REORDER:NOROOT(0)
-`??ZDO_MatchEndDeviceBind::?relay`:
-        CODE
-        LCALL   ?BDISPATCH
-        DATA24
-        DC24    ZDO_MatchEndDeviceBind
-
-        RSEG BANK_RELAYS:CODE:REORDER:NOROOT(0)
-`??ZDO_RemoveMatchMemory::?relay`:
-        CODE
-        LCALL   ?BDISPATCH
-        DATA24
-        DC24    ZDO_RemoveMatchMemory
-
-        RSEG BANK_RELAYS:CODE:REORDER:NOROOT(0)
-`??ZDO_CopyMatchInfo::?relay`:
-        CODE
-        LCALL   ?BDISPATCH
-        DATA24
-        DC24    ZDO_CopyMatchInfo
-
-        RSEG BANK_RELAYS:CODE:REORDER:NOROOT(0)
-`??ZDMatchSendState::?relay`:
-        CODE
-        LCALL   ?BDISPATCH
-        DATA24
-        DC24    ZDMatchSendState
-
-        RSEG BANK_RELAYS:CODE:REORDER:NOROOT(0)
-`??ZDO_EndDeviceBindMatchTimeoutCB::?relay`:
-        CODE
-        LCALL   ?BDISPATCH
-        DATA24
-        DC24    ZDO_EndDeviceBindMatchTimeoutCB
-
-        RSEG BANK_RELAYS:CODE:REORDER:NOROOT(0)
 `??ZDO_ParseEndDeviceBindReq::?relay`:
         CODE
         LCALL   ?BDISPATCH
@@ -22277,16 +18737,16 @@ __Constant_3e8:
 // 3399 /*********************************************************************
 // 3400 *********************************************************************/
 // 
-// 18 960 bytes in segment BANKED_CODE
-//    330 bytes in segment BANK_RELAYS
+// 14 979 bytes in segment BANKED_CODE
+//    294 bytes in segment BANK_RELAYS
 //      2 bytes in segment XDATA_I
 //      2 bytes in segment XDATA_ID
 //      4 bytes in segment XDATA_ROM_C
-//     62 bytes in segment XDATA_Z
+//     61 bytes in segment XDATA_Z
 // 
-// 19 292 bytes of CODE  memory
+// 15 275 bytes of CODE  memory
 //      0 bytes of CONST memory (+ 4 bytes shared)
-//     64 bytes of XDATA memory
+//     63 bytes of XDATA memory
 //
 //Errors: none
-//Warnings: none
+//Warnings: 1

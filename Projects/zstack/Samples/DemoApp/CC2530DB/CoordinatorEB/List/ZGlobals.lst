@@ -1,6 +1,6 @@
 ###############################################################################
 #
-# IAR C/C++ Compiler V9.20.1.2476 for 8051                17/Feb/2017  12:14:10
+# IAR C/C++ Compiler V9.20.1.2476 for 8051                17/Feb/2017  12:45:15
 # Copyright 2004-2015 IAR Systems AB.
 # Standalone license - IAR Embedded Workbench for 8051
 #
@@ -12,14 +12,14 @@
 #    Dptr setup         =  1,16
 #                          
 #    Source file        =  
-#        D:\School\Jaar_3\WTWS\Projects\WirelessSensorNetworksPracticum\Components\stack\sys\ZGlobals.c
+#        D:\Jop van
+#        Buuren\Documents\Hogeschool\Vakken\wt\WirelessSensorNetworksPracticum\Components\stack\sys\ZGlobals.c
 #    Command line       =  
-#        -f
-#        D:\School\Jaar_3\WTWS\Projects\WirelessSensorNetworksPracticum\Projects\zstack\Samples\DemoApp\CC2530DB\..\..\..\Tools\CC2530DB\f8wCoord.cfg
-#        (-DCPU32MHZ -DROOT=__near_func -DMAC_CFG_APP_PENDING_QUEUE=TRUE
-#        -DMAC_CFG_TX_DATA_MAX=5 -DMAC_CFG_TX_MAX=8 -DMAC_CFG_RX_MAX=5
-#        -DZDO_COORDINATOR -DRTR_NWK) -f
-#        D:\School\Jaar_3\WTWS\Projects\WirelessSensorNetworksPracticum\Projects\zstack\Samples\DemoApp\CC2530DB\..\..\..\Tools\CC2530DB\f8wConfig.cfg
+#        -f "D:\Jop van
+#        Buuren\Documents\Hogeschool\Vakken\wt\WirelessSensorNetworksPracticum\Projects\zstack\Samples\DemoApp\CC2530DB\..\..\..\Tools\CC2530DB\f8wEndev.cfg"
+#        (-DCPU32MHZ -DROOT=__near_func -DMAC_CFG_TX_DATA_MAX=3
+#        -DMAC_CFG_TX_MAX=6 -DMAC_CFG_RX_MAX=3) -f "D:\Jop van
+#        Buuren\Documents\Hogeschool\Vakken\wt\WirelessSensorNetworksPracticum\Projects\zstack\Samples\DemoApp\CC2530DB\..\..\..\Tools\CC2530DB\f8wConfig.cfg"
 #        (-DZIGBEEPRO -DSECURE=0 -DZG_SECURE_DYNAMIC=0 -DREFLECTOR
 #        -DDEFAULT_CHANLIST=0x00100000 -DZDAPP_CONFIG_PAN_ID=0x0DAD
 #        -DNWK_START_DELAY=100 -DEXTENDED_JOINING_RANDOM_MASK=0x007F
@@ -34,70 +34,75 @@
 #        -DMAC_MAX_FRAME_SIZE=116 -DZDNWKMGR_MIN_TRANSMISSIONS=20
 #        "-DCONST=const __code" -DGENERIC=__generic -DRFD_RCVC_ALWAYS_ON=FALSE
 #        -DPOLL_RATE=1000 -DQUEUED_POLL_RATE=100 -DRESPONSE_POLL_RATE=100)
-#        -DREJOIN_POLL_RATE=440
-#        D:\School\Jaar_3\WTWS\Projects\WirelessSensorNetworksPracticum\Components\stack\sys\ZGlobals.c
-#        -D HOLD_AUTO_START -D BUILD_ALL_DEVICES -D REFLECTOR -D NV_INIT -D
-#        NV_RESTORE -D HAL_UART=TRUE -lC
-#        D:\School\Jaar_3\WTWS\Projects\WirelessSensorNetworksPracticum\Projects\zstack\Samples\DemoApp\CC2530DB\CoordinatorEB\List\
-#        -lA
-#        D:\School\Jaar_3\WTWS\Projects\WirelessSensorNetworksPracticum\Projects\zstack\Samples\DemoApp\CC2530DB\CoordinatorEB\List\
-#        --diag_suppress Pe001,Pa010,Pe1665 -o
-#        D:\School\Jaar_3\WTWS\Projects\WirelessSensorNetworksPracticum\Projects\zstack\Samples\DemoApp\CC2530DB\CoordinatorEB\Obj\
+#        -DREJOIN_POLL_RATE=440 "D:\Jop van
+#        Buuren\Documents\Hogeschool\Vakken\wt\WirelessSensorNetworksPracticum\Components\stack\sys\ZGlobals.c"
+#        -D NWK_AUTO_POLL -D HOLD_AUTO_START -D POWER_SAVING -D NV_INIT -D
+#        DEVICE_LOGICAL_TYPE=ZG_DEVICETYPE_ENDDEVICE -lC "D:\Jop van
+#        Buuren\Documents\Hogeschool\Vakken\wt\WirelessSensorNetworksPracticum\Projects\zstack\Samples\DemoApp\CC2530DB\SensorEB\List\"
+#        -lA "D:\Jop van
+#        Buuren\Documents\Hogeschool\Vakken\wt\WirelessSensorNetworksPracticum\Projects\zstack\Samples\DemoApp\CC2530DB\SensorEB\List\"
+#        --diag_suppress Pe001,Pa010,Pe1665 -o "D:\Jop van
+#        Buuren\Documents\Hogeschool\Vakken\wt\WirelessSensorNetworksPracticum\Projects\zstack\Samples\DemoApp\CC2530DB\SensorEB\Obj\"
 #        -e --no_cse --no_unroll --no_inline --no_code_motion --no_tbaa --debug
 #        --core=plain --dptr=16,1 --data_model=large --code_model=banked
 #        --calling_convention=xdata_reentrant --place_constants=data_rom
-#        --nr_virtual_regs 16 -I
-#        D:\School\Jaar_3\WTWS\Projects\WirelessSensorNetworksPracticum\Projects\zstack\Samples\DemoApp\CC2530DB\
-#        -I
-#        D:\School\Jaar_3\WTWS\Projects\WirelessSensorNetworksPracticum\Projects\zstack\Samples\DemoApp\CC2530DB\..\Source\
-#        -I
-#        D:\School\Jaar_3\WTWS\Projects\WirelessSensorNetworksPracticum\Projects\zstack\Samples\DemoApp\CC2530DB\..\..\..\ZMain\TI2530DB\
-#        -I
-#        D:\School\Jaar_3\WTWS\Projects\WirelessSensorNetworksPracticum\Projects\zstack\Samples\DemoApp\CC2530DB\..\..\..\..\..\Components\hal\include\
-#        -I
-#        D:\School\Jaar_3\WTWS\Projects\WirelessSensorNetworksPracticum\Projects\zstack\Samples\DemoApp\CC2530DB\..\..\..\..\..\Components\hal\target\CC2530EB\
-#        -I
-#        D:\School\Jaar_3\WTWS\Projects\WirelessSensorNetworksPracticum\Projects\zstack\Samples\DemoApp\CC2530DB\..\..\..\..\..\Components\mac\include\
-#        -I
-#        D:\School\Jaar_3\WTWS\Projects\WirelessSensorNetworksPracticum\Projects\zstack\Samples\DemoApp\CC2530DB\..\..\..\..\..\Components\mac\high_level\
-#        -I
-#        D:\School\Jaar_3\WTWS\Projects\WirelessSensorNetworksPracticum\Projects\zstack\Samples\DemoApp\CC2530DB\..\..\..\..\..\Components\mac\low_level\srf04\
-#        -I
-#        D:\School\Jaar_3\WTWS\Projects\WirelessSensorNetworksPracticum\Projects\zstack\Samples\DemoApp\CC2530DB\..\..\..\..\..\Components\mac\low_level\srf04\single_chip\
-#        -I
-#        D:\School\Jaar_3\WTWS\Projects\WirelessSensorNetworksPracticum\Projects\zstack\Samples\DemoApp\CC2530DB\..\..\..\..\..\Components\mt\
-#        -I
-#        D:\School\Jaar_3\WTWS\Projects\WirelessSensorNetworksPracticum\Projects\zstack\Samples\DemoApp\CC2530DB\..\..\..\..\..\Components\osal\include\
-#        -I
-#        D:\School\Jaar_3\WTWS\Projects\WirelessSensorNetworksPracticum\Projects\zstack\Samples\DemoApp\CC2530DB\..\..\..\..\..\Components\services\saddr\
-#        -I
-#        D:\School\Jaar_3\WTWS\Projects\WirelessSensorNetworksPracticum\Projects\zstack\Samples\DemoApp\CC2530DB\..\..\..\..\..\Components\services\sdata\
-#        -I
-#        D:\School\Jaar_3\WTWS\Projects\WirelessSensorNetworksPracticum\Projects\zstack\Samples\DemoApp\CC2530DB\..\..\..\..\..\Components\stack\af\
-#        -I
-#        D:\School\Jaar_3\WTWS\Projects\WirelessSensorNetworksPracticum\Projects\zstack\Samples\DemoApp\CC2530DB\..\..\..\..\..\Components\stack\nwk\
-#        -I
-#        D:\School\Jaar_3\WTWS\Projects\WirelessSensorNetworksPracticum\Projects\zstack\Samples\DemoApp\CC2530DB\..\..\..\..\..\Components\stack\sapi\
-#        -I
-#        D:\School\Jaar_3\WTWS\Projects\WirelessSensorNetworksPracticum\Projects\zstack\Samples\DemoApp\CC2530DB\..\..\..\..\..\Components\stack\sec\
-#        -I
-#        D:\School\Jaar_3\WTWS\Projects\WirelessSensorNetworksPracticum\Projects\zstack\Samples\DemoApp\CC2530DB\..\..\..\..\..\Components\stack\sys\
-#        -I
-#        D:\School\Jaar_3\WTWS\Projects\WirelessSensorNetworksPracticum\Projects\zstack\Samples\DemoApp\CC2530DB\..\..\..\..\..\Components\stack\zdo\
-#        -I
-#        D:\School\Jaar_3\WTWS\Projects\WirelessSensorNetworksPracticum\Projects\zstack\Samples\DemoApp\CC2530DB\..\..\..\..\..\Components\zmac\
-#        -I
-#        D:\School\Jaar_3\WTWS\Projects\WirelessSensorNetworksPracticum\Projects\zstack\Samples\DemoApp\CC2530DB\..\..\..\..\..\Components\zmac\f8w\
+#        --nr_virtual_regs 16 -I "D:\Jop van
+#        Buuren\Documents\Hogeschool\Vakken\wt\WirelessSensorNetworksPracticum\Projects\zstack\Samples\DemoApp\CC2530DB\"
+#        -I "D:\Jop van
+#        Buuren\Documents\Hogeschool\Vakken\wt\WirelessSensorNetworksPracticum\Projects\zstack\Samples\DemoApp\CC2530DB\..\Source\"
+#        -I "D:\Jop van
+#        Buuren\Documents\Hogeschool\Vakken\wt\WirelessSensorNetworksPracticum\Projects\zstack\Samples\DemoApp\CC2530DB\..\..\..\ZMain\TI2530DB\"
+#        -I "D:\Jop van
+#        Buuren\Documents\Hogeschool\Vakken\wt\WirelessSensorNetworksPracticum\Projects\zstack\Samples\DemoApp\CC2530DB\..\..\..\..\..\Components\hal\include\"
+#        -I "D:\Jop van
+#        Buuren\Documents\Hogeschool\Vakken\wt\WirelessSensorNetworksPracticum\Projects\zstack\Samples\DemoApp\CC2530DB\..\..\..\..\..\Components\hal\target\CC2530EB\"
+#        -I "D:\Jop van
+#        Buuren\Documents\Hogeschool\Vakken\wt\WirelessSensorNetworksPracticum\Projects\zstack\Samples\DemoApp\CC2530DB\..\..\..\..\..\Components\mac\include\"
+#        -I "D:\Jop van
+#        Buuren\Documents\Hogeschool\Vakken\wt\WirelessSensorNetworksPracticum\Projects\zstack\Samples\DemoApp\CC2530DB\..\..\..\..\..\Components\mac\high_level\"
+#        -I "D:\Jop van
+#        Buuren\Documents\Hogeschool\Vakken\wt\WirelessSensorNetworksPracticum\Projects\zstack\Samples\DemoApp\CC2530DB\..\..\..\..\..\Components\mac\low_level\srf04\"
+#        -I "D:\Jop van
+#        Buuren\Documents\Hogeschool\Vakken\wt\WirelessSensorNetworksPracticum\Projects\zstack\Samples\DemoApp\CC2530DB\..\..\..\..\..\Components\mac\low_level\srf04\single_chip\"
+#        -I "D:\Jop van
+#        Buuren\Documents\Hogeschool\Vakken\wt\WirelessSensorNetworksPracticum\Projects\zstack\Samples\DemoApp\CC2530DB\..\..\..\..\..\Components\mt\"
+#        -I "D:\Jop van
+#        Buuren\Documents\Hogeschool\Vakken\wt\WirelessSensorNetworksPracticum\Projects\zstack\Samples\DemoApp\CC2530DB\..\..\..\..\..\Components\osal\include\"
+#        -I "D:\Jop van
+#        Buuren\Documents\Hogeschool\Vakken\wt\WirelessSensorNetworksPracticum\Projects\zstack\Samples\DemoApp\CC2530DB\..\..\..\..\..\Components\services\saddr\"
+#        -I "D:\Jop van
+#        Buuren\Documents\Hogeschool\Vakken\wt\WirelessSensorNetworksPracticum\Projects\zstack\Samples\DemoApp\CC2530DB\..\..\..\..\..\Components\services\sdata\"
+#        -I "D:\Jop van
+#        Buuren\Documents\Hogeschool\Vakken\wt\WirelessSensorNetworksPracticum\Projects\zstack\Samples\DemoApp\CC2530DB\..\..\..\..\..\Components\stack\af\"
+#        -I "D:\Jop van
+#        Buuren\Documents\Hogeschool\Vakken\wt\WirelessSensorNetworksPracticum\Projects\zstack\Samples\DemoApp\CC2530DB\..\..\..\..\..\Components\stack\nwk\"
+#        -I "D:\Jop van
+#        Buuren\Documents\Hogeschool\Vakken\wt\WirelessSensorNetworksPracticum\Projects\zstack\Samples\DemoApp\CC2530DB\..\..\..\..\..\Components\stack\sapi\"
+#        -I "D:\Jop van
+#        Buuren\Documents\Hogeschool\Vakken\wt\WirelessSensorNetworksPracticum\Projects\zstack\Samples\DemoApp\CC2530DB\..\..\..\..\..\Components\stack\sec\"
+#        -I "D:\Jop van
+#        Buuren\Documents\Hogeschool\Vakken\wt\WirelessSensorNetworksPracticum\Projects\zstack\Samples\DemoApp\CC2530DB\..\..\..\..\..\Components\stack\sys\"
+#        -I "D:\Jop van
+#        Buuren\Documents\Hogeschool\Vakken\wt\WirelessSensorNetworksPracticum\Projects\zstack\Samples\DemoApp\CC2530DB\..\..\..\..\..\Components\stack\zdo\"
+#        -I "D:\Jop van
+#        Buuren\Documents\Hogeschool\Vakken\wt\WirelessSensorNetworksPracticum\Projects\zstack\Samples\DemoApp\CC2530DB\..\..\..\..\..\Components\zmac\"
+#        -I "D:\Jop van
+#        Buuren\Documents\Hogeschool\Vakken\wt\WirelessSensorNetworksPracticum\Projects\zstack\Samples\DemoApp\CC2530DB\..\..\..\..\..\Components\zmac\f8w\"
 #        -Ol --require_prototypes
 #    List file          =  
-#        D:\School\Jaar_3\WTWS\Projects\WirelessSensorNetworksPracticum\Projects\zstack\Samples\DemoApp\CC2530DB\CoordinatorEB\List\ZGlobals.lst
+#        D:\Jop van
+#        Buuren\Documents\Hogeschool\Vakken\wt\WirelessSensorNetworksPracticum\Projects\zstack\Samples\DemoApp\CC2530DB\SensorEB\List\ZGlobals.lst
 #    Object file        =  
-#        D:\School\Jaar_3\WTWS\Projects\WirelessSensorNetworksPracticum\Projects\zstack\Samples\DemoApp\CC2530DB\CoordinatorEB\Obj\ZGlobals.r51
+#        D:\Jop van
+#        Buuren\Documents\Hogeschool\Vakken\wt\WirelessSensorNetworksPracticum\Projects\zstack\Samples\DemoApp\CC2530DB\SensorEB\Obj\ZGlobals.r51
 #
 ###############################################################################
 
-D:\School\Jaar_3\WTWS\Projects\WirelessSensorNetworksPracticum\Components\stack\sys\ZGlobals.c
+D:\Jop van Buuren\Documents\Hogeschool\Vakken\wt\WirelessSensorNetworksPracticum\Components\stack\sys\ZGlobals.c
       1          /**************************************************************************************************
+                                                                                                                   ^
+Warning[Pa050]: non-native end of line sequence detected (this diagnostic is
+          only issued once)
       2            Filename:       ZGlobals.c
       3            Revised:        $Date: 2014-03-13 10:55:58 -0700 (Thu, 13 Mar 2014) $
       4            Revision:       $Revision: 37665 $
@@ -572,11 +577,12 @@ D:\School\Jaar_3\WTWS\Projects\WirelessSensorNetworksPracticum\Components\stack\
     221          
     222          // Device Logical Type
 
-   \                                 In  segment XDATA_Z, align 1, keep-with-next
+   \                                 In  segment XDATA_I, align 1, keep-with-next
     223          uint8 zgDeviceLogicalType = DEVICE_LOGICAL_TYPE;
    \                     zgDeviceLogicalType:
    \   000000                DS 1
-   \   000001                REQUIRE __INIT_XDATA_Z
+   \   000001                REQUIRE `?<Initializer for zgDeviceLogicalType>`
+   \   000001                REQUIRE __INIT_XDATA_I
     224          
     225          // Startup Delay
 
@@ -1242,169 +1248,161 @@ D:\School\Jaar_3\WTWS\Projects\WirelessSensorNetworksPracticum\Components\stack\
    \   000007   7F00         MOV     R7,#0x0
     573          
     574            if ( ZG_BUILD_COORDINATOR_TYPE && ( zgApsLinkKeyType == ZG_UNIQUE_LINK_KEY ) )
-   \   000009   90....       MOV     DPTR,#zgApsLinkKeyType
-   \   00000C   E0           MOVX    A,@DPTR
-   \   00000D   7009         JNZ     ??zgInitItems_0
     575            {
     576              zgUseDefaultTCLK = FALSE;
-   \   00000F   90....       MOV     DPTR,#zgUseDefaultTCLK
-   \   000012   7400         MOV     A,#0x0
-   \   000014   F0           MOVX    @DPTR,A
-   \   000015   02....       LJMP    ??zgInitItems_1 & 0xFFFF
     577            }
     578            else
     579            {
     580              // Most of the time default TCLK will be used
     581              zgUseDefaultTCLK = TRUE;
-   \                     ??zgInitItems_0:
-   \   000018   90....       MOV     DPTR,#zgUseDefaultTCLK
-   \   00001B   7401         MOV     A,#0x1
-   \   00001D   F0           MOVX    @DPTR,A
-   \   00001E   02....       LJMP    ??zgInitItems_1 & 0xFFFF
+   \   000009   90....       MOV     DPTR,#zgUseDefaultTCLK
+   \   00000C   7401         MOV     A,#0x1
+   \   00000E   F0           MOVX    @DPTR,A
+   \   00000F   02....       LJMP    ??zgInitItems_0 & 0xFFFF
     582            }
     583          
     584            while ( zgItemTable[i].id != 0x00 )
     585            {
     586              // Initialize the item
     587              zgItemInit( zgItemTable[i].id, zgItemTable[i].len, zgItemTable[i].buf, setDefault  );
-   \                     ??zgInitItems_2:
-   \   000021                ; Setup parameters for call to function zgItemInit
-   \   000021   EF           MOV     A,R7
-   \   000022   F8           MOV     R0,A
-   \   000023   7900         MOV     R1,#0x0
-   \   000025   E8           MOV     A,R0
-   \   000026   75F006       MOV     B,#0x6
-   \   000029   A4           MUL     AB
-   \   00002A   C8           XCH     A,R0
-   \   00002B   AAF0         MOV     R2,B
-   \   00002D   75F000       MOV     B,#0x0
-   \   000030   A4           MUL     AB
-   \   000031   2A           ADD     A,R2
-   \   000032   FA           MOV     R2,A
-   \   000033   75F006       MOV     B,#0x6
-   \   000036   E9           MOV     A,R1
-   \   000037   A4           MUL     AB
-   \   000038   2A           ADD     A,R2
+   \                     ??zgInitItems_1:
+   \   000012                ; Setup parameters for call to function zgItemInit
+   \   000012   EF           MOV     A,R7
+   \   000013   F8           MOV     R0,A
+   \   000014   7900         MOV     R1,#0x0
+   \   000016   E8           MOV     A,R0
+   \   000017   75F006       MOV     B,#0x6
+   \   00001A   A4           MUL     AB
+   \   00001B   C8           XCH     A,R0
+   \   00001C   AAF0         MOV     R2,B
+   \   00001E   75F000       MOV     B,#0x0
+   \   000021   A4           MUL     AB
+   \   000022   2A           ADD     A,R2
+   \   000023   FA           MOV     R2,A
+   \   000024   75F006       MOV     B,#0x6
+   \   000027   E9           MOV     A,R1
+   \   000028   A4           MUL     AB
+   \   000029   2A           ADD     A,R2
+   \   00002A   F9           MOV     R1,A
+   \   00002B   74..         MOV     A,#(zgItemTable + 4) & 0xff
+   \   00002D   28           ADD     A,R0
+   \   00002E   F582         MOV     DPL,A
+   \   000030   74..         MOV     A,#((zgItemTable + 4) >> 8) & 0xff
+   \   000032   39           ADDC    A,R1
+   \   000033   F583         MOV     DPH,A
+   \   000035   12....       LCALL   ?PUSH_XSTACK8_C_TWO
+   \   000038   EE           MOV     A,R6
    \   000039   F9           MOV     R1,A
-   \   00003A   74..         MOV     A,#(zgItemTable + 4) & 0xff
-   \   00003C   28           ADD     A,R0
-   \   00003D   F582         MOV     DPL,A
-   \   00003F   74..         MOV     A,#((zgItemTable + 4) >> 8) & 0xff
-   \   000041   39           ADDC    A,R1
-   \   000042   F583         MOV     DPH,A
-   \   000044   12....       LCALL   ?PUSH_XSTACK8_C_TWO
-   \   000047   EE           MOV     A,R6
-   \   000048   F9           MOV     R1,A
-   \   000049   EF           MOV     A,R7
-   \   00004A   FA           MOV     R2,A
-   \   00004B   7B00         MOV     R3,#0x0
-   \   00004D   EA           MOV     A,R2
-   \   00004E   75F006       MOV     B,#0x6
-   \   000051   A4           MUL     AB
-   \   000052   CA           XCH     A,R2
-   \   000053   A8F0         MOV     R0,B
-   \   000055   75F000       MOV     B,#0x0
-   \   000058   A4           MUL     AB
-   \   000059   28           ADD     A,R0
-   \   00005A   F8           MOV     R0,A
-   \   00005B   75F006       MOV     B,#0x6
-   \   00005E   EB           MOV     A,R3
-   \   00005F   A4           MUL     AB
-   \   000060   28           ADD     A,R0
-   \   000061   FB           MOV     R3,A
-   \   000062   74..         MOV     A,#(zgItemTable + 2) & 0xff
-   \   000064   2A           ADD     A,R2
-   \   000065   F582         MOV     DPL,A
-   \   000067   74..         MOV     A,#((zgItemTable + 2) >> 8) & 0xff
-   \   000069   3B           ADDC    A,R3
-   \   00006A   F583         MOV     DPH,A
-   \   00006C   E4           CLR     A
-   \   00006D   93           MOVC    A,@A+DPTR
-   \   00006E   FC           MOV     R4,A
-   \   00006F   7401         MOV     A,#0x1
-   \   000071   93           MOVC    A,@A+DPTR
-   \   000072   FD           MOV     R5,A
-   \   000073   C9           XCH     A,R1
-   \   000074   FE           MOV     R6,A
-   \   000075   C9           XCH     A,R1
-   \   000076   EF           MOV     A,R7
-   \   000077   F8           MOV     R0,A
-   \   000078   7900         MOV     R1,#0x0
-   \   00007A   E8           MOV     A,R0
-   \   00007B   75F006       MOV     B,#0x6
-   \   00007E   A4           MUL     AB
-   \   00007F   C8           XCH     A,R0
-   \   000080   AAF0         MOV     R2,B
-   \   000082   75F000       MOV     B,#0x0
-   \   000085   A4           MUL     AB
-   \   000086   2A           ADD     A,R2
-   \   000087   FA           MOV     R2,A
-   \   000088   75F006       MOV     B,#0x6
-   \   00008B   E9           MOV     A,R1
-   \   00008C   A4           MUL     AB
-   \   00008D   2A           ADD     A,R2
-   \   00008E   F9           MOV     R1,A
-   \   00008F   74..         MOV     A,#zgItemTable & 0xff
-   \   000091   28           ADD     A,R0
-   \   000092   F582         MOV     DPL,A
-   \   000094   74..         MOV     A,#(zgItemTable >> 8) & 0xff
-   \   000096   39           ADDC    A,R1
-   \   000097   F583         MOV     DPH,A
-   \   000099   E4           CLR     A
-   \   00009A   93           MOVC    A,@A+DPTR
-   \   00009B   FA           MOV     R2,A
-   \   00009C   7401         MOV     A,#0x1
-   \   00009E   93           MOVC    A,@A+DPTR
-   \   00009F   FB           MOV     R3,A
-   \   0000A0   CE           XCH     A,R6
-   \   0000A1   F9           MOV     R1,A
-   \   0000A2   CE           XCH     A,R6
-   \   0000A3   12....       LCALL   `??zgItemInit::?relay`; Banked call to: zgItemInit
-   \   0000A6   7402         MOV     A,#0x2
-   \   0000A8   12....       LCALL   ?DEALLOC_XSTACK8
-   \   0000AB   E9           MOV     A,R1
+   \   00003A   EF           MOV     A,R7
+   \   00003B   FA           MOV     R2,A
+   \   00003C   7B00         MOV     R3,#0x0
+   \   00003E   EA           MOV     A,R2
+   \   00003F   75F006       MOV     B,#0x6
+   \   000042   A4           MUL     AB
+   \   000043   CA           XCH     A,R2
+   \   000044   A8F0         MOV     R0,B
+   \   000046   75F000       MOV     B,#0x0
+   \   000049   A4           MUL     AB
+   \   00004A   28           ADD     A,R0
+   \   00004B   F8           MOV     R0,A
+   \   00004C   75F006       MOV     B,#0x6
+   \   00004F   EB           MOV     A,R3
+   \   000050   A4           MUL     AB
+   \   000051   28           ADD     A,R0
+   \   000052   FB           MOV     R3,A
+   \   000053   74..         MOV     A,#(zgItemTable + 2) & 0xff
+   \   000055   2A           ADD     A,R2
+   \   000056   F582         MOV     DPL,A
+   \   000058   74..         MOV     A,#((zgItemTable + 2) >> 8) & 0xff
+   \   00005A   3B           ADDC    A,R3
+   \   00005B   F583         MOV     DPH,A
+   \   00005D   E4           CLR     A
+   \   00005E   93           MOVC    A,@A+DPTR
+   \   00005F   FC           MOV     R4,A
+   \   000060   7401         MOV     A,#0x1
+   \   000062   93           MOVC    A,@A+DPTR
+   \   000063   FD           MOV     R5,A
+   \   000064   C9           XCH     A,R1
+   \   000065   FE           MOV     R6,A
+   \   000066   C9           XCH     A,R1
+   \   000067   EF           MOV     A,R7
+   \   000068   F8           MOV     R0,A
+   \   000069   7900         MOV     R1,#0x0
+   \   00006B   E8           MOV     A,R0
+   \   00006C   75F006       MOV     B,#0x6
+   \   00006F   A4           MUL     AB
+   \   000070   C8           XCH     A,R0
+   \   000071   AAF0         MOV     R2,B
+   \   000073   75F000       MOV     B,#0x0
+   \   000076   A4           MUL     AB
+   \   000077   2A           ADD     A,R2
+   \   000078   FA           MOV     R2,A
+   \   000079   75F006       MOV     B,#0x6
+   \   00007C   E9           MOV     A,R1
+   \   00007D   A4           MUL     AB
+   \   00007E   2A           ADD     A,R2
+   \   00007F   F9           MOV     R1,A
+   \   000080   74..         MOV     A,#zgItemTable & 0xff
+   \   000082   28           ADD     A,R0
+   \   000083   F582         MOV     DPL,A
+   \   000085   74..         MOV     A,#(zgItemTable >> 8) & 0xff
+   \   000087   39           ADDC    A,R1
+   \   000088   F583         MOV     DPH,A
+   \   00008A   E4           CLR     A
+   \   00008B   93           MOVC    A,@A+DPTR
+   \   00008C   FA           MOV     R2,A
+   \   00008D   7401         MOV     A,#0x1
+   \   00008F   93           MOVC    A,@A+DPTR
+   \   000090   FB           MOV     R3,A
+   \   000091   CE           XCH     A,R6
+   \   000092   F9           MOV     R1,A
+   \   000093   CE           XCH     A,R6
+   \   000094   12....       LCALL   `??zgItemInit::?relay`; Banked call to: zgItemInit
+   \   000097   7402         MOV     A,#0x2
+   \   000099   12....       LCALL   ?DEALLOC_XSTACK8
+   \   00009C   E9           MOV     A,R1
     588          
     589              // Move on to the next item
     590              i++;
-   \   0000AC   0F           INC     R7
+   \   00009D   0F           INC     R7
     591            }
-   \                     ??zgInitItems_1:
-   \   0000AD   EF           MOV     A,R7
-   \   0000AE   F8           MOV     R0,A
-   \   0000AF   7900         MOV     R1,#0x0
-   \   0000B1   E8           MOV     A,R0
-   \   0000B2   75F006       MOV     B,#0x6
-   \   0000B5   A4           MUL     AB
-   \   0000B6   C8           XCH     A,R0
-   \   0000B7   AAF0         MOV     R2,B
-   \   0000B9   75F000       MOV     B,#0x0
-   \   0000BC   A4           MUL     AB
-   \   0000BD   2A           ADD     A,R2
-   \   0000BE   FA           MOV     R2,A
-   \   0000BF   75F006       MOV     B,#0x6
-   \   0000C2   E9           MOV     A,R1
-   \   0000C3   A4           MUL     AB
-   \   0000C4   2A           ADD     A,R2
-   \   0000C5   F9           MOV     R1,A
-   \   0000C6   74..         MOV     A,#zgItemTable & 0xff
-   \   0000C8   28           ADD     A,R0
-   \   0000C9   F582         MOV     DPL,A
-   \   0000CB   74..         MOV     A,#(zgItemTable >> 8) & 0xff
-   \   0000CD   39           ADDC    A,R1
-   \   0000CE   F583         MOV     DPH,A
-   \   0000D0   E4           CLR     A
-   \   0000D1   93           MOVC    A,@A+DPTR
-   \   0000D2   F8           MOV     R0,A
-   \   0000D3   7401         MOV     A,#0x1
-   \   0000D5   93           MOVC    A,@A+DPTR
-   \   0000D6   F9           MOV     R1,A
-   \   0000D7   E8           MOV     A,R0
-   \   0000D8   49           ORL     A,R1
-   \   0000D9   6003         JZ      $+5
-   \   0000DB   02....       LJMP    ??zgInitItems_2 & 0xFFFF
+   \                     ??zgInitItems_0:
+   \   00009E   EF           MOV     A,R7
+   \   00009F   F8           MOV     R0,A
+   \   0000A0   7900         MOV     R1,#0x0
+   \   0000A2   E8           MOV     A,R0
+   \   0000A3   75F006       MOV     B,#0x6
+   \   0000A6   A4           MUL     AB
+   \   0000A7   C8           XCH     A,R0
+   \   0000A8   AAF0         MOV     R2,B
+   \   0000AA   75F000       MOV     B,#0x0
+   \   0000AD   A4           MUL     AB
+   \   0000AE   2A           ADD     A,R2
+   \   0000AF   FA           MOV     R2,A
+   \   0000B0   75F006       MOV     B,#0x6
+   \   0000B3   E9           MOV     A,R1
+   \   0000B4   A4           MUL     AB
+   \   0000B5   2A           ADD     A,R2
+   \   0000B6   F9           MOV     R1,A
+   \   0000B7   74..         MOV     A,#zgItemTable & 0xff
+   \   0000B9   28           ADD     A,R0
+   \   0000BA   F582         MOV     DPL,A
+   \   0000BC   74..         MOV     A,#(zgItemTable >> 8) & 0xff
+   \   0000BE   39           ADDC    A,R1
+   \   0000BF   F583         MOV     DPH,A
+   \   0000C1   E4           CLR     A
+   \   0000C2   93           MOVC    A,@A+DPTR
+   \   0000C3   F8           MOV     R0,A
+   \   0000C4   7401         MOV     A,#0x1
+   \   0000C6   93           MOVC    A,@A+DPTR
+   \   0000C7   F9           MOV     R1,A
+   \   0000C8   E8           MOV     A,R0
+   \   0000C9   49           ORL     A,R1
+   \   0000CA   6003         JZ      $+5
+   \   0000CC   02....       LJMP    ??zgInitItems_1 & 0xFFFF
     592          }
-   \   0000DE   7F01         MOV     R7,#0x1
-   \   0000E0   02....       LJMP    ?BANKED_LEAVE_XDATA
+   \   0000CF   7F01         MOV     R7,#0x1
+   \   0000D1   02....       LJMP    ?BANKED_LEAVE_XDATA
     593          
     594          /*********************************************************************
     595           * @fn          zgReadStartupOptions
@@ -1953,6 +1951,10 @@ D:\School\Jaar_3\WTWS\Projects\WirelessSensorNetworksPracticum\Components\stack\
    \   000000   AD0D         DW 3501
 
    \                                 In  segment XDATA_ID, align 1, keep-with-next
+   \                     `?<Initializer for zgDeviceLogicalType>`:
+   \   000000   02           DB 2
+
+   \                                 In  segment XDATA_ID, align 1, keep-with-next
    \                     `?<Initializer for zgStartDelay>`:
    \   000000   0A           DB 10
 
@@ -2089,6 +2091,7 @@ D:\School\Jaar_3\WTWS\Projects\WirelessSensorNetworksPracticum\Components\stack\
        2  ?<Initializer for zgConfigPANID>
        4  ?<Initializer for zgDefaultChannelList>
        1  ?<Initializer for zgDefaultStartingScanDuratio
+       1  ?<Initializer for zgDeviceLogicalType>
        1  ?<Initializer for zgIndirectMsgTimeout>
        1  ?<Initializer for zgMaxBcastRetires>
        1  ?<Initializer for zgMaxDataRetries>
@@ -2137,7 +2140,7 @@ D:\School\Jaar_3\WTWS\Projects\WirelessSensorNetworksPracticum\Components\stack\
        1  zgIndirectMsgTimeout
       52  zgInit
        6  zgInit::?relay
-     227  zgInitItems
+     212  zgInitItems
        6  zgInitItems::?relay
      120  zgItemInit
        6  zgItemInit::?relay
@@ -2175,15 +2178,15 @@ D:\School\Jaar_3\WTWS\Projects\WirelessSensorNetworksPracticum\Components\stack\
        1  zgZdoDirectCB
 
  
- 892 bytes in segment BANKED_CODE
+ 877 bytes in segment BANKED_CODE
   36 bytes in segment BANK_RELAYS
  306 bytes in segment CODE_C
-  49 bytes in segment XDATA_I
-  49 bytes in segment XDATA_ID
-  35 bytes in segment XDATA_Z
+  50 bytes in segment XDATA_I
+  50 bytes in segment XDATA_ID
+  34 bytes in segment XDATA_Z
  
- 1 283 bytes of CODE  memory
+ 1 269 bytes of CODE  memory
     84 bytes of XDATA memory
 
 Errors: none
-Warnings: none
+Warnings: 1

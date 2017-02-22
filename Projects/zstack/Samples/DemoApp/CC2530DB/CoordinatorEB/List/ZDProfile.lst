@@ -1,6 +1,6 @@
 ###############################################################################
 #
-# IAR C/C++ Compiler V9.20.1.2476 for 8051                17/Feb/2017  12:14:08
+# IAR C/C++ Compiler V9.20.1.2476 for 8051                17/Feb/2017  12:45:15
 # Copyright 2004-2015 IAR Systems AB.
 # Standalone license - IAR Embedded Workbench for 8051
 #
@@ -12,14 +12,14 @@
 #    Dptr setup         =  1,16
 #                          
 #    Source file        =  
-#        D:\School\Jaar_3\WTWS\Projects\WirelessSensorNetworksPracticum\Components\stack\zdo\ZDProfile.c
+#        D:\Jop van
+#        Buuren\Documents\Hogeschool\Vakken\wt\WirelessSensorNetworksPracticum\Components\stack\zdo\ZDProfile.c
 #    Command line       =  
-#        -f
-#        D:\School\Jaar_3\WTWS\Projects\WirelessSensorNetworksPracticum\Projects\zstack\Samples\DemoApp\CC2530DB\..\..\..\Tools\CC2530DB\f8wCoord.cfg
-#        (-DCPU32MHZ -DROOT=__near_func -DMAC_CFG_APP_PENDING_QUEUE=TRUE
-#        -DMAC_CFG_TX_DATA_MAX=5 -DMAC_CFG_TX_MAX=8 -DMAC_CFG_RX_MAX=5
-#        -DZDO_COORDINATOR -DRTR_NWK) -f
-#        D:\School\Jaar_3\WTWS\Projects\WirelessSensorNetworksPracticum\Projects\zstack\Samples\DemoApp\CC2530DB\..\..\..\Tools\CC2530DB\f8wConfig.cfg
+#        -f "D:\Jop van
+#        Buuren\Documents\Hogeschool\Vakken\wt\WirelessSensorNetworksPracticum\Projects\zstack\Samples\DemoApp\CC2530DB\..\..\..\Tools\CC2530DB\f8wEndev.cfg"
+#        (-DCPU32MHZ -DROOT=__near_func -DMAC_CFG_TX_DATA_MAX=3
+#        -DMAC_CFG_TX_MAX=6 -DMAC_CFG_RX_MAX=3) -f "D:\Jop van
+#        Buuren\Documents\Hogeschool\Vakken\wt\WirelessSensorNetworksPracticum\Projects\zstack\Samples\DemoApp\CC2530DB\..\..\..\Tools\CC2530DB\f8wConfig.cfg"
 #        (-DZIGBEEPRO -DSECURE=0 -DZG_SECURE_DYNAMIC=0 -DREFLECTOR
 #        -DDEFAULT_CHANLIST=0x00100000 -DZDAPP_CONFIG_PAN_ID=0x0DAD
 #        -DNWK_START_DELAY=100 -DEXTENDED_JOINING_RANDOM_MASK=0x007F
@@ -34,70 +34,75 @@
 #        -DMAC_MAX_FRAME_SIZE=116 -DZDNWKMGR_MIN_TRANSMISSIONS=20
 #        "-DCONST=const __code" -DGENERIC=__generic -DRFD_RCVC_ALWAYS_ON=FALSE
 #        -DPOLL_RATE=1000 -DQUEUED_POLL_RATE=100 -DRESPONSE_POLL_RATE=100)
-#        -DREJOIN_POLL_RATE=440
-#        D:\School\Jaar_3\WTWS\Projects\WirelessSensorNetworksPracticum\Components\stack\zdo\ZDProfile.c
-#        -D HOLD_AUTO_START -D BUILD_ALL_DEVICES -D REFLECTOR -D NV_INIT -D
-#        NV_RESTORE -D HAL_UART=TRUE -lC
-#        D:\School\Jaar_3\WTWS\Projects\WirelessSensorNetworksPracticum\Projects\zstack\Samples\DemoApp\CC2530DB\CoordinatorEB\List\
-#        -lA
-#        D:\School\Jaar_3\WTWS\Projects\WirelessSensorNetworksPracticum\Projects\zstack\Samples\DemoApp\CC2530DB\CoordinatorEB\List\
-#        --diag_suppress Pe001,Pa010,Pe1665 -o
-#        D:\School\Jaar_3\WTWS\Projects\WirelessSensorNetworksPracticum\Projects\zstack\Samples\DemoApp\CC2530DB\CoordinatorEB\Obj\
+#        -DREJOIN_POLL_RATE=440 "D:\Jop van
+#        Buuren\Documents\Hogeschool\Vakken\wt\WirelessSensorNetworksPracticum\Components\stack\zdo\ZDProfile.c"
+#        -D NWK_AUTO_POLL -D HOLD_AUTO_START -D POWER_SAVING -D NV_INIT -D
+#        DEVICE_LOGICAL_TYPE=ZG_DEVICETYPE_ENDDEVICE -lC "D:\Jop van
+#        Buuren\Documents\Hogeschool\Vakken\wt\WirelessSensorNetworksPracticum\Projects\zstack\Samples\DemoApp\CC2530DB\SensorEB\List\"
+#        -lA "D:\Jop van
+#        Buuren\Documents\Hogeschool\Vakken\wt\WirelessSensorNetworksPracticum\Projects\zstack\Samples\DemoApp\CC2530DB\SensorEB\List\"
+#        --diag_suppress Pe001,Pa010,Pe1665 -o "D:\Jop van
+#        Buuren\Documents\Hogeschool\Vakken\wt\WirelessSensorNetworksPracticum\Projects\zstack\Samples\DemoApp\CC2530DB\SensorEB\Obj\"
 #        -e --no_cse --no_unroll --no_inline --no_code_motion --no_tbaa --debug
 #        --core=plain --dptr=16,1 --data_model=large --code_model=banked
 #        --calling_convention=xdata_reentrant --place_constants=data_rom
-#        --nr_virtual_regs 16 -I
-#        D:\School\Jaar_3\WTWS\Projects\WirelessSensorNetworksPracticum\Projects\zstack\Samples\DemoApp\CC2530DB\
-#        -I
-#        D:\School\Jaar_3\WTWS\Projects\WirelessSensorNetworksPracticum\Projects\zstack\Samples\DemoApp\CC2530DB\..\Source\
-#        -I
-#        D:\School\Jaar_3\WTWS\Projects\WirelessSensorNetworksPracticum\Projects\zstack\Samples\DemoApp\CC2530DB\..\..\..\ZMain\TI2530DB\
-#        -I
-#        D:\School\Jaar_3\WTWS\Projects\WirelessSensorNetworksPracticum\Projects\zstack\Samples\DemoApp\CC2530DB\..\..\..\..\..\Components\hal\include\
-#        -I
-#        D:\School\Jaar_3\WTWS\Projects\WirelessSensorNetworksPracticum\Projects\zstack\Samples\DemoApp\CC2530DB\..\..\..\..\..\Components\hal\target\CC2530EB\
-#        -I
-#        D:\School\Jaar_3\WTWS\Projects\WirelessSensorNetworksPracticum\Projects\zstack\Samples\DemoApp\CC2530DB\..\..\..\..\..\Components\mac\include\
-#        -I
-#        D:\School\Jaar_3\WTWS\Projects\WirelessSensorNetworksPracticum\Projects\zstack\Samples\DemoApp\CC2530DB\..\..\..\..\..\Components\mac\high_level\
-#        -I
-#        D:\School\Jaar_3\WTWS\Projects\WirelessSensorNetworksPracticum\Projects\zstack\Samples\DemoApp\CC2530DB\..\..\..\..\..\Components\mac\low_level\srf04\
-#        -I
-#        D:\School\Jaar_3\WTWS\Projects\WirelessSensorNetworksPracticum\Projects\zstack\Samples\DemoApp\CC2530DB\..\..\..\..\..\Components\mac\low_level\srf04\single_chip\
-#        -I
-#        D:\School\Jaar_3\WTWS\Projects\WirelessSensorNetworksPracticum\Projects\zstack\Samples\DemoApp\CC2530DB\..\..\..\..\..\Components\mt\
-#        -I
-#        D:\School\Jaar_3\WTWS\Projects\WirelessSensorNetworksPracticum\Projects\zstack\Samples\DemoApp\CC2530DB\..\..\..\..\..\Components\osal\include\
-#        -I
-#        D:\School\Jaar_3\WTWS\Projects\WirelessSensorNetworksPracticum\Projects\zstack\Samples\DemoApp\CC2530DB\..\..\..\..\..\Components\services\saddr\
-#        -I
-#        D:\School\Jaar_3\WTWS\Projects\WirelessSensorNetworksPracticum\Projects\zstack\Samples\DemoApp\CC2530DB\..\..\..\..\..\Components\services\sdata\
-#        -I
-#        D:\School\Jaar_3\WTWS\Projects\WirelessSensorNetworksPracticum\Projects\zstack\Samples\DemoApp\CC2530DB\..\..\..\..\..\Components\stack\af\
-#        -I
-#        D:\School\Jaar_3\WTWS\Projects\WirelessSensorNetworksPracticum\Projects\zstack\Samples\DemoApp\CC2530DB\..\..\..\..\..\Components\stack\nwk\
-#        -I
-#        D:\School\Jaar_3\WTWS\Projects\WirelessSensorNetworksPracticum\Projects\zstack\Samples\DemoApp\CC2530DB\..\..\..\..\..\Components\stack\sapi\
-#        -I
-#        D:\School\Jaar_3\WTWS\Projects\WirelessSensorNetworksPracticum\Projects\zstack\Samples\DemoApp\CC2530DB\..\..\..\..\..\Components\stack\sec\
-#        -I
-#        D:\School\Jaar_3\WTWS\Projects\WirelessSensorNetworksPracticum\Projects\zstack\Samples\DemoApp\CC2530DB\..\..\..\..\..\Components\stack\sys\
-#        -I
-#        D:\School\Jaar_3\WTWS\Projects\WirelessSensorNetworksPracticum\Projects\zstack\Samples\DemoApp\CC2530DB\..\..\..\..\..\Components\stack\zdo\
-#        -I
-#        D:\School\Jaar_3\WTWS\Projects\WirelessSensorNetworksPracticum\Projects\zstack\Samples\DemoApp\CC2530DB\..\..\..\..\..\Components\zmac\
-#        -I
-#        D:\School\Jaar_3\WTWS\Projects\WirelessSensorNetworksPracticum\Projects\zstack\Samples\DemoApp\CC2530DB\..\..\..\..\..\Components\zmac\f8w\
+#        --nr_virtual_regs 16 -I "D:\Jop van
+#        Buuren\Documents\Hogeschool\Vakken\wt\WirelessSensorNetworksPracticum\Projects\zstack\Samples\DemoApp\CC2530DB\"
+#        -I "D:\Jop van
+#        Buuren\Documents\Hogeschool\Vakken\wt\WirelessSensorNetworksPracticum\Projects\zstack\Samples\DemoApp\CC2530DB\..\Source\"
+#        -I "D:\Jop van
+#        Buuren\Documents\Hogeschool\Vakken\wt\WirelessSensorNetworksPracticum\Projects\zstack\Samples\DemoApp\CC2530DB\..\..\..\ZMain\TI2530DB\"
+#        -I "D:\Jop van
+#        Buuren\Documents\Hogeschool\Vakken\wt\WirelessSensorNetworksPracticum\Projects\zstack\Samples\DemoApp\CC2530DB\..\..\..\..\..\Components\hal\include\"
+#        -I "D:\Jop van
+#        Buuren\Documents\Hogeschool\Vakken\wt\WirelessSensorNetworksPracticum\Projects\zstack\Samples\DemoApp\CC2530DB\..\..\..\..\..\Components\hal\target\CC2530EB\"
+#        -I "D:\Jop van
+#        Buuren\Documents\Hogeschool\Vakken\wt\WirelessSensorNetworksPracticum\Projects\zstack\Samples\DemoApp\CC2530DB\..\..\..\..\..\Components\mac\include\"
+#        -I "D:\Jop van
+#        Buuren\Documents\Hogeschool\Vakken\wt\WirelessSensorNetworksPracticum\Projects\zstack\Samples\DemoApp\CC2530DB\..\..\..\..\..\Components\mac\high_level\"
+#        -I "D:\Jop van
+#        Buuren\Documents\Hogeschool\Vakken\wt\WirelessSensorNetworksPracticum\Projects\zstack\Samples\DemoApp\CC2530DB\..\..\..\..\..\Components\mac\low_level\srf04\"
+#        -I "D:\Jop van
+#        Buuren\Documents\Hogeschool\Vakken\wt\WirelessSensorNetworksPracticum\Projects\zstack\Samples\DemoApp\CC2530DB\..\..\..\..\..\Components\mac\low_level\srf04\single_chip\"
+#        -I "D:\Jop van
+#        Buuren\Documents\Hogeschool\Vakken\wt\WirelessSensorNetworksPracticum\Projects\zstack\Samples\DemoApp\CC2530DB\..\..\..\..\..\Components\mt\"
+#        -I "D:\Jop van
+#        Buuren\Documents\Hogeschool\Vakken\wt\WirelessSensorNetworksPracticum\Projects\zstack\Samples\DemoApp\CC2530DB\..\..\..\..\..\Components\osal\include\"
+#        -I "D:\Jop van
+#        Buuren\Documents\Hogeschool\Vakken\wt\WirelessSensorNetworksPracticum\Projects\zstack\Samples\DemoApp\CC2530DB\..\..\..\..\..\Components\services\saddr\"
+#        -I "D:\Jop van
+#        Buuren\Documents\Hogeschool\Vakken\wt\WirelessSensorNetworksPracticum\Projects\zstack\Samples\DemoApp\CC2530DB\..\..\..\..\..\Components\services\sdata\"
+#        -I "D:\Jop van
+#        Buuren\Documents\Hogeschool\Vakken\wt\WirelessSensorNetworksPracticum\Projects\zstack\Samples\DemoApp\CC2530DB\..\..\..\..\..\Components\stack\af\"
+#        -I "D:\Jop van
+#        Buuren\Documents\Hogeschool\Vakken\wt\WirelessSensorNetworksPracticum\Projects\zstack\Samples\DemoApp\CC2530DB\..\..\..\..\..\Components\stack\nwk\"
+#        -I "D:\Jop van
+#        Buuren\Documents\Hogeschool\Vakken\wt\WirelessSensorNetworksPracticum\Projects\zstack\Samples\DemoApp\CC2530DB\..\..\..\..\..\Components\stack\sapi\"
+#        -I "D:\Jop van
+#        Buuren\Documents\Hogeschool\Vakken\wt\WirelessSensorNetworksPracticum\Projects\zstack\Samples\DemoApp\CC2530DB\..\..\..\..\..\Components\stack\sec\"
+#        -I "D:\Jop van
+#        Buuren\Documents\Hogeschool\Vakken\wt\WirelessSensorNetworksPracticum\Projects\zstack\Samples\DemoApp\CC2530DB\..\..\..\..\..\Components\stack\sys\"
+#        -I "D:\Jop van
+#        Buuren\Documents\Hogeschool\Vakken\wt\WirelessSensorNetworksPracticum\Projects\zstack\Samples\DemoApp\CC2530DB\..\..\..\..\..\Components\stack\zdo\"
+#        -I "D:\Jop van
+#        Buuren\Documents\Hogeschool\Vakken\wt\WirelessSensorNetworksPracticum\Projects\zstack\Samples\DemoApp\CC2530DB\..\..\..\..\..\Components\zmac\"
+#        -I "D:\Jop van
+#        Buuren\Documents\Hogeschool\Vakken\wt\WirelessSensorNetworksPracticum\Projects\zstack\Samples\DemoApp\CC2530DB\..\..\..\..\..\Components\zmac\f8w\"
 #        -Ol --require_prototypes
 #    List file          =  
-#        D:\School\Jaar_3\WTWS\Projects\WirelessSensorNetworksPracticum\Projects\zstack\Samples\DemoApp\CC2530DB\CoordinatorEB\List\ZDProfile.lst
+#        D:\Jop van
+#        Buuren\Documents\Hogeschool\Vakken\wt\WirelessSensorNetworksPracticum\Projects\zstack\Samples\DemoApp\CC2530DB\SensorEB\List\ZDProfile.lst
 #    Object file        =  
-#        D:\School\Jaar_3\WTWS\Projects\WirelessSensorNetworksPracticum\Projects\zstack\Samples\DemoApp\CC2530DB\CoordinatorEB\Obj\ZDProfile.r51
+#        D:\Jop van
+#        Buuren\Documents\Hogeschool\Vakken\wt\WirelessSensorNetworksPracticum\Projects\zstack\Samples\DemoApp\CC2530DB\SensorEB\Obj\ZDProfile.r51
 #
 ###############################################################################
 
-D:\School\Jaar_3\WTWS\Projects\WirelessSensorNetworksPracticum\Components\stack\zdo\ZDProfile.c
+D:\Jop van Buuren\Documents\Hogeschool\Vakken\wt\WirelessSensorNetworksPracticum\Components\stack\zdo\ZDProfile.c
       1          /**************************************************************************************************
+                                                                                                                   ^
+Warning[Pa050]: non-native end of line sequence detected (this diagnostic is
+          only issued once)
       2            Filename:       ZDProfile.c
       3            Revised:        $Date: 2013-10-02 15:57:50 -0700 (Wed, 02 Oct 2013) $
       4            Revision:       $Revision: 35529 $
@@ -305,24 +310,20 @@ D:\School\Jaar_3\WTWS\Projects\WirelessSensorNetworksPracticum\Components\stack\
    \                                 In  segment CODE_C, align 1
     175          CONST zdpMsgProcItem_t zdpMsgProcs[] =
    \                     zdpMsgProcs:
-   \   000000   0000         DW 0
+   \   000000   0100         DW 1
    \   000002   ....         DW `??zdpProcessAddrReq::?relay`
-   \   000004   1300         DW 19
-   \   000006   ....         DW `??ZDO_ProcessDeviceAnnce::?relay`
-   \   000008   0100         DW 1
-   \   00000A   ....         DW `??zdpProcessAddrReq::?relay`
-   \   00000C   0200         DW 2
-   \   00000E   ....         DW `??ZDO_ProcessNodeDescReq::?relay`
-   \   000010   0300         DW 3
-   \   000012   ....         DW `??ZDO_ProcessPowerDescReq::?relay`
-   \   000014   0400         DW 4
-   \   000016   ....         DW `??ZDO_ProcessSimpleDescReq::?relay`
-   \   000018   0500         DW 5
-   \   00001A   ....         DW `??ZDO_ProcessActiveEPReq::?relay`
-   \   00001C   0600         DW 6
-   \   00001E   ....         DW `??ZDO_ProcessMatchDescReq::?relay`
-   \   000020   FFFF         DW 65535
-   \   000022   0000         DW 0H
+   \   000004   0200         DW 2
+   \   000006   ....         DW `??ZDO_ProcessNodeDescReq::?relay`
+   \   000008   0300         DW 3
+   \   00000A   ....         DW `??ZDO_ProcessPowerDescReq::?relay`
+   \   00000C   0400         DW 4
+   \   00000E   ....         DW `??ZDO_ProcessSimpleDescReq::?relay`
+   \   000010   0500         DW 5
+   \   000012   ....         DW `??ZDO_ProcessActiveEPReq::?relay`
+   \   000014   0600         DW 6
+   \   000016   ....         DW `??ZDO_ProcessMatchDescReq::?relay`
+   \   000018   FFFF         DW 65535
+   \   00001A   0000         DW 0H
     176          {
     177          #if ( RFD_RCVC_ALWAYS_ON==TRUE ) || ( ZG_BUILD_RTR_TYPE )
     178            // These aren't processed by sleeping end devices.
@@ -2136,807 +2137,453 @@ D:\School\Jaar_3\WTWS\Projects\WirelessSensorNetworksPracticum\Components\stack\
    \   000000                REQUIRE ?V5
    \   000000                REQUIRE ?V6
    \   000000                REQUIRE ?V7
-   \   000000                REQUIRE ?V8
-   \   000000                REQUIRE ?V9
-   \   000000   74EE         MOV     A,#-0x12
+   \   000000   74F0         MOV     A,#-0x10
    \   000002   12....       LCALL   ?BANKED_ENTER_XDATA
-   \   000005                ; Saved register size: 18
-   \   000005                ; Auto size: 14
-   \   000005   74F2         MOV     A,#-0xe
-   \   000007   12....       LCALL   ?ALLOC_XSTACK8
-   \   00000A   8A..         MOV     ?V4,R2
-   \   00000C   8B..         MOV     ?V5,R3
+   \   000005                ; Saved register size: 16
+   \   000005                ; Auto size: 0
+   \   000005   8A..         MOV     ?V4,R2
+   \   000007   8B..         MOV     ?V5,R3
     633            associated_devices_t *pAssoc;
     634            uint8 reqType;
     635            uint16 aoi = INVALID_NODE_ADDR;
-   \   00000E   75..FE       MOV     ?V2,#-0x2
-   \   000011   75..FF       MOV     ?V3,#-0x1
+   \   000009   75..FE       MOV     ?V0,#-0x2
+   \   00000C   75..FF       MOV     ?V1,#-0x1
     636            uint8 *ieee = NULL;
-   \   000014   75..00       MOV     ?V0,#0x0
-   \   000017   75..00       MOV     ?V1,#0x0
+   \   00000F   75..00       MOV     ?V2,#0x0
+   \   000012   75..00       MOV     ?V3,#0x0
     637          
     638            reqType = inMsg->asdu[(inMsg->clusterID == NWK_addr_req) ? Z_EXTADDR_LEN : sizeof( uint16 ) ];
-   \   00001A   E5..         MOV     A,?V4
-   \   00001C   240C         ADD     A,#0xc
-   \   00001E   F582         MOV     DPL,A
-   \   000020   E4           CLR     A
-   \   000021   35..         ADDC    A,?V5
-   \   000023   F583         MOV     DPH,A
-   \   000025   E0           MOVX    A,@DPTR
-   \   000026   F8           MOV     R0,A
-   \   000027   A3           INC     DPTR
-   \   000028   E0           MOVX    A,@DPTR
-   \   000029   F9           MOV     R1,A
-   \   00002A   E8           MOV     A,R0
-   \   00002B   49           ORL     A,R1
-   \   00002C   7006         JNZ     ??zdpProcessAddrReq_0
-   \   00002E   7808         MOV     R0,#0x8
-   \   000030   7900         MOV     R1,#0x0
-   \   000032   8004         SJMP    ??zdpProcessAddrReq_1
+   \   000015   E5..         MOV     A,?V4
+   \   000017   240C         ADD     A,#0xc
+   \   000019   F582         MOV     DPL,A
+   \   00001B   E4           CLR     A
+   \   00001C   35..         ADDC    A,?V5
+   \   00001E   F583         MOV     DPH,A
+   \   000020   E0           MOVX    A,@DPTR
+   \   000021   F8           MOV     R0,A
+   \   000022   A3           INC     DPTR
+   \   000023   E0           MOVX    A,@DPTR
+   \   000024   F9           MOV     R1,A
+   \   000025   E8           MOV     A,R0
+   \   000026   49           ORL     A,R1
+   \   000027   7006         JNZ     ??zdpProcessAddrReq_0
+   \   000029   7808         MOV     R0,#0x8
+   \   00002B   7900         MOV     R1,#0x0
+   \   00002D   8004         SJMP    ??zdpProcessAddrReq_1
    \                     ??zdpProcessAddrReq_0:
-   \   000034   7802         MOV     R0,#0x2
-   \   000036   7900         MOV     R1,#0x0
+   \   00002F   7802         MOV     R0,#0x2
+   \   000031   7900         MOV     R1,#0x0
    \                     ??zdpProcessAddrReq_1:
-   \   000038   E5..         MOV     A,?V4
-   \   00003A   2413         ADD     A,#0x13
-   \   00003C   F582         MOV     DPL,A
-   \   00003E   E4           CLR     A
-   \   00003F   35..         ADDC    A,?V5
-   \   000041   F583         MOV     DPH,A
-   \   000043   E0           MOVX    A,@DPTR
-   \   000044   28           ADD     A,R0
-   \   000045   FA           MOV     R2,A
-   \   000046   A3           INC     DPTR
-   \   000047   E0           MOVX    A,@DPTR
-   \   000048   39           ADDC    A,R1
-   \   000049   8A82         MOV     DPL,R2
-   \   00004B   F583         MOV     DPH,A
-   \   00004D   E0           MOVX    A,@DPTR
-   \   00004E   F5..         MOV     ?V6,A
+   \   000033   E5..         MOV     A,?V4
+   \   000035   2413         ADD     A,#0x13
+   \   000037   F582         MOV     DPL,A
+   \   000039   E4           CLR     A
+   \   00003A   35..         ADDC    A,?V5
+   \   00003C   F583         MOV     DPH,A
+   \   00003E   E0           MOVX    A,@DPTR
+   \   00003F   28           ADD     A,R0
+   \   000040   FA           MOV     R2,A
+   \   000041   A3           INC     DPTR
+   \   000042   E0           MOVX    A,@DPTR
+   \   000043   39           ADDC    A,R1
+   \   000044   8A82         MOV     DPL,R2
+   \   000046   F583         MOV     DPH,A
+   \   000048   E0           MOVX    A,@DPTR
+   \   000049   F5..         MOV     ?V7,A
     639          
     640            if ( inMsg->clusterID == NWK_addr_req )
-   \   000050   E5..         MOV     A,?V4
-   \   000052   240C         ADD     A,#0xc
-   \   000054   F582         MOV     DPL,A
-   \   000056   E4           CLR     A
-   \   000057   35..         ADDC    A,?V5
-   \   000059   F583         MOV     DPH,A
-   \   00005B   E0           MOVX    A,@DPTR
-   \   00005C   F8           MOV     R0,A
-   \   00005D   A3           INC     DPTR
-   \   00005E   E0           MOVX    A,@DPTR
-   \   00005F   F9           MOV     R1,A
-   \   000060   E8           MOV     A,R0
-   \   000061   49           ORL     A,R1
-   \   000062   6003         JZ      $+5
-   \   000064   02....       LJMP    ??zdpProcessAddrReq_2 & 0xFFFF
+   \   00004B   E5..         MOV     A,?V4
+   \   00004D   240C         ADD     A,#0xc
+   \   00004F   F582         MOV     DPL,A
+   \   000051   E4           CLR     A
+   \   000052   35..         ADDC    A,?V5
+   \   000054   F583         MOV     DPH,A
+   \   000056   E0           MOVX    A,@DPTR
+   \   000057   F8           MOV     R0,A
+   \   000058   A3           INC     DPTR
+   \   000059   E0           MOVX    A,@DPTR
+   \   00005A   F9           MOV     R1,A
+   \   00005B   E8           MOV     A,R0
+   \   00005C   49           ORL     A,R1
+   \   00005D   702C         JNZ     ??zdpProcessAddrReq_2
     641          
     642            {
     643              ieee = inMsg->asdu;
-   \   000067   E5..         MOV     A,?V4
-   \   000069   2413         ADD     A,#0x13
-   \   00006B   F582         MOV     DPL,A
-   \   00006D   E4           CLR     A
-   \   00006E   35..         ADDC    A,?V5
-   \   000070   F583         MOV     DPH,A
-   \   000072   E0           MOVX    A,@DPTR
-   \   000073   F5..         MOV     ?V0,A
-   \   000075   A3           INC     DPTR
-   \   000076   E0           MOVX    A,@DPTR
-   \   000077   F5..         MOV     ?V1,A
+   \   00005F   E5..         MOV     A,?V4
+   \   000061   2413         ADD     A,#0x13
+   \   000063   F582         MOV     DPL,A
+   \   000065   E4           CLR     A
+   \   000066   35..         ADDC    A,?V5
+   \   000068   F583         MOV     DPH,A
+   \   00006A   E0           MOVX    A,@DPTR
+   \   00006B   F5..         MOV     ?V2,A
+   \   00006D   A3           INC     DPTR
+   \   00006E   E0           MOVX    A,@DPTR
+   \   00006F   F5..         MOV     ?V3,A
     644          
     645              if ( osal_ExtAddrEqual( saveExtAddr, ieee ) )
-   \   000079                ; Setup parameters for call to function sAddrExtCmp
-   \   000079   AC..         MOV     R4,?V0
-   \   00007B   AD..         MOV     R5,?V1
-   \   00007D   7A..         MOV     R2,#saveExtAddr & 0xff
-   \   00007F   7B..         MOV     R3,#(saveExtAddr >> 8) & 0xff
-   \   000081   12....       LCALL   `??sAddrExtCmp::?relay`; Banked call to: sAddrExtCmp
-   \   000084   E9           MOV     A,R1
-   \   000085   600D         JZ      ??zdpProcessAddrReq_3
+   \   000071                ; Setup parameters for call to function sAddrExtCmp
+   \   000071   AC..         MOV     R4,?V2
+   \   000073   AD..         MOV     R5,?V3
+   \   000075   7A..         MOV     R2,#saveExtAddr & 0xff
+   \   000077   7B..         MOV     R3,#(saveExtAddr >> 8) & 0xff
+   \   000079   12....       LCALL   `??sAddrExtCmp::?relay`; Banked call to: sAddrExtCmp
+   \   00007C   E9           MOV     A,R1
+   \   00007D   605A         JZ      ??zdpProcessAddrReq_3
     646              {
     647                aoi = ZDAppNwkAddr.addr.shortAddr;
-   \   000087   90....       MOV     DPTR,#ZDAppNwkAddr
-   \   00008A   E0           MOVX    A,@DPTR
-   \   00008B   F5..         MOV     ?V2,A
-   \   00008D   A3           INC     DPTR
-   \   00008E   E0           MOVX    A,@DPTR
-   \   00008F   F5..         MOV     ?V3,A
-   \   000091   02....       LJMP    ??zdpProcessAddrReq_4 & 0xFFFF
+   \   00007F   90....       MOV     DPTR,#ZDAppNwkAddr
+   \   000082   E0           MOVX    A,@DPTR
+   \   000083   F5..         MOV     ?V0,A
+   \   000085   A3           INC     DPTR
+   \   000086   E0           MOVX    A,@DPTR
+   \   000087   F5..         MOV     ?V1,A
+   \   000089   804E         SJMP    ??zdpProcessAddrReq_3
     648              }
     649              // Handle response for sleeping end devices
     650              else if ( (ZSTACK_ROUTER_BUILD)
     651                && (((pAssoc = AssocGetWithExt( ieee )) != NULL)
     652                       && (pAssoc->nodeRelation == CHILD_RFD)) )
-   \                     ??zdpProcessAddrReq_3:
-   \   000094   90....       MOV     DPTR,#zgDeviceLogicalType
-   \   000097   E0           MOVX    A,@DPTR
-   \   000098   600B         JZ      ??zdpProcessAddrReq_5
-   \   00009A   90....       MOV     DPTR,#zgDeviceLogicalType
-   \   00009D   E0           MOVX    A,@DPTR
-   \   00009E   6401         XRL     A,#0x1
-   \   0000A0   6003         JZ      $+5
-   \   0000A2   02....       LJMP    ??zdpProcessAddrReq_4 & 0xFFFF
-   \                     ??zdpProcessAddrReq_5:
-   \   0000A5                ; Setup parameters for call to function AssocGetWithExt
-   \   0000A5   AA..         MOV     R2,?V0
-   \   0000A7   AB..         MOV     R3,?V1
-   \   0000A9   12....       LCALL   `??AssocGetWithExt::?relay`; Banked call to: AssocGetWithExt
-   \   0000AC   8A..         MOV     ?V8,R2
-   \   0000AE   8B..         MOV     ?V9,R3
-   \   0000B0   AA..         MOV     R2,?V8
-   \   0000B2   AB..         MOV     R3,?V9
-   \   0000B4   EA           MOV     A,R2
-   \   0000B5   F8           MOV     R0,A
-   \   0000B6   EB           MOV     A,R3
-   \   0000B7   F9           MOV     R1,A
-   \   0000B8   EA           MOV     A,R2
-   \   0000B9   4B           ORL     A,R3
-   \   0000BA   7003         JNZ     $+5
-   \   0000BC   02....       LJMP    ??zdpProcessAddrReq_4 & 0xFFFF
-   \   0000BF   8882         MOV     DPL,R0
-   \   0000C1   8983         MOV     DPH,R1
-   \   0000C3   A3           INC     DPTR
-   \   0000C4   A3           INC     DPTR
-   \   0000C5   A3           INC     DPTR
-   \   0000C6   A3           INC     DPTR
-   \   0000C7   E0           MOVX    A,@DPTR
-   \   0000C8   6401         XRL     A,#0x1
-   \   0000CA   6003         JZ      $+5
-   \   0000CC   02....       LJMP    ??zdpProcessAddrReq_4 & 0xFFFF
     653              {
     654                aoi = pAssoc->shortAddr;
-   \   0000CF   8882         MOV     DPL,R0
-   \   0000D1   8983         MOV     DPH,R1
-   \   0000D3   E0           MOVX    A,@DPTR
-   \   0000D4   F5..         MOV     ?V2,A
-   \   0000D6   A3           INC     DPTR
-   \   0000D7   E0           MOVX    A,@DPTR
-   \   0000D8   F5..         MOV     ?V3,A
     655                if ( reqType != ZDP_ADDR_REQTYPE_SINGLE )
-   \   0000DA   E5..         MOV     A,?V6
-   \   0000DC   7003         JNZ     $+5
-   \   0000DE   02....       LJMP    ??zdpProcessAddrReq_4 & 0xFFFF
     656                  reqType = 0xFF; // Force Invalid
-   \   0000E1   75..FF       MOV     ?V6,#-0x1
-   \   0000E4   02....       LJMP    ??zdpProcessAddrReq_4 & 0xFFFF
     657              }
     658            }
     659            else  // if ( inMsg->clusterID == IEEE_addr_req )
     660            {
     661              aoi = BUILD_UINT16( inMsg->asdu[0], inMsg->asdu[1] );
    \                     ??zdpProcessAddrReq_2:
-   \   0000E7   E5..         MOV     A,?V4
-   \   0000E9   2413         ADD     A,#0x13
-   \   0000EB   F582         MOV     DPL,A
-   \   0000ED   E4           CLR     A
-   \   0000EE   35..         ADDC    A,?V5
-   \   0000F0   F583         MOV     DPH,A
-   \   0000F2   E0           MOVX    A,@DPTR
-   \   0000F3   F8           MOV     R0,A
-   \   0000F4   A3           INC     DPTR
-   \   0000F5   E0           MOVX    A,@DPTR
-   \   0000F6   F583         MOV     DPH,A
-   \   0000F8   8882         MOV     DPL,R0
-   \   0000FA   E0           MOVX    A,@DPTR
-   \   0000FB   FA           MOV     R2,A
-   \   0000FC   7B00         MOV     R3,#0x0
-   \   0000FE   E5..         MOV     A,?V4
-   \   000100   2413         ADD     A,#0x13
-   \   000102   F582         MOV     DPL,A
-   \   000104   E4           CLR     A
-   \   000105   35..         ADDC    A,?V5
-   \   000107   F583         MOV     DPH,A
-   \   000109   E0           MOVX    A,@DPTR
-   \   00010A   F8           MOV     R0,A
-   \   00010B   A3           INC     DPTR
-   \   00010C   E0           MOVX    A,@DPTR
-   \   00010D   F583         MOV     DPH,A
-   \   00010F   8882         MOV     DPL,R0
-   \   000111   A3           INC     DPTR
-   \   000112   E0           MOVX    A,@DPTR
-   \   000113   F8           MOV     R0,A
-   \   000114   7900         MOV     R1,#0x0
-   \   000116   E4           CLR     A
-   \   000117   C8           XCH     A,R0
-   \   000118   F9           MOV     R1,A
-   \   000119   EA           MOV     A,R2
-   \   00011A   28           ADD     A,R0
-   \   00011B   F5..         MOV     ?V2,A
-   \   00011D   EB           MOV     A,R3
-   \   00011E   39           ADDC    A,R1
-   \   00011F   F5..         MOV     ?V3,A
+   \   00008B   E5..         MOV     A,?V4
+   \   00008D   2413         ADD     A,#0x13
+   \   00008F   F582         MOV     DPL,A
+   \   000091   E4           CLR     A
+   \   000092   35..         ADDC    A,?V5
+   \   000094   F583         MOV     DPH,A
+   \   000096   E0           MOVX    A,@DPTR
+   \   000097   F8           MOV     R0,A
+   \   000098   A3           INC     DPTR
+   \   000099   E0           MOVX    A,@DPTR
+   \   00009A   F583         MOV     DPH,A
+   \   00009C   8882         MOV     DPL,R0
+   \   00009E   E0           MOVX    A,@DPTR
+   \   00009F   FA           MOV     R2,A
+   \   0000A0   7B00         MOV     R3,#0x0
+   \   0000A2   E5..         MOV     A,?V4
+   \   0000A4   2413         ADD     A,#0x13
+   \   0000A6   F582         MOV     DPL,A
+   \   0000A8   E4           CLR     A
+   \   0000A9   35..         ADDC    A,?V5
+   \   0000AB   F583         MOV     DPH,A
+   \   0000AD   E0           MOVX    A,@DPTR
+   \   0000AE   F8           MOV     R0,A
+   \   0000AF   A3           INC     DPTR
+   \   0000B0   E0           MOVX    A,@DPTR
+   \   0000B1   F583         MOV     DPH,A
+   \   0000B3   8882         MOV     DPL,R0
+   \   0000B5   A3           INC     DPTR
+   \   0000B6   E0           MOVX    A,@DPTR
+   \   0000B7   F8           MOV     R0,A
+   \   0000B8   7900         MOV     R1,#0x0
+   \   0000BA   E4           CLR     A
+   \   0000BB   C8           XCH     A,R0
+   \   0000BC   F9           MOV     R1,A
+   \   0000BD   EA           MOV     A,R2
+   \   0000BE   28           ADD     A,R0
+   \   0000BF   F5..         MOV     ?V0,A
+   \   0000C1   EB           MOV     A,R3
+   \   0000C2   39           ADDC    A,R1
+   \   0000C3   F5..         MOV     ?V1,A
     662          
     663              if ( aoi == ZDAppNwkAddr.addr.shortAddr )
-   \   000121   90....       MOV     DPTR,#ZDAppNwkAddr
-   \   000124   E0           MOVX    A,@DPTR
-   \   000125   65..         XRL     A,?V2
-   \   000127   7004         JNZ     ??zdpProcessAddrReq_6
-   \   000129   A3           INC     DPTR
-   \   00012A   E0           MOVX    A,@DPTR
-   \   00012B   65..         XRL     A,?V3
-   \                     ??zdpProcessAddrReq_6:
-   \   00012D   7008         JNZ     ??zdpProcessAddrReq_7
+   \   0000C5   90....       MOV     DPTR,#ZDAppNwkAddr
+   \   0000C8   E0           MOVX    A,@DPTR
+   \   0000C9   65..         XRL     A,?V0
+   \   0000CB   7004         JNZ     ??zdpProcessAddrReq_4
+   \   0000CD   A3           INC     DPTR
+   \   0000CE   E0           MOVX    A,@DPTR
+   \   0000CF   65..         XRL     A,?V1
+   \                     ??zdpProcessAddrReq_4:
+   \   0000D1   7006         JNZ     ??zdpProcessAddrReq_3
     664              {
     665                ieee = saveExtAddr;
-   \   00012F   75....       MOV     ?V0,#saveExtAddr & 0xff
-   \   000132   75....       MOV     ?V1,#(saveExtAddr >> 8) & 0xff
-   \   000135   806C         SJMP    ??zdpProcessAddrReq_4
+   \   0000D3   75....       MOV     ?V2,#saveExtAddr & 0xff
+   \   0000D6   75....       MOV     ?V3,#(saveExtAddr >> 8) & 0xff
     666              }
     667              else if ( (ZSTACK_ROUTER_BUILD)
     668                && (((pAssoc = AssocGetWithShort( aoi )) != NULL)
     669                       && (pAssoc->nodeRelation == CHILD_RFD)) )
-   \                     ??zdpProcessAddrReq_7:
-   \   000137   90....       MOV     DPTR,#zgDeviceLogicalType
-   \   00013A   E0           MOVX    A,@DPTR
-   \   00013B   6008         JZ      ??zdpProcessAddrReq_8
-   \   00013D   90....       MOV     DPTR,#zgDeviceLogicalType
-   \   000140   E0           MOVX    A,@DPTR
-   \   000141   6401         XRL     A,#0x1
-   \   000143   705E         JNZ     ??zdpProcessAddrReq_4
-   \                     ??zdpProcessAddrReq_8:
-   \   000145                ; Setup parameters for call to function AssocGetWithShort
-   \   000145   AA..         MOV     R2,?V2
-   \   000147   AB..         MOV     R3,?V3
-   \   000149   12....       LCALL   `??AssocGetWithShort::?relay`; Banked call to: AssocGetWithShort
-   \   00014C   8A..         MOV     ?V8,R2
-   \   00014E   8B..         MOV     ?V9,R3
-   \   000150   AA..         MOV     R2,?V8
-   \   000152   AB..         MOV     R3,?V9
-   \   000154   EA           MOV     A,R2
-   \   000155   F8           MOV     R0,A
-   \   000156   EB           MOV     A,R3
-   \   000157   F9           MOV     R1,A
-   \   000158   EA           MOV     A,R2
-   \   000159   4B           ORL     A,R3
-   \   00015A   6047         JZ      ??zdpProcessAddrReq_4
-   \   00015C   8882         MOV     DPL,R0
-   \   00015E   8983         MOV     DPH,R1
-   \   000160   A3           INC     DPTR
-   \   000161   A3           INC     DPTR
-   \   000162   A3           INC     DPTR
-   \   000163   A3           INC     DPTR
-   \   000164   E0           MOVX    A,@DPTR
-   \   000165   6401         XRL     A,#0x1
-   \   000167   703A         JNZ     ??zdpProcessAddrReq_4
     670              {
     671                AddrMgrEntry_t addrEntry;
     672                addrEntry.user = ADDRMGR_USER_DEFAULT;
-   \   000169   7401         MOV     A,#0x1
-   \   00016B   12....       LCALL   ?XSTACK_DISP0_8
-   \   00016E   7400         MOV     A,#0x0
-   \   000170   F0           MOVX    @DPTR,A
     673                addrEntry.index = pAssoc->addrIdx;
-   \   000171   8882         MOV     DPL,R0
-   \   000173   8983         MOV     DPH,R1
-   \   000175   A3           INC     DPTR
-   \   000176   A3           INC     DPTR
-   \   000177   E0           MOVX    A,@DPTR
-   \   000178   F8           MOV     R0,A
-   \   000179   A3           INC     DPTR
-   \   00017A   E0           MOVX    A,@DPTR
-   \   00017B   F9           MOV     R1,A
-   \   00017C   740C         MOV     A,#0xc
-   \   00017E   12....       LCALL   ?XSTACK_DISP0_8
-   \   000181   E8           MOV     A,R0
-   \   000182   F0           MOVX    @DPTR,A
-   \   000183   A3           INC     DPTR
-   \   000184   E9           MOV     A,R1
-   \   000185   F0           MOVX    @DPTR,A
     674                if ( AddrMgrEntryGet( &addrEntry ) )
-   \   000186                ; Setup parameters for call to function AddrMgrEntryGet
-   \   000186   7401         MOV     A,#0x1
-   \   000188   12....       LCALL   ?XSTACK_DISP101_8
-   \   00018B   12....       LCALL   `??AddrMgrEntryGet::?relay`; Banked call to: AddrMgrEntryGet
-   \   00018E   E9           MOV     A,R1
-   \   00018F   600B         JZ      ??zdpProcessAddrReq_9
     675                {
     676                  ieee = addrEntry.extAddr;
-   \   000191   7404         MOV     A,#0x4
-   \   000193   12....       LCALL   ?XSTACK_DISP0_8
-   \   000196   8582..       MOV     ?V0,DPL
-   \   000199   8583..       MOV     ?V1,DPH
     677                }
     678          
     679                if ( reqType != ZDP_ADDR_REQTYPE_SINGLE )
-   \                     ??zdpProcessAddrReq_9:
-   \   00019C   E5..         MOV     A,?V6
-   \   00019E   6003         JZ      ??zdpProcessAddrReq_4
     680                  reqType = 0xFF; // Force Invalid
-   \   0001A0   75..FF       MOV     ?V6,#-0x1
     681              }
     682            }
     683          
     684            if ( ((aoi != INVALID_NODE_ADDR) && (ieee != NULL)) || (inMsg->wasBroadcast == FALSE) )
-   \                     ??zdpProcessAddrReq_4:
-   \   0001A3   74FE         MOV     A,#-0x2
-   \   0001A5   65..         XRL     A,?V2
-   \   0001A7   7004         JNZ     ??zdpProcessAddrReq_10
-   \   0001A9   74FF         MOV     A,#-0x1
-   \   0001AB   65..         XRL     A,?V3
-   \                     ??zdpProcessAddrReq_10:
-   \   0001AD   6006         JZ      ??zdpProcessAddrReq_11
-   \   0001AF   E5..         MOV     A,?V0
-   \   0001B1   45..         ORL     A,?V1
-   \   0001B3   7011         JNZ     ??zdpProcessAddrReq_12
-   \                     ??zdpProcessAddrReq_11:
-   \   0001B5   E5..         MOV     A,?V4
-   \   0001B7   240B         ADD     A,#0xb
-   \   0001B9   F582         MOV     DPL,A
-   \   0001BB   E4           CLR     A
-   \   0001BC   35..         ADDC    A,?V5
-   \   0001BE   F583         MOV     DPH,A
-   \   0001C0   E0           MOVX    A,@DPTR
-   \   0001C1   6003         JZ      $+5
-   \   0001C3   02....       LJMP    ??zdpProcessAddrReq_13 & 0xFFFF
+   \                     ??zdpProcessAddrReq_3:
+   \   0000D9   74FE         MOV     A,#-0x2
+   \   0000DB   65..         XRL     A,?V0
+   \   0000DD   7004         JNZ     ??zdpProcessAddrReq_5
+   \   0000DF   74FF         MOV     A,#-0x1
+   \   0000E1   65..         XRL     A,?V1
+   \                     ??zdpProcessAddrReq_5:
+   \   0000E3   6006         JZ      ??zdpProcessAddrReq_6
+   \   0000E5   E5..         MOV     A,?V2
+   \   0000E7   45..         ORL     A,?V3
+   \   0000E9   7011         JNZ     ??zdpProcessAddrReq_7
+   \                     ??zdpProcessAddrReq_6:
+   \   0000EB   E5..         MOV     A,?V4
+   \   0000ED   240B         ADD     A,#0xb
+   \   0000EF   F582         MOV     DPL,A
+   \   0000F1   E4           CLR     A
+   \   0000F2   35..         ADDC    A,?V5
+   \   0000F4   F583         MOV     DPH,A
+   \   0000F6   E0           MOVX    A,@DPTR
+   \   0000F7   6003         JZ      $+5
+   \   0000F9   02....       LJMP    ??zdpProcessAddrReq_8 & 0xFFFF
     685            {
     686              uint8 stat;
     687              uint8 *pBuf = ZDP_TmpBuf;
-   \                     ??zdpProcessAddrReq_12:
-   \   0001C6   90....       MOV     DPTR,#ZDP_TmpBuf
-   \   0001C9   E0           MOVX    A,@DPTR
-   \   0001CA   FE           MOV     R6,A
-   \   0001CB   A3           INC     DPTR
-   \   0001CC   E0           MOVX    A,@DPTR
-   \   0001CD   FF           MOV     R7,A
+   \                     ??zdpProcessAddrReq_7:
+   \   0000FC   90....       MOV     DPTR,#ZDP_TmpBuf
+   \   0000FF   E0           MOVX    A,@DPTR
+   \   000100   FE           MOV     R6,A
+   \   000101   A3           INC     DPTR
+   \   000102   E0           MOVX    A,@DPTR
+   \   000103   FF           MOV     R7,A
     688              // Status + IEEE-Addr + Nwk-Addr.
     689              uint8 len = 1 + Z_EXTADDR_LEN + 2;
-   \   0001CE   75..0B       MOV     ?V8,#0xb
+   \   000104   75..0B       MOV     ?V6,#0xb
     690          
     691              // If aoi and iee are both setup, we found results
     692              if ( (aoi != INVALID_NODE_ADDR) && (ieee != NULL) )
-   \   0001D1   74FE         MOV     A,#-0x2
-   \   0001D3   65..         XRL     A,?V2
-   \   0001D5   7004         JNZ     ??zdpProcessAddrReq_14
-   \   0001D7   74FF         MOV     A,#-0x1
-   \   0001D9   65..         XRL     A,?V3
-   \                     ??zdpProcessAddrReq_14:
-   \   0001DB   601A         JZ      ??zdpProcessAddrReq_15
-   \   0001DD   E5..         MOV     A,?V0
-   \   0001DF   45..         ORL     A,?V1
-   \   0001E1   6014         JZ      ??zdpProcessAddrReq_15
+   \   000107   74FE         MOV     A,#-0x2
+   \   000109   65..         XRL     A,?V0
+   \   00010B   7004         JNZ     ??zdpProcessAddrReq_9
+   \   00010D   74FF         MOV     A,#-0x1
+   \   00010F   65..         XRL     A,?V1
+   \                     ??zdpProcessAddrReq_9:
+   \   000111   6018         JZ      ??zdpProcessAddrReq_10
+   \   000113   E5..         MOV     A,?V2
+   \   000115   45..         ORL     A,?V3
+   \   000117   6012         JZ      ??zdpProcessAddrReq_10
     693              {
     694                stat = ((reqType == ZDP_ADDR_REQTYPE_SINGLE) || (reqType == ZDP_ADDR_REQTYPE_EXTENDED))
     695                              ? ZDP_SUCCESS : ZDP_INVALID_REQTYPE;
-   \   0001E3   E5..         MOV     A,?V6
-   \   0001E5   6006         JZ      ??zdpProcessAddrReq_16
-   \   0001E7   7401         MOV     A,#0x1
-   \   0001E9   65..         XRL     A,?V6
-   \   0001EB   7005         JNZ     ??zdpProcessAddrReq_17
-   \                     ??zdpProcessAddrReq_16:
-   \   0001ED   75..00       MOV     ?V7,#0x0
-   \   0001F0   802E         SJMP    ??zdpProcessAddrReq_18
-   \                     ??zdpProcessAddrReq_17:
-   \   0001F2   75..80       MOV     ?V7,#-0x80
-   \   0001F5   8029         SJMP    ??zdpProcessAddrReq_18
+   \   000119   E5..         MOV     A,?V7
+   \   00011B   6006         JZ      ??zdpProcessAddrReq_11
+   \   00011D   7401         MOV     A,#0x1
+   \   00011F   65..         XRL     A,?V7
+   \   000121   7004         JNZ     ??zdpProcessAddrReq_12
+   \                     ??zdpProcessAddrReq_11:
+   \   000123   7800         MOV     R0,#0x0
+   \   000125   802C         SJMP    ??zdpProcessAddrReq_13
+   \                     ??zdpProcessAddrReq_12:
+   \   000127   7880         MOV     R0,#-0x80
+   \   000129   8028         SJMP    ??zdpProcessAddrReq_13
     696              }
     697              else
     698              {
     699                // not found and the req was unicast to this device
     700                stat = ZDP_DEVICE_NOT_FOUND;
-   \                     ??zdpProcessAddrReq_15:
-   \   0001F7   75..81       MOV     ?V7,#-0x7f
+   \                     ??zdpProcessAddrReq_10:
+   \   00012B   7881         MOV     R0,#-0x7f
     701          
     702                // Fill in the missing field with this device's address
     703                if ( inMsg->clusterID == NWK_addr_req )
-   \   0001FA   E5..         MOV     A,?V4
-   \   0001FC   240C         ADD     A,#0xc
-   \   0001FE   F582         MOV     DPL,A
-   \   000200   E4           CLR     A
-   \   000201   35..         ADDC    A,?V5
-   \   000203   F583         MOV     DPH,A
-   \   000205   E0           MOVX    A,@DPTR
-   \   000206   F8           MOV     R0,A
-   \   000207   A3           INC     DPTR
-   \   000208   E0           MOVX    A,@DPTR
-   \   000209   F9           MOV     R1,A
-   \   00020A   E8           MOV     A,R0
-   \   00020B   49           ORL     A,R1
-   \   00020C   700C         JNZ     ??zdpProcessAddrReq_19
+   \   00012D   E5..         MOV     A,?V4
+   \   00012F   240C         ADD     A,#0xc
+   \   000131   F582         MOV     DPL,A
+   \   000133   E4           CLR     A
+   \   000134   35..         ADDC    A,?V5
+   \   000136   F583         MOV     DPH,A
+   \   000138   E0           MOVX    A,@DPTR
+   \   000139   FA           MOV     R2,A
+   \   00013A   A3           INC     DPTR
+   \   00013B   E0           MOVX    A,@DPTR
+   \   00013C   FB           MOV     R3,A
+   \   00013D   EA           MOV     A,R2
+   \   00013E   4B           ORL     A,R3
+   \   00013F   700C         JNZ     ??zdpProcessAddrReq_14
     704                {
     705                  aoi = ZDAppNwkAddr.addr.shortAddr;
-   \   00020E   90....       MOV     DPTR,#ZDAppNwkAddr
-   \   000211   E0           MOVX    A,@DPTR
-   \   000212   F5..         MOV     ?V2,A
-   \   000214   A3           INC     DPTR
-   \   000215   E0           MOVX    A,@DPTR
-   \   000216   F5..         MOV     ?V3,A
-   \   000218   8006         SJMP    ??zdpProcessAddrReq_18
+   \   000141   90....       MOV     DPTR,#ZDAppNwkAddr
+   \   000144   E0           MOVX    A,@DPTR
+   \   000145   F5..         MOV     ?V0,A
+   \   000147   A3           INC     DPTR
+   \   000148   E0           MOVX    A,@DPTR
+   \   000149   F5..         MOV     ?V1,A
+   \   00014B   8006         SJMP    ??zdpProcessAddrReq_13
     706                }
     707                else
     708                {
     709                  ieee = saveExtAddr;
-   \                     ??zdpProcessAddrReq_19:
-   \   00021A   75....       MOV     ?V0,#saveExtAddr & 0xff
-   \   00021D   75....       MOV     ?V1,#(saveExtAddr >> 8) & 0xff
+   \                     ??zdpProcessAddrReq_14:
+   \   00014D   75....       MOV     ?V2,#saveExtAddr & 0xff
+   \   000150   75....       MOV     ?V3,#(saveExtAddr >> 8) & 0xff
     710                }
     711              }
     712          
     713              *pBuf++ = stat;
-   \                     ??zdpProcessAddrReq_18:
-   \   000220   E5..         MOV     A,?V7
-   \   000222   C0E0         PUSH    A
-   \   000224   8E82         MOV     DPL,R6
-   \   000226   8F83         MOV     DPH,R7
-   \   000228   D0E0         POP     A
-   \   00022A   F0           MOVX    @DPTR,A
-   \   00022B   8E82         MOV     DPL,R6
-   \   00022D   8F83         MOV     DPH,R7
-   \   00022F   A3           INC     DPTR
-   \   000230   AE82         MOV     R6,DPL
-   \   000232   AF83         MOV     R7,DPH
+   \                     ??zdpProcessAddrReq_13:
+   \   000153   E8           MOV     A,R0
+   \   000154   C0E0         PUSH    A
+   \   000156   8E82         MOV     DPL,R6
+   \   000158   8F83         MOV     DPH,R7
+   \   00015A   D0E0         POP     A
+   \   00015C   F0           MOVX    @DPTR,A
+   \   00015D   8E82         MOV     DPL,R6
+   \   00015F   8F83         MOV     DPH,R7
+   \   000161   A3           INC     DPTR
+   \   000162   AE82         MOV     R6,DPL
+   \   000164   AF83         MOV     R7,DPH
     714          
     715              pBuf = osal_cpyExtAddr( pBuf, ieee );
-   \   000234                ; Setup parameters for call to function sAddrExtCpy
-   \   000234   AC..         MOV     R4,?V0
-   \   000236   AD..         MOV     R5,?V1
-   \   000238   EE           MOV     A,R6
-   \   000239   FA           MOV     R2,A
-   \   00023A   EF           MOV     A,R7
-   \   00023B   FB           MOV     R3,A
-   \   00023C   12....       LCALL   `??sAddrExtCpy::?relay`; Banked call to: sAddrExtCpy
-   \   00023F   8A..         MOV     ?V0,R2
-   \   000241   8B..         MOV     ?V1,R3
-   \   000243   AE..         MOV     R6,?V0
-   \   000245   AF..         MOV     R7,?V1
+   \   000166                ; Setup parameters for call to function sAddrExtCpy
+   \   000166   AC..         MOV     R4,?V2
+   \   000168   AD..         MOV     R5,?V3
+   \   00016A   EE           MOV     A,R6
+   \   00016B   FA           MOV     R2,A
+   \   00016C   EF           MOV     A,R7
+   \   00016D   FB           MOV     R3,A
+   \   00016E   12....       LCALL   `??sAddrExtCpy::?relay`; Banked call to: sAddrExtCpy
+   \   000171   8A..         MOV     ?V2,R2
+   \   000173   8B..         MOV     ?V3,R3
+   \   000175   AE..         MOV     R6,?V2
+   \   000177   AF..         MOV     R7,?V3
     716          
     717              *pBuf++ = LO_UINT16( aoi );
-   \   000247   E5..         MOV     A,?V2
-   \   000249   C0E0         PUSH    A
-   \   00024B   8E82         MOV     DPL,R6
-   \   00024D   8F83         MOV     DPH,R7
-   \   00024F   D0E0         POP     A
-   \   000251   F0           MOVX    @DPTR,A
-   \   000252   8E82         MOV     DPL,R6
-   \   000254   8F83         MOV     DPH,R7
-   \   000256   A3           INC     DPTR
-   \   000257   AE82         MOV     R6,DPL
-   \   000259   AF83         MOV     R7,DPH
+   \   000179   E5..         MOV     A,?V0
+   \   00017B   C0E0         PUSH    A
+   \   00017D   8E82         MOV     DPL,R6
+   \   00017F   8F83         MOV     DPH,R7
+   \   000181   D0E0         POP     A
+   \   000183   F0           MOVX    @DPTR,A
+   \   000184   8E82         MOV     DPL,R6
+   \   000186   8F83         MOV     DPH,R7
+   \   000188   A3           INC     DPTR
+   \   000189   AE82         MOV     R6,DPL
+   \   00018B   AF83         MOV     R7,DPH
     718              *pBuf++ = HI_UINT16( aoi );
-   \   00025B   A8..         MOV     R0,?V2
-   \   00025D   A9..         MOV     R1,?V3
-   \   00025F   E4           CLR     A
-   \   000260   C9           XCH     A,R1
-   \   000261   F8           MOV     R0,A
-   \   000262   E8           MOV     A,R0
-   \   000263   C0E0         PUSH    A
-   \   000265   8E82         MOV     DPL,R6
-   \   000267   8F83         MOV     DPH,R7
-   \   000269   D0E0         POP     A
-   \   00026B   F0           MOVX    @DPTR,A
-   \   00026C   8E82         MOV     DPL,R6
-   \   00026E   8F83         MOV     DPH,R7
-   \   000270   A3           INC     DPTR
-   \   000271   AE82         MOV     R6,DPL
-   \   000273   AF83         MOV     R7,DPH
+   \   00018D   E4           CLR     A
+   \   00018E   C5..         XCH     A,?V1
+   \   000190   F5..         MOV     ?V0,A
+   \   000192   E5..         MOV     A,?V0
+   \   000194   C0E0         PUSH    A
+   \   000196   8E82         MOV     DPL,R6
+   \   000198   8F83         MOV     DPH,R7
+   \   00019A   D0E0         POP     A
+   \   00019C   F0           MOVX    @DPTR,A
+   \   00019D   8E82         MOV     DPL,R6
+   \   00019F   8F83         MOV     DPH,R7
+   \   0001A1   A3           INC     DPTR
+   \   0001A2   AE82         MOV     R6,DPL
+   \   0001A4   AF83         MOV     R7,DPH
     719          
     720              if ( ZSTACK_ROUTER_BUILD )
-   \   000275   90....       MOV     DPTR,#zgDeviceLogicalType
-   \   000278   E0           MOVX    A,@DPTR
-   \   000279   600B         JZ      ??zdpProcessAddrReq_20
-   \   00027B   90....       MOV     DPTR,#zgDeviceLogicalType
-   \   00027E   E0           MOVX    A,@DPTR
-   \   00027F   6401         XRL     A,#0x1
-   \   000281   6003         JZ      $+5
-   \   000283   02....       LJMP    ??zdpProcessAddrReq_21 & 0xFFFF
     721              {
     722                if ( (reqType == ZDP_ADDR_REQTYPE_EXTENDED) && (aoi == ZDAppNwkAddr.addr.shortAddr)
     723                     && (stat == ZDP_SUCCESS) )
-   \                     ??zdpProcessAddrReq_20:
-   \   000286   7401         MOV     A,#0x1
-   \   000288   65..         XRL     A,?V6
-   \   00028A   6003         JZ      $+5
-   \   00028C   02....       LJMP    ??zdpProcessAddrReq_21 & 0xFFFF
-   \   00028F   90....       MOV     DPTR,#ZDAppNwkAddr
-   \   000292   E0           MOVX    A,@DPTR
-   \   000293   65..         XRL     A,?V2
-   \   000295   7004         JNZ     ??zdpProcessAddrReq_22
-   \   000297   A3           INC     DPTR
-   \   000298   E0           MOVX    A,@DPTR
-   \   000299   65..         XRL     A,?V3
-   \                     ??zdpProcessAddrReq_22:
-   \   00029B   6003         JZ      $+5
-   \   00029D   02....       LJMP    ??zdpProcessAddrReq_21 & 0xFFFF
-   \   0002A0   E5..         MOV     A,?V7
-   \   0002A2   6003         JZ      $+5
-   \   0002A4   02....       LJMP    ??zdpProcessAddrReq_21 & 0xFFFF
     724                {
     725                  uint8  cnt = 0;
-   \   0002A7   85..82       MOV     DPL,?XSP + 0
-   \   0002AA   85..83       MOV     DPH,?XSP + 1
-   \   0002AD   7400         MOV     A,#0x0
-   \   0002AF   F0           MOVX    @DPTR,A
     726                  uint16 *list = AssocMakeList( &cnt );
-   \   0002B0                ; Setup parameters for call to function AssocMakeList
-   \   0002B0   AA..         MOV     R2,?XSP + 0
-   \   0002B2   AB..         MOV     R3,?XSP + 1
-   \   0002B4   12....       LCALL   `??AssocMakeList::?relay`; Banked call to: AssocMakeList
-   \   0002B7   8A..         MOV     ?V0,R2
-   \   0002B9   8B..         MOV     ?V1,R3
-   \   0002BB   AA..         MOV     R2,?V0
-   \   0002BD   AB..         MOV     R3,?V1
     727          
     728                  if ( list != NULL )
-   \   0002BF   EA           MOV     A,R2
-   \   0002C0   4B           ORL     A,R3
-   \   0002C1   7003         JNZ     $+5
-   \   0002C3   02....       LJMP    ??zdpProcessAddrReq_23 & 0xFFFF
     729                  {
     730                    byte idx = inMsg->asdu[(((inMsg->clusterID == NWK_addr_req) ? Z_EXTADDR_LEN : sizeof( uint16 )) + 1)];
-   \   0002C6   E5..         MOV     A,?V4
-   \   0002C8   240C         ADD     A,#0xc
-   \   0002CA   F582         MOV     DPL,A
-   \   0002CC   E4           CLR     A
-   \   0002CD   35..         ADDC    A,?V5
-   \   0002CF   F583         MOV     DPH,A
-   \   0002D1   E0           MOVX    A,@DPTR
-   \   0002D2   F8           MOV     R0,A
-   \   0002D3   A3           INC     DPTR
-   \   0002D4   E0           MOVX    A,@DPTR
-   \   0002D5   F9           MOV     R1,A
-   \   0002D6   E8           MOV     A,R0
-   \   0002D7   49           ORL     A,R1
-   \   0002D8   7006         JNZ     ??zdpProcessAddrReq_24
-   \   0002DA   7808         MOV     R0,#0x8
-   \   0002DC   7900         MOV     R1,#0x0
-   \   0002DE   8004         SJMP    ??zdpProcessAddrReq_25
-   \                     ??zdpProcessAddrReq_24:
-   \   0002E0   7802         MOV     R0,#0x2
-   \   0002E2   7900         MOV     R1,#0x0
-   \                     ??zdpProcessAddrReq_25:
-   \   0002E4   E5..         MOV     A,?V4
-   \   0002E6   2413         ADD     A,#0x13
-   \   0002E8   F582         MOV     DPL,A
-   \   0002EA   E4           CLR     A
-   \   0002EB   35..         ADDC    A,?V5
-   \   0002ED   F583         MOV     DPH,A
-   \   0002EF   E0           MOVX    A,@DPTR
-   \   0002F0   28           ADD     A,R0
-   \   0002F1   FC           MOV     R4,A
-   \   0002F2   A3           INC     DPTR
-   \   0002F3   E0           MOVX    A,@DPTR
-   \   0002F4   39           ADDC    A,R1
-   \   0002F5   8C82         MOV     DPL,R4
-   \   0002F7   F583         MOV     DPH,A
-   \   0002F9   A3           INC     DPTR
-   \   0002FA   E0           MOVX    A,@DPTR
-   \   0002FB   FC           MOV     R4,A
     731                    uint16 *pList = list + idx;
-   \   0002FC   EC           MOV     A,R4
-   \   0002FD   F8           MOV     R0,A
-   \   0002FE   7900         MOV     R1,#0x0
-   \   000300   E8           MOV     A,R0
-   \   000301   75F002       MOV     B,#0x2
-   \   000304   A4           MUL     AB
-   \   000305   C8           XCH     A,R0
-   \   000306   ADF0         MOV     R5,B
-   \   000308   75F000       MOV     B,#0x0
-   \   00030B   A4           MUL     AB
-   \   00030C   2D           ADD     A,R5
-   \   00030D   FD           MOV     R5,A
-   \   00030E   75F002       MOV     B,#0x2
-   \   000311   E9           MOV     A,R1
-   \   000312   A4           MUL     AB
-   \   000313   2D           ADD     A,R5
-   \   000314   F9           MOV     R1,A
-   \   000315   EA           MOV     A,R2
-   \   000316   28           ADD     A,R0
-   \   000317   F8           MOV     R0,A
-   \   000318   EB           MOV     A,R3
-   \   000319   39           ADDC    A,R1
-   \   00031A   F9           MOV     R1,A
     732          
     733                    // NumAssocDev field is only present on success.
     734                    if ( cnt > idx )
-   \   00031B   85..82       MOV     DPL,?XSP + 0
-   \   00031E   85..83       MOV     DPH,?XSP + 1
-   \   000321   E0           MOVX    A,@DPTR
-   \   000322   FD           MOV     R5,A
-   \   000323   EC           MOV     A,R4
-   \   000324   C3           CLR     C
-   \   000325   9D           SUBB    A,R5
-   \   000326   501B         JNC     ??zdpProcessAddrReq_26
     735                    {
     736                      cnt -= idx;
-   \   000328   85..82       MOV     DPL,?XSP + 0
-   \   00032B   85..83       MOV     DPH,?XSP + 1
-   \   00032E   E0           MOVX    A,@DPTR
-   \   00032F   C3           CLR     C
-   \   000330   9C           SUBB    A,R4
-   \   000331   F0           MOVX    @DPTR,A
     737                      len += (cnt * sizeof( uint16 ));
-   \   000332   75F002       MOV     B,#0x2
-   \   000335   85..82       MOV     DPL,?XSP + 0
-   \   000338   85..83       MOV     DPH,?XSP + 1
-   \   00033B   E0           MOVX    A,@DPTR
-   \   00033C   A4           MUL     AB
-   \   00033D   25..         ADD     A,?V8
-   \   00033F   F5..         MOV     ?V8,A
-   \   000341   8009         SJMP    ??zdpProcessAddrReq_27
     738                    }
     739                    else
     740                    {
     741                      cnt = 0;
-   \                     ??zdpProcessAddrReq_26:
-   \   000343   85..82       MOV     DPL,?XSP + 0
-   \   000346   85..83       MOV     DPH,?XSP + 1
-   \   000349   7400         MOV     A,#0x0
-   \   00034B   F0           MOVX    @DPTR,A
     742                    }
     743                    *pBuf++ = cnt;
-   \                     ??zdpProcessAddrReq_27:
-   \   00034C   85..82       MOV     DPL,?XSP + 0
-   \   00034F   85..83       MOV     DPH,?XSP + 1
-   \   000352   E0           MOVX    A,@DPTR
-   \   000353   C0E0         PUSH    A
-   \   000355   8E82         MOV     DPL,R6
-   \   000357   8F83         MOV     DPH,R7
-   \   000359   D0E0         POP     A
-   \   00035B   F0           MOVX    @DPTR,A
-   \   00035C   8E82         MOV     DPL,R6
-   \   00035E   8F83         MOV     DPH,R7
-   \   000360   A3           INC     DPTR
-   \   000361   AE82         MOV     R6,DPL
-   \   000363   AF83         MOV     R7,DPH
     744                    len++;
-   \   000365   05..         INC     ?V8
     745          
     746                    // StartIndex field is only present if NumAssocDev field is non-zero.
     747                    *pBuf++ = idx;
-   \   000367   EC           MOV     A,R4
-   \   000368   C0E0         PUSH    A
-   \   00036A   8E82         MOV     DPL,R6
-   \   00036C   8F83         MOV     DPH,R7
-   \   00036E   D0E0         POP     A
-   \   000370   F0           MOVX    @DPTR,A
-   \   000371   8E82         MOV     DPL,R6
-   \   000373   8F83         MOV     DPH,R7
-   \   000375   A3           INC     DPTR
-   \   000376   AE82         MOV     R6,DPL
-   \   000378   AF83         MOV     R7,DPH
     748                    len++;
-   \   00037A   05..         INC     ?V8
-   \   00037C   804C         SJMP    ??zdpProcessAddrReq_28
     749          
     750                    while ( cnt != 0 )
     751                    {
     752                      *pBuf++ = LO_UINT16( *pList );
-   \                     ??zdpProcessAddrReq_29:
-   \   00037E   8882         MOV     DPL,R0
-   \   000380   8983         MOV     DPH,R1
-   \   000382   E0           MOVX    A,@DPTR
-   \   000383   FC           MOV     R4,A
-   \   000384   A3           INC     DPTR
-   \   000385   E0           MOVX    A,@DPTR
-   \   000386   FD           MOV     R5,A
-   \   000387   EC           MOV     A,R4
-   \   000388   C0E0         PUSH    A
-   \   00038A   8E82         MOV     DPL,R6
-   \   00038C   8F83         MOV     DPH,R7
-   \   00038E   D0E0         POP     A
-   \   000390   F0           MOVX    @DPTR,A
-   \   000391   8E82         MOV     DPL,R6
-   \   000393   8F83         MOV     DPH,R7
-   \   000395   A3           INC     DPTR
-   \   000396   AE82         MOV     R6,DPL
-   \   000398   AF83         MOV     R7,DPH
     753                      *pBuf++ = HI_UINT16( *pList );
-   \   00039A   8882         MOV     DPL,R0
-   \   00039C   8983         MOV     DPH,R1
-   \   00039E   E0           MOVX    A,@DPTR
-   \   00039F   FC           MOV     R4,A
-   \   0003A0   A3           INC     DPTR
-   \   0003A1   E0           MOVX    A,@DPTR
-   \   0003A2   FD           MOV     R5,A
-   \   0003A3   E4           CLR     A
-   \   0003A4   CD           XCH     A,R5
-   \   0003A5   FC           MOV     R4,A
-   \   0003A6   EC           MOV     A,R4
-   \   0003A7   C0E0         PUSH    A
-   \   0003A9   8E82         MOV     DPL,R6
-   \   0003AB   8F83         MOV     DPH,R7
-   \   0003AD   D0E0         POP     A
-   \   0003AF   F0           MOVX    @DPTR,A
-   \   0003B0   8E82         MOV     DPL,R6
-   \   0003B2   8F83         MOV     DPH,R7
-   \   0003B4   A3           INC     DPTR
-   \   0003B5   AE82         MOV     R6,DPL
-   \   0003B7   AF83         MOV     R7,DPH
     754                      pList++;
-   \   0003B9   E8           MOV     A,R0
-   \   0003BA   2402         ADD     A,#0x2
-   \   0003BC   F8           MOV     R0,A
-   \   0003BD   5001         JNC     ??zdpProcessAddrReq_30
-   \   0003BF   09           INC     R1
     755                      cnt--;
-   \                     ??zdpProcessAddrReq_30:
-   \   0003C0   85..82       MOV     DPL,?XSP + 0
-   \   0003C3   85..83       MOV     DPH,?XSP + 1
-   \   0003C6   E0           MOVX    A,@DPTR
-   \   0003C7   24FF         ADD     A,#-0x1
-   \   0003C9   F0           MOVX    @DPTR,A
     756                    }
-   \                     ??zdpProcessAddrReq_28:
-   \   0003CA   85..82       MOV     DPL,?XSP + 0
-   \   0003CD   85..83       MOV     DPH,?XSP + 1
-   \   0003D0   E0           MOVX    A,@DPTR
-   \   0003D1   70AB         JNZ     ??zdpProcessAddrReq_29
     757          
     758                    osal_mem_free( (uint8 *)list );
-   \   0003D3                ; Setup parameters for call to function osal_mem_free
-   \   0003D3   12....       LCALL   `??osal_mem_free::?relay`; Banked call to: osal_mem_free
-   \   0003D6   8012         SJMP    ??zdpProcessAddrReq_21
     759                  }
     760                  else
     761                  {
     762                    // NumAssocDev field is only present on success.
     763                    *pBuf++ = 0;
-   \                     ??zdpProcessAddrReq_23:
-   \   0003D8   8E82         MOV     DPL,R6
-   \   0003DA   8F83         MOV     DPH,R7
-   \   0003DC   7400         MOV     A,#0x0
-   \   0003DE   F0           MOVX    @DPTR,A
-   \   0003DF   8E82         MOV     DPL,R6
-   \   0003E1   8F83         MOV     DPH,R7
-   \   0003E3   A3           INC     DPTR
-   \   0003E4   AE82         MOV     R6,DPL
-   \   0003E6   AF83         MOV     R7,DPH
     764                    len++;
-   \   0003E8   05..         INC     ?V8
     765                  }
     766                }
     767              }
     768          
     769              ZDP_TxOptions = AF_MSG_ACK_REQUEST;
-   \                     ??zdpProcessAddrReq_21:
-   \   0003EA   90....       MOV     DPTR,#ZDP_TxOptions
-   \   0003ED   7410         MOV     A,#0x10
-   \   0003EF   F0           MOVX    @DPTR,A
+   \   0001A6   90....       MOV     DPTR,#ZDP_TxOptions
+   \   0001A9   7410         MOV     A,#0x10
+   \   0001AB   F0           MOVX    @DPTR,A
     770              fillAndSend( &(inMsg->TransSeq), &(inMsg->srcAddr), (cId_t)(inMsg->clusterID | ZDO_RESPONSE_BIT), len );
-   \   0003F0                ; Setup parameters for call to function fillAndSend
-   \   0003F0   E5..         MOV     A,?V4
-   \   0003F2   240C         ADD     A,#0xc
-   \   0003F4   F582         MOV     DPL,A
-   \   0003F6   E4           CLR     A
-   \   0003F7   35..         ADDC    A,?V5
-   \   0003F9   F583         MOV     DPH,A
-   \   0003FB   E0           MOVX    A,@DPTR
-   \   0003FC   4400         ORL     A,#0x0
-   \   0003FE   F5..         MOV     ?V0,A
-   \   000400   A3           INC     DPTR
-   \   000401   E0           MOVX    A,@DPTR
-   \   000402   4480         ORL     A,#0x80
-   \   000404   F5..         MOV     ?V1,A
-   \   000406   78..         MOV     R0,#?V0
-   \   000408   12....       LCALL   ?PUSH_XSTACK_I_TWO
-   \   00040B   A9..         MOV     R1,?V8
-   \   00040D   E5..         MOV     A,?V4
-   \   00040F   2402         ADD     A,#0x2
-   \   000411   FC           MOV     R4,A
-   \   000412   E4           CLR     A
-   \   000413   35..         ADDC    A,?V5
-   \   000415   FD           MOV     R5,A
-   \   000416   E5..         MOV     A,?V4
-   \   000418   240F         ADD     A,#0xf
-   \   00041A   FA           MOV     R2,A
-   \   00041B   E4           CLR     A
-   \   00041C   35..         ADDC    A,?V5
-   \   00041E   FB           MOV     R3,A
-   \   00041F   12....       LCALL   `??fillAndSend::?relay`; Banked call to: fillAndSend
-   \   000422   7402         MOV     A,#0x2
-   \   000424   12....       LCALL   ?DEALLOC_XSTACK8
-   \   000427   E9           MOV     A,R1
+   \   0001AC                ; Setup parameters for call to function fillAndSend
+   \   0001AC   E5..         MOV     A,?V4
+   \   0001AE   240C         ADD     A,#0xc
+   \   0001B0   F582         MOV     DPL,A
+   \   0001B2   E4           CLR     A
+   \   0001B3   35..         ADDC    A,?V5
+   \   0001B5   F583         MOV     DPH,A
+   \   0001B7   E0           MOVX    A,@DPTR
+   \   0001B8   4400         ORL     A,#0x0
+   \   0001BA   F5..         MOV     ?V0,A
+   \   0001BC   A3           INC     DPTR
+   \   0001BD   E0           MOVX    A,@DPTR
+   \   0001BE   4480         ORL     A,#0x80
+   \   0001C0   F5..         MOV     ?V1,A
+   \   0001C2   78..         MOV     R0,#?V0
+   \   0001C4   12....       LCALL   ?PUSH_XSTACK_I_TWO
+   \   0001C7   A9..         MOV     R1,?V6
+   \   0001C9   E5..         MOV     A,?V4
+   \   0001CB   2402         ADD     A,#0x2
+   \   0001CD   FC           MOV     R4,A
+   \   0001CE   E4           CLR     A
+   \   0001CF   35..         ADDC    A,?V5
+   \   0001D1   FD           MOV     R5,A
+   \   0001D2   E5..         MOV     A,?V4
+   \   0001D4   240F         ADD     A,#0xf
+   \   0001D6   FA           MOV     R2,A
+   \   0001D7   E4           CLR     A
+   \   0001D8   35..         ADDC    A,?V5
+   \   0001DA   FB           MOV     R3,A
+   \   0001DB   12....       LCALL   `??fillAndSend::?relay`; Banked call to: fillAndSend
+   \   0001DE   7402         MOV     A,#0x2
+   \   0001E0   12....       LCALL   ?DEALLOC_XSTACK8
+   \   0001E3   E9           MOV     A,R1
     771              ZDP_TxOptions = AF_TX_OPTIONS_NONE;
-   \   000428   90....       MOV     DPTR,#ZDP_TxOptions
-   \   00042B   7400         MOV     A,#0x0
-   \   00042D   F0           MOVX    @DPTR,A
+   \   0001E4   90....       MOV     DPTR,#ZDP_TxOptions
+   \   0001E7   7400         MOV     A,#0x0
+   \   0001E9   F0           MOVX    @DPTR,A
     772            }
     773          }
-   \                     ??zdpProcessAddrReq_13:
-   \   00042E   740E         MOV     A,#0xe
-   \   000430   12....       LCALL   ?DEALLOC_XSTACK8
-   \   000433   7F0A         MOV     R7,#0xa
-   \   000435   02....       LJMP    ?BANKED_LEAVE_XDATA
+   \                     ??zdpProcessAddrReq_8:
+   \   0001EA   7F08         MOV     R7,#0x8
+   \   0001EC   02....       LJMP    ?BANKED_LEAVE_XDATA
     774          
     775          /*********************************************************************
     776           * @fn          ZDP_NodeDescMsg
@@ -9529,18 +9176,13 @@ D:\School\Jaar_3\WTWS\Projects\WirelessSensorNetworksPracticum\Components\stack\
         0     17   -> fillAndSend
         0     18   -> osal_memcpy
         0     15   -> osal_memset
-      1     67   fillAndSend
+      1     58   fillAndSend
         0     33   -> AF_DataRequest
         0     24   -> osal_memset
-      1     34   zdpProcessAddrReq
-        0     32   -> AddrMgrEntryGet
-        0     32   -> AssocGetWithExt
-        0     32   -> AssocGetWithShort
-        0     32   -> AssocMakeList
-        0     34   -> fillAndSend
-        0     32   -> osal_mem_free
-        0     32   -> sAddrExtCmp
-        0     32   -> sAddrExtCpy
+      1     18   zdpProcessAddrReq
+        0     18   -> fillAndSend
+        0     16   -> sAddrExtCmp
+        0     16   -> sAddrExtCpy
 
 
    Segment part sizes:
@@ -9622,20 +9264,20 @@ D:\School\Jaar_3\WTWS\Projects\WirelessSensorNetworksPracticum\Components\stack\
      210  fillAndSend
        6  fillAndSend::?relay
        2  zdoMsgCBs
-      36  zdpMsgProcs
-    1080  zdpProcessAddrReq
+      28  zdpMsgProcs
+     495  zdpProcessAddrReq
        6  zdpProcessAddrReq::?relay
 
  
- 11 136 bytes in segment BANKED_CODE
+ 10 551 bytes in segment BANKED_CODE
     210 bytes in segment BANK_RELAYS
-     37 bytes in segment CODE_C
+     29 bytes in segment CODE_C
       2 bytes in segment XDATA_I
       2 bytes in segment XDATA_ID
      84 bytes in segment XDATA_Z
  
- 11 385 bytes of CODE  memory
+ 10 792 bytes of CODE  memory
      86 bytes of XDATA memory
 
 Errors: none
-Warnings: none
+Warnings: 1

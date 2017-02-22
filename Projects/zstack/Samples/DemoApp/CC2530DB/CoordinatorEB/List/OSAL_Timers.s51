@@ -1,6 +1,6 @@
 ///////////////////////////////////////////////////////////////////////////////
 //
-// IAR C/C++ Compiler V9.20.1.2476 for 8051               17/Feb/2017  12:14:02
+// IAR C/C++ Compiler V9.20.1.2476 for 8051               17/Feb/2017  12:45:13
 // Copyright 2004-2015 IAR Systems AB.
 // Standalone license - IAR Embedded Workbench for 8051
 //
@@ -12,14 +12,14 @@
 //    Dptr setup         =  1,16
 //                          
 //    Source file        =  
-//        D:\School\Jaar_3\WTWS\Projects\WirelessSensorNetworksPracticum\Components\osal\common\OSAL_Timers.c
+//        D:\Jop van
+//        Buuren\Documents\Hogeschool\Vakken\wt\WirelessSensorNetworksPracticum\Components\osal\common\OSAL_Timers.c
 //    Command line       =  
-//        -f
-//        D:\School\Jaar_3\WTWS\Projects\WirelessSensorNetworksPracticum\Projects\zstack\Samples\DemoApp\CC2530DB\..\..\..\Tools\CC2530DB\f8wCoord.cfg
-//        (-DCPU32MHZ -DROOT=__near_func -DMAC_CFG_APP_PENDING_QUEUE=TRUE
-//        -DMAC_CFG_TX_DATA_MAX=5 -DMAC_CFG_TX_MAX=8 -DMAC_CFG_RX_MAX=5
-//        -DZDO_COORDINATOR -DRTR_NWK) -f
-//        D:\School\Jaar_3\WTWS\Projects\WirelessSensorNetworksPracticum\Projects\zstack\Samples\DemoApp\CC2530DB\..\..\..\Tools\CC2530DB\f8wConfig.cfg
+//        -f "D:\Jop van
+//        Buuren\Documents\Hogeschool\Vakken\wt\WirelessSensorNetworksPracticum\Projects\zstack\Samples\DemoApp\CC2530DB\..\..\..\Tools\CC2530DB\f8wEndev.cfg"
+//        (-DCPU32MHZ -DROOT=__near_func -DMAC_CFG_TX_DATA_MAX=3
+//        -DMAC_CFG_TX_MAX=6 -DMAC_CFG_RX_MAX=3) -f "D:\Jop van
+//        Buuren\Documents\Hogeschool\Vakken\wt\WirelessSensorNetworksPracticum\Projects\zstack\Samples\DemoApp\CC2530DB\..\..\..\Tools\CC2530DB\f8wConfig.cfg"
 //        (-DZIGBEEPRO -DSECURE=0 -DZG_SECURE_DYNAMIC=0 -DREFLECTOR
 //        -DDEFAULT_CHANLIST=0x00100000 -DZDAPP_CONFIG_PAN_ID=0x0DAD
 //        -DNWK_START_DELAY=100 -DEXTENDED_JOINING_RANDOM_MASK=0x007F
@@ -34,63 +34,64 @@
 //        -DMAC_MAX_FRAME_SIZE=116 -DZDNWKMGR_MIN_TRANSMISSIONS=20
 //        "-DCONST=const __code" -DGENERIC=__generic -DRFD_RCVC_ALWAYS_ON=FALSE
 //        -DPOLL_RATE=1000 -DQUEUED_POLL_RATE=100 -DRESPONSE_POLL_RATE=100)
-//        -DREJOIN_POLL_RATE=440
-//        D:\School\Jaar_3\WTWS\Projects\WirelessSensorNetworksPracticum\Components\osal\common\OSAL_Timers.c
-//        -D HOLD_AUTO_START -D BUILD_ALL_DEVICES -D REFLECTOR -D NV_INIT -D
-//        NV_RESTORE -D HAL_UART=TRUE -lC
-//        D:\School\Jaar_3\WTWS\Projects\WirelessSensorNetworksPracticum\Projects\zstack\Samples\DemoApp\CC2530DB\CoordinatorEB\List\
-//        -lA
-//        D:\School\Jaar_3\WTWS\Projects\WirelessSensorNetworksPracticum\Projects\zstack\Samples\DemoApp\CC2530DB\CoordinatorEB\List\
-//        --diag_suppress Pe001,Pa010,Pe1665 -o
-//        D:\School\Jaar_3\WTWS\Projects\WirelessSensorNetworksPracticum\Projects\zstack\Samples\DemoApp\CC2530DB\CoordinatorEB\Obj\
+//        -DREJOIN_POLL_RATE=440 "D:\Jop van
+//        Buuren\Documents\Hogeschool\Vakken\wt\WirelessSensorNetworksPracticum\Components\osal\common\OSAL_Timers.c"
+//        -D NWK_AUTO_POLL -D HOLD_AUTO_START -D POWER_SAVING -D NV_INIT -D
+//        DEVICE_LOGICAL_TYPE=ZG_DEVICETYPE_ENDDEVICE -lC "D:\Jop van
+//        Buuren\Documents\Hogeschool\Vakken\wt\WirelessSensorNetworksPracticum\Projects\zstack\Samples\DemoApp\CC2530DB\SensorEB\List\"
+//        -lA "D:\Jop van
+//        Buuren\Documents\Hogeschool\Vakken\wt\WirelessSensorNetworksPracticum\Projects\zstack\Samples\DemoApp\CC2530DB\SensorEB\List\"
+//        --diag_suppress Pe001,Pa010,Pe1665 -o "D:\Jop van
+//        Buuren\Documents\Hogeschool\Vakken\wt\WirelessSensorNetworksPracticum\Projects\zstack\Samples\DemoApp\CC2530DB\SensorEB\Obj\"
 //        -e --no_cse --no_unroll --no_inline --no_code_motion --no_tbaa
 //        --debug --core=plain --dptr=16,1 --data_model=large
 //        --code_model=banked --calling_convention=xdata_reentrant
-//        --place_constants=data_rom --nr_virtual_regs 16 -I
-//        D:\School\Jaar_3\WTWS\Projects\WirelessSensorNetworksPracticum\Projects\zstack\Samples\DemoApp\CC2530DB\
-//        -I
-//        D:\School\Jaar_3\WTWS\Projects\WirelessSensorNetworksPracticum\Projects\zstack\Samples\DemoApp\CC2530DB\..\Source\
-//        -I
-//        D:\School\Jaar_3\WTWS\Projects\WirelessSensorNetworksPracticum\Projects\zstack\Samples\DemoApp\CC2530DB\..\..\..\ZMain\TI2530DB\
-//        -I
-//        D:\School\Jaar_3\WTWS\Projects\WirelessSensorNetworksPracticum\Projects\zstack\Samples\DemoApp\CC2530DB\..\..\..\..\..\Components\hal\include\
-//        -I
-//        D:\School\Jaar_3\WTWS\Projects\WirelessSensorNetworksPracticum\Projects\zstack\Samples\DemoApp\CC2530DB\..\..\..\..\..\Components\hal\target\CC2530EB\
-//        -I
-//        D:\School\Jaar_3\WTWS\Projects\WirelessSensorNetworksPracticum\Projects\zstack\Samples\DemoApp\CC2530DB\..\..\..\..\..\Components\mac\include\
-//        -I
-//        D:\School\Jaar_3\WTWS\Projects\WirelessSensorNetworksPracticum\Projects\zstack\Samples\DemoApp\CC2530DB\..\..\..\..\..\Components\mac\high_level\
-//        -I
-//        D:\School\Jaar_3\WTWS\Projects\WirelessSensorNetworksPracticum\Projects\zstack\Samples\DemoApp\CC2530DB\..\..\..\..\..\Components\mac\low_level\srf04\
-//        -I
-//        D:\School\Jaar_3\WTWS\Projects\WirelessSensorNetworksPracticum\Projects\zstack\Samples\DemoApp\CC2530DB\..\..\..\..\..\Components\mac\low_level\srf04\single_chip\
-//        -I
-//        D:\School\Jaar_3\WTWS\Projects\WirelessSensorNetworksPracticum\Projects\zstack\Samples\DemoApp\CC2530DB\..\..\..\..\..\Components\mt\
-//        -I
-//        D:\School\Jaar_3\WTWS\Projects\WirelessSensorNetworksPracticum\Projects\zstack\Samples\DemoApp\CC2530DB\..\..\..\..\..\Components\osal\include\
-//        -I
-//        D:\School\Jaar_3\WTWS\Projects\WirelessSensorNetworksPracticum\Projects\zstack\Samples\DemoApp\CC2530DB\..\..\..\..\..\Components\services\saddr\
-//        -I
-//        D:\School\Jaar_3\WTWS\Projects\WirelessSensorNetworksPracticum\Projects\zstack\Samples\DemoApp\CC2530DB\..\..\..\..\..\Components\services\sdata\
-//        -I
-//        D:\School\Jaar_3\WTWS\Projects\WirelessSensorNetworksPracticum\Projects\zstack\Samples\DemoApp\CC2530DB\..\..\..\..\..\Components\stack\af\
-//        -I
-//        D:\School\Jaar_3\WTWS\Projects\WirelessSensorNetworksPracticum\Projects\zstack\Samples\DemoApp\CC2530DB\..\..\..\..\..\Components\stack\nwk\
-//        -I
-//        D:\School\Jaar_3\WTWS\Projects\WirelessSensorNetworksPracticum\Projects\zstack\Samples\DemoApp\CC2530DB\..\..\..\..\..\Components\stack\sapi\
-//        -I
-//        D:\School\Jaar_3\WTWS\Projects\WirelessSensorNetworksPracticum\Projects\zstack\Samples\DemoApp\CC2530DB\..\..\..\..\..\Components\stack\sec\
-//        -I
-//        D:\School\Jaar_3\WTWS\Projects\WirelessSensorNetworksPracticum\Projects\zstack\Samples\DemoApp\CC2530DB\..\..\..\..\..\Components\stack\sys\
-//        -I
-//        D:\School\Jaar_3\WTWS\Projects\WirelessSensorNetworksPracticum\Projects\zstack\Samples\DemoApp\CC2530DB\..\..\..\..\..\Components\stack\zdo\
-//        -I
-//        D:\School\Jaar_3\WTWS\Projects\WirelessSensorNetworksPracticum\Projects\zstack\Samples\DemoApp\CC2530DB\..\..\..\..\..\Components\zmac\
-//        -I
-//        D:\School\Jaar_3\WTWS\Projects\WirelessSensorNetworksPracticum\Projects\zstack\Samples\DemoApp\CC2530DB\..\..\..\..\..\Components\zmac\f8w\
+//        --place_constants=data_rom --nr_virtual_regs 16 -I "D:\Jop van
+//        Buuren\Documents\Hogeschool\Vakken\wt\WirelessSensorNetworksPracticum\Projects\zstack\Samples\DemoApp\CC2530DB\"
+//        -I "D:\Jop van
+//        Buuren\Documents\Hogeschool\Vakken\wt\WirelessSensorNetworksPracticum\Projects\zstack\Samples\DemoApp\CC2530DB\..\Source\"
+//        -I "D:\Jop van
+//        Buuren\Documents\Hogeschool\Vakken\wt\WirelessSensorNetworksPracticum\Projects\zstack\Samples\DemoApp\CC2530DB\..\..\..\ZMain\TI2530DB\"
+//        -I "D:\Jop van
+//        Buuren\Documents\Hogeschool\Vakken\wt\WirelessSensorNetworksPracticum\Projects\zstack\Samples\DemoApp\CC2530DB\..\..\..\..\..\Components\hal\include\"
+//        -I "D:\Jop van
+//        Buuren\Documents\Hogeschool\Vakken\wt\WirelessSensorNetworksPracticum\Projects\zstack\Samples\DemoApp\CC2530DB\..\..\..\..\..\Components\hal\target\CC2530EB\"
+//        -I "D:\Jop van
+//        Buuren\Documents\Hogeschool\Vakken\wt\WirelessSensorNetworksPracticum\Projects\zstack\Samples\DemoApp\CC2530DB\..\..\..\..\..\Components\mac\include\"
+//        -I "D:\Jop van
+//        Buuren\Documents\Hogeschool\Vakken\wt\WirelessSensorNetworksPracticum\Projects\zstack\Samples\DemoApp\CC2530DB\..\..\..\..\..\Components\mac\high_level\"
+//        -I "D:\Jop van
+//        Buuren\Documents\Hogeschool\Vakken\wt\WirelessSensorNetworksPracticum\Projects\zstack\Samples\DemoApp\CC2530DB\..\..\..\..\..\Components\mac\low_level\srf04\"
+//        -I "D:\Jop van
+//        Buuren\Documents\Hogeschool\Vakken\wt\WirelessSensorNetworksPracticum\Projects\zstack\Samples\DemoApp\CC2530DB\..\..\..\..\..\Components\mac\low_level\srf04\single_chip\"
+//        -I "D:\Jop van
+//        Buuren\Documents\Hogeschool\Vakken\wt\WirelessSensorNetworksPracticum\Projects\zstack\Samples\DemoApp\CC2530DB\..\..\..\..\..\Components\mt\"
+//        -I "D:\Jop van
+//        Buuren\Documents\Hogeschool\Vakken\wt\WirelessSensorNetworksPracticum\Projects\zstack\Samples\DemoApp\CC2530DB\..\..\..\..\..\Components\osal\include\"
+//        -I "D:\Jop van
+//        Buuren\Documents\Hogeschool\Vakken\wt\WirelessSensorNetworksPracticum\Projects\zstack\Samples\DemoApp\CC2530DB\..\..\..\..\..\Components\services\saddr\"
+//        -I "D:\Jop van
+//        Buuren\Documents\Hogeschool\Vakken\wt\WirelessSensorNetworksPracticum\Projects\zstack\Samples\DemoApp\CC2530DB\..\..\..\..\..\Components\services\sdata\"
+//        -I "D:\Jop van
+//        Buuren\Documents\Hogeschool\Vakken\wt\WirelessSensorNetworksPracticum\Projects\zstack\Samples\DemoApp\CC2530DB\..\..\..\..\..\Components\stack\af\"
+//        -I "D:\Jop van
+//        Buuren\Documents\Hogeschool\Vakken\wt\WirelessSensorNetworksPracticum\Projects\zstack\Samples\DemoApp\CC2530DB\..\..\..\..\..\Components\stack\nwk\"
+//        -I "D:\Jop van
+//        Buuren\Documents\Hogeschool\Vakken\wt\WirelessSensorNetworksPracticum\Projects\zstack\Samples\DemoApp\CC2530DB\..\..\..\..\..\Components\stack\sapi\"
+//        -I "D:\Jop van
+//        Buuren\Documents\Hogeschool\Vakken\wt\WirelessSensorNetworksPracticum\Projects\zstack\Samples\DemoApp\CC2530DB\..\..\..\..\..\Components\stack\sec\"
+//        -I "D:\Jop van
+//        Buuren\Documents\Hogeschool\Vakken\wt\WirelessSensorNetworksPracticum\Projects\zstack\Samples\DemoApp\CC2530DB\..\..\..\..\..\Components\stack\sys\"
+//        -I "D:\Jop van
+//        Buuren\Documents\Hogeschool\Vakken\wt\WirelessSensorNetworksPracticum\Projects\zstack\Samples\DemoApp\CC2530DB\..\..\..\..\..\Components\stack\zdo\"
+//        -I "D:\Jop van
+//        Buuren\Documents\Hogeschool\Vakken\wt\WirelessSensorNetworksPracticum\Projects\zstack\Samples\DemoApp\CC2530DB\..\..\..\..\..\Components\zmac\"
+//        -I "D:\Jop van
+//        Buuren\Documents\Hogeschool\Vakken\wt\WirelessSensorNetworksPracticum\Projects\zstack\Samples\DemoApp\CC2530DB\..\..\..\..\..\Components\zmac\f8w\"
 //        -Ol --require_prototypes
 //    List file          =  
-//        D:\School\Jaar_3\WTWS\Projects\WirelessSensorNetworksPracticum\Projects\zstack\Samples\DemoApp\CC2530DB\CoordinatorEB\List\OSAL_Timers.s51
+//        D:\Jop van
+//        Buuren\Documents\Hogeschool\Vakken\wt\WirelessSensorNetworksPracticum\Projects\zstack\Samples\DemoApp\CC2530DB\SensorEB\List\OSAL_Timers.s51
 //
 ///////////////////////////////////////////////////////////////////////////////
 
@@ -136,6 +137,7 @@
         EXTERN ?L_SUB_FROM_X
         EXTERN ?PUSH_XSTACK8_X_FOUR
         EXTERN ?PUSH_XSTACK_I_FOUR
+        EXTERN ?UL_DIV_MOD
         EXTERN ?UL_GT_X
         EXTERN ?XLOAD_R0123
         EXTERN ?XLOAD_R2345
@@ -156,8 +158,12 @@
         FUNCTION `??osalTimerUpdate::?relay`,0203H
         PUBLIC `??osal_GetSystemClock::?relay`
         FUNCTION `??osal_GetSystemClock::?relay`,0203H
+        PUBLIC `??osal_adjust_timers::?relay`
+        FUNCTION `??osal_adjust_timers::?relay`,0203H
         PUBLIC `??osal_get_timeoutEx::?relay`
         FUNCTION `??osal_get_timeoutEx::?relay`,0203H
+        PUBLIC `??osal_next_timeout::?relay`
+        FUNCTION `??osal_next_timeout::?relay`,0203H
         PUBLIC `??osal_start_reload_timer::?relay`
         FUNCTION `??osal_start_reload_timer::?relay`,0203H
         PUBLIC `??osal_start_timerEx::?relay`
@@ -167,6 +173,7 @@
         PUBLIC `??osal_timer_num_active::?relay`
         FUNCTION `??osal_timer_num_active::?relay`,0203H
         PUBWEAK _A_IEN0
+        PUBWEAK __Constant_1
         PUBLIC osalAddTimer
         FUNCTION osalAddTimer,0a1203H
         ARGFRAME XSTACK, 18, STACK
@@ -192,16 +199,26 @@
         LOCFRAME XSTACK, 9, STACK
         PUBLIC osalTimerUpdate
         FUNCTION osalTimerUpdate,0a1203H
-        ARGFRAME XSTACK, 0, STACK
+        ARGFRAME XSTACK, 16, STACK
+        ARGFRAME IOVERLAY, 0, STATIC
+        ARGFRAME DOVERLAY, 0, STATIC
         LOCFRAME XSTACK, 23, STACK
         PUBLIC osal_GetSystemClock
         FUNCTION osal_GetSystemClock,0203H
         ARGFRAME XSTACK, 0, STACK
         LOCFRAME ISTACK, 2, STACK
+        PUBLIC osal_adjust_timers
+        FUNCTION osal_adjust_timers,0a1203H
+        ARGFRAME XSTACK, 0, STACK
+        LOCFRAME XSTACK, 16, STACK
         PUBLIC osal_get_timeoutEx
         FUNCTION osal_get_timeoutEx,0a1203H
         ARGFRAME XSTACK, 0, STACK
         LOCFRAME XSTACK, 14, STACK
+        PUBLIC osal_next_timeout
+        FUNCTION osal_next_timeout,080203H
+        ARGFRAME XSTACK, 0, STACK
+        LOCFRAME XSTACK, 12, STACK
         PUBLIC osal_start_reload_timer
         FUNCTION osal_start_reload_timer,0a1203H
         ARGFRAME XSTACK, 4, STACK
@@ -308,6 +325,8 @@
           CFI ?RET_LOW Frame(CFA_SP, 1)
           CFI EndCommon cfiCommon0
         
+TimerElapsed        SYMBOL "TimerElapsed"
+`??TimerElapsed::?relay` SYMBOL "?relay", TimerElapsed
 osal_mem_alloc      SYMBOL "osal_mem_alloc"
 `??osal_mem_alloc::?relay` SYMBOL "?relay", osal_mem_alloc
 osal_mem_free       SYMBOL "osal_mem_free"
@@ -326,8 +345,12 @@ osalTimerUpdate     SYMBOL "osalTimerUpdate"
 `??osalTimerUpdate::?relay` SYMBOL "?relay", osalTimerUpdate
 osal_GetSystemClock SYMBOL "osal_GetSystemClock"
 `??osal_GetSystemClock::?relay` SYMBOL "?relay", osal_GetSystemClock
+osal_adjust_timers  SYMBOL "osal_adjust_timers"
+`??osal_adjust_timers::?relay` SYMBOL "?relay", osal_adjust_timers
 osal_get_timeoutEx  SYMBOL "osal_get_timeoutEx"
 `??osal_get_timeoutEx::?relay` SYMBOL "?relay", osal_get_timeoutEx
+osal_next_timeout   SYMBOL "osal_next_timeout"
+`??osal_next_timeout::?relay` SYMBOL "?relay", osal_next_timeout
 osal_start_reload_timer SYMBOL "osal_start_reload_timer"
 `??osal_start_reload_timer::?relay` SYMBOL "?relay", osal_start_reload_timer
 osal_start_timerEx  SYMBOL "osal_start_timerEx"
@@ -337,12 +360,21 @@ osal_stop_timerEx   SYMBOL "osal_stop_timerEx"
 osal_timer_num_active SYMBOL "osal_timer_num_active"
 `??osal_timer_num_active::?relay` SYMBOL "?relay", osal_timer_num_active
 
+        EXTERN `??TimerElapsed::?relay`
+        FUNCTION `??TimerElapsed::?relay`,00H
         EXTERN `??osal_mem_alloc::?relay`
         FUNCTION `??osal_mem_alloc::?relay`,00H
         EXTERN `??osal_mem_free::?relay`
         FUNCTION `??osal_mem_free::?relay`,00H
         EXTERN `??osal_set_event::?relay`
         FUNCTION `??osal_set_event::?relay`,00H
+        EXTERN TimerElapsed
+        FUNCTION TimerElapsed,0202H
+        ARGFRAME ISTACK, 0, STACK
+        ARGFRAME PSTACK, 0, STACK
+        ARGFRAME XSTACK, 16, STACK
+        ARGFRAME IOVERLAY, 0, STATIC
+        ARGFRAME DOVERLAY, 0, STATIC
         EXTERN osal_mem_alloc
         FUNCTION osal_mem_alloc,0202H
         ARGFRAME ISTACK, 0, STACK
@@ -365,7 +397,7 @@ osal_timer_num_active SYMBOL "osal_timer_num_active"
         ARGFRAME IOVERLAY, 0, STATIC
         ARGFRAME DOVERLAY, 0, STATIC
 
-// D:\School\Jaar_3\WTWS\Projects\WirelessSensorNetworksPracticum\Components\osal\common\OSAL_Timers.c
+// D:\Jop van Buuren\Documents\Hogeschool\Vakken\wt\WirelessSensorNetworksPracticum\Components\osal\common\OSAL_Timers.c
 //    1 /**************************************************************************************************
 //    2   Filename:       OSAL_Timers.c
 //    3   Revised:        $Date: 2012-11-28 00:37:02 -0800 (Wed, 28 Nov 2012) $
@@ -2347,21 +2379,133 @@ osalTimerUpdate:
 //  535  *
 //  536  * @return  none
 //  537  *********************************************************************/
+
+        RSEG BANKED_CODE:CODE:NOROOT(0)
 //  538 void osal_adjust_timers( void )
+osal_adjust_timers:
+          CFI Block cfiBlock10 Using cfiCommon0
+          CFI Function osal_adjust_timers
+        CODE
 //  539 {
+        FUNCALL osal_adjust_timers, TimerElapsed
+        LOCFRAME ISTACK, 0, STACK
+        LOCFRAME PSTACK, 0, STACK
+        LOCFRAME XSTACK, 16, STACK
+        LOCFRAME IOVERLAY, 0, STATIC
+        LOCFRAME DOVERLAY, 0, STATIC
+        ARGFRAME ISTACK, 0, STACK
+        ARGFRAME PSTACK, 0, STACK
+        ARGFRAME XSTACK, 16, STACK
+        ARGFRAME IOVERLAY, 0, STATIC
+        ARGFRAME DOVERLAY, 0, STATIC
+        FUNCALL osal_adjust_timers, osalTimerUpdate
+        LOCFRAME ISTACK, 0, STACK
+        LOCFRAME PSTACK, 0, STACK
+        LOCFRAME XSTACK, 16, STACK
+        LOCFRAME IOVERLAY, 0, STATIC
+        LOCFRAME DOVERLAY, 0, STATIC
+        ARGFRAME ISTACK, 0, STACK
+        ARGFRAME PSTACK, 0, STACK
+        ARGFRAME XSTACK, 16, STACK
+        ARGFRAME IOVERLAY, 0, STATIC
+        ARGFRAME DOVERLAY, 0, STATIC
+        REQUIRE ?V0
+        REQUIRE ?V1
+        REQUIRE ?V2
+        REQUIRE ?V3
+        REQUIRE ?V4
+        REQUIRE ?V5
+        REQUIRE ?V6
+        REQUIRE ?V7
+        MOV     A,#-0x10
+        LCALL   ?BANKED_ENTER_XDATA
+          CFI DPH0 load(1, XDATA, add(CFA_XSP16, literal(-1)))
+          CFI DPL0 load(1, XDATA, add(CFA_XSP16, literal(-2)))
+          CFI ?BRET_EXT load(1, XDATA, add(CFA_XSP16, literal(-3)))
+          CFI ?RET_HIGH load(1, XDATA, add(CFA_XSP16, literal(-4)))
+          CFI ?RET_LOW load(1, XDATA, add(CFA_XSP16, literal(-5)))
+          CFI R7 load(1, XDATA, add(CFA_XSP16, literal(-6)))
+          CFI V7 load(1, XDATA, add(CFA_XSP16, literal(-7)))
+          CFI V6 load(1, XDATA, add(CFA_XSP16, literal(-8)))
+          CFI V5 load(1, XDATA, add(CFA_XSP16, literal(-9)))
+          CFI V4 load(1, XDATA, add(CFA_XSP16, literal(-10)))
+          CFI V3 load(1, XDATA, add(CFA_XSP16, literal(-11)))
+          CFI V2 load(1, XDATA, add(CFA_XSP16, literal(-12)))
+          CFI V1 load(1, XDATA, add(CFA_XSP16, literal(-13)))
+          CFI V0 load(1, XDATA, add(CFA_XSP16, literal(-14)))
+          CFI VB load(1, XDATA, add(CFA_XSP16, literal(-15)))
+          CFI R6 load(1, XDATA, add(CFA_XSP16, literal(-16)))
+          CFI CFA_SP SP+0
+          CFI CFA_XSP16 add(XSP16, 16)
+        ; Saved register size: 16
+        ; Auto size: 0
 //  540   uint32 eTime;
 //  541 
 //  542   if ( timerHead != NULL )
+        MOV     DPTR,#timerHead
+        MOVX    A,@DPTR
+        MOV     R0,A
+        INC     DPTR
+        MOVX    A,@DPTR
+        MOV     R1,A
+        MOV     A,R0
+        ORL     A,R1
+        JZ      ??osal_adjust_timers_0
 //  543   {
 //  544     // Compute elapsed time (msec)
 //  545     eTime = TimerElapsed() / TICK_COUNT;
+        ; Setup parameters for call to function TimerElapsed
+        LCALL   `??TimerElapsed::?relay`; Banked call to: TimerElapsed
+        MOV     ?V0,R2
+        MOV     ?V1,R3
+        MOV     ?V2,R4
+        MOV     ?V3,R5
+        MOV     DPTR,#__Constant_1
+        MOV     R0,#?V4
+        LCALL   ?L_MOV_X
+        MOV     R0,#?V0
+        MOV     R1,#?V4
+        LCALL   ?UL_DIV_MOD
 //  546 
 //  547     if ( eTime )
+        MOV     A,?V0
+        ORL     A,?V1
+        ORL     A,?V2
+        ORL     A,?V3
+        JZ      ??osal_adjust_timers_0
 //  548     {
 //  549       osalTimerUpdate( eTime );
+        ; Setup parameters for call to function osalTimerUpdate
+        MOV     R2,?V0
+        MOV     R3,?V1
+        MOV     R4,?V2
+        MOV     R5,?V3
+        LCALL   `??osalTimerUpdate::?relay`; Banked call to: osalTimerUpdate
 //  550     }
 //  551   }
 //  552 }
+??osal_adjust_timers_0:
+        MOV     R7,#0x8
+        LJMP    ?BANKED_LEAVE_XDATA
+          CFI R6 SameValue
+          CFI VB SameValue
+          CFI V0 SameValue
+          CFI V1 SameValue
+          CFI V2 SameValue
+          CFI V3 SameValue
+          CFI V4 SameValue
+          CFI V5 SameValue
+          CFI V6 SameValue
+          CFI V7 SameValue
+          CFI R7 SameValue
+          CFI ?RET_LOW Frame(CFA_SP, 1)
+          CFI ?RET_HIGH Frame(CFA_SP, 2)
+          CFI ?BRET_EXT Frame(CFA_SP, 3)
+          CFI DPL0 SameValue
+          CFI DPH0 SameValue
+          CFI CFA_SP SP+-3
+          CFI CFA_XSP16 XSP16+0
+          CFI EndBlock cfiBlock10
 //  553 
 //  554 /*********************************************************************
 //  555  * @fn      osal_next_timeout
@@ -2375,36 +2519,140 @@ osalTimerUpdate:
 //  563  *
 //  564  * @return  none
 //  565  *********************************************************************/
+
+        RSEG BANKED_CODE:CODE:NOROOT(0)
 //  566 uint32 osal_next_timeout( void )
+osal_next_timeout:
+          CFI Block cfiBlock11 Using cfiCommon0
+          CFI Function osal_next_timeout
+        CODE
 //  567 {
+        REQUIRE ?V0
+        REQUIRE ?V1
+        REQUIRE ?V2
+        REQUIRE ?V3
+        MOV     A,#-0xc
+        LCALL   ?BANKED_ENTER_XDATA
+          CFI DPH0 load(1, XDATA, add(CFA_XSP16, literal(-1)))
+          CFI DPL0 load(1, XDATA, add(CFA_XSP16, literal(-2)))
+          CFI ?BRET_EXT load(1, XDATA, add(CFA_XSP16, literal(-3)))
+          CFI ?RET_HIGH load(1, XDATA, add(CFA_XSP16, literal(-4)))
+          CFI ?RET_LOW load(1, XDATA, add(CFA_XSP16, literal(-5)))
+          CFI R7 load(1, XDATA, add(CFA_XSP16, literal(-6)))
+          CFI V3 load(1, XDATA, add(CFA_XSP16, literal(-7)))
+          CFI V2 load(1, XDATA, add(CFA_XSP16, literal(-8)))
+          CFI V1 load(1, XDATA, add(CFA_XSP16, literal(-9)))
+          CFI V0 load(1, XDATA, add(CFA_XSP16, literal(-10)))
+          CFI VB load(1, XDATA, add(CFA_XSP16, literal(-11)))
+          CFI R6 load(1, XDATA, add(CFA_XSP16, literal(-12)))
+          CFI CFA_SP SP+0
+          CFI CFA_XSP16 add(XSP16, 12)
+        ; Saved register size: 12
+        ; Auto size: 0
 //  568   uint32 nextTimeout;
 //  569   osalTimerRec_t *srchTimer;
 //  570 
 //  571   if ( timerHead != NULL )
+        MOV     DPTR,#timerHead
+        MOVX    A,@DPTR
+        MOV     R0,A
+        INC     DPTR
+        MOVX    A,@DPTR
+        MOV     R1,A
+        MOV     A,R0
+        ORL     A,R1
+        JZ      ??osal_next_timeout_0
 //  572   {
 //  573     // Head of the timer list
 //  574     srchTimer = timerHead;
+        MOV     DPTR,#timerHead
+        MOVX    A,@DPTR
+        MOV     R2,A
+        INC     DPTR
+        MOVX    A,@DPTR
+        MOV     R3,A
 //  575     nextTimeout = OSAL_TIMERS_MAX_TIMEOUT;
+        MOV     ?V0,#-0x72
+        MOV     ?V1,#-0x3e
+        MOV     ?V2,#-0xb
+        MOV     ?V3,#0x28
 //  576 
 //  577     // Look for the next timeout timer
 //  578     while ( srchTimer != NULL )
+??osal_next_timeout_1:
+        MOV     A,R2
+        ORL     A,R3
+        JZ      ??osal_next_timeout_2
 //  579     {
 //  580       if (srchTimer->timeout.time32 < nextTimeout)
+        MOV     DPL,R2
+        MOV     DPH,R3
+        INC     DPTR
+        INC     DPTR
+        MOV     R0,#?V0
+        LCALL   ?UL_GT_X
+        JNC     ??osal_next_timeout_3
 //  581       {
 //  582         nextTimeout = srchTimer->timeout.time32;
+        MOV     DPL,R2
+        MOV     DPH,R3
+        INC     DPTR
+        INC     DPTR
+        MOV     R0,#?V0
+        LCALL   ?L_MOV_X
 //  583       }
 //  584       // Check next timer
 //  585       srchTimer = srchTimer->next;
+??osal_next_timeout_3:
+        MOV     DPL,R2
+        MOV     DPH,R3
+        MOVX    A,@DPTR
+        MOV     R0,A
+        INC     DPTR
+        MOVX    A,@DPTR
+        MOV     R1,A
+        MOV     A,R0
+        MOV     R2,A
+        MOV     A,R1
+        MOV     R3,A
+        SJMP    ??osal_next_timeout_1
 //  586     }
 //  587   }
 //  588   else
 //  589   {
 //  590     // No timers
 //  591     nextTimeout = 0;
+??osal_next_timeout_0:
+        MOV     ?V0,#0x0
+        MOV     ?V1,#0x0
+        MOV     ?V2,#0x0
+        MOV     ?V3,#0x0
 //  592   }
 //  593 
 //  594   return ( nextTimeout );
+??osal_next_timeout_2:
+        MOV     R2,?V0
+        MOV     R3,?V1
+        MOV     R4,?V2
+        MOV     R5,?V3
+        MOV     R7,#0x4
+        LJMP    ?BANKED_LEAVE_XDATA
+          CFI R6 SameValue
+          CFI VB SameValue
+          CFI V0 SameValue
+          CFI V1 SameValue
+          CFI V2 SameValue
+          CFI V3 SameValue
+          CFI R7 SameValue
+          CFI ?RET_LOW Frame(CFA_SP, 1)
+          CFI ?RET_HIGH Frame(CFA_SP, 2)
+          CFI ?BRET_EXT Frame(CFA_SP, 3)
+          CFI DPL0 SameValue
+          CFI DPH0 SameValue
+          CFI CFA_SP SP+-3
+          CFI CFA_XSP16 XSP16+0
 //  595 }
+          CFI EndBlock cfiBlock11
 //  596 #endif // POWER_SAVING
 //  597 
 //  598 /*********************************************************************
@@ -2420,7 +2668,7 @@ osalTimerUpdate:
         RSEG BANKED_CODE:CODE:NOROOT(0)
 //  607 uint32 osal_GetSystemClock( void )
 osal_GetSystemClock:
-          CFI Block cfiBlock10 Using cfiCommon0
+          CFI Block cfiBlock12 Using cfiCommon0
           CFI Function osal_GetSystemClock
         CODE
 //  608 {
@@ -2443,7 +2691,12 @@ osal_GetSystemClock:
           CFI CFA_SP SP+-3
         LJMP    ?BRET
 //  610 }
-          CFI EndBlock cfiBlock10
+          CFI EndBlock cfiBlock12
+
+        RSEG XDATA_ROM_C:CONST:REORDER:NOROOT(0)
+        DATA32
+__Constant_1:
+        DD 1
 
         RSEG BANK_RELAYS:CODE:REORDER:NOROOT(0)
 `??osalTimerInit::?relay`:
@@ -2516,6 +2769,20 @@ osal_GetSystemClock:
         DC24    osalTimerUpdate
 
         RSEG BANK_RELAYS:CODE:REORDER:NOROOT(0)
+`??osal_adjust_timers::?relay`:
+        CODE
+        LCALL   ?BDISPATCH
+        DATA24
+        DC24    osal_adjust_timers
+
+        RSEG BANK_RELAYS:CODE:REORDER:NOROOT(0)
+`??osal_next_timeout::?relay`:
+        CODE
+        LCALL   ?BDISPATCH
+        DATA24
+        DC24    osal_next_timeout
+
+        RSEG BANK_RELAYS:CODE:REORDER:NOROOT(0)
 `??osal_GetSystemClock::?relay`:
         CODE
         LCALL   ?BDISPATCH
@@ -2527,14 +2794,16 @@ osal_GetSystemClock:
 //  612 /*********************************************************************
 //  613 *********************************************************************/
 // 
-// 1 420 bytes in segment BANKED_CODE
-//    66 bytes in segment BANK_RELAYS
+// 1 594 bytes in segment BANKED_CODE
+//    78 bytes in segment BANK_RELAYS
 //     1 byte  in segment SFR_AN
+//     4 bytes in segment XDATA_ROM_C
 //     6 bytes in segment XDATA_Z
 // 
-// 1 486 bytes of CODE  memory
-//     0 bytes of DATA  memory (+ 1 byte shared)
+// 1 672 bytes of CODE  memory
+//     0 bytes of CONST memory (+ 4 bytes shared)
+//     0 bytes of DATA  memory (+ 1 byte  shared)
 //     6 bytes of XDATA memory
 //
 //Errors: none
-//Warnings: none
+//Warnings: 1
