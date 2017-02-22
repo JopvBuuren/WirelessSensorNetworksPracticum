@@ -1,6 +1,6 @@
 ///////////////////////////////////////////////////////////////////////////////
 //
-// IAR C/C++ Compiler V9.20.1.2476 for 8051               17/Feb/2017  12:54:57
+// IAR C/C++ Compiler V9.20.1.2476 for 8051               22/Feb/2017  12:53:15
 // Copyright 2004-2015 IAR Systems AB.
 // Standalone license - IAR Embedded Workbench for 8051
 //
@@ -309,6 +309,8 @@ HalLedSet           SYMBOL "HalLedSet"
 `??HalLedSet::?relay` SYMBOL "?relay", HalLedSet
 HalReadTemp         SYMBOL "HalReadTemp"
 `??HalReadTemp::?relay` SYMBOL "?relay", HalReadTemp
+HalReadVdd          SYMBOL "HalReadVdd"
+`??HalReadVdd::?relay` SYMBOL "?relay", HalReadVdd
 osal_set_event      SYMBOL "osal_set_event"
 `??osal_set_event::?relay` SYMBOL "?relay", osal_set_event
 osal_start_reload_timer SYMBOL "osal_start_reload_timer"
@@ -354,6 +356,8 @@ zb_StartConfirm     SYMBOL "zb_StartConfirm"
         FUNCTION `??HalLedSet::?relay`,00H
         EXTERN `??HalReadTemp::?relay`
         FUNCTION `??HalReadTemp::?relay`,00H
+        EXTERN `??HalReadVdd::?relay`
+        FUNCTION `??HalReadVdd::?relay`,00H
         EXTERN `??osal_set_event::?relay`
         FUNCTION `??osal_set_event::?relay`,00H
         EXTERN `??osal_start_reload_timer::?relay`
@@ -390,6 +394,13 @@ zb_StartConfirm     SYMBOL "zb_StartConfirm"
         ARGFRAME DOVERLAY, 0, STATIC
         EXTERN HalReadTemp
         FUNCTION HalReadTemp,0202H
+        ARGFRAME ISTACK, 0, STACK
+        ARGFRAME PSTACK, 0, STACK
+        ARGFRAME XSTACK, 10, STACK
+        ARGFRAME IOVERLAY, 0, STATIC
+        ARGFRAME DOVERLAY, 0, STATIC
+        EXTERN HalReadVdd
+        FUNCTION HalReadVdd,0202H
         ARGFRAME ISTACK, 0, STACK
         ARGFRAME PSTACK, 0, STACK
         ARGFRAME XSTACK, 16, STACK
@@ -1886,9 +1897,15 @@ sendReport:
         JZ      ??sendReport_0
 //  446     changed = true;
         MOV     R6,#0x1
-//  447   }
-//  448   // Read and report voltage value
-//  449   pData[SENSOR_VOLTAGE_OFFSET] = readVoltage();
+//  447     oldValues[SENSOR_TEMP_OFFSET] = pData[SENSOR_TEMP_OFFSET];
+        MOV     DPL,?XSP + 0
+        MOV     DPH,?XSP + 1
+        MOVX    A,@DPTR
+        MOV     DPTR,#oldValues
+        MOVX    @DPTR,A
+//  448   }
+//  449   // Read and report voltage value
+//  450   pData[SENSOR_VOLTAGE_OFFSET] = readVoltage();
 ??sendReport_0:
         ; Setup parameters for call to function readVoltage
         LCALL   `??readVoltage::?relay`; Banked call to: readVoltage
@@ -1900,7 +1917,7 @@ sendReport:
         POP     A
           CFI CFA_SP SP+0
         MOVX    @DPTR,A
-//  450   if(pData[SENSOR_VOLTAGE_OFFSET] != oldValues[SENSOR_VOLTAGE_OFFSET]){
+//  451   if(pData[SENSOR_VOLTAGE_OFFSET] != oldValues[SENSOR_VOLTAGE_OFFSET]){
         MOV     A,#0x1
         LCALL   ?XSTACK_DISP0_8
         MOVX    A,@DPTR
@@ -1909,10 +1926,16 @@ sendReport:
         MOVX    A,@DPTR
         XRL     A,R0
         JZ      ??sendReport_1
-//  451     changed = true;
+//  452     changed = true;
         MOV     R6,#0x1
-//  452   }
-//  453   pData[SENSOR_PARENT_OFFSET] =  HI_UINT16(parentShortAddr);
+//  453     oldValues[SENSOR_VOLTAGE_OFFSET] = pData[SENSOR_VOLTAGE_OFFSET];
+        MOV     A,#0x1
+        LCALL   ?XSTACK_DISP0_8
+        MOVX    A,@DPTR
+        MOV     DPTR,#oldValues + 1
+        MOVX    @DPTR,A
+//  454   }
+//  455   pData[SENSOR_PARENT_OFFSET] =  HI_UINT16(parentShortAddr);
 ??sendReport_1:
         MOV     DPTR,#parentShortAddr
         MOVX    A,@DPTR
@@ -1931,7 +1954,7 @@ sendReport:
         POP     A
           CFI CFA_SP SP+0
         MOVX    @DPTR,A
-//  454   pData[SENSOR_PARENT_OFFSET + 1] =  LO_UINT16(parentShortAddr);
+//  456   pData[SENSOR_PARENT_OFFSET + 1] =  LO_UINT16(parentShortAddr);
         MOV     DPTR,#parentShortAddr
         MOVX    A,@DPTR
         MOV     R0,A
@@ -1946,36 +1969,44 @@ sendReport:
         POP     A
           CFI CFA_SP SP+0
         MOVX    @DPTR,A
-//  455 
-//  456   if(reportSkip > 60 ){
+//  457 
+//  458   if(reportSkip > 12 ){
         MOV     DPTR,#reportSkip
         MOVX    A,@DPTR
         CLR     C
-        SUBB    A,#0x3d
+        SUBB    A,#0xd
         JC      ??sendReport_2
-//  457     reportSkip = 0;
+//  459     reportSkip = 0;
         MOV     DPTR,#reportSkip
         MOV     A,#0x0
         MOVX    @DPTR,A
-//  458     changed = true;
+//  460     changed = true;
         MOV     R6,#0x1
         SJMP    ??sendReport_3
-//  459   }else{
-//  460     reportSkip+=1;
+//  461   }else{
+//  462     reportSkip = reportSkip++;
 ??sendReport_2:
+        MOV     DPTR,#reportSkip
+        MOVX    A,@DPTR
+        MOV     DPTR,#reportSkip
+        MOVX    @DPTR,A
         MOV     DPTR,#reportSkip
         MOVX    A,@DPTR
         ADD     A,#0x1
         MOVX    @DPTR,A
-//  461   }
-//  462   
-//  463   if(changed){
+//  463   }
+//  464   
+//  465   if(changed){
 ??sendReport_3:
         MOV     A,R6
         JZ      ??sendReport_4
-//  464     // Set ACK request on each ACK_INTERVAL report
-//  465     // If a report failed, set ACK request on next report
-//  466     if ( ++reportNr<ACK_REQ_INTERVAL && reportFailureNr == 0 )
+//  466     reportSkip = 0;
+        MOV     DPTR,#reportSkip
+        MOV     A,#0x0
+        MOVX    @DPTR,A
+//  467     // Set ACK request on each ACK_INTERVAL report
+//  468     // If a report failed, set ACK request on next report
+//  469     if ( ++reportNr<ACK_REQ_INTERVAL && reportFailureNr == 0 )
         MOV     DPTR,#??reportNr
         MOVX    A,@DPTR
         ADD     A,#0x1
@@ -1988,24 +2019,24 @@ sendReport:
         MOV     DPTR,#reportFailureNr
         MOVX    A,@DPTR
         JNZ     ??sendReport_5
-//  467     {
-//  468       txOptions = AF_TX_OPTIONS_NONE;
+//  470     {
+//  471       txOptions = AF_TX_OPTIONS_NONE;
         MOV     R1,#0x0
         SJMP    ??sendReport_6
-//  469     }
-//  470     else
-//  471     {
-//  472       txOptions = AF_MSG_ACK_REQUEST;
+//  472     }
+//  473     else
+//  474     {
+//  475       txOptions = AF_MSG_ACK_REQUEST;
 ??sendReport_5:
         MOV     R1,#0x10
-//  473       reportNr = 0;
+//  476       reportNr = 0;
         MOV     DPTR,#??reportNr
         MOV     A,#0x0
         MOVX    @DPTR,A
-//  474     }
-//  475     // Destination address is set to previously established binding
-//  476     // for the commandId.
-//  477     zb_SendDataRequest( ZB_BINDING_ADDR, SENSOR_REPORT_CMD_ID, SENSOR_REPORT_LENGTH, pData, 0, txOptions, 0 );
+//  477     }
+//  478     // Destination address is set to previously established binding
+//  479     // for the commandId.
+//  480     zb_SendDataRequest( ZB_BINDING_ADDR, SENSOR_REPORT_CMD_ID, SENSOR_REPORT_LENGTH, pData, 0, txOptions, 0 );
 ??sendReport_6:
         ; Setup parameters for call to function zb_SendDataRequest
         MOV     ?V0,#0x0
@@ -2037,12 +2068,9 @@ sendReport:
         MOV     A,#0x5
         LCALL   ?DEALLOC_XSTACK8
           CFI CFA_XSP16 add(XSP16, 14)
-//  478     reportSkip = 0;
-        MOV     DPTR,#reportSkip
-        MOV     A,#0x0
-        MOVX    @DPTR,A
-//  479   }
-//  480 }
+//  481     
+//  482   }
+//  483 }
 ??sendReport_4:
         MOV     A,#0x4
         LCALL   ?DEALLOC_XSTACK8
@@ -2068,24 +2096,24 @@ sendReport:
 ??reportNr:
         DS 1
         REQUIRE __INIT_XDATA_Z
-//  481 
-//  482 /******************************************************************************
-//  483  * @fn          readTemp
-//  484  *
-//  485  * @brief       read temperature from ADC
-//  486  *
-//  487  * @param       none
-//  488  *
-//  489  * @return      temperature
-//  490  */
+//  484 
+//  485 /******************************************************************************
+//  486  * @fn          readTemp
+//  487  *
+//  488  * @brief       read temperature from ADC
+//  489  *
+//  490  * @param       none
+//  491  *
+//  492  * @return      temperature
+//  493  */
 
         RSEG BANKED_CODE:CODE:NOROOT(0)
-//  491 static int8 readTemp(void)
+//  494 static int8 readTemp(void)
 readTemp:
           CFI Block cfiBlock10 Using cfiCommon0
           CFI Function readTemp
         CODE
-//  492 {
+//  495 {
         FUNCALL readTemp, HalReadTemp
         LOCFRAME ISTACK, 0, STACK
         LOCFRAME PSTACK, 0, STACK
@@ -2115,25 +2143,25 @@ readTemp:
           CFI CFA_XSP16 add(XSP16, 10)
         ; Saved register size: 10
         ; Auto size: 0
-//  493   static uint16 voltageAtTemp22;
-//  494   static uint8 bCalibrate = TRUE; // Calibrate the first time the temp sensor is read
-//  495   uint16 value;
-//  496   int8 temp;
-//  497 
-//  498   #if defined (HAL_MCU_CC2530)
-//  499   /*
-//  500    * Use the ADC to read the temperature
-//  501    */
-//  502   value = HalReadTemp();
+//  496   static uint16 voltageAtTemp22;
+//  497   static uint8 bCalibrate = TRUE; // Calibrate the first time the temp sensor is read
+//  498   uint16 value;
+//  499   int8 temp;
+//  500 
+//  501   #if defined (HAL_MCU_CC2530)
+//  502   /*
+//  503    * Use the ADC to read the temperature
+//  504    */
+//  505   value = HalReadTemp();
         ; Setup parameters for call to function HalReadTemp
         LCALL   `??HalReadTemp::?relay`; Banked call to: HalReadTemp
         MOV     ?V0,R2
         MOV     ?V1,R3
         MOV     R0,?V0
         MOV     R1,?V1
-//  503 
-//  504   // Use the 12 MSB of adcValue
-//  505   value >>= 4;
+//  506 
+//  507   // Use the 12 MSB of adcValue
+//  508   value >>= 4;
         MOV     ?V0,R0
         MOV     ?V1,R1
         MOV     A,#0x4
@@ -2141,36 +2169,36 @@ readTemp:
         LCALL   ?US_SHR
         MOV     R0,?V0
         MOV     R1,?V1
-//  506 
-//  507   /*
-//  508    * These parameters are typical values and need to be calibrated
-//  509    * See the datasheet for the appropriate chip for more details
-//  510    * also, the math below may not be very accurate
-//  511    */
-//  512   /* Assume ADC = 1480 at 25C and ADC = 4/C */
-//  513   #define VOLTAGE_AT_TEMP_25        1480
-//  514   #define TEMP_COEFFICIENT          4
-//  515 
-//  516   // Calibrate for 22C the first time the temp sensor is read.
-//  517   // This will assume that the demo is started up in temperature of 22C
-//  518   if ( bCalibrate ) {
+//  509 
+//  510   /*
+//  511    * These parameters are typical values and need to be calibrated
+//  512    * See the datasheet for the appropriate chip for more details
+//  513    * also, the math below may not be very accurate
+//  514    */
+//  515   /* Assume ADC = 1480 at 25C and ADC = 4/C */
+//  516   #define VOLTAGE_AT_TEMP_25        1480
+//  517   #define TEMP_COEFFICIENT          4
+//  518 
+//  519   // Calibrate for 22C the first time the temp sensor is read.
+//  520   // This will assume that the demo is started up in temperature of 22C
+//  521   if ( bCalibrate ) {
         MOV     DPTR,#??bCalibrate
         MOVX    A,@DPTR
         JZ      ??readTemp_0
-//  519     voltageAtTemp22 = value;
+//  522     voltageAtTemp22 = value;
         MOV     DPTR,#??voltageAtTemp22
         MOV     A,R0
         MOVX    @DPTR,A
         INC     DPTR
         MOV     A,R1
         MOVX    @DPTR,A
-//  520     bCalibrate = FALSE;
+//  523     bCalibrate = FALSE;
         MOV     DPTR,#??bCalibrate
         MOV     A,#0x0
         MOVX    @DPTR,A
-//  521   }
-//  522 
-//  523   temp = 22 + ( (value - voltageAtTemp22) / TEMP_COEFFICIENT );
+//  524   }
+//  525 
+//  526   temp = 22 + ( (value - voltageAtTemp22) / TEMP_COEFFICIENT );
 ??readTemp_0:
         MOV     DPTR,#??voltageAtTemp22
         MOVX    A,@DPTR
@@ -2191,9 +2219,9 @@ readTemp:
         MOV     A,?V0
         ADD     A,#0x16
         MOV     R1,A
-//  524 
-//  525   // Set 0C as minimum temperature, and 100C as max
-//  526   if ( temp >= 100 )
+//  527 
+//  528   // Set 0C as minimum temperature, and 100C as max
+//  529   if ( temp >= 100 )
         MOV     A,R1
         CLR     C
         SUBB    A,#0x64
@@ -2201,12 +2229,12 @@ readTemp:
         XRL     A,PSW
         RLC     A
         JC      ??readTemp_1
-//  527   {
-//  528     return 100;
+//  530   {
+//  531     return 100;
         MOV     R1,#0x64
         SJMP    ??readTemp_2
-//  529   }
-//  530   else if ( temp <= 0 ) {
+//  532   }
+//  533   else if ( temp <= 0 ) {
 ??readTemp_1:
         MOV     A,R1
         CLR     C
@@ -2215,11 +2243,11 @@ readTemp:
         XRL     A,PSW
         RLC     A
         JNC     ??readTemp_2
-//  531     return 0;
+//  534     return 0;
         MOV     R1,#0x0
-//  532   }
-//  533   else {
-//  534     return temp;
+//  535   }
+//  536   else {
+//  537     return temp;
 ??readTemp_2:
         MOV     R7,#0x2
         LJMP    ?BANKED_LEAVE_XDATA
@@ -2235,12 +2263,12 @@ readTemp:
           CFI DPH0 SameValue
           CFI CFA_SP SP+-3
           CFI CFA_XSP16 XSP16+0
-//  535   }
-//  536   // Only CC2530 is supported
-//  537   #else
-//  538   return 0;
-//  539   #endif
-//  540 }
+//  538   }
+//  539   // Only CC2530 is supported
+//  540   #else
+//  541   return 0;
+//  542   #endif
+//  543 }
           CFI EndBlock cfiBlock10
 
         RSEG XDATA_Z:XDATA:NOROOT(0)
@@ -2255,25 +2283,25 @@ readTemp:
         DS 1
         REQUIRE `?<Initializer for bCalibrate>`
         REQUIRE __INIT_XDATA_I
-//  541 
-//  542 /******************************************************************************
-//  543  * @fn          readVoltage
-//  544  *
-//  545  * @brief       read voltage from ADC
-//  546  *
-//  547  * @param       none
-//  548  *
-//  549  * @return      voltage
-//  550  */
+//  544 
+//  545 /******************************************************************************
+//  546  * @fn          readVoltage
+//  547  *
+//  548  * @brief       read voltage from ADC
+//  549  *
+//  550  * @param       none
+//  551  *
+//  552  * @return      voltage
+//  553  */
 
         RSEG BANKED_CODE:CODE:NOROOT(0)
-//  551 static uint8 readVoltage(void)
+//  554 static uint8 readVoltage(void)
 readVoltage:
           CFI Block cfiBlock11 Using cfiCommon0
           CFI Function readVoltage
         CODE
-//  552 {
-        FUNCALL readVoltage, HalReadTemp
+//  555 {
+        FUNCALL readVoltage, HalReadVdd
         LOCFRAME ISTACK, 0, STACK
         LOCFRAME PSTACK, 0, STACK
         LOCFRAME XSTACK, 16, STACK
@@ -2314,23 +2342,23 @@ readVoltage:
           CFI CFA_XSP16 add(XSP16, 16)
         ; Saved register size: 16
         ; Auto size: 0
-//  553   #if defined (HAL_MCU_CC2530)
-//  554   /*
-//  555    * Use the ADC to read the bus voltage
-//  556    */
-//  557   uint16 value = HalReadTemp();
-        ; Setup parameters for call to function HalReadTemp
-        LCALL   `??HalReadTemp::?relay`; Banked call to: HalReadTemp
+//  556   #if defined (HAL_MCU_CC2530)
+//  557   /*
+//  558    * Use the ADC to read the bus voltage
+//  559    */
+//  560   uint16 value = HalReadVdd();
+        ; Setup parameters for call to function HalReadVdd
+        LCALL   `??HalReadVdd::?relay`; Banked call to: HalReadVdd
         MOV     ?V0,R2
         MOV     ?V1,R3
         MOV     R0,?V0
         MOV     R1,?V1
-//  558 
-//  559   // value now contains measurement of Vdd/3
-//  560   // 0 indicates 0V and 32767 indicates 1.25V
-//  561   // voltage = (value*3*1.25)/32767 volts
-//  562   // we will multiply by this by 10 to allow units of 0.1 volts
-//  563   value = value >> 6;   // divide first by 2^6
+//  561 
+//  562   // value now contains measurement of Vdd/3
+//  563   // 0 indicates 0V and 32767 indicates 1.25V
+//  564   // voltage = (value*3*1.25)/32767 volts
+//  565   // we will multiply by this by 10 to allow units of 0.1 volts
+//  566   value = value >> 6;   // divide first by 2^6
         MOV     ?V0,R0
         MOV     ?V1,R1
         MOV     A,#0x6
@@ -2338,7 +2366,7 @@ readVoltage:
         LCALL   ?US_SHR
         MOV     R0,?V0
         MOV     R1,?V1
-//  564   value = (uint16)(value * 37.5);
+//  567   value = (uint16)(value * 37.5);
         MOV     ?V0,R0
         MOV     ?V1,R1
         CLR     A
@@ -2356,7 +2384,7 @@ readVoltage:
         LCALL   ?FLT_TO_L
         MOV     R0,?V0
         MOV     R1,?V1
-//  565   value = value >> 9;   // ...and later by 2^9...to prevent overflow during multiplication
+//  568   value = value >> 9;   // ...and later by 2^9...to prevent overflow during multiplication
         MOV     ?V0,R0
         MOV     ?V1,R1
         MOV     A,#0x9
@@ -2364,8 +2392,8 @@ readVoltage:
         LCALL   ?US_SHR
         MOV     R0,?V0
         MOV     R1,?V1
-//  566 
-//  567   return value;
+//  569 
+//  570   return value;
         MOV     A,R0
         MOV     R1,A
         MOV     R7,#0x8
@@ -2388,10 +2416,10 @@ readVoltage:
           CFI DPH0 SameValue
           CFI CFA_SP SP+-3
           CFI CFA_XSP16 XSP16+0
-//  568   #else
-//  569   return 0;
-//  570   #endif // CC2530
-//  571 }
+//  571   #else
+//  572   return 0;
+//  573   #endif // CC2530
+//  574 }
           CFI EndBlock cfiBlock11
 
         RSEG XDATA_ID:CODE:NOROOT(0)
@@ -2505,16 +2533,16 @@ __Constant_42160000:
 
         END
 // 
-// 1 018 bytes in segment BANKED_CODE
+// 1 047 bytes in segment BANKED_CODE
 //    72 bytes in segment BANK_RELAYS
 //     6 bytes in segment XDATA_I
 //     6 bytes in segment XDATA_ID
 //    18 bytes in segment XDATA_ROM_C
 //    14 bytes in segment XDATA_Z
 // 
-// 1 096 bytes of CODE  memory
+// 1 125 bytes of CODE  memory
 //    14 bytes of CONST memory (+ 4 bytes shared)
 //    20 bytes of XDATA memory
 //
 //Errors: none
-//Warnings: 1
+//Warnings: 2

@@ -444,23 +444,26 @@ static void sendReport(void)
   pData[SENSOR_TEMP_OFFSET] = readTemp();
   if(pData[SENSOR_TEMP_OFFSET] != oldValues[SENSOR_TEMP_OFFSET]){
     changed = true;
+    oldValues[SENSOR_TEMP_OFFSET] = pData[SENSOR_TEMP_OFFSET];
   }
   // Read and report voltage value
   pData[SENSOR_VOLTAGE_OFFSET] = readVoltage();
   if(pData[SENSOR_VOLTAGE_OFFSET] != oldValues[SENSOR_VOLTAGE_OFFSET]){
     changed = true;
+    oldValues[SENSOR_VOLTAGE_OFFSET] = pData[SENSOR_VOLTAGE_OFFSET];
   }
   pData[SENSOR_PARENT_OFFSET] =  HI_UINT16(parentShortAddr);
   pData[SENSOR_PARENT_OFFSET + 1] =  LO_UINT16(parentShortAddr);
 
-  if(reportSkip > 60 ){
+  if(reportSkip > 12 ){
     reportSkip = 0;
     changed = true;
   }else{
-    reportSkip+=1;
+    reportSkip = reportSkip++;
   }
   
   if(changed){
+    reportSkip = 0;
     // Set ACK request on each ACK_INTERVAL report
     // If a report failed, set ACK request on next report
     if ( ++reportNr<ACK_REQ_INTERVAL && reportFailureNr == 0 )
@@ -475,7 +478,7 @@ static void sendReport(void)
     // Destination address is set to previously established binding
     // for the commandId.
     zb_SendDataRequest( ZB_BINDING_ADDR, SENSOR_REPORT_CMD_ID, SENSOR_REPORT_LENGTH, pData, 0, txOptions, 0 );
-    reportSkip = 0;
+    
   }
 }
 
@@ -554,7 +557,7 @@ static uint8 readVoltage(void)
   /*
    * Use the ADC to read the bus voltage
    */
-  uint16 value = HalReadTemp();
+  uint16 value = HalReadVdd();
 
   // value now contains measurement of Vdd/3
   // 0 indicates 0V and 32767 indicates 1.25V

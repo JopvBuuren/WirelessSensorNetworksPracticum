@@ -1,6 +1,6 @@
 ###############################################################################
 #
-# IAR C/C++ Compiler V9.20.1.2476 for 8051                17/Feb/2017  12:54:57
+# IAR C/C++ Compiler V9.20.1.2476 for 8051                22/Feb/2017  12:53:15
 # Copyright 2004-2015 IAR Systems AB.
 # Standalone license - IAR Embedded Workbench for 8051
 #
@@ -1030,205 +1030,227 @@ D:\Jop van Buuren\Documents\Hogeschool\Vakken\wt\WirelessSensorNetworksPracticum
    \   000023   90....       MOV     DPTR,#oldValues
    \   000026   E0           MOVX    A,@DPTR
    \   000027   68           XRL     A,R0
-   \   000028   6002         JZ      ??sendReport_0
+   \   000028   600D         JZ      ??sendReport_0
     446              changed = true;
    \   00002A   7E01         MOV     R6,#0x1
-    447            }
-    448            // Read and report voltage value
-    449            pData[SENSOR_VOLTAGE_OFFSET] = readVoltage();
+    447              oldValues[SENSOR_TEMP_OFFSET] = pData[SENSOR_TEMP_OFFSET];
+   \   00002C   85..82       MOV     DPL,?XSP + 0
+   \   00002F   85..83       MOV     DPH,?XSP + 1
+   \   000032   E0           MOVX    A,@DPTR
+   \   000033   90....       MOV     DPTR,#oldValues
+   \   000036   F0           MOVX    @DPTR,A
+    448            }
+    449            // Read and report voltage value
+    450            pData[SENSOR_VOLTAGE_OFFSET] = readVoltage();
    \                     ??sendReport_0:
-   \   00002C                ; Setup parameters for call to function readVoltage
-   \   00002C   12....       LCALL   `??readVoltage::?relay`; Banked call to: readVoltage
-   \   00002F   E9           MOV     A,R1
-   \   000030   C0E0         PUSH    A
-   \   000032   7401         MOV     A,#0x1
-   \   000034   12....       LCALL   ?XSTACK_DISP0_8
-   \   000037   D0E0         POP     A
-   \   000039   F0           MOVX    @DPTR,A
-    450            if(pData[SENSOR_VOLTAGE_OFFSET] != oldValues[SENSOR_VOLTAGE_OFFSET]){
-   \   00003A   7401         MOV     A,#0x1
-   \   00003C   12....       LCALL   ?XSTACK_DISP0_8
-   \   00003F   E0           MOVX    A,@DPTR
-   \   000040   F8           MOV     R0,A
-   \   000041   90....       MOV     DPTR,#oldValues + 1
-   \   000044   E0           MOVX    A,@DPTR
-   \   000045   68           XRL     A,R0
-   \   000046   6002         JZ      ??sendReport_1
-    451              changed = true;
-   \   000048   7E01         MOV     R6,#0x1
-    452            }
-    453            pData[SENSOR_PARENT_OFFSET] =  HI_UINT16(parentShortAddr);
+   \   000037                ; Setup parameters for call to function readVoltage
+   \   000037   12....       LCALL   `??readVoltage::?relay`; Banked call to: readVoltage
+   \   00003A   E9           MOV     A,R1
+   \   00003B   C0E0         PUSH    A
+   \   00003D   7401         MOV     A,#0x1
+   \   00003F   12....       LCALL   ?XSTACK_DISP0_8
+   \   000042   D0E0         POP     A
+   \   000044   F0           MOVX    @DPTR,A
+    451            if(pData[SENSOR_VOLTAGE_OFFSET] != oldValues[SENSOR_VOLTAGE_OFFSET]){
+   \   000045   7401         MOV     A,#0x1
+   \   000047   12....       LCALL   ?XSTACK_DISP0_8
+   \   00004A   E0           MOVX    A,@DPTR
+   \   00004B   F8           MOV     R0,A
+   \   00004C   90....       MOV     DPTR,#oldValues + 1
+   \   00004F   E0           MOVX    A,@DPTR
+   \   000050   68           XRL     A,R0
+   \   000051   600C         JZ      ??sendReport_1
+    452              changed = true;
+   \   000053   7E01         MOV     R6,#0x1
+    453              oldValues[SENSOR_VOLTAGE_OFFSET] = pData[SENSOR_VOLTAGE_OFFSET];
+   \   000055   7401         MOV     A,#0x1
+   \   000057   12....       LCALL   ?XSTACK_DISP0_8
+   \   00005A   E0           MOVX    A,@DPTR
+   \   00005B   90....       MOV     DPTR,#oldValues + 1
+   \   00005E   F0           MOVX    @DPTR,A
+    454            }
+    455            pData[SENSOR_PARENT_OFFSET] =  HI_UINT16(parentShortAddr);
    \                     ??sendReport_1:
-   \   00004A   90....       MOV     DPTR,#parentShortAddr
-   \   00004D   E0           MOVX    A,@DPTR
-   \   00004E   F8           MOV     R0,A
-   \   00004F   A3           INC     DPTR
-   \   000050   E0           MOVX    A,@DPTR
-   \   000051   F9           MOV     R1,A
-   \   000052   E4           CLR     A
-   \   000053   C9           XCH     A,R1
-   \   000054   F8           MOV     R0,A
-   \   000055   E8           MOV     A,R0
-   \   000056   C0E0         PUSH    A
-   \   000058   7402         MOV     A,#0x2
-   \   00005A   12....       LCALL   ?XSTACK_DISP0_8
-   \   00005D   D0E0         POP     A
-   \   00005F   F0           MOVX    @DPTR,A
-    454            pData[SENSOR_PARENT_OFFSET + 1] =  LO_UINT16(parentShortAddr);
-   \   000060   90....       MOV     DPTR,#parentShortAddr
-   \   000063   E0           MOVX    A,@DPTR
-   \   000064   F8           MOV     R0,A
-   \   000065   A3           INC     DPTR
-   \   000066   E0           MOVX    A,@DPTR
-   \   000067   F9           MOV     R1,A
-   \   000068   E8           MOV     A,R0
-   \   000069   C0E0         PUSH    A
-   \   00006B   7403         MOV     A,#0x3
-   \   00006D   12....       LCALL   ?XSTACK_DISP0_8
-   \   000070   D0E0         POP     A
-   \   000072   F0           MOVX    @DPTR,A
-    455          
-    456            if(reportSkip > 60 ){
-   \   000073   90....       MOV     DPTR,#reportSkip
-   \   000076   E0           MOVX    A,@DPTR
-   \   000077   C3           CLR     C
-   \   000078   943D         SUBB    A,#0x3d
-   \   00007A   400A         JC      ??sendReport_2
-    457              reportSkip = 0;
-   \   00007C   90....       MOV     DPTR,#reportSkip
-   \   00007F   7400         MOV     A,#0x0
-   \   000081   F0           MOVX    @DPTR,A
-    458              changed = true;
-   \   000082   7E01         MOV     R6,#0x1
-   \   000084   8007         SJMP    ??sendReport_3
-    459            }else{
-    460              reportSkip+=1;
-   \                     ??sendReport_2:
-   \   000086   90....       MOV     DPTR,#reportSkip
-   \   000089   E0           MOVX    A,@DPTR
-   \   00008A   2401         ADD     A,#0x1
-   \   00008C   F0           MOVX    @DPTR,A
-    461            }
-    462            
-    463            if(changed){
-   \                     ??sendReport_3:
-   \   00008D   EE           MOV     A,R6
-   \   00008E   6060         JZ      ??sendReport_4
-    464              // Set ACK request on each ACK_INTERVAL report
-    465              // If a report failed, set ACK request on next report
-    466              if ( ++reportNr<ACK_REQ_INTERVAL && reportFailureNr == 0 )
-   \   000090   90....       MOV     DPTR,#??reportNr
-   \   000093   E0           MOVX    A,@DPTR
-   \   000094   2401         ADD     A,#0x1
+   \   00005F   90....       MOV     DPTR,#parentShortAddr
+   \   000062   E0           MOVX    A,@DPTR
+   \   000063   F8           MOV     R0,A
+   \   000064   A3           INC     DPTR
+   \   000065   E0           MOVX    A,@DPTR
+   \   000066   F9           MOV     R1,A
+   \   000067   E4           CLR     A
+   \   000068   C9           XCH     A,R1
+   \   000069   F8           MOV     R0,A
+   \   00006A   E8           MOV     A,R0
+   \   00006B   C0E0         PUSH    A
+   \   00006D   7402         MOV     A,#0x2
+   \   00006F   12....       LCALL   ?XSTACK_DISP0_8
+   \   000072   D0E0         POP     A
+   \   000074   F0           MOVX    @DPTR,A
+    456            pData[SENSOR_PARENT_OFFSET + 1] =  LO_UINT16(parentShortAddr);
+   \   000075   90....       MOV     DPTR,#parentShortAddr
+   \   000078   E0           MOVX    A,@DPTR
+   \   000079   F8           MOV     R0,A
+   \   00007A   A3           INC     DPTR
+   \   00007B   E0           MOVX    A,@DPTR
+   \   00007C   F9           MOV     R1,A
+   \   00007D   E8           MOV     A,R0
+   \   00007E   C0E0         PUSH    A
+   \   000080   7403         MOV     A,#0x3
+   \   000082   12....       LCALL   ?XSTACK_DISP0_8
+   \   000085   D0E0         POP     A
+   \   000087   F0           MOVX    @DPTR,A
+    457          
+    458            if(reportSkip > 12 ){
+   \   000088   90....       MOV     DPTR,#reportSkip
+   \   00008B   E0           MOVX    A,@DPTR
+   \   00008C   C3           CLR     C
+   \   00008D   940D         SUBB    A,#0xd
+   \   00008F   400A         JC      ??sendReport_2
+    459              reportSkip = 0;
+   \   000091   90....       MOV     DPTR,#reportSkip
+   \   000094   7400         MOV     A,#0x0
    \   000096   F0           MOVX    @DPTR,A
-   \   000097   90....       MOV     DPTR,#??reportNr
-   \   00009A   E0           MOVX    A,@DPTR
-   \   00009B   C3           CLR     C
-   \   00009C   9405         SUBB    A,#0x5
-   \   00009E   500A         JNC     ??sendReport_5
-   \   0000A0   90....       MOV     DPTR,#reportFailureNr
-   \   0000A3   E0           MOVX    A,@DPTR
-   \   0000A4   7004         JNZ     ??sendReport_5
-    467              {
-    468                txOptions = AF_TX_OPTIONS_NONE;
-   \   0000A6   7900         MOV     R1,#0x0
-   \   0000A8   8008         SJMP    ??sendReport_6
-    469              }
-    470              else
-    471              {
-    472                txOptions = AF_MSG_ACK_REQUEST;
+    460              changed = true;
+   \   000097   7E01         MOV     R6,#0x1
+   \   000099   800F         SJMP    ??sendReport_3
+    461            }else{
+    462              reportSkip = reportSkip++;
+                     ^
+Warning[Pa079]: undefined behavior: variable "reportSkip" (declared at line 81)
+          (or a value reached by some form of indirection through it) is
+          modified more than once without an intervening sequence point in
+          this statement
+   \                     ??sendReport_2:
+   \   00009B   90....       MOV     DPTR,#reportSkip
+   \   00009E   E0           MOVX    A,@DPTR
+   \   00009F   90....       MOV     DPTR,#reportSkip
+   \   0000A2   F0           MOVX    @DPTR,A
+   \   0000A3   90....       MOV     DPTR,#reportSkip
+   \   0000A6   E0           MOVX    A,@DPTR
+   \   0000A7   2401         ADD     A,#0x1
+   \   0000A9   F0           MOVX    @DPTR,A
+    463            }
+    464            
+    465            if(changed){
+   \                     ??sendReport_3:
+   \   0000AA   EE           MOV     A,R6
+   \   0000AB   6060         JZ      ??sendReport_4
+    466              reportSkip = 0;
+   \   0000AD   90....       MOV     DPTR,#reportSkip
+   \   0000B0   7400         MOV     A,#0x0
+   \   0000B2   F0           MOVX    @DPTR,A
+    467              // Set ACK request on each ACK_INTERVAL report
+    468              // If a report failed, set ACK request on next report
+    469              if ( ++reportNr<ACK_REQ_INTERVAL && reportFailureNr == 0 )
+   \   0000B3   90....       MOV     DPTR,#??reportNr
+   \   0000B6   E0           MOVX    A,@DPTR
+   \   0000B7   2401         ADD     A,#0x1
+   \   0000B9   F0           MOVX    @DPTR,A
+   \   0000BA   90....       MOV     DPTR,#??reportNr
+   \   0000BD   E0           MOVX    A,@DPTR
+   \   0000BE   C3           CLR     C
+   \   0000BF   9405         SUBB    A,#0x5
+   \   0000C1   500A         JNC     ??sendReport_5
+   \   0000C3   90....       MOV     DPTR,#reportFailureNr
+   \   0000C6   E0           MOVX    A,@DPTR
+   \   0000C7   7004         JNZ     ??sendReport_5
+    470              {
+    471                txOptions = AF_TX_OPTIONS_NONE;
+   \   0000C9   7900         MOV     R1,#0x0
+   \   0000CB   8008         SJMP    ??sendReport_6
+    472              }
+    473              else
+    474              {
+    475                txOptions = AF_MSG_ACK_REQUEST;
    \                     ??sendReport_5:
-   \   0000AA   7910         MOV     R1,#0x10
-    473                reportNr = 0;
-   \   0000AC   90....       MOV     DPTR,#??reportNr
-   \   0000AF   7400         MOV     A,#0x0
-   \   0000B1   F0           MOVX    @DPTR,A
-    474              }
-    475              // Destination address is set to previously established binding
-    476              // for the commandId.
-    477              zb_SendDataRequest( ZB_BINDING_ADDR, SENSOR_REPORT_CMD_ID, SENSOR_REPORT_LENGTH, pData, 0, txOptions, 0 );
+   \   0000CD   7910         MOV     R1,#0x10
+    476                reportNr = 0;
+   \   0000CF   90....       MOV     DPTR,#??reportNr
+   \   0000D2   7400         MOV     A,#0x0
+   \   0000D4   F0           MOVX    @DPTR,A
+    477              }
+    478              // Destination address is set to previously established binding
+    479              // for the commandId.
+    480              zb_SendDataRequest( ZB_BINDING_ADDR, SENSOR_REPORT_CMD_ID, SENSOR_REPORT_LENGTH, pData, 0, txOptions, 0 );
    \                     ??sendReport_6:
-   \   0000B2                ; Setup parameters for call to function zb_SendDataRequest
-   \   0000B2   75..00       MOV     ?V0,#0x0
-   \   0000B5   78..         MOV     R0,#?V0
-   \   0000B7   12....       LCALL   ?PUSH_XSTACK_I_ONE
-   \   0000BA   E9           MOV     A,R1
-   \   0000BB   F5..         MOV     ?V0,A
-   \   0000BD   78..         MOV     R0,#?V0
-   \   0000BF   12....       LCALL   ?PUSH_XSTACK_I_ONE
-   \   0000C2   75..00       MOV     ?V0,#0x0
-   \   0000C5   78..         MOV     R0,#?V0
-   \   0000C7   12....       LCALL   ?PUSH_XSTACK_I_ONE
-   \   0000CA   7403         MOV     A,#0x3
-   \   0000CC   12....       LCALL   ?XSTACK_DISP100_8
-   \   0000CF   88..         MOV     ?V0,R0
-   \   0000D1   89..         MOV     ?V1,R1
-   \   0000D3   78..         MOV     R0,#?V0
-   \   0000D5   12....       LCALL   ?PUSH_XSTACK_I_TWO
-   \   0000D8   7904         MOV     R1,#0x4
-   \   0000DA   7C02         MOV     R4,#0x2
-   \   0000DC   7D00         MOV     R5,#0x0
-   \   0000DE   7AFE         MOV     R2,#-0x2
-   \   0000E0   7BFF         MOV     R3,#-0x1
-   \   0000E2   12....       LCALL   `??zb_SendDataRequest::?relay`; Banked call to: zb_SendDataRequest
-   \   0000E5   7405         MOV     A,#0x5
-   \   0000E7   12....       LCALL   ?DEALLOC_XSTACK8
-    478              reportSkip = 0;
-   \   0000EA   90....       MOV     DPTR,#reportSkip
-   \   0000ED   7400         MOV     A,#0x0
-   \   0000EF   F0           MOVX    @DPTR,A
-    479            }
-    480          }
+   \   0000D5                ; Setup parameters for call to function zb_SendDataRequest
+   \   0000D5   75..00       MOV     ?V0,#0x0
+   \   0000D8   78..         MOV     R0,#?V0
+   \   0000DA   12....       LCALL   ?PUSH_XSTACK_I_ONE
+   \   0000DD   E9           MOV     A,R1
+   \   0000DE   F5..         MOV     ?V0,A
+   \   0000E0   78..         MOV     R0,#?V0
+   \   0000E2   12....       LCALL   ?PUSH_XSTACK_I_ONE
+   \   0000E5   75..00       MOV     ?V0,#0x0
+   \   0000E8   78..         MOV     R0,#?V0
+   \   0000EA   12....       LCALL   ?PUSH_XSTACK_I_ONE
+   \   0000ED   7403         MOV     A,#0x3
+   \   0000EF   12....       LCALL   ?XSTACK_DISP100_8
+   \   0000F2   88..         MOV     ?V0,R0
+   \   0000F4   89..         MOV     ?V1,R1
+   \   0000F6   78..         MOV     R0,#?V0
+   \   0000F8   12....       LCALL   ?PUSH_XSTACK_I_TWO
+   \   0000FB   7904         MOV     R1,#0x4
+   \   0000FD   7C02         MOV     R4,#0x2
+   \   0000FF   7D00         MOV     R5,#0x0
+   \   000101   7AFE         MOV     R2,#-0x2
+   \   000103   7BFF         MOV     R3,#-0x1
+   \   000105   12....       LCALL   `??zb_SendDataRequest::?relay`; Banked call to: zb_SendDataRequest
+   \   000108   7405         MOV     A,#0x5
+   \   00010A   12....       LCALL   ?DEALLOC_XSTACK8
+    481              
+    482            }
+    483          }
    \                     ??sendReport_4:
-   \   0000F0   7404         MOV     A,#0x4
-   \   0000F2   12....       LCALL   ?DEALLOC_XSTACK8
-   \   0000F5   7F02         MOV     R7,#0x2
-   \   0000F7   02....       LJMP    ?BANKED_LEAVE_XDATA
+   \   00010D   7404         MOV     A,#0x4
+   \   00010F   12....       LCALL   ?DEALLOC_XSTACK8
+   \   000112   7F02         MOV     R7,#0x2
+   \   000114   02....       LJMP    ?BANKED_LEAVE_XDATA
 
    \                                 In  segment XDATA_Z, align 1, keep-with-next
    \                     ??reportNr:
    \   000000                DS 1
    \   000001                REQUIRE __INIT_XDATA_Z
-    481          
-    482          /******************************************************************************
-    483           * @fn          readTemp
-    484           *
-    485           * @brief       read temperature from ADC
-    486           *
-    487           * @param       none
-    488           *
-    489           * @return      temperature
-    490           */
+    484          
+    485          /******************************************************************************
+    486           * @fn          readTemp
+    487           *
+    488           * @brief       read temperature from ADC
+    489           *
+    490           * @param       none
+    491           *
+    492           * @return      temperature
+    493           */
 
    \                                 In  segment BANKED_CODE, align 1, keep-with-next
-    491          static int8 readTemp(void)
+    494          static int8 readTemp(void)
    \                     readTemp:
-    492          {
+    495          {
    \   000000                REQUIRE ?V0
    \   000000                REQUIRE ?V1
    \   000000   74F6         MOV     A,#-0xa
    \   000002   12....       LCALL   ?BANKED_ENTER_XDATA
    \   000005                ; Saved register size: 10
    \   000005                ; Auto size: 0
-    493            static uint16 voltageAtTemp22;
-    494            static uint8 bCalibrate = TRUE; // Calibrate the first time the temp sensor is read
-    495            uint16 value;
-    496            int8 temp;
-    497          
-    498            #if defined (HAL_MCU_CC2530)
-    499            /*
-    500             * Use the ADC to read the temperature
-    501             */
-    502            value = HalReadTemp();
+    496            static uint16 voltageAtTemp22;
+    497            static uint8 bCalibrate = TRUE; // Calibrate the first time the temp sensor is read
+    498            uint16 value;
+    499            int8 temp;
+    500          
+    501            #if defined (HAL_MCU_CC2530)
+    502            /*
+    503             * Use the ADC to read the temperature
+    504             */
+    505            value = HalReadTemp();
    \   000005                ; Setup parameters for call to function HalReadTemp
    \   000005   12....       LCALL   `??HalReadTemp::?relay`; Banked call to: HalReadTemp
    \   000008   8A..         MOV     ?V0,R2
    \   00000A   8B..         MOV     ?V1,R3
    \   00000C   A8..         MOV     R0,?V0
    \   00000E   A9..         MOV     R1,?V1
-    503          
-    504            // Use the 12 MSB of adcValue
-    505            value >>= 4;
+    506          
+    507            // Use the 12 MSB of adcValue
+    508            value >>= 4;
    \   000010   88..         MOV     ?V0,R0
    \   000012   89..         MOV     ?V1,R1
    \   000014   7404         MOV     A,#0x4
@@ -1236,36 +1258,36 @@ D:\Jop van Buuren\Documents\Hogeschool\Vakken\wt\WirelessSensorNetworksPracticum
    \   000018   12....       LCALL   ?US_SHR
    \   00001B   A8..         MOV     R0,?V0
    \   00001D   A9..         MOV     R1,?V1
-    506          
-    507            /*
-    508             * These parameters are typical values and need to be calibrated
-    509             * See the datasheet for the appropriate chip for more details
-    510             * also, the math below may not be very accurate
-    511             */
-    512            /* Assume ADC = 1480 at 25C and ADC = 4/C */
-    513            #define VOLTAGE_AT_TEMP_25        1480
-    514            #define TEMP_COEFFICIENT          4
-    515          
-    516            // Calibrate for 22C the first time the temp sensor is read.
-    517            // This will assume that the demo is started up in temperature of 22C
-    518            if ( bCalibrate ) {
+    509          
+    510            /*
+    511             * These parameters are typical values and need to be calibrated
+    512             * See the datasheet for the appropriate chip for more details
+    513             * also, the math below may not be very accurate
+    514             */
+    515            /* Assume ADC = 1480 at 25C and ADC = 4/C */
+    516            #define VOLTAGE_AT_TEMP_25        1480
+    517            #define TEMP_COEFFICIENT          4
+    518          
+    519            // Calibrate for 22C the first time the temp sensor is read.
+    520            // This will assume that the demo is started up in temperature of 22C
+    521            if ( bCalibrate ) {
    \   00001F   90....       MOV     DPTR,#??bCalibrate
    \   000022   E0           MOVX    A,@DPTR
    \   000023   600E         JZ      ??readTemp_0
-    519              voltageAtTemp22 = value;
+    522              voltageAtTemp22 = value;
    \   000025   90....       MOV     DPTR,#??voltageAtTemp22
    \   000028   E8           MOV     A,R0
    \   000029   F0           MOVX    @DPTR,A
    \   00002A   A3           INC     DPTR
    \   00002B   E9           MOV     A,R1
    \   00002C   F0           MOVX    @DPTR,A
-    520              bCalibrate = FALSE;
+    523              bCalibrate = FALSE;
    \   00002D   90....       MOV     DPTR,#??bCalibrate
    \   000030   7400         MOV     A,#0x0
    \   000032   F0           MOVX    @DPTR,A
-    521            }
-    522          
-    523            temp = 22 + ( (value - voltageAtTemp22) / TEMP_COEFFICIENT );
+    524            }
+    525          
+    526            temp = 22 + ( (value - voltageAtTemp22) / TEMP_COEFFICIENT );
    \                     ??readTemp_0:
    \   000033   90....       MOV     DPTR,#??voltageAtTemp22
    \   000036   E0           MOVX    A,@DPTR
@@ -1286,9 +1308,9 @@ D:\Jop van Buuren\Documents\Hogeschool\Vakken\wt\WirelessSensorNetworksPracticum
    \   00004B   E5..         MOV     A,?V0
    \   00004D   2416         ADD     A,#0x16
    \   00004F   F9           MOV     R1,A
-    524          
-    525            // Set 0C as minimum temperature, and 100C as max
-    526            if ( temp >= 100 )
+    527          
+    528            // Set 0C as minimum temperature, and 100C as max
+    529            if ( temp >= 100 )
    \   000050   E9           MOV     A,R1
    \   000051   C3           CLR     C
    \   000052   9464         SUBB    A,#0x64
@@ -1296,12 +1318,12 @@ D:\Jop van Buuren\Documents\Hogeschool\Vakken\wt\WirelessSensorNetworksPracticum
    \   000056   65D0         XRL     A,PSW
    \   000058   33           RLC     A
    \   000059   4004         JC      ??readTemp_1
-    527            {
-    528              return 100;
+    530            {
+    531              return 100;
    \   00005B   7964         MOV     R1,#0x64
    \   00005D   800D         SJMP    ??readTemp_2
-    529            }
-    530            else if ( temp <= 0 ) {
+    532            }
+    533            else if ( temp <= 0 ) {
    \                     ??readTemp_1:
    \   00005F   E9           MOV     A,R1
    \   000060   C3           CLR     C
@@ -1310,20 +1332,20 @@ D:\Jop van Buuren\Documents\Hogeschool\Vakken\wt\WirelessSensorNetworksPracticum
    \   000065   65D0         XRL     A,PSW
    \   000067   33           RLC     A
    \   000068   5002         JNC     ??readTemp_2
-    531              return 0;
+    534              return 0;
    \   00006A   7900         MOV     R1,#0x0
-    532            }
-    533            else {
-    534              return temp;
+    535            }
+    536            else {
+    537              return temp;
    \                     ??readTemp_2:
    \   00006C   7F02         MOV     R7,#0x2
    \   00006E   02....       LJMP    ?BANKED_LEAVE_XDATA
-    535            }
-    536            // Only CC2530 is supported
-    537            #else
-    538            return 0;
-    539            #endif
-    540          }
+    538            }
+    539            // Only CC2530 is supported
+    540            #else
+    541            return 0;
+    542            #endif
+    543          }
 
    \                                 In  segment XDATA_Z, align 1, keep-with-next
    \                     ??voltageAtTemp22:
@@ -1335,21 +1357,21 @@ D:\Jop van Buuren\Documents\Hogeschool\Vakken\wt\WirelessSensorNetworksPracticum
    \   000000                DS 1
    \   000001                REQUIRE `?<Initializer for bCalibrate>`
    \   000001                REQUIRE __INIT_XDATA_I
-    541          
-    542          /******************************************************************************
-    543           * @fn          readVoltage
-    544           *
-    545           * @brief       read voltage from ADC
-    546           *
-    547           * @param       none
-    548           *
-    549           * @return      voltage
-    550           */
+    544          
+    545          /******************************************************************************
+    546           * @fn          readVoltage
+    547           *
+    548           * @brief       read voltage from ADC
+    549           *
+    550           * @param       none
+    551           *
+    552           * @return      voltage
+    553           */
 
    \                                 In  segment BANKED_CODE, align 1, keep-with-next
-    551          static uint8 readVoltage(void)
+    554          static uint8 readVoltage(void)
    \                     readVoltage:
-    552          {
+    555          {
    \   000000                REQUIRE ?V0
    \   000000                REQUIRE ?V1
    \   000000                REQUIRE ?V2
@@ -1362,23 +1384,23 @@ D:\Jop van Buuren\Documents\Hogeschool\Vakken\wt\WirelessSensorNetworksPracticum
    \   000002   12....       LCALL   ?BANKED_ENTER_XDATA
    \   000005                ; Saved register size: 16
    \   000005                ; Auto size: 0
-    553            #if defined (HAL_MCU_CC2530)
-    554            /*
-    555             * Use the ADC to read the bus voltage
-    556             */
-    557            uint16 value = HalReadTemp();
-   \   000005                ; Setup parameters for call to function HalReadTemp
-   \   000005   12....       LCALL   `??HalReadTemp::?relay`; Banked call to: HalReadTemp
+    556            #if defined (HAL_MCU_CC2530)
+    557            /*
+    558             * Use the ADC to read the bus voltage
+    559             */
+    560            uint16 value = HalReadVdd();
+   \   000005                ; Setup parameters for call to function HalReadVdd
+   \   000005   12....       LCALL   `??HalReadVdd::?relay`; Banked call to: HalReadVdd
    \   000008   8A..         MOV     ?V0,R2
    \   00000A   8B..         MOV     ?V1,R3
    \   00000C   A8..         MOV     R0,?V0
    \   00000E   A9..         MOV     R1,?V1
-    558          
-    559            // value now contains measurement of Vdd/3
-    560            // 0 indicates 0V and 32767 indicates 1.25V
-    561            // voltage = (value*3*1.25)/32767 volts
-    562            // we will multiply by this by 10 to allow units of 0.1 volts
-    563            value = value >> 6;   // divide first by 2^6
+    561          
+    562            // value now contains measurement of Vdd/3
+    563            // 0 indicates 0V and 32767 indicates 1.25V
+    564            // voltage = (value*3*1.25)/32767 volts
+    565            // we will multiply by this by 10 to allow units of 0.1 volts
+    566            value = value >> 6;   // divide first by 2^6
    \   000010   88..         MOV     ?V0,R0
    \   000012   89..         MOV     ?V1,R1
    \   000014   7406         MOV     A,#0x6
@@ -1386,7 +1408,7 @@ D:\Jop van Buuren\Documents\Hogeschool\Vakken\wt\WirelessSensorNetworksPracticum
    \   000018   12....       LCALL   ?US_SHR
    \   00001B   A8..         MOV     R0,?V0
    \   00001D   A9..         MOV     R1,?V1
-    564            value = (uint16)(value * 37.5);
+    567            value = (uint16)(value * 37.5);
    \   00001F   88..         MOV     ?V0,R0
    \   000021   89..         MOV     ?V1,R1
    \   000023   E4           CLR     A
@@ -1404,7 +1426,7 @@ D:\Jop van Buuren\Documents\Hogeschool\Vakken\wt\WirelessSensorNetworksPracticum
    \   00003E   12....       LCALL   ?FLT_TO_L
    \   000041   A8..         MOV     R0,?V0
    \   000043   A9..         MOV     R1,?V1
-    565            value = value >> 9;   // ...and later by 2^9...to prevent overflow during multiplication
+    568            value = value >> 9;   // ...and later by 2^9...to prevent overflow during multiplication
    \   000045   88..         MOV     ?V0,R0
    \   000047   89..         MOV     ?V1,R1
    \   000049   7409         MOV     A,#0x9
@@ -1412,16 +1434,16 @@ D:\Jop van Buuren\Documents\Hogeschool\Vakken\wt\WirelessSensorNetworksPracticum
    \   00004D   12....       LCALL   ?US_SHR
    \   000050   A8..         MOV     R0,?V0
    \   000052   A9..         MOV     R1,?V1
-    566          
-    567            return value;
+    569          
+    570            return value;
    \   000054   E8           MOV     A,R0
    \   000055   F9           MOV     R1,A
    \   000056   7F08         MOV     R7,#0x8
    \   000058   02....       LJMP    ?BANKED_LEAVE_XDATA
-    568            #else
-    569            return 0;
-    570            #endif // CC2530
-    571          }
+    571            #else
+    572            return 0;
+    573            #endif // CC2530
+    574          }
 
    \                                 In  segment XDATA_ID, align 1, keep-with-next
    \                     `?<Initializer for myReportPeriod>`:
@@ -1510,7 +1532,7 @@ D:\Jop van Buuren\Documents\Hogeschool\Vakken\wt\WirelessSensorNetworksPracticum
       0     24   readTemp
         0     10   -> HalReadTemp
       0     30   readVoltage
-        0     16   -> HalReadTemp
+        0     16   -> HalReadVdd
       1     28   sendReport
         0     14   -> readTemp
         0     14   -> readVoltage
@@ -1570,7 +1592,7 @@ D:\Jop van Buuren\Documents\Hogeschool\Vakken\wt\WirelessSensorNetworksPracticum
        1  reportNr
        1  reportSkip
        1  reportState
-     250  sendReport
+     279  sendReport
        6  sendReport::?relay
        3  uartRxCB
        6  uartRxCB::?relay
@@ -1595,16 +1617,16 @@ D:\Jop van Buuren\Documents\Hogeschool\Vakken\wt\WirelessSensorNetworksPracticum
        6  zb_StartConfirm::?relay
 
  
- 1 018 bytes in segment BANKED_CODE
+ 1 047 bytes in segment BANKED_CODE
     72 bytes in segment BANK_RELAYS
      6 bytes in segment XDATA_I
      6 bytes in segment XDATA_ID
     18 bytes in segment XDATA_ROM_C
     14 bytes in segment XDATA_Z
  
- 1 096 bytes of CODE  memory
+ 1 125 bytes of CODE  memory
     14 bytes of CONST memory (+ 4 bytes shared)
     20 bytes of XDATA memory
 
 Errors: none
-Warnings: 1
+Warnings: 2
