@@ -89,6 +89,7 @@
 
 // Application osal event identifiers
 #define MY_START_EVT                        0x0001
+#define MY_DOOR_CHECK_EVT                   0x0002 // Event foor door check
 
 // Port and pin for door limit switch
 #define PORT_DOOR_LIMIT_SWITCH              0
@@ -116,8 +117,11 @@ typedef struct
  */
 static uint8 appState =             APP_INIT;
 static uint8 myStartRetryDelay =    10;          // milliseconds
+
+static uint8 myDoorCheckDelay =     100;         // milliseconds
+static uint8 prevDoorCheckVal;
+
 static gtwData_t gtwData;
-static uint8 open =                 0;
 
 /******************************************************************************
  * LOCAL FUNCTIONS
@@ -188,6 +192,9 @@ void zb_HandleOsalEvent( uint16 event )
     MCU_IO_DIR_OUTPUT( PORT_GREEN_LED, PIN_GREEN_LED );
     // Initialise the door control as output
     MCU_IO_DIR_OUTPUT( PORT_DOOR_CONTROL, PIN_DOOR_CONTROL );
+    
+    // Set the previous door check value
+    prevDoorCheckVal = MCU_IO_GET( PORT_DOOR_LIMIT_SWITCH, PIN_DOOR_LIMIT_SWITCH );
 
     // blind LED 1 to indicate starting/joining a network
     HalLedBlink ( HAL_LED_1, 0, 50, 500 );
@@ -201,6 +208,26 @@ void zb_HandleOsalEvent( uint16 event )
   if ( event & MY_START_EVT )
   {
     zb_StartRequest();
+  }
+  
+  if ( event & MY_DOOR_CHECK_EVT ) 
+  {
+    // Check if the door limit switch has changed
+    uint8 doorCheckVal = MCU_IO_GET( PORT_DOOR_LIMIT_SWITCH, PIN_DOOR_LIMIT_SWITCH );
+    if ( prevDoorCheckVal != doorCheckVal ) {
+      // Set the green LED
+      MCU_IO_SET(
+           PORT_GREEN_LED,
+           PIN_GREEN_LED,
+           doorCheckVal > 0
+      );
+      
+      prevDoorCheckVal = doorCheckVal;
+      
+      // No longer have to check whether or not the door limit switch changes, 
+      // so stop the timer
+      osal_stop_timerEx( sapi_TaskID, MY_DOOR_CHECK_EVT );
+    }
   }
 }
 
@@ -222,14 +249,12 @@ void zb_HandleKeys( uint8 shift, uint8 keys )
 {
   static uint8 allowBind = FALSE;
 
-  // shift is not used and keys HAL_KEY_SW_3 and HAL_KEY_SW_4 are not used, so 
-  // removed code
+  /* shift is not used and keys HAL_KEY_SW_3 and HAL_KEY_SW_4 are not used, so 
+   * removed code
+   */
+  
   if ( keys & HAL_KEY_SW_1 )
-  {
-    
-    MCU_IO_SET( PORT_DOOR_CONTROL, PIN_DOOR_CONTROL, open );
-    open = !open;
-    
+  {    
     if ( appState == APP_RUN )
     {
       allowBind ^= 1;
@@ -248,16 +273,30 @@ void zb_HandleKeys( uint8 shift, uint8 keys )
     }
   }
   if ( keys & HAL_KEY_SW_2 )
-  {
-    // MCU_IO_GET returns 0x20 when pressed, need to turn it into 0x01 or 0x00
-    uint8 result = !!MCU_IO_GET( PORT_DOOR_LIMIT_SWITCH, PIN_DOOR_LIMIT_SWITCH );
-    
-    MCU_IO_SET( PORT_GREEN_LED, PIN_GREEN_LED, result );
-   
-    /*if ( appState == APP_RUN ) 
-    {
-
-    }*/
+  {   
+    // Open or close the door depending on the current value of the door limit 
+    // switch and depending on whether or not we're currently running
+    if ( appState == APP_RUN ) 
+    {      
+      /* TODO: Might not need to get the value at this point as we do this in 
+       * the ZB_ENTRY_EVENT and the MY_DOOR_CHECK_EVT as well
+       */
+      // Set the door control to the value we receive from the port and pin of 
+      // the door limit switch. 
+      prevDoorCheckVal = MCU_IO_GET( PORT_DOOR_LIMIT_SWITCH, PIN_DOOR_LIMIT_SWITCH );
+      MCU_IO_SET(
+           PORT_DOOR_CONTROL,
+           PIN_DOOR_CONTROL,
+           // Note that the value returned by MCU_IO_GET() may be higher than 1 
+           // (0x20 in our case), so we simply check if the returned value is 
+           // positive
+           prevDoorCheckVal > 0
+      );
+      
+      // Make sure there's a reload timer running for the MY_DOOR_CHECK_EVT so 
+      // the green LED gets updated
+      osal_start_reload_timer( sapi_TaskID, MY_DOOR_CHECK_EVT, myDoorCheckDelay );
+    }
   }
 }
 

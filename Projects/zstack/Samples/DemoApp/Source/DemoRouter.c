@@ -514,7 +514,7 @@ static uint8 readVoltage(void)
   /*
    * Use the ADC to read the bus voltage
    */
-  uint16 value = HalReadTemp();
+  uint16 value = HalReadVdd();
 
   // value now contains measurement of Vdd/3
   // 0 indicates 0V and 32767 indicates 1.25V
