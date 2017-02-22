@@ -240,6 +240,10 @@ void zb_HandleKeys( uint8 shift, uint8 keys )
     }
     if ( keys & HAL_KEY_SW_2 )
     {
+      if ( appState == APP_RUN ) 
+      {
+        HalLedSet( HAL_LED_1, HAL_LED_MODE_OFF );
+      }
     }
     if ( keys & HAL_KEY_SW_3 )
     {

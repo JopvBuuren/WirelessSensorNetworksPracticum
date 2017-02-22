@@ -1,94 +1,94 @@
-"D:\School\Jaar_3\WTWS\Z-Stack Mesh 1.0.0\Z-Stack Mesh 1.0.0\Projects\zstack\Samples\DemoApp\Source\DemoCoordinator.c"
+"D:\School\Jaar_3\WTWS\Projects\WirelessSensorNetworksPracticum\Projects\zstack\Samples\DemoApp\Source\DemoCoordinator.c"
 -std=c99
 -ferror-limit=100
 -I
-D:\School\Jaar_3\WTWS\Z-Stack Mesh 1.0.0\Z-Stack Mesh 1.0.0\Projects\zstack\Samples\DemoApp\CC2530DB
+D:\School\Jaar_3\WTWS\Projects\WirelessSensorNetworksPracticum\Projects\zstack\Samples\DemoApp\CC2530DB
 -I
-D:\School\Jaar_3\WTWS\Z-Stack Mesh 1.0.0\Z-Stack Mesh 1.0.0\Projects\zstack\Samples\DemoApp\CC2530DB\..\Source
+D:\School\Jaar_3\WTWS\Projects\WirelessSensorNetworksPracticum\Projects\zstack\Samples\DemoApp\CC2530DB\..\Source
 -I
-D:\School\Jaar_3\WTWS\Z-Stack Mesh 1.0.0\Z-Stack Mesh 1.0.0\Projects\zstack\Samples\DemoApp\CC2530DB\..\..\..\ZMain\TI2530DB
+D:\School\Jaar_3\WTWS\Projects\WirelessSensorNetworksPracticum\Projects\zstack\Samples\DemoApp\CC2530DB\..\..\..\ZMain\TI2530DB
 -I
-D:\School\Jaar_3\WTWS\Z-Stack Mesh 1.0.0\Z-Stack Mesh 1.0.0\Projects\zstack\Samples\DemoApp\CC2530DB\..\..\..\..\..\Components\hal\include
+D:\School\Jaar_3\WTWS\Projects\WirelessSensorNetworksPracticum\Projects\zstack\Samples\DemoApp\CC2530DB\..\..\..\..\..\Components\hal\include
 -I
-D:\School\Jaar_3\WTWS\Z-Stack Mesh 1.0.0\Z-Stack Mesh 1.0.0\Projects\zstack\Samples\DemoApp\CC2530DB\..\..\..\..\..\Components\hal\target\CC2530EB
+D:\School\Jaar_3\WTWS\Projects\WirelessSensorNetworksPracticum\Projects\zstack\Samples\DemoApp\CC2530DB\..\..\..\..\..\Components\hal\target\CC2530EB
 -I
-D:\School\Jaar_3\WTWS\Z-Stack Mesh 1.0.0\Z-Stack Mesh 1.0.0\Projects\zstack\Samples\DemoApp\CC2530DB\..\..\..\..\..\Components\mac\include
+D:\School\Jaar_3\WTWS\Projects\WirelessSensorNetworksPracticum\Projects\zstack\Samples\DemoApp\CC2530DB\..\..\..\..\..\Components\mac\include
 -I
-D:\School\Jaar_3\WTWS\Z-Stack Mesh 1.0.0\Z-Stack Mesh 1.0.0\Projects\zstack\Samples\DemoApp\CC2530DB\..\..\..\..\..\Components\mac\high_level
+D:\School\Jaar_3\WTWS\Projects\WirelessSensorNetworksPracticum\Projects\zstack\Samples\DemoApp\CC2530DB\..\..\..\..\..\Components\mac\high_level
 -I
-D:\School\Jaar_3\WTWS\Z-Stack Mesh 1.0.0\Z-Stack Mesh 1.0.0\Projects\zstack\Samples\DemoApp\CC2530DB\..\..\..\..\..\Components\mac\low_level\srf04
+D:\School\Jaar_3\WTWS\Projects\WirelessSensorNetworksPracticum\Projects\zstack\Samples\DemoApp\CC2530DB\..\..\..\..\..\Components\mac\low_level\srf04
 -I
-D:\School\Jaar_3\WTWS\Z-Stack Mesh 1.0.0\Z-Stack Mesh 1.0.0\Projects\zstack\Samples\DemoApp\CC2530DB\..\..\..\..\..\Components\mac\low_level\srf04\single_chip
+D:\School\Jaar_3\WTWS\Projects\WirelessSensorNetworksPracticum\Projects\zstack\Samples\DemoApp\CC2530DB\..\..\..\..\..\Components\mac\low_level\srf04\single_chip
 -I
-D:\School\Jaar_3\WTWS\Z-Stack Mesh 1.0.0\Z-Stack Mesh 1.0.0\Projects\zstack\Samples\DemoApp\CC2530DB\..\..\..\..\..\Components\mt
+D:\School\Jaar_3\WTWS\Projects\WirelessSensorNetworksPracticum\Projects\zstack\Samples\DemoApp\CC2530DB\..\..\..\..\..\Components\mt
 -I
-D:\School\Jaar_3\WTWS\Z-Stack Mesh 1.0.0\Z-Stack Mesh 1.0.0\Projects\zstack\Samples\DemoApp\CC2530DB\..\..\..\..\..\Components\osal\include
+D:\School\Jaar_3\WTWS\Projects\WirelessSensorNetworksPracticum\Projects\zstack\Samples\DemoApp\CC2530DB\..\..\..\..\..\Components\osal\include
 -I
-D:\School\Jaar_3\WTWS\Z-Stack Mesh 1.0.0\Z-Stack Mesh 1.0.0\Projects\zstack\Samples\DemoApp\CC2530DB\..\..\..\..\..\Components\services\saddr
+D:\School\Jaar_3\WTWS\Projects\WirelessSensorNetworksPracticum\Projects\zstack\Samples\DemoApp\CC2530DB\..\..\..\..\..\Components\services\saddr
 -I
-D:\School\Jaar_3\WTWS\Z-Stack Mesh 1.0.0\Z-Stack Mesh 1.0.0\Projects\zstack\Samples\DemoApp\CC2530DB\..\..\..\..\..\Components\services\sdata
+D:\School\Jaar_3\WTWS\Projects\WirelessSensorNetworksPracticum\Projects\zstack\Samples\DemoApp\CC2530DB\..\..\..\..\..\Components\services\sdata
 -I
-D:\School\Jaar_3\WTWS\Z-Stack Mesh 1.0.0\Z-Stack Mesh 1.0.0\Projects\zstack\Samples\DemoApp\CC2530DB\..\..\..\..\..\Components\stack\af
+D:\School\Jaar_3\WTWS\Projects\WirelessSensorNetworksPracticum\Projects\zstack\Samples\DemoApp\CC2530DB\..\..\..\..\..\Components\stack\af
 -I
-D:\School\Jaar_3\WTWS\Z-Stack Mesh 1.0.0\Z-Stack Mesh 1.0.0\Projects\zstack\Samples\DemoApp\CC2530DB\..\..\..\..\..\Components\stack\nwk
+D:\School\Jaar_3\WTWS\Projects\WirelessSensorNetworksPracticum\Projects\zstack\Samples\DemoApp\CC2530DB\..\..\..\..\..\Components\stack\nwk
 -I
-D:\School\Jaar_3\WTWS\Z-Stack Mesh 1.0.0\Z-Stack Mesh 1.0.0\Projects\zstack\Samples\DemoApp\CC2530DB\..\..\..\..\..\Components\stack\sapi
+D:\School\Jaar_3\WTWS\Projects\WirelessSensorNetworksPracticum\Projects\zstack\Samples\DemoApp\CC2530DB\..\..\..\..\..\Components\stack\sapi
 -I
-D:\School\Jaar_3\WTWS\Z-Stack Mesh 1.0.0\Z-Stack Mesh 1.0.0\Projects\zstack\Samples\DemoApp\CC2530DB\..\..\..\..\..\Components\stack\sec
+D:\School\Jaar_3\WTWS\Projects\WirelessSensorNetworksPracticum\Projects\zstack\Samples\DemoApp\CC2530DB\..\..\..\..\..\Components\stack\sec
 -I
-D:\School\Jaar_3\WTWS\Z-Stack Mesh 1.0.0\Z-Stack Mesh 1.0.0\Projects\zstack\Samples\DemoApp\CC2530DB\..\..\..\..\..\Components\stack\sys
+D:\School\Jaar_3\WTWS\Projects\WirelessSensorNetworksPracticum\Projects\zstack\Samples\DemoApp\CC2530DB\..\..\..\..\..\Components\stack\sys
 -I
-D:\School\Jaar_3\WTWS\Z-Stack Mesh 1.0.0\Z-Stack Mesh 1.0.0\Projects\zstack\Samples\DemoApp\CC2530DB\..\..\..\..\..\Components\stack\zdo
+D:\School\Jaar_3\WTWS\Projects\WirelessSensorNetworksPracticum\Projects\zstack\Samples\DemoApp\CC2530DB\..\..\..\..\..\Components\stack\zdo
 -I
-D:\School\Jaar_3\WTWS\Z-Stack Mesh 1.0.0\Z-Stack Mesh 1.0.0\Projects\zstack\Samples\DemoApp\CC2530DB\..\..\..\..\..\Components\zmac
+D:\School\Jaar_3\WTWS\Projects\WirelessSensorNetworksPracticum\Projects\zstack\Samples\DemoApp\CC2530DB\..\..\..\..\..\Components\zmac
 -I
-D:\School\Jaar_3\WTWS\Z-Stack Mesh 1.0.0\Z-Stack Mesh 1.0.0\Projects\zstack\Samples\DemoApp\CC2530DB\..\..\..\..\..\Components\zmac\f8w
+D:\School\Jaar_3\WTWS\Projects\WirelessSensorNetworksPracticum\Projects\zstack\Samples\DemoApp\CC2530DB\..\..\..\..\..\Components\zmac\f8w
 -I
 C:\Program Files (x86)\IAR Systems\Embedded Workbench 7.2\8051\inc
 -I
 C:\Program Files (x86)\IAR Systems\Embedded Workbench 7.2\8051\inc\clib
 -I
-D:\School\Jaar_3\WTWS\Z-Stack Mesh 1.0.0\Z-Stack Mesh 1.0.0\Projects\zstack\Samples\DemoApp\CC2530DB
+D:\School\Jaar_3\WTWS\Projects\WirelessSensorNetworksPracticum\Projects\zstack\Samples\DemoApp\CC2530DB
 -I
-D:\School\Jaar_3\WTWS\Z-Stack Mesh 1.0.0\Z-Stack Mesh 1.0.0\Projects\zstack\Samples\DemoApp\Source
+D:\School\Jaar_3\WTWS\Projects\WirelessSensorNetworksPracticum\Projects\zstack\Samples\DemoApp\Source
 -I
-D:\School\Jaar_3\WTWS\Z-Stack Mesh 1.0.0\Z-Stack Mesh 1.0.0\Projects\zstack\ZMain\TI2530DB
+D:\School\Jaar_3\WTWS\Projects\WirelessSensorNetworksPracticum\Projects\zstack\ZMain\TI2530DB
 -I
-D:\School\Jaar_3\WTWS\Z-Stack Mesh 1.0.0\Z-Stack Mesh 1.0.0\Components\hal\include
+D:\School\Jaar_3\WTWS\Projects\WirelessSensorNetworksPracticum\Components\hal\include
 -I
-D:\School\Jaar_3\WTWS\Z-Stack Mesh 1.0.0\Z-Stack Mesh 1.0.0\Components\hal\target\CC2530EB
+D:\School\Jaar_3\WTWS\Projects\WirelessSensorNetworksPracticum\Components\hal\target\CC2530EB
 -I
-D:\School\Jaar_3\WTWS\Z-Stack Mesh 1.0.0\Z-Stack Mesh 1.0.0\Components\mac\include
+D:\School\Jaar_3\WTWS\Projects\WirelessSensorNetworksPracticum\Components\mac\include
 -I
-D:\School\Jaar_3\WTWS\Z-Stack Mesh 1.0.0\Z-Stack Mesh 1.0.0\Components\mac\high_level
+D:\School\Jaar_3\WTWS\Projects\WirelessSensorNetworksPracticum\Components\mac\high_level
 -I
-D:\School\Jaar_3\WTWS\Z-Stack Mesh 1.0.0\Z-Stack Mesh 1.0.0\Components\mac\low_level\srf04
+D:\School\Jaar_3\WTWS\Projects\WirelessSensorNetworksPracticum\Components\mac\low_level\srf04
 -I
-D:\School\Jaar_3\WTWS\Z-Stack Mesh 1.0.0\Z-Stack Mesh 1.0.0\Components\mac\low_level\srf04\single_chip
+D:\School\Jaar_3\WTWS\Projects\WirelessSensorNetworksPracticum\Components\mac\low_level\srf04\single_chip
 -I
-D:\School\Jaar_3\WTWS\Z-Stack Mesh 1.0.0\Z-Stack Mesh 1.0.0\Components\mt
+D:\School\Jaar_3\WTWS\Projects\WirelessSensorNetworksPracticum\Components\mt
 -I
-D:\School\Jaar_3\WTWS\Z-Stack Mesh 1.0.0\Z-Stack Mesh 1.0.0\Components\osal\include
+D:\School\Jaar_3\WTWS\Projects\WirelessSensorNetworksPracticum\Components\osal\include
 -I
-D:\School\Jaar_3\WTWS\Z-Stack Mesh 1.0.0\Z-Stack Mesh 1.0.0\Components\services\saddr
+D:\School\Jaar_3\WTWS\Projects\WirelessSensorNetworksPracticum\Components\services\saddr
 -I
-D:\School\Jaar_3\WTWS\Z-Stack Mesh 1.0.0\Z-Stack Mesh 1.0.0\Components\services\sdata
+D:\School\Jaar_3\WTWS\Projects\WirelessSensorNetworksPracticum\Components\services\sdata
 -I
-D:\School\Jaar_3\WTWS\Z-Stack Mesh 1.0.0\Z-Stack Mesh 1.0.0\Components\stack\af
+D:\School\Jaar_3\WTWS\Projects\WirelessSensorNetworksPracticum\Components\stack\af
 -I
-D:\School\Jaar_3\WTWS\Z-Stack Mesh 1.0.0\Z-Stack Mesh 1.0.0\Components\stack\nwk
+D:\School\Jaar_3\WTWS\Projects\WirelessSensorNetworksPracticum\Components\stack\nwk
 -I
-D:\School\Jaar_3\WTWS\Z-Stack Mesh 1.0.0\Z-Stack Mesh 1.0.0\Components\stack\sapi
+D:\School\Jaar_3\WTWS\Projects\WirelessSensorNetworksPracticum\Components\stack\sapi
 -I
-D:\School\Jaar_3\WTWS\Z-Stack Mesh 1.0.0\Z-Stack Mesh 1.0.0\Components\stack\sec
+D:\School\Jaar_3\WTWS\Projects\WirelessSensorNetworksPracticum\Components\stack\sec
 -I
-D:\School\Jaar_3\WTWS\Z-Stack Mesh 1.0.0\Z-Stack Mesh 1.0.0\Components\stack\sys
+D:\School\Jaar_3\WTWS\Projects\WirelessSensorNetworksPracticum\Components\stack\sys
 -I
-D:\School\Jaar_3\WTWS\Z-Stack Mesh 1.0.0\Z-Stack Mesh 1.0.0\Components\stack\zdo
+D:\School\Jaar_3\WTWS\Projects\WirelessSensorNetworksPracticum\Components\stack\zdo
 -I
-D:\School\Jaar_3\WTWS\Z-Stack Mesh 1.0.0\Z-Stack Mesh 1.0.0\Components\zmac
+D:\School\Jaar_3\WTWS\Projects\WirelessSensorNetworksPracticum\Components\zmac
 -I
-D:\School\Jaar_3\WTWS\Z-Stack Mesh 1.0.0\Z-Stack Mesh 1.0.0\Components\zmac\f8w
+D:\School\Jaar_3\WTWS\Projects\WirelessSensorNetworksPracticum\Components\zmac\f8w
 -DHOLD_AUTO_START=1
 -DBUILD_ALL_DEVICES=1
 -DREFLECTOR=1
@@ -437,8 +437,8 @@ D:\School\Jaar_3\WTWS\Z-Stack Mesh 1.0.0\Z-Stack Mesh 1.0.0\Components\zmac\f8w
 -DZIGBEEPRO=1
 -DSECURE=0
 -DZG_SECURE_DYNAMIC=0
--DDEFAULT_CHANLIST=0x04000000
--DZDAPP_CONFIG_PAN_ID=0xABCD
+-DDEFAULT_CHANLIST=0x00100000
+-DZDAPP_CONFIG_PAN_ID=0x0DAD
 -DNWK_START_DELAY=100
 -DEXTENDED_JOINING_RANDOM_MASK=0x007F
 -DBEACON_REQUEST_DELAY=100
