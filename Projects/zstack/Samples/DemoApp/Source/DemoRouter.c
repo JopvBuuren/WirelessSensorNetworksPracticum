@@ -61,6 +61,10 @@
 #define MY_REPORT_EVT                       0x0002
 #define MY_FIND_COLLECTOR_EVT               0x0004
 
+// Default pins and ports
+#define INDICATOR_LED_PIN       1
+#define INDICAYOR_LED_PORT      2
+
 // ADC definitions for CC2430/CC2530 from the hal_adc.c file
 #if defined (HAL_MCU_CC2530)
 #define HAL_ADC_REF_125V    0x00    /* Internal 1.25V Reference */
@@ -85,6 +89,8 @@ static uint16 myBindRetryDelay =  2000;         // milliseconds
 static uint8 myStartRetryDelay =  10;           // milliseconds
 
 static uint16 parentShortAddr;
+
+static uint8 lightLevel =         105;
 
 /******************************************************************************
  * GLOBAL VARIABLES
@@ -120,6 +126,7 @@ void uartRxCB( uint8 port, uint8 event );
 static void sendReport(void);
 static int8 readTemp(void);
 static uint8 readVoltage(void);
+static bool isLight(void);
 
 /******************************************************************************
  * GLOBAL FUNCTIONS
@@ -146,6 +153,9 @@ void zb_HandleOsalEvent( uint16 event )
     // blind LED 1 to indicate joining a network
     HalLedBlink ( HAL_LED_1, 0, 50, 500 );
 
+    // Initialise the green LED as output
+    MCU_IO_DIR_OUTPUT( 1, 2 );
+    
     // Start the device
     appState = APP_START;
     zb_StartRequest();
@@ -206,6 +216,7 @@ void zb_HandleKeys( uint8 shift, uint8 keys )
   }
   if ( keys & HAL_KEY_SW_2 )
   {
+    
   }
 }
 
@@ -528,4 +539,24 @@ static uint8 readVoltage(void)
   #else
   return 0;
   #endif // CC2530
+}
+
+/******************************************************************************
+ * @fn          isLight
+ *
+ * @brief       check the connected LDR for lightlevels
+ *              returns true if light level exceeds set lightLevel
+ *
+ * @return      light state
+ */
+static bool isLight(void)
+{
+  /*
+   * Use the ADC to read the ldr
+   */
+  uint16 read = HalAdcRead( HAL_ADC_CHANNEL_5, HAL_ADC_RESOLUTION_8);
+  if(read > lightLevel){
+    return true;
+  }
+  return true;
 }
