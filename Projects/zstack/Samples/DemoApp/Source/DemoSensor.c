@@ -70,6 +70,10 @@
 #define HAL_ADC_CHN_VDD3    0x0f    /* Input channel: VDD/3 */
 #define HAL_ADC_CHN_TEMP    0x0e    /* Temperature sensor */
 #endif // HAL_MCU_CC2530
+   
+// Port and pin for green LED
+#define PORT_SIGNAL_LED                     1
+#define PIN_SIGNAL_LED                      2
 
 /******************************************************************************
  * LOCAL VARIABLES
@@ -81,24 +85,32 @@ static uint8 reportFailureNr =    0;
 static uint8 reportSkip =         0;
 static uint8 bindRetries =        0;
 
-static uint8 oldValues[SENSOR_REPORT_LENGTH];
 static uint16 myReportPeriod =    5000;        // milliseconds
 static uint16 myBindRetryDelay =  2000;        // milliseconds
 static uint8 myStartRetryDelay =    10;        // milliseconds
 
 static uint16 parentShortAddr;
 
+// Value of the door limit switch on the coordinator
+static uint8 doorLimitSwitchVal;
+
 /******************************************************************************
  * GLOBAL VARIABLES
  */
 // Inputs and Outputs for Sensor device
-#define NUM_OUT_CMD_SENSOR                1
-#define NUM_IN_CMD_SENSOR                 0
+#define NUM_OUT_CMD_SENSOR        1
+#define NUM_IN_CMD_SENSOR         1
+
+// List of output and input commands for Collector device
+const cId_t zb_InCmdList[NUM_IN_CMD_SENSOR] =
+{
+  DOOR_REPORT_CMD_ID
+};
 
 // List of output and input commands for Sensor device
 const cId_t zb_OutCmdList[NUM_OUT_CMD_SENSOR] =
 {
-  SENSOR_REPORT_CMD_ID
+  DOOR_SET_CMD_ID
 };
 
 // Define SimpleDescriptor for Sensor device
@@ -110,7 +122,7 @@ const SimpleDescriptionFormat_t zb_SimpleDesc =
   DEVICE_VERSION_SENSOR,      //  Device Version
   0,                          //  Reserved
   NUM_IN_CMD_SENSOR,          //  Number of Input Commands
-  (cId_t *) NULL,             //  Input Command List
+  (cId_t *) zb_InCmdList,     //  Input Command List
   NUM_OUT_CMD_SENSOR,         //  Number of Output Commands
   (cId_t *) zb_OutCmdList     //  Output Command List
 };
@@ -120,8 +132,7 @@ const SimpleDescriptionFormat_t zb_SimpleDesc =
  */
 void uartRxCB( uint8 port, uint8 event );
 static void sendReport(void);
-static int8 readTemp(void);
-static uint8 readVoltage(void);
+static void updateSignalLed(void);
 
 /******************************************************************************
  * GLOBAL FUNCTIONS
@@ -173,7 +184,7 @@ void zb_HandleOsalEvent( uint16 event )
 
     // Find and bind to a collector device
     appState = APP_BIND;
-    zb_BindDevice( TRUE, SENSOR_REPORT_CMD_ID, (uint8 *)NULL );
+    zb_BindDevice( TRUE, DOOR_SET_CMD_ID, (uint8 *)NULL );
   }
 }
 
@@ -208,6 +219,8 @@ void zb_HandleKeys( uint8 shift, uint8 keys )
     }
     if ( keys & HAL_KEY_SW_2 )
     {
+      updateSignalLed();
+      sendReport();
     }
 }
 
@@ -315,7 +328,7 @@ void zb_SendDataConfirm( uint8 handle, uint8 status )
        reportState = TRUE;
 
        // Delete previous binding
-       zb_BindDevice( FALSE, SENSOR_REPORT_CMD_ID, (uint8 *)NULL );
+       zb_BindDevice( FALSE, DOOR_SET_CMD_ID, (uint8 *)NULL );
 
        // Try binding to a new gateway
        osal_start_timerEx( sapi_TaskID, MY_FIND_COLLECTOR_EVT, myBindRetryDelay );
@@ -379,10 +392,26 @@ void zb_FindDeviceConfirm( uint8 searchType, uint8 *searchKey, uint8 *result )
  */
 void zb_ReceiveDataIndication( uint16 source, uint16 command, uint16 len, uint8 *pData  )
 {
+  // Can only get the DOOR_REPORT_CMD_ID from the coordinator in our 
+  // application, so don't have to check command id, source and length
   (void)source;
   (void)command;
   (void)len;
-  (void)pData;
+  
+  // Store the new value of the door limit switch
+  doorLimitSwitchVal = *pData;
+  // Update the signal LED
+  updateSignalLed();  
+}
+
+static void updateSignalLed(void) 
+{
+  // Set the signal LED to the value of the door limit switch
+  MCU_IO_SET(
+       PORT_SIGNAL_LED,
+       PIN_SIGNAL_LED,
+       doorLimitSwitchVal
+  );
 }
 
 /******************************************************************************
@@ -412,11 +441,12 @@ void uartRxCB( uint8 port, uint8 event )
  */
 static void sendReport(void)
 {
-  uint8 pData[SENSOR_REPORT_LENGTH];
+  /*uint8 pData[SENSOR_REPORT_LENGTH];*/
+  uint8 pData[DOOR_REPORT_LENGTH];
   static uint8 reportNr = 0;
   bool changed = false;
   uint8 txOptions;
-
+  /*
   // Read and report temperature value
   pData[SENSOR_TEMP_OFFSET] = readTemp();
   if(pData[SENSOR_TEMP_OFFSET] != oldValues[SENSOR_TEMP_OFFSET]){
@@ -431,6 +461,8 @@ static void sendReport(void)
   }
   pData[SENSOR_PARENT_OFFSET] =  HI_UINT16(parentShortAddr);
   pData[SENSOR_PARENT_OFFSET + 1] =  LO_UINT16(parentShortAddr);
+  */
+  pData[DOOR_STATE_OFFSET] = 1;
 
   if(reportSkip > 12 ){
     reportSkip = 0;
@@ -439,7 +471,7 @@ static void sendReport(void)
     reportSkip = reportSkip++;
   }
   
-  if(changed){
+  if(changed || true){
     reportSkip = 0;
     // Set ACK request on each ACK_INTERVAL report
     // If a report failed, set ACK request on next report
@@ -454,98 +486,7 @@ static void sendReport(void)
     }
     // Destination address is set to previously established binding
     // for the commandId.
-    zb_SendDataRequest( ZB_BINDING_ADDR, SENSOR_REPORT_CMD_ID, SENSOR_REPORT_LENGTH, pData, 0, txOptions, 0 );
+    zb_SendDataRequest( ZB_BINDING_ADDR, DOOR_SET_CMD_ID, DOOR_REPORT_LENGTH, pData, 0, txOptions, 0 );
     
   }
-}
-
-/******************************************************************************
- * @fn          readTemp
- *
- * @brief       read temperature from ADC
- *
- * @param       none
- *
- * @return      temperature
- */
-static int8 readTemp(void)
-{
-  static uint16 voltageAtTemp22;
-  static uint8 bCalibrate = TRUE; // Calibrate the first time the temp sensor is read
-  uint16 value;
-  int8 temp;
-
-  #if defined (HAL_MCU_CC2530)
-  /*
-   * Use the ADC to read the temperature
-   */
-  value = HalReadTemp();
-
-  // Use the 12 MSB of adcValue
-  value >>= 4;
-
-  /*
-   * These parameters are typical values and need to be calibrated
-   * See the datasheet for the appropriate chip for more details
-   * also, the math below may not be very accurate
-   */
-  /* Assume ADC = 1480 at 25C and ADC = 4/C */
-  #define VOLTAGE_AT_TEMP_25        1480
-  #define TEMP_COEFFICIENT          4
-
-  // Calibrate for 22C the first time the temp sensor is read.
-  // This will assume that the demo is started up in temperature of 22C
-  if ( bCalibrate ) {
-    voltageAtTemp22 = value;
-    bCalibrate = FALSE;
-  }
-
-  temp = 22 + ( (value - voltageAtTemp22) / TEMP_COEFFICIENT );
-
-  // Set 0C as minimum temperature, and 100C as max
-  if ( temp >= 100 )
-  {
-    return 100;
-  }
-  else if ( temp <= 0 ) {
-    return 0;
-  }
-  else {
-    return temp;
-  }
-  // Only CC2530 is supported
-  #else
-  return 0;
-  #endif
-}
-
-/******************************************************************************
- * @fn          readVoltage
- *
- * @brief       read voltage from ADC
- *
- * @param       none
- *
- * @return      voltage
- */
-static uint8 readVoltage(void)
-{
-  #if defined (HAL_MCU_CC2530)
-  /*
-   * Use the ADC to read the bus voltage
-   */
-  uint16 value = HalReadVdd();
-
-  // value now contains measurement of Vdd/3
-  // 0 indicates 0V and 32767 indicates 1.25V
-  // voltage = (value*3*1.25)/32767 volts
-  // we will multiply by this by 10 to allow units of 0.1 volts
-  value = value >> 6;   // divide first by 2^6
-  value = (uint16)(value * 37.5);
-  value = value >> 9;   // ...and later by 2^9...to prevent overflow during multiplication
-
-  return value;
-  #else
-  return 0;
-  #endif // CC2530
 }

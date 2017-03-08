@@ -63,14 +63,17 @@
 #define DEVICE_VERSION_COLLECTOR          1
 
 // Define the Command ID's used in this application
-#define SENSOR_REPORT_CMD_ID              2
-#define DUMMY_REPORT_CMD_ID               3
+#define DOOR_REPORT_CMD_ID                2
+#define LIGHT_REPORT_CMD_ID               3
+#define DOOR_SET_CMD_ID                   4
+#define LIGHT_SET_CMD_ID                  5
 
-// Sensor report data format
-#define SENSOR_TEMP_OFFSET                0
-#define SENSOR_VOLTAGE_OFFSET             1
-#define SENSOR_PARENT_OFFSET              2
-#define SENSOR_REPORT_LENGTH              4
+// Door data format (both for report as for setting data)
+#define DOOR_STATE_OFFSET                 0
+#define DOOR_REPORT_LENGTH                1
+// Light data format (both for report as for setting data)
+#define LIGHT_STATE_OFFSET                0
+#define LIGHT_REPORT_LENGTH               1
 
 #define RX_BUF_LEN                        128
 

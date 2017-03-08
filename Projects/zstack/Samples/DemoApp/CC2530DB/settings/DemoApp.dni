@@ -12,7 +12,7 @@ TriggerName=main
 LimitSize=0
 ByteLimit=50
 [DebugChecksum]
-Checksum=-1887518798
+Checksum=-236114555
 [CallStack]
 ShowArgs=0
 [Disassembly]
@@ -46,12 +46,6 @@ Enabled=0
 ShowSource=1
 [Simulator]
 Freq=50000000
-[Breakpoints]
-Bp0=_ "STD_CODE" "{$PROJ_DIR$\..\Source\DemoSensor.c}.503.3" 0 0 0 0 "" 0 ""
-Count=1
-[ChipconEmu]
-Stop timers on halt=0
-Leave target running=1
 [Log file]
 LoggingEnabled=_ 0
 LogFile=_ ""
@@ -59,6 +53,14 @@ Category=_ 0
 [TermIOLog]
 LoggingEnabled=_ 0
 LogFile=_ ""
+[Breakpoints]
+Bp0=_ "STD_CODE" "{$PROJ_DIR$\..\Source\DemoSensor.c}.492.1" 0 0 0 0 "" 0 ""
+Bp1=_ "STD_CODE" "{$PROJ_DIR$\..\Source\DemoCoordinator.c}.374.1" 0 0 0 0 "" 0 ""
+Bp2=_ "STD_CODE" "{$PROJ_DIR$\..\Source\DemoCoordinator.c}.428.3" 0 0 0 0 "" 0 ""
+Count=3
+[ChipconEmu]
+Stop timers on halt=0
+Leave target running=1
 [Aliases]
 Count=0
 SuppressDialog=0
