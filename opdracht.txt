@@ -1,0 +1,32 @@
+Coordinator 
+	- Ontvangt bericht die lamp (LED) aan/uit kan zetten
+	- Ontvangt bericht die slot kan openen/sluiten
+
+Router
+	- Bij indrukken van KEY2 en LDR donker -> Lamp aan
+	- Bij indrukken van KEY2 of LDR licht -> Lamp uit
+	- Signaal-LED op node 2 als indicatie voor lamp
+
+End device
+	- Bij indrukken van KEY2 -> toggle slot
+	- Signaal-LED geeft aan of slot gesloten is (gesloten = uit)
+
+Common
+	- Beveiliging netwerk in zb_HandleOsalEvent() ZB_ENTRY_EVENT (of zb_StartConfirm()?)
+
+
+=========Lamp init=========
+
+
+=========Slot init=========
+1. End Device bind met Coordinator
+2. Coordinator zb_BindConfirm stuurt state van slot naar End Device
+3. Send timeout of niet succes -> Opnieuw
+4. End Device weet nu state van slot en kan signaal-LED setten
+=========Slot toggle=========
+1. End Device weet huidige state en stuurt nieuwe state naar coordinator
+2. Send timeout of niet succes -> Opnieuw
+3. Coordinator stuurt nieuwe slot state als deze verandert
+4. Send timeout of niet succes -> Opnieuw
+5. End Device weet nu state van slot en kan signaal-LED setten
+

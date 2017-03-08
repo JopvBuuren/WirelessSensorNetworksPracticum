@@ -95,8 +95,8 @@
 #define PORT_DOOR_LIMIT_SWITCH              0
 #define PIN_DOOR_LIMIT_SWITCH               5
 // Port and pin for green LED
-#define PORT_GREEN_LED                      1
-#define PIN_GREEN_LED                       2
+#define PORT_GREEN_LED                      0
+#define PIN_GREEN_LED                       4
 // Port and pin for door control
 #define PORT_DOOR_CONTROL                   0
 #define PIN_DOOR_CONTROL                    7
@@ -194,7 +194,7 @@ void zb_HandleOsalEvent( uint16 event )
     MCU_IO_DIR_OUTPUT( PORT_DOOR_CONTROL, PIN_DOOR_CONTROL );
     
     // Set the previous door check value
-    prevDoorCheckVal = MCU_IO_GET( PORT_DOOR_LIMIT_SWITCH, PIN_DOOR_LIMIT_SWITCH );
+    prevDoorCheckVal = MCU_IO_GET_SIMPLE( PORT_DOOR_LIMIT_SWITCH, PIN_DOOR_LIMIT_SWITCH );
 
     // blind LED 1 to indicate starting/joining a network
     HalLedBlink ( HAL_LED_1, 0, 50, 500 );
@@ -213,13 +213,13 @@ void zb_HandleOsalEvent( uint16 event )
   if ( event & MY_DOOR_CHECK_EVT ) 
   {
     // Check if the door limit switch has changed
-    uint8 doorCheckVal = MCU_IO_GET( PORT_DOOR_LIMIT_SWITCH, PIN_DOOR_LIMIT_SWITCH );
+    uint8 doorCheckVal = MCU_IO_GET_SIMPLE( PORT_DOOR_LIMIT_SWITCH, PIN_DOOR_LIMIT_SWITCH );
     if ( prevDoorCheckVal != doorCheckVal ) {
       // Set the green LED
       MCU_IO_SET(
            PORT_GREEN_LED,
            PIN_GREEN_LED,
-           doorCheckVal > 0
+           doorCheckVal
       );
       
       prevDoorCheckVal = doorCheckVal;
@@ -283,14 +283,11 @@ void zb_HandleKeys( uint8 shift, uint8 keys )
        */
       // Set the door control to the value we receive from the port and pin of 
       // the door limit switch. 
-      prevDoorCheckVal = MCU_IO_GET( PORT_DOOR_LIMIT_SWITCH, PIN_DOOR_LIMIT_SWITCH );
+      prevDoorCheckVal = MCU_IO_GET_SIMPLE( PORT_DOOR_LIMIT_SWITCH, PIN_DOOR_LIMIT_SWITCH );
       MCU_IO_SET(
            PORT_DOOR_CONTROL,
            PIN_DOOR_CONTROL,
-           // Note that the value returned by MCU_IO_GET() may be higher than 1 
-           // (0x20 in our case), so we simply check if the returned value is 
-           // positive
-           prevDoorCheckVal > 0
+           !prevDoorCheckVal
       );
       
       // Make sure there's a reload timer running for the MY_DOOR_CHECK_EVT so 

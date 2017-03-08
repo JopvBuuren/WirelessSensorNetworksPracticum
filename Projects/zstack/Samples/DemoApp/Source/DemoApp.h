@@ -81,6 +81,14 @@
 #define APP_RUN                             4    // Node is in running state
 
 /******************************************************************************
+ * GPIO PINS
+ */
+// Macro for getting a certain port/pin, simplified to 0 or 1 (as MCU_IO_GET can 
+// return a value greater than 1) 
+#define MCU_IO_GET_SIMPLE(port, pin) MCU_IO_GET(port, pin) > 0
+
+
+/******************************************************************************
  * PUBLIC FUNCTIONS
  */
 
