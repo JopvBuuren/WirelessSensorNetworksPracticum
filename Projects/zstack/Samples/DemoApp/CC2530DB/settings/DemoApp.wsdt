@@ -3,7 +3,7 @@
 <Workspace>
   <ConfigDictionary>
     
-  <CurrentConfigs><Project>DemoApp/CoordinatorEB</Project></CurrentConfigs></ConfigDictionary>
+  <CurrentConfigs><Project>DemoApp/RouterEB</Project></CurrentConfigs></ConfigDictionary>
   <Desktop>
     <Static>
       <Workspace>
@@ -78,7 +78,7 @@
       
       
       
-    <Top><Row0><Sizes><Toolbar-04F9C5D0><key>iaridepm.enu1</key></Toolbar-04F9C5D0></Sizes></Row0></Top><Left><Row0><Sizes><Wnd0><Rect><Top>-2</Top><Left>-2</Left><Bottom>568</Bottom><Right>458</Right><x>-2</x><y>-2</y><xscreen>106</xscreen><yscreen>118</yscreen><sizeHorzCX>69010</sizeHorzCX><sizeHorzCY>143727</sizeHorzCY><sizeVertCX>299479</sizeVertCX><sizeVertCY>694275</sizeVertCY></Rect></Wnd0></Sizes></Row0></Left><Right><Row0><Sizes/></Row0></Right><Bottom><Row0><Sizes><Wnd1><Rect><Top>-2</Top><Left>-2</Left><Bottom>208</Bottom><Right>1538</Right><x>-2</x><y>-2</y><xscreen>1540</xscreen><yscreen>210</yscreen><sizeHorzCX>1002604</sizeHorzCX><sizeHorzCY>255786</sizeHorzCY><sizeVertCX>130208</sizeVertCX><sizeVertCY>255786</sizeVertCY></Rect></Wnd1></Sizes></Row0></Bottom><Float><Sizes/></Float></Positions>
+    <Top><Row0><Sizes><Toolbar-04F9C5D0><key>iaridepm.enu1</key></Toolbar-04F9C5D0></Sizes></Row0></Top><Left><Row0><Sizes><Wnd0><Rect><Top>-2</Top><Left>-2</Left><Bottom>281</Bottom><Right>458</Right><x>-2</x><y>-2</y><xscreen>106</xscreen><yscreen>118</yscreen><sizeHorzCX>93310</sizeHorzCX><sizeHorzCY>220974</sizeHorzCY><sizeVertCX>404930</sizeVertCX><sizeVertCY>529963</sizeVertCY></Rect></Wnd0></Sizes></Row0></Left><Right><Row0><Sizes/></Row0></Right><Bottom><Row0><Sizes><Wnd1><Rect><Top>-2</Top><Left>-2</Left><Bottom>208</Bottom><Right>1138</Right><x>-2</x><y>-2</y><xscreen>1140</xscreen><yscreen>210</yscreen><sizeHorzCX>1003521</sizeHorzCX><sizeHorzCY>393258</sizeHorzCY><sizeVertCX>176056</sizeVertCX><sizeVertCY>393258</sizeVertCY></Rect></Wnd1></Sizes></Row0></Bottom><Float><Sizes/></Float></Positions>
   </Desktop>
 </Workspace>
 
