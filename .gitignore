@@ -38,3 +38,13 @@
 *.bat
 *.r51
 *.s51
+*.map
+*.pbd
+*.browse
+*.pbi	
+*.dep
+*.dbgdt
+*.dni
+*.wsdt
+*.cout
+*.hex
