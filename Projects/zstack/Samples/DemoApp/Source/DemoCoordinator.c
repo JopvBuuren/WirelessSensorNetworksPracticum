@@ -95,8 +95,8 @@
 #define PORT_DOOR_LIMIT_SWITCH              0
 #define PIN_DOOR_LIMIT_SWITCH               5
 // Port and pin for green LED
-#define PORT_GREEN_LED                      1
-#define PIN_GREEN_LED                       2
+#define PORT_GREEN_LED                      0
+#define PIN_GREEN_LED                       4
 // Port and pin for door control
 #define PORT_DOOR_CONTROL                   0
 #define PIN_DOOR_CONTROL                    7
@@ -104,13 +104,6 @@
 /******************************************************************************
  * TYPEDEFS
  */
-typedef struct
-{
-  uint16              source;
-  uint16              parent;
-  uint8               temp;
-  uint8               voltage;
-} gtwData_t;
 
 /******************************************************************************
  * LOCAL VARIABLES
@@ -121,27 +114,32 @@ static uint8 myStartRetryDelay =    10;          // milliseconds
 static uint8 myDoorCheckDelay =     100;         // milliseconds
 static uint8 prevDoorCheckVal;
 
-static gtwData_t gtwData;
-
 /******************************************************************************
  * LOCAL FUNCTIONS
  */
 static uint8 calcFCS(uint8 *pBuf, uint8 len);
 static void sysPingReqRcvd(void);
 static void sysPingRsp(void);
-static void sendGtwReport(gtwData_t *gtwData);
 
 /******************************************************************************
  * GLOBAL VARIABLES
  */
 // Inputs and Outputs for Collector device
-#define NUM_OUT_CMD_COLLECTOR           0
-#define NUM_IN_CMD_COLLECTOR            1
-
+#define NUM_OUT_CMD_COLLECTOR           2
+#define NUM_IN_CMD_COLLECTOR            2
+   
 // List of output and input commands for Collector device
 const cId_t zb_InCmdList[NUM_IN_CMD_COLLECTOR] =
 {
-  SENSOR_REPORT_CMD_ID,
+   DOOR_SET_CMD_ID,
+   LIGHT_SET_CMD_ID
+};
+
+// List of output and input commands for Collector device
+const cId_t zb_OutCmdList[NUM_OUT_CMD_COLLECTOR] =
+{
+   DOOR_REPORT_CMD_ID,
+   LIGHT_REPORT_CMD_ID
 };
 
 // Define SimpleDescriptor for Collector device
@@ -155,7 +153,7 @@ const SimpleDescriptionFormat_t zb_SimpleDesc =
   NUM_IN_CMD_COLLECTOR,       //  Number of Input Commands
   (cId_t *) zb_InCmdList,     //  Input Command List
   NUM_OUT_CMD_COLLECTOR,      //  Number of Output Commands
-  (cId_t *) NULL              //  Output Command List
+  (cId_t *) zb_OutCmdList     //  Output Command List
 };
 
 /******************************************************************************
@@ -194,7 +192,7 @@ void zb_HandleOsalEvent( uint16 event )
     MCU_IO_DIR_OUTPUT( PORT_DOOR_CONTROL, PIN_DOOR_CONTROL );
     
     // Set the previous door check value
-    prevDoorCheckVal = MCU_IO_GET( PORT_DOOR_LIMIT_SWITCH, PIN_DOOR_LIMIT_SWITCH );
+    prevDoorCheckVal = MCU_IO_GET_SIMPLE( PORT_DOOR_LIMIT_SWITCH, PIN_DOOR_LIMIT_SWITCH );
 
     // blind LED 1 to indicate starting/joining a network
     HalLedBlink ( HAL_LED_1, 0, 50, 500 );
@@ -213,13 +211,13 @@ void zb_HandleOsalEvent( uint16 event )
   if ( event & MY_DOOR_CHECK_EVT ) 
   {
     // Check if the door limit switch has changed
-    uint8 doorCheckVal = MCU_IO_GET( PORT_DOOR_LIMIT_SWITCH, PIN_DOOR_LIMIT_SWITCH );
+    uint8 doorCheckVal = MCU_IO_GET_SIMPLE( PORT_DOOR_LIMIT_SWITCH, PIN_DOOR_LIMIT_SWITCH );
     if ( prevDoorCheckVal != doorCheckVal ) {
       // Set the green LED
       MCU_IO_SET(
            PORT_GREEN_LED,
            PIN_GREEN_LED,
-           doorCheckVal > 0
+           doorCheckVal
       );
       
       prevDoorCheckVal = doorCheckVal;
@@ -283,14 +281,11 @@ void zb_HandleKeys( uint8 shift, uint8 keys )
        */
       // Set the door control to the value we receive from the port and pin of 
       // the door limit switch. 
-      prevDoorCheckVal = MCU_IO_GET( PORT_DOOR_LIMIT_SWITCH, PIN_DOOR_LIMIT_SWITCH );
+      prevDoorCheckVal = MCU_IO_GET_SIMPLE( PORT_DOOR_LIMIT_SWITCH, PIN_DOOR_LIMIT_SWITCH );
       MCU_IO_SET(
            PORT_DOOR_CONTROL,
            PIN_DOOR_CONTROL,
-           // Note that the value returned by MCU_IO_GET() may be higher than 1 
-           // (0x20 in our case), so we simply check if the returned value is 
-           // positive
-           prevDoorCheckVal > 0
+           !prevDoorCheckVal
       );
       
       // Make sure there's a reload timer running for the MY_DOOR_CHECK_EVT so 
@@ -416,16 +411,21 @@ void zb_ReceiveDataIndication( uint16 source, uint16 command, uint16 len, uint8 
   (void)command;
   (void)len;
 
-  gtwData.parent = BUILD_UINT16(pData[SENSOR_PARENT_OFFSET+1], pData[SENSOR_PARENT_OFFSET]);
-  gtwData.source = source;
-  gtwData.temp = *pData;
-  gtwData.voltage = *(pData+SENSOR_VOLTAGE_OFFSET);
-
+  if ( command == DOOR_SET_CMD_ID )
+  {
+    prevDoorCheckVal = MCU_IO_GET_SIMPLE( PORT_DOOR_LIMIT_SWITCH, PIN_DOOR_LIMIT_SWITCH );
+    MCU_IO_SET(
+         PORT_DOOR_CONTROL,
+         PIN_DOOR_CONTROL,
+         !prevDoorCheckVal
+    );
+  } 
+  else 
+  {
+    
+  }
   // Flash LED 2 once to indicate data reception
   HalLedSet ( HAL_LED_2, HAL_LED_MODE_FLASH );
-
-  // Send gateway report
-  sendGtwReport(&gtwData);
 }
 
 /******************************************************************************
@@ -509,54 +509,6 @@ static void sysPingRsp(void)
 
   // Write frame to UART
   HalUARTWrite(HAL_UART_PORT_0,pBuf, SYS_PING_RSP_LENGTH);
-}
-
-/******************************************************************************
- * @fn          sendGtwReport
- *
- * @brief       Build and send gateway report
- *
- * @param       none
- *
- * @return      none
- */
-static void sendGtwReport(gtwData_t *gtwData)
-{
-  uint8 pFrame[ZB_RECV_LENGTH];
-
-  // Start of Frame Delimiter
-  pFrame[FRAME_SOF_OFFSET] = CPT_SOP; // Start of Frame Delimiter
-
-  // Length
-  pFrame[FRAME_LENGTH_OFFSET] = 10;
-
-  // Command type
-  pFrame[FRAME_CMD0_OFFSET] = LO_UINT16(ZB_RECEIVE_DATA_INDICATION);
-  pFrame[FRAME_CMD1_OFFSET] = HI_UINT16(ZB_RECEIVE_DATA_INDICATION);
-
-  // Source address
-  pFrame[FRAME_DATA_OFFSET + ZB_RECV_SRC_OFFSET] = LO_UINT16(gtwData->source);
-  pFrame[FRAME_DATA_OFFSET + ZB_RECV_SRC_OFFSET+ 1] = HI_UINT16(gtwData->source);
-
-  // Command ID
-  pFrame[FRAME_DATA_OFFSET + ZB_RECV_CMD_OFFSET] = LO_UINT16(SENSOR_REPORT_CMD_ID);
-  pFrame[FRAME_DATA_OFFSET + ZB_RECV_CMD_OFFSET+ 1] = HI_UINT16(SENSOR_REPORT_CMD_ID);
-
-  // Length
-  pFrame[FRAME_DATA_OFFSET + ZB_RECV_LEN_OFFSET] = LO_UINT16(4);
-  pFrame[FRAME_DATA_OFFSET + ZB_RECV_LEN_OFFSET+ 1] = HI_UINT16(4);
-
-  // Data
-  pFrame[FRAME_DATA_OFFSET + ZB_RECV_DATA_OFFSET] = gtwData->temp;
-  pFrame[FRAME_DATA_OFFSET + ZB_RECV_DATA_OFFSET+ 1] = gtwData->voltage;
-  pFrame[FRAME_DATA_OFFSET + ZB_RECV_DATA_OFFSET+ 2] = LO_UINT16(gtwData->parent);
-  pFrame[FRAME_DATA_OFFSET + ZB_RECV_DATA_OFFSET+ 3] = HI_UINT16(gtwData->parent);
-
-  // Frame Check Sequence
-  pFrame[ZB_RECV_LENGTH - 1] = calcFCS(&pFrame[FRAME_LENGTH_OFFSET], (ZB_RECV_LENGTH - 2) );
-
-  // Write report to UART
-  HalUARTWrite(HAL_UART_PORT_0,pFrame, ZB_RECV_LENGTH);
 }
 
 /******************************************************************************
