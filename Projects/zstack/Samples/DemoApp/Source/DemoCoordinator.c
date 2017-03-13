@@ -89,7 +89,11 @@
 
 // Application osal event identifiers
 #define MY_START_EVT                        0x0001
-#define MY_DOOR_CHECK_EVT                   0x0002 // Event foor door check
+#define MY_DOOR_CHECK_EVT                   0x0002 // Event for door check
+#define MY_FIND_SENSOR_EVT                  0x0004
+#define MY_FIND_ROUTER_EVT                  0x0008
+#define MY_DOOR_REPORT_TIMEOUT_EVT          0x0016
+#define MY_LIGHT_REPORT_TIMEOUT_EVT         0x0032
 
 // Port and pin for door limit switch
 #define PORT_DOOR_LIMIT_SWITCH              0
@@ -101,6 +105,14 @@
 #define PORT_DOOR_CONTROL                   0
 #define PIN_DOOR_CONTROL                    7
 
+// Data handles
+#define HANDLE_DOOR_CHECK                   0x0001
+#define HANDLE_LIGHT_CHECK                  0x0002
+
+// Report failure related values
+#define REPORT_FAILURE_LIMIT                4
+#define BIND_RETRY_LIMIT                    2
+
 /******************************************************************************
  * TYPEDEFS
  */
@@ -110,9 +122,17 @@
  */
 static uint8 appState =             APP_INIT;
 static uint8 myStartRetryDelay =    10;          // milliseconds
+static uint16 myBindRetryDelay =    2000;        // milliseconds
 
 static uint8 myDoorCheckDelay =     100;         // milliseconds
 static uint8 prevDoorCheckVal;
+
+// Report failure related values
+static uint8 doorReportFailureNr =  0;
+static uint8 lightReportFailureNr = 0;
+static uint8 doorBindRetries =      0;
+static uint8 lightBindRetries =     0;
+static uint8 myReportTimeout =      200;         // milliseconds
 
 /******************************************************************************
  * LOCAL FUNCTIONS
@@ -120,22 +140,24 @@ static uint8 prevDoorCheckVal;
 static uint8 calcFCS(uint8 *pBuf, uint8 len);
 static void sysPingReqRcvd(void);
 static void sysPingRsp(void);
+static void sendDoorReport(void);
+static void sendLightReport(void);
 
 /******************************************************************************
  * GLOBAL VARIABLES
  */
 // Inputs and Outputs for Collector device
-#define NUM_OUT_CMD_COLLECTOR           2
 #define NUM_IN_CMD_COLLECTOR            2
+#define NUM_OUT_CMD_COLLECTOR           2
    
-// List of output and input commands for Collector device
+// List of input commands for Collector device
 const cId_t zb_InCmdList[NUM_IN_CMD_COLLECTOR] =
 {
    DOOR_SET_CMD_ID,
    LIGHT_SET_CMD_ID
 };
 
-// List of output and input commands for Collector device
+// List of output commands for Collector device
 const cId_t zb_OutCmdList[NUM_OUT_CMD_COLLECTOR] =
 {
    DOOR_REPORT_CMD_ID,
@@ -185,7 +207,7 @@ void zb_HandleOsalEvent( uint16 event )
     
     // Initialise the door limit switch as input and internal pull-up activated
     //MCU_IO_INPUT( PORT_DOOR_LIMIT_SWITCH, PIN_DOOR_LIMIT_SWITCH, MCU_IO_PULLUP );
-    MCU_IO_DIR_INPUT( PORT_DOOR_LIMIT_SWITCH, PIN_DOOR_LIMIT_SWITCH );
+    MCU_IO_DIR_INPUT( PORT_DOOR_LIMIT_SWITCH, PIN_DOOR_LIMIT_SWITCH ); // TODO: Check if necessary, should be input by default. Maybe pullup?
     // Initialise the green LED as output
     MCU_IO_DIR_OUTPUT( PORT_GREEN_LED, PIN_GREEN_LED );
     // Initialise the door control as output
@@ -222,10 +244,34 @@ void zb_HandleOsalEvent( uint16 event )
       
       prevDoorCheckVal = doorCheckVal;
       
+      // Door value changed, so send the door report to let the bound device 
+      // know
+      sendDoorReport();
+      
       // No longer have to check whether or not the door limit switch changes, 
       // so stop the timer
       osal_stop_timerEx( sapi_TaskID, MY_DOOR_CHECK_EVT );
     }
+  }
+  
+  if ( event & MY_FIND_SENSOR_EVT )
+  {
+    zb_BindDevice( TRUE, DOOR_REPORT_CMD_ID, (uint8 *)NULL );
+  }
+  
+  if ( event & MY_FIND_ROUTER_EVT )
+  {
+    zb_BindDevice( TRUE, LIGHT_REPORT_CMD_ID, (uint8 *)NULL );
+  }
+  
+  if ( event & MY_DOOR_REPORT_TIMEOUT_EVT )
+  {
+    /* TODO: Determine what to do on a timeout; handle like a report fail? */
+  }
+  
+  if ( event & MY_LIGHT_REPORT_TIMEOUT_EVT ) 
+  {
+    /* TODO: Determine what to do on a timeout; handle like a report fail? */
   }
 }
 
@@ -272,16 +318,14 @@ void zb_HandleKeys( uint8 shift, uint8 keys )
   }
   if ( keys & HAL_KEY_SW_2 )
   {   
+    /* TODO: Remove code, should not do anything on a key press */
+    
     // Open or close the door depending on the current value of the door limit 
     // switch and depending on whether or not we're currently running
     if ( appState == APP_RUN ) 
-    {      
-      /* TODO: Might not need to get the value at this point as we do this in 
-       * the ZB_ENTRY_EVENT and the MY_DOOR_CHECK_EVT as well
-       */
+    {
       // Set the door control to the value we receive from the port and pin of 
-      // the door limit switch. 
-      prevDoorCheckVal = MCU_IO_GET_SIMPLE( PORT_DOOR_LIMIT_SWITCH, PIN_DOOR_LIMIT_SWITCH );
+      // the door limit switch
       MCU_IO_SET(
            PORT_DOOR_CONTROL,
            PIN_DOOR_CONTROL,
@@ -289,7 +333,7 @@ void zb_HandleKeys( uint8 shift, uint8 keys )
       );
       
       // Make sure there's a reload timer running for the MY_DOOR_CHECK_EVT so 
-      // the green LED gets updated
+      // we can send the door report when door limit switch changes
       osal_start_reload_timer( sapi_TaskID, MY_DOOR_CHECK_EVT, myDoorCheckDelay );
     }
   }
@@ -317,6 +361,10 @@ void zb_StartConfirm( uint8 status )
 
     // Change application state
     appState = APP_RUN;
+    
+    // Set events to bind to a sensor and a router
+    osal_set_event( sapi_TaskID, MY_FIND_SENSOR_EVT );
+    osal_set_event( sapi_TaskID, MY_FIND_ROUTER_EVT );
   }
   else
   {
@@ -337,9 +385,63 @@ void zb_StartConfirm( uint8 status )
  * @return      none
  */
 void zb_SendDataConfirm( uint8 handle, uint8 status )
-{
-  (void)handle;
-  (void)status;
+{  
+  // Stop the report timeout timers
+  osal_stop_timerEx( sapi_TaskID, MY_DOOR_REPORT_TIMEOUT_EVT );
+  osal_stop_timerEx( sapi_TaskID, MY_LIGHT_REPORT_TIMEOUT_EVT );
+  
+  if(status != ZB_SUCCESS)
+  {
+    // Check which data this is
+    if ( handle == HANDLE_DOOR_CHECK )
+    {
+      if ( ++doorReportFailureNr >= REPORT_FAILURE_LIMIT )
+      {
+         // Delete previous binding
+         zb_BindDevice( FALSE, DOOR_REPORT_CMD_ID, (uint8 *)NULL );
+
+         // Try binding to a new gateway
+         osal_start_timerEx( sapi_TaskID, MY_FIND_SENSOR_EVT, myBindRetryDelay );
+         doorReportFailureNr = 0;
+      }
+      else
+      {
+        // Send door report again
+        sendDoorReport();
+      }
+    }
+    else if ( handle == HANDLE_LIGHT_CHECK ) 
+    {
+      if ( ++lightReportFailureNr >= REPORT_FAILURE_LIMIT )
+      {
+         // Delete previous binding
+         zb_BindDevice( FALSE, LIGHT_REPORT_CMD_ID, (uint8 *)NULL );
+
+         // Try binding to a new gateway
+         osal_start_timerEx( sapi_TaskID, MY_FIND_ROUTER_EVT, myBindRetryDelay );
+         lightReportFailureNr = 0;
+      }
+      else 
+      {
+        // Send light report again
+        sendLightReport();
+      }
+    }
+  }
+  // status == SUCCESS
+  else
+  {
+    if ( handle == HANDLE_DOOR_CHECK ) 
+    {
+      // Reset failure counter
+      doorReportFailureNr = 0;
+    }
+    else if (handle == HANDLE_LIGHT_CHECK )
+    {
+      // Reset failure counter
+      lightReportFailureNr = 0;
+    }
+  }
 }
 
 /******************************************************************************
@@ -355,8 +457,50 @@ void zb_SendDataConfirm( uint8 handle, uint8 status )
  */
 void zb_BindConfirm( uint16 commandId, uint8 status )
 {
-  (void)commandId;
-  (void)status;
+  if( status == ZB_SUCCESS )
+  {    
+    // Check which command is now bound
+    if ( commandId == DOOR_REPORT_CMD_ID )
+    {
+      // Send door report right away
+      sendDoorReport();
+    }
+    else if ( commandId == LIGHT_REPORT_CMD_ID ) 
+    {
+      // Send light report right away
+      sendLightReport();
+    }
+  }
+  else
+  {
+    // Increase the bind retries value for given command id
+    if ( commandId == DOOR_REPORT_CMD_ID ) 
+    {
+      doorBindRetries++;
+    }
+    else if ( commandId == LIGHT_REPORT_CMD_ID )
+    {
+      lightBindRetries++;
+    }
+    
+    // Check if we have to reset the system
+    if ( (doorBindRetries >= BIND_RETRY_LIMIT) || (lightBindRetries >= BIND_RETRY_LIMIT) ) {
+      // Reset the system
+      zb_SystemReset();
+    }
+    else
+    {
+      // Bind again after a given delay for given command id
+      if ( commandId == DOOR_REPORT_CMD_ID )
+      {
+        osal_start_timerEx( sapi_TaskID, MY_FIND_SENSOR_EVT, myBindRetryDelay );
+      }
+      else if ( commandId == LIGHT_REPORT_CMD_ID ) 
+      {
+        osal_start_timerEx( sapi_TaskID, MY_FIND_ROUTER_EVT, myBindRetryDelay );        
+      }
+    }
+  }
 }
 
 /******************************************************************************
@@ -408,24 +552,63 @@ void zb_FindDeviceConfirm( uint8 searchType, uint8 *searchKey, uint8 *result )
  */
 void zb_ReceiveDataIndication( uint16 source, uint16 command, uint16 len, uint8 *pData  )
 {
-  (void)command;
-  (void)len;
-
+  // Check which command this is
   if ( command == DOOR_SET_CMD_ID )
-  {
-    prevDoorCheckVal = MCU_IO_GET_SIMPLE( PORT_DOOR_LIMIT_SWITCH, PIN_DOOR_LIMIT_SWITCH );
-    MCU_IO_SET(
-         PORT_DOOR_CONTROL,
-         PIN_DOOR_CONTROL,
-         !prevDoorCheckVal
-    );
+  {    
+    // Validate that the right data length has been sent
+    if ( len == DOOR_REPORT_LENGTH ) 
+    {
+      // Get the target value for the door control
+      uint8 targetDoorVal = *pData;
+      // Set the door control value
+      MCU_IO_SET(
+           PORT_DOOR_CONTROL,
+           PIN_DOOR_CONTROL,
+           targetDoorVal
+      );
+    }
   } 
-  else 
+  else if ( command == LIGHT_SET_CMD_ID )
   {
-    
+    // Validate that the right data length has been sent
+    if ( len == LIGHT_REPORT_LENGTH )
+    {
+      // Get the target value for the light
+      uint8 targetLightVal = *pData;
+      // Set the green LED value
+      MCU_IO_SET(
+           PORT_GREEN_LED,
+           PIN_GREEN_LED,
+           targetLightVal
+      );   
+    }
   }
   // Flash LED 2 once to indicate data reception
   HalLedSet ( HAL_LED_2, HAL_LED_MODE_FLASH );
+}
+
+static void sendDoorReport(void)
+{
+  // Data we will send 
+  uint8 pData[DOOR_REPORT_LENGTH];
+  uint8 txOptions;
+
+  // Set the data
+  pData[DOOR_STATE_OFFSET] = prevDoorCheckVal;
+  txOptions = AF_MSG_ACK_REQUEST;
+  
+  // Send the data (destination address is set to previously established binding 
+  // for the commandId)
+  zb_SendDataRequest( ZB_BINDING_ADDR, DOOR_REPORT_CMD_ID, DOOR_REPORT_LENGTH, pData, HANDLE_DOOR_CHECK, txOptions, 0 );
+  
+  // Set a timer to fire the MY_DOOR_REPORT_TIMEOUT_EVT (stopped as soon as we 
+  // receive data)
+  osal_start_timerEx( sapi_TaskID, MY_DOOR_REPORT_TIMEOUT_EVT, myReportTimeout );
+}
+
+static void sendLightReport(void)
+{
+  /* TODO (see sendDoorReport())*/
 }
 
 /******************************************************************************

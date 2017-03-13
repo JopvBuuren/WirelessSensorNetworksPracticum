@@ -58,8 +58,8 @@
 // Application osal event identifiers
 // Bit mask of events ( from 0x0000 to 0x00FF )
 #define MY_START_EVT                        0x0001
-#define MY_REPORT_EVT                       0x0002
-#define MY_FIND_COLLECTOR_EVT               0x0004
+#define MY_FIND_COLLECTOR_EVT               0x0002
+#define MY_DOOR_SET_TIMEOUT_EVT             0x0004
 
 // ADC definitions for CC2430/CC2530 from the hal_adc.c file
 #if defined (HAL_MCU_CC2530)
@@ -75,39 +75,43 @@
 #define PORT_SIGNAL_LED                     1
 #define PIN_SIGNAL_LED                      2
 
+// Report failure related values
+#define REPORT_FAILURE_LIMIT                4
+#define BIND_RETRY_LIMIT                    2
+
 /******************************************************************************
  * LOCAL VARIABLES
  */
 static uint8 appState =           APP_INIT;
-static uint8 reportState =        FALSE;
 
 static uint8 reportFailureNr =    0;
-static uint8 reportSkip =         0;
 static uint8 bindRetries =        0;
 
-static uint16 myReportPeriod =    5000;        // milliseconds
 static uint16 myBindRetryDelay =  2000;        // milliseconds
 static uint8 myStartRetryDelay =    10;        // milliseconds
 
 static uint16 parentShortAddr;
 
 // Value of the door limit switch on the coordinator
-static uint8 doorLimitSwitchVal;
+static int8 doorLimitSwitchVal = -1;
+
+// Report failure related values
+static uint8 myReportTimeout =      200;         // milliseconds
 
 /******************************************************************************
  * GLOBAL VARIABLES
  */
 // Inputs and Outputs for Sensor device
-#define NUM_OUT_CMD_SENSOR        1
 #define NUM_IN_CMD_SENSOR         1
+#define NUM_OUT_CMD_SENSOR        1
 
-// List of output and input commands for Collector device
+// List of input commands for Sensor device
 const cId_t zb_InCmdList[NUM_IN_CMD_SENSOR] =
 {
   DOOR_REPORT_CMD_ID
 };
 
-// List of output and input commands for Sensor device
+// List of output commands for Sensor device
 const cId_t zb_OutCmdList[NUM_OUT_CMD_SENSOR] =
 {
   DOOR_SET_CMD_ID
@@ -131,8 +135,8 @@ const SimpleDescriptionFormat_t zb_SimpleDesc =
  * LOCAL FUNCTIONS
  */
 void uartRxCB( uint8 port, uint8 event );
-static void sendReport(void);
 static void updateSignalLed(void);
+static void sendDoorVal( uint8 doorVal );
 
 /******************************************************************************
  * GLOBAL FUNCTIONS
@@ -169,14 +173,6 @@ void zb_HandleOsalEvent( uint16 event )
     zb_StartRequest();
   }
 
-  if ( event & MY_REPORT_EVT )
-  {
-    if ( appState == APP_RUN )
-    {
-      sendReport();
-    }
-  }
-
   if ( event & MY_FIND_COLLECTOR_EVT )
   {
     // blink LED 2 to indicate discovery and binding
@@ -185,6 +181,11 @@ void zb_HandleOsalEvent( uint16 event )
     // Find and bind to a collector device
     appState = APP_BIND;
     zb_BindDevice( TRUE, DOOR_SET_CMD_ID, (uint8 *)NULL );
+  }
+  
+  if ( event & MY_DOOR_SET_TIMEOUT_EVT ) 
+  {
+    /* TODO: Determine what to do on a timeout; handle like a report fail? */
   }
 }
 
@@ -207,21 +208,16 @@ void zb_HandleKeys( uint8 shift, uint8 keys )
   // shift is not used and keys HAL_KEY_SW_3 and HAL_KEY_SW_4 are not used, so 
   // removed code
   if ( keys & HAL_KEY_SW_1 )
+  {
+    // Do nothing
+  }
+  if ( keys & HAL_KEY_SW_2 )
+  {
+    if ( (appState == APP_RUN) && (doorLimitSwitchVal != -1) )
     {
-      // Start reporting
-      if ( reportState == FALSE ) {
-        osal_start_reload_timer( sapi_TaskID, MY_REPORT_EVT, myReportPeriod );
-        reportState = TRUE;
-
-        // blink LED 2 to indicate reporting
-        HalLedBlink ( HAL_LED_2, 0, 50, 500 );
-      }
+      sendDoorVal( !doorLimitSwitchVal );
     }
-    if ( keys & HAL_KEY_SW_2 )
-    {
-      updateSignalLed();
-      sendReport();
-    }
+  }
 }
 
 /******************************************************************************
@@ -278,17 +274,6 @@ void zb_BindConfirm( uint16 commandId, uint8 status )
   {
     appState = APP_RUN;
     HalLedSet( HAL_LED_2, HAL_LED_MODE_OFF );
-
-    // After failure reporting start automatically when the device
-    // is bound to a new gateway
-    if ( reportState )
-    {
-      // blink LED 2 to indicate reporting
-      HalLedBlink ( HAL_LED_2, 0, 50, 500 );
-
-      // Start reporting
-      osal_start_reload_timer( sapi_TaskID, MY_REPORT_EVT, myReportPeriod );
-    }
   }
   else
   {
@@ -316,23 +301,26 @@ void zb_BindConfirm( uint16 commandId, uint8 status )
  */
 void zb_SendDataConfirm( uint8 handle, uint8 status )
 {
+  (void)handle;
+  
+  // Stop the report timeout timers
+  osal_stop_timerEx( sapi_TaskID, MY_DOOR_SET_TIMEOUT_EVT );
+  
   if(status != ZB_SUCCESS)
   {
     if ( ++reportFailureNr >= REPORT_FAILURE_LIMIT )
     {
-       // Stop reporting
-       osal_stop_timerEx( sapi_TaskID, MY_REPORT_EVT );
-
-       // After failure start reporting automatically when the device
-       // is binded to a new gateway
-       reportState = TRUE;
-
        // Delete previous binding
        zb_BindDevice( FALSE, DOOR_SET_CMD_ID, (uint8 *)NULL );
 
        // Try binding to a new gateway
        osal_start_timerEx( sapi_TaskID, MY_FIND_COLLECTOR_EVT, myBindRetryDelay );
        reportFailureNr = 0;
+    }
+    else
+    {
+      // Send the door value again
+      sendDoorVal(0);
     }
   }
   // status == SUCCESS
@@ -414,6 +402,24 @@ static void updateSignalLed(void)
   );
 }
 
+static void sendDoorVal( uint8 doorVal ) {
+  // Data we will send 
+  uint8 pData[DOOR_REPORT_LENGTH];
+  uint8 txOptions;
+
+  // Set the data
+  pData[DOOR_STATE_OFFSET] = doorVal;
+  txOptions = AF_MSG_ACK_REQUEST;
+  
+  // Send the data (destination address is set to previously established binding 
+  // for the commandId)
+  zb_SendDataRequest( ZB_BINDING_ADDR, DOOR_SET_CMD_ID, DOOR_REPORT_LENGTH, pData, 0, txOptions, 0 );
+  
+  // Set a timer to fire the MY_DOOR_SET_TIMEOUT_EVT (stopped as soon as we 
+  // receive data)
+  osal_start_timerEx( sapi_TaskID, MY_DOOR_SET_TIMEOUT_EVT, myReportTimeout );
+}
+
 /******************************************************************************
  * @fn          uartRxCB
  *
@@ -428,65 +434,4 @@ void uartRxCB( uint8 port, uint8 event )
 {
   (void)port;
   (void)event;
-}
-
-/******************************************************************************
- * @fn          sendReport
- *
- * @brief       Send sensor report
- *
- * @param       none
- *
- * @return      none
- */
-static void sendReport(void)
-{
-  /*uint8 pData[SENSOR_REPORT_LENGTH];*/
-  uint8 pData[DOOR_REPORT_LENGTH];
-  static uint8 reportNr = 0;
-  bool changed = false;
-  uint8 txOptions;
-  /*
-  // Read and report temperature value
-  pData[SENSOR_TEMP_OFFSET] = readTemp();
-  if(pData[SENSOR_TEMP_OFFSET] != oldValues[SENSOR_TEMP_OFFSET]){
-    changed = true;
-    oldValues[SENSOR_TEMP_OFFSET] = pData[SENSOR_TEMP_OFFSET];
-  }
-  // Read and report voltage value
-  pData[SENSOR_VOLTAGE_OFFSET] = readVoltage();
-  if(pData[SENSOR_VOLTAGE_OFFSET] != oldValues[SENSOR_VOLTAGE_OFFSET]){
-    changed = true;
-    oldValues[SENSOR_VOLTAGE_OFFSET] = pData[SENSOR_VOLTAGE_OFFSET];
-  }
-  pData[SENSOR_PARENT_OFFSET] =  HI_UINT16(parentShortAddr);
-  pData[SENSOR_PARENT_OFFSET + 1] =  LO_UINT16(parentShortAddr);
-  */
-  pData[DOOR_STATE_OFFSET] = 1;
-
-  if(reportSkip > 12 ){
-    reportSkip = 0;
-    changed = true;
-  }else{
-    reportSkip = reportSkip++;
-  }
-  
-  if(changed || true){
-    reportSkip = 0;
-    // Set ACK request on each ACK_INTERVAL report
-    // If a report failed, set ACK request on next report
-    if ( ++reportNr<ACK_REQ_INTERVAL && reportFailureNr == 0 )
-    {
-      txOptions = AF_TX_OPTIONS_NONE;
-    }
-    else
-    {
-      txOptions = AF_MSG_ACK_REQUEST;
-      reportNr = 0;
-    }
-    // Destination address is set to previously established binding
-    // for the commandId.
-    zb_SendDataRequest( ZB_BINDING_ADDR, DOOR_SET_CMD_ID, DOOR_REPORT_LENGTH, pData, 0, txOptions, 0 );
-    
-  }
 }
