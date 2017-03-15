@@ -100,7 +100,13 @@ static uint8 lightLevel =         105;
  */
 // Inputs and Outputs for Sensor device
 #define NUM_OUT_CMD_SENSOR        1
-#define NUM_IN_CMD_SENSOR         0
+#define NUM_IN_CMD_SENSOR         1
+
+// List of input commands for Sensor device
+const cId_t zb_InCmdList[NUM_IN_CMD_SENSOR] =
+{
+  LIGHT_REPORT_CMD_ID
+};
 
 // List of output and input commands for Sensor device
 const cId_t zb_OutCmdList[NUM_OUT_CMD_SENSOR] =
@@ -117,7 +123,7 @@ const SimpleDescriptionFormat_t zb_SimpleDesc =
   DEVICE_VERSION_SENSOR,      //  Device Version
   0,                          //  Reserved
   NUM_IN_CMD_SENSOR,          //  Number of Input Commands
-  (cId_t *) NULL,             //  Input Command List
+  (cId_t *) zb_InCmdList,             //  Input Command List
   NUM_OUT_CMD_SENSOR,         //  Number of Output Commands
   (cId_t *) zb_OutCmdList     //  Output Command List
 };
@@ -449,8 +455,8 @@ static void sendLightToggle( ) {
   uint8 txOptions;
   
   // Set light
-  if((!isLight()) && (lightState == 0)){
-    pData[LIGHT_STATE_OFFSET] = 1;
+  if(!isLight()){
+    pData[LIGHT_STATE_OFFSET] = !lightState;
   }else{
     pData[LIGHT_STATE_OFFSET] = 0;
   }

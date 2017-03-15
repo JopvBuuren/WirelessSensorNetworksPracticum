@@ -3,7 +3,7 @@
 <Workspace>
   <ConfigDictionary>
     <CurrentConfigs>
-      <Project>DemoApp/RouterEB</Project>
+      <Project>DemoApp/CoordinatorEB</Project>
     </CurrentConfigs>
   </ConfigDictionary>
   <Desktop>
@@ -71,44 +71,7 @@
       </Wnd1>
     </Windows>
     <Editor>
-<<<<<<< HEAD
       <Pane>
-        <Tab>
-          <Factory>TextEditor</Factory>
-          <Filename>$WS_DIR$\..\Source\DemoSensor.c</Filename>
-          <XPos>0</XPos>
-          <YPos>0</YPos>
-          <SelStart>0</SelStart>
-          <SelEnd>0</SelEnd>
-          <XPos2>0</XPos2>
-          <YPos2>397</YPos2>
-          <SelStart2>0</SelStart2>
-          <SelEnd2>0</SelEnd2>
-        </Tab>
-        <Tab>
-          <Factory>TextEditor</Factory>
-          <Filename>$WS_DIR$\..\Source\DemoCoordinator.c</Filename>
-          <XPos>0</XPos>
-          <YPos>0</YPos>
-          <SelStart>0</SelStart>
-          <SelEnd>0</SelEnd>
-          <XPos2>0</XPos2>
-          <YPos2>345</YPos2>
-          <SelStart2>11893</SelStart2>
-          <SelEnd2>11893</SelEnd2>
-        </Tab>
-        <Tab>
-          <Factory>TextEditor</Factory>
-          <Filename>$WS_DIR$\..\Source\DemoRouter.c</Filename>
-          <XPos>0</XPos>
-          <YPos>0</YPos>
-          <SelStart>0</SelStart>
-          <SelEnd>0</SelEnd>
-          <XPos2>0</XPos2>
-          <YPos2>436</YPos2>
-          <SelStart2>14498</SelStart2>
-          <SelEnd2>14498</SelEnd2>
-        </Tab>
         <Tab>
           <Factory>TextEditor</Factory>
           <Filename>$WS_DIR$\..\..\..\..\..\Components\mac\high_level\mac_cfg.c</Filename>
@@ -165,7 +128,7 @@
           <SelStart>0</SelStart>
           <SelEnd>0</SelEnd>
           <XPos2>0</XPos2>
-          <YPos2>67</YPos2>
+          <YPos2>274</YPos2>
           <SelStart2>3263</SelStart2>
           <SelEnd2>3263</SelEnd2>
         </Tab>
@@ -217,7 +180,67 @@
           <SelStart2>80</SelStart2>
           <SelEnd2>80</SelEnd2>
         </Tab>
+        <Tab>
+          <Factory>TextEditor</Factory>
+          <Filename>$WS_DIR$\..\..\..\..\..\Components\osal\include\comdef.h</Filename>
+          <XPos>0</XPos>
+          <YPos>0</YPos>
+          <SelStart>0</SelStart>
+          <SelEnd>0</SelEnd>
+          <XPos2>0</XPos2>
+          <YPos2>0</YPos2>
+          <SelStart2>615</SelStart2>
+          <SelEnd2>615</SelEnd2>
+        </Tab>
+        <Tab>
+          <Factory>TextEditor</Factory>
+          <Filename>$WS_DIR$\..\..\..\..\..\Components\hal\target\CC2530EB\_hal_uart_dma.c</Filename>
+          <XPos>0</XPos>
+          <YPos>0</YPos>
+          <SelStart>0</SelStart>
+          <SelEnd>0</SelEnd>
+          <XPos2>0</XPos2>
+          <YPos2>682</YPos2>
+          <SelStart2>21246</SelStart2>
+          <SelEnd2>21246</SelEnd2>
+        </Tab>
+        <Tab>
+          <Factory>TextEditor</Factory>
+          <Filename>$WS_DIR$\..\Source\DemoCoordinator.c</Filename>
+          <XPos>0</XPos>
+          <YPos>0</YPos>
+          <SelStart>0</SelStart>
+          <SelEnd>0</SelEnd>
+          <XPos2>0</XPos2>
+          <YPos2>379</YPos2>
+          <SelStart2>13285</SelStart2>
+          <SelEnd2>13285</SelEnd2>
+        </Tab>
         <ActiveTab>11</ActiveTab>
+        <Tab>
+          <Factory>TextEditor</Factory>
+          <Filename>$WS_DIR$\..\Source\DemoRouter.c</Filename>
+          <XPos>0</XPos>
+          <YPos>0</YPos>
+          <SelStart>0</SelStart>
+          <SelEnd>0</SelEnd>
+          <XPos2>0</XPos2>
+          <YPos2>395</YPos2>
+          <SelStart2>13601</SelStart2>
+          <SelEnd2>13672</SelEnd2>
+        </Tab>
+        <Tab>
+          <Factory>TextEditor</Factory>
+          <Filename>$WS_DIR$\..\Source\DemoSensor.c</Filename>
+          <XPos>0</XPos>
+          <YPos>0</YPos>
+          <SelStart>0</SelStart>
+          <SelEnd>0</SelEnd>
+          <XPos2>0</XPos2>
+          <YPos2>91</YPos2>
+          <SelStart2>4780</SelStart2>
+          <SelEnd2>4895</SelEnd2>
+        </Tab>
       </Pane>
       <ActivePane>0</ActivePane>
       <Sizes>
@@ -228,13 +251,6 @@
       </Sizes>
       <SplitMode>1</SplitMode>
     </Editor>
-=======
-      
-      
-      
-      
-    <Pane><Tab><Factory>TextEditor</Factory><Filename>$WS_DIR$\..\Source\DemoCoordinator.c</Filename><XPos>0</XPos><YPos>0</YPos><SelStart>0</SelStart><SelEnd>0</SelEnd><XPos2>0</XPos2><YPos2>542</YPos2><SelStart2>18596</SelStart2><SelEnd2>18596</SelEnd2></Tab><ActiveTab>0</ActiveTab><Tab><Factory>TextEditor</Factory><Filename>$WS_DIR$\..\Source\DemoSensor.c</Filename><XPos>0</XPos><YPos>0</YPos><SelStart>0</SelStart><SelEnd>0</SelEnd><XPos2>0</XPos2><YPos2>323</YPos2><SelStart2>4610</SelStart2><SelEnd2>4625</SelEnd2></Tab><Tab><Factory>TextEditor</Factory><Filename>$WS_DIR$\..\Source\DemoApp.h</Filename><XPos>0</XPos><YPos>0</YPos><SelStart>0</SelStart><SelEnd>0</SelEnd><XPos2>0</XPos2><YPos2>69</YPos2><SelStart2>0</SelStart2><SelEnd2>0</SelEnd2></Tab><Tab><Factory>TextEditor</Factory><Filename>$WS_DIR$\..\..\..\ZMain\TI2530DB\ZMain.c</Filename><XPos>0</XPos><YPos>0</YPos><SelStart>0</SelStart><SelEnd>0</SelEnd><XPos2>0</XPos2><YPos2>64</YPos2><SelStart2>3342</SelStart2><SelEnd2>3342</SelEnd2></Tab><Tab><Factory>TextEditor</Factory><Filename>$WS_DIR$\..\..\..\Tools\CC2530DB\f8wConfig.cfg</Filename><XPos>0</XPos><YPos>0</YPos><SelStart>0</SelStart><SelEnd>0</SelEnd><XPos2>0</XPos2><YPos2>4</YPos2><SelStart2>828</SelStart2><SelEnd2>828</SelEnd2></Tab><Tab><Factory>TextEditor</Factory><Filename>$WS_DIR$\..\Source\DemoRouter.c</Filename><XPos>0</XPos><YPos>0</YPos><SelStart>0</SelStart><SelEnd>0</SelEnd><XPos2>0</XPos2><YPos2>420</YPos2><SelStart2>0</SelStart2><SelEnd2>0</SelEnd2></Tab><Tab><Factory>TextEditor</Factory><Filename>$WS_DIR$\..\Source\DemoAppCommon.c</Filename><XPos>0</XPos><YPos>0</YPos><SelStart>0</SelStart><SelEnd>0</SelEnd><XPos2>0</XPos2><YPos2>80</YPos2><SelStart2>0</SelStart2><SelEnd2>0</SelEnd2></Tab></Pane><ActivePane>0</ActivePane><Sizes><Pane><X>1000000</X><Y>1000000</Y></Pane></Sizes><SplitMode>1</SplitMode></Editor>
->>>>>>> 4bcb189c40d0867ddefe41a4fa33cde4a6b7125d
     <Positions>
       <Top>
         <Row0>
@@ -244,6 +260,13 @@
             </Toolbar-05259AC0>
           </Sizes>
         </Row0>
+        <Row1>
+          <Sizes>
+            <Toolbar-20AF3CD0>
+              <key>debuggergui.enu1</key>
+            </Toolbar-20AF3CD0>
+          </Sizes>
+        </Row1>
       </Top>
       <Left>
         <Row0>
@@ -252,7 +275,7 @@
               <Rect>
                 <Top>-2</Top>
                 <Left>-2</Left>
-                <Bottom>578</Bottom>
+                <Bottom>554</Bottom>
                 <Right>431</Right>
                 <x>-2</x>
                 <y>-2</y>
@@ -261,7 +284,7 @@
                 <sizeHorzCX>130208</sizeHorzCX>
                 <sizeHorzCY>243605</sizeHorzCY>
                 <sizeVertCX>281901</sizeVertCX>
-                <sizeVertCY>706456</sizeVertCY>
+                <sizeVertCY>677223</sizeVertCY>
               </Rect>
             </Wnd0>
           </Sizes>
