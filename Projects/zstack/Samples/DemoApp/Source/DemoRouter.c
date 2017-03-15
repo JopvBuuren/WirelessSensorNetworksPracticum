@@ -60,10 +60,11 @@
 #define MY_START_EVT                        0x0001
 #define MY_REPORT_EVT                       0x0002
 #define MY_FIND_COLLECTOR_EVT               0x0004
+#define MY_LIGHT_SET_TIMEOUT_EVT          0x0016
 
 // Default pins and ports
-#define INDICATOR_LED_PIN       1
-#define INDICAYOR_LED_PORT      2
+#define LED_PIN       2
+#define LED_PORT      1
 
 // ADC definitions for CC2430/CC2530 from the hal_adc.c file
 #if defined (HAL_MCU_CC2530)
@@ -81,10 +82,12 @@
 static uint8 appState =           APP_INIT;
 static uint8 reportState =        FALSE;
 
+static uint8 light = 0;
+
 static uint8 reportFailureNr =    0;
 static uint8 bindRetries =        0;
 
-static uint16 myReportPeriod =    5000;         // milliseconds
+static uint16 myReportPeriod =    1000;         // milliseconds
 static uint16 myBindRetryDelay =  2000;         // milliseconds
 static uint8 myStartRetryDelay =  10;           // milliseconds
 
@@ -102,7 +105,7 @@ static uint8 lightLevel =         105;
 // List of output and input commands for Sensor device
 const cId_t zb_OutCmdList[NUM_OUT_CMD_SENSOR] =
 {
-  SENSOR_REPORT_CMD_ID
+  LIGHT_SET_CMD_ID
 };
 
 // Define SimpleDescriptor for Sensor device
@@ -123,9 +126,8 @@ const SimpleDescriptionFormat_t zb_SimpleDesc =
  * LOCAL FUNCTIONS
  */
 void uartRxCB( uint8 port, uint8 event );
-static void sendReport(void);
-static int8 readTemp(void);
-static uint8 readVoltage(void);
+void sendLightToggle(bool state);
+static void updateSignalLed(void);
 static bool isLight(void);
 
 /******************************************************************************
@@ -154,7 +156,7 @@ void zb_HandleOsalEvent( uint16 event )
     HalLedBlink ( HAL_LED_1, 0, 50, 500 );
 
     // Initialise the green LED as output
-    MCU_IO_DIR_OUTPUT( 1, 2 );
+    MCU_IO_OUTPUT(LED_PORT, LED_PIN, 0 );
     
     // Start the device
     appState = APP_START;
@@ -170,8 +172,12 @@ void zb_HandleOsalEvent( uint16 event )
   {
     if ( appState == APP_RUN )
     {
-      sendReport();
+      if ( isLight() ){
+        sendLightToggle(0);
+      }
     }
+    
+    
   }
 
   if ( event & MY_FIND_COLLECTOR_EVT )
@@ -181,7 +187,7 @@ void zb_HandleOsalEvent( uint16 event )
 
     // Find and bind to a collector device
     appState = APP_BIND;
-    zb_BindDevice( TRUE, SENSOR_REPORT_CMD_ID, (uint8 *)NULL );
+    zb_BindDevice( TRUE, LIGHT_SET_CMD_ID, (uint8 *)NULL );
   }
 }
 
@@ -216,6 +222,10 @@ void zb_HandleKeys( uint8 shift, uint8 keys )
   }
   if ( keys & HAL_KEY_SW_2 )
   {
+    if(!isLight()){
+      // Can only be send if ldr read out is light (above margin)
+      sendLightToggle(light);
+    }
     
   }
 }
@@ -247,7 +257,7 @@ void zb_StartConfirm( uint8 status )
     osal_set_event( sapi_TaskID, MY_FIND_COLLECTOR_EVT );
 
     // Turn OFF Allow Bind mode infinitly
-    zb_AllowBind( 0x00 );
+    //zb_AllowBind( 0x00 );
     HalLedSet( HAL_LED_2, HAL_LED_MODE_OFF );
   }
   else
@@ -324,7 +334,7 @@ void zb_SendDataConfirm( uint8 handle, uint8 status )
        reportState = TRUE;
 
        // Delete previous binding
-       zb_BindDevice( FALSE, SENSOR_REPORT_CMD_ID, (uint8 *)NULL );
+       zb_BindDevice( FALSE, LIGHT_REPORT_CMD_ID, (uint8 *)NULL );
 
       // Try to bind a new gateway
        osal_start_timerEx( sapi_TaskID, MY_FIND_COLLECTOR_EVT, myBindRetryDelay );
@@ -392,6 +402,20 @@ void zb_ReceiveDataIndication( uint16 source, uint16 command, uint16 len, uint8 
   (void)command;
   (void)len;
   (void)pData;
+  // Store the new value of the door limit switch
+  light = *pData;
+  // Update the signal LED
+  updateSignalLed();  
+}
+
+static void updateSignalLed(void) 
+{
+  // Set the signal LED to the value of the door limit switch
+  MCU_IO_SET(
+    LED_PORT,
+    LED_PIN,
+    light
+  );
 }
 
 /******************************************************************************
@@ -411,134 +435,42 @@ void uartRxCB( uint8 port, uint8 event )
 }
 
 /******************************************************************************
- * @fn          sendReport
+ * @fn          sendLightToggle
  *
- * @brief       Send sensor report
- *
- * @param       none
- *
- * @return      none
- */
-static void sendReport(void)
-{
-  uint8 pData[SENSOR_REPORT_LENGTH];
-  static uint8 reportNr = 0;
-  uint8 txOptions;
-
-  // Read and report temperature value
-  pData[SENSOR_TEMP_OFFSET] = readTemp();
-
-  // Read and report voltage value
-  pData[SENSOR_VOLTAGE_OFFSET] = readVoltage();
-
-  pData[SENSOR_PARENT_OFFSET] = HI_UINT16(parentShortAddr);
-  pData[SENSOR_PARENT_OFFSET + 1] = LO_UINT16(parentShortAddr);
-
-  // Set ACK request on each ACK_INTERVAL report
-  // If a report failed, set ACK request on next report
-  if ( ++reportNr < ACK_REQ_INTERVAL && reportFailureNr == 0 )
-  {
-    txOptions = AF_TX_OPTIONS_NONE;
-  }
-  else
-  {
-    txOptions = AF_MSG_ACK_REQUEST;
-    reportNr = 0;
-  }
-  // Destination address is set to previously established binding
-  // for the commandId.
-  zb_SendDataRequest( ZB_BINDING_ADDR, SENSOR_REPORT_CMD_ID, SENSOR_REPORT_LENGTH, pData, 0, txOptions, 0 );
-}
-
-/******************************************************************************
- * @fn          readTemp
- *
- * @brief       read temperature from ADC
+ * @brief       send a toggle message to turn on the light
  *
  * @param       none
  *
  * @return      temperature
  */
-static int8 readTemp(void)
-{
-  static uint16 voltageAtTemp22;
-  static uint8 bCalibrate = TRUE; // Calibrate the first time the temp sensor is read
-  uint16 value;
-  int8 temp;
+static void sendLightToggle( uint8 state ) {
+  // Data we will send 
+  uint8 pData[LIGHT_REPORT_LENGTH];
+  uint8 txOptions;
 
-  #if defined (HAL_MCU_CC2530)
-  /*
-   * Use the ADC to read the temperature
-   */
-  value = HalReadTemp();
-
-  // Use the 12 MSB of adcValue
-  value >>= 4;
-
-  /*
-   * These parameters are typical values and need to be calibrated
-   * See the datasheet for the appropriate chip for more details
-   * also, the math below may not be very accurate
-   */
-  /* Assume ADC = 1480 at 25C and ADC = 4/C */
-  #define VOLTAGE_AT_TEMP_25        1480
-  #define TEMP_COEFFICIENT          4
-
-  // Calibrate for 22C the first time the temp sensor is read.
-  // This will assume that the demo is started up in temperature of 22C
-  if ( bCalibrate ) {
-    voltageAtTemp22 = value;
-    bCalibrate = FALSE;
+  uint8 st = 0;
+  if(state == st){
+    state = 1;
   }
-
-  temp = 22 + ( (value - voltageAtTemp22) / TEMP_COEFFICIENT );
-
-  // Set 0C as minimum temperature, and 100C as max
-  if ( temp >= 100 )
-  {
-    return 100;
+  
+  // Set light
+  if(state){
+    pData[LIGHT_STATE_OFFSET] = 1;
+  }else{
+    pData[LIGHT_STATE_OFFSET] = 0;
   }
-  else if ( temp <= 0 ) {
-    return 0;
-  }
-  else {
-    return temp;
-  }
-  // Only CC2530 is supported
-  #else
-  return 0;
-  #endif
-}
-
-/******************************************************************************
- * @fn          readVoltage
- *
- * @brief       read voltage from ADC
- *
- * @param       none
- *
- * @return      voltage
- */
-static uint8 readVoltage(void)
-{
-  #if defined (HAL_MCU_CC2530)
-  /*
-   * Use the ADC to read the bus voltage
-   */
-  uint16 value = HalReadVdd();
-
-  // value now contains measurement of Vdd/3
-  // 0 indicates 0V and 32767 indicates 1.25V
-  // voltage = (value*3*1.25)/32767 volts
-  // we will multiply by this by 10 to allow units of 0.1 volts
-  value = value >> 6;   // divide first by 2^6
-  value = (uint16)(value * 37.5);
-  value = value >> 9;   // ...and later by 2^9...to prevent overflow during multiplication
-
-  return value;
-  #else
-  return 0;
-  #endif // CC2530
+  txOptions = AF_MSG_ACK_REQUEST;
+  
+  // set Indicator
+  
+  
+  // Send the data (destination address is set to previously established binding 
+  // for the commandId)
+  zb_SendDataRequest( ZB_BINDING_ADDR, LIGHT_SET_CMD_ID, LIGHT_REPORT_LENGTH, pData, 0, txOptions, 0 );
+  
+  // Set a timer to fire the MY_DOOR_SET_TIMEOUT_EVT (stopped as soon as we 
+  // receive data)
+  osal_start_reload_timer( sapi_TaskID, MY_REPORT_EVT, myReportPeriod );
 }
 
 /******************************************************************************
@@ -558,5 +490,5 @@ static bool isLight(void)
   if(read > lightLevel){
     return true;
   }
-  return true;
+  return false;
 }

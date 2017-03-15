@@ -126,6 +126,7 @@ static uint16 myBindRetryDelay =    2000;        // milliseconds
 
 static uint8 myDoorCheckDelay =     100;         // milliseconds
 static uint8 prevDoorCheckVal;
+static uint8 lightState =           0;
 
 // Report failure related values
 static uint8 doorReportFailureNr =  0;
@@ -562,11 +563,14 @@ void zb_ReceiveDataIndication( uint16 source, uint16 command, uint16 len, uint8 
       // Get the target value for the light
       uint8 targetLightVal = *pData;
       // Set the green LED value
+      
       MCU_IO_SET(
            PORT_GREEN_LED,
            PIN_GREEN_LED,
            targetLightVal
       );   
+      
+      sendLightReport();
     }
   }
   // Flash LED 2 once to indicate data reception
@@ -594,7 +598,21 @@ static void sendDoorReport(void)
 
 static void sendLightReport(void)
 {
-  /* TODO (see sendDoorReport())*/
+  // Data we will send 
+  uint8 pData[LIGHT_REPORT_LENGTH];
+  uint8 txOptions;
+
+  // Set the data
+  pData[LIGHT_STATE_OFFSET] = ;
+  txOptions = AF_MSG_ACK_REQUEST;
+  
+  // Send the data (destination address is set to previously established binding 
+  // for the commandId)
+  zb_SendDataRequest( ZB_BINDING_ADDR, LIGHT_REPORT_CMD_ID, LIGHT_REPORT_LENGTH, pData, HANDLE_LIGHT_CHECK, txOptions, 0 );
+  
+  // Set a timer to fire the MY_DOOR_REPORT_TIMEOUT_EVT (stopped as soon as we 
+  // receive data)
+  osal_start_timerEx( sapi_TaskID, MY_LIGHT_REPORT_TIMEOUT_EVT, myReportTimeout );
 }
 
 /******************************************************************************
