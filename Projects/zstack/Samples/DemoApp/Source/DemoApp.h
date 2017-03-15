@@ -99,7 +99,3 @@ void uartRxCB( uint8 port, uint8 event );
 void initUart(halUARTCBack_t pf);
 
 #endif // DEMO_APP_H
-
-
-
-
