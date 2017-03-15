@@ -432,7 +432,7 @@ D:\Jop van Buuren\Documents\Hogeschool\Vakken\wt\WirelessSensorNetworksPracticum
 -DMAC_CFG_RX_MAX=5
 -DRTR_NWK=1
 -DZIGBEEPRO=1
--DSECURE=0
+-DSECURE=1
 -DZG_SECURE_DYNAMIC=0
 -DREFLECTOR=1
 -DDEFAULT_CHANLIST=0x00100000
@@ -459,7 +459,7 @@ D:\Jop van Buuren\Documents\Hogeschool\Vakken\wt\WirelessSensorNetworksPracticum
 -DZDNWKMGR_MIN_TRANSMISSIONS=20
 -DCONST=const __code
 -DGENERIC=__generic
--DRFD_RCVC_ALWAYS_ON=FALSE
+-DRFD_RCVC_ALWAYS_ON=TRUE
 -DPOLL_RATE=1000
 -DQUEUED_POLL_RATE=100
 -DRESPONSE_POLL_RATE=100

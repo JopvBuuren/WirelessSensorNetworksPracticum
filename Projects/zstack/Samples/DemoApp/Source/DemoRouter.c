@@ -82,7 +82,7 @@
 static uint8 appState =           APP_INIT;
 static uint8 reportState =        FALSE;
 
-static uint8 light = 0;
+static uint8 lightState = 0;
 
 static uint8 reportFailureNr =    0;
 static uint8 bindRetries =        0;
@@ -126,7 +126,7 @@ const SimpleDescriptionFormat_t zb_SimpleDesc =
  * LOCAL FUNCTIONS
  */
 void uartRxCB( uint8 port, uint8 event );
-void sendLightToggle(bool state);
+void sendLightToggle(void);
 static void updateSignalLed(void);
 static bool isLight(void);
 
@@ -173,7 +173,8 @@ void zb_HandleOsalEvent( uint16 event )
     if ( appState == APP_RUN )
     {
       if ( isLight() ){
-        sendLightToggle(0);
+        // prevent light switching in dark with light check
+        sendLightToggle();
       }
     }
     
@@ -224,9 +225,8 @@ void zb_HandleKeys( uint8 shift, uint8 keys )
   {
     if(!isLight()){
       // Can only be send if ldr read out is light (above margin)
-      sendLightToggle(light);
+      sendLightToggle();
     }
-    
   }
 }
 
@@ -403,7 +403,7 @@ void zb_ReceiveDataIndication( uint16 source, uint16 command, uint16 len, uint8 
   (void)len;
   (void)pData;
   // Store the new value of the door limit switch
-  light = *pData;
+  lightState = *pData;
   // Update the signal LED
   updateSignalLed();  
 }
@@ -414,7 +414,7 @@ static void updateSignalLed(void)
   MCU_IO_SET(
     LED_PORT,
     LED_PIN,
-    light
+    lightState
   );
 }
 
@@ -443,18 +443,13 @@ void uartRxCB( uint8 port, uint8 event )
  *
  * @return      temperature
  */
-static void sendLightToggle( uint8 state ) {
+static void sendLightToggle( ) {
   // Data we will send 
   uint8 pData[LIGHT_REPORT_LENGTH];
   uint8 txOptions;
-
-  uint8 st = 0;
-  if(state == st){
-    state = 1;
-  }
   
   // Set light
-  if(state){
+  if((!isLight()) && (lightState == 0)){
     pData[LIGHT_STATE_OFFSET] = 1;
   }else{
     pData[LIGHT_STATE_OFFSET] = 0;
