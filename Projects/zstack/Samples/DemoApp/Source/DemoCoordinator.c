@@ -89,7 +89,7 @@
 
 // Application osal event identifiers
 #define MY_START_EVT                        0x0001
-#define MY_DOOR_CHECK_EVT                   0x0002 // Event for door check
+#define MY_DOOR_CHECK_EVT                   0x0002
 #define MY_FIND_SENSOR_EVT                  0x0004
 #define MY_FIND_ROUTER_EVT                  0x0008
 #define MY_DOOR_REPORT_TIMEOUT_EVT          0x0016
@@ -132,7 +132,7 @@ static uint8 doorReportFailureNr =  0;
 static uint8 lightReportFailureNr = 0;
 static uint8 doorBindRetries =      0;
 static uint8 lightBindRetries =     0;
-static uint8 myReportTimeout =      200;         // milliseconds
+static uint16 myReportTimeout =     5000;         // milliseconds
 
 /******************************************************************************
  * LOCAL FUNCTIONS
@@ -259,12 +259,14 @@ void zb_HandleOsalEvent( uint16 event )
   
   if ( event & MY_DOOR_REPORT_TIMEOUT_EVT )
   {
-    /* TODO: Determine what to do on a timeout; handle like a report fail? */
+    // Door report timed out, so send it again
+    sendDoorReport();
   }
   
   if ( event & MY_LIGHT_REPORT_TIMEOUT_EVT ) 
   {
-    /* TODO: Determine what to do on a timeout; handle like a report fail? */
+    // Light report timed out, so send it again
+    sendLightReport();
   }
 }
 
@@ -311,24 +313,7 @@ void zb_HandleKeys( uint8 shift, uint8 keys )
   }
   if ( keys & HAL_KEY_SW_2 )
   {   
-    /* TODO: Remove code, should not do anything on a key press */
-    
-    // Open or close the door depending on the current value of the door limit 
-    // switch and depending on whether or not we're currently running
-    if ( appState == APP_RUN ) 
-    {
-      // Set the door control to the value we receive from the port and pin of 
-      // the door limit switch
-      MCU_IO_SET(
-           PORT_DOOR_CONTROL,
-           PIN_DOOR_CONTROL,
-           !prevDoorCheckVal
-      );
-      
-      // Make sure there's a reload timer running for the MY_DOOR_CHECK_EVT so 
-      // we can send the door report when door limit switch changes
-      osal_start_reload_timer( sapi_TaskID, MY_DOOR_CHECK_EVT, myDoorCheckDelay );
-    }
+    /* Do nothing */
   }
 }
 
@@ -349,6 +334,10 @@ void zb_StartConfirm( uint8 status )
   // If the device sucessfully started, change state to running
   if ( status == ZB_SUCCESS )
   {
+    uint8 bla[] = {0x01, 0x01, 0x01, 0x01, 0x01, 0x01, 0x01, 0x01, 0x01, 0x01, 0x01, 0x01, 0x01, 0x01, 0x01, 0x01};
+    /* Here we initialize network related values */
+    zb_WriteConfiguration( ZCD_NV_PRECFGKEY, 16, bla );
+    
     // Set LED 1 to indicate that node is operational on the network
     HalLedSet( HAL_LED_1, HAL_LED_MODE_ON );
 

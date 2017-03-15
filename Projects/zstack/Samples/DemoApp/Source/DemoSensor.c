@@ -96,7 +96,7 @@ static uint16 parentShortAddr;
 static int8 doorLimitSwitchVal = -1;
 
 // Report failure related values
-static uint8 myReportTimeout =      200;         // milliseconds
+static uint16 myReportTimeout =   5000;         // milliseconds
 
 /******************************************************************************
  * GLOBAL VARIABLES
@@ -161,7 +161,7 @@ void zb_HandleOsalEvent( uint16 event )
   if( event & ZB_ENTRY_EVENT )
   {
     // Initialise the green LED as output
-    MCU_IO_DIR_OUTPUT( PORT_GREEN_LED, PIN_GREEN_LED );
+    MCU_IO_DIR_OUTPUT( PORT_SIGNAL_LED, PIN_SIGNAL_LED );
     
     // blind LED 1 to indicate joining a network
     HalLedBlink ( HAL_LED_1, 0, 50, 500 );
@@ -188,7 +188,8 @@ void zb_HandleOsalEvent( uint16 event )
   
   if ( event & MY_DOOR_SET_TIMEOUT_EVT ) 
   {
-    /* TODO: Determine what to do on a timeout; handle like a report fail? */
+    // Door set timed out, so send it again
+    sendDoorVal( !doorLimitSwitchVal );
   }
 }
 
@@ -341,7 +342,7 @@ void zb_SendDataConfirm( uint8 handle, uint8 status )
     else
     {
       // Send the door value again
-      sendDoorVal(0);
+      sendDoorVal( !doorLimitSwitchVal );
     }
   }
   // status == SUCCESS
