@@ -160,6 +160,9 @@ void zb_HandleOsalEvent( uint16 event )
 
   if( event & ZB_ENTRY_EVENT )
   {
+    // Initialise the green LED as output
+    MCU_IO_DIR_OUTPUT( PORT_GREEN_LED, PIN_GREEN_LED );
+    
     // blind LED 1 to indicate joining a network
     HalLedBlink ( HAL_LED_1, 0, 50, 500 );
 
@@ -205,11 +208,29 @@ void zb_HandleOsalEvent( uint16 event )
  */
 void zb_HandleKeys( uint8 shift, uint8 keys )
 {
+  static uint8 allowBind = FALSE;
+  
   // shift is not used and keys HAL_KEY_SW_3 and HAL_KEY_SW_4 are not used, so 
   // removed code
   if ( keys & HAL_KEY_SW_1 )
   {
     // Do nothing
+    if ( appState == APP_RUN )
+    {
+      allowBind ^= 1;
+      if ( allowBind )
+      {
+        // Turn ON Allow Bind mode infinitly
+        zb_AllowBind( 0xFF );
+        HalLedSet( HAL_LED_2, HAL_LED_MODE_ON );
+      }
+      else
+      {
+        // Turn OFF Allow Bind mode infinitly
+        zb_AllowBind( 0x00 );
+        HalLedSet( HAL_LED_2, HAL_LED_MODE_OFF );
+      }
+    }    
   }
   if ( keys & HAL_KEY_SW_2 )
   {
@@ -247,7 +268,7 @@ void zb_StartConfirm( uint8 status )
     osal_set_event( sapi_TaskID, MY_FIND_COLLECTOR_EVT );
 
     // Turn OFF Allow Bind mode infinitly
-    zb_AllowBind( 0x00 );
+    //zb_AllowBind( 0x00 );
     HalLedSet( HAL_LED_2, HAL_LED_MODE_OFF );
   }
   else

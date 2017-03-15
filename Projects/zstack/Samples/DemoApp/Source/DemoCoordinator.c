@@ -235,14 +235,7 @@ void zb_HandleOsalEvent( uint16 event )
   {
     // Check if the door limit switch has changed
     uint8 doorCheckVal = MCU_IO_GET_SIMPLE( PORT_DOOR_LIMIT_SWITCH, PIN_DOOR_LIMIT_SWITCH );
-    if ( prevDoorCheckVal != doorCheckVal ) {
-      // Set the green LED
-      MCU_IO_SET(
-           PORT_GREEN_LED,
-           PIN_GREEN_LED,
-           doorCheckVal
-      );
-      
+    if ( prevDoorCheckVal != doorCheckVal ) {      
       prevDoorCheckVal = doorCheckVal;
       
       // Door value changed, so send the door report to let the bound device 
@@ -477,17 +470,17 @@ void zb_BindConfirm( uint16 commandId, uint8 status )
     // Increase the bind retries value for given command id
     if ( commandId == DOOR_REPORT_CMD_ID ) 
     {
-      doorBindRetries++;
+      //doorBindRetries++;
     }
     else if ( commandId == LIGHT_REPORT_CMD_ID )
     {
-      lightBindRetries++;
+      //lightBindRetries++;
     }
     
     // Check if we have to reset the system
     if ( (doorBindRetries >= BIND_RETRY_LIMIT) || (lightBindRetries >= BIND_RETRY_LIMIT) ) {
       // Reset the system
-      zb_SystemReset();
+      //zb_SystemReset();
     }
     else
     {
@@ -567,6 +560,10 @@ void zb_ReceiveDataIndication( uint16 source, uint16 command, uint16 len, uint8 
            PIN_DOOR_CONTROL,
            targetDoorVal
       );
+      
+      // Make sure there's a reload timer running for the MY_DOOR_CHECK_EVT so 
+      // we can send the door report when door limit switch changes
+      osal_start_reload_timer( sapi_TaskID, MY_DOOR_CHECK_EVT, myDoorCheckDelay );
     }
   } 
   else if ( command == LIGHT_SET_CMD_ID )
