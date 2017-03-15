@@ -551,7 +551,7 @@ void zb_ReceiveDataIndication( uint16 source, uint16 command, uint16 len, uint8 
            PIN_GREEN_LED,
            targetLightVal
       );   
-      
+      lightState = targetLightVal;
       sendLightReport();
     }
   }
