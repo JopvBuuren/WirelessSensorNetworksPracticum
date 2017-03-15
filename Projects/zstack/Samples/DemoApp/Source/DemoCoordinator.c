@@ -217,7 +217,6 @@ void zb_HandleOsalEvent( uint16 event )
     // Blink LED 1 to indicate starting/joining a network
     HalLedBlink ( HAL_LED_1, 0, 50, 500 );
     HalLedSet( HAL_LED_2, HAL_LED_MODE_OFF );
-    HalLedSet( HAL_LED_3, HAL_LED_MODE_OFF );
 
     // Start the device
     appState = APP_START;
@@ -333,9 +332,9 @@ void zb_StartConfirm( uint8 status )
   // If the device sucessfully started, change state to running
   if ( status == ZB_SUCCESS )
   {
-    uint8 bla[] = {0x01, 0x01, 0x01, 0x01, 0x01, 0x01, 0x01, 0x01, 0x01, 0x01, 0x01, 0x01, 0x01, 0x01, 0x01, 0x01};
-    /* Here we initialize network related values */
-    zb_WriteConfiguration( ZCD_NV_PRECFGKEY, 16, bla );
+    /*uint8 bla[] = {0x01, 0x01, 0x01, 0x01, 0x01, 0x01, 0x01, 0x01, 0x01, 0x01, 0x01, 0x01, 0x01, 0x01, 0x01, 0x01};
+    /* Here we initialize network related values 
+    zb_WriteConfiguration( ZCD_NV_PRECFGKEY, 16, bla );*/
     
     // Set LED 1 to indicate that node is operational on the network
     HalLedSet( HAL_LED_1, HAL_LED_MODE_ON );
@@ -556,7 +555,7 @@ void zb_ReceiveDataIndication( uint16 source, uint16 command, uint16 len, uint8 
     }
   }
   // Flash LED 2 once to indicate data reception
-  HalLedSet ( HAL_LED_3, HAL_LED_MODE_FLASH );
+  HalLedSet ( HAL_LED_1, HAL_LED_MODE_FLASH );
 }
 
 static void sendDoorReport(void)

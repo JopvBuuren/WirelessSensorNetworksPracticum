@@ -13,7 +13,7 @@ LimitSize=0
 ByteLimit=50
 [DebugChecksum]
 <<<<<<< HEAD
-Checksum=874786613
+Checksum=-1133642819
 =======
 Checksum=-236114555
 >>>>>>> 1a2855fc0be17e5e46d439837f95f9d8e3c1517e
@@ -54,9 +54,10 @@ Freq=50000000
 Bp0=_ "STD_CODE" "{$PROJ_DIR$\..\Source\DemoSensor.c}.459.1" 0 0 0 0 "" 0 ""
 Bp1=_ "STD_CODE" "{$PROJ_DIR$\..\Source\DemoSensor.c}.368.1" 0 0 0 0 "" 0 ""
 Bp2=_ "STD_CODE" "{$PROJ_DIR$\..\Source\DemoSensor.c}.412.3" 0 0 0 0 "" 0 ""
-Count=3
+Bp3=_ "STD_CODE" "{$PROJ_DIR$\..\Source\DemoCoordinator.c}.528.7" 1 0 0 0 "" 0 ""
+Count=4
 [ChipconEmu]
-Stop timers on halt=1
+Stop timers on halt=0
 Leave target running=1
 [Log file]
 LoggingEnabled=_ 0
