@@ -111,7 +111,6 @@
 
 // Report failure related values
 #define REPORT_FAILURE_LIMIT                4
-#define BIND_RETRY_LIMIT                    2
 
 /******************************************************************************
  * TYPEDEFS
@@ -131,8 +130,6 @@ static uint8 lightState =           0;
 // Report failure related values
 static uint8 doorReportFailureNr =  0;
 static uint8 lightReportFailureNr = 0;
-static uint8 doorBindRetries =      0;
-static uint8 lightBindRetries =     0;
 static uint16 myReportTimeout =     5000;         // milliseconds
 
 /******************************************************************************
@@ -217,9 +214,10 @@ void zb_HandleOsalEvent( uint16 event )
     // Set the previous door check value
     prevDoorCheckVal = MCU_IO_GET_SIMPLE( PORT_DOOR_LIMIT_SWITCH, PIN_DOOR_LIMIT_SWITCH );
 
-    // blind LED 1 to indicate starting/joining a network
+    // Blink LED 1 to indicate starting/joining a network
     HalLedBlink ( HAL_LED_1, 0, 50, 500 );
     HalLedSet( HAL_LED_2, HAL_LED_MODE_OFF );
+    HalLedSet( HAL_LED_3, HAL_LED_MODE_OFF );
 
     // Start the device
     appState = APP_START;
@@ -302,7 +300,7 @@ void zb_HandleKeys( uint8 shift, uint8 keys )
       {
         // Turn ON Allow Bind mode infinitly
         zb_AllowBind( 0xFF );
-        HalLedSet( HAL_LED_2, HAL_LED_MODE_ON );
+        HalLedBlink ( HAL_LED_2, 0, 50, 500 );
       }
       else
       {
@@ -441,7 +439,9 @@ void zb_SendDataConfirm( uint8 handle, uint8 status )
 void zb_BindConfirm( uint16 commandId, uint8 status )
 {
   if( status == ZB_SUCCESS )
-  {    
+  {
+    HalLedSet( HAL_LED_2, HAL_LED_MODE_ON );    
+    
     // Check which command is now bound
     if ( commandId == DOOR_REPORT_CMD_ID )
     {
@@ -456,32 +456,14 @@ void zb_BindConfirm( uint16 commandId, uint8 status )
   }
   else
   {
-    // Increase the bind retries value for given command id
-    if ( commandId == DOOR_REPORT_CMD_ID ) 
+    // Bind again after a given delay for given command id
+    if ( commandId == DOOR_REPORT_CMD_ID )
     {
-      //doorBindRetries++;
+      osal_start_timerEx( sapi_TaskID, MY_FIND_SENSOR_EVT, myBindRetryDelay );
     }
-    else if ( commandId == LIGHT_REPORT_CMD_ID )
+    else if ( commandId == LIGHT_REPORT_CMD_ID ) 
     {
-      //lightBindRetries++;
-    }
-    
-    // Check if we have to reset the system
-    if ( (doorBindRetries >= BIND_RETRY_LIMIT) || (lightBindRetries >= BIND_RETRY_LIMIT) ) {
-      // Reset the system
-      //zb_SystemReset();
-    }
-    else
-    {
-      // Bind again after a given delay for given command id
-      if ( commandId == DOOR_REPORT_CMD_ID )
-      {
-        osal_start_timerEx( sapi_TaskID, MY_FIND_SENSOR_EVT, myBindRetryDelay );
-      }
-      else if ( commandId == LIGHT_REPORT_CMD_ID ) 
-      {
-        osal_start_timerEx( sapi_TaskID, MY_FIND_ROUTER_EVT, myBindRetryDelay );        
-      }
+      osal_start_timerEx( sapi_TaskID, MY_FIND_ROUTER_EVT, myBindRetryDelay );        
     }
   }
 }
@@ -574,7 +556,7 @@ void zb_ReceiveDataIndication( uint16 source, uint16 command, uint16 len, uint8 
     }
   }
   // Flash LED 2 once to indicate data reception
-  HalLedSet ( HAL_LED_2, HAL_LED_MODE_FLASH );
+  HalLedSet ( HAL_LED_3, HAL_LED_MODE_FLASH );
 }
 
 static void sendDoorReport(void)
@@ -603,7 +585,7 @@ static void sendLightReport(void)
   uint8 txOptions;
 
   // Set the data
-  pData[LIGHT_STATE_OFFSET] = ;
+  pData[LIGHT_STATE_OFFSET] = lightState;
   txOptions = AF_MSG_ACK_REQUEST;
   
   // Send the data (destination address is set to previously established binding 
