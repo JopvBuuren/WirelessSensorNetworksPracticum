@@ -60,7 +60,7 @@
 #define MY_START_EVT                        0x0001
 #define MY_REPORT_EVT                       0x0002
 #define MY_FIND_COLLECTOR_EVT               0x0004
-#define MY_LIGHT_SET_TIMEOUT_EVT          0x0016
+#define MY_LIGHT_SET_TIMEOUT_EVT            0x0016
 
 // Default pins and ports
 #define LED_PIN       2
@@ -99,32 +99,32 @@ static uint8 lightLevel =         105;
  * GLOBAL VARIABLES
  */
 // Inputs and Outputs for Sensor device
-#define NUM_OUT_CMD_SENSOR        1
-#define NUM_IN_CMD_SENSOR         1
+#define NUM_OUT_CMD_ROUTER        1
+#define NUM_IN_CMD_ROUTER         1
 
-// List of input commands for Sensor device
-const cId_t zb_InCmdList[NUM_IN_CMD_SENSOR] =
+// List of input commands for Router device
+const cId_t zb_InCmdList[NUM_IN_CMD_ROUTER] =
 {
   LIGHT_REPORT_CMD_ID
 };
 
-// List of output and input commands for Sensor device
-const cId_t zb_OutCmdList[NUM_OUT_CMD_SENSOR] =
+// List of output and input commands for Router device
+const cId_t zb_OutCmdList[NUM_OUT_CMD_ROUTER] =
 {
   LIGHT_SET_CMD_ID
 };
 
-// Define SimpleDescriptor for Sensor device
+// Define SimpleDescriptor for Router device
 const SimpleDescriptionFormat_t zb_SimpleDesc =
 {
   MY_ENDPOINT_ID,             //  Endpoint
   MY_PROFILE_ID,              //  Profile ID
-  DEV_ID_SENSOR,              //  Device ID
-  DEVICE_VERSION_SENSOR,      //  Device Version
+  DEV_ID_ROUTER,              //  Device ID
+  DEVICE_VERSION_ROUTER,      //  Device Version
   0,                          //  Reserved
-  NUM_IN_CMD_SENSOR,          //  Number of Input Commands
+  NUM_IN_CMD_ROUTER,          //  Number of Input Commands
   (cId_t *) zb_InCmdList,             //  Input Command List
-  NUM_OUT_CMD_SENSOR,         //  Number of Output Commands
+  NUM_OUT_CMD_ROUTER,         //  Number of Output Commands
   (cId_t *) zb_OutCmdList     //  Output Command List
 };
 
@@ -164,6 +164,8 @@ void zb_HandleOsalEvent( uint16 event )
     // Initialise the green LED as output
     MCU_IO_OUTPUT(LED_PORT, LED_PIN, 0 );
     
+    zb_AllowBind( 0xFF );
+    
     // Start the device
     appState = APP_START;
     zb_StartRequest();
@@ -183,8 +185,6 @@ void zb_HandleOsalEvent( uint16 event )
         sendLightToggle();
       }
     }
-    
-    
   }
 
   if ( event & MY_FIND_COLLECTOR_EVT )
@@ -218,14 +218,7 @@ void zb_HandleKeys( uint8 shift, uint8 keys )
   // removed code
   if ( keys & HAL_KEY_SW_1 )
   {
-    // Start reporting
-    if ( reportState == FALSE ) {
-      osal_start_reload_timer( sapi_TaskID, MY_REPORT_EVT, myReportPeriod );
-      reportState = TRUE;
-
-      // switch LED 2 on to indicate reporting
-      HalLedSet( HAL_LED_2, HAL_LED_MODE_ON );
-    }
+    
   }
   if ( keys & HAL_KEY_SW_2 )
   {
@@ -265,6 +258,12 @@ void zb_StartConfirm( uint8 status )
     // Turn OFF Allow Bind mode infinitly
     //zb_AllowBind( 0x00 );
     HalLedSet( HAL_LED_2, HAL_LED_MODE_OFF );
+    
+    // Start reporting
+    if ( reportState == FALSE ) {
+      osal_start_reload_timer( sapi_TaskID, MY_REPORT_EVT, myReportPeriod );
+      reportState = TRUE;
+    }
   }
   else
   {
@@ -409,9 +408,12 @@ void zb_ReceiveDataIndication( uint16 source, uint16 command, uint16 len, uint8 
   (void)len;
   (void)pData;
   // Store the new value of the door limit switch
-  lightState = *pData;
+  lightState = pData[LIGHT_STATE_OFFSET];
   // Update the signal LED
-  updateSignalLed();  
+  updateSignalLed();
+  if((pData[DOOR_OPENED_OFFSET] > 0) && (!isLight())){
+    sendLightToggle();
+  }
 }
 
 static void updateSignalLed(void) 
@@ -441,25 +443,21 @@ void uartRxCB( uint8 port, uint8 event )
 }
 
 /******************************************************************************
- * @fn          sendLightToggle
+ * @fn          sendLightState
  *
- * @brief       send a toggle message to turn on the light
+ * @brief       send a state message to turn on/off the light
  *
- * @param       none
+ * @param       uint8 state
  *
- * @return      temperature
+ * @return      none
  */
-static void sendLightToggle( ) {
+static void sendLightState(uint8 state) {
   // Data we will send 
   uint8 pData[LIGHT_REPORT_LENGTH];
   uint8 txOptions;
   
   // Set light
-  if(!isLight()){
-    pData[LIGHT_STATE_OFFSET] = !lightState;
-  }else{
-    pData[LIGHT_STATE_OFFSET] = 0;
-  }
+  pData[LIGHT_STATE_OFFSET] = state;
   txOptions = AF_MSG_ACK_REQUEST;
   
   // set Indicator
@@ -472,6 +470,24 @@ static void sendLightToggle( ) {
   // Set a timer to fire the MY_DOOR_SET_TIMEOUT_EVT (stopped as soon as we 
   // receive data)
   osal_start_reload_timer( sapi_TaskID, MY_REPORT_EVT, myReportPeriod );
+}
+                     
+/******************************************************************************
+ * @fn          sendLightToggle
+ *
+ * @brief       send a toggle message to turn on the light
+ *
+ * @param       none
+ *
+ * @return      none
+ */
+static void sendLightToggle( ) {
+  // Set light
+  if(!isLight()){
+    sendLightState(!lightState);
+  }else{
+    sendLightState(0);
+  }
 }
 
 /******************************************************************************

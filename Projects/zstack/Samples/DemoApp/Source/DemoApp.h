@@ -57,9 +57,11 @@
 
 // Define devices
 #define DEV_ID_SENSOR                     1
-#define DEV_ID_COLLECTOR                  2
+#define DEV_ID_ROUTER                     2
+#define DEV_ID_COLLECTOR                  3
 
 #define DEVICE_VERSION_SENSOR             1
+#define DEVICE_VERSION_ROUTER             1
 #define DEVICE_VERSION_COLLECTOR          1
 
 // Define the Command ID's used in this application
@@ -73,7 +75,8 @@
 #define DOOR_REPORT_LENGTH                1
 // Light data format (both for report as for setting data)
 #define LIGHT_STATE_OFFSET                0
-#define LIGHT_REPORT_LENGTH               1
+#define DOOR_OPENED_OFFSET                1
+#define LIGHT_REPORT_LENGTH               2
 
 #define RX_BUF_LEN                        128
 

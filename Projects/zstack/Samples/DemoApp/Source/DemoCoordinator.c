@@ -126,6 +126,7 @@ static uint16 myBindRetryDelay =    2000;        // milliseconds
 static uint8 myDoorCheckDelay =     100;         // milliseconds
 static uint8 prevDoorCheckVal;
 static uint8 lightState =           0;
+static uint8 doorRequest =          0;
 
 // Report failure related values
 static uint8 doorReportFailureNr =  0;
@@ -140,6 +141,7 @@ static void sysPingReqRcvd(void);
 static void sysPingRsp(void);
 static void sendDoorReport(void);
 static void sendLightReport(void);
+static void sendLightRequest(void);
 
 /******************************************************************************
  * GLOBAL VARIABLES
@@ -234,6 +236,11 @@ void zb_HandleOsalEvent( uint16 event )
     uint8 doorCheckVal = MCU_IO_GET_SIMPLE( PORT_DOOR_LIMIT_SWITCH, PIN_DOOR_LIMIT_SWITCH );
     if ( prevDoorCheckVal != doorCheckVal ) {      
       prevDoorCheckVal = doorCheckVal;
+      
+      // Send Light request if open
+      if(doorCheckVal > 0){
+        sendLightRequest();
+      }
       
       // Door value changed, so send the door report to let the bound device 
       // know
@@ -452,6 +459,7 @@ void zb_BindConfirm( uint16 commandId, uint8 status )
       // Send light report right away
       sendLightReport();
     }
+    
   }
   else
   {
@@ -577,21 +585,34 @@ static void sendDoorReport(void)
   osal_start_timerEx( sapi_TaskID, MY_DOOR_REPORT_TIMEOUT_EVT, myReportTimeout );
 }
 
+static void sendLightRequest(void){
+  doorRequest = 1;
+  sendLightReport();
+}
+
 static void sendLightReport(void)
 {
+  // get Door state
+  uint8 doorState = MCU_IO_GET_SIMPLE( PORT_DOOR_LIMIT_SWITCH, PIN_DOOR_LIMIT_SWITCH );
+  
   // Data we will send 
   uint8 pData[LIGHT_REPORT_LENGTH];
   uint8 txOptions;
 
   // Set the data
   pData[LIGHT_STATE_OFFSET] = lightState;
+  pData[DOOR_OPENED_OFFSET] = doorRequest;
+  if(doorRequest > 0){
+    doorRequest = 0;
+  }
+  
   txOptions = AF_MSG_ACK_REQUEST;
   
   // Send the data (destination address is set to previously established binding 
   // for the commandId)
   zb_SendDataRequest( ZB_BINDING_ADDR, LIGHT_REPORT_CMD_ID, LIGHT_REPORT_LENGTH, pData, HANDLE_LIGHT_CHECK, txOptions, 0 );
   
-  // Set a timer to fire the MY_DOOR_REPORT_TIMEOUT_EVT (stopped as soon as we 
+  // Set a timer to fire the MY_LIGHT_REPORT_TIMEOUT_EVT (stopped as soon as we 
   // receive data)
   osal_start_timerEx( sapi_TaskID, MY_LIGHT_REPORT_TIMEOUT_EVT, myReportTimeout );
 }
