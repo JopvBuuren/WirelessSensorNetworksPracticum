@@ -73,12 +73,11 @@
 // Door data format (both for report as for setting data)
 #define DOOR_STATE_OFFSET                 0
 #define DOOR_REPORT_LENGTH                1
+
 // Light data format (both for report as for setting data)
 #define LIGHT_STATE_OFFSET                0
 #define DOOR_OPENED_OFFSET                1
 #define LIGHT_REPORT_LENGTH               2
-
-#define RX_BUF_LEN                        128
 
 // Application States
 #define APP_INIT                            0    // Initial state
@@ -92,13 +91,11 @@
 // Macro for getting a certain port/pin, simplified to 0 or 1 (as MCU_IO_GET can 
 // return a value greater than 1) 
 #define MCU_IO_GET_SIMPLE(port, pin) MCU_IO_GET(port, pin) > 0
-
-
+   
 /******************************************************************************
  * PUBLIC FUNCTIONS
  */
 
-void uartRxCB( uint8 port, uint8 event );
-void initUart(halUARTCBack_t pf);
+void initNwkConfig( void );
 
 #endif // DEMO_APP_H

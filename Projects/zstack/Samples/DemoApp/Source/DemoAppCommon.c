@@ -83,29 +83,12 @@ void osalInitTasks( void )
   SAPI_Init( taskID );
 }
 
-/******************************************************************************
- * @fn          initUart
- *
- * @brief       Initialise UART
- *
- * @param       pf - Function pointer to UART callback function
- *
- * @return      none
- */
-void initUart(halUARTCBack_t pf)
+void initNwkConfig( void ) 
 {
-  halUARTCfg_t uartConfig;
-
-  uartConfig.configured           = TRUE;
-  uartConfig.baudRate             = HAL_UART_BR_38400;
-  uartConfig.flowControl          = FALSE;
-  uartConfig.flowControlThreshold = 48;
-  uartConfig.rx.maxBufSize        = RX_BUF_LEN;
-  uartConfig.tx.maxBufSize        = 128;
-
-  uartConfig.idleTimeout          = 6;
-  uartConfig.intEnable            = TRUE;
-  uartConfig.callBackFunc         = pf;
-
-  HalUARTOpen (HAL_UART_PORT_0, &uartConfig);
+  // Make sure key is available on each node
+  uint8 enableCfgKeys = TRUE;
+  zb_WriteConfiguration( ZCD_NV_PRECFGKEYS_ENABLE, 1, &enableCfgKeys );
+  // Write the DEFAULT_KEY to the config
+  uint8 defaultKey[] = DEFAULT_KEY;
+  zb_WriteConfiguration( ZCD_NV_PRECFGKEY, 16, defaultKey );
 }

@@ -431,7 +431,7 @@ D:\Jop van Buuren\Documents\Hogeschool\Vakken\wt\WirelessSensorNetworksPracticum
 -DMAC_CFG_TX_MAX=6
 -DMAC_CFG_RX_MAX=3
 -DZIGBEEPRO=1
--DSECURE=0
+-DSECURE=1
 -DZG_SECURE_DYNAMIC=0
 -DREFLECTOR=1
 -DDEFAULT_CHANLIST=0x00100000

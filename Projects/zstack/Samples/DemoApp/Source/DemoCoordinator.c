@@ -51,27 +51,6 @@
 /******************************************************************************
  * CONSTANTS
  */
-// General UART frame offsets
-#define FRAME_SOF_OFFSET                    0
-#define FRAME_LENGTH_OFFSET                 1
-#define FRAME_CMD0_OFFSET                   2
-#define FRAME_CMD1_OFFSET                   3
-#define FRAME_DATA_OFFSET                   4
-
-// ZB_RECEIVE_DATA_INDICATION offsets
-#define ZB_RECV_SRC_OFFSET                  0
-#define ZB_RECV_CMD_OFFSET                  2
-#define ZB_RECV_LEN_OFFSET                  4
-#define ZB_RECV_DATA_OFFSET                 6
-#define ZB_RECV_FCS_OFFSET                  8
-
-// ZB_RECEIVE_DATA_INDICATION frame length
-#define ZB_RECV_LENGTH                      15
-
-// PING response frame length and offset
-#define SYS_PING_RSP_LENGTH                 7
-#define SYS_PING_CMD_OFFSET                 1
-
 // Stack Profile
 #define ZIGBEE_2007                         0x0040
 #define ZIGBEE_PRO_2007                     0x0041
@@ -82,9 +61,6 @@
 #define STACK_PROFILE                       ZIGBEE_2007
 #endif
 
-#define CPT_SOP                             0xFE
-#define SYS_PING_REQUEST                    0x0021
-#define SYS_PING_RESPONSE                   0x0161
 #define ZB_RECEIVE_DATA_INDICATION          0x8746
 
 // Application osal event identifiers
@@ -136,9 +112,6 @@ static uint16 myReportTimeout =     5000;         // milliseconds
 /******************************************************************************
  * LOCAL FUNCTIONS
  */
-static uint8 calcFCS(uint8 *pBuf, uint8 len);
-static void sysPingReqRcvd(void);
-static void sysPingRsp(void);
 static void sendDoorReport(void);
 static void sendLightReport(void);
 static void sendLightRequest(void);
@@ -194,20 +167,12 @@ const SimpleDescriptionFormat_t zb_SimpleDesc =
  */
 void zb_HandleOsalEvent( uint16 event )
 {
-  if( event & SYS_EVENT_MSG )
-  {
-  }
-
   if( event & ZB_ENTRY_EVENT )
   {
     /* If we get this event, then we can initialise things */
     
-    // Initialise UART
-    initUart(uartRxCB);
-    
-    // Initialise the door limit switch as input and internal pull-up activated
-    //MCU_IO_INPUT( PORT_DOOR_LIMIT_SWITCH, PIN_DOOR_LIMIT_SWITCH, MCU_IO_PULLUP );
-    MCU_IO_DIR_INPUT( PORT_DOOR_LIMIT_SWITCH, PIN_DOOR_LIMIT_SWITCH ); // TODO: Check if necessary, should be input by default. Maybe pullup?
+    // Initialise the door limit switch as input
+    MCU_IO_DIR_INPUT( PORT_DOOR_LIMIT_SWITCH, PIN_DOOR_LIMIT_SWITCH );
     // Initialise the green LED as output
     MCU_IO_DIR_OUTPUT( PORT_GREEN_LED, PIN_GREEN_LED );
     // Initialise the door control as output
@@ -215,6 +180,9 @@ void zb_HandleOsalEvent( uint16 event )
     
     // Set the previous door check value
     prevDoorCheckVal = MCU_IO_GET_SIMPLE( PORT_DOOR_LIMIT_SWITCH, PIN_DOOR_LIMIT_SWITCH );
+    
+    // Turn ON Allow Bind mode infinitly
+    zb_AllowBind( 0xFF );
 
     // Blink LED 1 to indicate starting/joining a network
     HalLedBlink ( HAL_LED_1, 0, 50, 500 );
@@ -316,10 +284,6 @@ void zb_HandleKeys( uint8 shift, uint8 keys )
       }
     }
   }
-  if ( keys & HAL_KEY_SW_2 )
-  {   
-    /* Do nothing */
-  }
 }
 
 /******************************************************************************
@@ -339,11 +303,8 @@ void zb_StartConfirm( uint8 status )
   // If the device sucessfully started, change state to running
   if ( status == ZB_SUCCESS )
   {
-    uint8 val = TRUE;
-    zb_WriteConfiguration( ZCD_NV_PRECFGKEYS_ENABLE, 1, &val );
-    uint8 bla[] = DEFAULT_KEY;
-    // Here we initialize network related values 
-    zb_WriteConfiguration( ZCD_NV_PRECFGKEY, 16, bla );
+    // Init the network configuration
+    initNwkConfig();
     
     // Set LED 1 to indicate that node is operational on the network
     HalLedSet( HAL_LED_1, HAL_LED_MODE_ON );
@@ -617,110 +578,4 @@ static void sendLightReport(void)
   // Set a timer to fire the MY_LIGHT_REPORT_TIMEOUT_EVT (stopped as soon as we 
   // receive data)
   osal_start_timerEx( sapi_TaskID, MY_LIGHT_REPORT_TIMEOUT_EVT, myReportTimeout );
-}
-
-/******************************************************************************
- * @fn          uartRxCB
- *
- * @brief       Callback function for UART
- *
- * @param       port - UART port
- *              event - UART event that caused callback
- *
- * @return      none
- */
-void uartRxCB( uint8 port, uint8 event )
-{
-  (void)port;
-
-  uint8 pBuf[RX_BUF_LEN];
-  uint16 cmd;
-  uint16 len;
-
-  if ( event != HAL_UART_TX_EMPTY )
-  {
-    // Read from UART
-    len = HalUARTRead( HAL_UART_PORT_0, pBuf, RX_BUF_LEN );
-
-    if ( len > 0 )
-    {
-      cmd = BUILD_UINT16(pBuf[SYS_PING_CMD_OFFSET + 1], pBuf[SYS_PING_CMD_OFFSET]);
-
-      if( (pBuf[FRAME_SOF_OFFSET] == CPT_SOP) && (cmd == SYS_PING_REQUEST) )
-      {
-        sysPingReqRcvd();
-      }
-    }
-  }
-}
-
-/******************************************************************************
- * @fn          sysPingReqRcvd
- *
- * @brief       Ping request received
- *
- * @param       none
- *
- * @return      none
- */
-static void sysPingReqRcvd(void)
-{
-   sysPingRsp();
-}
-
-/******************************************************************************
- * @fn          sysPingRsp
- *
- * @brief       Build and send Ping response
- *
- * @param       none
- *
- * @return      none
- */
-static void sysPingRsp(void)
-{
-  uint8 pBuf[SYS_PING_RSP_LENGTH];
-
-  // Start of Frame Delimiter
-  pBuf[FRAME_SOF_OFFSET] = CPT_SOP;
-
-  // Length
-  pBuf[FRAME_LENGTH_OFFSET] = 2;
-
-  // Command type
-  pBuf[FRAME_CMD0_OFFSET] = LO_UINT16(SYS_PING_RESPONSE);
-  pBuf[FRAME_CMD1_OFFSET] = HI_UINT16(SYS_PING_RESPONSE);
-
-  // Stack profile
-  pBuf[FRAME_DATA_OFFSET] = LO_UINT16(STACK_PROFILE);
-  pBuf[FRAME_DATA_OFFSET + 1] = HI_UINT16(STACK_PROFILE);
-
-  // Frame Check Sequence
-  pBuf[SYS_PING_RSP_LENGTH - 1] = calcFCS(&pBuf[FRAME_LENGTH_OFFSET], (SYS_PING_RSP_LENGTH - 2));
-
-  // Write frame to UART
-  HalUARTWrite(HAL_UART_PORT_0,pBuf, SYS_PING_RSP_LENGTH);
-}
-
-/******************************************************************************
- * @fn          calcFCS
- *
- * @brief       This function calculates the FCS checksum for the serial message
- *
- * @param       pBuf - Pointer to the end of a buffer to calculate the FCS.
- *              len - Length of the pBuf.
- *
- * @return      The calculated FCS.
- ******************************************************************************
- */
-static uint8 calcFCS(uint8 *pBuf, uint8 len)
-{
-  uint8 rtrn = 0;
-
-  while ( len-- )
-  {
-    rtrn ^= *pBuf++;
-  }
-
-  return rtrn;
 }

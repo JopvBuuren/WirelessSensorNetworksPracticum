@@ -53,14 +53,13 @@
  * CONSTANTS
  */
 #define REPORT_FAILURE_LIMIT                3
-#define ACK_REQ_INTERVAL                    5    // each 5th packet is sent with ACK request
 
 // Application osal event identifiers
 // Bit mask of events ( from 0x0000 to 0x00FF )
 #define MY_START_EVT                        0x0001
 #define MY_REPORT_EVT                       0x0002
 #define MY_FIND_COLLECTOR_EVT               0x0004
-#define MY_LIGHT_SET_TIMEOUT_EVT            0x0016
+#define MY_LIGHT_SET_TIMEOUT_EVT            0x0008
 
 // Default pins and ports
 #define LED_PIN       2
@@ -131,9 +130,7 @@ const SimpleDescriptionFormat_t zb_SimpleDesc =
 /******************************************************************************
  * LOCAL FUNCTIONS
  */
-void uartRxCB( uint8 port, uint8 event );
 void sendLightToggle(void);
-static void updateSignalLed(void);
 static bool isLight(void);
 
 /******************************************************************************
@@ -152,10 +149,6 @@ static bool isLight(void);
  */
 void zb_HandleOsalEvent( uint16 event )
 {
-  if( event & SYS_EVENT_MSG )
-  {
-  }
-
   if( event & ZB_ENTRY_EVENT )
   {
     // blind LED 1 to indicate joining a network
@@ -164,6 +157,7 @@ void zb_HandleOsalEvent( uint16 event )
     // Initialise the green LED as output
     MCU_IO_OUTPUT(LED_PORT, LED_PIN, 0 );
     
+    // Allow bind infinitly
     zb_AllowBind( 0xFF );
     
     // Start the device
@@ -214,12 +208,6 @@ void zb_HandleOsalEvent( uint16 event )
  */
 void zb_HandleKeys( uint8 shift, uint8 keys )
 {
-  // shift is not used and keys HAL_KEY_SW_3 and HAL_KEY_SW_4 are not used, so 
-  // removed code
-  if ( keys & HAL_KEY_SW_1 )
-  {
-    
-  }
   if ( keys & HAL_KEY_SW_2 )
   {
     if(!isLight()){
@@ -246,11 +234,8 @@ void zb_StartConfirm( uint8 status )
   // If the device sucessfully started, change state to running
   if ( status == ZB_SUCCESS )
   {
-    uint8 val = TRUE;
-    zb_WriteConfiguration( ZCD_NV_PRECFGKEYS_ENABLE, 1, &val );
-    uint8 bla[] = DEFAULT_KEY;
-    // Here we initialize network related values 
-    zb_WriteConfiguration( ZCD_NV_PRECFGKEY, 16, bla );
+    // Init the network configuration
+    initNwkConfig();
     
     // Set LED 1 to indicate that node is operational on the network
     HalLedSet( HAL_LED_1, HAL_LED_MODE_ON );
@@ -261,11 +246,10 @@ void zb_StartConfirm( uint8 status )
     // Set event to bind to a collector
     osal_set_event( sapi_TaskID, MY_FIND_COLLECTOR_EVT );
 
-    // Turn OFF Allow Bind mode infinitly
-    //zb_AllowBind( 0x00 );
+    // Turn off the LED
     HalLedSet( HAL_LED_2, HAL_LED_MODE_OFF );
     
-    // Start reporting
+    // Start checking light state again
     if ( reportState == FALSE ) {
       osal_start_reload_timer( sapi_TaskID, MY_REPORT_EVT, myReportPeriod );
       reportState = TRUE;
@@ -293,6 +277,7 @@ void zb_BindConfirm( uint16 commandId, uint8 status )
 {
   if( status == ZB_SUCCESS )
   {
+    // We're now running
     appState = APP_RUN;
     HalLedSet( HAL_LED_2, HAL_LED_MODE_OFF );
 
@@ -413,39 +398,20 @@ void zb_ReceiveDataIndication( uint16 source, uint16 command, uint16 len, uint8 
   (void)command;
   (void)len;
   (void)pData;
+  
   // Store the new value of the door limit switch
   lightState = pData[LIGHT_STATE_OFFSET];
-  // Update the signal LED
-  updateSignalLed();
-  if((pData[DOOR_OPENED_OFFSET] > 0) && (!isLight())){
-    sendLightToggle();
-  }
-}
-
-static void updateSignalLed(void) 
-{
-  // Set the signal LED to the value of the door limit switch
+  // Update the signal LED to the value of the door limit switch
   MCU_IO_SET(
     LED_PORT,
     LED_PIN,
     lightState
   );
-}
-
-/******************************************************************************
- * @fn          uartRxCB
- *
- * @brief       Callback function for UART
- *
- * @param       port - UART port
- *              event - UART event that caused callback
- *
- * @return      none
- */
-void uartRxCB( uint8 port, uint8 event )
-{
-  (void)port;
-  (void)event;
+  
+  // Toggle light if door is now opened and it's dark 
+  if((pData[DOOR_OPENED_OFFSET] > 0) && (!isLight())){
+    sendLightToggle();
+  }
 }
 
 /******************************************************************************
@@ -465,9 +431,6 @@ static void sendLightState(uint8 state) {
   // Set light
   pData[LIGHT_STATE_OFFSET] = state;
   txOptions = AF_MSG_ACK_REQUEST;
-  
-  // set Indicator
-  
   
   // Send the data (destination address is set to previously established binding 
   // for the commandId)

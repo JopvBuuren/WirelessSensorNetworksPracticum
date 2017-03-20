@@ -53,7 +53,6 @@
  * CONSTANTS
  */
 #define REPORT_FAILURE_LIMIT                4
-#define ACK_REQ_INTERVAL                    5    // each 5th packet is sent with ACK request
 
 // Application osal event identifiers
 // Bit mask of events ( from 0x0000 to 0x00FF )
@@ -134,8 +133,6 @@ const SimpleDescriptionFormat_t zb_SimpleDesc =
 /******************************************************************************
  * LOCAL FUNCTIONS
  */
-void uartRxCB( uint8 port, uint8 event );
-static void updateSignalLed(void);
 static void sendDoorVal( uint8 doorVal );
 
 /******************************************************************************
@@ -154,10 +151,6 @@ static void sendDoorVal( uint8 doorVal );
  */
 void zb_HandleOsalEvent( uint16 event )
 {
-  if( event & SYS_EVENT_MSG )
-  {
-  }
-
   if( event & ZB_ENTRY_EVENT )
   {
     // Initialise the green LED as output
@@ -212,13 +205,9 @@ void zb_HandleOsalEvent( uint16 event )
  */
 void zb_HandleKeys( uint8 shift, uint8 keys )
 {  
-  // shift is not used and keys HAL_KEY_SW_3 and HAL_KEY_SW_4 are not used, so 
-  // removed code
-  if ( keys & HAL_KEY_SW_1 )
-  {
-  }
   if ( keys & HAL_KEY_SW_2 )
   {
+    // Toggle doorLimitSwitchVal if we're running and value is defined (not -1)
     if ( (appState == APP_RUN) && (doorLimitSwitchVal != -1) )
     {
       sendDoorVal( !doorLimitSwitchVal );
@@ -243,11 +232,8 @@ void zb_StartConfirm( uint8 status )
   // If the device sucessfully started, change state to running
   if ( status == ZB_SUCCESS )
   {
-    uint8 val = TRUE;
-    zb_WriteConfiguration( ZCD_NV_PRECFGKEYS_ENABLE, 1, &val );
-    uint8 bla[] = DEFAULT_KEY;
-    // Here we initialize network related values 
-    zb_WriteConfiguration( ZCD_NV_PRECFGKEY, 16, bla );
+    // Init the network configuration
+    initNwkConfig();
     
     // Set LED 1 to indicate that node is operational on the network
     HalLedSet( HAL_LED_1, HAL_LED_MODE_ON );
@@ -399,13 +385,7 @@ void zb_ReceiveDataIndication( uint16 source, uint16 command, uint16 len, uint8 
   
   // Store the new value of the door limit switch
   doorLimitSwitchVal = *pData;
-  // Update the signal LED
-  updateSignalLed();  
-}
-
-static void updateSignalLed(void) 
-{
-  // Set the signal LED to the value of the door limit switch
+  // Update the signal LED to the value of the door limit switch
   MCU_IO_SET(
        PORT_SIGNAL_LED,
        PIN_SIGNAL_LED,
@@ -429,20 +409,4 @@ static void sendDoorVal( uint8 doorVal ) {
   // Set a timer to fire the MY_DOOR_SET_TIMEOUT_EVT (stopped as soon as we 
   // receive data)
   osal_start_timerEx( sapi_TaskID, MY_DOOR_SET_TIMEOUT_EVT, myReportTimeout );
-}
-
-/******************************************************************************
- * @fn          uartRxCB
- *
- * @brief       Callback function for UART
- *
- * @param       port - UART port
- *              event - UART event that caused callback
- *
- * @return      none
- */
-void uartRxCB( uint8 port, uint8 event )
-{
-  (void)port;
-  (void)event;
 }
