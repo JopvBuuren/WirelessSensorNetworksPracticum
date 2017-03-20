@@ -14,7 +14,7 @@ ByteLimit=50
 [DebugChecksum]
 <<<<<<< HEAD
 <<<<<<< HEAD
-Checksum=330234955
+Checksum=-708384744
 =======
 Checksum=-1133642819
 >>>>>>> 4bcb189c40d0867ddefe41a4fa33cde4a6b7125d
@@ -63,14 +63,10 @@ Category=_ 0
 LoggingEnabled=_ 0
 LogFile=_ ""
 [Breakpoints]
-Bp0=_ "STD_CODE" "{$PROJ_DIR$\..\Source\DemoSensor.c}.438.1" 0 0 0 0 "" 0 ""
-Bp1=_ "STD_CODE" "{$PROJ_DIR$\..\Source\DemoCoordinator.c}.276.1" 0 0 0 0 "" 0 ""
-Bp2=_ "STD_CODE" "{$PROJ_DIR$\..\Source\DemoRouter.c}.491.1" 0 0 0 0 "" 0 ""
-Bp3=_ "STD_CODE" "{$PROJ_DIR$\..\Source\DemoCoordinator.c}.206.5" 0 0 0 0 "" 0 ""
-Bp4=_ "STD_CODE" "{$PROJ_DIR$\..\Source\DemoCoordinator.c}.236.11" 0 0 0 0 "" 0 ""
-Bp5=_ "STD_CODE" "{$PROJ_DIR$\..\Source\DemoCoordinator.c}.268.5" 0 0 0 0 "" 0 ""
-Bp6=_ "STD_CODE" "{$PROJ_DIR$\..\Source\DemoCoordinator.c}.262.5" 0 0 0 0 "" 0 ""
-Count=7
+Bp0=_ "STD_CODE" "{$PROJ_DIR$\..\Source\DemoSensor.c}.448.1" 0 0 0 0 "" 0 ""
+Bp1=_ "STD_CODE" "{$PROJ_DIR$\..\Source\DemoSensor.c}.376.1" 0 0 0 0 "" 0 ""
+Bp2=_ "STD_CODE" "{$PROJ_DIR$\..\Source\DemoSensor.c}.403.3" 0 0 0 0 "" 0 ""
+Count=3
 [ChipconEmu]
 Stop timers on halt=0
 Leave target running=1

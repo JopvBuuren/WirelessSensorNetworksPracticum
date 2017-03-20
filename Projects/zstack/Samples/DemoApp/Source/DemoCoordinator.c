@@ -339,9 +339,11 @@ void zb_StartConfirm( uint8 status )
   // If the device sucessfully started, change state to running
   if ( status == ZB_SUCCESS )
   {
-    /*uint8 bla[] = {0x01, 0x01, 0x01, 0x01, 0x01, 0x01, 0x01, 0x01, 0x01, 0x01, 0x01, 0x01, 0x01, 0x01, 0x01, 0x01};
-    /* Here we initialize network related values 
-    zb_WriteConfiguration( ZCD_NV_PRECFGKEY, 16, bla );*/
+    uint8 val = TRUE;
+    zb_WriteConfiguration( ZCD_NV_PRECFGKEYS_ENABLE, 1, &val );
+    uint8 bla[] = DEFAULT_KEY;
+    // Here we initialize network related values 
+    zb_WriteConfiguration( ZCD_NV_PRECFGKEY, 16, bla );
     
     // Set LED 1 to indicate that node is operational on the network
     HalLedSet( HAL_LED_1, HAL_LED_MODE_ON );
